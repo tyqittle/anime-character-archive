@@ -171,7 +171,7 @@ document.addEventListener('keydown',function(e){if(!$('viewer').open)return;if(e
 ['query','rarityFilter','kindFilter','sort'].forEach(function(id){$(id).addEventListener(id==='query'?'input':'change',function(){page=1;render()})});
 fetch('./data/characters.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(function(db){
  if(!Array.isArray(db.characters))throw Error('索引数据格式错误');
- items=db.characters.filter(function(c){return /^https:\/\/raw\.githubusercontent\.com\//.test(c.image)&&/^https:\/\/github\.com\//.test(c.source)});
+ items=db.characters.filter(function(c){return c&&/^c\d{3}$/.test(c.id)&&c.kind==='full'&&(/^\.\/assets\/portraits\/c\d{3}\.png$/.test(c.image)||/^https:\/\/raw\.githubusercontent\.com\//.test(c.image))});
  $('totalStat').textContent=items.length;$('fullStat').textContent=items.filter(function(x){return x.kind==='full'}).length;$('iconStat').textContent=items.filter(function(x){return x.kind==='icon'}).length;
  render();
  var hash=decodeURIComponent(location.hash.slice(1));
