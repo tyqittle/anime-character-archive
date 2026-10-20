@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b121d"><meta name="description" content="寒潮王座 · 可持续更新的日常剧情CG候选素材库">
+<title>寒潮王座 · 冬境影像库</title>
+<style>
+:root{color-scheme:dark;--bg:#090f19;--pane:#101a29;--surface:#152131;--line:#2a394c;--text:#eef5ff;--muted:#92a5ba;--ice:#80c9e9;--blue:#a5bdfb;--gold:#f9d8a4;--green:#80dfb7;--red:#ff979e;--radius:14px}
+*{box-sizing:border-box}body{margin:0;color:var(--text);background:radial-gradient(ellipse 55% 30% at 74% 0%,#1a3450 0%,transparent 100%),var(--bg);font:14px/1.55 -apple-system,BlinkMacSystemFont,'Segoe UI','Microsoft YaHei',sans-serif}
+button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:var(--ice)}button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(--ice);outline-offset:3px}
+.app{min-height:100vh;display:grid;grid-template-columns:272px minmax(0,1fr)}.side{background:#0d1623;border-right:1px solid var(--line);min-height:100vh;padding:24px 16px;position:sticky;top:0;height:100vh;overflow-y:auto}
+.logo{display:flex;gap:11px;align-items:center;padding:8px 8px 18px;border-bottom:1px solid var(--line)}.brandmark{font-size:27px;width:45px;height:45px;display:grid;place-items:center;background:linear-gradient(145deg,#172940,#36566e);border:1px solid #54738f;border-radius:13px}.brand{font-family:Georgia,'Microsoft YaHei',serif;letter-spacing:.11em;font-size:17px}.tiny{font-size:11px;color:var(--muted)}.overline{font-size:10px;letter-spacing:.2em;color:var(--ice);font-weight:800}.sidehead{display:flex;justify-content:space-between;align-items:center;margin:23px 8px 9px;color:#dce7f6;font-size:12px;font-weight:700}.navitem{display:flex;width:100%;gap:9px;align-items:center;border:1px solid transparent;background:transparent;color:var(--muted);text-align:left;padding:11px 10px;border-radius:10px;margin:4px 0}.navitem:hover{background:#19283a;color:white}.navitem.active{color:var(--text);background:#20384c;border-color:#31556e}.navitem b{font-weight:600;flex:1}.navitem .count{font-size:11px;background:#111a27;color:#9db7cb;padding:2px 6px;border-radius:6px;min-width:25px;text-align:center}.sidefoot{padding:19px 9px;border-top:1px solid var(--line);margin-top:19px}.main{min-width:0;padding:0 clamp(17px,4vw,62px) 60px}.topbar{height:65px;display:flex;align-items:center;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);margin-bottom:28px}.crumb{font-size:12px;color:var(--muted)}.barlinks{display:flex;gap:8px;align-items:center}.btn{border:1px solid #36506a;background:#17283a;color:#e9f4ff;padding:9px 13px;border-radius:9px;font-weight:600;display:inline-flex;gap:7px;align-items:center;justify-content:center;text-decoration:none;white-space:nowrap}.btn:hover{background:#28435c}.btn.primary{background:#c7dff1;border-color:#c7dff1;color:#101b2b}.btn.primary:hover{background:white}.btn.ghost{background:transparent}.btn.danger{color:#ffd4d4;border-color:#844f56}.btn.sm{padding:5px 9px;font-size:12px}.btn:disabled{opacity:.5;cursor:wait}.hero{display:flex;justify-content:space-between;gap:24px;align-items:end;padding:12px 0 27px}.hero h1{font-size:clamp(26px,3vw,43px);letter-spacing:.04em;line-height:1.2;font-family:Georgia,'Microsoft YaHei',serif;margin:7px 0 8px}.lede{color:var(--muted);font-size:14px;max-width:650px;margin:0}.heroIcon{width:105px;height:105px;display:grid;place-items:center;font-size:65px;opacity:.6;border:1px solid var(--line);border-radius:24px;flex:none;background:linear-gradient(145deg,#1b2c41,#11202e)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin:0 0 27px}.stat{padding:17px 19px;border:1px solid var(--line);border-radius:13px;background:linear-gradient(140deg,#152336,#101b29)}.stat b{font-size:27px;letter-spacing:.02em;display:block}.stat span{font-size:12px;color:var(--muted)}
+.notice{border:1px solid #36516a;background:#102234;border-radius:13px;padding:12px 15px;color:#c4d8e9;display:flex;justify-content:space-between;gap:14px;align-items:center;margin-bottom:20px;font-size:12px}.notice b{color:var(--ice)}
+.toolbar{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:14px 0 20px}.search{flex:1;min-width:190px;position:relative}.search input{background:#142335;border:1px solid var(--line);border-radius:10px;color:white;width:100%;padding:11px 14px}.select{background:#142335;border:1px solid var(--line);border-radius:10px;color:white;padding:10px}.mainhead{display:flex;justify-content:space-between;align-items:end;gap:14px}.mainhead h2{font-size:21px;margin:0}.mainhead p{font-size:12px;color:var(--muted);margin:5px 0 0}.actions{display:flex;flex-wrap:wrap;gap:9px}.pills{display:flex;gap:7px;overflow-x:auto;margin:12px 0 17px;padding:0 0 4px}.pill{background:#131f2e;border:1px solid #304153;border-radius:100px;padding:6px 13px;color:#acbdd0;white-space:nowrap}.pill.active{background:#285069;color:white;border-color:#5698be}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:17px}.card{border:1px solid #29394a;background:#121d2d;border-radius:15px;overflow:hidden;min-width:0;transition:transform .15s,border-color .15s}.card:hover{transform:translateY(-2px);border-color:#6087a5}.thumb{width:100%;aspect-ratio:1.3;background:linear-gradient(130deg,#1d3242,#0e1824);position:relative;overflow:hidden}.thumb img{height:100%;width:100%;object-fit:cover;display:block}.stamp{position:absolute;left:10px;top:10px;font-size:10px;font-weight:800;background:#0c1c2bd9;padding:5px 9px;border:1px solid #4c647b;border-radius:7px}.status{position:absolute;right:10px;top:10px;font-size:10px;padding:5px 8px;border-radius:7px;color:#c6d9e8;background:#102235df}.status.approved{background:#154536e8;color:#b3fce1}.broken{display:none;position:absolute;inset:0;padding:20px;align-items:center;justify-content:center;text-align:center;color:#97aabf}.thumb.error img{display:none}.thumb.error .broken{display:flex}.cardbody{padding:13px 13px 15px}.cardtop{display:flex;align-items:center;justify-content:space-between;gap:6px}.card h3{font-size:14px;margin:0;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.carddesc{font-size:11px;color:var(--muted);margin-top:5px;min-height:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.cardlinks{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}.cardlinks .btn{font-size:11px;padding:5px 8px;font-weight:500}.more{background:none;border:0;color:#a5c7dc;font-size:22px;line-height:1}.empty{padding:65px 18px;border:1px dashed #3c5268;border-radius:14px;text-align:center;color:var(--muted);grid-column:1/-1}.empty h3{color:var(--text);margin:0 0 6px}.endnote{color:#768ca0;font-size:11px;margin-top:25px}
+.modalback{position:fixed;inset:0;background:#010610df;z-index:40;display:none;align-items:center;justify-content:center;padding:18px;backdrop-filter:blur(7px)}.modalback.open{display:flex}.modal{background:#101d2c;border:1px solid #416078;border-radius:18px;width:min(790px,100%);max-height:94vh;display:flex;flex-direction:column;box-shadow:0 30px 120px #0009;overflow:hidden}.modalheader{padding:16px 19px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}.modalheader h2{font-size:17px;margin:0}.modalbody{padding:18px;overflow:auto}.modalfooter{border-top:1px solid var(--line);display:flex;gap:9px;justify-content:flex-end;padding:14px 19px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:block;font-size:12px;color:#d3e2f0}.field.wide{grid-column:1/-1}.field input,.field select,.field textarea{margin-top:5px;display:block;width:100%;border:1px solid #39516a;border-radius:9px;padding:10px 11px;background:#0b1522;color:white}.field textarea{min-height:82px;resize:vertical}.help{font-size:11px;color:var(--muted);margin:8px 0}.checks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;background:#0b1522;padding:10px;border-radius:9px;margin-top:6px}.checks label{font-size:12px;color:#b9cfe0}.checks input{accent-color:#87c9e8}.previewimage{width:100%;max-height:55vh;object-fit:contain;background:#09121c;border-radius:11px}.detailmeta{display:flex;gap:10px;flex-wrap:wrap;padding:12px 0;color:var(--muted);font-size:12px}.subtle{color:var(--muted)}.progress{height:7px;background:#1e2e3e;border-radius:99px;overflow:hidden;margin:11px 0}.progress>div{height:100%;background:#87c9e8;width:0;transition:width .2s}.toast{position:fixed;right:22px;bottom:20px;z-index:100;background:#d1e8f8;color:#182536;border-radius:9px;padding:12px 17px;box-shadow:0 12px 35px #000a;display:none;max-width:400px}.toast.on{display:block}.cloud{display:flex;align-items:center;gap:8px;font-size:12px;color:#98b6cb}.dot{height:7px;width:7px;background:#c2ac73;border-radius:50%;display:inline-block}.dot.ok{background:#71ddbb}
+@media(max-width:1050px){.app{grid-template-columns:220px minmax(0,1fr)}.side{padding:16px 10px}.stats{grid-template-columns:repeat(2,1fr)}.heroIcon{display:none}}@media(max-width:700px){.app{display:block}.side{position:static;width:100%;height:auto;min-height:unset;padding:12px 16px;border-right:0;border-bottom:1px solid var(--line)}.sidehead,.sidefoot{display:none}.logo{border:0;padding:1px}.side #groupnav{display:flex;overflow-x:auto;gap:5px;margin-top:9px}.navitem{width:auto;flex:none;padding:8px 11px;white-space:nowrap}.navitem .count{display:none}.main{padding:0 15px 50px}.topbar{height:auto;padding:15px 0;flex-wrap:wrap}.hero{padding-top:5px}.stats{gap:9px}.stat{padding:11px 12px}.stat b{font-size:21px}.mainhead{display:block}.mainhead .actions{margin-top:12px}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.cardbody{padding:9px}.cardlinks .btn{padding:4px 7px;font-size:10px}.card h3{font-size:12px}.fields{grid-template-columns:1fr}.field.wide{grid-column:auto}.checks{grid-template-columns:repeat(2,1fr)}.notice{display:block}.notice .btn{margin-top:9px}}
+</style></head><body>
+<div class="app">
+<aside class="side"><div class="logo"><div class="brandmark">❄</div><div><div class="brand">寒潮王座</div><div class="tiny">VISUAL ARCHIVE · V6</div></div></div><div class="sidehead"><span>候选人物套组</span><div style="display:flex;gap:4px"><button class="btn sm ghost" data-act="manage" title="编辑当前分组">✎</button><button class="btn sm ghost" data-act="newgroup" title="增加候选套组">＋</button></div></div><nav id="groupnav"></nav><div class="sidefoot"><div class="overline">ARTWORK GUIDELINES</div><p class="tiny">优先：厨房、餐厅、沙发、卧室、互动、都市与寒冬。<br>不采用：透明底立绘、人物设定页、角色海报。<br><br>素材组 ≠ 剧情角色。当前全部未绑定。</p></div></aside>
+<main class="main"><div class="topbar"><span class="crumb">WINTER KINGDOM / 资产资料库 / <span id="crumb">全部</span></span><div class="barlinks"><span class="cloud"><i class="dot" id="cloudDot"></i><span id="cloudStatus">本地草稿</span></span><button class="btn sm" data-act="help">使用说明</button><button class="btn sm primary" data-act="cloud">☁ 在线发布</button></div></div>
+<div class="hero"><div><div class="overline">THE WINTER KINGDOM · STORY CG COLLECTION</div><h1>冬境 · 日常影像库</h1><p class="lede">不是人物立绘，而是有环境、有动作、有故事感的日常剧情画面。收藏、筛选、编辑、按候选人物归档，更新后可同步至公开网站。</p></div><div class="heroIcon">❄</div></div>
+<section class="stats" id="stats"></section>
+<div class="notice"><div><b>素材版权提醒</b>　这是公开网页来源的候选画廊，并非已获授权的游戏美术资源。保留原作者和来源，正式发布游戏或重新上传高清文件前须确认许可。</div><button class="btn sm ghost" data-act="sources">来源说明 ↗</button></div>
+<div class="mainhead"><div><h2 id="sectionTitle">所有已收录CG</h2><p id="sectionDesc">所有图片可重新分配给任意人物候选套组。</p></div><div class="actions"><button class="btn" data-act="import">⬆ 导入JSON</button><button class="btn" data-act="export">⬇ 导出JSON</button><button class="btn primary" data-act="newimage">＋ 添加CG</button></div></div>
+<div class="toolbar"><div class="search"><input id="search" placeholder="搜索角色、场景、服饰、来源或备注…" autocomplete="off"></div><select class="select" id="statusFilter"><option value="all">所有状态</option><option value="candidate">待审核</option><option value="approved">已精选</option></select><select class="select" id="sortFilter"><option value="new">最新收录</option><option value="name">按图片名称</option></select><button class="btn" data-act="collect">✦ 搜集本组CG</button></div>
+<div class="pills" id="pills"></div><section class="gallery" id="gallery"></section><div class="endnote">画面来源为外部站点链接，原图可能有防盗链或失效。编辑草稿自动保存在当前浏览器；只有点击「在线发布」并授权 GitHub 仓库后，才会同步到所有访客。</div>
+</main></div>
+<div class="modalback" id="overlay" role="dialog" aria-modal="true"><div class="modal"><div class="modalheader"><h2 id="modalTitle"></h2><button class="btn sm ghost" data-act="close" aria-label="关闭">✕</button></div><div class="modalbody" id="modalBody"></div><div class="modalfooter" id="modalFoot"></div></div></div><div class="toast" id="toast" aria-live="polite"></div><input id="importFile" type="file" accept="application/json,.json" hidden><input id="uploadFile" type="file" accept="image/jpeg,image/png,image/webp" hidden>
+<script id="seedJSON" type="application/json">{
+  "version": 6,
+  "project": "寒潮王座 · 剧情CG素材管理站",
+  "updatedAt": "2026-10-20T10:19:00+08:00",
+  "groups": [
+    {
+      "id": "U-00",
+      "name": "未归档情景CG",
+      "tag": "",
+      "focus": "生活、居家、聚会、日常，尚未绑定人物",
+      "status": "unbound"
+    },
+    {
+      "id": "N-01",
+      "name": "安妮丝 Anis",
+      "tag": "anis_(nikke)",
+      "focus": "居家 / 吃喝 / 轻松聊天",
+      "status": "unbound"
+    },
+    {
+      "id": "N-02",
+      "name": "拉毗 Rapi",
+      "tag": "rapi_(nikke)",
+      "focus": "都市 / 咖啡 / 工作间隙",
+      "status": "unbound"
+    },
+    {
+      "id": "N-03",
+      "name": "普丽瓦蒂 Privaty",
+      "tag": "privaty_(nikke)",
+      "focus": "礼服 / 日常 / 休闲",
+      "status": "unbound"
+    },
+    {
+      "id": "N-04",
+      "name": "海伦 Helm",
+      "tag": "helm_(nikke)",
+      "focus": "都市餐厅 / 休息 / 聚会",
+      "status": "unbound"
+    },
+    {
+      "id": "N-05",
+      "name": "露菲 Rupee",
+      "tag": "rupee_(nikke)",
+      "focus": "购物 / 约会 / 生活",
+      "status": "unbound"
+    },
+    {
+      "id": "N-06",
+      "name": "桃乐丝 Dorothy",
+      "tag": "dorothy_(nikke)",
+      "focus": "茶会 / 私人空间 / 日常",
+      "status": "unbound"
+    },
+    {
+      "id": "N-07",
+      "name": "红莲 Scarlet",
+      "tag": "scarlet_(nikke)",
+      "focus": "庭院 / 茶饮 / 冬日",
+      "status": "unbound"
+    },
+    {
+      "id": "N-08",
+      "name": "神罚 Modernia",
+      "tag": "modernia_(nikke)",
+      "focus": "居家 / 用餐 / 同伴互动",
+      "status": "unbound"
+    },
+    {
+      "id": "N-09",
+      "name": "梅登 Maiden",
+      "tag": "maiden_(nikke)",
+      "focus": "游戏 / 公寓 / 休闲",
+      "status": "unbound"
+    },
+    {
+      "id": "N-10",
+      "name": "樱花 Sakura",
+      "tag": "sakura_(nikke)",
+      "focus": "和风日常 / 喝茶 / 室内",
+      "status": "unbound"
+    },
+    {
+      "id": "N-11",
+      "name": "罗珊娜 Rosanna",
+      "tag": "rosanna_(nikke)",
+      "focus": "酒吧 / 都市夜晚 / 休闲",
+      "status": "unbound"
+    },
+    {
+      "id": "N-12",
+      "name": "毒蛇 Viper",
+      "tag": "viper_(nikke)",
+      "focus": "休闲服 / 城市夜景 / 互动",
+      "status": "unbound"
+    }
+  ],
+  "images": [
+    {
+      "id": "S-001",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "节日餐桌·群像",
+      "url": "https://pbs.twimg.com/media/Ga-fQFWaIAANYMy.jpg",
+      "source": "https://x.com/NIKKE_en/status/1851058870917169512",
+      "tags": [
+        "多人互动",
+        "餐饮",
+        "节日",
+        "NIKKE"
+      ],
+      "status": "candidate",
+      "copyright": "待核实",
+      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
+      "origin": "curated",
+      "createdAt": "2026-10-20"
+    },
+    {
+      "id": "S-002",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "室内糕点聚会",
+      "url": "https://konachan.com/jpeg/f45e75883aec0d72a4f344ac8bab8f75/Konachan.com%20-%20398400%20blue_eyes%20blush%20braids%20brown_eyes%20brown_hair%20cake%20choker%20drink%20food%20gloves%20gray_hair%20loli%20long_hair%20ribbons%20skirt%20tie%20twintails%20yellow_eyes.jpg",
+      "source": "https://konachan.com/post/show/398400",
+      "tags": [
+        "室内",
+        "用餐",
+        "多人",
+        "节日"
+      ],
+      "status": "candidate",
+      "copyright": "待核实",
+      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
+      "origin": "curated",
+      "createdAt": "2026-10-20"
+    },
+    {
+      "id": "S-003",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "咖啡厅轻松聊天",
+      "url": "https://truth.bahamut.com.tw/s01/202303/86658c9fddceee1fb69c1654e178c755.JPG",
+      "source": "https://forum.gamer.com.tw/C.php?bsn=36390&snA=7867",
+      "tags": [
+        "咖啡厅",
+        "聊天",
+        "多人",
+        "日常"
+      ],
+      "status": "candidate",
+      "copyright": "待核实",
+      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
+      "origin": "curated",
+      "createdAt": "2026-10-20"
+    },
+    {
+      "id": "S-004",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "休息室聚餐",
+      "url": "https://www.pixiewall.com/content/wallpapers/full/67/pixiewall-nikke-anis-rapi-neon-meal-5k-rjwcz6.jpg",
+      "source": "https://www.pixiewall.com/wallpaper/nikke-anis-rapi-neon-meal-5k-32829",
+      "tags": [
+        "室内",
+        "餐饮",
+        "安妮丝",
+        "拉毗",
+        "妮姬"
+      ],
+      "status": "candidate",
+      "copyright": "待核实",
+      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
+      "origin": "curated",
+      "createdAt": "2026-10-20"
+    },
+    {
+      "id": "S-005",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "厨房准备晚餐",
+      "url": "https://oss.ccbooster.com/PROD/37eaae5f50074737830454b870d22b84.jpg",
+      "source": "https://www.ccbooster.com/news/150/",
+      "tags": [
+        "厨房",
+        "烹饪",
+        "多人",
+        "少女前线2"
+      ],
+      "status": "candidate",
+      "copyright": "待核实",
+      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
+      "origin": "curated",
+      "createdAt": "2026-10-20"
+    },
+    {
+      "id": "S-006",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "甜品烘焙时刻",
+      "url": "https://static.zerochan.net/Marciana.full.4116618.jpg",
+      "source": "https://www.zerochan.net/Marciana",
+      "tags": [
+        "厨房",
+        "烘焙",
+        "居家"
+      ],
+      "status": "candidate",
+      "copyright": "待核实",
+      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
+      "origin": "curated",
+      "createdAt": "2026-10-20"
+    },
+    {
+      "id": "S-007",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "温暖酒馆·安静小酌",
+      "url": "https://www.pixiewall.com/content/wallpapers/medium/31/pixiewall-ld3qic.jpg",
+      "source": "https://www.pixiewall.com/wallpaper/scarlet-goddess-of-victory-nikke-japanese-clothes-5k-18882",
+      "tags": [
+        "休息",
+        "餐饮",
+        "和服",
+        "红莲"
+      ],
+      "status": "candidate",
+      "copyright": "待核实",
+      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
+      "origin": "curated",
+      "createdAt": "2026-10-20"
+    },
+    {
+      "id": "S-008",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "桌旁闲谈",
+      "url": "https://konachan.com/jpeg/6a03c19ab4e632a974d9311222afc4e9/Konachan.com%20-%20361334%20blonde_hair%20blush%20breasts%20brown_hair%20choker%20choney%20cleavage%20collar%20glasses%20gloves%20gray_hair%20hat%20long_hair%20red_eyes%20short_hair%20skintight%20skirt%20tie.jpg",
+      "source": "https://konachan.com/post/show/361334",
+      "tags": [
+        "日常",
+        "谈话",
+        "多人",
+        "安妮丝",
+        "拉毗"
+      ],
+      "status": "candidate",
+      "copyright": "待核实",
+      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
+      "origin": "curated",
+      "createdAt": "2026-10-20"
+    },
+    {
+      "id": "S-009",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "皇家宴席",
+      "url": "https://konachan.com/jpeg/dff311ec83e0d8ce0cf2b84347999139/Konachan.com%20-%20383569%20armor%20blush%20bow%20braids%20dress%20drink%20food%20fruit%20gloves%20group%20hat%20headband%20headdress%20long_hair%20nopan%20pantyhose%20ribbons%20shirt%20sleeping%20tears%20twintails.jpg",
+      "source": "https://konachan.com/post/show/383569",
+      "tags": [
+        "餐厅",
+        "宴席",
+        "多人",
+        "神罚"
+      ],
+      "status": "candidate",
+      "copyright": "待核实",
+      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
+      "origin": "curated",
+      "createdAt": "2026-10-20"
+    },
+    {
+      "id": "S-010",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "餐桌小憩",
+      "url": "https://pbs.twimg.com/media/GMF02NGacAAgAX7.jpg",
+      "source": "https://x.com/NIKKE_japan/status/1784764540783153510",
+      "tags": [
+        "餐厅",
+        "休息",
+        "节日",
+        "多人"
+      ],
+      "status": "candidate",
+      "copyright": "待核实",
+      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
+      "origin": "curated",
+      "createdAt": "2026-10-20"
+    },
+    {
+      "id": "S-011",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "节日食堂",
+      "url": "https://media.esports.gg/uploads/2024/10/godess-of-victory-nikke-2nd-anniversary-wallpaper.png",
+      "source": "https://esports.gg/news/nikke/nikke-wallpaper-desktop-and-mobile/",
+      "tags": [
+        "咖啡厅",
+        "聚会",
+        "多人",
+        "餐饮"
+      ],
+      "status": "candidate",
+      "copyright": "待核实",
+      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
+      "origin": "curated",
+      "createdAt": "2026-10-20"
+    }
+  ]
+}</script>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const allowURL=s=>{try{let u=new URL(s,location.href);return ['http:','https:','file:'].includes(u.protocol)?u.href:'#'}catch{return '#'}};
+const clone=o=>JSON.parse(JSON.stringify(o));
+const DEFAULT=JSON.parse($('seedJSON').textContent);
+const DRAFT_KEY='winter-cg-draft-v6', SETTINGS_KEY='winter-cg-settings-v6';
+let data=clone(DEFAULT),selected='ALL',category='all',searchText='',working=false,cred='',github={owner:'tyqittle',repo:'winter-cg-archive',branch:'main'};
+try{github={...github,...JSON.parse(localStorage.getItem(SETTINGS_KEY)||'{}')}}catch{}
+const now=()=>new Date().toISOString();
+function toasts(msg){$('toast').textContent=msg;$('toast').classList.add('on');clearTimeout(window.__toastTimer);window.__toastTimer=setTimeout(()=>$('toast').classList.remove('on'),3900)}
+function saveDraft(){data.updatedAt=now();try{localStorage.setItem(DRAFT_KEY,JSON.stringify(data))}catch{toasts('浏览器草稿空间不足，请导出JSON备份')}updateCloud(false)}
+function updateCloud(live){$('cloudStatus').textContent=live?'已发布到仓库':'本地草稿';$('cloudDot').classList.toggle('ok',live)}
+function groupName(id){return data.groups.find(g=>g.id===id)?.name||id}
+function belonging(x){return selected==='ALL'||(x.groupIds||[]).includes(selected)}
+function subset(){let a=data.images.filter(belonging).filter(x=>category==='all'||(category==='multi'?x.tags?.some(t=>/多人|同框|聚会/.test(t)):x.tags?.some(t=>t.includes(category)))).filter(x=>$('statusFilter').value==='all'||x.status===$('statusFilter').value);let q=searchText.toLowerCase().trim();if(q)a=a.filter(x=>[x.title,x.note,x.source,...x.tags||[],...x.groupIds.map(groupName)].join(' ').toLowerCase().includes(q));if($('sortFilter').value==='name')a.sort((a,b)=>a.title.localeCompare(b.title,'zh'));else a.reverse();return a}
+function render(){const g=data.groups.find(x=>x.id===selected);let total=data.images.length,approved=data.images.filter(x=>x.status==='approved').length;
+$('stats').innerHTML=`<div class="stat"><b>${data.groups.length-1}</b><span>候选人物外观组</span></div><div class="stat"><b>${total}</b><span>已收录图片 · 实际数量</span></div><div class="stat"><b>${approved}</b><span>人工精选CG</span></div><div class="stat"><b>${data.images.filter(x=>x.groupIds?.includes('U-00')).length}</b><span>尚未分配素材</span></div>`;
+$('groupnav').innerHTML=`<button class="navitem ${selected==='ALL'?'active':''}" data-act="group" data-id="ALL"><span>◈</span><b>所有素材</b><span class="count">${total}</span></button>`+data.groups.map(g=>`<button class="navitem ${selected===g.id?'active':''}" data-act="group" data-id="${esc(g.id)}"><span>${g.id==='U-00'?'◇':'✧'}</span><b>${esc(g.name)}</b><span class="count">${data.images.filter(x=>x.groupIds?.includes(g.id)).length}</span></button>`).join('');
+$('crumb').textContent=g?.name||'全部图片';$('sectionTitle').textContent=g?.name||'所有已收录CG';$('sectionDesc').textContent=g?.focus||(selected==='ALL'?'按人物、生活场景筛选；这里展示的是实际已收录的图片。':'尚未锁定剧情角色。人物套组可随时重新命名。');
+const cats=['全部','厨房','餐饮','休息','室内','多人','咖啡厅','雪夜','卧室'];$('pills').innerHTML=cats.map((t,i)=>`<button class="pill ${category===(i===0?'all':i===5?'multi':t)?'active':''}" data-act="cat" data-id="${i===0?'all':i===5?'multi':t}">${t}</button>`).join('');
+let items=subset();$('gallery').innerHTML=items.length?items.map(x=>`<article class="card"><div class="thumb" role="button" tabindex="0" data-act="view" data-id="${esc(x.id)}"><img src="${esc(allowURL(x.url))}" alt="${esc(x.title)}" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('error')"><div class="broken">图片源站暂不可用<br>请点击来源链接查看</div><div class="stamp">${esc(x.id)}</div><div class="status ${x.status==='approved'?'approved':''}">${x.status==='approved'?'✓ 精选':'待审核'}</div></div><div class="cardbody"><div class="cardtop"><h3 title="${esc(x.title)}">${esc(x.title)}</h3><button title="编辑图片资料" class="more" data-act="edit" data-id="${esc(x.id)}">⋯</button></div><div class="carddesc" title="${esc(x.tags?.join(' · '))}">${esc(x.tags?.slice(0,4).join(' · ')||'未标记')}</div><div class="cardlinks"><button class="btn" data-act="view" data-id="${esc(x.id)}">◩ 预览</button><a class="btn" target="_blank" rel="noopener noreferrer" href="${esc(allowURL(x.source))}">↗ 来源</a><button class="btn" data-act="approve" data-id="${esc(x.id)}">${x.status==='approved'?'↺ 撤销精选':'☆ 精选'}</button></div></div></article>`).join(''):`<div class="empty"><div style="font-size:31px">☁</div><h3>这组还没有已收录的日常CG</h3><p>点击「搜集本组CG」加载公开候选，或手动添加、导入图片。</p><button class="btn primary" data-act="collect">✦ 开始搜集</button></div>`;
+}
+function modal(title,body,foot=''){ $('modalTitle').textContent=title;$('modalBody').innerHTML=body;$('modalFoot').innerHTML=foot||`<button class="btn" data-act="close">关闭</button>`;$('overlay').classList.add('open')}
+function close(){ $('overlay').classList.remove('open')}
+function textfield(label,name,val='',wide=false,kind='text'){return `<label class="field ${wide?'wide':''}">${label}<input type="${kind}" name="${name}" value="${esc(val)}"></label>`}
+function groupchecks(x){return `<div class="field wide">归属的外观候选组（可多选，多人场景可关联多个组）<div class="checks">${data.groups.map(g=>`<label><input type="checkbox" name="groupIds" value="${esc(g.id)}" ${(x.groupIds||[]).includes(g.id)?'checked':''}> ${esc(g.name)}</label>`).join('')}</div></div>`}
+function editImage(id){let x=data.images.find(z=>z.id===id)||{id:'CG-'+Date.now().toString(36).toUpperCase(),groupIds:[selected==='ALL'?'U-00':selected],title:'',url:'',source:'',tags:[],note:'',status:'candidate',copyright:'待核实'};modal(id?'编辑CG资料':'添加日常CG',`<form id="cgform"><div class="fields">${textfield('CG名称','title',x.title,true)}${textfield('图片链接（HTTPS，支持相对路径）','url',x.url,true)}${textfield('原作者 / 原作品页面','source',x.source,true)}${textfield('标签（逗号分隔）','tags',(x.tags||[]).join(', '),true)}${textfield('版权或使用许可状态','copyright',x.copyright)}<label class="field">审核状态<select name="status"><option value="candidate" ${x.status==='candidate'?'selected':''}>待审核</option><option value="approved" ${x.status==='approved'?'selected':''}>人工精选</option></select></label>${groupchecks(x)}<label class="field wide">动作、服饰、场景备注<textarea name="note">${esc(x.note||'')}</textarea></label></div></form><p class="help">仅保存图片链接，不会擅自下载/重新分发原画。支持从浏览器上传自己有权使用的图到 GitHub 仓库。</p>`,`${id?`<button class="btn danger" data-act="deleteimage" data-id="${esc(id)}">删除这张</button>`:''}<button class="btn" data-act="upload">⬆ 上传图片</button><button class="btn" data-act="close">取消</button><button class="btn primary" data-act="submitimage" data-id="${esc(id||'')}">保存资料</button>`)}
+function saveImage(id){let form=$('cgform'),v=Object.fromEntries(new FormData(form));if(!v.title?.trim()||!v.url?.trim())return toasts('请填写图片名称和链接');if(allowURL(v.url)==='#')return toasts('图片链接格式无效');let groupIds=[...form.querySelectorAll('[name=groupIds]:checked')].map(x=>x.value);if(!groupIds.length)groupIds=['U-00'];let item={id:id||'CG-'+crypto.randomUUID().slice(0,8).toUpperCase(),title:v.title.trim(),url:v.url.trim(),source:v.source?.trim()||'',tags:(v.tags||'').split(/[,，]/).map(x=>x.trim()).filter(Boolean),note:v.note||'',copyright:v.copyright||'待核实',groupIds,status:v.status||'candidate',origin:id?data.images.find(x=>x.id===id)?.origin||'manual':'manual',createdAt:now()};let i=data.images.findIndex(x=>x.id===id);if(i>=0)data.images[i]={...data.images[i],...item};else data.images.push(item);saveDraft();close();render();toasts('图片已保存到本地草稿')}
+function viewImage(id){let x=data.images.find(p=>p.id===id);if(!x)return;modal(x.title,`<img class="previewimage" src="${esc(allowURL(x.url))}" referrerpolicy="no-referrer" alt="${esc(x.title)}"><div class="detailmeta"><span>归属：${esc(x.groupIds.map(groupName).join('、'))}</span><span>状态：${x.status==='approved'?'精选':'待审核'}</span><span>许可：${esc(x.copyright||'待核实')}</span></div><div class="subtle">${esc(x.note||'')}</div><p class="help">${esc(x.tags.join(' / '))}</p>`,`<a class="btn" target="_blank" rel="noopener noreferrer" href="${esc(allowURL(x.source))}">查看来源 ↗</a><a class="btn" target="_blank" rel="noopener noreferrer" href="${esc(allowURL(x.url))}">查看原图 ↗</a><button class="btn primary" data-act="edit" data-id="${esc(x.id)}">编辑</button>`)}
+function newGroup(){let name=prompt('新候选人物组名称（暂不绑定剧情角色）');if(!name?.trim())return;let id='P-'+Date.now().toString(36).toUpperCase();data.groups.push({id,name:name.trim(),tag:'',focus:'日常CG · 尚未绑定角色',status:'unbound'});saveDraft();selected=id;render();toasts('新建分组成功')}
+function manageGroups(){let g=data.groups.find(x=>x.id===selected);if(!g||selected==='ALL'||selected==='U-00')return toasts('先选择一个候选人物组');modal('编辑候选人物组',`<form id="groupform"><div class="fields">${textfield('候选组名称','name',g.name,true)}${textfield('图库搜索标签（Danbooru 人物标签）','tag',g.tag,true)}${textfield('剧情用途 / 检索关键词','focus',g.focus,true)}</div></form>`,`<button class="btn danger" data-act="deletegroup">删除分组</button><button class="btn" data-act="close">取消</button><button class="btn primary" data-act="savegroup">保存</button>`)}
+function saveGroup(){let g=data.groups.find(x=>x.id===selected);if(!g)return;let v=Object.fromEntries(new FormData($('groupform')));Object.assign(g,{name:v.name||g.name,tag:v.tag||'',focus:v.focus||''});saveDraft();close();render()}
+function deleteGroup(){if(!confirm('删除该人物候选分组？组内图片会移入「未归档」，不会删除图片。'))return;data.groups=data.groups.filter(x=>x.id!==selected);data.images.forEach(x=>{if(x.groupIds.includes(selected)){x.groupIds=x.groupIds.filter(v=>v!==selected);if(!x.groupIds.length)x.groupIds=['U-00']}});selected='U-00';saveDraft();close();render()}
+function exportJSON(){let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='winter-cg-catalog-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2500)}
+function sanitizeImport(obj){if(!obj||!Array.isArray(obj.groups)||!Array.isArray(obj.images))throw Error('JSON缺少 groups 或 images 数组');if(obj.images.length>10000)throw Error('每次最多导入10000张');return {version:6,project:obj.project||DEFAULT.project,updatedAt:now(),groups:obj.groups.map(g=>({id:String(g.id),name:String(g.name),tag:String(g.tag||''),focus:String(g.focus||''),status:'unbound'})),images:obj.images.filter(x=>x.url&&x.id).map(x=>({...x,id:String(x.id),url:String(x.url),source:String(x.source||''),title:String(x.title||''),tags:Array.isArray(x.tags)?x.tags.map(String):[],groupIds:Array.isArray(x.groupIds)?x.groupIds.map(String):['U-00'],status:x.status==='approved'?'approved':'candidate'}))}}
+$('importFile').addEventListener('change',async e=>{let f=e.target.files[0];if(!f)return;try{let o=sanitizeImport(JSON.parse(await f.text()));if(!confirm(`导入文件有 ${o.groups.length} 组和 ${o.images.length} 张图，是否覆盖当前数据？请先导出备份。`))return;data=o;selected='ALL';saveDraft();render();toasts('导入成功')}catch(err){toasts('导入失败：'+err.message)}finally{e.target.value=''}});
+// Danbooru's public API supports CORS for posts.json; all imported results require human review.
+const SCENES=new Set('indoors room kitchen dining_room restaurant cafe coffee_shop bar table living_room bedroom couch sofa on_couch chair bed outdoors garden park city street snow snowing fireplace kitchen_table dining_table shopping_mall train_station'.split(' '));
+const ACTIONS=new Set('eating drinking cooking baking sitting sleeping reading playing_games chatting hugging shopping holding_cup holding_food dining food coffee tea cake picnic on_bed'.split(' '));
+const BANNED=new Set('transparent_background simple_background white_background character_sheet official_character_profile reference_sheet monochrome comic multiple_views dakimakura'.split(' '));
+async function queryPosts(query){let err;for(let api of ['https://danbooru.donmai.us/posts.json','https://safebooru.donmai.us/posts.json']){try{let r=await fetch(api+'?'+new URLSearchParams({tags:query,limit:'100'}),{headers:{'Accept':'application/json'}});if(!r.ok)throw Error('HTTP '+r.status);let j=await r.json();if(!Array.isArray(j))throw Error('不是图片列表');return j}catch(e){err=e}}throw err}
+function fromPost(p,group){let tags=(p.tag_string||'').split(' '),gs=new Set(tags);if(!['g','general'].includes(p.rating)||tags.some(t=>BANNED.has(t)))return null;if((p.image_width||0)<850||(p.image_height||0)<550)return null;let scene=tags.filter(t=>SCENES.has(t)),act=tags.filter(t=>ACTIONS.has(t));if(!scene.length||(!act.length&&scene.length<2))return null;if(!['jpg','jpeg','png','webp'].includes(p.file_ext))return null;let url=p.large_file_url||p.file_url||p.preview_file_url;if(!url)return null;let hints=[...scene,...act].slice(0,6);let name=scene.includes('kitchen')?'厨房日常':scene.includes('cafe')||scene.includes('coffee_shop')?'咖啡厅':scene.includes('restaurant')?'餐厅':scene.includes('bedroom')?'卧室日常':scene.includes('snow')?'雪夜':act.includes('eating')?'一起吃饭':act.includes('sitting')?'室内休憩':'生活情景';return {id:'DB-'+p.id,groupIds:[group.id],title:group.name+' · '+name,url,source:'https://danbooru.donmai.us/posts/'+p.id,tags:hints,status:'candidate',copyright:'原画许可待核实',note:'由公开图库导入，尚未经逐张人工审核。请核对人物身份及画面品质。',origin:'danbooru',createdAt:now(),score:p.score||0}}
+async function collect(group){if(working)return;if(!group?.tag)return toasts('该组尚无可搜索的人物标签，请在分组管理里填写');working=true;close();let added=0,errors=[];const queries=[`${group.tag} indoors`,`${group.tag} sitting`,`${group.tag} eating`,`${group.tag} cafe`,`${group.tag} outdoors`];toasts('开始搜索 '+group.name+' 的生活情景图片…');let found=new Map();try{for(let q of queries){try{let posts=await queryPosts(q);for(let p of posts){let image=fromPost(p,group);if(image)found.set(image.id,image)} }catch(e){errors.push(e.message)} if(found.size>=18)break;await new Promise(r=>setTimeout(r,780));}let existing=new Set(data.images.map(p=>p.id));let picks=[...found.values()].sort((a,b)=>b.score-a.score).filter(x=>!existing.has(x.id)).slice(0,25);data.images.push(...picks.map(({score,...x})=>x));added=picks.length;saveDraft();render();toasts(`已加入 ${added} 张待审核图，当前这组共有 ${data.images.filter(x=>x.groupIds.includes(group.id)).length} 张。`);if(added===0&&errors.length)modal('源站访问失败',`<p>未能从第三方公开图库获取候选图片。</p><p class="help">${esc(errors.join('; '))}</p><p>可以点击右上角「添加CG」手工添加图片链接。</p>`)}finally{working=false}}
+// GitHub REST Contents API: user token lives only in JS memory (not in cookies/storage/files).
+function cloudModal(){modal('☁ GitHub 在线发布 / 共享图库',`<div class="notice"><div>所有人都可以公开浏览；只有拥有仓库写入权限的人才能更新云端图片目录。令牌只保留在本次页面内存中，不会存入网站文件或浏览器本地存储。</div></div><form id="cloudForm"><div class="fields">${textfield('GitHub 用户或组织名','owner',github.owner)}${textfield('仓库名称（支持 Private）','repo',github.repo)}${textfield('分支（通常是 main）','branch',github.branch)}${textfield('Fine-grained 访问令牌（Contents: Read and write）','token','',true,'password')}</div></form><p class="help">本项目使用独立私有仓库 tyqittle/winter-cg-archive。公开访问请从 Vercel 等平台连接私有仓库部署；发布当前修改会更新 data/catalog.json，由部署平台重新构建。</p><p class="help">请勿把访问令牌发在聊天中，或写入公开仓库。若只需本地使用，可以直接导入/导出 JSON。</p>`,`<button class="btn" data-act="close">取消</button><button class="btn" data-act="cloudpull">↓ 从仓库读取</button><button class="btn primary" data-act="cloudpush">↑ 发布当前修改</button>`)}
+function creds(){const f=$('cloudForm');if(f){const v=Object.fromEntries(new FormData(f));github={owner:(v.owner||'').trim(),repo:(v.repo||'').trim(),branch:(v.branch||'main').trim()};if(v.token?.trim())cred=v.token.trim();localStorage.setItem(SETTINGS_KEY,JSON.stringify(github))}if(!github.owner||!github.repo)throw Error('请填写仓库所属用户名及名称');if(!cred)throw Error('请填写具有此仓库 Contents 读写权限的令牌');if(!/^[a-z\d_.-]+$/i.test(github.owner)||! /^[a-z\d_.-]+$/i.test(github.repo))throw Error('仓库信息格式不正确')}
+const repoApi=()=>`https://api.github.com/repos/${encodeURIComponent(github.owner)}/${encodeURIComponent(github.repo)}/contents/`;
+async function githubReq(path,method='GET',payload=null,accept404=false){let r=await fetch(repoApi()+path,{method,headers:{'Accept':'application/vnd.github+json','Authorization':'Bearer '+cred,'X-GitHub-Api-Version':'2022-11-28',...(payload?{'Content-Type':'application/json'}:{})},body:payload?JSON.stringify(payload):undefined});if(r.status===404&&accept404)return null;if(!r.ok){let t=(await r.text()).slice(0,280);throw Error('GitHub '+r.status+' '+t)}return r.json()}
+function u8base64(s){let bin='';const bytes=new TextEncoder().encode(s);for(let i=0;i<bytes.length;i+=8192){bin+=String.fromCharCode(...bytes.subarray(i,i+8192))}return btoa(bin)}
+function base64u8(s){let bin=atob(s.replace(/\s/g,'')),b=Uint8Array.from(bin,c=>c.charCodeAt(0));return new TextDecoder().decode(b)}
+async function cloudPush(){try{creds();$('modalFoot').querySelectorAll('button').forEach(x=>x.disabled=true);let path='data/catalog.json',remote=await githubReq(path+'?ref='+encodeURIComponent(github.branch),'GET',null,true);let content=u8base64(JSON.stringify(data,null,2));let v=await githubReq(path,'PUT',{message:'Update winter CG asset catalog',content,branch:github.branch,...(remote?{sha:remote.sha}:{})});localStorage.removeItem(DRAFT_KEY);updateCloud(true);close();toasts('已提交GitHub！公开站点可能需要1-3分钟同步。')}catch(e){toasts('发布失败：'+e.message.slice(0,180));$('modalFoot').querySelectorAll('button').forEach(x=>x.disabled=false)}}
+async function cloudPull(){try{creds();if(!confirm('这会用GitHub仓库中的目录覆盖当前编辑内容。是否继续？'))return;let v=await githubReq('data/catalog.json?ref='+encodeURIComponent(github.branch));data=sanitizeImport(JSON.parse(base64u8(v.content)));localStorage.removeItem(DRAFT_KEY);selected='ALL';updateCloud(true);close();render();toasts('已从GitHub同步')}catch(e){toasts('同步失败：'+e.message.slice(0,180))}}
+$('uploadFile').addEventListener('change',async e=>{let f=e.target.files[0];if(!f)return;if(f.size>8*1024*1024){toasts('单张图片应小于8MB');return}if(!/^image\/(jpeg|png|webp)$/.test(f.type)){toasts('仅支持 JPG/PNG/WebP');return}if(!cred){toasts('上传文件需要先在「在线发布」里连接仓库；也可以直接粘贴图片URL');return}try{let filename='assets/'+Date.now()+'-'+f.name.replace(/[^.a-zA-Z0-9_-]/g,'_');let binary=await f.arrayBuffer(),buf=new Uint8Array(binary),bin='';for(let i=0;i<buf.length;i+=4096)bin+=String.fromCharCode(...buf.subarray(i,i+4096));let content=btoa(bin);let res=await githubReq(filename,'PUT',{message:'Add approved image asset',content,branch:github.branch});let url=`https://raw.githubusercontent.com/${github.owner}/${github.repo}/${github.branch}/${filename}`;$('cgform').elements.url.value=url;toasts('图片已上传仓库，请继续填写并保存资料')}catch(e){toasts('上传失败：'+e.message.slice(0,100))}finally{e.target.value=''}});
+function help(){modal('使用说明',`<p><b>公开浏览：</b>每个人都可以查看各组日常CG、预览和跳转原图。</p><p><b>编辑：</b>点击「添加CG」或卡片右上角的 ⋯，调整图片链接、场景、动作、标签、精选状态，以及图片所属的多个候选人物组。</p><p><b>持续更新：</b>编辑自动写入本机草稿。配置你授权的 GitHub 仓库后，点击「在线发布」可把数据写入 data/catalog.json，网站经 GitHub Pages 自动刷新。</p><p><b>自动检索：</b>选择已有候选组，点击「搜集本组CG」。从 Danbooru 获取符合生活场景的候选图（一般评级），但必须由你人工验收：没有任何算法能保证检索到的100张图片都具有同一画风和质量。</p><p><b>图片本体：</b>普通图库条目只存URL；若有获授权的本地图片，可以连接GitHub后上传入仓库（每张不超过8MB）。</p><p><b>JSON：</b>可随时导入、导出全库，作为备份或迁移数据。</p><p class="help">说明：这是静态网站+GitHub在线同步架构，不需要另租数据库；第三方图片的展示稳定性取决于源站限制。所有角色归属只是候选资产整理，不会直接绑定剧情角色。</p>`)}
+function sourceModal(){modal('素材出处与授权说明',`<p>初始示例图来自 NIKKE 官方社交账号、NIKKE 相关艺术收录页面、少女前线2相关介绍以及公开壁纸收藏页。各图片的实际作者、版权和可再利用授权以原始页面为准。</p><p>点击图片卡片上的「来源」进入原网页。自动导入的 Danbooru 图片保留原始帖子地址，后续如需在独立游戏里使用，需要另行联系版权方或替换为已授权图片。</p><p>本站不声称拥有第三方图片版权；管理员可删除或修正侵权内容。</p>`)}
+// delegated actions
+window.addEventListener('click',e=>{if(e.target===$('overlay'))close();let el=e.target.closest('[data-act]');if(!el)return;let a=el.dataset.act,id=el.dataset.id;switch(a){case 'close':close();break;case 'group':selected=id;category='all';render();break;case 'cat':category=id;render();break;case 'view':viewImage(id);break;case 'edit':editImage(id);break;case 'approve':{let x=data.images.find(x=>x.id===id);if(x){x.status=x.status==='approved'?'candidate':'approved';saveDraft();render()}break}case 'newimage':editImage(null);break;case 'submitimage':saveImage(id);break;case 'deleteimage':if(confirm('确定删除这张CG记录？')){data.images=data.images.filter(x=>x.id!==id);saveDraft();close();render()}break;case 'newgroup':newGroup();break;case 'manage':manageGroups();break;case 'savegroup':saveGroup();break;case 'deletegroup':deleteGroup();break;case 'export':exportJSON();break;case 'import':$('importFile').click();break;case 'collect':collect(data.groups.find(g=>g.id===selected));break;case 'cloud':cloudModal();break;case 'cloudpush':cloudPush();break;case 'cloudpull':cloudPull();break;case 'upload':$('uploadFile').click();break;case 'help':help();break;case 'sources':sourceModal();break;}}
+);
+$('search').addEventListener('input',e=>{searchText=e.target.value;render()});$('statusFilter').addEventListener('change',render);$('sortFilter').addEventListener('change',render);document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+(async()=>{let draft=null;try{draft=JSON.parse(localStorage.getItem(DRAFT_KEY)||'null')}catch{}if(draft){try{data=sanitizeImport(draft);updateCloud(false)}catch{}}else if(location.protocol!=='file:'){try{let r=await fetch('./data/catalog.json?t='+Date.now(),{cache:'no-store'});if(r.ok){data=sanitizeImport(await r.json());updateCloud(true)}}catch{}}render()})();
+// Sidebar editor can be opened by double-clicking active group name, without duplicating tiny controls.
+$('groupnav').addEventListener('dblclick',e=>{if(e.target.closest('.navitem')?.dataset.id!=='ALL')manageGroups()});
+</script></body></html>
