@@ -65,9 +65,9 @@ async function refreshSaved(){try{const all=await cacheAll();const select=$('sav
 function stopWatchdog(){if(watchdog){clearTimeout(watchdog);watchdog=null}}
 function status(message,error=false){$('status').textContent=message;$('status').classList.toggle('error',error)}
 function chosen(){return allCharacters.find(c=>c.id===$('characters').value)}
-function setVersion(v){
+function setVersion(v, packId=''){
  if($('version').value===v)return true;
- if(loadedVersion&&loadedVersion!==v){const next=new URL(location.href);next.searchParams.set('v',v);next.searchParams.set('id',$('characters').value);location.href=next.toString();return false}
+ if(loadedVersion&&loadedVersion!==v){const next=new URL(location.href);next.searchParams.set('v',v);if(packId){next.searchParams.set('pack',packId);next.searchParams.delete('id')}else{next.searchParams.set('id',$('characters').value);next.searchParams.delete('pack')}location.href=next.toString();return false}
  $('version').value=v;return true;
 }
 function ensureRuntime(version){
@@ -140,7 +140,7 @@ async function preparePack(files){const {skeleton,atlas}=skeletonAndAtlas(files)
 // The atlas BOM breaks some Spine parsers; rewrite the in-memory text without changing original files.
 rawDataURIs[atlasName]='data:text/plain;charset=utf-8;base64,'+btoa(unescape(encodeURIComponent((await atlas.text()).replace(/^\uFEFF/,''))));
 return {id:skeletonName,version:$('version').value,skeleton:skeletonName,atlas:atlasName,rawDataURIs}}
-function playPack(pack){if(!setVersion(pack.version))return;return show({skeleton:pack.skeleton,atlas:pack.atlas,rawDataURIs:pack.rawDataURIs},'本地缓存 · '+pack.id)}
+function playPack(pack){if(!setVersion(pack.version,pack.id))return;return show({skeleton:pack.skeleton,atlas:pack.atlas,rawDataURIs:pack.rawDataURIs},'本地缓存 · '+pack.id)}
 $('saveLocal').onclick=async()=>{try{status('正在保存到浏览器本地缓存…');const pack=await preparePack(chosenFileList);await dbAction('readwrite',s=>s.put(pack));await refreshSaved();status('已保存 '+pack.id+'。以后可直接从“已保存的本地动画包”加载，无须重新选择素材文件。')}catch(e){status('保存失败：'+e.message,true)}};
 $('savedPacks').onchange=()=>{$('playSaved').disabled=!$('savedPacks').value;$('deleteSaved').disabled=!$('savedPacks').value};
 $('playSaved').onclick=async()=>{try{const pack=await dbAction('readonly',s=>s.get($('savedPacks').value));if(!pack)throw Error('素材包不存在');playPack(pack)}catch(e){status('本地素材播放失败：'+e.message,true)}};
@@ -161,5 +161,5 @@ $('version').onchange=()=>{
  }catch(e){status('角色索引无法加载：'+e.message+'。请在静态服务器中打开网页，或直接导入本地资源。',true)}
 })();
 if(['4.0','4.1','4.2'].includes(params.get('v')))$('version').value=params.get('v');
-refreshSaved();
+refreshSaved().then(async()=>{const packId=params.get('pack');if(!packId)return;try{const pack=await dbAction('readonly',s=>s.get(packId));if(pack){$('savedPacks').value=packId;$('savedPacks').onchange();playPack(pack)}else status('本地缓存中找不到 '+packId,true)}catch(e){status('读取本地缓存失败：'+e.message,true)}});
 </script></body></html>
