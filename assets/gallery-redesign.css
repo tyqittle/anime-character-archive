@@ -52,3 +52,26 @@ body{background:radial-gradient(ellipse 50% 35% at 75% 0%,#292034 0,transparent 
 @keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
 @media(max-width:650px){.hero-art{width:70%}.hero-slide img{width:42%;margin-left:-10%}}
 @media(prefers-reduced-motion:reduce){.hero-slide{transition:none;transform:none}.hero-slide img{animation:none}.card-img>img{transition:none}}
+
+/* Navigation polish and cohesive motion */
+.top{position:relative;z-index:3;min-height:67px}
+.top-divider{display:inline-block;margin:0 8px;color:#675967}
+.top-actions .btn{background:transparent;border-color:transparent;color:#cfc5d0;font-size:12px}
+.top-actions .btn:hover{color:#fff;background:#ffffff0d;border-color:#ffffff20}
+.sidebar .side-caption{letter-spacing:.2em;color:#897e90}
+.sidebar .side-link{font-size:13px}
+.game-section{border:0;border-top:1px solid #ffffff12;border-radius:0;margin:0;padding:3px 0}
+.game-section summary{border:0;font-weight:550}
+.hero{isolation:isolate}
+.hero:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,#16111de6 0%,#16111d88 44%,transparent 78%)}
+.hero-content{z-index:2}
+.hero .over{letter-spacing:.22em;font-size:10px}
+.hero h1{max-width:10em;text-shadow:0 3px 24px #0005}
+.hero-stat span{color:#c9bdc8}
+.section-head h2:after{content:"";display:block;width:32px;height:2px;background:#c59fb4;margin-top:10px}
+.card{transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
+.card:hover{box-shadow:0 15px 38px #0005}
+.feat{transition:background .25s ease,transform .25s ease,border-color .25s ease}
+.feat:hover{transform:translateY(-3px)}
+@media(max-width:650px){.top{min-height:54px}.top-actions .btn{font-size:11px;padding:7px 5px}.top-divider{margin:0 3px}.hero:after{background:linear-gradient(90deg,#16111df2,#16111d99 52%,transparent)}.hero-content{max-width:83%}.hero h1{font-size:clamp(29px,8vw,40px)}}
+@media(prefers-reduced-motion:reduce){.card,.feat{transition:none}.card:hover,.feat:hover{transform:none}}
