@@ -29,7 +29,7 @@ footer{text-align:center;color:#89a0b7;font-size:12px;padding:28px}
 </style></head>
 <body><header><div class="eyebrow">WINTER / ORIGINAL ARCHIVE</div><h1>冬境 · 影像档案</h1>
 <p>真实的 NIKKE 全身立绘与剧情 CG。已打包的精选角色图片直接从本站加载，其他角色从原始素材档案按需加载。</p>
-<nav><a href="#" id="tabScenes">剧情 CG</a><a href="#" id="tabCharacters" aria-current="page">全身立绘</a><a href="./spine.html">动态播放器</a><a href="./index.html?edit=1">素材编辑器</a><a href="./characters.html">旧版图鉴</a></nav>
+<nav><a href="#" id="tabFeatured" aria-current="page">★ 本地精选总览</a><a href="#" id="tabScenes">剧情 CG</a><a href="#" id="tabCharacters">全身立绘</a><a href="./spine.html">动态播放器</a><a href="./index.html?edit=1">素材编辑器</a><a href="./characters.html">旧版图鉴</a></nav>
 </header>
 <div class="layout"><aside><h2 id="sideTitle">人物筛选</h2><div class="groups" id="groups"></div></aside>
 <main><div class="toolbar"><input id="q" placeholder="搜索角色名字、中文名、场景…" aria-label="搜索"><select id="sort" aria-label="排序"><option value="default">默认顺序</option><option value="name">名称排序</option></select><button id="reset">清除筛选</button></div>
@@ -48,32 +48,32 @@ footer{text-align:center;color:#89a0b7;font-size:12px;padding:28px}
 <script src="./assets/portraits/c270.js"></script>
 <script>
 'use strict';
-const $=id=>document.getElementById(id), state={tab:'characters',group:'bundled',query:'',scenes:[],characters:[],groups:[],animations:new Set(),visible:[],selected:-1};
+const $=id=>document.getElementById(id), state={tab:'featured',group:'all',query:'',scenes:[],characters:[],groups:[],animations:new Set(),visible:[],selected:-1};
 const safeText=(s)=>String(s??'');
 const notice=(s)=>{$('notice').hidden=!s;$('notice').textContent=s};
 async function load(path){let response=await fetch(path,{cache:'no-store'});if(!response.ok)throw new Error(response.status+' '+path);return response.json()}
-function setTab(tab){state.tab=tab;state.group=tab==='characters'?'bundled':'all';$('q').value='';$('sort').value='default';$('tabScenes').toggleAttribute('aria-current',tab==='scenes');$('tabCharacters').toggleAttribute('aria-current',tab==='characters');$('sideTitle').textContent=tab==='scenes'?'场景筛选' :'角色分类';render()}
-function groups(){const list=state.tab==='scenes'?[{id:'all',name:'全部场景'},...state.groups.map(g=>({id:g.id,name:g.name}))]:[{id:'full',name:'全部全身立绘'},{id:'bundled',name:'★ 本站已打包的真实立绘'},{id:'all',name:'全部记录'},{id:'icon',name:'头像 / 变体资料'},{id:'SSR',name:'SSR'},{id:'SR',name:'SR'}];$('groups').replaceChildren();list.forEach(g=>{const b=document.createElement('button');b.textContent=g.name;b.setAttribute('aria-pressed',state.group===g.id);b.onclick=()=>{state.group=g.id;render()};$('groups').append(b)})}
-function render(){groups();const q=$('q').value.trim().toLocaleLowerCase();let list=state.tab==='scenes'?state.scenes:state.characters;
-list=list.filter(x=>{if(state.tab==='scenes'&&state.group!=='all'&&!(x.groupIds||[]).includes(state.group))return false;
+function setTab(tab){state.tab=tab;state.group=tab==='characters'?'bundled':'all';$('q').value='';$('sort').value='default';$('tabFeatured').toggleAttribute('aria-current',tab==='featured');$('tabScenes').toggleAttribute('aria-current',tab==='scenes');$('tabCharacters').toggleAttribute('aria-current',tab==='characters');$('sideTitle').textContent=tab==='scenes'?'场景筛选' :'角色分类';render()}
+function groups(){const list=state.tab==='featured'?[{id:'all',name:'全部精选'},{id:'scenes',name:'剧情 CG'},{id:'characters',name:'高清角色立绘'}]:state.tab==='scenes'?[{id:'all',name:'全部场景'},...state.groups.map(g=>({id:g.id,name:g.name}))]:[{id:'full',name:'全部全身立绘'},{id:'bundled',name:'★ 本站已打包的真实立绘'},{id:'all',name:'全部记录'},{id:'icon',name:'头像 / 变体资料'},{id:'SSR',name:'SSR'},{id:'SR',name:'SR'}];$('groups').replaceChildren();list.forEach(g=>{const b=document.createElement('button');b.textContent=g.name;b.setAttribute('aria-pressed',state.group===g.id);b.onclick=()=>{state.group=g.id;render()};$('groups').append(b)})}
+function render(){groups();const q=$('q').value.trim().toLocaleLowerCase();let list=state.tab==='featured'?[...state.scenes.map(x=>({...x,_type:'scenes'})),...state.characters.filter(x=>(window.WINTER_PORTRAITS||{})[x.id]).map(x=>({...x,_type:'characters'}))]:state.tab==='scenes'?state.scenes:state.characters;
+list=list.filter(x=>{if(state.tab==='featured'&&state.group!=='all'&&x._type!==state.group)return false;if(state.tab==='scenes'&&state.group!=='all'&&!(x.groupIds||[]).includes(state.group))return false;
 if(state.tab==='characters'&&state.group==='bundled'&&!(window.WINTER_PORTRAITS||{})[x.id])return false;
 if(state.tab==='characters'&&state.group!=='all'&&state.group!=='bundled'&&x.kind!==state.group&&x.rarity!==state.group)return false;
 return !q||[x.name,x.zh,x.title,...(x.tags||[])].join(' ').toLocaleLowerCase().includes(q)});
 if($('sort').value==='name')list.sort((a,b)=>(a.name||a.title||'').localeCompare(b.name||b.title||''));
 else if(state.tab==='characters')list.sort((a,b)=>Number(!!(window.WINTER_PORTRAITS||{})[b.id])-Number(!!(window.WINTER_PORTRAITS||{})[a.id]));state.visible=list;
-$('stat').textContent=state.tab==='scenes'?list.length+' 幅剧情 CG · 本站存储的图片':'正在展示 '+list.length+' 幅角色图像 · 10 位高清角色已内置本站 · 可切换到全部全身立绘 · '+state.animations.size+' 位角色有动画索引';
-notice(state.tab==='characters'?'前 10 位精选角色是真实的内置全身立绘，离线也能显示；其他记录按需从第三方图片源加载，可能受到网络限制。点开卡片查看高清人物，已收录动画的角色还可尝试动态播放。':'');
+$('stat').textContent=state.tab==='featured'?list.length+' 幅本站内置精选图片 · 无需访问第三方图片服务器':state.tab==='scenes'?list.length+' 幅剧情 CG · 本站存储的图片':'正在展示 '+list.length+' 幅角色图像 · 10 位高清角色已内置本站 · 可切换到全部全身立绘 · '+state.animations.size+' 位角色有动画索引';
+notice(state.tab==='featured'?'当前展示的是本站已经打包的剧情 CG 与高清角色立绘，不是头像索引，也不依赖第三方图片热链。其他未打包的角色可切换到「全身立绘」查看。':state.tab==='characters'?'前 10 位精选角色是真实的内置全身立绘，离线也能显示；其他记录按需从第三方图片源加载，可能受到网络限制。点开卡片查看高清人物，已收录动画的角色还可尝试动态播放。':'');
 $('gallery').replaceChildren();if(!list.length){const e=document.createElement('div');e.className='empty';e.textContent='没有符合筛选条件的内容';$('gallery').append(e);return}
 list.forEach((x,i)=>{const btn=document.createElement('button');btn.className='card';const art=document.createElement('div');art.className='art';
-if(state.tab==='scenes'){const img=document.createElement('img');img.src=x.url;img.alt=x.title||'剧情 CG';img.loading='lazy';img.onerror=()=>{img.remove();art.textContent='此文件暂无法加载'};art.append(img)}
+if((x._type||state.tab)==='scenes'){const img=document.createElement('img');img.src=x.url;img.alt=x.title||'剧情 CG';img.loading='lazy';img.onerror=()=>{img.remove();art.textContent='此文件暂无法加载'};art.append(img)}
 else{const img=document.createElement('img');img.src=(window.WINTER_PORTRAITS||{})[x.id]||x.image;img.alt=(x.zh||x.name)+' · '+(x.kind==='full'?'全身立绘':'角色头像');img.loading='lazy';img.decoding='async';img.style.objectFit='contain';img.onerror=()=>{img.remove();art.textContent='此角色图片源暂时无法访问';art.style.color='#a7bdd0'};art.append(img)}
-const cap=document.createElement('div');cap.className='caption';const t=document.createElement('strong');t.textContent=x.title||x.name;const s=document.createElement('small');s.textContent=state.tab==='scenes'?(x.tags||[]).slice(0,3).join(' / '):(x.zh||x.id)+' · '+(x.rarity||x.kind)+(window.WINTER_PORTRAITS?.[x.id]?' · 本地高清图':'');cap.append(t,s);btn.append(art,cap);
+const cap=document.createElement('div');cap.className='caption';const t=document.createElement('strong');t.textContent=x.title||x.name;const s=document.createElement('small');s.textContent=(x._type||state.tab)==='scenes'?(x.tags||[]).slice(0,3).join(' / '):(x.zh||x.id)+' · '+(x.rarity||x.kind)+(window.WINTER_PORTRAITS?.[x.id]?' · 本地高清图':'');cap.append(t,s);btn.append(art,cap);
 btn.onclick=()=>openCard(i);$('gallery').append(btn)})
 }
-function openCard(i){const x=state.visible[i];if(!x)return;state.selected=i;if(state.tab==='characters'){$('bigImg').src=(window.WINTER_PORTRAITS||{})[x.id]||x.image;$('bigImg').alt=x.zh||x.name;$('bigTitle').textContent=x.name;$('bigSub').textContent=(x.zh||'')+' · '+(x.rarity||x.kind)+' · '+(window.WINTER_PORTRAITS?.[x.id]?'本地已打包完整立绘':'外部原图');$('bigTags').textContent=[x.manufacturer,x.class,x.squad].filter(Boolean).join(' · ');$('original').href=x.source||x.image;const dyn=$('dynamicLink');dyn.hidden=!state.animations.has(x.id);dyn.href='./spine.html?id='+encodeURIComponent(x.id);if(!$('viewer').open)$('viewer').showModal();return}
+function openCard(i){const x=state.visible[i];if(!x)return;state.selected=i;if((x._type||state.tab)==='characters'){$('bigImg').src=(window.WINTER_PORTRAITS||{})[x.id]||x.image;$('bigImg').alt=x.zh||x.name;$('bigTitle').textContent=x.name;$('bigSub').textContent=(x.zh||'')+' · '+(x.rarity||x.kind)+' · '+(window.WINTER_PORTRAITS?.[x.id]?'本地已打包完整立绘':'外部原图');$('bigTags').textContent=[x.manufacturer,x.class,x.squad].filter(Boolean).join(' · ');$('original').href=x.source||x.image;const dyn=$('dynamicLink');dyn.hidden=!state.animations.has(x.id);dyn.href='./spine.html?id='+encodeURIComponent(x.id);if(!$('viewer').open)$('viewer').showModal();return}
 $('bigImg').src=x.url;$('bigImg').alt=x.title||'';$('bigTitle').textContent=x.title||'';$('bigSub').textContent=x.note||'';$('bigTags').textContent=(x.tags||[]).join(' · ');$('original').href=x.source||x.url;$('dynamicLink').hidden=true; if(!$('viewer').open)$('viewer').showModal()}
 function navigate(d){if(state.visible.length)openCard((state.selected+d+state.visible.length)%state.visible.length)}
-$('tabScenes').onclick=e=>{e.preventDefault();setTab('scenes')};$('tabCharacters').onclick=e=>{e.preventDefault();setTab('characters')};
+$('tabFeatured').onclick=e=>{e.preventDefault();setTab('featured')};$('tabScenes').onclick=e=>{e.preventDefault();setTab('scenes')};$('tabCharacters').onclick=e=>{e.preventDefault();setTab('characters')};
 $('q').oninput=render;$('sort').onchange=render;$('reset').onclick=()=>{state.group=state.tab==='characters'?'bundled':'all';$('q').value='';render()};
 $('close').onclick=()=>$('viewer').close();$('prev').onclick=()=>navigate(-1);$('next').onclick=()=>navigate(1);$('viewer').onclick=e=>{if(e.target===$('viewer'))$('viewer').close()};
 document.addEventListener('keydown',e=>{if(!$('viewer').open)return;if(e.key==='ArrowRight')navigate(1);if(e.key==='ArrowLeft')navigate(-1)});
