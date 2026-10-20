@@ -1,0 +1,37 @@
+// Browser acceptance test for both animation sources. Requires: npm install playwright-core.
+// On GitHub Actions, use the preinstalled Chrome browser. Does not fake a successful animation.
+import { chromium } from 'playwright-core';
+import fs from 'node:fs';
+const url='http://127.0.0.1:8765/spine.html';
+const executable=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'].find(fs.existsSync);
+if(!executable)throw new Error('No installed Chrome/Chromium executable');
+const browser=await chromium.launch({executablePath:executable,headless:true,args:['--no-sandbox','--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const page=await browser.newPage({viewport:{width:1366,height:900}});
+const errors=[];
+page.on('pageerror',e=>errors.push(e.message));
+page.on('console',msg=>{if(msg.type()==='error')errors.push('CONSOLE: '+msg.text())});
+const outcomes=[];
+try{
+ await page.goto(url,{waitUntil:'domcontentloaded',timeout:30000});
+ await page.waitForFunction(()=>document.querySelectorAll('#characters option').length>100,{timeout:20000});
+ for(const [game,id] of [['nikke','c010'],['bluearchive','ba-ch0060_spr']]){
+  await page.selectOption('#gameFilter',game);
+  await page.waitForTimeout(300);
+  await page.selectOption('#characters',id);
+  await page.click('#nikke');
+  const deadline=Date.now()+105000;
+  let state='timeout',message='';
+  while(Date.now()<deadline){
+   if(page.isClosed()){state='page-closed';break}
+   message=await page.locator('#status').innerText().catch(()=>'(navigating)');
+   if(message.includes('播放成功')){state='playback-success';break}
+   if(/加载失败|资源下载失败|播放失败|超时|版本.*不支持|无法解析|初始化失败/.test(message)){state='playback-failure';break}
+   await page.waitForTimeout(900);
+  }
+  const canvas=await page.locator('#player canvas').count().catch(()=>0);
+  outcomes.push({game,id,state,message,canvas});
+  console.log('PLAYBACK_OUTCOME',JSON.stringify(outcomes[outcomes.length-1]));
+ }
+}finally{console.log('BROWSER_ERRORS',JSON.stringify(errors.slice(0,25)));await browser.close()}
+fs.writeFileSync('/tmp/spine-browser-results.json',JSON.stringify({outcomes,errors},null,2));
+if(outcomes.some(x=>x.state!=='playback-success'))process.exitCode=1;
