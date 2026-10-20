@@ -38,7 +38,7 @@ footer{text-align:center;color:#89a0b7;font-size:12px;padding:28px}
 <footer>冬境原创网页 · 独立的 HTML / CSS / JavaScript · 本地图像来自 assets/cg · 无 iframe</footer>
 <script>
 'use strict';
-const $=id=>document.getElementById(id), state={tab:'scenes',group:'all',query:'',scenes:[],characters:[],groups:[],visible:[],selected:-1};
+const $=id=>document.getElementById(id), state={tab:'scenes',group:'all',query:'',scenes:[],characters:[],groups:[],animations:new Set(),visible:[],selected:-1};
 const safeText=(s)=>String(s??'');
 const notice=(s)=>{$('notice').hidden=!s;$('notice').textContent=s};
 async function load(path){let response=await fetch(path,{cache:'no-store'});if(!response.ok)throw new Error(response.status+' '+path);return response.json()}
@@ -50,20 +50,20 @@ if(state.tab==='characters'&&state.group!=='all'&&x.kind!==state.group&&x.rarity
 return !q||[x.name,x.zh,x.title,...(x.tags||[])].join(' ').toLocaleLowerCase().includes(q)});
 if($('sort').value==='name')list.sort((a,b)=>(a.name||a.title||'').localeCompare(b.name||b.title||''));state.visible=list;
 $('stat').textContent=state.tab==='scenes'?list.length+' 幅剧情 CG · 本站存储的图片':'共 '+list.length+' 条角色资料（动态动画尚未集成；不冒充可播放内容）';
-notice(state.tab==='characters'?'角色资料中的外部图片地址未验证，本页不依赖它们加载。全身 Spine 动画必须取得可用的 .skel、.atlas 与贴图后才能在本站独立渲染。':'');
+notice(state.tab==='characters'?'已接入的角色点击卡片即可在本站独立 Spine 播放器中加载动态立绘；其骨骼与贴图仍来自第三方资源镜像，可能受网络和跨域限制。':'');
 $('gallery').replaceChildren();if(!list.length){const e=document.createElement('div');e.className='empty';e.textContent='没有符合筛选条件的内容';$('gallery').append(e);return}
 list.forEach((x,i)=>{const btn=document.createElement('button');btn.className='card';const art=document.createElement('div');art.className='art';
 if(state.tab==='scenes'){const img=document.createElement('img');img.src=x.url;img.alt=x.title||'剧情 CG';img.loading='lazy';img.onerror=()=>{img.remove();art.textContent='此文件暂无法加载'};art.append(img)}
-else{art.textContent=x.kind==='full'?'全身动画资源待导入':'角色资料';art.style.color='#abc0d6'}
+else{art.textContent=state.animations.has(x.id)?'▶ 点击查看动态立绘':(x.kind==='full'?'未接入骨骼动画':'角色资料');art.style.color='#abc0d6'}
 const cap=document.createElement('div');cap.className='caption';const t=document.createElement('strong');t.textContent=x.title||x.name;const s=document.createElement('small');s.textContent=state.tab==='scenes'?(x.tags||[]).slice(0,3).join(' / '):(x.zh||x.id)+' · '+(x.rarity||x.kind);cap.append(t,s);btn.append(art,cap);
 btn.onclick=()=>openCard(i);$('gallery').append(btn)})
 }
-function openCard(i){const x=state.visible[i];if(!x)return;state.selected=i;if(state.tab==='characters'){const note=x.name+(x.zh?' / '+x.zh:'')+'\n'+(x.rarity||x.kind)+'\n\n此角色的独立动画素材尚未安装。';window.alert(note);return}
+function openCard(i){const x=state.visible[i];if(!x)return;state.selected=i;if(state.tab==='characters'){if(state.animations.has(x.id)){location.href='./spine.html?id='+encodeURIComponent(x.id);return}const note=x.name+(x.zh?' / '+x.zh:'')+'\n该记录没有对应的动画资源索引。请先到动态播放器查看已收录角色。';window.alert(note);return}
 $('bigImg').src=x.url;$('bigImg').alt=x.title||'';$('bigTitle').textContent=x.title||'';$('bigSub').textContent=x.note||'';$('bigTags').textContent=(x.tags||[]).join(' · ');$('original').href=x.source||x.url; if(!$('viewer').open)$('viewer').showModal()}
 function navigate(d){if(state.visible.length)openCard((state.selected+d+state.visible.length)%state.visible.length)}
 $('tabScenes').onclick=e=>{e.preventDefault();setTab('scenes')};$('tabCharacters').onclick=e=>{e.preventDefault();setTab('characters')};
 $('q').oninput=render;$('sort').onchange=render;$('reset').onclick=()=>{state.group='all';$('q').value='';render()};
 $('close').onclick=()=>$('viewer').close();$('prev').onclick=()=>navigate(-1);$('next').onclick=()=>navigate(1);$('viewer').onclick=e=>{if(e.target===$('viewer'))$('viewer').close()};
 document.addEventListener('keydown',e=>{if(!$('viewer').open)return;if(e.key==='ArrowRight')navigate(1);if(e.key==='ArrowLeft')navigate(-1)});
-Promise.allSettled([load('./data/catalog.json'),load('./data/characters.json')]).then(([a,b])=>{if(a.status==='fulfilled'){state.scenes=a.value.images||[];state.groups=a.value.groups||[]}if(b.status==='fulfilled')state.characters=b.value.characters||[];if(a.status==='rejected')notice('场景资料加载失败，请通过静态服务器访问本站：'+a.reason.message);render()});
+Promise.allSettled([load('./data/catalog.json'),load('./data/characters.json'),load('./data/spine-characters.json')]).then(([a,b,c])=>{if(a.status==='fulfilled'){state.scenes=a.value.images||[];state.groups=a.value.groups||[]}if(b.status==='fulfilled')state.characters=b.value.characters||[];if(c.status==='fulfilled')state.animations=new Set((c.value.characters||[]).map(x=>x.id));if(a.status==='rejected')notice('场景资料加载失败，请通过静态服务器访问本站：'+a.reason.message);render()});
 </script></body></html>
