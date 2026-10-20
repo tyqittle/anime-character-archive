@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "https://github.com/Nikke-db/Nikke-db.github.io",
-  "note": "动画资源由第三方托管。新增索引已核对上游 .atlas 和 .skel 文件存在，但未逐项验证实际浏览器渲染、Spine 版本及贴图加载。",
+  "note": "源站已确认 skel 和 atlas 路径存在；浏览器播放及贴图完整性尚未逐一验证。素材仍从第三方加载。",
   "characters": [
     {
       "id": "c010",
@@ -374,6 +374,246 @@
       "name": "Mihara",
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c161/c161_00"
+    },
+    {
+      "id": "c010_01",
+      "name": "Rapi_old",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010_01/c010_01_00"
+    },
+    {
+      "id": "c010_02",
+      "name": "Rapi White Promise",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010_02/c010_02_00"
+    },
+    {
+      "id": "c010_03",
+      "name": "Rapi Classic Vacation",
+      "spineVersion": "4.1",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010_03/c010_03_00"
+    },
+    {
+      "id": "c011_01",
+      "name": "Neon Bling Bullet",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c011_01/c011_01_00"
+    },
+    {
+      "id": "c022_01",
+      "name": "Signal Dramatic Chocolate",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c022_01/c022_01_00"
+    },
+    {
+      "id": "c030_01",
+      "name": "Poli Sweet Holic",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c030_01/c030_01_00"
+    },
+    {
+      "id": "c070_01",
+      "name": "Brid Model Worker",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070_01/c070_01_00"
+    },
+    {
+      "id": "c070_02",
+      "name": "Brid Black Moon",
+      "spineVersion": "4.1",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070_02/c070_02_00"
+    },
+    {
+      "id": "c072_01",
+      "name": "Diesel Black Sunday",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c072_01/c072_01_00"
+    },
+    {
+      "id": "c080_01",
+      "name": "Centi Supreme Holiday",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c080_01/c080_01_00"
+    },
+    {
+      "id": "c082_01",
+      "name": "Liter Guardfish",
+      "spineVersion": "4.1",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c082_01/c082_01_00"
+    },
+    {
+      "id": "c090_01",
+      "name": "Emma Color Me Red",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090_01/c090_01_00"
+    },
+    {
+      "id": "c090_02",
+      "name": "Emma Office Therapy",
+      "spineVersion": "4.1",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090_02/c090_02_00"
+    },
+    {
+      "id": "c101_01",
+      "name": "Drake Villain Racer",
+      "spineVersion": "4.1",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c101_01/c101_01_00"
+    },
+    {
+      "id": "c102_01",
+      "name": "Maxwell Mechanic White",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c102_01/c102_01_00"
+    },
+    {
+      "id": "c112_01",
+      "name": "Viper Toxic Rabbit",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c112_01/c112_01_00"
+    },
+    {
+      "id": "c131_01",
+      "name": "Pepper Ocean Vitamin",
+      "spineVersion": "4.1",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c131_01/c131_01_00"
+    },
+    {
+      "id": "c140_01",
+      "name": "Sugar Hard-Boiled",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c140_01/c140_01_00"
+    },
+    {
+      "id": "c141_01",
+      "name": "Milk Extreme Fighter",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c141_01/c141_01_00"
+    },
+    {
+      "id": "c142_01",
+      "name": "Frima Sea of Sloth",
+      "spineVersion": "4.1",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c142_01/c142_01_00"
+    },
+    {
+      "id": "c150_01",
+      "name": "Julia Mild Nocturne",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c150_01/c150_01_00"
+    },
+    {
+      "id": "c160_01",
+      "name": "Yuni Pretty In Pink",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c160_01/c160_01_00"
+    },
+    {
+      "id": "c170_01",
+      "name": "Privaty Government Grunt",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c170_01/c170_01_00"
+    },
+    {
+      "id": "c181_01",
+      "name": "Maiden Covert Nurse",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c181_01/c181_01_00"
+    },
+    {
+      "id": "c191_01",
+      "name": "Alice Sweet Home",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c191_01/c191_01_00"
+    },
+    {
+      "id": "c200_01",
+      "name": "Rupee Rabbit Deluxe",
+      "spineVersion": "4.1",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c200_01/c200_01_00"
+    },
+    {
+      "id": "c201_01",
+      "name": "Yan Sunrise Market",
+      "spineVersion": "4.1",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c201_01/c201_01_00"
+    },
+    {
+      "id": "c202_01",
+      "name": "Dolla Dark Rose",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c202_01/c202_01_00"
+    },
+    {
+      "id": "c210_01",
+      "name": "Exia Joy to the Nerds",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c210_01/c210_01_00"
+    },
+    {
+      "id": "c212_01",
+      "name": "Novel Penguin Holmes",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c212_01/c212_01_00"
+    },
+    {
+      "id": "c212_02",
+      "name": "Novel Detective Nurse",
+      "spineVersion": "4.1",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c212_02/c212_02_00"
+    },
+    {
+      "id": "c260_01",
+      "name": "Modernia First Affection",
+      "spineVersion": "4.1",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c260_01/c260_01_00"
+    },
+    {
+      "id": "c282_01",
+      "name": "Sakura Midnight Stealth",
+      "spineVersion": "4.1",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c282_01/c282_01_00"
+    },
+    {
+      "id": "c350_01",
+      "name": "Mast A Pirate's Heart",
+      "spineVersion": "4.1",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c350_01/c350_01_00"
+    },
+    {
+      "id": "c352_01",
+      "name": "Helm Chandelier",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c352_01/c352_01_00"
+    },
+    {
+      "id": "c430_01",
+      "name": "Noise Cherry Blossom Stage",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c430_01/c430_01_00"
+    },
+    {
+      "id": "c800_01",
+      "name": "Makima Coat Off",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c800_01/c800_01_00"
+    },
+    {
+      "id": "c803_01",
+      "name": "Denji Chainsaw Man",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c803_01/c803_01_00"
+    },
+    {
+      "id": "c810_01",
+      "name": "2B Metamorphic Damage",
+      "spineVersion": "4.1",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c810_01/c810_01_00"
+    },
+    {
+      "id": "c810_02",
+      "name": "2B YoRHa Uniform 1",
+      "spineVersion": "4.1",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c810_02/c810_02_00"
     }
   ]
 }
