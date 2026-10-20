@@ -193,9 +193,13 @@ async function downloadPack(c,mirror){
  const paths=urls(c,mirror),stem=c.base.split('/').pop();
  const [skelBlob,atlasBlob]=await Promise.all([downloadBlob(paths.skeleton),downloadBlob(paths.atlas)]);
  if(skelBlob.size<100||atlasBlob.size<20)throw Error('骨骼或图集文件大小异常');
- const detected=await detectSpineVersion(skelBlob);
- status('检测到 '+c.name+' 的 Spine 骨骼导出版本：'+detected.version);
- if(!['3.8','4.0','4.1','4.2'].includes(detected.majorMinor))throw Error('目前不支持 Spine '+detected.version+'，已停止错误版本解析');
+ let detected={version:c.spineVersion,majorMinor:c.spineVersion};
+ if(c.gameId==='bluearchive'){
+  try{detected=await detectSpineVersion(skelBlob);
+   if(!['3.8','4.0','4.1','4.2'].includes(detected.majorMinor))throw Error('不支持的骨骼版本 '+detected.version);
+   status('检测到 '+c.name+' 的 Spine 版本：'+detected.version);
+  }catch(e){throw Error('蔚蓝档案骨骼格式无法识别：'+e.message)}
+ } // NIKKE versions are curated per source record; do not apply BA version heuristic.
  const atlasText=(await atlasBlob.text()).replace(/^\uFEFF/,'');
  const pages=imagePages(atlasText);
  if(!pages.length)throw Error('图集中没有图片文件名');
@@ -221,7 +225,7 @@ async function playCharacter(c){
  status((c.versionUnverified?'该资源骨骼版本尚未验证，可能无法播放。':'')+'正在查找 '+c.name+' 的本地缓存…');
  try{
   let pack=await dbAction('readonly',s=>s.get(packId)).catch(()=>null);
-  if(pack&&!pack.exportVersion){
+  if(pack&&!pack.exportVersion&&c.gameId==='bluearchive'){
    // Older cache packs used a guessed version; discard so we can inspect the real header.
    await dbAction('readwrite',store=>store.delete(packId)).catch(()=>{});
    pack=null;
