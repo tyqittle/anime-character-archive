@@ -2,6 +2,7 @@
 // On GitHub Actions, use the preinstalled Chrome browser. Does not fake a successful animation.
 import { chromium } from 'playwright-core';
 import fs from 'node:fs';
+import { PNG } from 'pngjs';
 const url='http://127.0.0.1:8765/spine.html';
 const executable=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'].find(fs.existsSync);
 if(!executable)throw new Error('No installed Chrome/Chromium executable');
@@ -32,9 +33,26 @@ try{
    await page.waitForTimeout(900);
   }
   const canvas=await page.locator('#player canvas').count().catch(()=>0);
-  outcomes.push({game,id,state,message,canvas});
+  let visiblePixels=null,changedPixels=null;
+  if(state==='playback-success'&&canvas){
+   const first=PNG.sync.read(await page.locator('#player canvas').screenshot());
+   await page.waitForTimeout(1700);
+   const second=PNG.sync.read(await page.locator('#player canvas').screenshot());
+   visiblePixels=0;changedPixels=0;
+   const bg=[first.data[0],first.data[1],first.data[2]];
+   for(let i=0;i<first.data.length;i+=4){
+    let richness=0,motion=0;
+    for(let q=0;q<3;q++){richness+=Math.abs(first.data[i+q]-bg[q]);motion+=Math.abs(second.data[i+q]-first.data[i+q]);}
+    if(richness>100)visiblePixels++;
+    if(motion>45)changedPixels++;
+   }
+   if(visiblePixels<300)state='playback-blank';
+   else if(changedPixels<100)state='playback-static';
+   else state='playback-animated';
+  }
+  outcomes.push({game,id,state,message,canvas,visiblePixels,changedPixels});
   console.log('PLAYBACK_OUTCOME',JSON.stringify(outcomes[outcomes.length-1]));
  }
 }finally{console.log('BROWSER_ERRORS',JSON.stringify(errors.slice(0,25)));await browser.close()}
 fs.writeFileSync('/tmp/spine-browser-results.json',JSON.stringify({outcomes,errors},null,2));
-if(outcomes.some(x=>x.state!=='playback-success'))process.exitCode=1;
+if(outcomes.some(x=>!['playback-animated','playback-static'].includes(x.state)))process.exitCode=1;
