@@ -105,15 +105,31 @@ function ensureRuntime(version){
  if(loadedVersion===version&&window.spine?.SpinePlayer)return Promise.resolve();
  if(loadPromise){if(loadedVersion!==version)return Promise.reject(Error('切换版本请刷新页面'));return loadPromise}
  loadedVersion=version;
- loadPromise=new Promise((resolve,reject)=>{
-  // Spine 3.8 is not published on NPM. Load its actual built files from official GitHub branch.
-  const legacy=version==='3.8';
-  const base=legacy?'./vendor/spine38/':runtimeRoot+version+'.*/dist/';
-  const css=document.createElement('link');css.rel='stylesheet';css.href=base+'spine-player.css';document.head.append(css);
-  const js=document.createElement('script');js.src=base+(legacy?'spine-player.js':'iife/spine-player.js');js.crossOrigin='anonymous';
-  js.onload=()=>window.spine?.SpinePlayer?resolve():reject(Error('运行时脚本已加载但 SpinePlayer 不存在'));
-  js.onerror=()=>{loadPromise=null;reject(Error('Spine 运行时下载失败，请检查网络'))};document.head.append(js)
- });
+ const legacy=version==='3.8';
+ const local='./vendor/spine38/';
+ const cdns=legacy?[local,'https://raw.githubusercontent.com/EsotericSoftware/spine-runtimes/3.8/spine-ts/build/']:[runtimeRoot+version+'.*/dist/'];
+ loadPromise=(async()=>{
+  const failures=[];
+  for(const base of cdns){
+   const url=base+(legacy&&base!==local?'spine-player.js':legacy?'spine-player.js':'iife/spine-player.js');
+   try{
+    status('正在加载 Spine '+version+' 播放引擎：'+url);
+    await new Promise((resolve,reject)=>{
+     const script=document.createElement('script');
+     const timeout=setTimeout(()=>{script.remove();reject(Error('超时（15秒）'))},15000);
+     script.src=url;
+     script.onload=()=>{clearTimeout(timeout);window.spine?.SpinePlayer?resolve():reject(Error('脚本已加载但未注册 SpinePlayer'))};
+     script.onerror=()=>{clearTimeout(timeout);reject(Error('脚本请求失败（可能为404或网络拦截）'))};
+     document.head.append(script);
+    });
+    const css=document.createElement('link');css.rel='stylesheet';
+    css.href=legacy?(base===local?local+'spine-player.css':'https://raw.githubusercontent.com/EsotericSoftware/spine-runtimes/3.8/spine-ts/player/css/spine-player.css'):base+'spine-player.css';
+    document.head.append(css);
+    return;
+   }catch(e){failures.push(url+'：'+e.message)}
+  }
+  throw Error('Spine '+version+' 运行时全部加载失败。\\n'+failures.join('\\n'));
+ })().catch(e=>{loadPromise=null;loadedVersion='';throw e});
  return loadPromise;
 }
 function clearPlayer(){
