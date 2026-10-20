@@ -19,10 +19,10 @@ assert.ok(Array.isArray(spine.characters)&&spine.characters.length>0,'Missing Sp
 assert.equal(new Set(spine.characters.map(x=>x.id)).size,spine.characters.length,'Duplicate Spine IDs');
 const ids=new Set(chars.characters.map(x=>x.id));
 for(const entry of spine.characters) {
-  assert.match(entry.id,/^c\d{3}(?:_\d{2})?$/,'Invalid Spine character ID');
-  assert.ok(/^c\d{3}(?:_\d{2})?$/.test(entry.id),'Malformed Spine character ID: '+entry.id);
+  assert.ok(entry.gameId==='bluearchive'||/^c\d{3}(?:_\d{2})?$/.test(entry.id),'Invalid Spine character ID');
+  assert.ok(entry.gameId==='bluearchive'?/^ba-ch\d+_spr$/.test(entry.id):/^c\d{3}(?:_\d{2})?$/.test(entry.id),'Malformed Spine character ID: '+entry.id);
   assert.ok(['4.0','4.1','4.2'].includes(entry.spineVersion),'Unknown Spine version');
-  assert.ok(entry.base.endsWith('/'+entry.id+'_00'),'Unexpected Spine path: '+entry.id);
+  assert.ok(entry.gameId==='bluearchive'?entry.base.endsWith('/'+entry.id.slice(3).toUpperCase().replace('_SPR','_spr')):entry.base.endsWith('/'+entry.id+'_00'),'Unexpected Spine path: '+entry.id);
 }
 assert.ok(chars.characters.every(x=>x.image.startsWith('./assets/portraits/')),'Not all static images are local');
 const home=read('index.html'),old=read('gallery.html'),page=read('characters.html'),player=read('spine.html');
