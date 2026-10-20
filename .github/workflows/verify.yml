@@ -1,7 +1,7 @@
-name: Independent gallery smoke checks
+name: Character archive checks
 on:
   push:
-    branches: [main, feature/independent-gallery-20261020]
+    branches: [main]
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -15,5 +15,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Check static gallery assets and scripts
+      - name: Validate archive metadata and entrypoints
         run: node tests/smoke.mjs
