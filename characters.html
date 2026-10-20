@@ -185,7 +185,16 @@ function showOne(id){
  activeId=id;$('viewTitle').textContent=(c.zh?c.zh+' · ':'')+c.name;
  var view=$('viewer'),pic=$('viewPicture'),img=$('viewImg');
  pic.classList.remove('error');
- img.dataset.fallback='';img.dataset.avatar=c.avatar;img.alt=c.name+' '+(c.kind==='full'?'全身立绘':'头像');img.src=c.image;
+ img.dataset.fallback='';img.dataset.avatar=c.avatar;img.alt=c.name+' '+(c.kind==='full'?'全身立绘':'头像');
+ // Show the tiny local preview immediately; load high-resolution artwork only on demand.
+ var thumb=previewFor(c),requestedId=c.id;
+ img.src=thumb;
+ if(thumb!==c.image){
+  var fullImage=new Image();fullImage.decoding='async';
+  fullImage.onload=function(){if(activeId===requestedId&&view.open){img.src=c.image;pic.classList.remove('error')}};
+  fullImage.onerror=function(){if(activeId===requestedId&&view.open)pic.classList.add('error')};
+  fullImage.src=c.image;
+ }
  var tags=[c.kind==='full'?'全身立绘':'头像 / 造型资料',c.rarity,c.manufacturer,c.class,c.squad,c.id,gameNames[c.gameId]||c.game||''];
  $('viewMeta').innerHTML='<div class="over">'+safe(gameNames[c.gameId]||c.game||'游戏角色')+'</div><h3>'+safe(c.zh||c.name)+'</h3><p>'+safe(c.name)+'</p><div class="taglist">'+tags.filter(Boolean).map(function(t){return '<span>'+safe(t)+'</span>'}).join('')+'</div><p>'+(c.kind==='full'?'此条目有来源档案中的独立全身角色图片。':'此条目仅有角色头像/造型缩略图，不应视作已收录高清全身立绘。')+'</p><p style="font-size:12px">原始资料来源：Nikke-db 社区项目。图片由游戏版权方持有，商业和公开使用前请核实许可。</p><div class="view-controls"><a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="'+safe(c.source)+'">↗ 来源文件</a><a class="btn" target="_blank" rel="noopener noreferrer" href="'+safe(c.image)+'">查看原图</a><button class="btn" data-action="fav" data-id="'+safe(c.id)+'">'+(favorites.has(c.id)?'★ 已收藏':'☆ 收藏')+'</button></div><div class="view-controls"><button class="btn" data-action="step" data-step="-1">← 上一张</button><button class="btn" data-action="step" data-step="1">下一张 →</button></div>';
  if(!view.open)view.showModal();
@@ -215,30 +224,39 @@ document.addEventListener('keydown',function(e){if(!$('viewer').open)return;if(e
 var searchDelay=null;
 ['query','rarityFilter','kindFilter','sort'].forEach(function(id){$(id).addEventListener(id==='query'?'input':'change',function(){page=1;if(id==='query'){clearTimeout(searchDelay);searchDelay=setTimeout(function(){render()},140)}else{clearTimeout(searchDelay);render()}})});
 $('gameFilter').addEventListener('change',function(){selectedGroup=this.value==='all'?'all':'game:'+this.value;page=1;render();updateGroupNav()});
-fetch('./data/characters.json',{cache:'default'}).then(function(r){if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(function(db){
+fetch('./data/characters.json?v=fast-thumbs-20261020',{cache:'default'}).then(function(r){if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(function(db){
  if(!Array.isArray(db.characters))throw Error('索引数据格式错误');
  items=db.characters.filter(function(c){return c&&c.id&&c.gameId&&c.characterKey&&c.kind==='full'&&/^\.\/assets\/portraits\/[a-zA-Z0-9_-]+\.(?:png|webp)$/.test(c.image)});
  $('totalStat').textContent=items.length;
  render();
- var heroPool=items.filter(function(c){return c.image&&c.kind==='full'});
- var heroNode=$('heroArt');
- var heroTimer=null;
+ var heroBuckets={};
+ items.forEach(function(c){if(!c.image||c.kind!=='full')return;var bucket=heroBuckets[c.gameId]||(heroBuckets[c.gameId]=[]);if(bucket.length<3)bucket.push(c)});
+ var heroPool=[];
+ for(var round=0;round<3;round++)Object.keys(heroBuckets).forEach(function(game){if(heroBuckets[game][round])heroPool.push(heroBuckets[game][round])});
+ var heroNode=$('heroArt'),heroOffset=0,heroVisible=true;
+ if(heroNode&&'IntersectionObserver' in window){
+  new IntersectionObserver(function(entries){heroVisible=entries[0].isIntersecting},{rootMargin:'40px'}).observe(heroNode);
+ }
  function paintHero(){
   if(!heroNode||!heroPool.length)return;
-  var picked=[],seen=new Set(),tries=0;
-  while(picked.length<Math.min(3,heroPool.length)&&tries++<60){
-   var c=heroPool[Math.floor(Math.random()*heroPool.length)];
-   if(!seen.has(c.id)){seen.add(c.id);picked.push(c)}
-  }
+  var picked=[];
+  for(var i=0;i<Math.min(3,heroPool.length);i++)picked.push(heroPool[(heroOffset+i)%heroPool.length]);
+  heroOffset=(heroOffset+3)%heroPool.length;
   var next=document.createElement('div');next.className='hero-slide';
-  picked.forEach(function(c,i){var img=document.createElement('img');img.src=c.image;img.alt='';img.loading='eager';img.decoding='async';img.style.setProperty('--i',i);next.appendChild(img)});
+  picked.forEach(function(c,i){
+   var img=document.createElement('img');
+   img.src=previewFor(c);img.alt='';img.loading='eager';img.decoding='async';
+   img.style.setProperty('--i',i);next.appendChild(img);
+  });
   heroNode.appendChild(next);
   requestAnimationFrame(function(){next.classList.add('visible')});
   Array.from(heroNode.children).forEach(function(old){if(old!==next){old.classList.remove('visible');setTimeout(function(){old.remove()},1100)}});
  }
  paintHero();
- if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-  heroTimer=setInterval(function(){if(!document.hidden)paintHero()},6500);
+ var reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ var saveData=!!(navigator.connection&&navigator.connection.saveData);
+ if(!reduceMotion&&!saveData){
+  setInterval(function(){if(!document.hidden&&heroVisible)paintHero()},18000);
  }
  var hash=decodeURIComponent(location.hash.slice(1));
  if(hash&&items.some(function(x){return x.id===hash}))showOne(hash);
