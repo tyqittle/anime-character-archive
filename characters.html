@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#090f1d">
-<meta name="description" content="次元角色档案馆：可搜索的 NIKKE 全身立绘、头像与服装资料，附来源、收藏和筛选。">
+<meta name="description" content="次元角色档案馆：跨游戏静态全身立绘与角色服装资料，附来源、收藏和筛选。">
 <title>次元角色档案馆 · 角色图鉴</title>
 <style>
 :root{color-scheme:dark;--bg:#090e18;--panel:#111b2b;--panel2:#162337;--line:#293c54;--text:#f2f7ff;--muted:#95abc2;--accent:#a4dffa;--gold:#ead5a2;--green:#8ad9b4;--radius:18px}
@@ -11,7 +11,7 @@
 a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #c7eefd;outline-offset:3px}
 .shell{max-width:1660px;margin:auto;display:grid;grid-template-columns:244px minmax(0,1fr);min-height:100vh}
 .sidebar{position:sticky;top:0;height:100vh;overflow:auto;border-right:1px solid var(--line);background:#0c1523e8;padding:24px 17px}
-.identity{display:flex;align-items:center;gap:11px;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:24px}.snow{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:linear-gradient(140deg,#1a3551,#284963);font-size:27px;flex:none}.brand{font:700 18px Georgia,"Microsoft YaHei",serif;letter-spacing:.08em}.over{font-size:10px;letter-spacing:.24em;color:var(--accent);font-weight:800}.side-caption{padding:12px 9px 7px;color:var(--muted);font-size:11px;letter-spacing:.12em}.side-link,.group-nav{width:100%;display:flex;align-items:center;gap:10px;border:1px solid transparent;border-radius:11px;padding:10px 11px;color:#bfd0e0;text-align:left;background:transparent;transition:background .2s}.side-link:hover,.group-nav:hover{background:#1b2b3c}.side-link.active,.group-nav.active{border-color:#365671;background:#21394c;color:white}.count{margin-left:auto;font:600 11px/1.2 system-ui;color:var(--muted)}.group-nav small{color:#91a8ba;font-size:11px}
+.identity{display:flex;align-items:center;gap:11px;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:24px}.snow{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:linear-gradient(140deg,#1a3551,#284963);font-size:27px;flex:none}.brand{font:700 18px Georgia,"Microsoft YaHei",serif;letter-spacing:.08em}.over{font-size:10px;letter-spacing:.24em;color:var(--accent);font-weight:800}.side-caption{padding:12px 9px 7px;color:var(--muted);font-size:11px;letter-spacing:.12em}.side-link,.group-nav{width:100%;display:flex;align-items:center;gap:10px;border:1px solid transparent;border-radius:11px;padding:10px 11px;color:#bfd0e0;text-align:left;background:transparent;transition:background .2s}.side-link:hover,.group-nav:hover{background:#1b2b3c}.side-link.active,.group-nav.active{border-color:#365671;background:#21394c;color:white}.count{margin-left:auto;font:600 11px/1.2 system-ui;color:var(--muted)}.group-nav small{color:#91a8ba;font-size:11px}.game-section{margin:8px 0;border:1px solid #34435c;border-radius:12px;padding:5px}.game-section summary{cursor:pointer;padding:11px 9px;color:#dbe6ff;font-weight:700;display:flex;gap:10px;align-items:center}.game-section[open] summary{border-bottom:1px solid #34435c;margin-bottom:5px}.game-section .group-nav{padding:8px 9px;font-size:12px}
 .main{min-width:0;padding:0 clamp(16px,3.2vw,56px) 70px}
 .top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:23px 0;border-bottom:1px solid var(--line)}.crumb{font-size:11px;color:#9bb4c7;letter-spacing:.12em}.top-actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid #37506a;background:#182b3e;padding:9px 14px;border-radius:11px;color:#e3f4ff;display:inline-flex;gap:8px;align-items:center;justify-content:center;font-weight:650;white-space:nowrap}.btn:hover{border-color:#92c9e3;background:#264158}.btn-primary{color:#102032;background:#c4e6f8;border-color:#c4e6f8}.btn-primary:hover{background:white}.btn-ghost{background:transparent}.btn.sm{font-size:12px;padding:7px 11px}.btn:disabled{opacity:.5;cursor:not-allowed}
 .hero{position:relative;min-height:276px;overflow:hidden;margin-top:28px;border:1px solid #38516b;border-radius:24px;background:radial-gradient(ellipse at 65% 30%,#2c4c65,transparent 60%),linear-gradient(120deg,#111d2e,#183148 70%,#111925);display:flex;align-items:center}
@@ -55,12 +55,12 @@ body{background:radial-gradient(ellipse 56% 32% at 85% -5%,#322d62 0,transparent
   <p style="padding:0 9px;color:#8ba6bd;font-size:11px">角色资料与动态立绘独立浏览；素材来源保留在详情中。</p>
 </aside>
 <main class="main">
-  <header class="top"><div class="crumb">ANIME CHARACTER ARCHIVE / NIKKE</div><div class="top-actions"><a href="./spine.html" class="btn btn-ghost sm">▶ 动态立绘</a><a href="https://github.com/Nikke-db/Nikke-db.github.io" target="_blank" rel="noopener noreferrer" class="btn sm">图源资料库 ↗</a></div></header>
+  <header class="top"><div class="crumb">ANIME CHARACTER ARCHIVE / ALL GAMES</div><div class="top-actions"><a href="./spine.html" class="btn btn-ghost sm">▶ 动态立绘</a><a href="https://github.com/Nikke-db/Nikke-db.github.io" target="_blank" rel="noopener noreferrer" class="btn sm">图源资料库 ↗</a></div></header>
   <section class="hero">
-   <div class="hero-content"><div class="over">THE CHARACTER COLLECTION · NIKKE</div><h1>探索你的次元角色</h1><p>收录 NIKKE 角色、全身立绘与不同造型。搜索喜欢的角色，查看高清美术，探索动态立绘。</p><div class="hero-stat"><span><strong id="totalStat">—</strong>全身立绘候选</span><span><strong id="fullStat">—</strong>全身立绘</span><span><strong id="iconStat">—</strong>头像已清理</span></div></div>
+   <div class="hero-content"><div class="over">THE CHARACTER COLLECTION · ALL GAMES</div><h1>探索你的次元角色</h1><p>收录多款游戏的角色、全身立绘和不同皮肤。按照游戏与角色分类探索，查看高清美术。动态立绘目前仅支持 NIKKE。</p><div class="hero-stat"><span><strong id="totalStat">—</strong>全身立绘候选</span><span><strong id="fullStat">—</strong>全身立绘</span><span><strong id="iconStat">—</strong>头像已清理</span></div></div>
    <div class="hero-art" aria-hidden="true"><img src="https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c012_00.png" alt=""><img src="https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c010_00.png" alt=""><img src="https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c233_00.png" alt=""></div>
   </section>
-  <div class="disclaimer">⚑ <strong>素材使用边界：</strong>这些是《胜利女神：NIKKE》已有的游戏角色美术，版权归原权利人；目前未获得再分发或商用授权。本页远程引用源站图片，仅用于私人选型原型研究，公开使用前仍须核实展示许可。素材来源与使用条件请以原项目及权利人说明为准。</div>
+  <div class="disclaimer">⚑ <strong>素材使用边界：</strong>角色图片来自不同游戏和社区档案，版权归原权利人。静态立绘文件由本站保存并展示，原始资料来源见每张图片详情；公开展示与再使用请遵守原权利人的许可条款。</div>
   <section aria-labelledby="featuredTitle"><div class="section-head"><div><h2 id="featuredTitle">精选角色</h2><p>快速浏览站内精选角色。</p></div><button class="btn sm" data-action="reset">查看全部 ↗</button></div><div id="featured" class="featured"></div></section>
   <section id="explore" aria-labelledby="browseTitle">
     <div class="section-head"><div><h2 id="browseTitle">探索角色图库</h2><p id="resultInfo">正在载入图片索引…</p></div><span id="favCount" class="mini"></span></div>
@@ -69,7 +69,7 @@ body{background:radial-gradient(ellipse 56% 32% at 85% -5%,#322d62 0,transparent
     <div id="gallery" class="gallery" aria-live="polite"><div class="blank">正在载入角色索引…</div></div>
     <div class="more-row"><button id="more" class="btn" data-action="more" hidden>加载更多角色 ↓</button></div>
   </section>
-  <footer class="footer">次元角色档案馆 · NIKKE 角色图鉴。角色图源：<a href="https://github.com/Nikke-db/Nikke-db.github.io" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">Nikke-db 社区档案</a>。页面只储存文件索引及来源 URL；收藏保存在当前浏览器，不会上传。图源可能因外站变动或访问限制而失效。人物版权及使用许可需要另行核实。</footer>
+  <footer class="footer">次元角色档案馆 · 多游戏角色图鉴。资料来源：<a href="https://github.com/Nikke-db/Nikke-db.github.io" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">Nikke-db 社区档案</a>。本站保存静态立绘，Spine 动态资源仍由外部站点提供；收藏只保存在当前浏览器。人物版权及使用许可需要另行核实。</footer>
 </main>
 </div>
 <dialog id="viewer" aria-label="角色大图浏览"><div class="view-head"><h2 id="viewTitle">查看角色</h2><button class="btn sm" data-action="close">✕ 关闭</button></div><div class="view-body"><div class="view-picture" id="viewPicture"><img id="viewImg" alt=""><div class="error-note">图片无法加载，请通过「来源文件」访问原页面。</div></div><div class="view-meta" id="viewMeta"></div></div></dialog>
@@ -138,7 +138,7 @@ function render(){
  var shown=active.slice(0,page*36);
  $('gallery').innerHTML=shown.length?shown.map(function(c){
  var label=c.kind==='full'?'全身立绘':'头像资料';
- var details=[gameNames[c.gameId]||c.game||'',c.zh||'',c.manufacturer||'',c.rarity||'',c.variant?'服装 / 变体':''].filter(Boolean).join(' · ')||'NIKKE 原始角色';
+ var details=[gameNames[c.gameId]||c.game||'',c.zh||'',c.manufacturer||'',c.rarity||'',c.variant?'服装 / 变体':''].filter(Boolean).join(' · ')||'游戏角色';
  return '<article class="card"><button class="card-img '+(c.kind==='icon'?'icon-only':'')+'" data-action="view" data-id="'+safe(c.id)+'" aria-label="查看 '+safe(c.name)+'"><img src="'+safe(c.image)+'" alt="'+safe(c.name)+' 角色美术" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="ribbon">'+label+'</span><span class="error-note">源站暂时无法显示</span></button><button class="fav '+(favorites.has(c.id)?'on':'')+'" title="收藏角色" data-action="fav" data-id="'+safe(c.id)+'" aria-label="'+(favorites.has(c.id)?'取消收藏':'收藏')+'">'+(favorites.has(c.id)?'★':'☆')+'</button><div class="card-info"><h3 title="'+safe(c.name)+'">'+safe(c.zh?c.zh+' · '+c.name:c.name)+'</h3><p title="'+safe(details)+'">'+safe(details)+'</p><div class="card-bottom"><span>'+safe(c.id)+'</span><a href="'+safe(c.source)+'" target="_blank" rel="noopener noreferrer">原始来源 ↗</a></div></div></article>';
  }).join(''):'<div class="blank">没有符合条件的角色。试着清除搜索、稀有度或分类筛选。</div>';
  $('more').hidden=shown.length>=active.length;
