@@ -12,7 +12,7 @@
 | `characters.html` | 静态角色图鉴、搜索、筛选、收藏 |
 | `spine.html` | Spine 动态角色播放器、浏览器缓存、导入本地文件 |
 | `gallery.html` | 兼容旧链接，重定向至角色图鉴 |
-| `data/characters.json` | 102 条全身立绘记录，图片均已存入仓库；不包含头像专用记录 |
+| `data/characters.json` | 129 条全身立绘记录，图片均已存入仓库；不包含头像专用记录 |
 | `data/spine-characters.json` | 102 条 Spine 角色与皮肤动画来源索引 |
 | `assets/portraits/*.js` | 102 张本地静态全身立绘 PNG，已接入角色图鉴 |
 | `tests/smoke.mjs` | 结构与数据完整性测试 |
@@ -44,6 +44,6 @@ node tests/smoke.mjs
 
 ## 下一步
 
-1. 人工审核 102 张已保存的静态立绘，过滤不符合视觉质量标准的图片。
+1. 人工审核 129 张已保存的静态立绘，过滤不符合视觉质量标准的图片。
 2. 验证 Spine 角色版本、动画动作和资源完整性，记录可播放状态。
 3. 动态 Spine 资源保留外部链接，不存储到本站仓库；定期检查链接可用性。
