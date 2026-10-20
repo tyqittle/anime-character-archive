@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#090f1d">
-<meta name="description" content="寒潮王座游戏角色图鉴：可搜索的 NIKKE 全身立绘、头像与服装资料，附来源、收藏和筛选。">
-<title>角色图鉴 · 寒潮王座 WINTER ARCHIVE</title>
+<meta name="description" content="次元角色档案馆：可搜索的 NIKKE 全身立绘、头像与服装资料，附来源、收藏和筛选。">
+<title>次元角色档案馆 · 角色图鉴</title>
 <style>
 :root{color-scheme:dark;--bg:#090e18;--panel:#111b2b;--panel2:#162337;--line:#293c54;--text:#f2f7ff;--muted:#95abc2;--accent:#a4dffa;--gold:#ead5a2;--green:#8ad9b4;--radius:18px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 45% 26% at 75% 4%,#193854 0,transparent 95%),radial-gradient(ellipse 42% 30% at 10% 60%,#151c35 0,transparent 95%),var(--bg);color:var(--text);font:14px/1.55 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
@@ -28,27 +28,40 @@ dialog{max-width:min(1080px,96vw);width:100%;max-height:94vh;background:#111c2b;
 @media(max-width:650px){.shell{display:block}.sidebar{height:auto;position:relative;border-right:0;border-bottom:1px solid #293a4d;padding:11px 15px}.identity{padding:0;border:0;margin:0}.sidebar .side-caption,.sidebar .group-nav,.sidebar .side-link:not(.active){display:none}.main{padding:0 14px 40px}.top{padding:12px 0;flex-wrap:wrap}.hero{min-height:240px;margin-top:15px}.hero-content{padding:24px 18px}.hero-art{opacity:.27;width:80%}.hero h1{font-size:33px}.featured{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.feat{padding:6px}.feat img{width:34px;height:34px}.feat b{font-size:11px}.feat span{font-size:9px}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.card-img{height:210px}.card-info{padding:9px}.card-info h3{font-size:12px}.view-body{grid-template-columns:1fr;max-height:79vh}.view-picture{height:45vh;min-height:230px}.view-meta{padding:17px}.view-meta h3{font-size:21px}.select{max-width:130px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
 </style>
-</head>
+<style id="archive-refresh">
+:root{--bg:#090d19;--panel:#111b30;--panel2:#17233d;--line:#313d62;--accent:#a6a4ff}
+body{background:radial-gradient(ellipse 56% 32% at 85% -5%,#322d62 0,transparent 80%),radial-gradient(ellipse 34% 45% at 4% 70%,#142747 0,transparent 85%),#090d19}
+.sidebar{background:linear-gradient(180deg,#121a30,#0b1222);border-right:1px solid #ffffff18}
+.identity .snow{background:linear-gradient(145deg,#756cff,#c18efa);color:white;box-shadow:0 6px 26px #705bf455}
+.identity .brand{font-size:15px;letter-spacing:.02em}
+.side-link{border-radius:12px;transition:.2s}
+.side-link.active{background:linear-gradient(100deg,#6557bc55,#26365e);border-color:#8079cc88}
+.hero{border-radius:24px;background:linear-gradient(115deg,#2c2958,#152544 60%,#131d33);border:1px solid #8884e536;box-shadow:0 20px 65px #05081655}
+.hero h1{letter-spacing:.01em}
+.top{background:#0b1120a8;backdrop-filter:blur(15px)}
+.btn{transition:transform .2s,border-color .2s,background .2s}
+.btn:hover{transform:translateY(-2px);border-color:#a4a0f5}
+</style></head>
 <body>
 <div class="shell">
 <aside class="sidebar">
-  <div class="identity"><div class="snow">❄</div><div><div class="brand">寒潮王座</div><div class="over">WINTER ARCHIVE</div></div></div>
+  <div class="identity"><div class="snow">✦</div><div><div class="brand">次元角色档案馆</div><div class="over">ANIME CHARACTER ARCHIVE</div></div></div>
   <div class="side-caption">内容索引</div>
-  <a class="side-link" href="./index.html">◫ <span>日常剧情 CG</span></a>
-  <a class="side-link active" href="./characters.html">♧ <span>角色图鉴</span></a>
-  <div class="side-caption">角色快捷入口</div>
+  <a class="side-link active" href="./characters.html">✦ <span>角色图鉴</span></a>
+  <a class="side-link" href="./spine.html">▶ <span>动态立绘</span></a>
+  <div class="side-caption">角色分类</div>
   <nav id="sideGroups" aria-label="候选角色外观组"></nav>
   <div class="side-caption">资料属性</div>
-  <p style="padding:0 9px;color:#8ba6bd;font-size:11px">角色立绘与原来的剧情 CG 分开管理。原游戏人物不自动对应小说人物。</p>
+  <p style="padding:0 9px;color:#8ba6bd;font-size:11px">角色资料与动态立绘独立浏览；素材来源保留在详情中。</p>
 </aside>
 <main class="main">
-  <header class="top"><div class="crumb">WINTER ARCHIVE / CHARACTER LIBRARY</div><div class="top-actions"><a href="./index.html" class="btn btn-ghost sm">← 返回剧情 CG</a><a href="https://github.com/Nikke-db/Nikke-db.github.io" target="_blank" rel="noopener noreferrer" class="btn sm">图源资料库 ↗</a></div></header>
+  <header class="top"><div class="crumb">ANIME CHARACTER ARCHIVE / NIKKE</div><div class="top-actions"><a href="./spine.html" class="btn btn-ghost sm">▶ 动态立绘</a><a href="https://github.com/Nikke-db/Nikke-db.github.io" target="_blank" rel="noopener noreferrer" class="btn sm">图源资料库 ↗</a></div></header>
   <section class="hero">
-   <div class="hero-content"><div class="over">THE CHARACTER COLLECTION · NIKKE</div><h1>角色 · 冬境图鉴</h1><p>浏览角色形象、全身立绘与服装头像，寻找适合《寒潮王座》的视觉参考。每条资料都有可追溯的原始文件来源。</p><div class="hero-stat"><span><strong id="totalStat">—</strong>角色/造型条目</span><span><strong id="fullStat">—</strong>全身立绘</span><span><strong id="iconStat">—</strong>头像条目</span></div></div>
+   <div class="hero-content"><div class="over">THE CHARACTER COLLECTION · NIKKE</div><h1>探索你的次元角色</h1><p>收录 NIKKE 角色、全身立绘与不同造型。搜索喜欢的角色，查看高清美术，探索动态立绘。</p><div class="hero-stat"><span><strong id="totalStat">—</strong>角色/造型条目</span><span><strong id="fullStat">—</strong>全身立绘</span><span><strong id="iconStat">—</strong>头像条目</span></div></div>
    <div class="hero-art" aria-hidden="true"><img src="https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c012_00.png" alt=""><img src="https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c010_00.png" alt=""><img src="https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c233_00.png" alt=""></div>
   </section>
-  <div class="disclaimer">⚑ <strong>素材使用边界：</strong>这些是《胜利女神：NIKKE》已有的游戏角色美术，版权归原权利人；目前未获得再分发或商用授权。本页远程引用源站图片，仅用于私人选型原型研究，公开使用前仍须核实展示许可。<a href="./index.html">已有剧情 CG 在另一个画廊</a>。</div>
-  <section aria-labelledby="featuredTitle"><div class="section-head"><div><h2 id="featuredTitle">重点候选角色</h2><p>快速查看已有的 12 组角色外观参考，不代表剧情人物绑定。</p></div><button class="btn sm" data-action="reset">查看全部 ↗</button></div><div id="featured" class="featured"></div></section>
+  <div class="disclaimer">⚑ <strong>素材使用边界：</strong>这些是《胜利女神：NIKKE》已有的游戏角色美术，版权归原权利人；目前未获得再分发或商用授权。本页远程引用源站图片，仅用于私人选型原型研究，公开使用前仍须核实展示许可。素材来源与使用条件请以原项目及权利人说明为准。</div>
+  <section aria-labelledby="featuredTitle"><div class="section-head"><div><h2 id="featuredTitle">精选角色</h2><p>快速浏览站内精选角色。</p></div><button class="btn sm" data-action="reset">查看全部 ↗</button></div><div id="featured" class="featured"></div></section>
   <section id="explore" aria-labelledby="browseTitle">
     <div class="section-head"><div><h2 id="browseTitle">探索角色图库</h2><p id="resultInfo">正在载入图片索引…</p></div><span id="favCount" class="mini"></span></div>
     <div class="toolbar"><label class="search">⌕ <input id="query" type="search" placeholder="搜索角色、中文名、英文名、服装、阵营…" autocomplete="off"></label><select id="kindFilter" class="select" aria-label="图像类别"><option value="all">所有图像类别</option><option value="full">全身立绘</option><option value="icon">头像/造型资料</option></select><select id="rarityFilter" class="select" aria-label="稀有度"><option value="all">全部稀有度</option><option value="SSR">SSR</option><option value="SR">SR</option><option value="R">R</option><option value="unknown">未标记</option></select><select id="sort" class="select" aria-label="排序方式"><option value="featured">重点角色优先</option><option value="name">名称 A—Z</option><option value="nameDesc">名称 Z—A</option></select></div>
