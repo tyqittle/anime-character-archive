@@ -28,7 +28,8 @@ def main():
    if not url or not 50000<int(info.get('size',0))<12000000:continue
    req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Referer':'https://nikke-goddess-of-victory-international.fandom.com/'})
    with urllib.request.urlopen(req,timeout=40) as response:contents=response.read(12000001)
-   if not contents.startswith(bytes([137,80,78,71,13,10,26,10])) or not 50000<len(contents)<12000000:continue
+   if not contents.startswith(bytes([137,80,78,71,13,10,26,10])) or not 50000<len(contents)<12000000:
+    print('INVALID',name,len(contents),repr(contents[:16]),flush=True);continue
    id_='wiki-'+re.sub('[^a-z0-9]+','-',name.lower()).strip('-')
    file=DIR/(id_+'.png')
    file.write_bytes(contents)
