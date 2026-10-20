@@ -20,6 +20,8 @@ OUTPUT = ROOT / "assets" / "thumbs"
 SIZE = (420, 560)
 QUALITY = 76
 FORCE = os.environ.get("THUMBS_FORCE", "").lower() in {"1", "true", "yes"}
+# Rebuild only the affected game on a focused-art tweak; avoid changing 460 unrelated thumbnails.
+FORCE_GAME = os.environ.get("THUMBS_FORCE_GAME", "").strip().lower()
 
 
 def image_path(image):
@@ -31,12 +33,36 @@ def image_path(image):
     return ROOT / "assets" / "portraits" / name
 
 
-def make_thumbnail(original, output):
+def focus_character_crop(im, game_id):
+    """Crop *only* wide Genshin splash compositions for vertical card previews.
+
+    The source remains unchanged for the modal and download. Genshin's 2:1
+    horizontal gacha artwork is currently letterboxed into a 2:3 vertical
+    gallery card, which makes the person extremely small. The character
+    figures in the curated eight originals sit near the composition centre,
+    so retain full original height and crop symmetric scenery on the sides.
+    This is image *cropping*, not stretching, and is intentionally limited to
+    that game's curated splash sources.
+    """
+    if game_id != "genshin" or im.width / im.height <= 1.15:
+        return im
+    target_width = round(im.height * 0.75)
+    if target_width >= im.width:
+        return im
+    # Central vertical 3:4 crop, preserving head and feet. Wide fantasy
+    # background effects outside the frame remain in the untouched original.
+    centre_x = im.width // 2
+    x0 = min(max(0, centre_x - target_width // 2), im.width - target_width)
+    return im.crop((x0, 0, x0 + target_width, im.height))
+
+
+def make_thumbnail(original, output, game_id=None):
     with Image.open(original) as im:
         im = ImageOps.exif_transpose(im)
         im.load()
         if im.width < 100 or im.height < 100:
             raise ValueError("unexpected source dimensions")
+        im = focus_character_crop(im, game_id)
         im.thumbnail(SIZE, Image.Resampling.LANCZOS, reducing_gap=2.0)
         if im.mode not in ("RGB", "RGBA"):
             im = im.convert("RGBA" if "A" in im.getbands() or "transparency" in im.info else "RGB")
@@ -69,11 +95,12 @@ def main():
         relative_thumb = "./assets/thumbs/" + source.stem + ".webp"
         output = OUTPUT / (source.stem + ".webp")
         old_total += source.stat().st_size
-        if not FORCE and output.is_file() and output.stat().st_size >= 500:
+        refresh = FORCE or FORCE_GAME == str(char.get("gameId", "")).lower()
+        if not refresh and output.is_file() and output.stat().st_size >= 500:
             found += 1
         else:
             try:
-                new_len = make_thumbnail(source, output)
+                new_len = make_thumbnail(source, output, char.get("gameId"))
                 built += 1
                 if built % 30 == 0:
                     print("Generated", built, "thumbnails", flush=True)
