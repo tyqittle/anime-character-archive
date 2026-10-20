@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "https://github.com/Nikke-db/Nikke-db.github.io",
-  "note": "角色动画文件仍由第三方镜像托管，仅供个人研究；没有再分发授权。",
+  "note": "动画资源由第三方托管。新增索引已核对上游 .atlas 和 .skel 文件存在，但未逐项验证实际浏览器渲染、Spine 版本及贴图加载。",
   "characters": [
     {
       "id": "c010",
@@ -182,6 +182,102 @@
       "name": "Guilty",
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c400/c400_00"
+    },
+    {
+      "id": "c172",
+      "name": "Admi",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c172/c172_00"
+    },
+    {
+      "id": "c351",
+      "name": "Anchor",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c351/c351_00"
+    },
+    {
+      "id": "c121",
+      "name": "Anne: Miracle Fairy",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c121/c121_00"
+    },
+    {
+      "id": "c432",
+      "name": "Aria",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c432/c432_00"
+    },
+    {
+      "id": "c381",
+      "name": "Biscuit",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c381/c381_00"
+    },
+    {
+      "id": "c311",
+      "name": "Cocoa",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c311/c311_00"
+    },
+    {
+      "id": "c020",
+      "name": "Delta",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c020/c020_00"
+    },
+    {
+      "id": "c202",
+      "name": "Dolla",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c202/c202_00"
+    },
+    {
+      "id": "c241",
+      "name": "Epinel",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c241/c241_00"
+    },
+    {
+      "id": "c291",
+      "name": "Ether",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c291/c291_00"
+    },
+    {
+      "id": "c092",
+      "name": "Eunhwa",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c092/c092_00"
+    },
+    {
+      "id": "c210",
+      "name": "Exia",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c210/c210_00"
+    },
+    {
+      "id": "c242",
+      "name": "Folkwang",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c242/c242_00"
+    },
+    {
+      "id": "c142",
+      "name": "Frima",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c142/c142_00"
+    },
+    {
+      "id": "c802",
+      "name": "Himeno",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c802/c802_00"
+    },
+    {
+      "id": "c304",
+      "name": "iDoll Flower",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c304/c304_00"
     }
   ]
 }
