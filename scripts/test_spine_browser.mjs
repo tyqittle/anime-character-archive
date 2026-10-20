@@ -18,7 +18,7 @@ try{
  await page.goto(url,{waitUntil:'domcontentloaded',timeout:30000});
  await page.waitForFunction(()=>document.querySelectorAll('#characters option').length>5,{timeout:20000});
  console.log('INITIAL_OPTION_COUNT',await page.locator('#characters option').count());
- for(const [game,id] of [['nikke','c010'],['bluearchive','ba-ch0058_home'],['bluearchive','ba-ch0060_home']]){
+ for(const [game,id] of [['nikke','c010'],['nikke','c012'],['nikke','c015'],['bluearchive','ba-ch0058_home'],['bluearchive','ba-ch0060_home'],['bluearchive','ba-ch0063_home'],['bluearchive','ba-ch0069_home'],['bluearchive','ba-ch0107_home']]){
   await page.selectOption('#gameFilter',game);
   await page.waitForTimeout(300);
   await page.selectOption('#characters',id);
