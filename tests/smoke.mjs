@@ -26,6 +26,7 @@ assert.ok(chars.characters.every(x=>x.image.startsWith('./assets/portraits/')),'
 const home=read('index.html'),old=read('gallery.html'),page=read('characters.html'),player=read('spine.html');
 assert.ok(home.includes('./characters.html')&&old.includes('./characters.html'),'Old entrypoint no longer redirects');
 assert.ok(page.includes('data/characters.json'),'Character archive not connected');
+assert.ok(page.includes("countGroup('unassigned')")&&page.includes("selectedGroup==='unassigned'"),'Unassigned static portraits are missing from sidebar');
 assert.ok(page.includes('wiki-[a-z0-9-]+'),'Gallery missing imported full-body path acceptance');
 assert.ok(player.includes('new spine.SpinePlayer'),'Spine renderer missing');
 assert.ok(player.includes('binaryUrl')&&player.includes('atlasUrl'),'Spine runtime URL fix missing');
