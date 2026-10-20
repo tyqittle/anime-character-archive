@@ -134,7 +134,7 @@ async function show(options,title,onError){
   const skeletonPath=options.skeleton||options.binaryUrl||options.jsonUrl;
   const atlasPath=options.atlas||options.atlasUrl;
   const normalized={...options,atlasUrl:atlasPath};
-  if(skeletonPath){if(/\.json(?:[?#]|$)/i.test(skeletonPath))normalized.jsonUrl=skeletonPath;else normalized.binaryUrl=skeletonPath;}
+  if(skeletonPath){if(/\.json(?:[?#]|$)/i.test(skeletonPath))normalized.jsonUrl=skeletonPath;else if($('version').value==='3.8')normalized.skelUrl=skeletonPath;else normalized.binaryUrl=skeletonPath;}
   const config={...normalized,showControls:true,premultipliedAlpha:true,alpha:false,backgroundColor:'#142238ff',
    success:(p)=>{if(attempt!==currentAttempt)return;stopWatchdog();player=p;status('播放成功：'+title+'。底部控制栏可以切换动作、暂停和全屏。')},
    error:(_p,reason)=>{if(attempt!==currentAttempt)return;stopWatchdog();
