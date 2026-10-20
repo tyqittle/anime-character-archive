@@ -27,3 +27,5 @@ jobs:
             git commit -m "Import Blue Archive static character artwork"
             git push origin HEAD:main
           fi
+
+# extended student portrait batch
