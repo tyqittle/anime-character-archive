@@ -121,7 +121,35 @@ function playCharacter(c,mirror='github'){
  });
 }
 $('nikke').onclick=()=>{const c=chosen();if(c)playCharacter(c)};
-$('testUrls').onclick=async()=>{const c=chosen();if(!c){status('请先选择角色。',true);return}status('检测 '+c.name+' 的骨骼与图集…');const all=[c.base+'.skel',c.base+'.atlas'];const out=await Promise.all(all.map(async url=>{const ctrl=new AbortController();const timer=setTimeout(()=>ctrl.abort(),12000);try{const r=await fetch(url,{signal:ctrl.signal,cache:'no-store'});return(url.split('/').pop()+': '+(r.ok?'HTTP '+r.status+' 可读取':'HTTP '+r.status))}catch(e){return(url.split('/').pop()+': '+(e.name==='AbortError'?'请求超时':'网络或跨域限制 '+e.message))}finally{clearTimeout(timer)}}));status('网络诊断：'+out.join('；')+'。请注意：这只检测骨骼与图集，贴图和实际渲染仍需点“播放”验证。')};
+$('testUrls').onclick=async()=>{
+ const c=chosen();if(!c){status('请先选择角色。',true);return}
+ status('正在检查 '+c.name+' 的骨骼、图集和图集中的贴图…');
+ const abort=new AbortController(), timer=setTimeout(()=>abort.abort(),12000);
+ try{
+  const roots=[c.base+'.skel',c.base+'.atlas'];
+  const results=await Promise.all(roots.map(async url=>{try{
+   const r=await fetch(url,{signal:abort.signal,cache:'no-store'});
+   if(!r.ok)throw Error('HTTP '+r.status);
+   const value=url.endsWith('.atlas')?await r.text():null;
+   return {file:url.split('/').pop(),ok:true,atlas:value};
+  }catch(e){return {file:url.split('/').pop(),ok:false,error:e.name==='AbortError'?'12秒超时':e.message}}}));
+  const atlas=results.find(r=>r.file.endsWith('.atlas'));
+  if(atlas?.ok){
+    const pages=[...new Set(atlas.atlas.split(/\r?\n/).map(x=>x.trim().replace(/^\uFEFF/,'')).filter(x=>/\.(png|jpg|jpeg|webp)$/i.test(x)))];
+    const root=c.base.slice(0,c.base.lastIndexOf('/')+1);
+    for(const page of pages.slice(0,8)){
+      const url=root+page, controller=new AbortController(), t=setTimeout(()=>controller.abort(),8000);
+      try{
+       const r=await fetch(url,{method:'HEAD',signal:controller.signal});
+       results.push({file:page,ok:r.ok||r.status===405,error:r.ok?'':('HTTP '+r.status)});
+      }catch(e){results.push({file:page,ok:false,error:e.name==='AbortError'?'8秒超时':e.message})}
+      finally{clearTimeout(t)}
+    }
+  }
+  status('资源检测结果：\n'+results.map(r=>(r.ok?'✓ ':'✗ ')+r.file+(r.error?'：'+r.error:'：可访问')).join('\n')+'\n注意：检测通过不代表 Spine 版本或动画渲染一定成功。',results.some(r=>!r.ok));
+ }catch(e){status('检测异常：'+e.message,true)}
+ finally{clearTimeout(timer)}
+}
 $('characters').onchange=()=>{$('nikke').disabled=!chosen();const c=chosen();if(c&&loadedVersion&&loadedVersion!==c.spineVersion)status('该角色使用 Spine '+c.spineVersion+'。播放时将自动刷新以切换版本。')};
 $('demo').onclick=()=>{
  const version=$('version').value;
