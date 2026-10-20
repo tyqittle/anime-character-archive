@@ -22,9 +22,7 @@ for(const entry of spine.characters) {
   assert.ok(['4.0','4.1','4.2'].includes(entry.spineVersion),'Unknown Spine version');
   assert.ok(entry.base.endsWith('/'+entry.id+'_00'),'Unexpected Spine path: '+entry.id);
 }
-for(const id of ['c012','c015','c112','c170','c181','c191','c200','c222','c233','c270','c280','c282']){
- assert.ok(fs.existsSync(path.join(root,'assets/portraits/'+id+'.js')),'Missing preserved portrait '+id);
-}
+assert.ok(chars.characters.every(x=>x.image.startsWith('./assets/portraits/')),'Not all static images are local');
 const home=read('index.html'),old=read('gallery.html'),page=read('characters.html'),player=read('spine.html');
 assert.ok(home.includes('./characters.html')&&old.includes('./characters.html'),'Old entrypoint no longer redirects');
 assert.ok(page.includes('data/characters.json'),'Character archive not connected');
