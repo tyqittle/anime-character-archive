@@ -57,15 +57,15 @@ body{background:radial-gradient(ellipse 56% 32% at 85% -5%,#322d62 0,transparent
 <main class="main">
   <header class="top"><div class="crumb">ANIME CHARACTER ARCHIVE / NIKKE</div><div class="top-actions"><a href="./spine.html" class="btn btn-ghost sm">▶ 动态立绘</a><a href="https://github.com/Nikke-db/Nikke-db.github.io" target="_blank" rel="noopener noreferrer" class="btn sm">图源资料库 ↗</a></div></header>
   <section class="hero">
-   <div class="hero-content"><div class="over">THE CHARACTER COLLECTION · NIKKE</div><h1>探索你的次元角色</h1><p>收录 NIKKE 角色、全身立绘与不同造型。搜索喜欢的角色，查看高清美术，探索动态立绘。</p><div class="hero-stat"><span><strong id="totalStat">—</strong>角色/造型条目</span><span><strong id="fullStat">—</strong>全身立绘</span><span><strong id="iconStat">—</strong>头像条目</span></div></div>
+   <div class="hero-content"><div class="over">THE CHARACTER COLLECTION · NIKKE</div><h1>探索你的次元角色</h1><p>收录 NIKKE 角色、全身立绘与不同造型。搜索喜欢的角色，查看高清美术，探索动态立绘。</p><div class="hero-stat"><span><strong id="totalStat">—</strong>全身立绘候选</span><span><strong id="fullStat">—</strong>全身立绘</span><span><strong id="iconStat">—</strong>头像已清理</span></div></div>
    <div class="hero-art" aria-hidden="true"><img src="https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c012_00.png" alt=""><img src="https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c010_00.png" alt=""><img src="https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c233_00.png" alt=""></div>
   </section>
   <div class="disclaimer">⚑ <strong>素材使用边界：</strong>这些是《胜利女神：NIKKE》已有的游戏角色美术，版权归原权利人；目前未获得再分发或商用授权。本页远程引用源站图片，仅用于私人选型原型研究，公开使用前仍须核实展示许可。素材来源与使用条件请以原项目及权利人说明为准。</div>
   <section aria-labelledby="featuredTitle"><div class="section-head"><div><h2 id="featuredTitle">精选角色</h2><p>快速浏览站内精选角色。</p></div><button class="btn sm" data-action="reset">查看全部 ↗</button></div><div id="featured" class="featured"></div></section>
   <section id="explore" aria-labelledby="browseTitle">
     <div class="section-head"><div><h2 id="browseTitle">探索角色图库</h2><p id="resultInfo">正在载入图片索引…</p></div><span id="favCount" class="mini"></span></div>
-    <div class="toolbar"><label class="search">⌕ <input id="query" type="search" placeholder="搜索角色、中文名、英文名、服装、阵营…" autocomplete="off"></label><select id="kindFilter" class="select" aria-label="图像类别"><option value="all">所有图像类别</option><option value="full">全身立绘</option><option value="icon">头像/造型资料</option></select><select id="rarityFilter" class="select" aria-label="稀有度"><option value="all">全部稀有度</option><option value="SSR">SSR</option><option value="SR">SR</option><option value="R">R</option><option value="unknown">未标记</option></select><select id="sort" class="select" aria-label="排序方式"><option value="featured">重点角色优先</option><option value="name">名称 A—Z</option><option value="nameDesc">名称 Z—A</option></select></div>
-    <div class="segments" role="group" aria-label="内容筛选"><button class="chip active" data-action="mode" data-value="all">全部资料</button><button class="chip" data-action="mode" data-value="full">高清立绘</button><button class="chip" data-action="mode" data-value="icon">服装/头像</button><button class="chip" id="favFilter" data-action="favorites">☆ 我的收藏</button><button class="chip" data-action="random">⤨ 随机看一位</button></div>
+    <div class="toolbar"><label class="search">⌕ <input id="query" type="search" placeholder="搜索角色、中文名、英文名、服装、阵营…" autocomplete="off"></label><select id="kindFilter" class="select" aria-label="图像类别"><option value="all">全身立绘</option></select><select id="rarityFilter" class="select" aria-label="稀有度"><option value="all">全部稀有度</option><option value="SSR">SSR</option><option value="SR">SR</option><option value="R">R</option><option value="unknown">未标记</option></select><select id="sort" class="select" aria-label="排序方式"><option value="featured">重点角色优先</option><option value="name">名称 A—Z</option><option value="nameDesc">名称 Z—A</option></select></div>
+    <div class="segments" role="group" aria-label="内容筛选"><button class="chip active" data-action="mode" data-value="all">全部资料</button><button class="chip" data-action="mode" data-value="full">高清立绘</button><button class="chip" id="favFilter" data-action="favorites">☆ 我的收藏</button><button class="chip" data-action="random">⤨ 随机看一位</button></div>
     <div id="gallery" class="gallery" aria-live="polite"><div class="blank">正在载入角色索引…</div></div>
     <div class="more-row"><button id="more" class="btn" data-action="more" hidden>加载更多角色 ↓</button></div>
   </section>
@@ -121,7 +121,7 @@ function drawGroups(){
 function render(){
  if(!items.length){$('gallery').innerHTML='<div class="blank">没有加载到图片资料。检查网络后刷新页面。</div>';return}
  active=filterItems();
- $('resultInfo').textContent='匹配 '+active.length+' 项 · 全身立绘与头像分开标记；不是全部高清文件';
+ $('resultInfo').textContent='匹配 '+active.length+' 项 · 已移除头像记录 · 全身立绘候选';
  $('favCount').textContent='☆ 已收藏 '+favorites.size+' 项';
  $('favFilter').classList.toggle('active',onlyFav);
  document.querySelectorAll('[data-action="mode"]').forEach(function(e){e.classList.toggle('active',e.dataset.value===mode)});
@@ -130,7 +130,7 @@ function render(){
  $('gallery').innerHTML=shown.length?shown.map(function(c){
  var label=c.kind==='full'?'全身立绘':'头像资料';
  var details=[c.zh||'',c.manufacturer||'',c.rarity||'',c.variant?'服装 / 变体':''].filter(Boolean).join(' · ')||'NIKKE 原始角色';
- return '<article class="card"><button class="card-img '+(c.kind==='icon'?'icon-only':'')+'" data-action="view" data-id="'+safe(c.id)+'" aria-label="查看 '+safe(c.name)+'"><img src="'+safe(c.image)+'" data-avatar="'+safe(c.avatar)+'" alt="'+safe(c.name)+' 角色美术" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="ribbon">'+label+'</span><span class="error-note">源站暂时无法显示</span></button><button class="fav '+(favorites.has(c.id)?'on':'')+'" title="收藏角色" data-action="fav" data-id="'+safe(c.id)+'" aria-label="'+(favorites.has(c.id)?'取消收藏':'收藏')+'">'+(favorites.has(c.id)?'★':'☆')+'</button><div class="card-info"><h3 title="'+safe(c.name)+'">'+safe(c.zh?c.zh+' · '+c.name:c.name)+'</h3><p title="'+safe(details)+'">'+safe(details)+'</p><div class="card-bottom"><span>'+safe(c.id)+'</span><a href="'+safe(c.source)+'" target="_blank" rel="noopener noreferrer">原始来源 ↗</a></div></div></article>';
+ return '<article class="card"><button class="card-img '+(c.kind==='icon'?'icon-only':'')+'" data-action="view" data-id="'+safe(c.id)+'" aria-label="查看 '+safe(c.name)+'"><img src="'+safe(c.image)+'" alt="'+safe(c.name)+' 角色美术" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="ribbon">'+label+'</span><span class="error-note">源站暂时无法显示</span></button><button class="fav '+(favorites.has(c.id)?'on':'')+'" title="收藏角色" data-action="fav" data-id="'+safe(c.id)+'" aria-label="'+(favorites.has(c.id)?'取消收藏':'收藏')+'">'+(favorites.has(c.id)?'★':'☆')+'</button><div class="card-info"><h3 title="'+safe(c.name)+'">'+safe(c.zh?c.zh+' · '+c.name:c.name)+'</h3><p title="'+safe(details)+'">'+safe(details)+'</p><div class="card-bottom"><span>'+safe(c.id)+'</span><a href="'+safe(c.source)+'" target="_blank" rel="noopener noreferrer">原始来源 ↗</a></div></div></article>';
  }).join(''):'<div class="blank">没有符合条件的角色。试着清除搜索、稀有度或分类筛选。</div>';
  $('more').hidden=shown.length>=active.length;
  $('more').textContent='加载更多角色（'+shown.length+' / '+active.length+'） ↓';
@@ -164,8 +164,8 @@ document.addEventListener('click',function(e){
 });
 document.addEventListener('error',function(e){
  var img=e.target;if(!(img instanceof HTMLImageElement))return;
- if(img.id==='viewImg'){if(!img.dataset.fallback&&img.dataset.avatar&&img.src!==img.dataset.avatar){img.dataset.fallback='avatar';img.src=img.dataset.avatar}else $('viewPicture').classList.add('error');return}
- if(img.closest('.card-img')){if(!img.dataset.fallback&&img.dataset.avatar&&img.src!==img.dataset.avatar){img.dataset.fallback='avatar';img.src=img.dataset.avatar}else img.closest('.card-img').classList.add('error')}
+ if(img.id==='viewImg'){$('viewPicture').classList.add('error');return}
+ if(img.closest('.card-img')){img.closest('.card-img').classList.add('error')}
 },true);
 document.addEventListener('keydown',function(e){if(!$('viewer').open)return;if(e.key==='ArrowLeft')navigate(-1);if(e.key==='ArrowRight')navigate(1)});
 ['query','rarityFilter','kindFilter','sort'].forEach(function(id){$(id).addEventListener(id==='query'?'input':'change',function(){page=1;render()})});
