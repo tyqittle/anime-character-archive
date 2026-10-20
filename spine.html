@@ -106,9 +106,11 @@ function ensureRuntime(version){
  if(loadPromise){if(loadedVersion!==version)return Promise.reject(Error('切换版本请刷新页面'));return loadPromise}
  loadedVersion=version;
  loadPromise=new Promise((resolve,reject)=>{
-  const base=version==='3.8'?'https://s4.zstatic.net/npm/@esotericsoftware/spine-player@3.8.0/dist/':runtimeRoot+version+'.*/dist/';
-  const css=document.createElement('link');css.rel='stylesheet';css.href=base+'spine-player.css';document.head.append(css);
-  const js=document.createElement('script');js.src=base+'iife/spine-player.js';js.crossOrigin='anonymous';
+  // Spine 3.8 is not published on NPM. Load its actual built files from official GitHub branch.
+  const legacy=version==='3.8';
+  const base=legacy?'https://raw.githubusercontent.com/EsotericSoftware/spine-runtimes/3.8/spine-ts/':runtimeRoot+version+'.*/dist/';
+  const css=document.createElement('link');css.rel='stylesheet';css.href=base+(legacy?'player/css/spine-player.css':'spine-player.css');document.head.append(css);
+  const js=document.createElement('script');js.src=base+(legacy?'build/spine-player.js':'iife/spine-player.js');js.crossOrigin='anonymous';
   js.onload=()=>window.spine?.SpinePlayer?resolve():reject(Error('运行时脚本已加载但 SpinePlayer 不存在'));
   js.onerror=()=>{loadPromise=null;reject(Error('Spine 运行时下载失败，请检查网络'))};document.head.append(js)
  });
