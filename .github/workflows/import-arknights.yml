@@ -1,0 +1,37 @@
+name: Import Arknights static full art
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/import_arknights.py'
+      - '.github/workflows/import-arknights.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: art-import-main
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Import and locally store Arknights full illustrations
+        env:
+          ARKNIGHTS_IMPORT_LIMIT: '30'
+        run: python scripts/import_arknights.py
+      - name: Validate index and image paths
+        run: node tests/smoke.mjs
+      - name: Commit full-body PNG assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/characters.json assets/portraits/
+          if ! git diff --cached --quiet; then
+            git commit -m "Import Arknights full-body portraits locally"
+            git push origin HEAD:main
+          fi
