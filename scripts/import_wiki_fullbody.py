@@ -28,7 +28,7 @@ def main():
    if not url or not 50000<int(info.get('size',0))<12000000:continue
    req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Referer':'https://nikke-goddess-of-victory-international.fandom.com/'})
    with urllib.request.urlopen(req,timeout=40) as response:contents=response.read(12000001)
-   if not contents.startswith(b'\\x89PNG\\r\\n\\x1a\\n') or not 50000<len(contents)<12000000:continue
+   if not contents.startswith(bytes([137,80,78,71,13,10,26,10])) or not 50000<len(contents)<12000000:continue
    id_='wiki-'+re.sub('[^a-z0-9]+','-',name.lower()).strip('-')
    file=DIR/(id_+'.png')
    file.write_bytes(contents)
@@ -37,6 +37,6 @@ def main():
   except Exception as e:print('SKIP',name,type(e).__name__,str(e)[:150],flush=True)
   time.sleep(0.1)
  db['counts']={'full':len(db['characters']),'total':len(db['characters'])}
- if added:FILE.write_text(json.dumps(db,ensure_ascii=False,indent=2)+'\\n',encoding='utf-8')
+ if added:FILE.write_text(json.dumps(db,ensure_ascii=False,indent=2)+chr(10),encoding='utf-8')
  print('Imported:',','.join(added),'count',len(added))
 if __name__=='__main__':main()
