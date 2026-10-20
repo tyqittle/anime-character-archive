@@ -155,6 +155,28 @@ async function show(options,title,onError){
    success:(p)=>{
     if(attempt!==currentAttempt)return;
     stopWatchdog();player=p;
+    // Some exports put the complete character under a numbered skin ("00",
+    // "01") while the initial "default" skin contains only stray attachments.
+    // Such models render empty and trigger "Animation bounds are invalid".
+    const sk=p.skeleton,skins=sk?.data?.skins||[];
+    if(sk&&skins.length>1){
+     const countAttachments=()=>sk.slots.filter(slot=>!!slot.attachment).length;
+     const initial=countAttachments();
+     if(initial<6){
+      let bestSkin=sk.skin,bestCount=initial;
+      for(const skin of skins){
+       try{
+        sk.setSkin(skin);sk.setSlotsToSetupPose();
+        const count=countAttachments();
+        if(count>bestCount){bestCount=count;bestSkin=skin}
+       }catch(e){console.warn('Skin inspect failed: '+skin.name,e)}
+      }
+      if(bestSkin&&bestCount>initial){
+       sk.setSkin(bestSkin);sk.setSlotsToSetupPose();sk.updateWorldTransform();
+       p.config.skin=bestSkin.name;
+      }
+     }
+    }
     const names=(p.skeleton?.data?.animations||[]).map(a=>a.name).filter(Boolean);
     if(!names.length){status('骨骼已显示，但没有找到可播放的动作。',true);return}
     const preferred=names.find(n=>/^(idle|idle_0?1|stand|breath|loop|wait|default)$/i.test(n))
