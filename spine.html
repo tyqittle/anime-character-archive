@@ -186,7 +186,7 @@ async function detectSpineVersion(blob){
   if(len===0)return null;len--;if(len>120||pos+len>bytes.length)throw Error('骨骼文件头无效');
   const out=new TextDecoder().decode(bytes.subarray(pos,pos+len));pos+=len;return out;
  }
- try{const hash=str(),version=str();if(!/^\\d+\\.\\d+(?:\\.\\d+)?/.test(version||''))throw Error('无法识别导出版本');return {hash,version,majorMinor:version.split('.').slice(0,2).join('.')}}
+ try{const hash=str(),version=str();if(!/^\d+\.\d+(?:\.\d+)?/.test(version||''))throw Error('无法识别导出版本');return {hash,version,majorMinor:version.split('.').slice(0,2).join('.')}}
  catch(e){throw Error('无法解析 Spine 骨骼文件头：'+e.message)}
 }
 async function downloadPack(c,mirror){
