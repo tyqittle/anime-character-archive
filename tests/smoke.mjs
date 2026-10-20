@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import path from 'node:path';
+import {createHash} from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
@@ -25,6 +26,20 @@ for(const entry of spine.characters) {
   assert.ok(entry.gameId==='bluearchive'?/^ba-ch\d+_home$/.test(entry.id):/^c\d{3}(?:_\d{2})?$/.test(entry.id),'Malformed Spine character ID: '+entry.id);
   assert.ok(['3.8','4.0','4.1','4.2'].includes(entry.spineVersion),'Unknown Spine version');
   assert.ok(entry.gameId==='bluearchive'?(entry.assetType==='lobby'&&entry.base.includes('/Spine_Lobbies/Spr/')&&entry.base.endsWith('/'+('CH'+entry.id.match(/ch(\d+)_home/)[1]+'_home'))):entry.base.endsWith('/'+entry.id+'_00'),'Unexpected Spine path: '+entry.id);
+}
+// Every dynamic preview is a unique frame extracted from that exact character's Spine
+// binary, NOT a reused base character portrait or an unrelated static illustration.
+const previewDigests=new Set();
+for(const entry of spine.characters){
+  const expected='./assets/animation-previews/'+entry.gameId+'-'+entry.id+'.webp';
+  assert.equal(entry.preview,expected,'Wrong character animation preview: '+entry.id);
+  assert.equal(entry.previewSource,'matching-spine-animation-frame','Unverified/guessed preview: '+entry.id);
+  const bytes=fs.readFileSync(path.join(root,expected));
+  assert.ok(bytes.length>1000&&bytes.toString('ascii',0,4)==='RIFF'&&bytes.toString('ascii',8,12)==='WEBP','Corrupt/missing WebP preview: '+entry.id);
+  const sha=createHash('sha256').update(bytes).digest('hex');
+  assert.equal(sha,entry.previewSha256,'Preview bytes do not match manifest: '+entry.id);
+  assert.ok(!previewDigests.has(sha),'Two distinct dynamic character previews share the same image: '+entry.id);
+  previewDigests.add(sha);
 }
 assert.ok(chars.characters.every(x=>x.image.startsWith('./assets/portraits/')),'Not all static images are local');
 const home=read('index.html'),old=read('gallery.html'),page=read('characters.html'),player=read('spine.html');
