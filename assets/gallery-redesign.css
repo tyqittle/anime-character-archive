@@ -39,3 +39,16 @@ body{background:radial-gradient(ellipse 50% 35% at 75% 0%,#292034 0,transparent 
 @media(max-width:1200px){.gallery{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:900px){.shell{display:block}.sidebar{height:auto;position:relative;border-right:0;border-bottom:1px solid #ffffff16;padding:10px 16px}.identity{margin:0;padding:6px 0;border:0}.sidebar .side-caption,.sidebar #sideGroups,.sidebar>p{display:none}.hero{min-height:280px}.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:650px){.main{padding:0 14px 55px}.top{padding:12px 0}.hero{min-height:260px;margin-top:12px}.hero-content{padding:26px 20px;max-width:75%}.hero h1{font-size:35px}.hero p{font-size:11px}.hero-art{width:64%;opacity:.55}.hero-stat strong{font-size:22px}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.card-img{height:clamp(230px,65vw,330px)}.featured{grid-template-columns:repeat(3,minmax(0,1fr))}.section-head h2{font-size:21px}}
+
+/* Rotating, drifting full-art hero */
+.hero-art{position:absolute;inset:0 0 0 auto;width:59%;height:100%;display:block;overflow:hidden;pointer-events:none}
+.hero-slide{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:flex-end;gap:0;opacity:0;transform:translateX(65px);transition:opacity 1s ease,transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.hero-slide.visible{opacity:1;transform:translateX(0)}
+.hero-slide img{width:39%;height:115%;object-fit:contain;object-position:center bottom;margin-left:-9%;filter:drop-shadow(0 12px 20px #0009);animation:heroFloat 6s ease-in-out infinite;animation-delay:calc(var(--i)*-.9s)}
+.hero-slide img:nth-child(2){height:126%;z-index:2}
+.hero-slide img:nth-child(3){height:109%;z-index:1}
+.card-img>img{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.card:hover .card-img>img{transform:scale(1.065)}
+@keyframes heroFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@media(max-width:650px){.hero-art{width:70%}.hero-slide img{width:42%;margin-left:-10%}}
+@media(prefers-reduced-motion:reduce){.hero-slide{transition:none;transform:none}.hero-slide img{animation:none}.card-img>img{transition:none}}
