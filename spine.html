@@ -90,7 +90,7 @@ function refreshCharacters(){
   else{const placeholder=document.createElement('div');placeholder.className='fallback';placeholder.textContent='暂无预览图';card.append(placeholder)}
   const label=document.createElement('span');label.className='nm';label.textContent=info.zh&&info.zh!==c.name?info.zh+' / '+c.name:c.name;card.append(label);
   const code=document.createElement('small');code.textContent=c.id+(c.versionUnverified?' · 动画待验证':'');card.append(code);
-  card.onclick=()=>{$('characters').value=c.id;$('nikke').disabled=false;$('selectionNote').textContent='已选：'+label.textContent;refreshCardSelection();};
+  card.onclick=()=>{$('characters').value=c.id;$('nikke').disabled=false;$('selectionNote').textContent='已选：'+label.textContent;refreshCardSelection();playCharacter(c);if(matchMedia('(max-width:850px)').matches)$('player').scrollIntoView({behavior:'smooth',block:'center'});};
   area.append(card);
  }
  $('selectionNote').textContent=filtered.length?'共 '+filtered.length+' 个动画角色；每张预览都直接截取自对应的动画。':'当前筛选没有匹配的角色。';
