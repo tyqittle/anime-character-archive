@@ -1,0 +1,58 @@
+name: Import Genshin Star Rail GFL2 and Wuthering Waves art
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/import_new_games.py'
+      - '.github/workflows/import-new-games.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: art-import-main
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image decoding tools
+        run: python -m pip install --disable-pip-version-check pillow
+      - name: Download and verify actual complete illustrations
+        run: python scripts/import_new_games.py
+      - name: Verify imported images exist and are decodable
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          from PIL import Image
+          db=json.loads(pathlib.Path('data/characters.json').read_text(encoding='utf-8'))
+          games={'genshin','starrail','gfl2','wutheringwaves'}
+          counts={g:0 for g in games}
+          for c in db['characters']:
+              if c.get('gameId') not in games: continue
+              assert c.get('kind') == 'full', c
+              p=pathlib.Path(c['image'].removeprefix('./'))
+              assert p.is_file() and p.stat().st_size > 20_000, p
+              with Image.open(p) as im:
+                  im.verify()
+              counts[c['gameId']]+=1
+          print('Four-game count',counts,flush=True)
+          assert sum(counts.values()) >= 1, 'No valid new-game images imported'
+          PY
+      - name: Commit imported artworks to the repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/characters.json assets/portraits/
+          if ! git diff --cached --quiet; then
+            git commit -m "Import verified character illustrations for four more games"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
