@@ -28,10 +28,11 @@ def main():
    if not url or not 50000<int(info.get('size',0))<12000000:continue
    req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Referer':'https://nikke-goddess-of-victory-international.fandom.com/'})
    with urllib.request.urlopen(req,timeout=40) as response:contents=response.read(12000001)
-   if not contents.startswith(bytes([137,80,78,71,13,10,26,10])) or not 50000<len(contents)<12000000:
-    print('INVALID',name,len(contents),repr(contents[:16]),flush=True);continue
+   if not 50000<len(contents)<12000000:continue
+   ext='.png' if contents.startswith(bytes([137,80,78,71,13,10,26,10])) else '.webp' if contents[:4]==b'RIFF' and contents[8:12]==b'WEBP' else None
+   if not ext:continue
    id_='wiki-'+re.sub('[^a-z0-9]+','-',name.lower()).strip('-')
-   file=DIR/(id_+'.png')
+   file=DIR/(id_+ext)
    file.write_bytes(contents)
    db['characters'].append({'id':id_,'name':name,'zh':'','groupId':'','kind':'full','image':'./assets/portraits/'+file.name,'avatar':'','source':'https://nikke-goddess-of-victory-international.fandom.com/wiki/File:'+urllib.parse.quote(name.replace(' ','_')+'_FB.png'),'originalImage':url,'rarity':'','manufacturer':'','class':'','squad':'','variant':False,'license':'第三方游戏美术；权利归原作者'})
    added.append(name)
