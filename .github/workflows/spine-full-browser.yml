@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - 'scripts/test_spine_full_browser.mjs'
+      - 'spine.html'
+      - 'data/spine-characters.json'
       - '.github/workflows/spine-full-browser.yml'
   workflow_dispatch:
 permissions:
