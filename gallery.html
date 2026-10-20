@@ -49,12 +49,12 @@ list=list.filter(x=>{if(state.tab==='scenes'&&state.group!=='all'&&!(x.groupIds|
 if(state.tab==='characters'&&state.group!=='all'&&x.kind!==state.group&&x.rarity!==state.group)return false;
 return !q||[x.name,x.zh,x.title,...(x.tags||[])].join(' ').toLocaleLowerCase().includes(q)});
 if($('sort').value==='name')list.sort((a,b)=>(a.name||a.title||'').localeCompare(b.name||b.title||''));state.visible=list;
-$('stat').textContent=state.tab==='scenes'?list.length+' 幅剧情 CG · 本站存储的图片':'共 '+list.length+' 条角色资料（动态动画尚未集成；不冒充可播放内容）';
+$('stat').textContent=state.tab==='scenes'?list.length+' 幅剧情 CG · 本站存储的图片':'共 '+list.length+' 条角色资料 · 已登记 '+state.animations.size+' 个可尝试加载的动态角色（实际播放需联网）';
 notice(state.tab==='characters'?'已接入的角色点击卡片即可在本站独立 Spine 播放器中加载动态立绘；其骨骼与贴图仍来自第三方资源镜像，可能受网络和跨域限制。':'');
 $('gallery').replaceChildren();if(!list.length){const e=document.createElement('div');e.className='empty';e.textContent='没有符合筛选条件的内容';$('gallery').append(e);return}
 list.forEach((x,i)=>{const btn=document.createElement('button');btn.className='card';const art=document.createElement('div');art.className='art';
 if(state.tab==='scenes'){const img=document.createElement('img');img.src=x.url;img.alt=x.title||'剧情 CG';img.loading='lazy';img.onerror=()=>{img.remove();art.textContent='此文件暂无法加载'};art.append(img)}
-else{art.textContent=state.animations.has(x.id)?'▶ 点击查看动态立绘':(x.kind==='full'?'未接入骨骼动画':'角色资料');art.style.color='#abc0d6'}
+else{art.textContent=state.animations.has(x.id)?'▶ 尝试播放动态角色':(x.kind==='full'?'暂无可播放动画':'角色资料（非完整立绘）');art.style.color='#abc0d6'}
 const cap=document.createElement('div');cap.className='caption';const t=document.createElement('strong');t.textContent=x.title||x.name;const s=document.createElement('small');s.textContent=state.tab==='scenes'?(x.tags||[]).slice(0,3).join(' / '):(x.zh||x.id)+' · '+(x.rarity||x.kind);cap.append(t,s);btn.append(art,cap);
 btn.onclick=()=>openCard(i);$('gallery').append(btn)})
 }
