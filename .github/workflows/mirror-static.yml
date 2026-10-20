@@ -1,0 +1,34 @@
+name: Mirror static portraits
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/mirror-static.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: static-portrait-mirror
+  cancel-in-progress: false
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download and validate static portrait PNG files only
+        run: python scripts/mirror_static_portraits.py
+      - name: Commit mirrored PNGs and manifest
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/characters.json assets/portraits/
+          if ! git diff --cached --quiet; then
+            git commit -m "Mirror static full-body portraits locally"
+            git push origin HEAD:main
+          fi
