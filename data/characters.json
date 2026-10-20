@@ -2,7 +2,7 @@
   "version": 1,
   "game": "GODDESS OF VICTORY: NIKKE",
   "generatedAt": "2026-10-20",
-  "note": "静态全身立绘已镜像至本仓库；动态 Spine 仍使用第三方资源。原图来源保存在 originalImage 和 source 字段。",
+  "note": "全游戏目录：通过 gameId/characterKey 自动分组，角色皮肤合并为同一个人物分类；立绘资源本站托管。",
   "sourceIndex": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/js/json/l2d.json",
   "sourceRepository": "https://github.com/Nikke-db/Nikke-db.github.io",
   "counts": {
@@ -14,7 +14,7 @@
       "id": "c012",
       "name": "Anis",
       "zh": "安妮丝",
-      "groupId": "N-01",
+      "groupId": "",
       "kind": "full",
       "image": "./assets/portraits/c012.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c012_00_s.png",
@@ -25,13 +25,16 @@
       "squad": "Counters",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c012_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c012_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Anis"
     },
     {
       "id": "c015",
       "name": "Anis: Sparkling Summer",
       "zh": "安妮丝",
-      "groupId": "N-01",
+      "groupId": "",
       "kind": "full",
       "image": "./assets/portraits/c015.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c015_00_s.png",
@@ -42,13 +45,16 @@
       "squad": "Counters",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c015_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c015_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Anis"
     },
     {
       "id": "c233",
       "name": "Dorothy",
       "zh": "桃乐丝",
-      "groupId": "N-06",
+      "groupId": "",
       "kind": "full",
       "image": "./assets/portraits/c233.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c233_00_s.png",
@@ -59,13 +65,16 @@
       "squad": "Inherit",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c233_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c233_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Dorothy"
     },
     {
       "id": "c352",
       "name": "Helm",
       "zh": "海伦",
-      "groupId": "N-04",
+      "groupId": "",
       "kind": "full",
       "image": "./assets/portraits/c352.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c352_00_s.png",
@@ -76,13 +85,16 @@
       "squad": "Aegis",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c352_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c352_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Helm"
     },
     {
       "id": "c353",
       "name": "Helm: Aquamarine",
       "zh": "海伦",
-      "groupId": "N-04",
+      "groupId": "",
       "kind": "full",
       "image": "./assets/portraits/c353.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c353_00_s.png",
@@ -93,13 +105,16 @@
       "squad": "Aegis",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c353_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c353_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Helm"
     },
     {
       "id": "c181",
       "name": "Maiden",
       "zh": "梅登",
-      "groupId": "N-09",
+      "groupId": "",
       "kind": "full",
       "image": "./assets/portraits/c181.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c181_00_s.png",
@@ -110,13 +125,16 @@
       "squad": "Extrinsic",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c181_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c181_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Maiden"
     },
     {
       "id": "c260",
       "name": "Modernia",
       "zh": "神罚",
-      "groupId": "N-08",
+      "groupId": "",
       "kind": "full",
       "image": "./assets/portraits/c260.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c260_00_s.png",
@@ -127,13 +145,16 @@
       "squad": "The Heretics",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c260_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c260_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Modernia"
     },
     {
       "id": "c170",
       "name": "Privaty",
       "zh": "普丽瓦蒂",
-      "groupId": "N-03",
+      "groupId": "",
       "kind": "full",
       "image": "./assets/portraits/c170.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c170_00_s.png",
@@ -144,13 +165,16 @@
       "squad": "Triangle",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c170_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c170_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Privaty"
     },
     {
       "id": "c010",
       "name": "Rapi",
       "zh": "拉毗",
-      "groupId": "N-02",
+      "groupId": "",
       "kind": "full",
       "image": "./assets/portraits/c010.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c010_00_s.png",
@@ -161,13 +185,16 @@
       "squad": "Counters",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c010_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c010_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Rapi"
     },
     {
       "id": "c280",
       "name": "Rosanna",
       "zh": "罗珊娜",
-      "groupId": "N-11",
+      "groupId": "",
       "kind": "full",
       "image": "./assets/portraits/c280.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c280_00_s.png",
@@ -178,13 +205,16 @@
       "squad": "Underworld Queen",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c280_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c280_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Rosanna"
     },
     {
       "id": "c200",
       "name": "Rupee",
       "zh": "露菲",
-      "groupId": "N-05",
+      "groupId": "",
       "kind": "full",
       "image": "./assets/portraits/c200.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c200_00_s.png",
@@ -195,13 +225,16 @@
       "squad": "Talentum",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c200_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c200_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Rupee"
     },
     {
       "id": "c203",
       "name": "Rupee: Winter Shopper",
       "zh": "露菲",
-      "groupId": "N-05",
+      "groupId": "",
       "kind": "full",
       "image": "./assets/portraits/c203.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c203_00_s.png",
@@ -212,13 +245,16 @@
       "squad": "Talentum",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c203_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c203_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Rupee"
     },
     {
       "id": "c282",
       "name": "Sakura",
       "zh": "樱花",
-      "groupId": "N-10",
+      "groupId": "",
       "kind": "full",
       "image": "./assets/portraits/c282.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c282_00_s.png",
@@ -229,13 +265,16 @@
       "squad": "Underworld Queen",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c282_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c282_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Sakura"
     },
     {
       "id": "c222",
       "name": "Scarlet",
       "zh": "红莲",
-      "groupId": "N-07",
+      "groupId": "",
       "kind": "full",
       "image": "./assets/portraits/c222.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c222_00_s.png",
@@ -246,13 +285,16 @@
       "squad": "Pioneer",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c222_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c222_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Scarlet"
     },
     {
       "id": "c112",
       "name": "Viper",
       "zh": "毒蛇",
-      "groupId": "N-12",
+      "groupId": "",
       "kind": "full",
       "image": "./assets/portraits/c112.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c112_00_s.png",
@@ -263,7 +305,10 @@
       "squad": "Exotic",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c112_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c112_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Viper"
     },
     {
       "id": "c172",
@@ -280,7 +325,10 @@
       "squad": "Triangle",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c172_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c172_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Admi"
     },
     {
       "id": "c191",
@@ -297,7 +345,10 @@
       "squad": "Unlimited",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c191_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c191_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Alice"
     },
     {
       "id": "c351",
@@ -314,7 +365,10 @@
       "squad": "Aegis",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c351_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c351_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Anchor"
     },
     {
       "id": "c121",
@@ -331,7 +385,10 @@
       "squad": "Recall & Release",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c121_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c121_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Anne"
     },
     {
       "id": "c432",
@@ -348,7 +405,10 @@
       "squad": "Prima Donna",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c432_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c432_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Aria"
     },
     {
       "id": "c060",
@@ -365,7 +425,10 @@
       "squad": "The Carronades",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c060_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c060_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Belorta"
     },
     {
       "id": "c381",
@@ -382,7 +445,10 @@
       "squad": "Happy Zoo",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c381_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c381_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Biscuit"
     },
     {
       "id": "c270",
@@ -399,7 +465,10 @@
       "squad": "777",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c270_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c270_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Blanc"
     },
     {
       "id": "c070",
@@ -416,7 +485,10 @@
       "squad": "Infinity Rail",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c070_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c070_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Brid"
     },
     {
       "id": "c080",
@@ -433,7 +505,10 @@
       "squad": "Mighty Tools",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c080_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c080_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Centi"
     },
     {
       "id": "c311",
@@ -450,7 +525,10 @@
       "squad": "Maid For You",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c311_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c311_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Cocoa"
     },
     {
       "id": "c110",
@@ -467,7 +545,10 @@
       "squad": "Exotic",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c110_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c110_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Crow"
     },
     {
       "id": "c040",
@@ -484,7 +565,10 @@
       "squad": "Perilous Siege",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c040_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c040_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "D"
     },
     {
       "id": "c020",
@@ -501,7 +585,10 @@
       "squad": "The Scouts",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c020_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c020_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Delta"
     },
     {
       "id": "c072",
@@ -518,7 +605,10 @@
       "squad": "Infinity Rail",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c072_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c072_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Diesel"
     },
     {
       "id": "c202",
@@ -535,7 +625,10 @@
       "squad": "Talentum",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c202_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c202_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Dolla"
     },
     {
       "id": "c101",
@@ -552,7 +645,10 @@
       "squad": "Matis",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c101_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c101_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Drake"
     },
     {
       "id": "c090",
@@ -569,7 +665,10 @@
       "squad": "Absolute",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c090_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c090_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Emma"
     },
     {
       "id": "c241",
@@ -586,7 +685,10 @@
       "squad": "Nepenthe",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c241_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c241_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Epinel"
     },
     {
       "id": "c291",
@@ -603,7 +705,10 @@
       "squad": "M.M.R.",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c291_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c291_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Ether"
     },
     {
       "id": "c092",
@@ -620,7 +725,10 @@
       "squad": "Absolute",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c092_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c092_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Eunhwa"
     },
     {
       "id": "c210",
@@ -637,7 +745,10 @@
       "squad": "Protocol",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c210_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c210_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Exia"
     },
     {
       "id": "c242",
@@ -654,7 +765,10 @@
       "squad": "Nepenthe",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c242_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c242_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Folkwang"
     },
     {
       "id": "c142",
@@ -671,7 +785,10 @@
       "squad": "Cafe Sweety",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c142_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c142_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Frima"
     },
     {
       "id": "c180",
@@ -688,7 +805,10 @@
       "squad": "Extrinsic",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c180_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c180_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Guillotine"
     },
     {
       "id": "c400",
@@ -705,7 +825,10 @@
       "squad": "Real Kindness",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c400_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c400_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Guilty"
     },
     {
       "id": "c230",
@@ -722,7 +845,10 @@
       "squad": "Inherit",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c230_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c230_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Harran"
     },
     {
       "id": "c802",
@@ -739,7 +865,10 @@
       "squad": "Devil Hunter",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c802_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c802_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Himeno"
     },
     {
       "id": "c304",
@@ -756,7 +885,10 @@
       "squad": "Replace",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c304_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c304_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "iDoll Flower"
     },
     {
       "id": "c305",
@@ -773,7 +905,10 @@
       "squad": "Replace",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c305_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c305_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "iDoll Ocean"
     },
     {
       "id": "c308",
@@ -790,7 +925,10 @@
       "squad": "Replace",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c308_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c308_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "iDoll Sun"
     },
     {
       "id": "c231",
@@ -807,7 +945,10 @@
       "squad": "Inherit",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c231_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c231_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Isabel"
     },
     {
       "id": "c111",
@@ -824,7 +965,10 @@
       "squad": "Exotic",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c111_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c111_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Jackal"
     },
     {
       "id": "c150",
@@ -841,7 +985,10 @@
       "squad": "Master Hand",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c150_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c150_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Julia"
     },
     {
       "id": "c100",
@@ -858,7 +1005,10 @@
       "squad": "Matis",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c100_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c100_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Laplace"
     },
     {
       "id": "c082",
@@ -875,7 +1025,10 @@
       "squad": "Mighty Tools",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c082_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c082_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Liter"
     },
     {
       "id": "c190",
@@ -892,7 +1045,10 @@
       "squad": "Unlimited",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c190_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c190_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Ludmilla"
     },
     {
       "id": "c800",
@@ -909,7 +1065,10 @@
       "squad": "Devil Hunter",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c800_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c800_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Makima"
     },
     {
       "id": "c013",
@@ -926,7 +1085,10 @@
       "squad": "Counters",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c013_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c013_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Marian"
     },
     {
       "id": "c130",
@@ -943,7 +1105,10 @@
       "squad": "Seraphim",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c130_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c130_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Mary"
     },
     {
       "id": "c132",
@@ -960,7 +1125,10 @@
       "squad": "Seraphim",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c132_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c132_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Mary"
     },
     {
       "id": "c254",
@@ -977,7 +1145,10 @@
       "squad": "",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c254_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c254_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Mass Produced Purple"
     },
     {
       "id": "c350",
@@ -994,7 +1165,10 @@
       "squad": "Aegis",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c350_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c350_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Mast"
     },
     {
       "id": "c102",
@@ -1011,7 +1185,10 @@
       "squad": "Matis",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c102_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c102_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Maxwell"
     },
     {
       "id": "c061",
@@ -1028,7 +1205,10 @@
       "squad": "The Carronades",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c061_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c061_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Mica"
     },
     {
       "id": "c161",
@@ -1045,7 +1225,10 @@
       "squad": "Wardress",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c161_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c161_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Mihara"
     },
     {
       "id": "c141",
@@ -1062,7 +1245,10 @@
       "squad": "Cafe Sweety",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c141_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c141_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Milk"
     },
     {
       "id": "c032",
@@ -1079,7 +1265,10 @@
       "squad": "A.C.P.U.",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c032_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c032_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Miranda"
     },
     {
       "id": "c120",
@@ -1096,7 +1285,10 @@
       "squad": "Recall & Release",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c120_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c120_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "N102"
     },
     {
       "id": "c011",
@@ -1113,7 +1305,10 @@
       "squad": "Counters",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c011_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c011_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Neon"
     },
     {
       "id": "c014",
@@ -1130,7 +1325,10 @@
       "squad": "Counters",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c014_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c014_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Neon"
     },
     {
       "id": "c380",
@@ -1147,7 +1345,10 @@
       "squad": "Happy Zoo",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c380_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c380_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Nero"
     },
     {
       "id": "c193",
@@ -1164,7 +1365,10 @@
       "squad": "Unlimited",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c193_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c193_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Neve"
     },
     {
       "id": "c261",
@@ -1181,7 +1385,10 @@
       "squad": "Heretic",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c261_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c261_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Nihilister"
     },
     {
       "id": "c232",
@@ -1198,7 +1405,10 @@
       "squad": "Inherit",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c232_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c232_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Noah"
     },
     {
       "id": "c271",
@@ -1215,7 +1425,10 @@
       "squad": "777",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c271_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c271_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Noir"
     },
     {
       "id": "c430",
@@ -1232,7 +1445,10 @@
       "squad": "Prima Donna",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c430_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c430_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Noise"
     },
     {
       "id": "c212",
@@ -1249,7 +1465,10 @@
       "squad": "Protocol",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c212_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c212_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Novel"
     },
     {
       "id": "c131",
@@ -1266,7 +1485,10 @@
       "squad": "Seraphim",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c131_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c131_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Pepper"
     },
     {
       "id": "c030",
@@ -1283,7 +1505,10 @@
       "squad": "A.C.P.U.",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c030_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c030_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Poli"
     },
     {
       "id": "c801",
@@ -1300,7 +1525,10 @@
       "squad": "Devil Hunter",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c801_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c801_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Power"
     },
     {
       "id": "c302",
@@ -1317,7 +1545,10 @@
       "squad": "Replace",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c302_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c302_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Product 08"
     },
     {
       "id": "c303",
@@ -1334,7 +1565,10 @@
       "squad": "Replace",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c303_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c303_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Product 12"
     },
     {
       "id": "c307",
@@ -1351,7 +1585,10 @@
       "squad": "Replace",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c307_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c307_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Product 23"
     },
     {
       "id": "c402",
@@ -1368,7 +1605,10 @@
       "squad": "Real Kindness",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c402_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c402_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Quency"
     },
     {
       "id": "c221",
@@ -1385,7 +1625,10 @@
       "squad": "Pioneer",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c221_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c221_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Rapunzel"
     },
     {
       "id": "c392",
@@ -1402,7 +1645,10 @@
       "squad": "School Circle",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c392_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c392_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Rei"
     },
     {
       "id": "c240",
@@ -1419,7 +1665,10 @@
       "squad": "LifeTonic",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c240_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c240_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Rumani"
     },
     {
       "id": "c022",
@@ -1436,7 +1685,10 @@
       "squad": "The Scouts",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c022_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c022_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Signal"
     },
     {
       "id": "c401",
@@ -1453,7 +1705,10 @@
       "squad": "Real Kindness",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c401_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c401_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Sin"
     },
     {
       "id": "c220",
@@ -1470,7 +1725,10 @@
       "squad": "Pioneer",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c220_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c220_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Snow White"
     },
     {
       "id": "c312",
@@ -1487,7 +1745,10 @@
       "squad": "Maid For You",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c312_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c312_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Soda"
     },
     {
       "id": "c300",
@@ -1504,7 +1765,10 @@
       "squad": "Replace",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c300_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c300_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Soldier EG"
     },
     {
       "id": "c301",
@@ -1521,7 +1785,10 @@
       "squad": "Replace",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c301_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c301_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Soldier FA"
     },
     {
       "id": "c306",
@@ -1538,7 +1805,10 @@
       "squad": "Replace",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c306_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c306_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Soldier OW"
     },
     {
       "id": "c071",
@@ -1555,7 +1825,10 @@
       "squad": "Infinity Rail",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c071_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c071_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Soline"
     },
     {
       "id": "c140",
@@ -1572,7 +1845,10 @@
       "squad": "Cafe Sweety",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c140_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c140_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Sugar"
     },
     {
       "id": "c091",
@@ -1589,7 +1865,10 @@
       "squad": "Absolute",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c091_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c091_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Vesti"
     },
     {
       "id": "c431",
@@ -1606,7 +1885,10 @@
       "squad": "Prima Donna",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c431_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c431_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Volume"
     },
     {
       "id": "c201",
@@ -1623,7 +1905,10 @@
       "squad": "Talentum",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c201_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c201_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Yan"
     },
     {
       "id": "c171",
@@ -1640,7 +1925,10 @@
       "squad": "Triangle",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c171_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c171_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Yulha"
     },
     {
       "id": "c160",
@@ -1657,7 +1945,10 @@
       "squad": "Wardress",
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
-      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c160_00.png"
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c160_00.png",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Yuni"
     },
     {
       "id": "wiki-2b",
@@ -1674,7 +1965,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "2B"
     },
     {
       "id": "wiki-9s",
@@ -1691,7 +1985,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "9S"
     },
     {
       "id": "wiki-a2",
@@ -1708,7 +2005,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "A2"
     },
     {
       "id": "wiki-ade",
@@ -1725,7 +2025,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Ade"
     },
     {
       "id": "wiki-k",
@@ -1742,7 +2045,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "K"
     },
     {
       "id": "wiki-cinderella",
@@ -1759,7 +2065,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Cinderella"
     },
     {
       "id": "wiki-crown",
@@ -1776,7 +2085,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Crown"
     },
     {
       "id": "wiki-red-hood",
@@ -1793,7 +2105,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Red Hood"
     },
     {
       "id": "wiki-naga",
@@ -1810,7 +2125,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Naga"
     },
     {
       "id": "wiki-tia",
@@ -1827,7 +2145,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Tia"
     },
     {
       "id": "wiki-bay",
@@ -1844,7 +2165,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Bay"
     },
     {
       "id": "wiki-clay",
@@ -1861,7 +2185,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Clay"
     },
     {
       "id": "wiki-moran",
@@ -1878,7 +2205,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Moran"
     },
     {
       "id": "wiki-leona",
@@ -1895,7 +2225,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Leona"
     },
     {
       "id": "wiki-quiry",
@@ -1912,7 +2245,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Quiry"
     },
     {
       "id": "wiki-indivilia",
@@ -1929,7 +2265,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Indivilia"
     },
     {
       "id": "wiki-ein",
@@ -1946,7 +2285,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Ein"
     },
     {
       "id": "wiki-zwei",
@@ -1963,7 +2305,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Zwei"
     },
     {
       "id": "wiki-flora",
@@ -1980,7 +2325,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Flora"
     },
     {
       "id": "wiki-trony",
@@ -1997,7 +2345,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Trony"
     },
     {
       "id": "wiki-elegg",
@@ -2014,7 +2365,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Elegg"
     },
     {
       "id": "wiki-marciana",
@@ -2031,7 +2385,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Marciana"
     },
     {
       "id": "wiki-tove",
@@ -2048,7 +2405,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Tove"
     },
     {
       "id": "wiki-alice-wonderland-bunny",
@@ -2065,7 +2425,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Alice"
     },
     {
       "id": "wiki-ade-agent-bunny",
@@ -2082,7 +2445,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Ade"
     },
     {
       "id": "wiki-anis-star",
@@ -2099,7 +2465,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Anis"
     },
     {
       "id": "wiki-arcana",
@@ -2116,7 +2485,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Arcana"
     },
     {
       "id": "wiki-chime",
@@ -2133,7 +2505,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Chime"
     },
     {
       "id": "wiki-phantom",
@@ -2150,7 +2525,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Phantom"
     },
     {
       "id": "wiki-mana",
@@ -2167,7 +2545,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Mana"
     },
     {
       "id": "wiki-grave",
@@ -2184,7 +2565,10 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Grave"
     },
     {
       "id": "wiki-rouge",
@@ -2201,7 +2585,17 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；权利归原作者"
+      "license": "第三方游戏美术；权利归原作者",
+      "gameId": "nikke",
+      "game": "胜利女神：妮姬",
+      "characterKey": "Rouge"
+    }
+  ],
+  "games": [
+    {
+      "id": "nikke",
+      "name": "胜利女神：妮姬",
+      "en": "GODDESS OF VICTORY: NIKKE"
     }
   ]
 }
