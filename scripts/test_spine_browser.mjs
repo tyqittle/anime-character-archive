@@ -10,10 +10,13 @@ const page=await browser.newPage({viewport:{width:1366,height:900}});
 const errors=[];
 page.on('pageerror',e=>errors.push(e.message));
 page.on('console',msg=>{if(msg.type()==='error')errors.push('CONSOLE: '+msg.text())});
+page.on('response',response=>{if(response.status()>=400)errors.push('HTTP '+response.status()+' '+response.url())});
+page.on('requestfailed',request=>errors.push('REQUEST '+request.url()+' '+request.failure()?.errorText));
 const outcomes=[];
 try{
  await page.goto(url,{waitUntil:'domcontentloaded',timeout:30000});
- await page.waitForFunction(()=>document.querySelectorAll('#characters option').length>100,{timeout:20000});
+ await page.waitForFunction(()=>document.querySelectorAll('#characters option').length>5,{timeout:20000});
+ console.log('INITIAL_OPTION_COUNT',await page.locator('#characters option').count());
  for(const [game,id] of [['nikke','c010'],['bluearchive','ba-ch0060_spr']]){
   await page.selectOption('#gameFilter',game);
   await page.waitForTimeout(300);
