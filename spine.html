@@ -332,7 +332,11 @@ function playPack(pack){
   }else if(/%0A|%0D|%[89A-F][0-9A-F]/i.test(contents)){
    try{contents=decodeURIComponent(contents)}catch(e){}
   }
-  pack.rawDataURIs[pack.atlas]='data:text/plain,'+contents.replace(/^\uFEFF/,'');
+  // 3.8 runs the data URI through XMLHttpRequest, whereas Spine 4.x reads it literally.
+  const clean=contents.replace(/^\uFEFF/,'');
+  pack.rawDataURIs[pack.atlas]=pack.version==='3.8'
+    ?'data:text/plain;charset=utf-8,'+encodeURIComponent(clean)
+    :'data:text/plain,'+clean;
  }
  if(!setVersion(pack.version,pack.id))return;
  return show({skeleton:pack.skeleton,atlas:pack.atlas,rawDataURIs:pack.rawDataURIs},'动态角色 · '+pack.id)
