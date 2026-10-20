@@ -21,7 +21,7 @@ const ids=new Set(chars.characters.map(x=>x.id));
 for(const entry of spine.characters) {
   assert.ok(entry.gameId==='bluearchive'||/^c\d{3}(?:_\d{2})?$/.test(entry.id),'Invalid Spine character ID');
   assert.ok(entry.gameId==='bluearchive'?/^ba-ch\d+_spr$/.test(entry.id):/^c\d{3}(?:_\d{2})?$/.test(entry.id),'Malformed Spine character ID: '+entry.id);
-  assert.ok(['4.0','4.1','4.2'].includes(entry.spineVersion),'Unknown Spine version');
+  assert.ok(['3.8','4.0','4.1','4.2'].includes(entry.spineVersion),'Unknown Spine version');
   assert.ok(entry.gameId==='bluearchive'?entry.base.endsWith('/'+entry.id.slice(3).toUpperCase().replace('_SPR','_spr')):entry.base.endsWith('/'+entry.id+'_00'),'Unexpected Spine path: '+entry.id);
 }
 assert.ok(chars.characters.every(x=>x.image.startsWith('./assets/portraits/')),'Not all static images are local');
