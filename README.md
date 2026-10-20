@@ -1,6 +1,6 @@
 # 次元角色档案馆 · Anime Character Archive
 
-一个部署在 GitHub Pages 的静态 NIKKE 角色图库与 Spine 动态播放器。主站只展示角色资料及动态立绘，不再承载原「寒潮王座」剧情 CG / 素材编辑器。
+一个部署在 GitHub Pages 的多游戏静态角色图库，包含 NIKKE 与《蔚蓝档案》；NIKKE 动态立绘通过独立 Spine 播放器查看。主站只展示角色资料及动态立绘，不再承载原「寒潮王座」剧情 CG / 素材编辑器。
 
 **在线访问**：https://tyqittle.github.io/winter-cg-archive/
 
@@ -9,10 +9,10 @@
 | 路径 | 用途 |
 | --- | --- |
 | `index.html` | GitHub Pages 首页，重定向至角色图鉴 |
-| `characters.html` | 静态角色图鉴、搜索、筛选、收藏 |
+| `characters.html` | 静态按游戏 → 角色 → 皮肤分组的图鉴、搜索、筛选、收藏 |
 | `spine.html` | Spine 动态角色播放器、浏览器缓存、导入本地文件 |
 | `gallery.html` | 兼容旧链接，重定向至角色图鉴 |
-| `data/characters.json` | 129 条全身立绘记录，图片均已存入仓库；不包含头像专用记录 |
+| `data/characters.json` | 169 条已分类全身立绘记录，图片均已存入仓库；不包含头像专用记录 |
 | `data/spine-characters.json` | 102 条 Spine 角色与皮肤动画来源索引 |
 | `assets/portraits/*.js` | 102 张本地静态全身立绘 PNG，已接入角色图鉴 |
 | `tests/smoke.mjs` | 结构与数据完整性测试 |
@@ -32,6 +32,12 @@
 
 本地可选：`python -m http.server 8000` 后访问 `http://localhost:8000/`；也可使用 `start-local.bat` / `start_site.py`。普通访问无需下载。
 
+## 收录游戏
+
+- **胜利女神：妮姬（NIKKE）**：129 张静态立绘，本地托管；102 条 Spine 动态索引，外部资源。
+- **蔚蓝档案（Blue Archive）**：40 张本地静态学生立绘，数据与图片来自 SchaleDB 社区档案。动态资源暂未收录。
+- 所有静态记录必须具有 `gameId` 和 `characterKey`，分类由页面自动构建，不再使用“未分类”栏目。
+
 ## 质量检查
 
 安装 Node.js 22+ 后运行：
@@ -44,6 +50,6 @@ node tests/smoke.mjs
 
 ## 下一步
 
-1. 人工审核 129 张已保存的静态立绘，过滤不符合视觉质量标准的图片。
+1. 人工审核 169 张已保存的静态立绘，过滤不符合视觉质量标准的图片。
 2. 验证 Spine 角色版本、动画动作和资源完整性，记录可播放状态。
 3. 动态 Spine 资源保留外部链接，不存储到本站仓库；定期检查链接可用性。
