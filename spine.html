@@ -221,9 +221,14 @@ async function playCharacter(c){
  status((c.versionUnverified?'该资源骨骼版本尚未验证，可能无法播放。':'')+'正在查找 '+c.name+' 的本地缓存…');
  try{
   let pack=await dbAction('readonly',s=>s.get(packId)).catch(()=>null);
+  if(pack&&!pack.exportVersion){
+   // Older cache packs used a guessed version; discard so we can inspect the real header.
+   await dbAction('readwrite',store=>store.delete(packId)).catch(()=>{});
+   pack=null;
+  }
   if(pack){
    if(current!==sequence)return;
-   status('已找到本地缓存，直接启动 '+c.name+' …');
+   status('已找到经版本检测的本地缓存：Spine '+pack.exportVersion);
    await playPack(pack);
    return;
   }
