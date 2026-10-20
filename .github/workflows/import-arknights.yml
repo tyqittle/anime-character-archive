@@ -22,7 +22,7 @@ jobs:
           python-version: '3.12'
       - name: Import and locally store Arknights full illustrations
         env:
-          ARKNIGHTS_IMPORT_LIMIT: '30'
+          ARKNIGHTS_IMPORT_LIMIT: '60'
         run: python scripts/import_arknights.py
       - name: Validate index and image paths
         run: node tests/smoke.mjs
