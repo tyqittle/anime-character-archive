@@ -718,13 +718,13 @@
       "gameId": "nikke"
     },
     {
-      "id": "ba-ch0058_spr",
+      "id": "ba-ch0058_home",
       "name": "Hifumi (Swimsuit)",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0058_spr/CH0058_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0058_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0058_home/CH0058_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0058_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -732,16 +732,18 @@
       ],
       "characterKey": "Hifumi",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-20005.webp"
+      "preview": "./assets/portraits/ba-20005.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0058_spr"
     },
     {
-      "id": "ba-ch0060_spr",
+      "id": "ba-ch0060_home",
       "name": "Tsurugi (Swimsuit)",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0060_spr/CH0060_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0060_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0060_home/CH0060_home/CH0060_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0060_home/CH0060_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -749,16 +751,18 @@
       ],
       "characterKey": "Tsurugi",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10013.webp"
+      "preview": "./assets/portraits/ba-10013.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0060_spr"
     },
     {
-      "id": "ba-ch0063_spr",
+      "id": "ba-ch0063_home",
       "name": "Hina (Swimsuit)",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0063_spr/CH0063_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0063_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0063_home/CH0063_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0063_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -766,16 +770,18 @@
       ],
       "characterKey": "Hina",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10022.webp"
+      "preview": "./assets/portraits/ba-10022.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0063_spr"
     },
     {
-      "id": "ba-ch0064_spr",
+      "id": "ba-ch0064_home",
       "name": "Iori (Swimsuit)",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0064_spr/CH0064_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0064_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0064_home/CH0064_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0064_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -783,16 +789,18 @@
       ],
       "characterKey": "Iori",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10023.webp"
+      "preview": "./assets/portraits/ba-10023.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0064_spr"
     },
     {
-      "id": "ba-ch0066_spr",
+      "id": "ba-ch0066_home",
       "name": "Shun (Small)",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0066_spr/CH0066_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0066_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0066_home/CH0066_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0066_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -800,16 +808,18 @@
       ],
       "characterKey": "Shun",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10025.webp"
+      "preview": "./assets/portraits/ba-10025.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0066_spr"
     },
     {
-      "id": "ba-ch0069_spr",
+      "id": "ba-ch0069_home",
       "name": "Mika",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0069_spr/CH0069_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0069_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0069_home/CH0069_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0069_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -817,32 +827,18 @@
       ],
       "characterKey": "Mika",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10059.webp"
+      "preview": "./assets/portraits/ba-10059.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0069_spr"
     },
     {
-      "id": "ba-ch0070_spr",
-      "name": "Seia",
-      "gameId": "bluearchive",
-      "spineVersion": "3.8",
-      "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0070_spr/CH0070_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0070_spr",
-      "verifiedFiles": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "characterKey": "Seia",
-      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f"
-    },
-    {
-      "id": "ba-ch0071_spr",
+      "id": "ba-ch0071_home",
       "name": "Ichika",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0071_spr/CH0071_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0071_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0071_home/CH0071_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0071_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -850,16 +846,18 @@
       ],
       "characterKey": "Ichika",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10077.webp"
+      "preview": "./assets/portraits/ba-10077.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0071_spr"
     },
     {
-      "id": "ba-ch0079_spr",
+      "id": "ba-ch0079_home",
       "name": "Makoto",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0079_spr/CH0079_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0079_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0079_home/CH0079_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0079_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -867,32 +865,18 @@
       ],
       "characterKey": "Makoto",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-20033.webp"
+      "preview": "./assets/portraits/ba-20033.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0079_spr"
     },
     {
-      "id": "ba-ch0080_spr",
-      "name": "Satsuki",
-      "gameId": "bluearchive",
-      "spineVersion": "3.8",
-      "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0080_spr/CH0080_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0080_spr",
-      "verifiedFiles": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "characterKey": "Satsuki",
-      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f"
-    },
-    {
-      "id": "ba-ch0086_spr",
+      "id": "ba-ch0086_home",
       "name": "Kayoko (New Year)",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0086_spr/CH0086_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0086_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0086_home/CH0086_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0086_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -900,16 +884,18 @@
       ],
       "characterKey": "Kayoko",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10064.webp"
+      "preview": "./assets/portraits/ba-10064.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0086_spr"
     },
     {
-      "id": "ba-ch0087_spr",
+      "id": "ba-ch0087_home",
       "name": "Haruka (New Year)",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0087_spr/CH0087_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0087_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0087_home/CH0087_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0087_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -917,16 +903,18 @@
       ],
       "characterKey": "Haruka",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-20025.webp"
+      "preview": "./assets/portraits/ba-20025.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0087_spr"
     },
     {
-      "id": "ba-ch0088_spr",
+      "id": "ba-ch0088_home",
       "name": "Megu",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0088_spr/CH0088_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0088_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0088_home/CH0088_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0088_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -934,16 +922,18 @@
       ],
       "characterKey": "Megu",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10060.webp"
+      "preview": "./assets/portraits/ba-10060.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0088_spr"
     },
     {
-      "id": "ba-ch0089_spr",
+      "id": "ba-ch0089_home",
       "name": "Kasumi",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0089_spr/CH0089_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0089_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0089_home/CH0089_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0089_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -951,16 +941,18 @@
       ],
       "characterKey": "Kasumi",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10078.webp"
+      "preview": "./assets/portraits/ba-10078.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0089_spr"
     },
     {
-      "id": "ba-ch0092_spr",
+      "id": "ba-ch0092_home",
       "name": "Nonomi (Swimsuit)",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0092_spr/CH0092_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0092_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0092_home/CH0092_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0092_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -968,16 +960,18 @@
       ],
       "characterKey": "Nonomi",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10044.webp"
+      "preview": "./assets/portraits/ba-10044.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0092_spr"
     },
     {
-      "id": "ba-ch0095_spr",
+      "id": "ba-ch0095_home",
       "name": "Noa",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0095_spr/CH0095_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0095_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0095_home/CH0095_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0095_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -985,16 +979,18 @@
       ],
       "characterKey": "Noa",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10052.webp"
+      "preview": "./assets/portraits/ba-10052.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0095_spr"
     },
     {
-      "id": "ba-ch0098_spr",
+      "id": "ba-ch0098_home",
       "name": "Asuna (Bunny)",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0098_spr/CH0098_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0098_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0098_home/CH0098_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0098_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -1002,16 +998,18 @@
       ],
       "characterKey": "Asuna",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10028.webp"
+      "preview": "./assets/portraits/ba-10028.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0098_spr"
     },
     {
-      "id": "ba-ch0099_spr",
+      "id": "ba-ch0099_home",
       "name": "Akane (Bunny)",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0099_spr/CH0099_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0099_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0099_home/CH0099_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0099_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -1019,16 +1017,18 @@
       ],
       "characterKey": "Akane",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-20019.webp"
+      "preview": "./assets/portraits/ba-20019.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0099_spr"
     },
     {
-      "id": "ba-ch0100_spr",
+      "id": "ba-ch0100_home",
       "name": "Karin (Bunny)",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0100_spr/CH0100_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0100_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0100_home/CH0100_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0100_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -1036,16 +1036,18 @@
       ],
       "characterKey": "Karin",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10027.webp"
+      "preview": "./assets/portraits/ba-10027.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0100_spr"
     },
     {
-      "id": "ba-ch0101_spr",
+      "id": "ba-ch0101_home",
       "name": "Neru (Bunny)",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0101_spr/CH0101_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0101_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0101_home/CH0101_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0101_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -1053,16 +1055,18 @@
       ],
       "characterKey": "Neru",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10026.webp"
+      "preview": "./assets/portraits/ba-10026.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0101_spr"
     },
     {
-      "id": "ba-ch0107_spr",
+      "id": "ba-ch0107_home",
       "name": "Kaho",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0107_spr/CH0107_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0107_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0107_home/CH0107_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0107_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -1070,32 +1074,18 @@
       ],
       "characterKey": "Kaho",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10065.webp"
+      "preview": "./assets/portraits/ba-10065.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0107_spr"
     },
     {
-      "id": "ba-ch0109_spr",
-      "name": "Niya",
-      "gameId": "bluearchive",
-      "spineVersion": "3.8",
-      "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0109_spr/CH0109_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0109_spr",
-      "verifiedFiles": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "characterKey": "Niya",
-      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f"
-    },
-    {
-      "id": "ba-ch0110_spr",
+      "id": "ba-ch0110_home",
       "name": "Umika",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0110_spr/CH0110_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0110_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0110_home/CH0110_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0110_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -1103,32 +1093,18 @@
       ],
       "characterKey": "Umika",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10090.webp"
+      "preview": "./assets/portraits/ba-10090.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0110_spr"
     },
     {
-      "id": "ba-ch0113_spr",
-      "name": "Michiru",
-      "gameId": "bluearchive",
-      "spineVersion": "3.8",
-      "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0113_spr/CH0113_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0113_spr",
-      "verifiedFiles": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "characterKey": "Michiru",
-      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f"
-    },
-    {
-      "id": "ba-ch0114_spr",
+      "id": "ba-ch0114_home",
       "name": "Tsukuyo",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0114_spr/CH0114_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0114_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0114_home/CH0114_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0114_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -1136,16 +1112,18 @@
       ],
       "characterKey": "Tsukuyo",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10040.webp"
+      "preview": "./assets/portraits/ba-10040.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0114_spr"
     },
     {
-      "id": "ba-ch0123_spr",
+      "id": "ba-ch0123_home",
       "name": "Shigure (Hot Spring)",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0123_spr/CH0123_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0123_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0123_home/CH0123_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0123_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -1153,16 +1131,18 @@
       ],
       "characterKey": "Shigure",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-20031.webp"
+      "preview": "./assets/portraits/ba-20031.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0123_spr"
     },
     {
-      "id": "ba-ch0124_spr",
+      "id": "ba-ch0124_home",
       "name": "Meru",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0124_spr/CH0124_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0124_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0124_home/CH0124_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0124_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -1170,33 +1150,18 @@
       ],
       "characterKey": "Meru",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10075.webp"
+      "preview": "./assets/portraits/ba-10075.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0124_spr"
     },
     {
-      "id": "ba-ch0125_spr",
-      "name": "Meru (Hot Spring)",
-      "gameId": "bluearchive",
-      "spineVersion": "3.8",
-      "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0125_spr/CH0125_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0125_spr",
-      "verifiedFiles": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "characterKey": "Meru",
-      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10075.webp"
-    },
-    {
-      "id": "ba-ch0135_spr",
+      "id": "ba-ch0135_home",
       "name": "Rumi",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0135_spr/CH0135_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0135_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0135_home/CH0135_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0135_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -1204,16 +1169,18 @@
       ],
       "characterKey": "Rumi",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10069.webp"
+      "preview": "./assets/portraits/ba-10069.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0135_spr"
     },
     {
-      "id": "ba-ch0137_spr",
+      "id": "ba-ch0137_home",
       "name": "Kokona",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0137_spr/CH0137_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0137_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0137_home/CH0137_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0137_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -1221,16 +1188,18 @@
       ],
       "characterKey": "Kokona",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10050.webp"
+      "preview": "./assets/portraits/ba-10050.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0137_spr"
     },
     {
-      "id": "ba-ch0138_spr",
+      "id": "ba-ch0138_home",
       "name": "Mina",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0138_spr/CH0138_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0138_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0138_home/CH0138_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0138_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -1238,32 +1207,18 @@
       ],
       "characterKey": "Mina",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10070.webp"
+      "preview": "./assets/portraits/ba-10070.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0138_spr"
     },
     {
-      "id": "ba-ch0139_spr",
-      "name": "Kisaki",
-      "gameId": "bluearchive",
-      "spineVersion": "3.8",
-      "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0139_spr/CH0139_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0139_spr",
-      "verifiedFiles": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "characterKey": "Kisaki",
-      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f"
-    },
-    {
-      "id": "ba-ch0141_spr",
+      "id": "ba-ch0141_home",
       "name": "Fubuki",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0141_spr/CH0141_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0141_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0141_home/CH0141_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0141_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -1271,16 +1226,18 @@
       ],
       "characterKey": "Fubuki",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-20037.webp"
+      "preview": "./assets/portraits/ba-20037.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0141_spr"
     },
     {
-      "id": "ba-ch0144_spr",
+      "id": "ba-ch0144_home",
       "name": "Saki",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0144_spr/CH0144_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0144_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0144_home/CH0144_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0144_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -1288,16 +1245,18 @@
       ],
       "characterKey": "Saki",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-20014.webp"
+      "preview": "./assets/portraits/ba-20014.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0144_spr"
     },
     {
-      "id": "ba-ch0145_spr",
+      "id": "ba-ch0145_home",
       "name": "Miyu",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0145_spr/CH0145_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0145_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0145_home/CH0145_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0145_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -1305,16 +1264,18 @@
       ],
       "characterKey": "Miyu",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10039.webp"
+      "preview": "./assets/portraits/ba-10039.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0145_spr"
     },
     {
-      "id": "ba-ch0152_spr",
+      "id": "ba-ch0152_home",
       "name": "Mine",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0152_spr/CH0152_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0152_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0152_home/CH0152_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0152_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -1322,16 +1283,18 @@
       ],
       "characterKey": "Mine",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10058.webp"
+      "preview": "./assets/portraits/ba-10058.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0152_spr"
     },
     {
-      "id": "ba-ch0155_spr",
+      "id": "ba-ch0155_home",
       "name": "Natsu",
       "gameId": "bluearchive",
       "spineVersion": "3.8",
       "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0155_spr/CH0155_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0155_spr",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0155_home/CH0155_home",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0155_home",
       "verifiedFiles": [
         "skel",
         "atlas",
@@ -1339,57 +1302,14 @@
       ],
       "characterKey": "Natsu",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10029.webp"
-    },
-    {
-      "id": "ba-ch0156_spr",
-      "name": "BA · CH0156",
-      "gameId": "bluearchive",
-      "spineVersion": "4.0",
-      "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0156_spr/CH0156_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0156_spr",
-      "verifiedFiles": [
-        "skel",
-        "atlas",
-        "png"
-      ]
-    },
-    {
-      "id": "ba-ch0157_spr",
-      "name": "Yume",
-      "gameId": "bluearchive",
-      "spineVersion": "3.8",
-      "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0157_spr/CH0157_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0157_spr",
-      "verifiedFiles": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "characterKey": "Yume",
-      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f"
-    },
-    {
-      "id": "ba-ch0158_spr",
-      "name": "Rio",
-      "gameId": "bluearchive",
-      "spineVersion": "3.8",
-      "versionUnverified": true,
-      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0158_spr/CH0158_spr",
-      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0158_spr",
-      "verifiedFiles": [
-        "skel",
-        "atlas",
-        "png"
-      ],
-      "characterKey": "Rio",
-      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f"
+      "preview": "./assets/portraits/ba-10029.webp",
+      "assetType": "lobby",
+      "sourceAnimationId": "ba-ch0155_spr"
     }
   ],
   "sources": [
     "https://github.com/Nikke-db/Nikke-db.github.io",
     "https://github.com/kiraio-moe/Schale-Archive"
-  ]
+  ],
+  "versionDescription": "Blue Archive dynamic entries refer to Spine_Lobbies/Spr/*_home lobby character skeletons, not Spine_Characters/*_spr battle sprites. Entries without a mapped local preview or matching lobby asset are excluded."
 }
