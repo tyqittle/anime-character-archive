@@ -18,7 +18,7 @@ def main():
     entries=json.loads(download(SOURCE,5_000_000))
     if not isinstance(entries,list):
         raise RuntimeError('Arknights source did not return a directory listing')
-    limit=int(os.environ.get('ARKNIGHTS_IMPORT_LIMIT','60'))
+    limit=int(os.environ.get('ARKNIGHTS_IMPORT_LIMIT','80'))
     count=0
     ASSETS.mkdir(parents=True,exist_ok=True)
     # Import original charpack illustrations only; skip lower-resolution b variants.
