@@ -20,25 +20,30 @@ try{
  });
  report.info=data;
  const skins=data.skins.map(x=>x.name);
- const variants=[{label:'02-alpha-false',alpha:false},{label:'03-alpha-true',alpha:true}];
- for(const name of skins.slice(0,4)){
-  if(name===data.skin)continue;
-  variants.push({label:'skin-'+name.replace(/\W/g,'_'),skin:name,alpha:true});
- }
+ const variants=[
+  {label:'02-alpha-false-idle',alpha:false,animation:'Idle_01'},
+  {label:'03-alpha-true-devidle',alpha:true,animation:'Dev_Idle_01'},
+  {label:'04-alpha-false-devidle',alpha:false,animation:'Dev_Idle_01'},
+  {label:'05-alpha-true-startidle',alpha:true,animation:'Start_Idle_01'},
+  {label:'06-alpha-false-startidle',alpha:false,animation:'Start_Idle_01'},
+  {label:'07-alpha-true-devstart',alpha:true,animation:'Dev_Start_Idle_01'},
+  {label:'08-alpha-true-dummy',alpha:true,animation:'Dummy'}
+ ];
  for(const v of variants){
   const status=await page.evaluate((v)=>{
    try{
-    const old=eval('player');
-    const next={...old.config,premultipliedAlpha:v.alpha,animation:'Idle_01',success:undefined,error:undefined,skin:v.skin||old.skeleton.skin?.name};
-    old.dispose();
+    const old=window.__baDebugPlayer||eval('player');
+    const next={...old.config,premultipliedAlpha:v.alpha,
+      animation:v.animation,success:undefined,error:undefined,skin:old.skeleton.skin?.name};
+    old.pause();
     document.getElementById('player').replaceChildren();
     window.__baDebugPlayer=new spine.SpinePlayer('player',next);
-    return {ok:true,skin:next.skin,alpha:next.premultipliedAlpha};
+    return {ok:true,skin:next.skin,alpha:next.premultipliedAlpha,animation:v.animation};
    }catch(e){return {ok:false,error:String(e)}}
   },v);
   report[v.label]=status;
   if(status.ok){
-   await page.waitForTimeout(2500);
+   await page.waitForTimeout(2000);
    try{await page.locator('#player canvas').screenshot({path:path+'/'+v.label+'.png'})}catch(e){report[v.label].screenshotError=String(e)}
   }
  }
