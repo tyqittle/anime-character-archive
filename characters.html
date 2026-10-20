@@ -41,7 +41,8 @@ body{background:radial-gradient(ellipse 56% 32% at 85% -5%,#322d62 0,transparent
 .top{background:#0b1120a8;backdrop-filter:blur(15px)}
 .btn{transition:transform .2s,border-color .2s,background .2s}
 .btn:hover{transform:translateY(-2px);border-color:#a4a0f5}
-</style></head>
+</style><link rel="stylesheet" href="./assets/gallery-redesign.css?v=20261020c">
+</head>
 <body>
 <div class="shell">
 <aside class="sidebar">
@@ -58,7 +59,7 @@ body{background:radial-gradient(ellipse 56% 32% at 85% -5%,#322d62 0,transparent
   <header class="top"><div class="crumb">ANIME CHARACTER ARCHIVE / ALL GAMES</div><div class="top-actions"><a href="./spine.html" class="btn btn-ghost sm">▶ 动态立绘</a><a href="https://github.com/Nikke-db/Nikke-db.github.io" target="_blank" rel="noopener noreferrer" class="btn sm">图源资料库 ↗</a></div></header>
   <section class="hero">
    <div class="hero-content"><div class="over">THE CHARACTER COLLECTION · ALL GAMES</div><h1>探索你的次元角色</h1><p>收录多款游戏的角色、全身立绘和不同皮肤。按照游戏与角色分类探索，查看高清美术。动态立绘目前仅支持 NIKKE。</p><div class="hero-stat"><span><strong id="totalStat">—</strong>角色立绘</span><span><strong id="fullStat">—</strong>全身立绘</span></div></div>
-   <div class="hero-art" aria-hidden="true"><img src="https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c012_00.png" alt=""><img src="https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c010_00.png" alt=""><img src="https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c233_00.png" alt=""></div>
+   <div class="hero-art" id="heroArt" aria-hidden="true"></div>
   </section>
   <div class="disclaimer">⚑ <strong>素材使用边界：</strong>角色图片来自不同游戏和社区档案，版权归原权利人。静态立绘文件由本站保存并展示，原始资料来源见每张图片详情；公开展示与再使用请遵守原权利人的许可条款。</div>
   <section aria-labelledby="featuredTitle"><div class="section-head"><div><h2 id="featuredTitle">精选角色</h2><p>快速浏览站内精选角色。</p></div><button class="btn sm" data-action="reset">查看全部 ↗</button></div><div id="featured" class="featured"></div></section>
@@ -183,6 +184,26 @@ fetch('./data/characters.json',{cache:'no-store'}).then(function(r){if(!r.ok)thr
  items=db.characters.filter(function(c){return c&&c.id&&c.gameId&&c.characterKey&&c.kind==='full'&&/^\.\/assets\/portraits\/[a-zA-Z0-9_-]+\.(?:png|webp)$/.test(c.image)});
  $('totalStat').textContent=items.length;$('fullStat').textContent=items.filter(function(x){return x.kind==='full'}).length;
  render();
+ var heroPool=items.filter(function(c){return c.image&&c.kind==='full'});
+ var heroNode=$('heroArt');
+ var heroTimer=null;
+ function paintHero(){
+  if(!heroNode||!heroPool.length)return;
+  var picked=[],seen=new Set(),tries=0;
+  while(picked.length<Math.min(3,heroPool.length)&&tries++<60){
+   var c=heroPool[Math.floor(Math.random()*heroPool.length)];
+   if(!seen.has(c.id)){seen.add(c.id);picked.push(c)}
+  }
+  var next=document.createElement('div');next.className='hero-slide';
+  picked.forEach(function(c,i){var img=document.createElement('img');img.src=c.image;img.alt='';img.loading='eager';img.decoding='async';img.style.setProperty('--i',i);next.appendChild(img)});
+  heroNode.appendChild(next);
+  requestAnimationFrame(function(){next.classList.add('visible')});
+  Array.from(heroNode.children).forEach(function(old){if(old!==next){old.classList.remove('visible');setTimeout(function(){old.remove()},1100)}});
+ }
+ paintHero();
+ if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  heroTimer=setInterval(function(){if(!document.hidden)paintHero()},6500);
+ }
  var hash=decodeURIComponent(location.hash.slice(1));
  if(hash&&items.some(function(x){return x.id===hash}))showOne(hash);
 }).catch(function(e){$('resultInfo').textContent='角色索引加载失败：'+e.message;$('gallery').innerHTML='<div class="blank">图片索引加载失败。请从正式部署的网址访问，并检查 data/characters.json 是否存在。<p>'+safe(e.message)+'</p></div>'});
