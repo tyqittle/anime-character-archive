@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a1221"><title>冬境 · 独立 Spine 动画播放器</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif;background:#080e19;color:#f0f7ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 60% 0,#203955 0,transparent 65%),#080e19;min-height:100vh}
+a{color:#b9e8ff}header{padding:24px 28px;border-bottom:1px solid #ffffff20}
+header h1{margin:0;font-size:clamp(25px,4vw,38px)}header p{margin:8px 0 0;color:#a4bad0}
+.wrap{max-width:1470px;margin:auto;padding:22px;display:grid;grid-template-columns:310px minmax(0,1fr);gap:18px}
+.side,.stage{border:1px solid #ffffff24;border-radius:18px;background:#111b2a;min-width:0;overflow:hidden}
+.side{padding:20px;align-self:start}.side h2{font-size:17px;margin:0 0 14px}
+label{display:block;font-size:13px;color:#c4d2e5;margin:13px 0 6px}
+select,input,button{font:inherit;color:white;background:#1a2d44;border:1px solid #4a647d;border-radius:10px;padding:11px;max-width:100%}select,input{width:100%}
+button{cursor:pointer}button:hover{border-color:#a7e2ff}button:disabled{opacity:.4;cursor:not-allowed}
+.primary{width:100%;margin:12px 0 0;background:#315f79;border-color:#539ac1;font-weight:650}
+.note{font-size:13px;line-height:1.65;color:#a8b9cc}.note strong{color:white}
+hr{border:0;border-top:1px solid #ffffff23;margin:21px 0}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:14px 16px;gap:10px;background:#142338}
+.head strong{font-size:15px}.head small{color:#9fb3c7}
+#player{height:min(72vh,760px);min-height:410px;background:radial-gradient(circle at center,#304057,#0a1321 75%);position:relative}
+#placeholder{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#b8c9da;padding:24px;pointer-events:none}
+#placeholder[hidden]{display:none}
+#status{padding:14px 16px;font-size:13px;color:#bcd3e7;border-top:1px solid #ffffff20;white-space:pre-wrap}
+#status.error{color:#ffaeb2}.guide{margin:14px 0;padding:14px;background:#1b2b40;border-radius:12px}
+#fileList{font-size:12px;color:#b7cce0;overflow-wrap:anywhere}
+footer{padding:24px;text-align:center;color:#92a8bb;font-size:12px}
+@media(max-width:850px){.wrap{grid-template-columns:1fr;padding:12px}.side{order:2}.stage{order:1}#player{height:65vh;min-height:340px}}
+</style></head><body>
+<header><h1>冬境 · Spine 动态角色播放器</h1><p>由本站自己的 HTML、JavaScript 和官方 Spine 运行时驱动。不嵌入其他网站，不跳转到 Nikke-DB。</p></header>
+<div class="wrap">
+<section class="side">
+<h2>动画播放</h2>
+<label for="version">骨骼版本</label><select id="version"><option value="4.0">Spine 4.0</option><option value="4.1">Spine 4.1</option><option value="4.2">Spine 4.2</option></select>
+<button id="demo" class="primary">▶ 播放官方示例动画</button>
+<p class="note">演示资源由 Spine 官方提供，用于核对播放器是否能真正渲染动作；<strong>不是 NIKKE 人物</strong>。</p>
+<hr>
+<h2>加载你自己的角色素材</h2>
+<label for="files">选择整套 Spine 资源</label>
+<input type="file" id="files" multiple accept=".skel,.json,.atlas,.png,.webp,.jpg,.jpeg,.atlas.txt,.skel.bytes">
+<p class="note">一次选中相同角色的 <code>.skel</code>（或 <code>.json</code>）、<code>.atlas</code>，以及图集中引用的全部贴图。文件只在你的浏览器内读取，不上传。</p>
+<div id="fileList">尚未选择文件。</div>
+<button id="local" class="primary" disabled>▶ 播放已选择文件</button>
+<div class="guide"><strong>使用说明</strong><p class="note">1. 先点“播放官方示例动画”，确认运行时可加载。<br>2. 有角色 Spine 三件套后，一次性选择全部文件。<br>3. 选择对应的骨骼版本，点击播放。<br>4. 成功后可以使用播放器自带的动作控制。</p></div>
+<hr>
+<p class="note">当前仓库只有剧情 CG 和角色索引，尚没有可确认可播放的 NIKKE 骨骼文件。这一页提供独立播放器本身，不宣称已经集成 NIKKE 的动态角色资源。</p>
+<a href="./gallery.html">← 返回独立影像画廊</a>
+</section>
+<section class="stage"><div class="head"><strong id="title">动画预览</strong><small>官方 Spine Web Player · 本站直接渲染</small></div>
+<div id="player"><div id="placeholder">请选择一个演示或导入本地动画文件。<br>这里将直接显示动态人物，而不是头像或第三方网站。</div></div>
+<div id="status" role="status" aria-live="polite">就绪。请先测试官方示例。</div></section>
+</div>
+<footer>Spine 运行时 © Esoteric Software · 游戏角色及其素材版权归各自权利人。仅用于个人研究和获授权的资源播放。</footer>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+let runtimeVersion='', runtimePromise=null, currentPlayer=null, files=[];
+const urls={
+ '4.0':'https://unpkg.com/@esotericsoftware/spine-player@4.0.*/dist/iife/spine-player.js',
+ '4.1':'https://unpkg.com/@esotericsoftware/spine-player@4.1.*/dist/iife/spine-player.js',
+ '4.2':'https://unpkg.com/@esotericsoftware/spine-player@4.2.*/dist/iife/spine-player.js'
+};
+function status(msg,error=false){$('status').textContent=msg;$('status').classList.toggle('error',error)}
+async function ensureRuntime(version){
+ if(runtimeVersion===version&&window.spine&&window.spine.SpinePlayer)return;
+ if(runtimeVersion&&runtimeVersion!==version){status('正在切换 Spine 运行时，请稍候…');location.reload();throw Error('已切换版本，请在刷新后再次点击播放');}
+ if(runtimePromise)return runtimePromise;
+ runtimePromise=new Promise((resolve,reject)=>{
+  const style=document.createElement('link');style.rel='stylesheet';style.href=urls[version].replace('/iife/spine-player.js','/spine-player.css');document.head.append(style);
+  const script=document.createElement('script');script.src=urls[version];script.onload=()=>{runtimeVersion=version;resolve()};
+  script.onerror=()=>{runtimePromise=null;reject(Error('官方 Spine 运行时下载失败，请检查网络或将运行时放到本地。'))};document.head.append(script);
+ });
+ return runtimePromise;
+}
+function clearPlayer(){
+ if(currentPlayer&&typeof currentPlayer.dispose==='function'){try{currentPlayer.dispose()}catch(e){console.warn(e)}}
+ currentPlayer=null;$('player').replaceChildren();$('placeholder').hidden=false;$('player').append($('placeholder'));
+}
+async function play(config,title){
+ const version=$('version').value;status('正在初始化 '+title+' …');$('title').textContent=title;
+ try{
+  await ensureRuntime(version);
+  clearPlayer();$('placeholder').hidden=true;
+  const opts={...config,showControls:true,alpha:true,premultipliedAlpha:true,backgroundColor:'#172337',
+    success:(player)=>{currentPlayer=player;status('播放成功：'+title+'。可以尝试播放器内的动作与播放控制。')},
+    error:(_,message)=>{status('动画加载失败：'+(message||'请核对骨骼版本、atlas 和贴图文件'),true)}};
+  currentPlayer=new spine.SpinePlayer('player',opts);
+ }catch(e){status(e.message||String(e),true);$('placeholder').hidden=false}
+}
+$('demo').onclick=async()=>{
+ $('version').value='4.0';
+ await play({
+  jsonUrl:'https://esotericsoftware.com/files/examples/4.0/spineboy/export/spineboy-pro.json',
+  atlasUrl:'https://esotericsoftware.com/files/examples/4.0/spineboy/export/spineboy-pma.atlas',
+  animation:'walk'
+ },'Spineboy · 官方动态演示');
+};
+$('files').onchange=e=>{files=Array.from(e.target.files||[]);$('fileList').textContent=files.length?files.map(f=>f.name).join(' / '):'尚未选择文件';
+ $('local').disabled=!files.some(f=>/\.(skel|json)$/i.test(f.name))||!files.some(f=>/\.atlas$/i.test(f.name))};
+function asDataURL(file){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(reader.error);reader.readAsDataURL(file)})}
+function baseName(path){return path.replace(/\\/g,'/').split('/').pop()}
+$('local').onclick=async()=>{
+ try{
+  const skel=files.find(f=>/\.(skel|json)$/i.test(f.name)),atlas=files.find(f=>/\.atlas$/i.test(f.name));
+  if(!skel||!atlas)throw Error('需要 .skel 或 .json 骨骼文件，以及 .atlas 文件');
+  status('正在读取 '+files.length+' 个本地资源…');
+  const map={};for(const f of files)map[baseName(f.name)]=await asDataURL(f);
+  const atlasText=await atlas.text();
+  const atlasPages=atlasText.split(/\r?\n/).map(s=>s.trim()).filter(s=>/\.(png|jpg|jpeg|webp)$/i.test(s));
+  const absent=atlasPages.filter(name=>!map[baseName(name)]);
+  if(absent.length)throw Error('atlas 引用了未选择的贴图：'+absent.join('、'));
+  const options={rawDataURIs:map,atlasUrl:baseName(atlas.name)};
+  if(/\.json$/i.test(skel.name))options.jsonUrl=baseName(skel.name);else options.skelUrl=baseName(skel.name);
+  await play(options,baseName(skel.name));
+ }catch(e){status(e.message||String(e),true)}
+};
+$('version').onchange=()=>{if(runtimeVersion&&runtimeVersion!==$('version').value){status('骨骼版本已改变。刷新页面后再加载另一版本。');}};
+</script></body></html>
