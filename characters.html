@@ -49,8 +49,8 @@ body{background:radial-gradient(ellipse 56% 32% at 85% -5%,#322d62 0,transparent
   <div class="side-caption">内容索引</div>
   <a class="side-link active" href="./characters.html">✦ <span>角色图鉴</span></a>
   <a class="side-link" href="./spine.html">▶ <span>动态立绘</span></a>
-  <div class="side-caption">精选角色分组</div>
-  <nav id="sideGroups" aria-label="候选角色外观组"></nav>
+  <div class="side-caption">游戏与角色</div>
+  <nav id="sideGroups" aria-label="游戏与角色分类"></nav>
   <div class="side-caption">资料属性</div>
   <p style="padding:0 9px;color:#8ba6bd;font-size:11px">角色资料与动态立绘独立浏览；素材来源保留在详情中。</p>
 </aside>
@@ -76,19 +76,8 @@ body{background:radial-gradient(ellipse 56% 32% at 85% -5%,#322d62 0,transparent
 <script>
 'use strict';
 var ROOT='https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/';
-var groups=[
-{id:'N-01',en:'Anis',zh:'安妮丝',uid:'c012'},
-{id:'N-02',en:'Rapi',zh:'拉毗',uid:'c010'},
-{id:'N-03',en:'Privaty',zh:'普丽瓦蒂',uid:'c170'},
-{id:'N-04',en:'Helm',zh:'海伦',uid:'c352'},
-{id:'N-05',en:'Rupee',zh:'露菲',uid:'c200'},
-{id:'N-06',en:'Dorothy',zh:'桃乐丝',uid:'c233'},
-{id:'N-07',en:'Scarlet',zh:'红莲',uid:'c222'},
-{id:'N-08',en:'Modernia',zh:'神罚',uid:'c260'},
-{id:'N-09',en:'Maiden',zh:'梅登',uid:'c181'},
-{id:'N-10',en:'Sakura',zh:'樱花',uid:'c282'},
-{id:'N-11',en:'Rosanna',zh:'罗珊娜',uid:'c280'},
-{id:'N-12',en:'Viper',zh:'毒蛇',uid:'c112'}];
+var groups=[];
+var gameNames={nikke:'胜利女神：妮姬',bluearchive:'蔚蓝档案'};
 var $=function(id){return document.getElementById(id)};
 var safe=function(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]})};
 var items=[],active=[],selectedGroup='all',activeId='',page=1,mode='all',onlyFav=false;
@@ -98,13 +87,13 @@ function iconFor(id){return ROOT+'images/sprite/si_'+id+'_00_s.png'}
 function filterItems(){
  var q=$('query').value.trim().toLocaleLowerCase(),rarity=$('rarityFilter').value,kind=$('kindFilter').value;
  var out=items.filter(function(x){
- if(selectedGroup==='unassigned'&&x.groupId)return false;
- if(selectedGroup!=='all'&&selectedGroup!=='unassigned'&&x.groupId!==selectedGroup)return false;
+ if(selectedGroup.startsWith('game:')&&x.gameId!==selectedGroup.slice(5))return false;
+ if(selectedGroup.startsWith('char:')&&x.gameId+'|'+x.characterKey!==selectedGroup.slice(5))return false;
  if(onlyFav&&!favorites.has(x.id))return false;
  if(mode!=='all'&&x.kind!==mode)return false;
  if(kind!=='all'&&x.kind!==kind)return false;
  if(rarity!=='all'&&(rarity==='unknown'?(x.rarity!==''):(x.rarity!==rarity)))return false;
- return !q||[x.name,x.zh,x.id,x.squad,x.manufacturer,x.class,x.rarity].join(' ').toLocaleLowerCase().includes(q);
+ return !q||[x.name,x.zh,x.id,x.game,x.characterKey,x.squad,x.manufacturer,x.class,x.rarity].join(' ').toLocaleLowerCase().includes(q);
  });
  var sort=$('sort').value;
  out.sort(function(a,b){
@@ -114,10 +103,29 @@ function filterItems(){
  });
  return out;
 }
-function countGroup(id){return items.filter(function(c){return id==='unassigned'?!c.groupId:c.groupId===id}).length}
 function drawGroups(){
- $('sideGroups').innerHTML='<button class="group-nav '+(selectedGroup==='all'?'active':'')+'" data-action="group" data-value="all">◈ 全部游戏角色 <span class="count">'+items.length+'</span></button>'+groups.map(function(g){return '<button class="group-nav '+(selectedGroup===g.id?'active':'')+'" data-action="group" data-value="'+g.id+'">✧ '+safe(g.zh)+' <small>'+safe(g.en)+'</small><span class="count">'+countGroup(g.id)+'</span></button>'}).join('')+'<button class="group-nav '+(selectedGroup==='unassigned'?'active':'')+'" data-action="group" data-value="unassigned">◈ 其他角色 <span class="count">'+countGroup('unassigned')+'</span></button>';
- $('featured').innerHTML=groups.map(function(g){return '<button class="feat '+(selectedGroup===g.id?'active':'')+'" data-action="group" data-value="'+g.id+'"><img src="'+safe(iconFor(g.uid))+'" alt="" loading="lazy" decoding="async"><div style="min-width:0"><b>'+safe(g.zh)+'</b><span>'+safe(g.en)+' · '+countGroup(g.id)+' 组图</span></div></button>'}).join('');
+ var byGame={};
+ items.forEach(function(c){
+  var g=c.gameId||'nikke',key=c.characterKey||c.name||c.id;
+  if(!byGame[g])byGame[g]={count:0,people:{}};
+  byGame[g].count++;
+  if(!byGame[g].people[key])byGame[g].people[key]=[];
+  byGame[g].people[key].push(c);
+ });
+ var gameIds=Object.keys(byGame).sort();
+ var html='<button class="group-nav '+(selectedGroup==='all'?'active':'')+'" data-action="group" data-value="all">◈ 全部游戏角色 <span class="count">'+items.length+'</span></button>';
+ gameIds.forEach(function(gameId){
+  var g=byGame[gameId],personNames=Object.keys(g.people).sort(function(a,b){return a.localeCompare(b,'en')});
+  html+='<details class="game-section" '+(selectedGroup.startsWith('game:'+gameId)||selectedGroup.startsWith('char:'+gameId+'|')?'open':'')+'><summary>▣ '+safe(gameNames[gameId]||gameId)+' <span class="count">'+g.count+'</span></summary>';
+  html+='<button class="group-nav '+(selectedGroup==='game:'+gameId?'active':'')+'" data-action="group" data-value="game:'+safe(gameId)+'">全部角色 <span class="count">'+personNames.length+' 人</span></button>';
+  personNames.forEach(function(name){
+   var arr=g.people[name],label=arr[0].zh||name;
+   html+='<button class="group-nav '+(selectedGroup==='char:'+gameId+'|'+name?'active':'')+'" data-action="group" data-value="'+safe('char:'+gameId+'|'+name)+'">✧ '+safe(label)+' <small>'+safe(name)+'</small><span class="count">'+arr.length+'</span></button>';
+  });
+  html+='</details>';
+ });
+ $('sideGroups').innerHTML=html;
+ $('featured').innerHTML=items.slice(0,12).map(function(c){return '<button class="feat" data-action="group" data-value="'+safe('char:'+c.gameId+'|'+c.characterKey)+'"><img src="'+safe(c.image)+'" alt="" loading="lazy" decoding="async"><div style="min-width:0"><b>'+safe(c.zh||c.characterKey||c.name)+'</b><span>'+safe(gameNames[c.gameId]||c.gameId)+'</span></div></button>'}).join('');
 }
 function render(){
  if(!items.length){$('gallery').innerHTML='<div class="blank">没有加载到图片资料。检查网络后刷新页面。</div>';return}
@@ -130,7 +138,7 @@ function render(){
  var shown=active.slice(0,page*36);
  $('gallery').innerHTML=shown.length?shown.map(function(c){
  var label=c.kind==='full'?'全身立绘':'头像资料';
- var details=[c.zh||'',c.manufacturer||'',c.rarity||'',c.variant?'服装 / 变体':''].filter(Boolean).join(' · ')||'NIKKE 原始角色';
+ var details=[gameNames[c.gameId]||c.game||'',c.zh||'',c.manufacturer||'',c.rarity||'',c.variant?'服装 / 变体':''].filter(Boolean).join(' · ')||'NIKKE 原始角色';
  return '<article class="card"><button class="card-img '+(c.kind==='icon'?'icon-only':'')+'" data-action="view" data-id="'+safe(c.id)+'" aria-label="查看 '+safe(c.name)+'"><img src="'+safe(c.image)+'" alt="'+safe(c.name)+' 角色美术" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="ribbon">'+label+'</span><span class="error-note">源站暂时无法显示</span></button><button class="fav '+(favorites.has(c.id)?'on':'')+'" title="收藏角色" data-action="fav" data-id="'+safe(c.id)+'" aria-label="'+(favorites.has(c.id)?'取消收藏':'收藏')+'">'+(favorites.has(c.id)?'★':'☆')+'</button><div class="card-info"><h3 title="'+safe(c.name)+'">'+safe(c.zh?c.zh+' · '+c.name:c.name)+'</h3><p title="'+safe(details)+'">'+safe(details)+'</p><div class="card-bottom"><span>'+safe(c.id)+'</span><a href="'+safe(c.source)+'" target="_blank" rel="noopener noreferrer">原始来源 ↗</a></div></div></article>';
  }).join(''):'<div class="blank">没有符合条件的角色。试着清除搜索、稀有度或分类筛选。</div>';
  $('more').hidden=shown.length>=active.length;
@@ -143,8 +151,8 @@ function showOne(id){
  var view=$('viewer'),pic=$('viewPicture'),img=$('viewImg');
  pic.classList.remove('error');
  img.dataset.fallback='';img.dataset.avatar=c.avatar;img.alt=c.name+' '+(c.kind==='full'?'全身立绘':'头像');img.src=c.image;
- var tags=[c.kind==='full'?'全身立绘':'头像 / 造型资料',c.rarity,c.manufacturer,c.class,c.squad,c.id,c.groupId?'候选外观组 '+c.groupId:''];
- $('viewMeta').innerHTML='<div class="over">GODDESS OF VICTORY: NIKKE</div><h3>'+safe(c.zh||c.name)+'</h3><p>'+safe(c.name)+'</p><div class="taglist">'+tags.filter(Boolean).map(function(t){return '<span>'+safe(t)+'</span>'}).join('')+'</div><p>'+(c.kind==='full'?'此条目有来源档案中的独立全身角色图片。':'此条目仅有角色头像/造型缩略图，不应视作已收录高清全身立绘。')+'</p><p style="font-size:12px">原始资料来源：Nikke-db 社区项目。图片由游戏版权方持有，商业和公开使用前请核实许可。</p><div class="view-controls"><a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="'+safe(c.source)+'">↗ 来源文件</a><a class="btn" target="_blank" rel="noopener noreferrer" href="'+safe(c.image)+'">查看原图</a><button class="btn" data-action="fav" data-id="'+safe(c.id)+'">'+(favorites.has(c.id)?'★ 已收藏':'☆ 收藏')+'</button></div><div class="view-controls"><button class="btn" data-action="step" data-step="-1">← 上一张</button><button class="btn" data-action="step" data-step="1">下一张 →</button></div>';
+ var tags=[c.kind==='full'?'全身立绘':'头像 / 造型资料',c.rarity,c.manufacturer,c.class,c.squad,c.id,gameNames[c.gameId]||c.game||''];
+ $('viewMeta').innerHTML='<div class="over">'+safe(gameNames[c.gameId]||c.game||'游戏角色')+'</div><h3>'+safe(c.zh||c.name)+'</h3><p>'+safe(c.name)+'</p><div class="taglist">'+tags.filter(Boolean).map(function(t){return '<span>'+safe(t)+'</span>'}).join('')+'</div><p>'+(c.kind==='full'?'此条目有来源档案中的独立全身角色图片。':'此条目仅有角色头像/造型缩略图，不应视作已收录高清全身立绘。')+'</p><p style="font-size:12px">原始资料来源：Nikke-db 社区项目。图片由游戏版权方持有，商业和公开使用前请核实许可。</p><div class="view-controls"><a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="'+safe(c.source)+'">↗ 来源文件</a><a class="btn" target="_blank" rel="noopener noreferrer" href="'+safe(c.image)+'">查看原图</a><button class="btn" data-action="fav" data-id="'+safe(c.id)+'">'+(favorites.has(c.id)?'★ 已收藏':'☆ 收藏')+'</button></div><div class="view-controls"><button class="btn" data-action="step" data-step="-1">← 上一张</button><button class="btn" data-action="step" data-step="1">下一张 →</button></div>';
  if(!view.open)view.showModal();
 }
 function navigate(step){var i=active.findIndex(function(x){return x.id===activeId});if(i>=0&&active.length)showOne(active[(i+step+active.length)%active.length].id)}
@@ -172,7 +180,7 @@ document.addEventListener('keydown',function(e){if(!$('viewer').open)return;if(e
 ['query','rarityFilter','kindFilter','sort'].forEach(function(id){$(id).addEventListener(id==='query'?'input':'change',function(){page=1;render()})});
 fetch('./data/characters.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(function(db){
  if(!Array.isArray(db.characters))throw Error('索引数据格式错误');
- items=db.characters.filter(function(c){return c&&(/^(?:c\d{3}|wiki-[a-z0-9-]+)$/.test(c.id))&&c.kind==='full'&&(/^\.\/assets\/portraits\/(?:c\d{3}|wiki-[a-z0-9-]+)\.(?:png|webp)$/.test(c.image)||/^https:\/\/raw\.githubusercontent\.com\//.test(c.image))});
+ items=db.characters.filter(function(c){return c&&c.id&&c.gameId&&c.characterKey&&c.kind==='full'&&/^\.\/assets\/portraits\/[a-zA-Z0-9_-]+\.(?:png|webp)$/.test(c.image)});
  $('totalStat').textContent=items.length;$('fullStat').textContent=items.filter(function(x){return x.kind==='full'}).length;$('iconStat').textContent=items.filter(function(x){return x.kind==='icon'}).length;
  render();
  var hash=decodeURIComponent(location.hash.slice(1));
