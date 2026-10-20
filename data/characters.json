@@ -6,9 +6,8 @@
   "sourceIndex": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/js/json/l2d.json",
   "sourceRepository": "https://github.com/Nikke-db/Nikke-db.github.io",
   "counts": {
-    "total": 97,
-    "full": 97,
-    "icons": 0
+    "full": 102,
+    "total": 102
   },
   "characters": [
     {
@@ -1659,6 +1658,91 @@
       "variant": false,
       "license": "第三方游戏美术；再使用许可未确认",
       "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c160_00.png"
+    },
+    {
+      "id": "wiki-2b",
+      "name": "2B",
+      "zh": "",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/wiki-2b.webp",
+      "avatar": "",
+      "source": "https://nikke-goddess-of-victory-international.fandom.com/wiki/File:2B_FB.png",
+      "originalImage": "https://static.wikia.nocookie.net/nikke-goddess-of-victory-international/images/a/ac/2B_FB.png/revision/latest?cb=20230905195216",
+      "rarity": "",
+      "manufacturer": "",
+      "class": "",
+      "squad": "",
+      "variant": false,
+      "license": "第三方游戏美术；权利归原作者"
+    },
+    {
+      "id": "wiki-9s",
+      "name": "9S",
+      "zh": "",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/wiki-9s.webp",
+      "avatar": "",
+      "source": "https://nikke-goddess-of-victory-international.fandom.com/wiki/File:9S_FB.png",
+      "originalImage": "https://static.wikia.nocookie.net/nikke-goddess-of-victory-international/images/2/2f/9S_FB.png/revision/latest?cb=20230905201034",
+      "rarity": "",
+      "manufacturer": "",
+      "class": "",
+      "squad": "",
+      "variant": false,
+      "license": "第三方游戏美术；权利归原作者"
+    },
+    {
+      "id": "wiki-a2",
+      "name": "A2",
+      "zh": "",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/wiki-a2.webp",
+      "avatar": "",
+      "source": "https://nikke-goddess-of-victory-international.fandom.com/wiki/File:A2_FB.png",
+      "originalImage": "https://static.wikia.nocookie.net/nikke-goddess-of-victory-international/images/7/76/A2_FB.png/revision/latest?cb=20230907143333",
+      "rarity": "",
+      "manufacturer": "",
+      "class": "",
+      "squad": "",
+      "variant": false,
+      "license": "第三方游戏美术；权利归原作者"
+    },
+    {
+      "id": "wiki-ade",
+      "name": "Ade",
+      "zh": "",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/wiki-ade.webp",
+      "avatar": "",
+      "source": "https://nikke-goddess-of-victory-international.fandom.com/wiki/File:Ade_FB.png",
+      "originalImage": "https://static.wikia.nocookie.net/nikke-goddess-of-victory-international/images/7/75/Ade_FB.png/revision/latest?cb=20230323233239",
+      "rarity": "",
+      "manufacturer": "",
+      "class": "",
+      "squad": "",
+      "variant": false,
+      "license": "第三方游戏美术；权利归原作者"
+    },
+    {
+      "id": "wiki-k",
+      "name": "K",
+      "zh": "",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/wiki-k.webp",
+      "avatar": "",
+      "source": "https://nikke-goddess-of-victory-international.fandom.com/wiki/File:K_FB.png",
+      "originalImage": "https://static.wikia.nocookie.net/nikke-goddess-of-victory-international/images/2/2b/K_FB.png/revision/latest?cb=20230706190722",
+      "rarity": "",
+      "manufacturer": "",
+      "class": "",
+      "squad": "",
+      "variant": false,
+      "license": "第三方游戏美术；权利归原作者"
     }
   ]
 }
