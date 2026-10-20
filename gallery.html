@@ -48,11 +48,11 @@ footer{text-align:center;color:#89a0b7;font-size:12px;padding:28px}
 <script src="./assets/portraits/c270.js"></script>
 <script>
 'use strict';
-const $=id=>document.getElementById(id), state={tab:'characters',group:'full',query:'',scenes:[],characters:[],groups:[],animations:new Set(),visible:[],selected:-1};
+const $=id=>document.getElementById(id), state={tab:'characters',group:'bundled',query:'',scenes:[],characters:[],groups:[],animations:new Set(),visible:[],selected:-1};
 const safeText=(s)=>String(s??'');
 const notice=(s)=>{$('notice').hidden=!s;$('notice').textContent=s};
 async function load(path){let response=await fetch(path,{cache:'no-store'});if(!response.ok)throw new Error(response.status+' '+path);return response.json()}
-function setTab(tab){state.tab=tab;state.group=tab==='characters'?'full':'all';$('q').value='';$('sort').value='default';$('tabScenes').toggleAttribute('aria-current',tab==='scenes');$('tabCharacters').toggleAttribute('aria-current',tab==='characters');$('sideTitle').textContent=tab==='scenes'?'场景筛选' :'角色分类';render()}
+function setTab(tab){state.tab=tab;state.group=tab==='characters'?'bundled':'all';$('q').value='';$('sort').value='default';$('tabScenes').toggleAttribute('aria-current',tab==='scenes');$('tabCharacters').toggleAttribute('aria-current',tab==='characters');$('sideTitle').textContent=tab==='scenes'?'场景筛选' :'角色分类';render()}
 function groups(){const list=state.tab==='scenes'?[{id:'all',name:'全部场景'},...state.groups.map(g=>({id:g.id,name:g.name}))]:[{id:'full',name:'全部全身立绘'},{id:'bundled',name:'★ 本站已打包的真实立绘'},{id:'all',name:'全部记录'},{id:'icon',name:'头像 / 变体资料'},{id:'SSR',name:'SSR'},{id:'SR',name:'SR'}];$('groups').replaceChildren();list.forEach(g=>{const b=document.createElement('button');b.textContent=g.name;b.setAttribute('aria-pressed',state.group===g.id);b.onclick=()=>{state.group=g.id;render()};$('groups').append(b)})}
 function render(){groups();const q=$('q').value.trim().toLocaleLowerCase();let list=state.tab==='scenes'?state.scenes:state.characters;
 list=list.filter(x=>{if(state.tab==='scenes'&&state.group!=='all'&&!(x.groupIds||[]).includes(state.group))return false;
@@ -61,7 +61,7 @@ if(state.tab==='characters'&&state.group!=='all'&&state.group!=='bundled'&&x.kin
 return !q||[x.name,x.zh,x.title,...(x.tags||[])].join(' ').toLocaleLowerCase().includes(q)});
 if($('sort').value==='name')list.sort((a,b)=>(a.name||a.title||'').localeCompare(b.name||b.title||''));
 else if(state.tab==='characters')list.sort((a,b)=>Number(!!(window.WINTER_PORTRAITS||{})[b.id])-Number(!!(window.WINTER_PORTRAITS||{})[a.id]));state.visible=list;
-$('stat').textContent=state.tab==='scenes'?list.length+' 幅剧情 CG · 本站存储的图片':'正在展示 '+list.length+' 幅角色图像 · 10 位全身立绘已内置到本站 · 另有 '+state.animations.size+' 位角色收录动态资源索引';
+$('stat').textContent=state.tab==='scenes'?list.length+' 幅剧情 CG · 本站存储的图片':'正在展示 '+list.length+' 幅角色图像 · 10 位高清角色已内置本站 · 可切换到全部全身立绘 · '+state.animations.size+' 位角色有动画索引';
 notice(state.tab==='characters'?'前 10 位精选角色是真实的内置全身立绘，离线也能显示；其他记录按需从第三方图片源加载，可能受到网络限制。点开卡片查看高清人物，已收录动画的角色还可尝试动态播放。':'');
 $('gallery').replaceChildren();if(!list.length){const e=document.createElement('div');e.className='empty';e.textContent='没有符合筛选条件的内容';$('gallery').append(e);return}
 list.forEach((x,i)=>{const btn=document.createElement('button');btn.className='card';const art=document.createElement('div');art.className='art';
@@ -74,7 +74,7 @@ function openCard(i){const x=state.visible[i];if(!x)return;state.selected=i;if(s
 $('bigImg').src=x.url;$('bigImg').alt=x.title||'';$('bigTitle').textContent=x.title||'';$('bigSub').textContent=x.note||'';$('bigTags').textContent=(x.tags||[]).join(' · ');$('original').href=x.source||x.url;$('dynamicLink').hidden=true; if(!$('viewer').open)$('viewer').showModal()}
 function navigate(d){if(state.visible.length)openCard((state.selected+d+state.visible.length)%state.visible.length)}
 $('tabScenes').onclick=e=>{e.preventDefault();setTab('scenes')};$('tabCharacters').onclick=e=>{e.preventDefault();setTab('characters')};
-$('q').oninput=render;$('sort').onchange=render;$('reset').onclick=()=>{state.group=state.tab==='characters'?'full':'all';$('q').value='';render()};
+$('q').oninput=render;$('sort').onchange=render;$('reset').onclick=()=>{state.group=state.tab==='characters'?'bundled':'all';$('q').value='';render()};
 $('close').onclick=()=>$('viewer').close();$('prev').onclick=()=>navigate(-1);$('next').onclick=()=>navigate(1);$('viewer').onclick=e=>{if(e.target===$('viewer'))$('viewer').close()};
 document.addEventListener('keydown',e=>{if(!$('viewer').open)return;if(e.key==='ArrowRight')navigate(1);if(e.key==='ArrowLeft')navigate(-1)});
 Promise.allSettled([load('./data/catalog.json'),load('./data/characters.json'),load('./data/spine-characters.json')]).then(([a,b,c])=>{if(a.status==='fulfilled'){state.scenes=a.value.images||[];state.groups=a.value.groups||[]}if(b.status==='fulfilled')state.characters=b.value.characters||[];if(c.status==='fulfilled')state.animations=new Set((c.value.characters||[]).map(x=>x.id));if(a.status==='rejected')notice('场景资料加载失败，请通过静态服务器访问本站：'+a.reason.message);render()});
