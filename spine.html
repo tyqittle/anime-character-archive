@@ -73,7 +73,7 @@ async function ensureRuntime(version){
 }
 function clearPlayer(){
  if(currentPlayer&&typeof currentPlayer.dispose==='function'){try{currentPlayer.dispose()}catch(e){console.warn(e)}}
- currentPlayer=null;$('player').replaceChildren();$('placeholder').hidden=false;$('player').append($('placeholder'));
+ currentPlayer=null;const placeholder=$('placeholder')||document.createElement('div');placeholder.id='placeholder';placeholder.hidden=false;placeholder.textContent='请选择演示或本地动画文件';$('player').replaceChildren(placeholder);
 }
 async function play(config,title){
  const version=$('version').value;status('正在初始化 '+title+' …');$('title').textContent=title;
