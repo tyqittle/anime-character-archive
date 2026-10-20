@@ -1,0 +1,2855 @@
+{
+  "generatedAt": "2026-10-20T12:49:05.524700+00:00",
+  "notice": "Resource/header/CDN availability audit, NOT a browser rendering or animation guarantee.",
+  "total": 133,
+  "counts": {
+    "resources-ok": 127,
+    "version-mismatch": 6,
+    "broken": 0,
+    "unknown": 0
+  },
+  "versionsUpdated": [
+    {
+      "id": "c222",
+      "was": "4.0",
+      "now": "4.1"
+    },
+    {
+      "id": "c351",
+      "was": "4.0",
+      "now": "4.1"
+    },
+    {
+      "id": "c142",
+      "was": "4.0",
+      "now": "4.1"
+    },
+    {
+      "id": "c132",
+      "was": "4.0",
+      "now": "4.1"
+    },
+    {
+      "id": "c350",
+      "was": "4.0",
+      "now": "4.1"
+    },
+    {
+      "id": "c161",
+      "was": "4.0",
+      "now": "4.1"
+    }
+  ],
+  "elapsedSeconds": 4.65,
+  "characters": [
+    {
+      "id": "c010",
+      "name": "Rapi",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010/c010_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010/c010_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c011",
+      "name": "Neon",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c011/c011_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c011/c011_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c012",
+      "name": "Anis",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c012/c012_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c012/c012_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c013",
+      "name": "Marian",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c013/c013_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c013/c013_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c015",
+      "name": "Anis: Sparkling Summer",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c015/c015_00",
+      "catalogVersion": "4.1",
+      "version": "4.1.20",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c015/c015_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c040",
+      "name": "D",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c040/c040_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c040/c040_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c060",
+      "name": "Belorta",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c060/c060_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c060/c060_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c070",
+      "name": "Brid",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070/c070_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070/c070_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c072",
+      "name": "Diesel",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c072/c072_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c072/c072_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c080",
+      "name": "Centi",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c080/c080_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c080/c080_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c090",
+      "name": "Emma",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090/c090_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090/c090_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c101",
+      "name": "Drake",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c101/c101_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c101/c101_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c110",
+      "name": "Crow",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c110/c110_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c110/c110_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c112",
+      "name": "Viper",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c112/c112_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c112/c112_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c170",
+      "name": "Privaty",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c170/c170_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c170/c170_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c180",
+      "name": "Guillotine",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c180/c180_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c180/c180_00.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c180/c180_00_2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c181",
+      "name": "Maiden",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c181/c181_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c181/c181_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c191",
+      "name": "Alice",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c191/c191_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c191/c191_00.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c191/c191_00_2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c200",
+      "name": "Rupee",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c200/c200_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c200/c200_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c203",
+      "name": "Rupee: Winter Shopper",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c203/c203_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c203/c203_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c222",
+      "name": "Scarlet",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c222/c222_00",
+      "catalogVersion": "4.0",
+      "version": "4.1.20",
+      "status": "version-mismatch",
+      "issues": [
+        "version-mismatch"
+      ],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c222/c222_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c230",
+      "name": "Harran",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c230/c230_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c230/c230_00.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c230/c230_00_2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c233",
+      "name": "Dorothy",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c233/c233_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c233/c233_00.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c233/c233_00_2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c260",
+      "name": "Modernia",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c260/c260_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c260/c260_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c270",
+      "name": "Blanc",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c270/c270_00",
+      "catalogVersion": "4.1",
+      "version": "4.1.20",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c270/c270_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c280",
+      "name": "Rosanna",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c280/c280_00",
+      "catalogVersion": "4.1",
+      "version": "4.1.20",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c280/c280_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c282",
+      "name": "Sakura",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c282/c282_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c282/c282_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c352",
+      "name": "Helm",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c352/c352_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c352/c352_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c353",
+      "name": "Helm: Aquamarine",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c353/c353_00",
+      "catalogVersion": "4.1",
+      "version": "4.1.20",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c353/c353_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c400",
+      "name": "Guilty",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c400/c400_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c400/c400_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c172",
+      "name": "Admi",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c172/c172_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c172/c172_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c351",
+      "name": "Anchor",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c351/c351_00",
+      "catalogVersion": "4.0",
+      "version": "4.1.20",
+      "status": "version-mismatch",
+      "issues": [
+        "version-mismatch"
+      ],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c351/c351_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c121",
+      "name": "Anne: Miracle Fairy",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c121/c121_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c121/c121_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c432",
+      "name": "Aria",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c432/c432_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c432/c432_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c381",
+      "name": "Biscuit",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c381/c381_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c381/c381_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c311",
+      "name": "Cocoa",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c311/c311_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c311/c311_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c020",
+      "name": "Delta",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c020/c020_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c020/c020_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c202",
+      "name": "Dolla",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c202/c202_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c202/c202_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c241",
+      "name": "Epinel",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c241/c241_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c241/c241_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c291",
+      "name": "Ether",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c291/c291_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c291/c291_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c092",
+      "name": "Eunhwa",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c092/c092_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c092/c092_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c210",
+      "name": "Exia",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c210/c210_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c210/c210_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c242",
+      "name": "Folkwang",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c242/c242_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c242/c242_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c142",
+      "name": "Frima",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c142/c142_00",
+      "catalogVersion": "4.0",
+      "version": "4.1.20",
+      "status": "version-mismatch",
+      "issues": [
+        "version-mismatch"
+      ],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c142/c142_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c802",
+      "name": "Himeno",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c802/c802_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c802/c802_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c304",
+      "name": "iDoll Flower",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c304/c304_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c304/c304_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c305",
+      "name": "iDoll Ocean",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c305/c305_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c305/c305_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c308",
+      "name": "iDoll Sun",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c308/c308_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c308/c308_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c231",
+      "name": "Isabel",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c231/c231_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c231/c231_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c111",
+      "name": "Jackal",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c111/c111_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c111/c111_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c150",
+      "name": "Julia",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c150/c150_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c150/c150_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c100",
+      "name": "Laplace",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c100/c100_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c100/c100_00.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c100/c100_00_2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c082",
+      "name": "Liter",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c082/c082_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c082/c082_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c190",
+      "name": "Ludmilla",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c190/c190_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c190/c190_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c800",
+      "name": "Makima",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c800/c800_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c800/c800_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c130",
+      "name": "Mary",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c130/c130_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c130/c130_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c132",
+      "name": "Mary: Bay Goddess",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c132/c132_00",
+      "catalogVersion": "4.0",
+      "version": "4.1.20",
+      "status": "version-mismatch",
+      "issues": [
+        "version-mismatch"
+      ],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c132/c132_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c254",
+      "name": "Mass Produced Purple",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c254/c254_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c254/c254_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c350",
+      "name": "Mast",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c350/c350_00",
+      "catalogVersion": "4.0",
+      "version": "4.1.20",
+      "status": "version-mismatch",
+      "issues": [
+        "version-mismatch"
+      ],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c350/c350_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c102",
+      "name": "Maxwell",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c102/c102_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c102/c102_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c061",
+      "name": "Mica",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c061/c061_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c061/c061_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c161",
+      "name": "Mihara",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c161/c161_00",
+      "catalogVersion": "4.0",
+      "version": "4.1.20",
+      "status": "version-mismatch",
+      "issues": [
+        "version-mismatch"
+      ],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c161/c161_00.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c010_01",
+      "name": "Rapi_old",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010_01/c010_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.19",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010_01/c010_00.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010_01/c010_00_2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c010_02",
+      "name": "Rapi White Promise",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010_02/c010_02_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010_02/c010_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c010_03",
+      "name": "Rapi Classic Vacation",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010_03/c010_03_00",
+      "catalogVersion": "4.1",
+      "version": "4.1.20",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010_03/c010_02.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c011_01",
+      "name": "Neon Bling Bullet",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c011_01/c011_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c011_01/c011_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c022_01",
+      "name": "Signal Dramatic Chocolate",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c022_01/c022_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c022_01/c022_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c030_01",
+      "name": "Poli Sweet Holic",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c030_01/c030_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c030_01/c030_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c070_01",
+      "name": "Brid Model Worker",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070_01/c070_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070_01/c070_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c070_02",
+      "name": "Brid Black Moon",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070_02/c070_02_00",
+      "catalogVersion": "4.1",
+      "version": "4.1.20",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070_02/c070_02.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c072_01",
+      "name": "Diesel Black Sunday",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c072_01/c072_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c072_01/c072_02.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c080_01",
+      "name": "Centi Supreme Holiday",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c080_01/c080_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c080_01/c080_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c082_01",
+      "name": "Liter Guardfish",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c082_01/c082_01_00",
+      "catalogVersion": "4.1",
+      "version": "4.1.20",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c082_01/c082_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c090_01",
+      "name": "Emma Color Me Red",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090_01/c090_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090_01/c090_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c090_02",
+      "name": "Emma Office Therapy",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090_02/c090_02_00",
+      "catalogVersion": "4.1",
+      "version": "4.1.20",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090_02/c090_02.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c101_01",
+      "name": "Drake Villain Racer",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c101_01/c101_01_00",
+      "catalogVersion": "4.1",
+      "version": "4.1.20",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c101_01/c101_01.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c101_01/c101_01_2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c102_01",
+      "name": "Maxwell Mechanic White",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c102_01/c102_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c102_01/c102_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c112_01",
+      "name": "Viper Toxic Rabbit",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c112_01/c112_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c112_01/c112_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c131_01",
+      "name": "Pepper Ocean Vitamin",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c131_01/c131_01_00",
+      "catalogVersion": "4.1",
+      "version": "4.1.20",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c131_01/c131_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c140_01",
+      "name": "Sugar Hard-Boiled",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c140_01/c140_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c140_01/c140_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c141_01",
+      "name": "Milk Extreme Fighter",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c141_01/c141_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c141_01/c141_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c142_01",
+      "name": "Frima Sea of Sloth",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c142_01/c142_01_00",
+      "catalogVersion": "4.1",
+      "version": "4.1.20",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c142_01/c142_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c150_01",
+      "name": "Julia Mild Nocturne",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c150_01/c150_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c150_01/c150_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c160_01",
+      "name": "Yuni Pretty In Pink",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c160_01/c160_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c160_01/c160_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c170_01",
+      "name": "Privaty Government Grunt",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c170_01/c170_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c170_01/c170_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c181_01",
+      "name": "Maiden Covert Nurse",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c181_01/c181_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c181_01/c181_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c191_01",
+      "name": "Alice Sweet Home",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c191_01/c191_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c191_01/c191_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c200_01",
+      "name": "Rupee Rabbit Deluxe",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c200_01/c200_01_00",
+      "catalogVersion": "4.1",
+      "version": "4.1.20",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c200_01/c200_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c201_01",
+      "name": "Yan Sunrise Market",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c201_01/c201_01_00",
+      "catalogVersion": "4.1",
+      "version": "4.1.20",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c201_01/c201_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c202_01",
+      "name": "Dolla Dark Rose",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c202_01/c202_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c202_01/c202_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c210_01",
+      "name": "Exia Joy to the Nerds",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c210_01/c210_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c210_01/c210_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c212_01",
+      "name": "Novel Penguin Holmes",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c212_01/c212_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c212_01/c212_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c212_02",
+      "name": "Novel Detective Nurse",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c212_02/c212_02_00",
+      "catalogVersion": "4.1",
+      "version": "4.1.20",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c212_02/c212_02.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c260_01",
+      "name": "Modernia First Affection",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c260_01/c260_01_00",
+      "catalogVersion": "4.1",
+      "version": "4.1.20",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c260_01/c260_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c282_01",
+      "name": "Sakura Midnight Stealth",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c282_01/c282_01_00",
+      "catalogVersion": "4.1",
+      "version": "4.1.20",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c282_01/c282_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c350_01",
+      "name": "Mast A Pirate's Heart",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c350_01/c350_01_00",
+      "catalogVersion": "4.1",
+      "version": "4.1.20",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c350_01/c350_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c352_01",
+      "name": "Helm Chandelier",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c352_01/c352_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c352_01/c352_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c430_01",
+      "name": "Noise Cherry Blossom Stage",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c430_01/c430_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c430_01/c430_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c800_01",
+      "name": "Makima Coat Off",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c800_01/c800_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c800_01/c800_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c803_01",
+      "name": "Denji Chainsaw Man",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c803_01/c803_01_00",
+      "catalogVersion": "4.0",
+      "version": "4.0.47",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c803_01/C_Eventscenes_001.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.0"
+    },
+    {
+      "id": "c810_01",
+      "name": "2B Metamorphic Damage",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c810_01/c810_01_00",
+      "catalogVersion": "4.1",
+      "version": "4.1.20",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c810_01/c810_01.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "c810_02",
+      "name": "2B YoRHa Uniform 1",
+      "gameId": "nikke",
+      "preview": "",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c810_02/c810_02_00",
+      "catalogVersion": "4.1",
+      "version": "4.1.20",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c810_02/c810_02.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "4.1"
+    },
+    {
+      "id": "ba-ch0058_home",
+      "name": "Hifumi (Swimsuit)",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-20005.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0058_home/CH0058_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.96",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0058_home/CH0058_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0058_home/CH0058_home2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0060_home",
+      "name": "Tsurugi (Swimsuit)",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10013.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0060_home/CH0060_home/CH0060_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.96",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0060_home/CH0060_home/CH0060_home.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0063_home",
+      "name": "Hina (Swimsuit)",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10022.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0063_home/CH0063_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.96",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0063_home/CH0063_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0063_home/CH0063_home2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0064_home",
+      "name": "Iori (Swimsuit)",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10023.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0064_home/CH0064_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.96",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0064_home/CH0064_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0064_home/CH0064_home2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0066_home",
+      "name": "Shun (Small)",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10025.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0066_home/CH0066_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.96",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0066_home/CH0066_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0066_home/CH0066_home2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0069_home",
+      "name": "Mika",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10059.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0069_home/CH0069_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.96",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0069_home/CH0069_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0069_home/CH0069_home2.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0069_home/CH0069_home3.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0069_home/CH0069_home4.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0071_home",
+      "name": "Ichika",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10077.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0071_home/CH0071_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.99",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0071_home/CH0071_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0071_home/CH0071_home2.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0071_home/CH0071_home3.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0079_home",
+      "name": "Makoto",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-20033.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0079_home/CH0079_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.99",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0079_home/CH0079_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0079_home/CH0079_home2.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0079_home/CH0079_home3.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0086_home",
+      "name": "Kayoko (New Year)",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10064.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0086_home/CH0086_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.99",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0086_home/CH0086_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0086_home/CH0086_home2.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0086_home/CH0086_home3.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0087_home",
+      "name": "Haruka (New Year)",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-20025.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0087_home/CH0087_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.99",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0087_home/CH0087_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0087_home/CH0087_home2.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0087_home/CH0087_home3.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0088_home",
+      "name": "Megu",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10060.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0088_home/CH0088_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.96",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0088_home/CH0088_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0088_home/CH0088_home2.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0088_home/CH0088_home3.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0089_home",
+      "name": "Kasumi",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10078.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0089_home/CH0089_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.99",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0089_home/CH0089_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0089_home/CH0089_home2.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0089_home/CH0089_home3.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0092_home",
+      "name": "Nonomi (Swimsuit)",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10044.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0092_home/CH0092_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.96",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0092_home/CH0092_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0092_home/CH0092_home2.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0092_home/CH0092_home3.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0095_home",
+      "name": "Noa",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10052.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0095_home/CH0095_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.96",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0095_home/CH0095_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0095_home/CH0095_home2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0098_home",
+      "name": "Asuna (Bunny)",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10028.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0098_home/CH0098_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.96",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0098_home/CH0098_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0098_home/CH0098_home2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0099_home",
+      "name": "Akane (Bunny)",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-20019.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0099_home/CH0099_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.96",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0099_home/CH0099_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0099_home/CH0099_home2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0100_home",
+      "name": "Karin (Bunny)",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10027.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0100_home/CH0100_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.99",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0100_home/CH0100_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0100_home/CH0100_home2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0101_home",
+      "name": "Neru (Bunny)",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10026.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0101_home/CH0101_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.99",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0101_home/CH0101_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0101_home/CH0101_home2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0107_home",
+      "name": "Kaho",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10065.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0107_home/CH0107_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.99",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0107_home/CH0107_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0107_home/CH0107_home2.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0107_home/CH0107_home3.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0110_home",
+      "name": "Umika",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10090.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0110_home/CH0110_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.99",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0110_home/CH0110_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0110_home/CH0110_home2.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0110_home/CH0110_home3.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0110_home/CH0110_home4.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0114_home",
+      "name": "Tsukuyo",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10040.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0114_home/CH0114_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.99",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0114_home/CH0114_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0114_home/CH0114_home2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0123_home",
+      "name": "Shigure (Hot Spring)",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-20031.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0123_home/CH0123_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.99",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0123_home/CH0123_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0123_home/CH0123_home2.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0123_home/CH0123_home3.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0124_home",
+      "name": "Meru",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10075.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0124_home/CH0124_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.99",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0124_home/CH0124_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0124_home/CH0124_home2.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0124_home/CH0124_home3.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0135_home",
+      "name": "Rumi",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10069.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0135_home/CH0135_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.99",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0135_home/CH0135_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0135_home/CH0135_home2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0137_home",
+      "name": "Kokona",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10050.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0137_home/CH0137_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.99",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0137_home/CH0137_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0137_home/CH0137_home2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0138_home",
+      "name": "Mina",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10070.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0138_home/CH0138_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.99",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0138_home/CH0138_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0138_home/CH0138_home2.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0138_home/CH0138_home3.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0141_home",
+      "name": "Fubuki",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-20037.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0141_home/CH0141_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.96",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0141_home/CH0141_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0141_home/CH0141_home2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0144_home",
+      "name": "Saki",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-20014.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0144_home/CH0144_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.96",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0144_home/CH0144_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0144_home/CH0144_home2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0145_home",
+      "name": "Miyu",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10039.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0145_home/CH0145_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.96",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0145_home/CH0145_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0145_home/CH0145_home2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0152_home",
+      "name": "Mine",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10058.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0152_home/CH0152_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.99",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0152_home/CH0152_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0152_home/CH0152_home2.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0152_home/CH0152_home3.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0152_home/CH0152_home4.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    },
+    {
+      "id": "ba-ch0155_home",
+      "name": "Natsu",
+      "gameId": "bluearchive",
+      "preview": "./assets/portraits/ba-10029.webp",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0155_home/CH0155_home",
+      "catalogVersion": "3.8",
+      "version": "3.8.96",
+      "status": "resources-ok",
+      "issues": [],
+      "texturePages": [
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0155_home/CH0155_home.png",
+          "status": 200,
+          "ok": true
+        },
+        {
+          "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0155_home/CH0155_home2.png",
+          "status": 200,
+          "ok": true
+        }
+      ],
+      "majorMinor": "3.8"
+    }
+  ]
+}
