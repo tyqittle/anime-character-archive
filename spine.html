@@ -29,7 +29,7 @@ footer{padding:24px;text-align:center;color:#92a8bb;font-size:12px}
 <header><h1>冬境 · Spine 动态角色播放器</h1><p>由本站自己的 HTML、JavaScript 和官方 Spine 运行时驱动。不嵌入其他网站，不跳转到 Nikke-DB。</p></header>
 <div class="wrap">
 <section class="side">
-<h2>动画播放</h2>
+<h2>角色动画</h2><label for="characters">选择 NIKKE 人物</label><select id="characters"><option value="">正在加载角色索引…</option></select><button id="nikke" class="primary" disabled>▶ 播放选中角色</button><p class="note">这是本站自己渲染的 Spine 动画；骨骼与贴图暂从社区原始文件地址加载，不嵌入对方网页。部分资源可能有跨域或网络限制。</p><hr><h2>播放测试</h2>
 <label for="version">骨骼版本</label><select id="version"><option value="4.0">Spine 4.0</option><option value="4.1">Spine 4.1</option><option value="4.2">Spine 4.2</option></select>
 <button id="demo" class="primary">▶ 播放官方示例动画</button>
 <p class="note">演示资源由 Spine 官方提供，用于核对播放器是否能真正渲染动作；<strong>不是 NIKKE 人物</strong>。</p>
@@ -53,65 +53,108 @@ footer{padding:24px;text-align:center;color:#92a8bb;font-size:12px}
 <script>
 'use strict';
 const $=id=>document.getElementById(id);
-let runtimeVersion='', runtimePromise=null, currentPlayer=null, files=[];
-const urls={
- '4.0':'https://unpkg.com/@esotericsoftware/spine-player@4.0.*/dist/iife/spine-player.js',
- '4.1':'https://unpkg.com/@esotericsoftware/spine-player@4.1.*/dist/iife/spine-player.js',
- '4.2':'https://unpkg.com/@esotericsoftware/spine-player@4.2.*/dist/iife/spine-player.js'
-};
-function status(msg,error=false){$('status').textContent=msg;$('status').classList.toggle('error',error)}
-async function ensureRuntime(version){
- if(runtimeVersion===version&&window.spine&&window.spine.SpinePlayer)return;
- if(runtimeVersion&&runtimeVersion!==version){status('正在切换 Spine 运行时，请稍候…');location.reload();throw Error('已切换版本，请在刷新后再次点击播放');}
- if(runtimePromise)return runtimePromise;
- runtimePromise=new Promise((resolve,reject)=>{
-  const style=document.createElement('link');style.rel='stylesheet';style.href=urls[version].replace('/iife/spine-player.js','/spine-player.css');document.head.append(style);
-  const script=document.createElement('script');script.src=urls[version];script.onload=()=>{runtimeVersion=version;resolve()};
-  script.onerror=()=>{runtimePromise=null;reject(Error('官方 Spine 运行时下载失败，请检查网络或将运行时放到本地。'))};document.head.append(script);
+const runtimeRoot='https://unpkg.com/@esotericsoftware/spine-player@';
+const params=new URLSearchParams(location.search);
+let loadedVersion='', loadPromise=null, player=null, allCharacters=[], chosenFileList=[], currentAttempt=0;
+const manifestUrl='./data/spine-characters.json';
+function status(message,error=false){$('status').textContent=message;$('status').classList.toggle('error',error)}
+function chosen(){return allCharacters.find(c=>c.id===$('characters').value)}
+function setVersion(v){
+ if($('version').value===v)return true;
+ if(loadedVersion&&loadedVersion!==v){const next=new URL(location.href);next.searchParams.set('v',v);next.searchParams.set('id',$('characters').value);location.href=next.toString();return false}
+ $('version').value=v;return true;
+}
+function ensureRuntime(version){
+ if(loadedVersion===version&&window.spine?.SpinePlayer)return Promise.resolve();
+ if(loadPromise){if(loadedVersion!==version)return Promise.reject(Error('切换版本请刷新页面'));return loadPromise}
+ loadedVersion=version;
+ loadPromise=new Promise((resolve,reject)=>{
+  const base=runtimeRoot+version+'.*/dist/';
+  const css=document.createElement('link');css.rel='stylesheet';css.href=base+'spine-player.css';document.head.append(css);
+  const js=document.createElement('script');js.src=base+'iife/spine-player.js';
+  js.onload=()=>window.spine?.SpinePlayer?resolve():reject(Error('运行时脚本已加载但 SpinePlayer 不存在'));
+  js.onerror=()=>{loadPromise=null;reject(Error('Spine 运行时下载失败，请检查网络'))};document.head.append(js)
  });
- return runtimePromise;
+ return loadPromise;
 }
 function clearPlayer(){
- if(currentPlayer&&typeof currentPlayer.dispose==='function'){try{currentPlayer.dispose()}catch(e){console.warn(e)}}
- currentPlayer=null;const placeholder=$('placeholder')||document.createElement('div');placeholder.id='placeholder';placeholder.hidden=false;placeholder.textContent='请选择演示或本地动画文件';$('player').replaceChildren(placeholder);
+ try{player?.dispose?.()}catch(e){console.warn(e)}
+ player=null;
+ const ph=document.createElement('div');ph.id='placeholder';ph.textContent='正在准备动画画布…';
+ $('player').replaceChildren(ph);
+ return ph;
 }
-async function play(config,title){
- const version=$('version').value;status('正在初始化 '+title+' …');$('title').textContent=title;
+async function show(options,title,onError){
+ const attempt=++currentAttempt;
+ status('正在加载 '+title+' 的骨骼、图集与贴图…');$('title').textContent=title;
  try{
-  await ensureRuntime(version);
-  clearPlayer();$('placeholder').hidden=true;
-  const opts={...config,showControls:true,alpha:true,premultipliedAlpha:true,backgroundColor:'#172337',
-    success:(player)=>{currentPlayer=player;status('播放成功：'+title+'。可以尝试播放器内的动作与播放控制。')},
-    error:(_,message)=>{status('动画加载失败：'+(message||'请核对骨骼版本、atlas 和贴图文件'),true)}};
-  currentPlayer=new spine.SpinePlayer('player',opts);
- }catch(e){status(e.message||String(e),true);$('placeholder').hidden=false}
+  await ensureRuntime($('version').value);
+  if(attempt!==currentAttempt)return;
+  clearPlayer();
+  const config={...options,showControls:true,premultipliedAlpha:true,alpha:false,backgroundColor:'#142238ff',
+   success:(p)=>{if(attempt!==currentAttempt)return;player=p;status('播放成功：'+title+'。底部控制栏可以切换动作、暂停和全屏。')},
+   error:(_p,reason)=>{if(attempt!==currentAttempt)return;
+    if(onError)onError(String(reason||'资源加载失败'));else status('加载失败：'+String(reason||'请核查 Spine 版本及资源路径'),true)}
+  };
+  $('player').replaceChildren();
+  player=new spine.SpinePlayer('player',config);
+ }catch(e){if(attempt===currentAttempt)status('播放器初始化失败：'+(e.message||String(e)),true)}
 }
-$('demo').onclick=async()=>{
- $('version').value='4.0';
- await play({
-  jsonUrl:'https://esotericsoftware.com/files/examples/4.0/spineboy/export/spineboy-pro.json',
-  atlasUrl:'https://esotericsoftware.com/files/examples/4.0/spineboy/export/spineboy-pma.atlas',
-  animation:'walk'
- },'Spineboy · 官方动态演示');
+function urls(c,mirror){
+ const base=mirror==='legacy'?'https://nikke-db-legacy.pages.dev/l2d/'+c.id+'/'+c.id+'_00':c.base;
+ return {skeleton:base+'.skel',atlas:base+'.atlas'};
+}
+function playCharacter(c,mirror='github'){
+ if(!setVersion(c.spineVersion))return;
+ const name=c.name+' · '+c.id;
+ show(urls(c,mirror),name,reason=>{
+  if(mirror==='github'){status('GitHub 镜像失败，正在尝试原档案镜像… ('+reason+')');playCharacter(c,'legacy')}
+  else status('角色动画无法加载：'+reason+'。两个素材源均未成功；可以使用本地资源导入。',true);
+ });
+}
+$('nikke').onclick=()=>{const c=chosen();if(c)playCharacter(c)};
+$('characters').onchange=()=>{$('nikke').disabled=!chosen();const c=chosen();if(c&&loadedVersion&&loadedVersion!==c.spineVersion)status('该角色使用 Spine '+c.spineVersion+'。播放时将自动刷新以切换版本。')};
+$('demo').onclick=()=>{
+ const version=$('version').value;
+ const base='https://esotericsoftware.com/files/examples/'+version+'/spineboy/export/';
+ show({skeleton:base+'spineboy-pro.skel',atlas:base+'spineboy-pma.atlas',animation:'walk'},'Spineboy 官方示例');
 };
-$('files').onchange=e=>{files=Array.from(e.target.files||[]);$('fileList').textContent=files.length?files.map(f=>f.name).join(' / '):'尚未选择文件';
- $('local').disabled=!files.some(f=>/\.(skel|json)$/i.test(f.name))||!files.some(f=>/\.atlas$/i.test(f.name))};
-function asDataURL(file){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(reader.error);reader.readAsDataURL(file)})}
-function baseName(path){return path.replace(/\\/g,'/').split('/').pop()}
+$('files').onchange=e=>{
+ chosenFileList=Array.from(e.target.files||[]);
+ $('fileList').textContent=chosenFileList.length?chosenFileList.map(f=>f.name).join(' · '):'尚未选择文件。';
+ $('local').disabled=!chosenFileList.some(f=>/\.(skel|json)$/i.test(f.name))||!chosenFileList.some(f=>/\.atlas$/i.test(f.name));
+};
+function toDataUri(file){return new Promise((resolve,reject)=>{const r=new FileReader;r.onload=()=>resolve(r.result);r.onerror=()=>reject(r.error);r.readAsDataURL(file)})}
+function basename(s){return s.replace(/\\/g,'/').split('/').pop()}
 $('local').onclick=async()=>{
  try{
-  const skel=files.find(f=>/\.(skel|json)$/i.test(f.name)),atlas=files.find(f=>/\.atlas$/i.test(f.name));
-  if(!skel||!atlas)throw Error('需要 .skel 或 .json 骨骼文件，以及 .atlas 文件');
-  status('正在读取 '+files.length+' 个本地资源…');
-  const map={};for(const f of files)map[baseName(f.name)]=await asDataURL(f);
-  const atlasText=await atlas.text();
-  const atlasPages=atlasText.split(/\r?\n/).map(s=>s.trim()).filter(s=>/\.(png|jpg|jpeg|webp)$/i.test(s));
-  const absent=atlasPages.filter(name=>!map[baseName(name)]);
-  if(absent.length)throw Error('atlas 引用了未选择的贴图：'+absent.join('、'));
-  const options={rawDataURIs:map,atlasUrl:baseName(atlas.name)};
-  if(/\.json$/i.test(skel.name))options.jsonUrl=baseName(skel.name);else options.skelUrl=baseName(skel.name);
-  await play(options,baseName(skel.name));
- }catch(e){status(e.message||String(e),true)}
+  const files=chosenFileList;
+  const skeleton=files.find(f=>/\.(skel|json)$/i.test(f.name));
+  const atlas=files.find(f=>/\.atlas$/i.test(f.name));
+  if(!skeleton||!atlas)throw Error('请同时选择骨骼和 .atlas 文件');
+  const rawDataURIs={};
+  status('正在把 '+files.length+' 个文件加载到浏览器内存…');
+  for(const f of files){rawDataURIs[basename(f.name)]=await toDataUri(f)}
+  const lines=(await atlas.text()).split(/\r?\n/).map(x=>x.trim().replace(/^\uFEFF/,''));
+  const pages=lines.filter(x=>/\.(png|jpg|jpeg|webp)$/i.test(x));
+  const missing=pages.filter(x=>!rawDataURIs[basename(x)]);
+  if(missing.length)throw Error('缺少贴图文件：'+missing.join('、'));
+  await show({skeleton:basename(skeleton.name),atlas:basename(atlas.name),rawDataURIs},'本地资源 · '+skeleton.name);
+ }catch(e){status('本地动画无法播放：'+(e.message||String(e)),true)}
 };
-$('version').onchange=()=>{if(runtimeVersion&&runtimeVersion!==$('version').value){status('骨骼版本已改变。刷新页面后再加载另一版本。');}};
+$('version').onchange=()=>{
+ if(loadedVersion&&loadedVersion!==$('version').value){const url=new URL(location.href);url.searchParams.set('v',$('version').value);url.searchParams.delete('id');location.href=url.toString()}
+};
+(async()=>{
+ try{
+  const r=await fetch(manifestUrl,{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);
+  const db=await r.json();allCharacters=db.characters||[];
+  $('characters').replaceChildren(new Option('请选择角色…',''),...allCharacters.map(c=>new Option(c.name+' ('+c.id+')',c.id)));
+  const requested=params.get('id');if(requested&&allCharacters.some(x=>x.id===requested))$('characters').value=requested;
+  $('nikke').disabled=!chosen();
+  status('已准备 '+allCharacters.length+' 位角色动画索引。请选择角色并点击播放。');
+  if(chosen()&&params.get('id'))playCharacter(chosen());
+ }catch(e){status('角色索引无法加载：'+e.message+'。请在静态服务器中打开网页，或直接导入本地资源。',true)}
+})();
+if(['4.0','4.1','4.2'].includes(params.get('v')))$('version').value=params.get('v');
 </script></body></html>
