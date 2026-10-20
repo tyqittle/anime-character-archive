@@ -1,0 +1,38 @@
+name: Verify full Spine catalog animation
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/test_spine_full_browser.mjs'
+      - '.github/workflows/spine-full-browser.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  playback:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser automation
+        run: npm install --no-save --no-package-lock playwright-core@1.56.1 pngjs@7.0.0
+      - name: Serve local site
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/site.log 2>&1 &
+          sleep 2
+      - name: Render and check every character in this shard
+        run: node scripts/test_spine_full_browser.mjs ${{ matrix.shard }} 10
+      - name: Upload all results including failing characters
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: full-spine-shard-${{ matrix.shard }}
+          path: /tmp/spine-full-${{ matrix.shard }}.json
+          if-no-files-found: warn
