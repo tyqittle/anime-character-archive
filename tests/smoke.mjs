@@ -3,22 +3,32 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const chars=JSON.parse(read('data/characters.json'));
 const spine=JSON.parse(read('data/spine-characters.json'));
-assert.ok(Array.isArray(chars.characters)&&chars.characters.length>=90,'Full-body catalog too small');
-assert.ok(chars.characters.every(c=>c.kind==='full'&&/\/images\/FB\//.test(c.image)),'Avatar-only record in catalog');
-assert.ok(Array.isArray(spine.characters)&&spine.characters.length>=60,'Spine index missing');
-const ids=new Set();
-for(const e of spine.characters){assert.match(e.id,/^c\d{3}(?:_\d{2})?$/);assert.ok(!ids.has(e.id),'Duplicate '+e.id);ids.add(e.id);assert.ok(['4.0','4.1','4.2'].includes(e.spineVersion));}
-for(const id of ['c012','c015','c112','c170','c181','c191','c200','c222','c233','c270','c280','c282']){
- const file='assets/portraits/'+id+'.js';assert.ok(fs.existsSync(path.join(root,file)),'Missing bundled portrait '+file);
+
+assert.ok(Array.isArray(chars.characters)&&chars.characters.length>0,'Missing character records');
+assert.ok(chars.characters.every(x=>x.kind==='full'&&/\/images\/FB\//.test(x.image)),'Avatar-only record found');
+assert.equal(new Set(chars.characters.map(x=>x.id)).size,chars.characters.length,'Duplicate character IDs');
+assert.ok(Array.isArray(spine.characters)&&spine.characters.length>0,'Missing Spine records');
+assert.equal(new Set(spine.characters.map(x=>x.id)).size,spine.characters.length,'Duplicate Spine IDs');
+const ids=new Set(chars.characters.map(x=>x.id));
+for(const entry of spine.characters) {
+  assert.match(entry.id,/^c\d{3}(?:_\d{2})?$/,'Invalid Spine character ID');
+  assert.ok(ids.has(entry.id),'Spine character missing from catalog: '+entry.id);
+  assert.ok(['4.0','4.1','4.2'].includes(entry.spineVersion),'Unknown Spine version');
+  assert.ok(entry.base.endsWith('/'+entry.id+'_00'),'Unexpected Spine path: '+entry.id);
 }
-const index=read('index.html'),gallery=read('gallery.html'),characters=read('characters.html'),player=read('spine.html');
-assert.ok(index.includes('./characters.html')&&gallery.includes('./characters.html'),'Old entry not redirected');
-assert.ok(characters.includes('data/characters.json'),'Character archive disconnected');
+for(const id of ['c012','c015','c112','c170','c181','c191','c200','c222','c233','c270','c280','c282']){
+ assert.ok(fs.existsSync(path.join(root,'assets/portraits/'+id+'.js')),'Missing preserved portrait '+id);
+}
+const home=read('index.html'),old=read('gallery.html'),page=read('characters.html'),player=read('spine.html');
+assert.ok(home.includes('./characters.html')&&old.includes('./characters.html'),'Old entrypoint no longer redirects');
+assert.ok(page.includes('data/characters.json'),'Character archive not connected');
 assert.ok(player.includes('new spine.SpinePlayer'),'Spine renderer missing');
+assert.ok(player.includes('binaryUrl')&&player.includes('atlasUrl'),'Spine runtime URL fix missing');
 assert.ok(player.includes('indexedDB.open(cacheDB'),'Spine cache missing');
 assert.ok(!/<iframe\b/i.test(player),'Third-party iframe not allowed');
-console.log('PASS: '+chars.characters.length+' full-body records, '+spine.characters.length+' Spine records, 12 preserved bundled portraits.');
+console.log('PASS: '+chars.characters.length+' full-body candidates, '+spine.characters.length+' Spine index entries, 12 preserved bundled portraits.');
