@@ -35,8 +35,10 @@ footer{text-align:center;color:#89a0b7;font-size:12px;padding:28px}
 <main><div class="toolbar"><input id="q" placeholder="搜索角色名字、中文名、场景…" aria-label="搜索"><select id="sort" aria-label="排序"><option value="default">默认顺序</option><option value="name">名称排序</option></select><button id="reset">清除筛选</button></div>
 <div id="notice" class="note" hidden></div><p id="stat" aria-live="polite">正在加载资料…</p><div id="gallery" class="gallery"></div></main></div>
 <dialog id="viewer"><button id="close" aria-label="关闭">✕</button><div class="modal"><div class="big"><img id="bigImg" alt=""></div><div class="meta"><h2 id="bigTitle"></h2><p id="bigSub"></p><p id="bigTags"></p><div class="control"><button id="prev">← 上一张</button><button id="next">下一张 →</button><a id="original" target="_blank" rel="noopener noreferrer">原始来源 ↗</a><a id="dynamicLink" href="./spine.html" hidden>尝试动态播放 ↗</a></div><p style="font-size:12px">图片和游戏美术版权归原权利人；本站仅做私人素材研究。</p></div></div></dialog>
-<footer>冬境独立图库 · 10 张内置真实完整角色立绘 + 10 张本地剧情 CG · 第三方美术版权归原权利人 · 无 iframe</footer>
+<footer>冬境独立图库 · 12 张内置真实完整角色立绘 + 10 张本地剧情 CG · 第三方美术版权归原权利人 · 无 iframe</footer>
 <script src="./assets/portraits/c012.js"></script>
+<script src="./assets/portraits/c015.js"></script>
+<script src="./assets/portraits/c233.js"></script>
 <script src="./assets/portraits/c191.js"></script>
 <script src="./assets/portraits/c170.js"></script>
 <script src="./assets/portraits/c112.js"></script>
@@ -61,8 +63,8 @@ if(state.tab==='characters'&&state.group!=='all'&&state.group!=='bundled'&&x.kin
 return !q||[x.name,x.zh,x.title,...(x.tags||[])].join(' ').toLocaleLowerCase().includes(q)});
 if($('sort').value==='name')list.sort((a,b)=>(a.name||a.title||'').localeCompare(b.name||b.title||''));
 else if(state.tab==='characters')list.sort((a,b)=>Number(!!(window.WINTER_PORTRAITS||{})[b.id])-Number(!!(window.WINTER_PORTRAITS||{})[a.id]));state.visible=list;
-$('stat').textContent=state.tab==='featured'?list.length+' 幅本站内置精选图片 · 无需访问第三方图片服务器':state.tab==='scenes'?list.length+' 幅剧情 CG · 本站存储的图片':'正在展示 '+list.length+' 幅角色图像 · 10 位高清角色已内置本站 · 可切换到全部全身立绘 · '+state.animations.size+' 位角色有动画索引';
-notice(state.tab==='featured'?'当前展示的是本站已经打包的剧情 CG 与高清角色立绘，不是头像索引，也不依赖第三方图片热链。其他未打包的角色可切换到「全身立绘」查看。':state.tab==='characters'?'前 10 位精选角色是真实的内置全身立绘，离线也能显示；其他记录按需从第三方图片源加载，可能受到网络限制。点开卡片查看高清人物，已收录动画的角色还可尝试动态播放。':'');
+$('stat').textContent=state.tab==='featured'?list.length+' 幅本站内置精选图片 · 无需访问第三方图片服务器':state.tab==='scenes'?list.length+' 幅剧情 CG · 本站存储的图片':'正在展示 '+list.length+' 幅角色图像 · 12 位高清角色已内置本站 · 可切换到全部全身立绘 · '+state.animations.size+' 位角色有动画索引';
+notice(state.tab==='featured'?'当前展示的是本站已经打包的剧情 CG 与高清角色立绘，不是头像索引，也不依赖第三方图片热链。其他未打包的角色可切换到「全身立绘」查看。':state.tab==='characters'?'前 12 位精选角色是真实的内置全身立绘，离线也能显示；其他记录按需从第三方图片源加载，可能受到网络限制。点开卡片查看高清人物，已收录动画的角色还可尝试动态播放。':'');
 $('gallery').replaceChildren();if(!list.length){const e=document.createElement('div');e.className='empty';e.textContent='没有符合筛选条件的内容';$('gallery').append(e);return}
 list.forEach((x,i)=>{const btn=document.createElement('button');btn.className='card';const art=document.createElement('div');art.className='art';
 if((x._type||state.tab)==='scenes'){const img=document.createElement('img');img.src=x.url;img.alt=x.title||'剧情 CG';img.loading='lazy';img.onerror=()=>{img.remove();art.textContent='此文件暂无法加载'};art.append(img)}
