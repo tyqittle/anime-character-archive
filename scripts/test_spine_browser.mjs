@@ -18,7 +18,7 @@ try{
  await page.goto(url,{waitUntil:'domcontentloaded',timeout:30000});
  await page.waitForFunction(()=>document.querySelectorAll('#characters option').length>5,{timeout:20000});
  console.log('INITIAL_OPTION_COUNT',await page.locator('#characters option').count());
- for(const [game,id] of [['nikke','c010'],['nikke','c012'],['nikke','c015'],['bluearchive','ba-ch0058_home'],['bluearchive','ba-ch0060_home'],['bluearchive','ba-ch0063_home'],['bluearchive','ba-ch0069_home'],['bluearchive','ba-ch0107_home']]){
+ for(const [game,id] of [['nikke','c010_01'],['nikke','c010'],['nikke','c012'],['nikke','c015'],['bluearchive','ba-ch0058_home'],['bluearchive','ba-ch0060_home'],['bluearchive','ba-ch0063_home'],['bluearchive','ba-ch0069_home'],['bluearchive','ba-ch0107_home']]){
   await page.selectOption('#gameFilter',game);
   await page.waitForTimeout(300);
   await page.selectOption('#characters',id);
@@ -49,6 +49,27 @@ try{
    if(visiblePixels<300)state='playback-blank';
    else if(changedPixels<100)state='playback-static';
    else state='playback-animated';
+  }
+  if(id==='c010_01'){
+   const diagnostic=await page.evaluate(()=>{
+    try{
+     const p=eval('player');
+     if(!p||!p.skeleton)return {hasPlayer:!!p,skeleton:false};
+     const sk=p.skeleton;
+     const skins=sk.data.skins?.map(x=>({name:x.name,attachments:x.attachments?.length??Object.keys(x.attachments||{}).length}))||[];
+     const slots=sk.slots?.map(x=>({name:x.data?.name,attachment:x.attachment?.name??null}))||[];
+     const results=[];
+     const offset=new spine.Vector2(),size=new spine.Vector2();
+     for(const skin of sk.data.skins||[]){
+      try{
+       sk.setSkin(skin);sk.setSlotsToSetupPose();sk.updateWorldTransform();sk.getBounds(offset,size);
+       results.push({skin:skin.name,x:offset.x,y:offset.y,w:size.x,h:size.y,attached:sk.slots.filter(x=>!!x.attachment).length});
+      }catch(e){results.push({skin:skin.name,error:String(e)})}
+     }
+     return {skins,slots:slots.slice(0,25),skinBounds:results,initialSkin:sk.skin?.name,configViewport:p.config?.viewport,animations:sk.data.animations?.map(x=>({name:x.name,duration:x.duration}))};
+    }catch(e){return {error:String(e)}}
+   });
+   console.log('SPECIAL_RAPI_DIAGNOSTIC',JSON.stringify(diagnostic).slice(0,7000));
   }
   outcomes.push({game,id,state,message,canvas,visiblePixels,changedPixels});
   console.log('PLAYBACK_OUTCOME',JSON.stringify(outcomes[outcomes.length-1]));
