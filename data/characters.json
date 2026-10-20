@@ -6,8 +6,8 @@
   "sourceIndex": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/js/json/l2d.json",
   "sourceRepository": "https://github.com/Nikke-db/Nikke-db.github.io",
   "counts": {
-    "total": 464,
-    "full": 464
+    "total": 468,
+    "full": 468
   },
   "characters": [
     {
@@ -8277,6 +8277,22 @@
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
     },
     {
+      "id": "wutheringwaves-shorekeeper",
+      "name": "守岸人",
+      "zh": "守岸人",
+      "nameEn": "Shorekeeper",
+      "gameId": "wutheringwaves",
+      "game": "鸣潮",
+      "characterKey": "守岸人",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/wutheringwaves-shorekeeper.webp",
+      "source": "https://wiki.biligame.com/wutheringwaves/共鸣者/守岸人",
+      "originalImage": "https://patchwiki.biligame.com/images/wutheringwaves/5/56/101neg0k0er0rkh019ljtj5ev6jgac3.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
       "id": "wutheringwaves-jiyan",
       "name": "忌炎",
       "zh": "忌炎",
@@ -8289,6 +8305,54 @@
       "image": "./assets/portraits/wutheringwaves-jiyan.webp",
       "source": "https://github.com/TomyJan/WutheringWaves-UIResources/tree/3.7/UIResources/UiLuckdraw/Image",
       "originalImage": "https://raw.githubusercontent.com/TomyJan/WutheringWaves-UIResources/3.7/UIResources/UiLuckdraw/Image/T_RoleImgjiyan_UI.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "wutheringwaves-camellya",
+      "name": "椿",
+      "zh": "椿",
+      "nameEn": "Camellya",
+      "gameId": "wutheringwaves",
+      "game": "鸣潮",
+      "characterKey": "椿",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/wutheringwaves-camellya.webp",
+      "source": "https://wiki.biligame.com/wutheringwaves/共鸣者/椿",
+      "originalImage": "https://patchwiki.biligame.com/images/wutheringwaves/3/33/piby5xz6lt334blop556739h476l24j.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "wutheringwaves-changli",
+      "name": "长离",
+      "zh": "长离",
+      "nameEn": "Changli",
+      "gameId": "wutheringwaves",
+      "game": "鸣潮",
+      "characterKey": "长离",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/wutheringwaves-changli.webp",
+      "source": "https://wiki.biligame.com/wutheringwaves/共鸣者/长离",
+      "originalImage": "https://patchwiki.biligame.com/images/wutheringwaves/2/25/rwnmwv8y5wjcn98wix521fksfqddhgq.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "wutheringwaves-lupa",
+      "name": "露帕",
+      "zh": "露帕",
+      "nameEn": "Lupa",
+      "gameId": "wutheringwaves",
+      "game": "鸣潮",
+      "characterKey": "露帕",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/wutheringwaves-lupa.webp",
+      "source": "https://wiki.biligame.com/wutheringwaves/文件:角色_露帕_立绘.png",
+      "originalImage": "https://patchwiki.biligame.com/images/wutheringwaves/8/8b/9psbu0nhrkejgb9pohgse6nftw839mp.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
     }
