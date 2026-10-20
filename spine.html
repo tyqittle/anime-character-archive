@@ -99,8 +99,8 @@ async function show(options,title,onError){
     if(onError)onError(String(reason||'资源加载失败'));else status('加载失败：'+String(reason||'请核查 Spine 版本及资源路径'),true)}
   };
   $('player').replaceChildren();
-  player=new spine.SpinePlayer('player',config);
   watchdog=setTimeout(()=>{if(attempt!==currentAttempt)return;stopWatchdog();if(onError)onError('30 秒内未完成加载，可能是源站拒绝访问、图片下载缓慢或 WebGL 初始化失败');else status('加载超时（30 秒）。请检查浏览器网络控制台及源站访问。',true)},30000);
+  player=new spine.SpinePlayer('player',config);
  }catch(e){stopWatchdog();if(attempt===currentAttempt)status('播放器初始化失败：'+(e.message||String(e)),true)}
 }
 function urls(c,mirror){
