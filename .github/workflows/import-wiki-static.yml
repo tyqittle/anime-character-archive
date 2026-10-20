@@ -30,3 +30,4 @@ jobs:
 # refresh importer diagnostics
 # retry PNG signature verification
 # retry corrected PNG bytes check
+# diagnose downloaded image response
