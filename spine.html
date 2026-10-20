@@ -106,7 +106,7 @@ function ensureRuntime(version){
  if(loadPromise){if(loadedVersion!==version)return Promise.reject(Error('切换版本请刷新页面'));return loadPromise}
  loadedVersion=version;
  loadPromise=new Promise((resolve,reject)=>{
-  const base=runtimeRoot+version+'.*/dist/';
+  const base=version==='3.8'?'https://s4.zstatic.net/npm/@esotericsoftware/spine-player@3.8.0/dist/':runtimeRoot+version+'.*/dist/';
   const css=document.createElement('link');css.rel='stylesheet';css.href=base+'spine-player.css';document.head.append(css);
   const js=document.createElement('script');js.src=base+'iife/spine-player.js';js.crossOrigin='anonymous';
   js.onload=()=>window.spine?.SpinePlayer?resolve():reject(Error('运行时脚本已加载但 SpinePlayer 不存在'));
@@ -183,7 +183,7 @@ function blobToUri(blob){return new Promise((resolve,reject)=>{const reader=new 
 let sequence=0;
 async function playCharacter(c){
  const current=++sequence;
- if(c.versionUnverified){status('该资源的 Spine 版本与实际播放尚未验证，暂不冒充可播放成品。角色身份与预览图已匹配；请等待兼容性验证。',true);return}
+ if(c.versionUnverified)status('尝试播放尚未确认版本的动画；如果失败将报告实际加载错误。');
  if(!setVersion(c.spineVersion))return;
  const packId=(c.gameId||'nikke')+'-'+c.id;
  status((c.versionUnverified?'该资源骨骼版本尚未验证，可能无法播放。':'')+'正在查找 '+c.name+' 的本地缓存…');
