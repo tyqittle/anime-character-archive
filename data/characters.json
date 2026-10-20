@@ -6,8 +6,8 @@
   "sourceIndex": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/js/json/l2d.json",
   "sourceRepository": "https://github.com/Nikke-db/Nikke-db.github.io",
   "counts": {
-    "full": 443,
-    "total": 443
+    "total": 455,
+    "full": 455
   },
   "characters": [
     {
@@ -5377,6 +5377,166 @@
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB"
     },
     {
+      "id": "genshin-10000091",
+      "name": "娜维娅",
+      "zh": "娜维娅",
+      "nameEn": "Navia",
+      "gameId": "genshin",
+      "game": "原神",
+      "characterKey": "娜维娅",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/genshin-10000091.webp",
+      "source": "https://github.com/ScobbleQ/HoYo-Assets/tree/main/genshin/splash",
+      "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/genshin/splash/10000091.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "genshin-10000037",
+      "name": "甘雨",
+      "zh": "甘雨",
+      "nameEn": "Ganyu",
+      "gameId": "genshin",
+      "game": "原神",
+      "characterKey": "甘雨",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/genshin-10000037.webp",
+      "source": "https://github.com/ScobbleQ/HoYo-Assets/tree/main/genshin/splash",
+      "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/genshin/splash/10000037.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "genshin-10000002",
+      "name": "神里绫华",
+      "zh": "神里绫华",
+      "nameEn": "Kamisato Ayaka",
+      "gameId": "genshin",
+      "game": "原神",
+      "characterKey": "神里绫华",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/genshin-10000002.webp",
+      "source": "https://github.com/ScobbleQ/HoYo-Assets/tree/main/genshin/splash",
+      "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/genshin/splash/10000002.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "genshin-10000073",
+      "name": "纳西妲",
+      "zh": "纳西妲",
+      "nameEn": "Nahida",
+      "gameId": "genshin",
+      "game": "原神",
+      "characterKey": "纳西妲",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/genshin-10000073.webp",
+      "source": "https://github.com/ScobbleQ/HoYo-Assets/tree/main/genshin/splash",
+      "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/genshin/splash/10000073.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "genshin-10000046",
+      "name": "胡桃",
+      "zh": "胡桃",
+      "nameEn": "Hu Tao",
+      "gameId": "genshin",
+      "game": "原神",
+      "characterKey": "胡桃",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/genshin-10000046.webp",
+      "source": "https://github.com/ScobbleQ/HoYo-Assets/tree/main/genshin/splash",
+      "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/genshin/splash/10000046.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "genshin-10000089",
+      "name": "芙宁娜",
+      "zh": "芙宁娜",
+      "nameEn": "Furina",
+      "gameId": "genshin",
+      "game": "原神",
+      "characterKey": "芙宁娜",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/genshin-10000089.webp",
+      "source": "https://github.com/ScobbleQ/HoYo-Assets/tree/main/genshin/splash",
+      "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/genshin/splash/10000089.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "genshin-10000096",
+      "name": "阿蕾奇诺",
+      "zh": "阿蕾奇诺",
+      "nameEn": "Arlecchino",
+      "gameId": "genshin",
+      "game": "原神",
+      "characterKey": "阿蕾奇诺",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/genshin-10000096.webp",
+      "source": "https://github.com/ScobbleQ/HoYo-Assets/tree/main/genshin/splash",
+      "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/genshin/splash/10000096.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "genshin-10000052",
+      "name": "雷电将军",
+      "zh": "雷电将军",
+      "nameEn": "Raiden Shogun",
+      "gameId": "genshin",
+      "game": "原神",
+      "characterKey": "雷电将军",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/genshin-10000052.webp",
+      "source": "https://github.com/ScobbleQ/HoYo-Assets/tree/main/genshin/splash",
+      "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/genshin/splash/10000052.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "gfl2-klukai",
+      "name": "可露凯",
+      "zh": "可露凯",
+      "nameEn": "Klukai",
+      "gameId": "gfl2",
+      "game": "少女前线2：追放",
+      "characterKey": "可露凯",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/gfl2-klukai.webp",
+      "source": "https://iopwiki.com/wiki/File:Klukai_Whole.png",
+      "originalImage": "https://iopwiki.com/images/e/e4/Klukai_Whole.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "gfl2-leva",
+      "name": "莱娅",
+      "zh": "莱娅",
+      "nameEn": "Leva",
+      "gameId": "gfl2",
+      "game": "少女前线2：追放",
+      "characterKey": "莱娅",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/gfl2-leva.webp",
+      "source": "https://iopwiki.com/wiki/File:Leva_whole.png",
+      "originalImage": "https://iopwiki.com/images/1/14/Leva_whole.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
       "id": "wiki-2b",
       "name": "2B",
       "zh": "",
@@ -7955,6 +8115,38 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "iDoll Sun"
+    },
+    {
+      "id": "wutheringwaves-yinlin",
+      "name": "吟霖",
+      "zh": "吟霖",
+      "nameEn": "Yinlin",
+      "gameId": "wutheringwaves",
+      "game": "鸣潮",
+      "characterKey": "吟霖",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/wutheringwaves-yinlin.webp",
+      "source": "https://github.com/TomyJan/WutheringWaves-UIResources/tree/main/UIResources/UiLuckdraw/Image",
+      "originalImage": "https://raw.githubusercontent.com/TomyJan/WutheringWaves-UIResources/3.7/UIResources/UiLuckdraw/Image/T_RoleImgyinlin_UI.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "wutheringwaves-jiyan",
+      "name": "忌炎",
+      "zh": "忌炎",
+      "nameEn": "Jiyan",
+      "gameId": "wutheringwaves",
+      "game": "鸣潮",
+      "characterKey": "忌炎",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/wutheringwaves-jiyan.webp",
+      "source": "https://github.com/TomyJan/WutheringWaves-UIResources/tree/3.7/UIResources/UiLuckdraw/Image",
+      "originalImage": "https://raw.githubusercontent.com/TomyJan/WutheringWaves-UIResources/3.7/UIResources/UiLuckdraw/Image/T_RoleImgjiyan_UI.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
     }
   ],
   "games": [
@@ -7972,6 +8164,21 @@
       "id": "arknights",
       "name": "明日方舟",
       "en": "Arknights"
+    },
+    {
+      "id": "genshin",
+      "name": "原神",
+      "en": "Genshin Impact"
+    },
+    {
+      "id": "gfl2",
+      "name": "少女前线2：追放",
+      "en": "Girls' Frontline 2: Exilium"
+    },
+    {
+      "id": "wutheringwaves",
+      "name": "鸣潮",
+      "en": "Wuthering Waves"
     }
   ]
 }
