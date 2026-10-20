@@ -2,7 +2,8 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import path from 'node:path';
-const root = path.resolve(import.meta.dirname, '..');
+import { fileURLToPath } from 'node:url';
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const read = p => fs.readFileSync(path.join(root, p), 'utf8');
 const catalog=JSON.parse(read('data/catalog.json'));
 const spine=JSON.parse(read('data/spine-characters.json'));
