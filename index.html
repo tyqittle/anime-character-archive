@@ -17,7 +17,7 @@ button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:var(--ic
 @media(max-width:1050px){.app{grid-template-columns:220px minmax(0,1fr)}.side{padding:16px 10px}.stats{grid-template-columns:repeat(2,1fr)}.heroIcon{display:none}}@media(max-width:700px){.app{display:block}.side{position:static;width:100%;height:auto;min-height:unset;padding:12px 16px;border-right:0;border-bottom:1px solid var(--line)}.sidehead,.sidefoot{display:none}.logo{border:0;padding:1px}.side #groupnav{display:flex;overflow-x:auto;gap:5px;margin-top:9px}.navitem{width:auto;flex:none;padding:8px 11px;white-space:nowrap}.navitem .count{display:none}.main{padding:0 15px 50px}.topbar{height:auto;padding:15px 0;flex-wrap:wrap}.hero{padding-top:5px}.stats{gap:9px}.stat{padding:11px 12px}.stat b{font-size:21px}.mainhead{display:block}.mainhead .actions{margin-top:12px}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.cardbody{padding:9px}.cardlinks .btn{padding:4px 7px;font-size:10px}.card h3{font-size:12px}.fields{grid-template-columns:1fr}.field.wide{grid-column:auto}.checks{grid-template-columns:repeat(2,1fr)}.notice{display:block}.notice .btn{margin-top:9px}}
 </style></head><body>
 <div class="app">
-<aside class="side"><div class="logo"><div class="brandmark">❄</div><div><div class="brand">寒潮王座</div><div class="tiny">VISUAL ARCHIVE · V6</div></div></div><div class="sidehead"><span>候选人物套组</span><div style="display:flex;gap:4px"><button class="btn sm ghost" data-act="manage" title="编辑当前分组">✎</button><button class="btn sm ghost" data-act="newgroup" title="增加候选套组">＋</button></div></div><nav id="groupnav"></nav><div class="sidefoot"><div class="overline">ARTWORK GUIDELINES</div><p class="tiny">优先：厨房、餐厅、沙发、卧室、互动、都市与寒冬。<br>不采用：透明底立绘、人物设定页、角色海报。<br><br>素材组 ≠ 剧情角色。当前全部未绑定。</p></div></aside>
+<aside class="side"><div class="logo"><div class="brandmark">❄</div><div><div class="brand">寒潮王座</div><div class="tiny">VISUAL ARCHIVE · V7</div></div></div><div class="sidehead"><span>候选人物套组</span><div style="display:flex;gap:4px"><button class="btn sm ghost" data-act="manage" title="编辑当前分组">✎</button><button class="btn sm ghost" data-act="newgroup" title="增加候选套组">＋</button></div></div><nav id="groupnav"></nav><div class="sidefoot"><div class="overline">ARTWORK GUIDELINES</div><p class="tiny">优先：厨房、餐厅、沙发、卧室、互动、都市与寒冬。<br>不采用：透明底立绘、人物设定页、角色海报。<br><br>素材组 ≠ 剧情角色。当前全部未绑定。</p></div></aside>
 <main class="main"><div class="topbar"><span class="crumb">WINTER KINGDOM / 资产资料库 / <span id="crumb">全部</span></span><div class="barlinks"><span class="cloud"><i class="dot" id="cloudDot"></i><span id="cloudStatus">本地草稿</span></span><button class="btn sm" data-act="help">使用说明</button><button class="btn sm primary" data-act="cloud">☁ 在线发布</button></div></div>
 <div class="hero"><div><div class="overline">THE WINTER KINGDOM · STORY CG COLLECTION</div><h1>冬境 · 日常影像库</h1><p class="lede">不是人物立绘，而是有环境、有动作、有故事感的日常剧情画面。收藏、筛选、编辑、按候选人物归档，更新后可同步至公开网站。</p></div><div class="heroIcon">❄</div></div>
 <section class="stats" id="stats"></section>
@@ -28,9 +28,9 @@ button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:var(--ic
 </main></div>
 <div class="modalback" id="overlay" role="dialog" aria-modal="true"><div class="modal"><div class="modalheader"><h2 id="modalTitle"></h2><button class="btn sm ghost" data-act="close" aria-label="关闭">✕</button></div><div class="modalbody" id="modalBody"></div><div class="modalfooter" id="modalFoot"></div></div></div><div class="toast" id="toast" aria-live="polite"></div><input id="importFile" type="file" accept="application/json,.json" hidden><input id="uploadFile" type="file" accept="image/jpeg,image/png,image/webp" hidden>
 <script id="seedJSON" type="application/json">{
-  "version": 6,
+  "version": 7,
   "project": "寒潮王座 · 剧情CG素材管理站",
-  "updatedAt": "2026-10-20T10:19:00+08:00",
+  "updatedAt": "2026-10-20T13:28:00+08:00",
   "groups": [
     {
       "id": "U-00",
@@ -126,225 +126,200 @@ button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:var(--ic
   ],
   "images": [
     {
-      "id": "S-001",
+      "id": "P-001",
       "groupIds": [
         "U-00"
       ],
-      "title": "节日餐桌·群像",
-      "url": "https://pbs.twimg.com/media/Ga-fQFWaIAANYMy.jpg",
-      "source": "https://x.com/NIKKE_en/status/1851058870917169512",
+      "title": "列车同行 · 车内聊天",
+      "url": "./assets/cg/staranis-car-01.webp",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/staranis/EventScene_staranis_01_1.webp",
       "tags": [
-        "多人互动",
-        "餐饮",
-        "节日",
-        "NIKKE"
-      ],
-      "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
-    },
-    {
-      "id": "S-002",
-      "groupIds": [
-        "U-00"
-      ],
-      "title": "室内糕点聚会",
-      "url": "https://konachan.com/jpeg/f45e75883aec0d72a4f344ac8bab8f75/Konachan.com%20-%20398400%20blue_eyes%20blush%20braids%20brown_eyes%20brown_hair%20cake%20choker%20drink%20food%20gloves%20gray_hair%20loli%20long_hair%20ribbons%20skirt%20tie%20twintails%20yellow_eyes.jpg",
-      "source": "https://konachan.com/post/show/398400",
-      "tags": [
-        "室内",
-        "用餐",
-        "多人",
-        "节日"
-      ],
-      "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
-    },
-    {
-      "id": "S-003",
-      "groupIds": [
-        "U-00"
-      ],
-      "title": "咖啡厅轻松聊天",
-      "url": "https://truth.bahamut.com.tw/s01/202303/86658c9fddceee1fb69c1654e178c755.JPG",
-      "source": "https://forum.gamer.com.tw/C.php?bsn=36390&snA=7867",
-      "tags": [
-        "咖啡厅",
-        "聊天",
-        "多人",
-        "日常"
-      ],
-      "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
-    },
-    {
-      "id": "S-004",
-      "groupIds": [
-        "U-00"
-      ],
-      "title": "休息室聚餐",
-      "url": "https://www.pixiewall.com/content/wallpapers/full/67/pixiewall-nikke-anis-rapi-neon-meal-5k-rjwcz6.jpg",
-      "source": "https://www.pixiewall.com/wallpaper/nikke-anis-rapi-neon-meal-5k-32829",
-      "tags": [
-        "室内",
-        "餐饮",
-        "安妮丝",
-        "拉毗",
-        "妮姬"
-      ],
-      "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
-    },
-    {
-      "id": "S-005",
-      "groupIds": [
-        "U-00"
-      ],
-      "title": "厨房准备晚餐",
-      "url": "https://oss.ccbooster.com/PROD/37eaae5f50074737830454b870d22b84.jpg",
-      "source": "https://www.ccbooster.com/news/150/",
-      "tags": [
-        "厨房",
-        "烹饪",
-        "多人",
-        "少女前线2"
-      ],
-      "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
-    },
-    {
-      "id": "S-006",
-      "groupIds": [
-        "U-00"
-      ],
-      "title": "甜品烘焙时刻",
-      "url": "https://static.zerochan.net/Marciana.full.4116618.jpg",
-      "source": "https://www.zerochan.net/Marciana",
-      "tags": [
-        "厨房",
-        "烘焙",
-        "居家"
-      ],
-      "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
-    },
-    {
-      "id": "S-007",
-      "groupIds": [
-        "U-00"
-      ],
-      "title": "温暖酒馆·安静小酌",
-      "url": "https://www.pixiewall.com/content/wallpapers/medium/31/pixiewall-ld3qic.jpg",
-      "source": "https://www.pixiewall.com/wallpaper/scarlet-goddess-of-victory-nikke-japanese-clothes-5k-18882",
-      "tags": [
-        "休息",
-        "餐饮",
-        "和服",
-        "红莲"
-      ],
-      "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
-    },
-    {
-      "id": "S-008",
-      "groupIds": [
-        "U-00"
-      ],
-      "title": "桌旁闲谈",
-      "url": "https://konachan.com/jpeg/6a03c19ab4e632a974d9311222afc4e9/Konachan.com%20-%20361334%20blonde_hair%20blush%20breasts%20brown_hair%20choker%20choney%20cleavage%20collar%20glasses%20gloves%20gray_hair%20hat%20long_hair%20red_eyes%20short_hair%20skintight%20skirt%20tie.jpg",
-      "source": "https://konachan.com/post/show/361334",
-      "tags": [
+        "车内",
         "日常",
-        "谈话",
-        "多人",
-        "安妮丝",
-        "拉毗"
-      ],
-      "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
-    },
-    {
-      "id": "S-009",
-      "groupIds": [
-        "U-00"
-      ],
-      "title": "皇家宴席",
-      "url": "https://konachan.com/jpeg/dff311ec83e0d8ce0cf2b84347999139/Konachan.com%20-%20383569%20armor%20blush%20bow%20braids%20dress%20drink%20food%20fruit%20gloves%20group%20hat%20headband%20headdress%20long_hair%20nopan%20pantyhose%20ribbons%20shirt%20sleeping%20tears%20twintails.jpg",
-      "source": "https://konachan.com/post/show/383569",
-      "tags": [
-        "餐厅",
-        "宴席",
-        "多人",
-        "神罚"
-      ],
-      "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
-    },
-    {
-      "id": "S-010",
-      "groupIds": [
-        "U-00"
-      ],
-      "title": "餐桌小憩",
-      "url": "https://pbs.twimg.com/media/GMF02NGacAAgAX7.jpg",
-      "source": "https://x.com/NIKKE_japan/status/1784764540783153510",
-      "tags": [
-        "餐厅",
-        "休息",
-        "节日",
+        "同行",
         "多人"
       ],
+      "note": "同一辆车的多人互动场景，画面一；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
       "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
     },
     {
-      "id": "S-011",
+      "id": "P-002",
       "groupIds": [
         "U-00"
       ],
-      "title": "节日食堂",
-      "url": "https://media.esports.gg/uploads/2024/10/godess-of-victory-nikke-2nd-anniversary-wallpaper.png",
-      "source": "https://esports.gg/news/nikke/nikke-wallpaper-desktop-and-mobile/",
+      "title": "列车同行 · 旅途玩笑",
+      "url": "./assets/cg/staranis-car-02.webp",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/staranis/EventScene_staranis_01_2.webp",
+      "tags": [
+        "车内",
+        "日常",
+        "轻松",
+        "多人"
+      ],
+      "note": "同一场景的人物与情绪变化，画面二；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
+      "status": "candidate",
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
+    },
+    {
+      "id": "P-003",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "车内独处 · 防寒穿搭",
+      "url": "./assets/cg/staranis-car-03.webp",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/staranis/EventScene_staranis_01_3.webp",
+      "tags": [
+        "车内",
+        "冬装",
+        "都市",
+        "日常"
+      ],
+      "note": "车内的不同搭乘者，画面三；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
+      "status": "candidate",
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
+    },
+    {
+      "id": "P-004",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "街头依偎 · 同伴安慰",
+      "url": "./assets/cg/staranis-reunion-01.webp",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/staranis/EventScene_staranis_07_1.webp",
+      "tags": [
+        "街头",
+        "拥抱",
+        "安慰",
+        "多人"
+      ],
+      "note": "三人坐在街边互相安慰，完整剧情场景；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
+      "status": "candidate",
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
+    },
+    {
+      "id": "P-005",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "手机记录 · 同伴相依",
+      "url": "./assets/cg/staranis-reunion-02.webp",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/staranis/EventScene_staranis_07_2.webp",
+      "tags": [
+        "街头",
+        "手机",
+        "拥抱",
+        "多人"
+      ],
+      "note": "同一场景的手机镜头变体；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
+      "status": "candidate",
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
+    },
+    {
+      "id": "P-006",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "咖啡吧台 · 意外来访",
+      "url": "./assets/cg/madeinrush-cafe-01.png",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/madeinrush/madeinrush_cutscene_2.png",
       "tags": [
         "咖啡厅",
-        "聚会",
-        "多人",
-        "餐饮"
+        "室内",
+        "互动"
       ],
+      "note": "吧台隔窗互动，小尺寸事件CG；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
       "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
+    },
+    {
+      "id": "P-007",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "媒体围访 · 主角被关注",
+      "url": "./assets/cg/madeinrush-interview-01.png",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/madeinrush/madeinrush_cutscene_3.png",
+      "tags": [
+        "都市",
+        "采访",
+        "互动",
+        "多人"
+      ],
+      "note": "角色被媒体包围的漫画式事件CG；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
+      "status": "candidate",
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
+    },
+    {
+      "id": "P-008",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "休息室意外 · 跌倒",
+      "url": "./assets/cg/madeinrush-home-01.png",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/madeinrush/madeinrush_cutscene_5.png",
+      "tags": [
+        "室内",
+        "动作",
+        "休息"
+      ],
+      "note": "房间中跌倒的漫画式事件CG；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
+      "status": "candidate",
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
+    },
+    {
+      "id": "P-009",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "室内聚会 · 尴尬时刻",
+      "url": "./assets/cg/madeinrush-lounge-01.png",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/madeinrush/madeinrush_cutscene_7.png",
+      "tags": [
+        "室内",
+        "聚会",
+        "多人"
+      ],
+      "note": "休息室中的漫画式生活场景；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
+      "status": "candidate",
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
+    },
+    {
+      "id": "P-010",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "礼服展示 · 活动高潮",
+      "url": "./assets/cg/madeinrush-action-01.png",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/madeinrush/madeinrush_cutscene_8.png",
+      "tags": [
+        "活动",
+        "礼服",
+        "互动"
+      ],
+      "note": "活动事件图，动感构图；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
+      "status": "candidate",
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
     }
   ]
 }</script>
@@ -373,7 +348,7 @@ function loadedImg(img){
   img.dataset.result=img.dataset.fallback==='proxy'?'备用通道':'源站';
 }
 const DEFAULT=JSON.parse($('seedJSON').textContent);
-const DRAFT_KEY='winter-cg-draft-v6', SETTINGS_KEY='winter-cg-settings-v6';
+const DRAFT_KEY='winter-cg-draft-v7', SETTINGS_KEY='winter-cg-settings-v6';
 let data=clone(DEFAULT),selected='ALL',category='all',searchText='',working=false,cred='',github={owner:'tyqittle',repo:'winter-cg-archive',branch:'main'};
 try{github={...github,...JSON.parse(localStorage.getItem(SETTINGS_KEY)||'{}')}}catch{}
 const now=()=>new Date().toISOString();
@@ -402,7 +377,7 @@ function manageGroups(){let g=data.groups.find(x=>x.id===selected);if(!g||select
 function saveGroup(){let g=data.groups.find(x=>x.id===selected);if(!g)return;let v=Object.fromEntries(new FormData($('groupform')));Object.assign(g,{name:v.name||g.name,tag:v.tag||'',focus:v.focus||''});saveDraft();close();render()}
 function deleteGroup(){if(!confirm('删除该人物候选分组？组内图片会移入「未归档」，不会删除图片。'))return;data.groups=data.groups.filter(x=>x.id!==selected);data.images.forEach(x=>{if(x.groupIds.includes(selected)){x.groupIds=x.groupIds.filter(v=>v!==selected);if(!x.groupIds.length)x.groupIds=['U-00']}});selected='U-00';saveDraft();close();render()}
 function exportJSON(){let blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='winter-cg-catalog-'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2500)}
-function sanitizeImport(obj){if(!obj||!Array.isArray(obj.groups)||!Array.isArray(obj.images))throw Error('JSON缺少 groups 或 images 数组');if(obj.images.length>10000)throw Error('每次最多导入10000张');return {version:6,project:obj.project||DEFAULT.project,updatedAt:now(),groups:obj.groups.map(g=>({id:String(g.id),name:String(g.name),tag:String(g.tag||''),focus:String(g.focus||''),status:'unbound'})),images:obj.images.filter(x=>x.url&&x.id).map(x=>({...x,id:String(x.id),url:String(x.url),source:String(x.source||''),title:String(x.title||''),tags:Array.isArray(x.tags)?x.tags.map(String):[],groupIds:Array.isArray(x.groupIds)?x.groupIds.map(String):['U-00'],status:x.status==='approved'?'approved':'candidate'}))}}
+function sanitizeImport(obj){if(!obj||!Array.isArray(obj.groups)||!Array.isArray(obj.images))throw Error('JSON缺少 groups 或 images 数组');if(obj.images.length>10000)throw Error('每次最多导入10000张');return {version:7,project:obj.project||DEFAULT.project,updatedAt:now(),groups:obj.groups.map(g=>({id:String(g.id),name:String(g.name),tag:String(g.tag||''),focus:String(g.focus||''),status:'unbound'})),images:obj.images.filter(x=>x.url&&x.id).map(x=>({...x,id:String(x.id),url:String(x.url),source:String(x.source||''),title:String(x.title||''),tags:Array.isArray(x.tags)?x.tags.map(String):[],groupIds:Array.isArray(x.groupIds)?x.groupIds.map(String):['U-00'],status:x.status==='approved'?'approved':'candidate'}))}}
 $('importFile').addEventListener('change',async e=>{let f=e.target.files[0];if(!f)return;try{let o=sanitizeImport(JSON.parse(await f.text()));if(!confirm(`导入文件有 ${o.groups.length} 组和 ${o.images.length} 张图，是否覆盖当前数据？请先导出备份。`))return;data=o;selected='ALL';saveDraft();render();toasts('导入成功')}catch(err){toasts('导入失败：'+err.message)}finally{e.target.value=''}});
 // Danbooru's public API supports CORS for posts.json; all imported results require human review.
 const SCENES=new Set('indoors room kitchen dining_room restaurant cafe coffee_shop bar table living_room bedroom couch sofa on_couch chair bed outdoors garden park city street snow snowing fireplace kitchen_table dining_table shopping_mall train_station'.split(' '));

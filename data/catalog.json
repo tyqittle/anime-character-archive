@@ -1,7 +1,7 @@
 {
-  "version": 6,
+  "version": 7,
   "project": "寒潮王座 · 剧情CG素材管理站",
-  "updatedAt": "2026-10-20T10:19:00+08:00",
+  "updatedAt": "2026-10-20T13:28:00+08:00",
   "groups": [
     {
       "id": "U-00",
@@ -97,225 +97,200 @@
   ],
   "images": [
     {
-      "id": "S-001",
+      "id": "P-001",
       "groupIds": [
         "U-00"
       ],
-      "title": "节日餐桌·群像",
-      "url": "https://pbs.twimg.com/media/Ga-fQFWaIAANYMy.jpg",
-      "source": "https://x.com/NIKKE_en/status/1851058870917169512",
+      "title": "列车同行 · 车内聊天",
+      "url": "./assets/cg/staranis-car-01.webp",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/staranis/EventScene_staranis_01_1.webp",
       "tags": [
-        "多人互动",
-        "餐饮",
-        "节日",
-        "NIKKE"
-      ],
-      "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
-    },
-    {
-      "id": "S-002",
-      "groupIds": [
-        "U-00"
-      ],
-      "title": "室内糕点聚会",
-      "url": "https://konachan.com/jpeg/f45e75883aec0d72a4f344ac8bab8f75/Konachan.com%20-%20398400%20blue_eyes%20blush%20braids%20brown_eyes%20brown_hair%20cake%20choker%20drink%20food%20gloves%20gray_hair%20loli%20long_hair%20ribbons%20skirt%20tie%20twintails%20yellow_eyes.jpg",
-      "source": "https://konachan.com/post/show/398400",
-      "tags": [
-        "室内",
-        "用餐",
-        "多人",
-        "节日"
-      ],
-      "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
-    },
-    {
-      "id": "S-003",
-      "groupIds": [
-        "U-00"
-      ],
-      "title": "咖啡厅轻松聊天",
-      "url": "https://truth.bahamut.com.tw/s01/202303/86658c9fddceee1fb69c1654e178c755.JPG",
-      "source": "https://forum.gamer.com.tw/C.php?bsn=36390&snA=7867",
-      "tags": [
-        "咖啡厅",
-        "聊天",
-        "多人",
-        "日常"
-      ],
-      "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
-    },
-    {
-      "id": "S-004",
-      "groupIds": [
-        "U-00"
-      ],
-      "title": "休息室聚餐",
-      "url": "https://www.pixiewall.com/content/wallpapers/full/67/pixiewall-nikke-anis-rapi-neon-meal-5k-rjwcz6.jpg",
-      "source": "https://www.pixiewall.com/wallpaper/nikke-anis-rapi-neon-meal-5k-32829",
-      "tags": [
-        "室内",
-        "餐饮",
-        "安妮丝",
-        "拉毗",
-        "妮姬"
-      ],
-      "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
-    },
-    {
-      "id": "S-005",
-      "groupIds": [
-        "U-00"
-      ],
-      "title": "厨房准备晚餐",
-      "url": "https://oss.ccbooster.com/PROD/37eaae5f50074737830454b870d22b84.jpg",
-      "source": "https://www.ccbooster.com/news/150/",
-      "tags": [
-        "厨房",
-        "烹饪",
-        "多人",
-        "少女前线2"
-      ],
-      "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
-    },
-    {
-      "id": "S-006",
-      "groupIds": [
-        "U-00"
-      ],
-      "title": "甜品烘焙时刻",
-      "url": "https://static.zerochan.net/Marciana.full.4116618.jpg",
-      "source": "https://www.zerochan.net/Marciana",
-      "tags": [
-        "厨房",
-        "烘焙",
-        "居家"
-      ],
-      "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
-    },
-    {
-      "id": "S-007",
-      "groupIds": [
-        "U-00"
-      ],
-      "title": "温暖酒馆·安静小酌",
-      "url": "https://www.pixiewall.com/content/wallpapers/medium/31/pixiewall-ld3qic.jpg",
-      "source": "https://www.pixiewall.com/wallpaper/scarlet-goddess-of-victory-nikke-japanese-clothes-5k-18882",
-      "tags": [
-        "休息",
-        "餐饮",
-        "和服",
-        "红莲"
-      ],
-      "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
-    },
-    {
-      "id": "S-008",
-      "groupIds": [
-        "U-00"
-      ],
-      "title": "桌旁闲谈",
-      "url": "https://konachan.com/jpeg/6a03c19ab4e632a974d9311222afc4e9/Konachan.com%20-%20361334%20blonde_hair%20blush%20breasts%20brown_hair%20choker%20choney%20cleavage%20collar%20glasses%20gloves%20gray_hair%20hat%20long_hair%20red_eyes%20short_hair%20skintight%20skirt%20tie.jpg",
-      "source": "https://konachan.com/post/show/361334",
-      "tags": [
+        "车内",
         "日常",
-        "谈话",
-        "多人",
-        "安妮丝",
-        "拉毗"
-      ],
-      "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
-    },
-    {
-      "id": "S-009",
-      "groupIds": [
-        "U-00"
-      ],
-      "title": "皇家宴席",
-      "url": "https://konachan.com/jpeg/dff311ec83e0d8ce0cf2b84347999139/Konachan.com%20-%20383569%20armor%20blush%20bow%20braids%20dress%20drink%20food%20fruit%20gloves%20group%20hat%20headband%20headdress%20long_hair%20nopan%20pantyhose%20ribbons%20shirt%20sleeping%20tears%20twintails.jpg",
-      "source": "https://konachan.com/post/show/383569",
-      "tags": [
-        "餐厅",
-        "宴席",
-        "多人",
-        "神罚"
-      ],
-      "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
-    },
-    {
-      "id": "S-010",
-      "groupIds": [
-        "U-00"
-      ],
-      "title": "餐桌小憩",
-      "url": "https://pbs.twimg.com/media/GMF02NGacAAgAX7.jpg",
-      "source": "https://x.com/NIKKE_japan/status/1784764540783153510",
-      "tags": [
-        "餐厅",
-        "休息",
-        "节日",
+        "同行",
         "多人"
       ],
+      "note": "同一辆车的多人互动场景，画面一；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
       "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
     },
     {
-      "id": "S-011",
+      "id": "P-002",
       "groupIds": [
         "U-00"
       ],
-      "title": "节日食堂",
-      "url": "https://media.esports.gg/uploads/2024/10/godess-of-victory-nikke-2nd-anniversary-wallpaper.png",
-      "source": "https://esports.gg/news/nikke/nikke-wallpaper-desktop-and-mobile/",
+      "title": "列车同行 · 旅途玩笑",
+      "url": "./assets/cg/staranis-car-02.webp",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/staranis/EventScene_staranis_01_2.webp",
+      "tags": [
+        "车内",
+        "日常",
+        "轻松",
+        "多人"
+      ],
+      "note": "同一场景的人物与情绪变化，画面二；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
+      "status": "candidate",
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
+    },
+    {
+      "id": "P-003",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "车内独处 · 防寒穿搭",
+      "url": "./assets/cg/staranis-car-03.webp",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/staranis/EventScene_staranis_01_3.webp",
+      "tags": [
+        "车内",
+        "冬装",
+        "都市",
+        "日常"
+      ],
+      "note": "车内的不同搭乘者，画面三；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
+      "status": "candidate",
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
+    },
+    {
+      "id": "P-004",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "街头依偎 · 同伴安慰",
+      "url": "./assets/cg/staranis-reunion-01.webp",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/staranis/EventScene_staranis_07_1.webp",
+      "tags": [
+        "街头",
+        "拥抱",
+        "安慰",
+        "多人"
+      ],
+      "note": "三人坐在街边互相安慰，完整剧情场景；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
+      "status": "candidate",
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
+    },
+    {
+      "id": "P-005",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "手机记录 · 同伴相依",
+      "url": "./assets/cg/staranis-reunion-02.webp",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/staranis/EventScene_staranis_07_2.webp",
+      "tags": [
+        "街头",
+        "手机",
+        "拥抱",
+        "多人"
+      ],
+      "note": "同一场景的手机镜头变体；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
+      "status": "candidate",
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
+    },
+    {
+      "id": "P-006",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "咖啡吧台 · 意外来访",
+      "url": "./assets/cg/madeinrush-cafe-01.png",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/madeinrush/madeinrush_cutscene_2.png",
       "tags": [
         "咖啡厅",
-        "聚会",
-        "多人",
-        "餐饮"
+        "室内",
+        "互动"
       ],
+      "note": "吧台隔窗互动，小尺寸事件CG；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
       "status": "candidate",
-      "copyright": "待核实",
-      "note": "公开网页预览候选，仅供挑选；正式再利用需确认授权",
-      "origin": "curated",
-      "createdAt": "2026-10-20"
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
+    },
+    {
+      "id": "P-007",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "媒体围访 · 主角被关注",
+      "url": "./assets/cg/madeinrush-interview-01.png",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/madeinrush/madeinrush_cutscene_3.png",
+      "tags": [
+        "都市",
+        "采访",
+        "互动",
+        "多人"
+      ],
+      "note": "角色被媒体包围的漫画式事件CG；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
+      "status": "candidate",
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
+    },
+    {
+      "id": "P-008",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "休息室意外 · 跌倒",
+      "url": "./assets/cg/madeinrush-home-01.png",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/madeinrush/madeinrush_cutscene_5.png",
+      "tags": [
+        "室内",
+        "动作",
+        "休息"
+      ],
+      "note": "房间中跌倒的漫画式事件CG；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
+      "status": "candidate",
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
+    },
+    {
+      "id": "P-009",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "室内聚会 · 尴尬时刻",
+      "url": "./assets/cg/madeinrush-lounge-01.png",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/madeinrush/madeinrush_cutscene_7.png",
+      "tags": [
+        "室内",
+        "聚会",
+        "多人"
+      ],
+      "note": "休息室中的漫画式生活场景；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
+      "status": "candidate",
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
+    },
+    {
+      "id": "P-010",
+      "groupIds": [
+        "U-00"
+      ],
+      "title": "礼服展示 · 活动高潮",
+      "url": "./assets/cg/madeinrush-action-01.png",
+      "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/gallery/madeinrush/madeinrush_cutscene_8.png",
+      "tags": [
+        "活动",
+        "礼服",
+        "互动"
+      ],
+      "note": "活动事件图，动感构图；文件仅供私人原型筛选，正式公开发布/商用须取得权利人许可。",
+      "status": "candidate",
+      "copyright": "游戏官方美术／使用授权未确认，暂不获准公开再分发",
+      "origin": "NIKKE fan-archive / archived game CG",
+      "createdAt": "2026-10-20T13:28:00+08:00"
     }
   ]
 }
