@@ -1,619 +1,1285 @@
 {
   "version": 1,
   "source": "https://github.com/Nikke-db/Nikke-db.github.io",
-  "note": "源站已确认 skel 和 atlas 路径存在；浏览器播放及贴图完整性尚未逐一验证。素材仍从第三方加载。",
+  "note": "NIKKE 及 Blue Archive Spine 资源索引；Blue Archive 已确认所列三件套在源仓库存在，骨骼版本与浏览器实际播放尚未验证；动态资源从第三方加载。",
   "characters": [
     {
       "id": "c010",
       "name": "Rapi",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010/c010_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010/c010_00",
+      "gameId": "nikke"
     },
     {
       "id": "c011",
       "name": "Neon",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c011/c011_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c011/c011_00",
+      "gameId": "nikke"
     },
     {
       "id": "c012",
       "name": "Anis",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c012/c012_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c012/c012_00",
+      "gameId": "nikke"
     },
     {
       "id": "c013",
       "name": "Marian",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c013/c013_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c013/c013_00",
+      "gameId": "nikke"
     },
     {
       "id": "c015",
       "name": "Anis: Sparkling Summer",
       "spineVersion": "4.1",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c015/c015_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c015/c015_00",
+      "gameId": "nikke"
     },
     {
       "id": "c040",
       "name": "D",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c040/c040_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c040/c040_00",
+      "gameId": "nikke"
     },
     {
       "id": "c060",
       "name": "Belorta",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c060/c060_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c060/c060_00",
+      "gameId": "nikke"
     },
     {
       "id": "c070",
       "name": "Brid",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070/c070_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070/c070_00",
+      "gameId": "nikke"
     },
     {
       "id": "c072",
       "name": "Diesel",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c072/c072_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c072/c072_00",
+      "gameId": "nikke"
     },
     {
       "id": "c080",
       "name": "Centi",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c080/c080_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c080/c080_00",
+      "gameId": "nikke"
     },
     {
       "id": "c090",
       "name": "Emma",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090/c090_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090/c090_00",
+      "gameId": "nikke"
     },
     {
       "id": "c101",
       "name": "Drake",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c101/c101_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c101/c101_00",
+      "gameId": "nikke"
     },
     {
       "id": "c110",
       "name": "Crow",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c110/c110_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c110/c110_00",
+      "gameId": "nikke"
     },
     {
       "id": "c112",
       "name": "Viper",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c112/c112_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c112/c112_00",
+      "gameId": "nikke"
     },
     {
       "id": "c170",
       "name": "Privaty",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c170/c170_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c170/c170_00",
+      "gameId": "nikke"
     },
     {
       "id": "c180",
       "name": "Guillotine",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c180/c180_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c180/c180_00",
+      "gameId": "nikke"
     },
     {
       "id": "c181",
       "name": "Maiden",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c181/c181_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c181/c181_00",
+      "gameId": "nikke"
     },
     {
       "id": "c191",
       "name": "Alice",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c191/c191_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c191/c191_00",
+      "gameId": "nikke"
     },
     {
       "id": "c200",
       "name": "Rupee",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c200/c200_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c200/c200_00",
+      "gameId": "nikke"
     },
     {
       "id": "c203",
       "name": "Rupee: Winter Shopper",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c203/c203_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c203/c203_00",
+      "gameId": "nikke"
     },
     {
       "id": "c222",
       "name": "Scarlet",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c222/c222_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c222/c222_00",
+      "gameId": "nikke"
     },
     {
       "id": "c230",
       "name": "Harran",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c230/c230_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c230/c230_00",
+      "gameId": "nikke"
     },
     {
       "id": "c233",
       "name": "Dorothy",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c233/c233_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c233/c233_00",
+      "gameId": "nikke"
     },
     {
       "id": "c260",
       "name": "Modernia",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c260/c260_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c260/c260_00",
+      "gameId": "nikke"
     },
     {
       "id": "c270",
       "name": "Blanc",
       "spineVersion": "4.1",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c270/c270_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c270/c270_00",
+      "gameId": "nikke"
     },
     {
       "id": "c280",
       "name": "Rosanna",
       "spineVersion": "4.1",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c280/c280_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c280/c280_00",
+      "gameId": "nikke"
     },
     {
       "id": "c282",
       "name": "Sakura",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c282/c282_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c282/c282_00",
+      "gameId": "nikke"
     },
     {
       "id": "c352",
       "name": "Helm",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c352/c352_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c352/c352_00",
+      "gameId": "nikke"
     },
     {
       "id": "c353",
       "name": "Helm: Aquamarine",
       "spineVersion": "4.1",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c353/c353_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c353/c353_00",
+      "gameId": "nikke"
     },
     {
       "id": "c400",
       "name": "Guilty",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c400/c400_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c400/c400_00",
+      "gameId": "nikke"
     },
     {
       "id": "c172",
       "name": "Admi",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c172/c172_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c172/c172_00",
+      "gameId": "nikke"
     },
     {
       "id": "c351",
       "name": "Anchor",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c351/c351_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c351/c351_00",
+      "gameId": "nikke"
     },
     {
       "id": "c121",
       "name": "Anne: Miracle Fairy",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c121/c121_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c121/c121_00",
+      "gameId": "nikke"
     },
     {
       "id": "c432",
       "name": "Aria",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c432/c432_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c432/c432_00",
+      "gameId": "nikke"
     },
     {
       "id": "c381",
       "name": "Biscuit",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c381/c381_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c381/c381_00",
+      "gameId": "nikke"
     },
     {
       "id": "c311",
       "name": "Cocoa",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c311/c311_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c311/c311_00",
+      "gameId": "nikke"
     },
     {
       "id": "c020",
       "name": "Delta",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c020/c020_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c020/c020_00",
+      "gameId": "nikke"
     },
     {
       "id": "c202",
       "name": "Dolla",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c202/c202_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c202/c202_00",
+      "gameId": "nikke"
     },
     {
       "id": "c241",
       "name": "Epinel",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c241/c241_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c241/c241_00",
+      "gameId": "nikke"
     },
     {
       "id": "c291",
       "name": "Ether",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c291/c291_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c291/c291_00",
+      "gameId": "nikke"
     },
     {
       "id": "c092",
       "name": "Eunhwa",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c092/c092_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c092/c092_00",
+      "gameId": "nikke"
     },
     {
       "id": "c210",
       "name": "Exia",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c210/c210_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c210/c210_00",
+      "gameId": "nikke"
     },
     {
       "id": "c242",
       "name": "Folkwang",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c242/c242_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c242/c242_00",
+      "gameId": "nikke"
     },
     {
       "id": "c142",
       "name": "Frima",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c142/c142_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c142/c142_00",
+      "gameId": "nikke"
     },
     {
       "id": "c802",
       "name": "Himeno",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c802/c802_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c802/c802_00",
+      "gameId": "nikke"
     },
     {
       "id": "c304",
       "name": "iDoll Flower",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c304/c304_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c304/c304_00",
+      "gameId": "nikke"
     },
     {
       "id": "c305",
       "name": "iDoll Ocean",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c305/c305_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c305/c305_00",
+      "gameId": "nikke"
     },
     {
       "id": "c308",
       "name": "iDoll Sun",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c308/c308_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c308/c308_00",
+      "gameId": "nikke"
     },
     {
       "id": "c231",
       "name": "Isabel",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c231/c231_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c231/c231_00",
+      "gameId": "nikke"
     },
     {
       "id": "c111",
       "name": "Jackal",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c111/c111_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c111/c111_00",
+      "gameId": "nikke"
     },
     {
       "id": "c150",
       "name": "Julia",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c150/c150_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c150/c150_00",
+      "gameId": "nikke"
     },
     {
       "id": "c100",
       "name": "Laplace",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c100/c100_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c100/c100_00",
+      "gameId": "nikke"
     },
     {
       "id": "c082",
       "name": "Liter",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c082/c082_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c082/c082_00",
+      "gameId": "nikke"
     },
     {
       "id": "c190",
       "name": "Ludmilla",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c190/c190_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c190/c190_00",
+      "gameId": "nikke"
     },
     {
       "id": "c800",
       "name": "Makima",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c800/c800_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c800/c800_00",
+      "gameId": "nikke"
     },
     {
       "id": "c130",
       "name": "Mary",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c130/c130_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c130/c130_00",
+      "gameId": "nikke"
     },
     {
       "id": "c132",
       "name": "Mary: Bay Goddess",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c132/c132_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c132/c132_00",
+      "gameId": "nikke"
     },
     {
       "id": "c254",
       "name": "Mass Produced Purple",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c254/c254_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c254/c254_00",
+      "gameId": "nikke"
     },
     {
       "id": "c350",
       "name": "Mast",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c350/c350_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c350/c350_00",
+      "gameId": "nikke"
     },
     {
       "id": "c102",
       "name": "Maxwell",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c102/c102_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c102/c102_00",
+      "gameId": "nikke"
     },
     {
       "id": "c061",
       "name": "Mica",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c061/c061_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c061/c061_00",
+      "gameId": "nikke"
     },
     {
       "id": "c161",
       "name": "Mihara",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c161/c161_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c161/c161_00",
+      "gameId": "nikke"
     },
     {
       "id": "c010_01",
       "name": "Rapi_old",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010_01/c010_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010_01/c010_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c010_02",
       "name": "Rapi White Promise",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010_02/c010_02_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010_02/c010_02_00",
+      "gameId": "nikke"
     },
     {
       "id": "c010_03",
       "name": "Rapi Classic Vacation",
       "spineVersion": "4.1",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010_03/c010_03_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010_03/c010_03_00",
+      "gameId": "nikke"
     },
     {
       "id": "c011_01",
       "name": "Neon Bling Bullet",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c011_01/c011_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c011_01/c011_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c022_01",
       "name": "Signal Dramatic Chocolate",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c022_01/c022_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c022_01/c022_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c030_01",
       "name": "Poli Sweet Holic",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c030_01/c030_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c030_01/c030_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c070_01",
       "name": "Brid Model Worker",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070_01/c070_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070_01/c070_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c070_02",
       "name": "Brid Black Moon",
       "spineVersion": "4.1",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070_02/c070_02_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070_02/c070_02_00",
+      "gameId": "nikke"
     },
     {
       "id": "c072_01",
       "name": "Diesel Black Sunday",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c072_01/c072_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c072_01/c072_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c080_01",
       "name": "Centi Supreme Holiday",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c080_01/c080_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c080_01/c080_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c082_01",
       "name": "Liter Guardfish",
       "spineVersion": "4.1",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c082_01/c082_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c082_01/c082_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c090_01",
       "name": "Emma Color Me Red",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090_01/c090_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090_01/c090_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c090_02",
       "name": "Emma Office Therapy",
       "spineVersion": "4.1",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090_02/c090_02_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090_02/c090_02_00",
+      "gameId": "nikke"
     },
     {
       "id": "c101_01",
       "name": "Drake Villain Racer",
       "spineVersion": "4.1",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c101_01/c101_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c101_01/c101_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c102_01",
       "name": "Maxwell Mechanic White",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c102_01/c102_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c102_01/c102_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c112_01",
       "name": "Viper Toxic Rabbit",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c112_01/c112_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c112_01/c112_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c131_01",
       "name": "Pepper Ocean Vitamin",
       "spineVersion": "4.1",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c131_01/c131_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c131_01/c131_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c140_01",
       "name": "Sugar Hard-Boiled",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c140_01/c140_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c140_01/c140_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c141_01",
       "name": "Milk Extreme Fighter",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c141_01/c141_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c141_01/c141_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c142_01",
       "name": "Frima Sea of Sloth",
       "spineVersion": "4.1",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c142_01/c142_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c142_01/c142_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c150_01",
       "name": "Julia Mild Nocturne",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c150_01/c150_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c150_01/c150_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c160_01",
       "name": "Yuni Pretty In Pink",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c160_01/c160_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c160_01/c160_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c170_01",
       "name": "Privaty Government Grunt",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c170_01/c170_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c170_01/c170_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c181_01",
       "name": "Maiden Covert Nurse",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c181_01/c181_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c181_01/c181_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c191_01",
       "name": "Alice Sweet Home",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c191_01/c191_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c191_01/c191_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c200_01",
       "name": "Rupee Rabbit Deluxe",
       "spineVersion": "4.1",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c200_01/c200_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c200_01/c200_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c201_01",
       "name": "Yan Sunrise Market",
       "spineVersion": "4.1",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c201_01/c201_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c201_01/c201_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c202_01",
       "name": "Dolla Dark Rose",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c202_01/c202_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c202_01/c202_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c210_01",
       "name": "Exia Joy to the Nerds",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c210_01/c210_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c210_01/c210_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c212_01",
       "name": "Novel Penguin Holmes",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c212_01/c212_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c212_01/c212_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c212_02",
       "name": "Novel Detective Nurse",
       "spineVersion": "4.1",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c212_02/c212_02_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c212_02/c212_02_00",
+      "gameId": "nikke"
     },
     {
       "id": "c260_01",
       "name": "Modernia First Affection",
       "spineVersion": "4.1",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c260_01/c260_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c260_01/c260_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c282_01",
       "name": "Sakura Midnight Stealth",
       "spineVersion": "4.1",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c282_01/c282_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c282_01/c282_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c350_01",
       "name": "Mast A Pirate's Heart",
       "spineVersion": "4.1",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c350_01/c350_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c350_01/c350_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c352_01",
       "name": "Helm Chandelier",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c352_01/c352_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c352_01/c352_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c430_01",
       "name": "Noise Cherry Blossom Stage",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c430_01/c430_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c430_01/c430_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c800_01",
       "name": "Makima Coat Off",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c800_01/c800_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c800_01/c800_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c803_01",
       "name": "Denji Chainsaw Man",
       "spineVersion": "4.0",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c803_01/c803_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c803_01/c803_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c810_01",
       "name": "2B Metamorphic Damage",
       "spineVersion": "4.1",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c810_01/c810_01_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c810_01/c810_01_00",
+      "gameId": "nikke"
     },
     {
       "id": "c810_02",
       "name": "2B YoRHa Uniform 1",
       "spineVersion": "4.1",
-      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c810_02/c810_02_00"
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c810_02/c810_02_00",
+      "gameId": "nikke"
+    },
+    {
+      "id": "ba-ch0058_spr",
+      "name": "BA · CH0058",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0058_spr/CH0058_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0058_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0060_spr",
+      "name": "BA · CH0060",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0060_spr/CH0060_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0060_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0063_spr",
+      "name": "BA · CH0063",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0063_spr/CH0063_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0063_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0064_spr",
+      "name": "BA · CH0064",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0064_spr/CH0064_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0064_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0066_spr",
+      "name": "BA · CH0066",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0066_spr/CH0066_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0066_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0069_spr",
+      "name": "BA · CH0069",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0069_spr/CH0069_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0069_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0070_spr",
+      "name": "BA · CH0070",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0070_spr/CH0070_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0070_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0071_spr",
+      "name": "BA · CH0071",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0071_spr/CH0071_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0071_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0079_spr",
+      "name": "BA · CH0079",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0079_spr/CH0079_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0079_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0080_spr",
+      "name": "BA · CH0080",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0080_spr/CH0080_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0080_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0086_spr",
+      "name": "BA · CH0086",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0086_spr/CH0086_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0086_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0087_spr",
+      "name": "BA · CH0087",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0087_spr/CH0087_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0087_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0088_spr",
+      "name": "BA · CH0088",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0088_spr/CH0088_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0088_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0089_spr",
+      "name": "BA · CH0089",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0089_spr/CH0089_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0089_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0092_spr",
+      "name": "BA · CH0092",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0092_spr/CH0092_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0092_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0095_spr",
+      "name": "BA · CH0095",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0095_spr/CH0095_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0095_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0098_spr",
+      "name": "BA · CH0098",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0098_spr/CH0098_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0098_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0099_spr",
+      "name": "BA · CH0099",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0099_spr/CH0099_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0099_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0100_spr",
+      "name": "BA · CH0100",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0100_spr/CH0100_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0100_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0101_spr",
+      "name": "BA · CH0101",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0101_spr/CH0101_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0101_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0107_spr",
+      "name": "BA · CH0107",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0107_spr/CH0107_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0107_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0109_spr",
+      "name": "BA · CH0109",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0109_spr/CH0109_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0109_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0110_spr",
+      "name": "BA · CH0110",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0110_spr/CH0110_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0110_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0113_spr",
+      "name": "BA · CH0113",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0113_spr/CH0113_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0113_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0114_spr",
+      "name": "BA · CH0114",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0114_spr/CH0114_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0114_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0123_spr",
+      "name": "BA · CH0123",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0123_spr/CH0123_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0123_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0124_spr",
+      "name": "BA · CH0124",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0124_spr/CH0124_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0124_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0125_spr",
+      "name": "BA · CH0125",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0125_spr/CH0125_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0125_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0135_spr",
+      "name": "BA · CH0135",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0135_spr/CH0135_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0135_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0137_spr",
+      "name": "BA · CH0137",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0137_spr/CH0137_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0137_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0138_spr",
+      "name": "BA · CH0138",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0138_spr/CH0138_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0138_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0139_spr",
+      "name": "BA · CH0139",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0139_spr/CH0139_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0139_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0141_spr",
+      "name": "BA · CH0141",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0141_spr/CH0141_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0141_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0144_spr",
+      "name": "BA · CH0144",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0144_spr/CH0144_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0144_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0145_spr",
+      "name": "BA · CH0145",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0145_spr/CH0145_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0145_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0152_spr",
+      "name": "BA · CH0152",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0152_spr/CH0152_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0152_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0155_spr",
+      "name": "BA · CH0155",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0155_spr/CH0155_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0155_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0156_spr",
+      "name": "BA · CH0156",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0156_spr/CH0156_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0156_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0157_spr",
+      "name": "BA · CH0157",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0157_spr/CH0157_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0157_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0158_spr",
+      "name": "BA · CH0158",
+      "gameId": "bluearchive",
+      "spineVersion": "4.0",
+      "versionUnverified": true,
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0158_spr/CH0158_spr",
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0158_spr",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
     }
+  ],
+  "sources": [
+    "https://github.com/Nikke-db/Nikke-db.github.io",
+    "https://github.com/kiraio-moe/Schale-Archive"
   ]
 }
