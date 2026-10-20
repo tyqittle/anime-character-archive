@@ -1,0 +1,48 @@
+name: Audit every Spine resource
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/audit_spine_batch.py'
+      - '.github/workflows/spine-audit.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '23 3 * * 0'
+permissions:
+  contents: write
+concurrency:
+  group: spine-catalog-batch-audit
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Scan every indexed skeleton, atlas, page and version concurrently
+        run: python scripts/audit_spine_batch.py --workers 12 --apply
+      - name: Commit machine-readable complete audit and corrected Spine versions
+        if: always()
+        run: |
+          if [ ! -f data/spine-audit.json ]; then
+            echo 'Audit did not produce a report'
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/spine-audit.json data/spine-characters.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record full Spine scan and fix detected catalog versions"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Upload full diagnostic results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: spine-batch-audit
+          path: data/spine-audit.json
+          if-no-files-found: warn
