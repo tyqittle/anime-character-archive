@@ -64,7 +64,7 @@ body{background:radial-gradient(ellipse 56% 32% at 85% -5%,#322d62 0,transparent
   <section aria-labelledby="featuredTitle"><div class="section-head"><div><h2 id="featuredTitle">精选角色</h2><p>快速浏览站内精选角色。</p></div><button class="btn sm" data-action="reset">查看全部 ↗</button></div><div id="featured" class="featured"></div></section>
   <section id="explore" aria-labelledby="browseTitle">
     <div class="section-head"><div><h2 id="browseTitle">探索角色图库</h2><p id="resultInfo">正在载入图片索引…</p></div><span id="favCount" class="mini"></span></div>
-    <div class="toolbar"><label class="search">⌕ <input id="query" type="search" placeholder="搜索角色、中文名、英文名、服装、阵营…" autocomplete="off"></label><select id="kindFilter" class="select" aria-label="图像类别"><option value="all">全身立绘</option></select><select id="rarityFilter" class="select" aria-label="稀有度"><option value="all">全部稀有度</option><option value="SSR">SSR</option><option value="SR">SR</option><option value="R">R</option><option value="unknown">未标记</option></select><select id="sort" class="select" aria-label="排序方式"><option value="featured">重点角色优先</option><option value="name">名称 A—Z</option><option value="nameDesc">名称 Z—A</option></select></div>
+    <div class="toolbar"><label class="search">⌕ <input id="query" type="search" placeholder="搜索角色、中文名、英文名、服装、阵营…" autocomplete="off"></label><select id="gameFilter" class="select" aria-label="游戏分类"><option value="all">全部游戏</option></select><select id="kindFilter" class="select" aria-label="图像类别"><option value="all">全身立绘</option></select><select id="rarityFilter" class="select" aria-label="稀有度"><option value="all">全部稀有度</option><option value="SSR">SSR</option><option value="SR">SR</option><option value="R">R</option><option value="unknown">未标记</option></select><select id="sort" class="select" aria-label="排序方式"><option value="featured">重点角色优先</option><option value="name">名称 A—Z</option><option value="nameDesc">名称 Z—A</option></select></div>
     <div class="segments" role="group" aria-label="内容筛选"><button class="chip active" data-action="mode" data-value="all">全部资料</button><button class="chip" data-action="mode" data-value="full">高清立绘</button><button class="chip" id="favFilter" data-action="favorites">☆ 我的收藏</button><button class="chip" data-action="random">⤨ 随机看一位</button></div>
     <div id="gallery" class="gallery" aria-live="polite"><div class="blank">正在载入角色索引…</div></div>
     <div class="more-row"><button id="more" class="btn" data-action="more" hidden>加载更多角色 ↓</button></div>
@@ -81,9 +81,11 @@ var gameNames={nikke:'胜利女神：妮姬',bluearchive:'蔚蓝档案',arknight
 var $=function(id){return document.getElementById(id)};
 var safe=function(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]})};
 var items=[],active=[],selectedGroup='all',activeId='',page=1,mode='all',onlyFav=false;
+var groupsReady=false,peopleByGame={},PAGE_SIZE=24;
 var favorites=new Set();
 try{favorites=new Set(JSON.parse(localStorage.getItem('winter-characters-favorites-v1')||'[]'))}catch(e){}
 function iconFor(id){return ROOT+'images/sprite/si_'+id+'_00_s.png'}
+function previewFor(c){return c.thumb&&/^\.\/assets\/thumbs\/[a-zA-Z0-9_-]+\.webp$/.test(c.thumb)?c.thumb:c.image}
 function filterItems(){
  var q=$('query').value.trim().toLocaleLowerCase(),rarity=$('rarityFilter').value,kind=$('kindFilter').value;
  var out=items.filter(function(x){
@@ -103,6 +105,29 @@ function filterItems(){
  });
  return out;
 }
+function fillGameLinks(section){
+ if(!section||section.dataset.loaded)return;
+ var gameId=section.dataset.game,game=peopleByGame[gameId];
+ if(!game)return;
+ var container=section.querySelector('.game-characters');
+ var names=Object.keys(game.people).sort(function(a,b){return a.localeCompare(b,'en')});
+ container.innerHTML=names.map(function(name){
+  var arr=game.people[name],label=arr[0].zh||name,key='char:'+gameId+'|'+name;
+  return '<button class="group-nav" data-action="group" data-value="'+safe(key)+'">✧ '+safe(label)+' <small>'+safe(name)+'</small><span class="count">'+arr.length+'</span></button>';
+ }).join('');
+ section.dataset.loaded='1';
+}
+function updateGroupNav(){
+ var nav=$('sideGroups');
+ var game=selectedGroup.startsWith('game:')?selectedGroup.slice(5):selectedGroup.startsWith('char:')?selectedGroup.slice(5).split('|')[0]:'';
+ if(game){
+  Array.from(nav.querySelectorAll('details.game-section')).forEach(function(section){
+   if(section.dataset.game===game){section.open=true;fillGameLinks(section)}
+  });
+ }
+ nav.querySelectorAll('[data-action="group"]').forEach(function(b){b.classList.toggle('active',b.dataset.value===selectedGroup)});
+ $('gameFilter').value=game||'all';
+}
 function drawGroups(){
  var byGame={};
  items.forEach(function(c){
@@ -112,21 +137,28 @@ function drawGroups(){
   if(!byGame[g].people[key])byGame[g].people[key]=[];
   byGame[g].people[key].push(c);
  });
+ peopleByGame=byGame;
  var gameIds=Object.keys(byGame).sort();
- var html='<button class="group-nav '+(selectedGroup==='all'?'active':'')+'" data-action="group" data-value="all">◈ 全部游戏角色 <span class="count">'+items.length+'</span></button>';
+ var html='<button class="group-nav" data-action="group" data-value="all">◈ 全部游戏角色 <span class="count">'+items.length+'</span></button>';
  gameIds.forEach(function(gameId){
-  var g=byGame[gameId],personNames=Object.keys(g.people).sort(function(a,b){return a.localeCompare(b,'en')});
-  html+='<details class="game-section" '+(selectedGroup.startsWith('game:'+gameId)||selectedGroup.startsWith('char:'+gameId+'|')?'open':'')+'><summary>▣ '+safe(gameNames[gameId]||gameId)+' <span class="count">'+g.count+'</span></summary>';
-  html+='<button class="group-nav '+(selectedGroup==='game:'+gameId?'active':'')+'" data-action="group" data-value="game:'+safe(gameId)+'">全部角色 <span class="count">'+personNames.length+' 人</span></button>';
-  personNames.forEach(function(name){
-   var arr=g.people[name],label=arr[0].zh||name;
-   html+='<button class="group-nav '+(selectedGroup==='char:'+gameId+'|'+name?'active':'')+'" data-action="group" data-value="'+safe('char:'+gameId+'|'+name)+'">✧ '+safe(label)+' <small>'+safe(name)+'</small><span class="count">'+arr.length+'</span></button>';
-  });
-  html+='</details>';
+  var g=byGame[gameId],peopleCount=Object.keys(g.people).length;
+  html+='<details class="game-section" data-game="'+safe(gameId)+'"><summary>▣ '+safe(gameNames[gameId]||gameId)+' <span class="count">'+g.count+'</span></summary>';
+  html+='<button class="group-nav" data-action="group" data-value="game:'+safe(gameId)+'">全部角色 <span class="count">'+peopleCount+' 人</span></button>';
+  html+='<div class="game-characters"></div></details>';
  });
  $('sideGroups').innerHTML=html;
- $('featured').innerHTML=items.slice(0,12).map(function(c){return '<button class="feat" data-action="group" data-value="'+safe('char:'+c.gameId+'|'+c.characterKey)+'"><img src="'+safe(c.image)+'" alt="" loading="lazy" decoding="async"><div style="min-width:0"><b>'+safe(c.zh||c.characterKey||c.name)+'</b><span>'+safe(gameNames[c.gameId]||c.gameId)+'</span></div></button>'}).join('');
+ $('gameFilter').innerHTML='<option value="all">全部游戏</option>'+gameIds.map(function(id){return '<option value="'+safe(id)+'">'+safe(gameNames[id]||id)+'</option>'}).join('');
+ var picks=[],selectedGames=new Set(),selectedIds=new Set();
+ items.forEach(function(c){if(!selectedGames.has(c.gameId)&&picks.length<12){picks.push(c);selectedGames.add(c.gameId);selectedIds.add(c.id)}});
+ items.forEach(function(c){if(picks.length<12&&!selectedIds.has(c.id)){picks.push(c);selectedIds.add(c.id)}});
+ $('featured').innerHTML=picks.map(function(c){
+  return '<button class="feat" data-action="group" data-value="'+safe('char:'+c.gameId+'|'+c.characterKey)+'"><img src="'+safe(previewFor(c))+'" alt="" width="43" height="43" loading="lazy" decoding="async"><div style="min-width:0"><b>'+safe(c.zh||c.characterKey||c.name)+'</b><span>'+safe(gameNames[c.gameId]||c.gameId)+'</span></div></button>'
+ }).join('');
+ updateGroupNav();
 }
+$('sideGroups').addEventListener('toggle',function(e){
+ if(e.target.matches('details.game-section')&&e.target.open)fillGameLinks(e.target);
+},true);
 function render(){
  if(!items.length){$('gallery').innerHTML='<div class="blank">没有加载到图片资料。检查网络后刷新页面。</div>';return}
  active=filterItems();
