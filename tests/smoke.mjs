@@ -37,3 +37,13 @@ assert.ok(player.includes('binaryUrl')&&player.includes('atlasUrl'),'Spine runti
 assert.ok(player.includes('indexedDB.open(cacheDB'),'Spine cache missing');
 assert.ok(!/<iframe\b/i.test(player),'Third-party iframe not allowed');
 console.log('PASS: '+chars.characters.length+' classified static artworks across '+new Set(chars.characters.map(x=>x.gameId)).size+' games; '+spine.characters.length+' external Spine entries.');
+
+// Guard against accidentally double-escaped Spine version regexps.
+// A prior regression rejected valid 3.8 export headers before playback began.
+const playerSource=read('spine.html');
+const versionCheck=playerSource.match(/if\(!\/(\^.*?)\/\.test\(version\|\|''\)\)/);
+assert.ok(versionCheck,'Missing Spine export-version validation');
+const versionRegexp=new RegExp(versionCheck[1]);
+assert.ok(versionRegexp.test('3.8.99'),'Spine version regex rejects valid 3.8 export');
+assert.ok(versionRegexp.test('4.1.24'),'Spine version regex rejects valid 4.1 export');
+assert.ok(!versionRegexp.test('unrecognized'),'Spine version regex accepted invalid export');
