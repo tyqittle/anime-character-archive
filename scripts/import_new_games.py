@@ -52,9 +52,10 @@ CURATED = [
     ("wutheringwaves", "jiyan", "忌炎", "Jiyan", WUWA+"T_RoleImgjiyan_UI.png", "https://github.com/TomyJan/WutheringWaves-UIResources/tree/3.7/UIResources/UiLuckdraw/Image"),
     ("wutheringwaves", "yinlin", "吟霖", "Yinlin", WUWA+"T_RoleImgyinlin_UI.png", "https://github.com/TomyJan/WutheringWaves-UIResources/tree/main/UIResources/UiLuckdraw/Image"),
     ("wutheringwaves", "jinhsi", "今汐", "Jinhsi", "https://wiki.biligame.com/wutheringwaves/Special:FilePath/%E8%A7%92%E8%89%B2_%E4%BB%8A%E6%B1%90_%E7%AB%8B%E7%BB%98.png", "https://wiki.biligame.com/wutheringwaves/共鸣者/今汐"),
-    ("wutheringwaves", "changli", "长离", "Changli", "https://wiki.biligame.com/wutheringwaves/Special:FilePath/%E8%A7%92%E8%89%B2_%E9%95%BF%E7%A6%BB_%E7%AB%8B%E7%BB%98.png", "https://wiki.biligame.com/wutheringwaves/共鸣者/长离"),
-    ("wutheringwaves", "shorekeeper", "守岸人", "Shorekeeper", "https://wiki.biligame.com/wutheringwaves/Special:FilePath/%E8%A7%92%E8%89%B2_%E5%AE%88%E5%B2%B8%E4%BA%BA_%E7%AB%8B%E7%BB%98.png", "https://wiki.biligame.com/wutheringwaves/共鸣者/守岸人"),
-    ("wutheringwaves", "camellya", "椿", "Camellya", "https://wiki.biligame.com/wutheringwaves/Special:FilePath/%E8%A7%92%E8%89%B2_%E6%A4%BF_%E7%AB%8B%E7%BB%98.png", "https://wiki.biligame.com/wutheringwaves/共鸣者/椿"),
+    ("wutheringwaves", "changli", "长离", "Changli", "https://patchwiki.biligame.com/images/wutheringwaves/2/25/rwnmwv8y5wjcn98wix521fksfqddhgq.png", "https://wiki.biligame.com/wutheringwaves/共鸣者/长离"),
+    ("wutheringwaves", "shorekeeper", "守岸人", "Shorekeeper", "https://patchwiki.biligame.com/images/wutheringwaves/5/56/101neg0k0er0rkh019ljtj5ev6jgac3.png", "https://wiki.biligame.com/wutheringwaves/共鸣者/守岸人"),
+    ("wutheringwaves", "camellya", "椿", "Camellya", "https://patchwiki.biligame.com/images/wutheringwaves/3/33/piby5xz6lt334blop556739h476l24j.png", "https://wiki.biligame.com/wutheringwaves/共鸣者/椿"),
+    ("wutheringwaves", "lupa", "露帕", "Lupa", "https://patchwiki.biligame.com/images/wutheringwaves/8/8b/9psbu0nhrkejgb9pohgse6nftw839mp.png", "https://wiki.biligame.com/wutheringwaves/文件:角色_露帕_立绘.png"),
 ]
 
 def retrieve(url):
