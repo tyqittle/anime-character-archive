@@ -99,7 +99,11 @@ async function show(options,title,onError){
   await ensureRuntime($('version').value);
   if(attempt!==currentAttempt)return;
   clearPlayer();
-  const config={...options,showControls:true,premultipliedAlpha:true,alpha:false,backgroundColor:'#142238ff',
+  const skeletonPath=options.skeleton||options.binaryUrl||options.jsonUrl;
+  const atlasPath=options.atlas||options.atlasUrl;
+  const normalized={...options,atlasUrl:atlasPath};
+  if(skeletonPath){if(/\.json(?:[?#]|$)/i.test(skeletonPath))normalized.jsonUrl=skeletonPath;else normalized.binaryUrl=skeletonPath;}
+  const config={...normalized,showControls:true,premultipliedAlpha:true,alpha:false,backgroundColor:'#142238ff',
    success:(p)=>{if(attempt!==currentAttempt)return;stopWatchdog();player=p;status('播放成功：'+title+'。底部控制栏可以切换动作、暂停和全屏。')},
    error:(_p,reason)=>{if(attempt!==currentAttempt)return;stopWatchdog();
     if(onError)onError(String(reason||'资源加载失败'));else status('加载失败：'+String(reason||'请核查 Spine 版本及资源路径'),true)}
