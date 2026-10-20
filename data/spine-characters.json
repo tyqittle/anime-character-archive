@@ -278,6 +278,102 @@
       "name": "iDoll Flower",
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c304/c304_00"
+    },
+    {
+      "id": "c305",
+      "name": "iDoll Ocean",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c305/c305_00"
+    },
+    {
+      "id": "c308",
+      "name": "iDoll Sun",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c308/c308_00"
+    },
+    {
+      "id": "c231",
+      "name": "Isabel",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c231/c231_00"
+    },
+    {
+      "id": "c111",
+      "name": "Jackal",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c111/c111_00"
+    },
+    {
+      "id": "c150",
+      "name": "Julia",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c150/c150_00"
+    },
+    {
+      "id": "c100",
+      "name": "Laplace",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c100/c100_00"
+    },
+    {
+      "id": "c082",
+      "name": "Liter",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c082/c082_00"
+    },
+    {
+      "id": "c190",
+      "name": "Ludmilla",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c190/c190_00"
+    },
+    {
+      "id": "c800",
+      "name": "Makima",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c800/c800_00"
+    },
+    {
+      "id": "c130",
+      "name": "Mary",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c130/c130_00"
+    },
+    {
+      "id": "c132",
+      "name": "Mary: Bay Goddess",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c132/c132_00"
+    },
+    {
+      "id": "c254",
+      "name": "Mass Produced Purple",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c254/c254_00"
+    },
+    {
+      "id": "c350",
+      "name": "Mast",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c350/c350_00"
+    },
+    {
+      "id": "c102",
+      "name": "Maxwell",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c102/c102_00"
+    },
+    {
+      "id": "c061",
+      "name": "Mica",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c061/c061_00"
+    },
+    {
+      "id": "c161",
+      "name": "Mihara",
+      "spineVersion": "4.0",
+      "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c161/c161_00"
     }
   ]
 }
