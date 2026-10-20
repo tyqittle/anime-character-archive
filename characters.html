@@ -57,7 +57,7 @@ body{background:radial-gradient(ellipse 56% 32% at 85% -5%,#322d62 0,transparent
 <main class="main">
   <header class="top"><div class="crumb">ANIME CHARACTER ARCHIVE / ALL GAMES</div><div class="top-actions"><a href="./spine.html" class="btn btn-ghost sm">▶ 动态立绘</a><a href="https://github.com/Nikke-db/Nikke-db.github.io" target="_blank" rel="noopener noreferrer" class="btn sm">图源资料库 ↗</a></div></header>
   <section class="hero">
-   <div class="hero-content"><div class="over">THE CHARACTER COLLECTION · ALL GAMES</div><h1>探索你的次元角色</h1><p>收录多款游戏的角色、全身立绘和不同皮肤。按照游戏与角色分类探索，查看高清美术。动态立绘目前仅支持 NIKKE。</p><div class="hero-stat"><span><strong id="totalStat">—</strong>全身立绘候选</span><span><strong id="fullStat">—</strong>全身立绘</span><span><strong id="iconStat">—</strong>头像已清理</span></div></div>
+   <div class="hero-content"><div class="over">THE CHARACTER COLLECTION · ALL GAMES</div><h1>探索你的次元角色</h1><p>收录多款游戏的角色、全身立绘和不同皮肤。按照游戏与角色分类探索，查看高清美术。动态立绘目前仅支持 NIKKE。</p><div class="hero-stat"><span><strong id="totalStat">—</strong>角色立绘</span><span><strong id="fullStat">—</strong>全身立绘</span></div></div>
    <div class="hero-art" aria-hidden="true"><img src="https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c012_00.png" alt=""><img src="https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c010_00.png" alt=""><img src="https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c233_00.png" alt=""></div>
   </section>
   <div class="disclaimer">⚑ <strong>素材使用边界：</strong>角色图片来自不同游戏和社区档案，版权归原权利人。静态立绘文件由本站保存并展示，原始资料来源见每张图片详情；公开展示与再使用请遵守原权利人的许可条款。</div>
@@ -181,7 +181,7 @@ document.addEventListener('keydown',function(e){if(!$('viewer').open)return;if(e
 fetch('./data/characters.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(function(db){
  if(!Array.isArray(db.characters))throw Error('索引数据格式错误');
  items=db.characters.filter(function(c){return c&&c.id&&c.gameId&&c.characterKey&&c.kind==='full'&&/^\.\/assets\/portraits\/[a-zA-Z0-9_-]+\.(?:png|webp)$/.test(c.image)});
- $('totalStat').textContent=items.length;$('fullStat').textContent=items.filter(function(x){return x.kind==='full'}).length;$('iconStat').textContent=items.filter(function(x){return x.kind==='icon'}).length;
+ $('totalStat').textContent=items.length;$('fullStat').textContent=items.filter(function(x){return x.kind==='full'}).length;
  render();
  var hash=decodeURIComponent(location.hash.slice(1));
  if(hash&&items.some(function(x){return x.id===hash}))showOne(hash);
