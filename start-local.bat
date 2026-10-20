@@ -4,16 +4,18 @@ cd /d "%~dp0"
 set "PORT=8765"
 where py >nul 2>nul
 if %errorlevel%==0 (
+  start "Winter Site Server" cmd /k py -3 -m http.server %PORT% --bind 127.0.0.1
+  timeout /t 2 /nobreak >nul
   start "" "http://127.0.0.1:%PORT%/gallery.html"
   echo Website: http://127.0.0.1:%PORT%/gallery.html
-  py -3 -m http.server %PORT% --bind 127.0.0.1
   goto :end
 )
 where python >nul 2>nul
 if %errorlevel%==0 (
+  start "Winter Site Server" cmd /k python -m http.server %PORT% --bind 127.0.0.1
+  timeout /t 2 /nobreak >nul
   start "" "http://127.0.0.1:%PORT%/gallery.html"
   echo Website: http://127.0.0.1:%PORT%/gallery.html
-  python -m http.server %PORT% --bind 127.0.0.1
   goto :end
 )
 where node >nul 2>nul
