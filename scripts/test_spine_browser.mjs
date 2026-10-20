@@ -18,12 +18,12 @@ try{
  await page.goto(url,{waitUntil:'domcontentloaded',timeout:30000});
  await page.waitForFunction(()=>document.querySelectorAll('#characters option').length>5,{timeout:20000});
  console.log('INITIAL_OPTION_COUNT',await page.locator('#characters option').count());
- for(const [game,id] of [['nikke','c010'],['bluearchive','ba-ch0060_spr']]){
+ for(const [game,id] of [['nikke','c010'],['bluearchive','ba-ch0058_home'],['bluearchive','ba-ch0060_home']]){
   await page.selectOption('#gameFilter',game);
   await page.waitForTimeout(300);
   await page.selectOption('#characters',id);
   await page.click('#nikke');
-  const deadline=Date.now()+105000;
+  const deadline=Date.now()+130000;
   let state='timeout',message='';
   while(Date.now()<deadline){
    if(page.isClosed()){state='page-closed';break}
