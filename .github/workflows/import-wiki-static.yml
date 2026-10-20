@@ -27,3 +27,4 @@ jobs:
             git commit -m "Add newly verified static full-body portraits"
             git push origin HEAD:main
           fi
+# refresh importer diagnostics
