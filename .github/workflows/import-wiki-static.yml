@@ -29,3 +29,4 @@ jobs:
           fi
 # refresh importer diagnostics
 # retry PNG signature verification
+# retry corrected PNG bytes check
