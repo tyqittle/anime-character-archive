@@ -1,0 +1,75 @@
+name: Diagnose real Spine binary formats
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/spine-diagnose.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Examine actual NIKKE and Blue Archive skeleton headers
+        run: |
+          python - <<'PY'
+          import json, pathlib, urllib.request, re, traceback
+          src=json.loads(pathlib.Path('data/spine-characters.json').read_text())
+          targets=['c010','c012','ba-ch0058_spr','ba-ch0060_spr']
+          entries=[next(x for x in src['characters'] if x['id']==id) for id in targets]
+          out=[]
+          def spine38(b):
+              i=0
+              def readstr():
+                  nonlocal i
+                  num=0;shift=0
+                  while True:
+                      x=b[i];i+=1
+                      num|=(x&127)<<shift
+                      if not x&128:break
+                      shift+=7
+                      if shift>=35:raise ValueError('bad length')
+                  if num==0:return None
+                  num-=1
+                  if num>128 or i+num>len(b):raise ValueError('bad string length')
+                  s=b[i:i+num].decode('utf-8')
+                  i+=num
+                  return s
+              return [readstr(),readstr()]
+          for e in entries:
+              u=e['base']+'.skel'
+              item={'id':e['id'],'url':u}
+              try:
+                  req=urllib.request.Request(u,headers={'User-Agent':'SpineArchiveDiagnostics/1.0'})
+                  with urllib.request.urlopen(req,timeout=35) as response:
+                      data=response.read(400000)
+                      item['status']=response.status
+                      item['content_type']=response.headers.get('Content-Type','')
+                  item['size']=len(data);item['hex_first_96']=data[:96].hex()
+                  item['text_first_96']=''.join(chr(b) if 32<=b<=126 else '.' for b in data[:96])
+                  try:item['spine38_header']=spine38(data)
+                  except Exception as exc:item['spine38_header_error']=str(exc)
+                  item['found_version_strings']=[m.group().decode('ascii') for m in re.finditer(rb'[234]\\.[0-9]\\.[0-9]{1,3}',data[:128])]
+                  item['likely_gzip']=data[:2]==b'\\x1f\\x8b'
+                  item['likely_json']=data.lstrip().startswith((b'{',b'['))
+              except Exception as e2:item['error']=repr(e2)
+              print('SPINE_DIAGNOSTIC',json.dumps(item,ensure_ascii=False),flush=True)
+              out.append(item)
+          pathlib.Path('data/spine-diagnostics.json').write_text(json.dumps({'diagnostics':out},indent=2,ensure_ascii=False)+'\\n')
+          PY
+      - name: Save source inspection evidence
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/spine-diagnostics.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record inspected Spine source binary headers"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
