@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0c1424"><meta name="description" content="冬境独立角色与剧情CG画廊">
+<title>冬境 | 独立影像档案</title>
+<style>
+:root{color-scheme:dark;--bg:#08101c;--panel:#111d2e;--line:#ffffff22;--muted:#9cb0c8;--accent:#9bd9f0}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 65% -8%,#274667 0,transparent 50%),var(--bg);color:#f0f5ff;font:15px/1.6 system-ui,"Microsoft YaHei",sans-serif}button,input,select{font:inherit}a{color:var(--accent)}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+header{padding:34px max(20px,calc((100vw - 1380px)/2));border-bottom:1px solid var(--line)}.eyebrow{font-size:12px;letter-spacing:3px;color:var(--accent)}
+h1{font-size:clamp(34px,5vw,60px);letter-spacing:2px;margin:5px 0}header p{color:var(--muted);max-width:900px;margin:0}
+nav{display:flex;gap:10px;margin-top:22px;flex-wrap:wrap}nav a{padding:10px 15px;border:1px solid var(--line);border-radius:12px;text-decoration:none;color:#fff}
+nav a[aria-current]{background:#2e536d;border-color:#7dc7ec}.layout{max-width:1430px;margin:auto;padding:25px;display:grid;grid-template-columns:225px minmax(0,1fr);gap:26px}
+aside{position:sticky;top:20px;align-self:start;background:#111d2c;border:1px solid var(--line);border-radius:18px;padding:18px}
+aside h2{font-size:16px;margin:0 0 18px}aside button{width:100%;padding:10px 12px;margin-bottom:6px;border:1px solid transparent;border-radius:10px;text-align:left;background:transparent;color:#afc4db}
+aside button[aria-pressed=true]{background:#304966;color:#fff;border-color:#6faed3}main{min-width:0}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:19px}
+.toolbar input,.toolbar select{background:#16283c;color:#fff;border:1px solid var(--line);border-radius:11px;padding:11px 14px}.toolbar input{flex:1;min-width:170px}
+#stat{color:var(--muted);margin:0 0 17px}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:15px}
+.card{border:1px solid var(--line);background:linear-gradient(155deg,#1e3045,#101824);border-radius:15px;overflow:hidden;cursor:pointer;text-align:left;color:#fff;padding:0;min-width:0}
+.card:hover,.card:focus-visible{border-color:#9bd9f0;transform:translateY(-2px)}.art{height:190px;background:#17273a;display:grid;place-items:center;overflow:hidden}.art img{width:100%;height:100%;object-fit:cover}
+.caption{padding:13px}.caption strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.caption small{display:block;color:var(--muted);margin-top:3px}
+.note{padding:22px;border:1px dashed #48617b;border-radius:14px;background:#111d2c;color:#a7bed6;margin-bottom:20px}.note strong{color:#eaf5ff}
+dialog{border:1px solid #48617b;background:#111b2b;color:white;border-radius:17px;padding:0;max-width:min(96vw,1040px);width:100%}
+dialog::backdrop{background:#030811df;backdrop-filter:blur(5px)}.modal{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(220px,.7fr)}.big{background:#0b1321;min-height:380px;display:grid;place-items:center}.big img{max-width:100%;max-height:79vh;object-fit:contain}.meta{padding:28px}.meta h2{margin:0;font-size:25px}.meta p{color:var(--muted);overflow-wrap:anywhere}
+.control{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.control button,.control a{padding:10px 12px;border:1px solid #57708e;background:#21334a;color:white;border-radius:10px;text-decoration:none}
+#close{position:absolute;top:9px;right:9px;border-radius:50%;padding:8px 13px;background:#233c56;color:white;border:0}
+.empty{padding:48px;text-align:center;color:var(--muted);border:1px dashed #55718f;border-radius:16px}
+footer{text-align:center;color:#89a0b7;font-size:12px;padding:28px}
+@media(max-width:790px){.layout{grid-template-columns:1fr;padding:14px}aside{position:static}aside .groups{display:flex;overflow-x:auto;gap:8px}aside button{white-space:nowrap;width:auto}aside h2{margin-bottom:8px}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.art{height:150px}.modal{grid-template-columns:1fr}.big{min-height:230px}.meta{padding:16px}}
+</style></head>
+<body><header><div class="eyebrow">WINTER / ORIGINAL ARCHIVE</div><h1>冬境 · 影像档案</h1>
+<p>独立制作的视觉图库。剧情 CG 使用本站自己的图片文件；角色索引独立检索，不再使用网页嵌套或跳转冒充播放器。</p>
+<nav><a href="#" id="tabScenes" aria-current="page">剧情 CG</a><a href="#" id="tabCharacters">角色资料</a><a href="./index.html">素材编辑器</a><a href="./characters.html">旧版图鉴</a></nav>
+</header>
+<div class="layout"><aside><h2 id="sideTitle">场景筛选</h2><div class="groups" id="groups"></div></aside>
+<main><div class="toolbar"><input id="q" placeholder="搜索标题、角色或标签…" aria-label="搜索"><select id="sort" aria-label="排序"><option value="default">默认顺序</option><option value="name">名称排序</option></select><button id="reset">清除筛选</button></div>
+<div id="notice" class="note" hidden></div><p id="stat" aria-live="polite">正在加载资料…</p><div id="gallery" class="gallery"></div></main></div>
+<dialog id="viewer"><button id="close" aria-label="关闭">✕</button><div class="modal"><div class="big"><img id="bigImg" alt=""></div><div class="meta"><h2 id="bigTitle"></h2><p id="bigSub"></p><p id="bigTags"></p><div class="control"><button id="prev">← 上一张</button><button id="next">下一张 →</button><a id="original" target="_blank" rel="noopener noreferrer">原始来源 ↗</a></div><p style="font-size:12px">图片和游戏美术版权归原权利人；本站仅做私人素材研究。</p></div></div></dialog>
+<footer>冬境原创网页 · 独立的 HTML / CSS / JavaScript · 本地图像来自 assets/cg · 无 iframe</footer>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), state={tab:'scenes',group:'all',query:'',scenes:[],characters:[],groups:[],visible:[],selected:-1};
+const safeText=(s)=>String(s??'');
+const notice=(s)=>{$('notice').hidden=!s;$('notice').textContent=s};
+async function load(path){let response=await fetch(path,{cache:'no-store'});if(!response.ok)throw new Error(response.status+' '+path);return response.json()}
+function setTab(tab){state.tab=tab;state.group='all';$('q').value='';$('sort').value='default';$('tabScenes').toggleAttribute('aria-current',tab==='scenes');$('tabCharacters').toggleAttribute('aria-current',tab==='characters');$('sideTitle').textContent=tab==='scenes'?'场景筛选':'角色分类';render()}
+function groups(){const list=state.tab==='scenes'?[{id:'all',name:'全部场景'},...state.groups.map(g=>({id:g.id,name:g.name}))]:[{id:'all',name:'全部角色'},{id:'full',name:'全身立绘资料'},{id:'icon',name:'头像 / 变体资料'},{id:'SSR',name:'SSR'},{id:'SR',name:'SR'}];$('groups').replaceChildren();list.forEach(g=>{const b=document.createElement('button');b.textContent=g.name;b.setAttribute('aria-pressed',state.group===g.id);b.onclick=()=>{state.group=g.id;render()};$('groups').append(b)})}
+function render(){groups();const q=$('q').value.trim().toLocaleLowerCase();let list=state.tab==='scenes'?state.scenes:state.characters;
+list=list.filter(x=>{if(state.tab==='scenes'&&state.group!=='all'&&!(x.groupIds||[]).includes(state.group))return false;
+if(state.tab==='characters'&&state.group!=='all'&&x.kind!==state.group&&x.rarity!==state.group)return false;
+return !q||[x.name,x.zh,x.title,...(x.tags||[])].join(' ').toLocaleLowerCase().includes(q)});
+if($('sort').value==='name')list.sort((a,b)=>(a.name||a.title||'').localeCompare(b.name||b.title||''));state.visible=list;
+$('stat').textContent=state.tab==='scenes'?list.length+' 幅剧情 CG · 本站存储的图片':'共 '+list.length+' 条角色资料（动态动画尚未集成；不冒充可播放内容）';
+notice(state.tab==='characters'?'角色资料中的外部图片地址未验证，本页不依赖它们加载。全身 Spine 动画必须取得可用的 .skel、.atlas 与贴图后才能在本站独立渲染。':'');
+$('gallery').replaceChildren();if(!list.length){const e=document.createElement('div');e.className='empty';e.textContent='没有符合筛选条件的内容';$('gallery').append(e);return}
+list.forEach((x,i)=>{const btn=document.createElement('button');btn.className='card';const art=document.createElement('div');art.className='art';
+if(state.tab==='scenes'){const img=document.createElement('img');img.src=x.url;img.alt=x.title||'剧情 CG';img.loading='lazy';img.onerror=()=>{img.remove();art.textContent='此文件暂无法加载'};art.append(img)}
+else{art.textContent=x.kind==='full'?'全身动画资源待导入':'角色资料';art.style.color='#abc0d6'}
+const cap=document.createElement('div');cap.className='caption';const t=document.createElement('strong');t.textContent=x.title||x.name;const s=document.createElement('small');s.textContent=state.tab==='scenes'?(x.tags||[]).slice(0,3).join(' / '):(x.zh||x.id)+' · '+(x.rarity||x.kind);cap.append(t,s);btn.append(art,cap);
+btn.onclick=()=>openCard(i);$('gallery').append(btn)})
+}
+function openCard(i){const x=state.visible[i];if(!x)return;state.selected=i;if(state.tab==='characters'){const note=x.name+(x.zh?' / '+x.zh:'')+'\n'+(x.rarity||x.kind)+'\n\n此角色的独立动画素材尚未安装。';window.alert(note);return}
+$('bigImg').src=x.url;$('bigImg').alt=x.title||'';$('bigTitle').textContent=x.title||'';$('bigSub').textContent=x.note||'';$('bigTags').textContent=(x.tags||[]).join(' · ');$('original').href=x.source||x.url; if(!$('viewer').open)$('viewer').showModal()}
+function navigate(d){if(state.visible.length)openCard((state.selected+d+state.visible.length)%state.visible.length)}
+$('tabScenes').onclick=e=>{e.preventDefault();setTab('scenes')};$('tabCharacters').onclick=e=>{e.preventDefault();setTab('characters')};
+$('q').oninput=render;$('sort').onchange=render;$('reset').onclick=()=>{state.group='all';$('q').value='';render()};
+$('close').onclick=()=>$('viewer').close();$('prev').onclick=()=>navigate(-1);$('next').onclick=()=>navigate(1);$('viewer').onclick=e=>{if(e.target===$('viewer'))$('viewer').close()};
+document.addEventListener('keydown',e=>{if(!$('viewer').open)return;if(e.key==='ArrowRight')navigate(1);if(e.key==='ArrowLeft')navigate(-1)});
+Promise.allSettled([load('./data/catalog.json'),load('./data/characters.json')]).then(([a,b])=>{if(a.status==='fulfilled'){state.scenes=a.value.images||[];state.groups=a.value.groups||[]}if(b.status==='fulfilled')state.characters=b.value.characters||[];if(a.status==='rejected')notice('场景资料加载失败，请通过静态服务器访问本站：'+a.reason.message);render()});
+</script></body></html>
