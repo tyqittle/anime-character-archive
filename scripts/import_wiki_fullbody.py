@@ -7,7 +7,7 @@ ROOT=pathlib.Path(__file__).resolve().parents[1]
 FILE=ROOT/'data/characters.json'
 DIR=ROOT/'assets/portraits'
 API='https://nikke-goddess-of-victory-international.fandom.com/api.php'
-NAMES=['2B','9S','A2','Ade','K','Signal','Poli','Miranda','Vesti','Pepper','Milk','Sugar']
+NAMES=["2B","9S","A2","Ade","K","Cinderella","Crown","Red Hood","Naga","Tia","Bay","Clay","Moran","Leona","Nero","Jackal","Quiry","Quency","Guilty","Sin","Snow White","Rapunzel","Noah","Isabel","Harran","Nihilister","Indivilia","Soda","Cocoa","Soline","Mast","Ein","Zwei","Flora","Trony","Elegg","Marciana","Tove","Bunny Soda","Alice Wonderland Bunny","Ade Agent Bunny","Anis Star","Arcana","Chime","Phantom","Mana","Grave","Rumani","Rouge"]
 def read_json(params):
  url=API+'?'+urllib.parse.urlencode(params)
  req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (compatible; CharacterArchive/1.0)','Accept':'application/json'})
