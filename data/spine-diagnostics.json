@@ -1,0 +1,62 @@
+{
+  "diagnostics": [
+    {
+      "id": "c010",
+      "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010/c010_00.skel",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "size": 400000,
+      "hex_first_96": "415336f7cf36687c07342e302e3437c4058008c257e5e0446c800845060d9e009f01066163635f31086163635f315f31086163635f315f32086163635f315f33066163635f32066163635f33086163635f335f31066163635f34066163635f35",
+      "text_first_96": "AS6..6h|.4.0.47.....W..Dl..E.......acc_1.acc_1_1.acc_1_2.acc_1_3.acc_2.acc_3.acc_3_1.acc_4.acc_5",
+      "spine38_header_error": "'utf-8' codec can't decode byte 0xf7 in position 2: invalid start byte",
+      "found_version_strings": [],
+      "likely_gzip": false,
+      "likely_json": false
+    },
+    {
+      "id": "c012",
+      "url": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c012/c012_00.skel",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "size": 400000,
+      "hex_first_96": "a18038b5059482b607342e302e3437c3d880003e23a000447b402845048d6800c8031330302f6164645f61726d5f62616e645f7231106164645f61726d5f62616e645f72311330302f6164645f61726d5f62616e645f7232106164645f61726d",
+      "text_first_96": "..8......4.0.47....>#..D{@(E..h....00/add_arm_band_r1.add_arm_band_r1.00/add_arm_band_r2.add_arm",
+      "spine38_header_error": "bad string length",
+      "found_version_strings": [],
+      "likely_gzip": false,
+      "likely_json": false
+    },
+    {
+      "id": "ba-ch0058_spr",
+      "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0058_spr/CH0058_spr.skel",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "size": 19891,
+      "hex_first_96": "1c7a4a6e556233337878783059464239466b456e6b6630544b39753007332e382e3936c4736190c4817ffc4500a86545185ff80141f000000a2e2f696d616765732f56453a2f30325f4d785fec95a0eb8b88eba994ec9db4ec85982f5370696e",
+      "text_first_96": ".zJnUb33xxx0YFB9FkEnkf0TK9u0.3.8.96.sa.....E..eE._..A...../images/VE:/02_Mx_.............../Spin",
+      "spine38_header": [
+        "zJnUb33xxx0YFB9FkEnkf0TK9u0",
+        "3.8.96"
+      ],
+      "found_version_strings": [],
+      "likely_gzip": false,
+      "likely_json": false
+    },
+    {
+      "id": "ba-ch0060_spr",
+      "url": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0060_spr/CH0060_spr.skel",
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "size": 22138,
+      "hex_first_96": "1c653472714c4b4e415a71324954536d553657536a7661754f676b4d07332e382e3936c4876002c412371644fc202244f37b8a0141f000000a2e2f696d616765732f59453a2f30325f4d785fec95a0eb8b88eba994ec9db4ec85982f5370696e",
+      "text_first_96": ".e4rqLKNAZq2ITSmU6WSjvauOgkM.3.8.96..`...7.D. \"D.{..A...../images/YE:/02_Mx_.............../Spin",
+      "spine38_header": [
+        "e4rqLKNAZq2ITSmU6WSjvauOgkM",
+        "3.8.96"
+      ],
+      "found_version_strings": [],
+      "likely_gzip": false,
+      "likely_json": false
+    }
+  ]
+}\n
