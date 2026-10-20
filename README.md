@@ -12,17 +12,17 @@
 | `characters.html` | 静态按游戏 → 角色 → 皮肤分组的图鉴、搜索、筛选、收藏 |
 | `spine.html` | Spine 动态角色播放器、浏览器缓存、导入本地文件 |
 | `gallery.html` | 兼容旧链接，重定向至角色图鉴 |
-| `data/characters.json` | 169 条已分类全身立绘记录，图片均已存入仓库；不包含头像专用记录 |
+| `data/characters.json` | 232 条已分类全身立绘记录，图片均已存入仓库；不包含头像专用记录 |
 | `data/spine-characters.json` | 102 条 Spine 角色与皮肤动画来源索引 |
-| `assets/portraits/*.js` | 102 张本地静态全身立绘 PNG，已接入角色图鉴 |
+| `assets/portraits/*.js` | 232 张本地静态全身立绘 PNG / WebP，已接入角色图鉴 |
 | `tests/smoke.mjs` | 结构与数据完整性测试 |
 | `.github/workflows/verify.yml` | 每次 push / PR 自动运行结构检查 |
 
 ## 数据与资源边界
 
-- **102 张静态 PNG 已保存至本站**，但是否符合美术质量要求仍需逐张人工审核。
+- **232 张静态立绘已保存至本站**，但是否符合美术质量要求仍需逐张人工审核。
 - **102 个 Spine 索引**不等于 102 个都已验证成功播放。页面从第三方源下载动画的 `.skel`、`.atlas` 与贴图；下载后可缓存在用户浏览器的 IndexedDB 中。
-- `assets/portraits/` 保存 102 张原始 PNG；新版图鉴通过 `data/characters.json` 中的本站相对路径加载它们。原始来源保留在 `originalImage` / `source` 字段。
+- `assets/portraits/` 保存 232 张 PNG / WebP；新版图鉴通过 `data/characters.json` 中的本站相对路径加载它们。原始来源保留在 `originalImage` / `source` 字段。
 - 原有头像索引、旧 CG 索引及 10 张旧 CG 图片已从当前分支删除。旧 Git 历史仍可追溯。
 - 游戏角色、美术和动画版权归各权利人；第三方文件存在不等于拥有转存或再分发许可。公开使用需核实授权。
 
@@ -35,7 +35,7 @@
 ## 收录游戏
 
 - **胜利女神：妮姬（NIKKE）**：129 张静态立绘，本地托管；102 条 Spine 动态索引，外部资源。
-- **蔚蓝档案（Blue Archive）**：40 张本地静态学生立绘，数据与图片来自 SchaleDB 社区档案。动态资源暂未收录。
+- **蔚蓝档案（Blue Archive）**：103 张本地静态学生立绘，数据与图片来自 SchaleDB 社区档案。动态资源暂未收录。
 - 所有静态记录必须具有 `gameId` 和 `characterKey`，分类由页面自动构建，不再使用“未分类”栏目。
 
 ## 质量检查
@@ -50,6 +50,6 @@ node tests/smoke.mjs
 
 ## 下一步
 
-1. 人工审核 169 张已保存的静态立绘，过滤不符合视觉质量标准的图片。
+1. 人工审核 232 张已保存的静态立绘，过滤不符合视觉质量标准的图片。
 2. 验证 Spine 角色版本、动画动作和资源完整性，记录可播放状态。
 3. 动态 Spine 资源保留外部链接，不存储到本站仓库；定期检查链接可用性。
