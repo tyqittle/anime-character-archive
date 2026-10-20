@@ -1,0 +1,34 @@
+name: Diagnose Blue Archive renderer screenshot
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/debug_ba_render.mjs'
+      - '.github/workflows/ba-render-debug.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser driver
+        run: npm install --no-save --no-package-lock playwright-core@1.56.1 pngjs@7.0.0
+      - name: Serve site
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/site.log 2>&1 &
+          sleep 2
+      - name: Capture renderer variants and original atlas pages
+        run: node scripts/debug_ba_render.mjs
+      - name: Upload visual inspections
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ba-render-debug
+          path: /tmp/ba-debug/
+          if-no-files-found: warn
