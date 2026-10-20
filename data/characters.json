@@ -6,8 +6,8 @@
   "sourceIndex": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/js/json/l2d.json",
   "sourceRepository": "https://github.com/Nikke-db/Nikke-db.github.io",
   "counts": {
-    "total": 463,
-    "full": 463
+    "total": 464,
+    "full": 464
   },
   "characters": [
     {
@@ -8241,6 +8241,22 @@
       "image": "./assets/portraits/starrail-1307.webp",
       "source": "https://github.com/ScobbleQ/HoYo-Assets/tree/main/starrail/splash",
       "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/starrail/splash/1307.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "wutheringwaves-jinhsi",
+      "name": "今汐",
+      "zh": "今汐",
+      "nameEn": "Jinhsi",
+      "gameId": "wutheringwaves",
+      "game": "鸣潮",
+      "characterKey": "今汐",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/wutheringwaves-jinhsi.webp",
+      "source": "https://wiki.biligame.com/wutheringwaves/共鸣者/今汐",
+      "originalImage": "https://wiki.biligame.com/wutheringwaves/Special:FilePath/%E8%A7%92%E8%89%B2_%E4%BB%8A%E6%B1%90_%E7%AB%8B%E7%BB%98.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
     },
