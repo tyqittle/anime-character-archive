@@ -13,7 +13,7 @@
 | `spine.html` | Spine 动态角色播放器、浏览器缓存、导入本地文件 |
 | `gallery.html` | 兼容旧链接，重定向至角色图鉴 |
 | `data/characters.json` | 97 条**候选**全身立绘记录；不包含头像专用记录 |
-| `data/spine-characters.json` | 62 条 Spine 角色动画来源索引 |
+| `data/spine-characters.json` | 102 条 Spine 角色与皮肤动画来源索引 |
 | `assets/portraits/*.js` | 12 个独立保存的 PNG 立绘封装文件，目前未接入新版角色页面 |
 | `tests/smoke.mjs` | 结构与数据完整性测试 |
 | `.github/workflows/verify.yml` | 每次 push / PR 自动运行结构检查 |
@@ -21,7 +21,7 @@
 ## 数据与资源边界
 
 - **97 个静态候选**不等于 97 个已逐张目视核实的完整立绘，部分图片仍可能失效或不完整。
-- **62 个 Spine 索引**不等于 62 个都已验证成功播放。页面从第三方源下载动画的 `.skel`、`.atlas` 与贴图；下载后可缓存在用户浏览器的 IndexedDB 中。
+- **102 个 Spine 索引**不等于 102 个都已验证成功播放。页面从第三方源下载动画的 `.skel`、`.atlas` 与贴图；下载后可缓存在用户浏览器的 IndexedDB 中。
 - `assets/portraits/` 中有 12 个保存于本仓库的立绘文件，但新版页面目前优先使用 `data/characters.json` 中的外部图片地址。不可把有文件误写为已经在网页调用。
 - 原有头像索引、旧 CG 索引及 10 张旧 CG 图片已从当前分支删除。旧 Git 历史仍可追溯。
 - 游戏角色、美术和动画版权归各权利人；第三方文件存在不等于拥有转存或再分发许可。公开使用需核实授权。
