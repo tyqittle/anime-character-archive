@@ -29,7 +29,7 @@ footer{padding:24px;text-align:center;color:#92a8bb;font-size:12px}
 <header><div class="sitebar"><a class="sitebrand" href="./characters.html">✦ 次元角色档案馆</a><nav><a href="./characters.html">角色图鉴</a><a class="selected" href="./spine.html">▶ 动态立绘</a></nav></div><h1>动态立绘剧场</h1><p>选择角色，欣赏 Spine 骨骼动画。可以切换动作、暂停和全屏。</p></header>
 <div class="wrap">
 <section class="side">
-<h2>角色动画</h2><label for="gameFilter">选择游戏</label><select id="gameFilter"><option value="all">全部游戏</option><option value="nikke">胜利女神：妮姬</option><option value="bluearchive">蔚蓝档案</option></select><label for="characterSearch">搜索角色（中文、英文或编号）</label><input id="characterSearch" type="search" placeholder="例如：安妮丝 / Rapi / c012"><label for="characters">当前选中的角色</label><select id="characters"><option value="">请选择角色…</option></select><div id="characterCards" class="character-cards" aria-label="角色图片选择列表"></div><p class="note" id="selectionNote">点击下面的角色卡片，即可选中并播放。</p><button id="nikke" class="primary" disabled>▶ 播放选中角色</button><p class="note">这是本站自己渲染的 Spine 动画；骨骼与贴图暂从社区原始文件地址加载，不嵌入对方网页。若资源下载失败，将尝试备用镜像，并在超时后显示错误。</p><button id="testUrls" type="button">检测选中角色的资源连通性</button><hr><h2>播放测试</h2>
+<h2>角色动画</h2><label for="gameFilter">选择游戏</label><select id="gameFilter"><option value="all">全部游戏</option><option value="nikke">胜利女神：妮姬</option><option value="bluearchive">蔚蓝档案（待完成角色匹配）</option></select><label for="characterSearch">搜索角色（中文、英文或编号）</label><input id="characterSearch" type="search" placeholder="例如：安妮丝 / Rapi / c012"><label for="characters">当前选中的角色</label><select id="characters"><option value="">请选择角色…</option></select><div id="characterCards" class="character-cards" aria-label="角色图片选择列表"></div><p class="note" id="selectionNote">点击下面的角色卡片，即可选中并播放。</p><button id="nikke" class="primary" disabled>▶ 播放选中角色</button><p class="note">这是本站自己渲染的 Spine 动画；骨骼与贴图暂从社区原始文件地址加载，不嵌入对方网页。若资源下载失败，将尝试备用镜像，并在超时后显示错误。</p><button id="testUrls" type="button">检测选中角色的资源连通性</button><hr><h2>播放测试</h2>
 <label for="version">骨骼版本</label><select id="version"><option value="4.0">Spine 4.0</option><option value="4.1">Spine 4.1</option><option value="4.2">Spine 4.2</option></select>
 <button id="demo" class="primary">▶ 播放官方示例动画</button>
 <p class="note">演示资源由 Spine 官方提供，用于核对播放器是否能真正渲染动作；<strong>不是 NIKKE 人物</strong>。</p>
@@ -75,11 +75,11 @@ function charInfo(c){
 }
 function refreshCharacters(){
  const game=$('gameFilter').value,query=$('characterSearch').value.toLowerCase().trim();
- const filtered=allCharacters.filter(c=>{const info=charInfo(c);return (game==='all'||(c.gameId||'nikke')===game)&&(!query||[c.id,c.name,info.zh,c.gameId].join(' ').toLowerCase().includes(query))});
+ const filtered=allCharacters.filter(c=>{const info=charInfo(c);return !!info.image&&(game==='all'||(c.gameId||'nikke')===game)&&(!query||[c.id,c.name,info.zh,c.gameId].join(' ').toLowerCase().includes(query))});
  const previously=$('characters').value;
  $('characters').replaceChildren(new Option('请选择角色…',''),...filtered.map(c=>{const info=charInfo(c);return new Option((info.zh&&info.zh!==c.name?info.zh+' · ':'')+c.name+' ('+c.id+')',c.id)}));
  if(filtered.some(c=>c.id===previously))$('characters').value=previously;
- $('nikke').disabled=!chosen();
+ $('nikke').disabled=!chosen()||!charInfo(chosen()).image;
  const area=$('characterCards');area.replaceChildren();
  for(const c of filtered.slice(0,240)){
   const info=charInfo(c),card=document.createElement('button');card.type='button';card.className='character-card';card.setAttribute('aria-pressed',String(c.id===$('characters').value));
@@ -90,9 +90,9 @@ function refreshCharacters(){
   card.onclick=()=>{$('characters').value=c.id;$('nikke').disabled=false;$('selectionNote').textContent='已选：'+label.textContent;refreshCardSelection();};
   area.append(card);
  }
- $('selectionNote').textContent='找到 '+filtered.length+' 个资源；点击卡片选择，或用上方下拉框选择。';
+ $('selectionNote').textContent=filtered.length?'已匹配 '+filtered.length+' 个有真实人物立绘的角色；选择卡片预览并播放。':'这个游戏的动画资源尚未完成角色身份与图片匹配，暂不展示无法辨认的编号条目。';
 }
-function refreshCardSelection(){const cards=$('characterCards').querySelectorAll('button');const ids=allCharacters.filter(c=>{const game=$('gameFilter').value,q=$('characterSearch').value.toLowerCase().trim(),info=charInfo(c);return(game==='all'||(c.gameId||'nikke')===game)&&(!q||[c.id,c.name,info.zh,c.gameId].join(' ').toLowerCase().includes(q))}).slice(0,240);cards.forEach((b,i)=>b.setAttribute('aria-pressed',String(ids[i]?.id===$('characters').value)))}
+function refreshCardSelection(){const cards=$('characterCards').querySelectorAll('button');const ids=allCharacters.filter(c=>{const game=$('gameFilter').value,q=$('characterSearch').value.toLowerCase().trim(),info=charInfo(c);return !!info.image&&(game==='all'||(c.gameId||'nikke')===game)&&(!q||[c.id,c.name,info.zh,c.gameId].join(' ').toLowerCase().includes(q))}).slice(0,240);cards.forEach((b,i)=>b.setAttribute('aria-pressed',String(ids[i]?.id===$('characters').value)))}
 $('gameFilter').onchange=refreshCharacters;
 $('characterSearch').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(refreshCharacters,140)};
 
@@ -272,8 +272,8 @@ $('version').onchange=()=>{
   allCharacters=embeddedCharacters;
   if(location.protocol!=='file:'){try{const r=await fetch(manifestUrl,{cache:'no-store'});if(r.ok){const db=await r.json();if(Array.isArray(db.characters)&&db.characters.length)allCharacters=db.characters}}catch(e){console.warn('使用离线内嵌角色目录',e)}}
   refreshCharacters();
-  const requested=params.get('id');if(requested&&allCharacters.some(x=>x.id===requested)){const hit=allCharacters.find(x=>x.id===requested);$('gameFilter').value=hit.gameId||'nikke';refreshCharacters();$('characters').value=requested;refreshCardSelection();}
-  $('nikke').disabled=!chosen();
+  const requested=params.get('id');if(requested&&allCharacters.some(x=>x.id===requested&&!!charInfo(x).image)){const hit=allCharacters.find(x=>x.id===requested);$('gameFilter').value=hit.gameId||'nikke';refreshCharacters();$('characters').value=requested;refreshCardSelection();}
+  $('nikke').disabled=!chosen()||!charInfo(chosen()).image;
   status('已准备 '+allCharacters.length+' 位角色动画索引。请选择角色并点击播放。');
   if(chosen()&&params.get('id'))playCharacter(chosen());
  }catch(e){status('角色索引无法加载：'+e.message+'。请在静态服务器中打开网页，或直接导入本地资源。',true)}
