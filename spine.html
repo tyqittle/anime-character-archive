@@ -29,7 +29,7 @@ footer{padding:24px;text-align:center;color:#92a8bb;font-size:12px}
 <header><div class="sitebar"><a class="sitebrand" href="./characters.html">✦ 次元角色档案馆</a><nav><a href="./characters.html">角色图鉴</a><a class="selected" href="./spine.html">▶ 动态立绘</a></nav></div><h1>动态立绘剧场</h1><p>选择角色，欣赏 Spine 骨骼动画。可以切换动作、暂停和全屏。</p></header>
 <div class="wrap">
 <section class="side">
-<h2>角色动画</h2><label for="characters">选择 NIKKE 人物</label><select id="characters"><option value="">正在加载角色索引…</option></select><button id="nikke" class="primary" disabled>▶ 播放选中角色</button><p class="note">这是本站自己渲染的 Spine 动画；骨骼与贴图暂从社区原始文件地址加载，不嵌入对方网页。若资源下载失败，将尝试备用镜像，并在超时后显示错误。</p><button id="testUrls" type="button">检测选中角色的资源连通性</button><hr><h2>播放测试</h2>
+<h2>角色动画</h2><label for="gameFilter">选择游戏</label><select id="gameFilter"><option value="all">全部游戏</option><option value="nikke">胜利女神：妮姬</option><option value="bluearchive">蔚蓝档案</option></select><label for="characters">选择人物或动画资源</label><select id="characters"><option value="">正在加载角色索引…</option></select><button id="nikke" class="primary" disabled>▶ 播放选中角色</button><p class="note">这是本站自己渲染的 Spine 动画；骨骼与贴图暂从社区原始文件地址加载，不嵌入对方网页。若资源下载失败，将尝试备用镜像，并在超时后显示错误。</p><button id="testUrls" type="button">检测选中角色的资源连通性</button><hr><h2>播放测试</h2>
 <label for="version">骨骼版本</label><select id="version"><option value="4.0">Spine 4.0</option><option value="4.1">Spine 4.1</option><option value="4.2">Spine 4.2</option></select>
 <button id="demo" class="primary">▶ 播放官方示例动画</button>
 <p class="note">演示资源由 Spine 官方提供，用于核对播放器是否能真正渲染动作；<strong>不是 NIKKE 人物</strong>。</p>
@@ -66,6 +66,8 @@ async function refreshSaved(){try{const all=await cacheAll();const select=$('sav
 function stopWatchdog(){if(watchdog){clearTimeout(watchdog);watchdog=null}}
 function status(message,error=false){$('status').textContent=message;$('status').classList.toggle('error',error)}
 function chosen(){return allCharacters.find(c=>c.id===$('characters').value)}
+function refreshCharacters(){const game=$('gameFilter').value;const filtered=allCharacters.filter(c=>game==='all'||(c.gameId||'nikke')===game);$('characters').replaceChildren(new Option('请选择角色…',''),...filtered.map(c=>new Option((c.versionUnverified?'[待验证] ':'')+c.name+' ('+c.id+')',c.id)));$('nikke').disabled=true;}
+$('gameFilter').onchange=refreshCharacters;
 function setVersion(v, packId=''){
  if($('version').value===v)return true;
  if(loadedVersion&&loadedVersion!==v){const next=new URL(location.href);next.searchParams.set('v',v);if(packId){next.searchParams.set('pack',packId);next.searchParams.delete('id')}else{next.searchParams.set('id',$('characters').value);next.searchParams.delete('pack')}location.href=next.toString();return false}
@@ -114,6 +116,7 @@ async function show(options,title,onError){
  }catch(e){stopWatchdog();if(attempt===currentAttempt)status('播放器初始化失败：'+(e.message||String(e)),true)}
 }
 function urls(c,mirror){
+ if(c.gameId==='bluearchive')return {skeleton:c.base+'.skel',atlas:c.base+'.atlas',base:c.base};
  const base=mirror==='legacy'?'https://nikke-db-legacy.pages.dev/l2d/'+c.id+'/'+c.id+'_00':c.base;
  return {skeleton:base+'.skel',atlas:base+'.atlas',base};
 }
@@ -130,7 +133,7 @@ function imagePages(atlasText){
   .filter(x=>/\.(png|webp|jpg|jpeg)$/i.test(x)&&!x.includes(':')))];
 }
 async function downloadPack(c,mirror){
- const paths=urls(c,mirror),stem=c.id+'_00';
+ const paths=urls(c,mirror),stem=c.base.split('/').pop();
  const [skelBlob,atlasBlob]=await Promise.all([downloadBlob(paths.skeleton),downloadBlob(paths.atlas)]);
  if(skelBlob.size<100||atlasBlob.size<20)throw Error('骨骼或图集文件大小异常');
  const atlasText=(await atlasBlob.text()).replace(/^\uFEFF/,'');
@@ -146,15 +149,15 @@ async function downloadPack(c,mirror){
   if(blob.size<100)throw Error('贴图为空：'+page);
   data[page]=await blobToUri(blob);
  }
- return {id:'nikke-'+c.id,version:c.spineVersion,skeleton:stem+'.skel',atlas:stem+'.atlas',rawDataURIs:data};
+ return {id:(c.gameId||'nikke')+'-'+c.id,version:c.spineVersion,skeleton:stem+'.skel',atlas:stem+'.atlas',rawDataURIs:data};
 }
 function blobToUri(blob){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(reader.error);reader.readAsDataURL(blob)})}
 let sequence=0;
 async function playCharacter(c){
  const current=++sequence;
  if(!setVersion(c.spineVersion))return;
- const packId='nikke-'+c.id;
- status('正在查找 '+c.name+' 的本地缓存…');
+ const packId=(c.gameId||'nikke')+'-'+c.id;
+ status((c.versionUnverified?'该资源骨骼版本尚未验证，可能无法播放。':'')+'正在查找 '+c.name+' 的本地缓存…');
  try{
   let pack=await dbAction('readonly',s=>s.get(packId)).catch(()=>null);
   if(pack){
@@ -164,7 +167,7 @@ async function playCharacter(c){
    return;
   }
   let failure='';
-  for(const mirror of ['github','legacy']){
+  for(const mirror of (c.gameId==='bluearchive'?['github']:['github','legacy'])){
    if(current!==sequence)return;
    try{
     status('正在从 '+(mirror==='github'?'原始素材目录':'备用镜像')+'读取 '+c.name+' 的完整动画文件…');
@@ -240,8 +243,8 @@ $('version').onchange=()=>{
  try{
   allCharacters=embeddedCharacters;
   if(location.protocol!=='file:'){try{const r=await fetch(manifestUrl,{cache:'no-store'});if(r.ok){const db=await r.json();if(Array.isArray(db.characters)&&db.characters.length)allCharacters=db.characters}}catch(e){console.warn('使用离线内嵌角色目录',e)}}
-  $('characters').replaceChildren(new Option('请选择角色…',''),...allCharacters.map(c=>new Option(c.name+' ('+c.id+')',c.id)));
-  const requested=params.get('id');if(requested&&allCharacters.some(x=>x.id===requested))$('characters').value=requested;
+  refreshCharacters();
+  const requested=params.get('id');if(requested&&allCharacters.some(x=>x.id===requested)){const hit=allCharacters.find(x=>x.id===requested);$('gameFilter').value=hit.gameId||'nikke';refreshCharacters();$('characters').value=requested;}
   $('nikke').disabled=!chosen();
   status('已准备 '+allCharacters.length+' 位角色动画索引。请选择角色并点击播放。');
   if(chosen()&&params.get('id'))playCharacter(chosen());
