@@ -1,0 +1,29 @@
+name: Probe live Pages address
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/pages-live-probe.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Diagnose published URL and redirects from GitHub runner
+        shell: bash
+        run: |
+          set +e
+          echo "=== DNS ==="
+          getent ahostsv4 tyqittle.github.io | head -n 5
+          echo "=== HTTP probes ==="
+          for path in '/' '/winter-cg-archive/' '/winter-cg-archive/characters.html' '/winter-cg-archive/spine.html'; do
+            echo "== $path =="
+            curl -L -sS -m 25 --max-redirs 7 -D /tmp/gh-headers -o /tmp/gh-body -w 'FINAL_HTTP=%{http_code} EFFECTIVE_URL=%{url_effective} REDIRECTS=%{num_redirects} REMOTE_IP=%{remote_ip} TLS_VERIFY=%{ssl_verify_result}\n' "https://tyqittle.github.io$path"
+            grep -iE '^(HTTP/|location:|content-type:|content-length:|server:)' /tmp/gh-headers | tail -n 15
+            echo "Body first bytes:"
+            head -c 220 /tmp/gh-body | tr '\n' ' '
+            echo
+          done
