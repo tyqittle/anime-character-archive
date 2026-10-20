@@ -1,0 +1,9 @@
+{
+  "total": 133,
+  "source": "All preview images rendered from the matching animation on the same Spine player",
+  "byGame": {
+    "nikke": 102,
+    "bluearchive": 31
+  },
+  "warning": "Pose is a frame of the same animation; costumes and backgrounds may differ from official marketing portraits."
+}

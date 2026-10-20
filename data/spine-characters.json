@@ -9,7 +9,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010/c010_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c010.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2020886635153dee30fb0f8b3249b48585b0ebeab6ac58aa1f783e433576e1d0",
+      "previewAnimation": "idle"
     },
     {
       "id": "c011",
@@ -17,7 +21,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c011/c011_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c011.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f1185cc3af1a46877b4082648362af1ad34aed256fb2729447d12266c3697c9d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c012",
@@ -25,7 +33,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c012/c012_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c012.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b98721f9c6d2f38b6d77dddf7a2213304cbf5fad307f1d28636944bbd6e7a5f2",
+      "previewAnimation": "idle"
     },
     {
       "id": "c013",
@@ -33,7 +45,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c013/c013_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c013.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "5c689abec5b0a6289eaec48b7133f80d078d06c58e15e35c271359bfe6b66a90",
+      "previewAnimation": "idle"
     },
     {
       "id": "c015",
@@ -41,7 +57,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c015/c015_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c015.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c08273848fc638ee7cc56d84c61b7a3dd73fa5e06699c7cb36ceb65734772f3e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c040",
@@ -49,7 +69,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c040/c040_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c040.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2ad698a226a87e1226814c494ff089e9de605f3bd4d274e3c7361f20de8368f8",
+      "previewAnimation": "idle"
     },
     {
       "id": "c060",
@@ -57,7 +81,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c060/c060_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c060.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8d75c9dfe3ae8fc41e180bfcc5eba3193491f7a48b76955f58bee902a703ed92",
+      "previewAnimation": "idle"
     },
     {
       "id": "c070",
@@ -65,7 +93,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070/c070_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c070.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2ce706982ab962c0983b9e365ea50a6cd756e9246718a673dae5b84ef546518d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c072",
@@ -73,7 +105,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c072/c072_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c072.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7de83ef0a0e8e28df4be324fd06877836c976787d1c75f7f96bc3b03f4d0e898",
+      "previewAnimation": "idle"
     },
     {
       "id": "c080",
@@ -81,7 +117,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c080/c080_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c080.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "57f4a4939668662fabf8892fbc75b57e00230d7d370cf248d32a9a2d8c7c35aa",
+      "previewAnimation": "idle"
     },
     {
       "id": "c090",
@@ -89,7 +129,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090/c090_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c090.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "928272bcbdecf52406901adf9c33740151d0dbf8d4b21270681d2d724f6fafa3",
+      "previewAnimation": "idle"
     },
     {
       "id": "c101",
@@ -97,7 +141,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c101/c101_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c101.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9f306abca5d38a919286391571b93eb00373a7bbf0ee75e3a10751a9e94427ea",
+      "previewAnimation": "idle"
     },
     {
       "id": "c110",
@@ -105,7 +153,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c110/c110_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c110.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "5c8a1a1c23a87c9b1529d5b347b6b03cdc8549b5f72a14163e454e41cbd6983f",
+      "previewAnimation": "idle"
     },
     {
       "id": "c112",
@@ -113,7 +165,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c112/c112_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c112.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c1992026c7326e4f00cd0682b43582004e0f4ad9864297b1c0f2a5032075be75",
+      "previewAnimation": "idle"
     },
     {
       "id": "c170",
@@ -121,7 +177,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c170/c170_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c170.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6f65b1ce6ede6df7b77b7a01ea167bcc8451c18d854b4f02c3f9a60bddef6f5b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c180",
@@ -129,7 +189,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c180/c180_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c180.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "67d79a3f94daf69ee2839aadb3b67b5cb6e71653f4f2fb70c5be50ff3ecb20ea",
+      "previewAnimation": "idle"
     },
     {
       "id": "c181",
@@ -137,7 +201,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c181/c181_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c181.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e70f987f964ce35378ad328c3b039812bd5d7a4316979232cc8b08e15d5b007b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c191",
@@ -145,7 +213,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c191/c191_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c191.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2b9772e8b85eec9da6401986503c13523c72f809d70131d2fe142335471395bd",
+      "previewAnimation": "idle"
     },
     {
       "id": "c200",
@@ -153,7 +225,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c200/c200_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c200.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "650fa4ba8cd44331227c4220282b3e7e78b7be0086b189b817598263b65f5b55",
+      "previewAnimation": "idle"
     },
     {
       "id": "c203",
@@ -161,7 +237,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c203/c203_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c203.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3b6f3919bc16a9785832f11408c898b1652416a06df0316f09b0c3b69f8e12cd",
+      "previewAnimation": "idle"
     },
     {
       "id": "c222",
@@ -169,7 +249,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c222/c222_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c222.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b1c7896e52300c76d0fff8f477c960b1f24d698ef92b837c52e1da84cd091e48",
+      "previewAnimation": "idle"
     },
     {
       "id": "c230",
@@ -177,7 +261,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c230/c230_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c230.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "21c26fc2156d9957ff8888cd9a5d8697abfd70328caa4ea06ebf53c63e45e6c1",
+      "previewAnimation": "idle"
     },
     {
       "id": "c233",
@@ -185,7 +273,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c233/c233_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c233.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ac1bea8c50fbe48f2659a8d5a160a7643d13b1478c46b7b4b5202654463aa55a",
+      "previewAnimation": "idle"
     },
     {
       "id": "c260",
@@ -193,7 +285,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c260/c260_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c260.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b220146b23160815a1dbbec8025e69b5b8a0537d4ab146c372731ef90f314d9e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c270",
@@ -201,7 +297,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c270/c270_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c270.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a6b4186244b612ae81df5271a9f375a6b8d5575dfc55f7fd5c998b3836f606fd",
+      "previewAnimation": "idle"
     },
     {
       "id": "c280",
@@ -209,7 +309,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c280/c280_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c280.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "67547b04dad0ea928f7af9fd6d8c346ec0a43a847eebdeaef13a0524ec63a214",
+      "previewAnimation": "idle"
     },
     {
       "id": "c282",
@@ -217,7 +321,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c282/c282_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c282.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "06e15bf9707f23d66121064c2c7a2cae1f5f71115bfb06cc24f9f4447ec3dc73",
+      "previewAnimation": "idle"
     },
     {
       "id": "c352",
@@ -225,7 +333,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c352/c352_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c352.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "62a5d135861e26824db4bfa6511124ab517efbbedae7918f652636e2bd8007db",
+      "previewAnimation": "idle"
     },
     {
       "id": "c353",
@@ -233,7 +345,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c353/c353_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c353.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "58e0833580dba2c961dda79cae70a37d4d5c47d55a018189bb369c395c8b8a5c",
+      "previewAnimation": "idle"
     },
     {
       "id": "c400",
@@ -241,7 +357,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c400/c400_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c400.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e4fb7aacdc88d97bdee80e464e3135a6728c0102516bac3f154f419e4a08c646",
+      "previewAnimation": "idle"
     },
     {
       "id": "c172",
@@ -249,7 +369,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c172/c172_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c172.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9c9cb3cf902e421ab3de209279386aaf2535c77751a7712ff6366dac2e985e55",
+      "previewAnimation": "idle"
     },
     {
       "id": "c351",
@@ -257,7 +381,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c351/c351_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c351.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8adffc3d880bf495c55b4510c4d3af65ed1cfb29fb6cf67abf11d64a9759b27b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c121",
@@ -265,7 +393,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c121/c121_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c121.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "10745c67fd6101cbcf9eb43bad2f3a6f3780cc29ef3ea8faf96fe11a6481963d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c432",
@@ -273,7 +405,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c432/c432_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c432.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1edad69318036c490538adddd9527744a7e872d469ac9efedffbddcfa3c1aaec",
+      "previewAnimation": "idle"
     },
     {
       "id": "c381",
@@ -281,7 +417,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c381/c381_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c381.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "0669638cade28ba1eae1a14bd21fd8a700443f7cc8c2f47f2837fde2462e1659",
+      "previewAnimation": "idle"
     },
     {
       "id": "c311",
@@ -289,7 +429,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c311/c311_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c311.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "63e936c143220b53f8319984be6d3c60699d166a79231114afed500411175510",
+      "previewAnimation": "idle"
     },
     {
       "id": "c020",
@@ -297,7 +441,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c020/c020_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c020.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d1ae4240e69c27fcf0ebb904a757b5ce03427b729cd3475f2348ce94514aa134",
+      "previewAnimation": "idle"
     },
     {
       "id": "c202",
@@ -305,7 +453,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c202/c202_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c202.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "894071d76abf6d3db171955dcb262889b1e74e71cd8d19d326df8cc881d5a6cb",
+      "previewAnimation": "idle"
     },
     {
       "id": "c241",
@@ -313,7 +465,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c241/c241_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c241.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a4a3127d24740a2ef8ad7077bb9edb0923bd2a6e0ffe7a0bbe5de95e3e572756",
+      "previewAnimation": "idle"
     },
     {
       "id": "c291",
@@ -321,7 +477,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c291/c291_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c291.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "60e55691951ee01fb1989f9f47761e760f3e964012eb1551cd5398009acc82b9",
+      "previewAnimation": "idle"
     },
     {
       "id": "c092",
@@ -329,7 +489,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c092/c092_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c092.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f29a6410b8d1d1c9a3bc2b23611ba2720090fd688ce6d3acc08d39caca2c5707",
+      "previewAnimation": "idle"
     },
     {
       "id": "c210",
@@ -337,7 +501,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c210/c210_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c210.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8c3012961f4a628ae45fe5a9d24b101228bda9eb3215695ff2b1dc57fd5e66dc",
+      "previewAnimation": "idle"
     },
     {
       "id": "c242",
@@ -345,7 +513,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c242/c242_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c242.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8e6fcfb52a13474884fff32422d361a4ad03532681b85b8db17d7297b378eabf",
+      "previewAnimation": "idle"
     },
     {
       "id": "c142",
@@ -353,7 +525,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c142/c142_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c142.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c82ef8a8f6834bfd0e944ca4cd1663b863abfdc587078849197864ed091140e8",
+      "previewAnimation": "idle"
     },
     {
       "id": "c802",
@@ -361,7 +537,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c802/c802_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c802.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "dc5e3784473a4bdb58634daef02eaad2c36ec73dea53e58d23dc5188645cb161",
+      "previewAnimation": "idle"
     },
     {
       "id": "c304",
@@ -369,7 +549,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c304/c304_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c304.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "dd7139f5a4d3c9be43eabdad48bf458559e000aff708d8b2abd66719ccd7087e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c305",
@@ -377,7 +561,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c305/c305_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c305.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "45e45840ee8caf5ccb1a5eea9dd5b85fed8033858d0ef537d658df7dfad00d79",
+      "previewAnimation": "idle"
     },
     {
       "id": "c308",
@@ -385,7 +573,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c308/c308_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c308.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "dd62965150930f35cf9a823a12069b7af55988651c27d26a819f191d00d853c5",
+      "previewAnimation": "idle"
     },
     {
       "id": "c231",
@@ -393,7 +585,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c231/c231_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c231.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1a6818c3a6f17db6006a8f3cc90d85013ab370a54d898105bb19417fc09624bc",
+      "previewAnimation": "idle"
     },
     {
       "id": "c111",
@@ -401,7 +597,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c111/c111_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c111.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e7fae7392ffb75495c7b7939301c50767626258769603911b33110665e0c0b16",
+      "previewAnimation": "idle"
     },
     {
       "id": "c150",
@@ -409,7 +609,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c150/c150_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c150.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2e70fcb00e7d3b79980bc4961747d1b2f905d24cc61213b2c28f3c2fbd844b79",
+      "previewAnimation": "idle"
     },
     {
       "id": "c100",
@@ -417,7 +621,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c100/c100_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "340d5909c609456486a04532684765a3f432e04ff86d7602e980e3d0bcc45f69",
+      "previewAnimation": "idle"
     },
     {
       "id": "c082",
@@ -425,7 +633,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c082/c082_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c082.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "eb52a7cfe4293f8fb63bb7e7bc5174aaad71af4cb4e27ed5bc4a020f37317b45",
+      "previewAnimation": "idle"
     },
     {
       "id": "c190",
@@ -433,7 +645,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c190/c190_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c190.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7afd37782a6a9851a2a313fc210bbb69a962e599226e78178c29ecc1c2d08802",
+      "previewAnimation": "idle"
     },
     {
       "id": "c800",
@@ -441,7 +657,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c800/c800_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c800.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "339342a76fe92e3fb6b3b50e9bf9a2ca886f6476184fab6985dc9d88496fe406",
+      "previewAnimation": "idle"
     },
     {
       "id": "c130",
@@ -449,7 +669,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c130/c130_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c130.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3638612c093282150acc331232e6565b1f4f1f0e82bdc963636b5c720e6da2b7",
+      "previewAnimation": "idle"
     },
     {
       "id": "c132",
@@ -457,7 +681,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c132/c132_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c132.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9d86769c4150f59c8190b46d4c5a49c365b8c3c9f49b2ab08ef0b0d5fbc7c6af",
+      "previewAnimation": "idle"
     },
     {
       "id": "c254",
@@ -465,7 +693,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c254/c254_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c254.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a9f6d4d440db889435c49f28e881a5005b4b180df591788c2cec7de23092fb72",
+      "previewAnimation": "idle"
     },
     {
       "id": "c350",
@@ -473,7 +705,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c350/c350_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c350.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "64831c100bb4182b76fd2a25b496ef5b431b2595e60f44dcc71d3129b2011b13",
+      "previewAnimation": "idle"
     },
     {
       "id": "c102",
@@ -481,7 +717,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c102/c102_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c102.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "71605148d6e006b6b05556bf93f5feb4272e2489939c607d5df9e9506069c833",
+      "previewAnimation": "idle"
     },
     {
       "id": "c061",
@@ -489,7 +729,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c061/c061_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c061.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d86881328dea04657b7053eb34aa3777a57b9f909278f28fa54ea8acf90e3cc3",
+      "previewAnimation": "idle"
     },
     {
       "id": "c161",
@@ -497,7 +741,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c161/c161_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c161.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "de25da72ad1742c305c50309b2fccd47e82fd2881aba3f4c823804c9852a6108",
+      "previewAnimation": "idle"
     },
     {
       "id": "c010_01",
@@ -505,7 +753,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010_01/c010_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c010_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "bd27bb62e208cc837269ef54f1a36fa9cc87ba482b59fa213c6e302c37d0b2d1",
+      "previewAnimation": "idle"
     },
     {
       "id": "c010_02",
@@ -513,7 +765,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010_02/c010_02_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c010_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "718190900e240cd7b91880da5d422ee8753e87b7a805a1af9e8b215bb63696a7",
+      "previewAnimation": "idle"
     },
     {
       "id": "c010_03",
@@ -521,7 +777,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010_03/c010_03_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c010_03.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8269845e66b63b09cb2a3254d6a4dd3ad420333c0e000a23fc121082245d712a",
+      "previewAnimation": "idle"
     },
     {
       "id": "c011_01",
@@ -529,7 +789,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c011_01/c011_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c011_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a2ed611756c6b494f0175dbe64c7842f23ef5663c192cd862728748bdff71765",
+      "previewAnimation": "idle"
     },
     {
       "id": "c022_01",
@@ -537,7 +801,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c022_01/c022_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c022_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "015e5418a89d8b443ba6d5d20d93c9c9b0a67731820e9655a0f82a8d09b58df6",
+      "previewAnimation": "idle"
     },
     {
       "id": "c030_01",
@@ -545,7 +813,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c030_01/c030_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c030_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "72f7a5f7d24bd10b8eba5ac332b2764af5b766cf29236447c3b182a4211a1747",
+      "previewAnimation": "idle"
     },
     {
       "id": "c070_01",
@@ -553,7 +825,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070_01/c070_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c070_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "75c2b23085dc0e2084ed402526d2ec6759aadf6de1bfa346ad49089170110303",
+      "previewAnimation": "idle"
     },
     {
       "id": "c070_02",
@@ -561,7 +837,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070_02/c070_02_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c070_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "49f774f21aef97a2d2a5684347e86906eaed371be2064f18b31d98f77cd9dbf1",
+      "previewAnimation": "idle"
     },
     {
       "id": "c072_01",
@@ -569,7 +849,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c072_01/c072_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c072_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "57174482a0fd0f2da4241654fd2b68b84d96a91dfa73335652644ceae9086623",
+      "previewAnimation": "idle"
     },
     {
       "id": "c080_01",
@@ -577,7 +861,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c080_01/c080_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c080_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9e840c9143d39ca53de69cb529f6cfc53e21657f1181d3930dd32800325bef73",
+      "previewAnimation": "idle"
     },
     {
       "id": "c082_01",
@@ -585,7 +873,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c082_01/c082_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c082_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "11f474ecfe09ace07cdcfe1da98bc0898bac933ef4de13e2805ee9e6b01ffc70",
+      "previewAnimation": "idle"
     },
     {
       "id": "c090_01",
@@ -593,7 +885,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090_01/c090_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c090_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d62368b90430b8d89967f662eb818cbcd25187d0806b242148cbe8fb98531a4f",
+      "previewAnimation": "idle"
     },
     {
       "id": "c090_02",
@@ -601,7 +897,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090_02/c090_02_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c090_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8c9f37a16230605d68866b9cd4a85e0e0fd1e2162e48004ac0b49655e6bc8b56",
+      "previewAnimation": "idle"
     },
     {
       "id": "c101_01",
@@ -609,7 +909,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c101_01/c101_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c101_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ed7f4daa467a621d1fee8f79e2be93bd9947c57050d8b9d1d114495b0b6a929c",
+      "previewAnimation": "idle"
     },
     {
       "id": "c102_01",
@@ -617,7 +921,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c102_01/c102_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c102_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "124d78299a7a2eeb41c9ee0b8d77b334ac84b0a72d51007d0f8b54053dab2f37",
+      "previewAnimation": "idle"
     },
     {
       "id": "c112_01",
@@ -625,7 +933,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c112_01/c112_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c112_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c68019b6e575f181122691cf9b21100a8d59293c473979007bebe00468699965",
+      "previewAnimation": "idle"
     },
     {
       "id": "c131_01",
@@ -633,7 +945,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c131_01/c131_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c131_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f98f0709aea05c8daa4869d14e419f4a3bf2d135577791c8d6be78c56970cb7d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c140_01",
@@ -641,7 +957,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c140_01/c140_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c140_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "787ba799d8669b9dfc3297bd334028af995529f27e28f5e3f4d6b6f44f36b6b2",
+      "previewAnimation": "idle"
     },
     {
       "id": "c141_01",
@@ -649,7 +969,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c141_01/c141_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c141_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "792fd9bcb03b66ad411f4c1ed93e12dc3b1f5a033d6cd4ce42dee87367cdc9fc",
+      "previewAnimation": "idle"
     },
     {
       "id": "c142_01",
@@ -657,7 +981,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c142_01/c142_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c142_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1741c04e78d34fb422a2d1e4a2d917f9ae63b1c0804bc686d84ba2fe01a7ecec",
+      "previewAnimation": "idle"
     },
     {
       "id": "c150_01",
@@ -665,7 +993,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c150_01/c150_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c150_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b437f4e3fda60c699e67a21d5e1c0aa7f95277c9b38e94d8a760e8b8662d5d48",
+      "previewAnimation": "idle"
     },
     {
       "id": "c160_01",
@@ -673,7 +1005,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c160_01/c160_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c160_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a9a31d1ca704b1a5848cf9528f290f9ed93a0058b4e41529e916065081b7f097",
+      "previewAnimation": "idle"
     },
     {
       "id": "c170_01",
@@ -681,7 +1017,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c170_01/c170_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c170_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4ed36c38adc357732c36463160ba775d2eb614a044aa101f67923d3a859a334a",
+      "previewAnimation": "idle"
     },
     {
       "id": "c181_01",
@@ -689,7 +1029,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c181_01/c181_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c181_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "cf0ccb960cbfae6fd75b439ba9c42718e743811826ba8e46c42272c5580accad",
+      "previewAnimation": "idle"
     },
     {
       "id": "c191_01",
@@ -697,7 +1041,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c191_01/c191_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c191_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d2b8ae4c48e1cfd6703ef5dc358211d3e8b346565f81ff18c656d4bc7c0a90ec",
+      "previewAnimation": "idle"
     },
     {
       "id": "c200_01",
@@ -705,7 +1053,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c200_01/c200_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c200_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b18d8e5130cafaf7124bcde51522da2137a0a9c4cc27b12013d5dcb08fc4e71d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c201_01",
@@ -713,7 +1065,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c201_01/c201_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c201_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7b9ac80ff8480cb50841b5e49b69404663fbe5b50b2f8402e76760052171e667",
+      "previewAnimation": "idle"
     },
     {
       "id": "c202_01",
@@ -721,7 +1077,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c202_01/c202_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c202_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f7120171adeb3e036a9c76c7f5e27bfc06ea4f286bba3d6a69979b21217c835b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c210_01",
@@ -729,7 +1089,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c210_01/c210_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c210_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6a366b788da8338b8b73ef3809b819e68efd312a4067788329bae18612bec83c",
+      "previewAnimation": "idle"
     },
     {
       "id": "c212_01",
@@ -737,7 +1101,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c212_01/c212_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c212_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e7b165a69917e91bbe9e53586e47a746b5d4a35a5088760254ee4599c0b001e6",
+      "previewAnimation": "idle"
     },
     {
       "id": "c212_02",
@@ -745,7 +1113,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c212_02/c212_02_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c212_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7d4fe34834e8d89afde4413d90d36857e168e64e55bc787d22683861d88eee5f",
+      "previewAnimation": "idle"
     },
     {
       "id": "c260_01",
@@ -753,7 +1125,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c260_01/c260_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c260_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "28d90353e75a52db024e9c5fc68681b2c8b5772082ac4842c231d102016bcf28",
+      "previewAnimation": "idle"
     },
     {
       "id": "c282_01",
@@ -761,7 +1137,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c282_01/c282_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c282_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b99bd546045307720d3a3a10501d999f7cbdeaa4033b491fc7609f3a8b26f3a5",
+      "previewAnimation": "idle"
     },
     {
       "id": "c350_01",
@@ -769,7 +1149,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c350_01/c350_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c350_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "55a2461378f92ed9858767038c3c9ac5aa215ad7851f86afafb1dd151261b834",
+      "previewAnimation": "idle"
     },
     {
       "id": "c352_01",
@@ -777,7 +1161,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c352_01/c352_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c352_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "45a7ad8306ffd4376d568a8dceed47343ab729214d33402b5c551ab14449e835",
+      "previewAnimation": "idle"
     },
     {
       "id": "c430_01",
@@ -785,7 +1173,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c430_01/c430_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c430_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7fc79d4f8dd70fce907c8bc2a4531d68cb919413c0d9e84e522bf67823bce7a1",
+      "previewAnimation": "idle"
     },
     {
       "id": "c800_01",
@@ -793,7 +1185,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c800_01/c800_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c800_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4a2c5e064519a3cbb8f558279ddd832fbce4ec5b08770be14731611279aaa354",
+      "previewAnimation": "idle"
     },
     {
       "id": "c803_01",
@@ -801,7 +1197,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c803_01/c803_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c803_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "523eba68a1453454b224bdc22a01ae89bd06f8fdd889a7a8643d228ba9c3bb9c",
+      "previewAnimation": "idle"
     },
     {
       "id": "c810_01",
@@ -809,7 +1209,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c810_01/c810_01_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c810_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8156c5ddbd8a55db024f3f418b9f5fe32fee2fd9bce6c15ef1683290b92049b5",
+      "previewAnimation": "idle"
     },
     {
       "id": "c810_02",
@@ -817,7 +1221,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c810_02/c810_02_00",
       "gameId": "nikke",
-      "versionUnverified": false
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/nikke-c810_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ba407e6795e7b5974f522b7d11e1b127561231fa0b7a8f553f947bd669171f50",
+      "previewAnimation": "idle"
     },
     {
       "id": "ba-ch0058_home",
@@ -834,9 +1242,12 @@
       ],
       "characterKey": "Hifumi",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-20005.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0058_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0058_spr"
+      "sourceAnimationId": "ba-ch0058_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "774703247c3268712f776f703addad52687c0e9fee2633843f57c4348a7f65e5",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0060_home",
@@ -853,9 +1264,12 @@
       ],
       "characterKey": "Tsurugi",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10013.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0060_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0060_spr"
+      "sourceAnimationId": "ba-ch0060_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "023e5decabd9a04a8153d36b4df7cd0ab15025f605b6497ea1c7fea9f34eeeb6",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0063_home",
@@ -872,9 +1286,12 @@
       ],
       "characterKey": "Hina",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10022.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0063_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0063_spr"
+      "sourceAnimationId": "ba-ch0063_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1869856e7bfea7945b7acee8adb72c0bdaed882083958071b62f449244e6f878",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0064_home",
@@ -891,9 +1308,12 @@
       ],
       "characterKey": "Iori",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10023.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0064_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0064_spr"
+      "sourceAnimationId": "ba-ch0064_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "541d02af556fd4226142ea158ccf8f9fc97272dfe7fa634bf225e1e3cd8fde32",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0066_home",
@@ -910,9 +1330,12 @@
       ],
       "characterKey": "Shun",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10025.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0066_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0066_spr"
+      "sourceAnimationId": "ba-ch0066_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4dbfd1b0eefc8b463c996a3d21d5fb3ae196f4f3224fede8ab7ff3711bd086f2",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0069_home",
@@ -929,9 +1352,12 @@
       ],
       "characterKey": "Mika",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10059.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0069_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0069_spr"
+      "sourceAnimationId": "ba-ch0069_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "33a1d359723aa54d0f45460e1b8ddcbe840e407f6b83cbc332a35e0e277a9f7f",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0071_home",
@@ -948,9 +1374,12 @@
       ],
       "characterKey": "Ichika",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10077.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0071_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0071_spr"
+      "sourceAnimationId": "ba-ch0071_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c8dc2531ce8e97e2b2a11c437e09d016d9449e6701973302ad4a947975be0ec0",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0079_home",
@@ -967,9 +1396,12 @@
       ],
       "characterKey": "Makoto",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-20033.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0079_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0079_spr"
+      "sourceAnimationId": "ba-ch0079_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2a79a69cc6b3108e11896a56511e00bcc436807aecc6dce3a67c43d8ad5de991",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0086_home",
@@ -986,9 +1418,12 @@
       ],
       "characterKey": "Kayoko",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10064.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0086_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0086_spr"
+      "sourceAnimationId": "ba-ch0086_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "57d9d40c8952dab98ec332cfb76bb5e703a04bd1e3b91ac2782ab3a2d5f2c240",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0087_home",
@@ -1005,9 +1440,12 @@
       ],
       "characterKey": "Haruka",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-20025.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0087_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0087_spr"
+      "sourceAnimationId": "ba-ch0087_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "feb0535a2d95ebcda9fa48708eeca8441b6991a36b148fe30163327a898b34ca",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0088_home",
@@ -1024,9 +1462,12 @@
       ],
       "characterKey": "Megu",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10060.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0088_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0088_spr"
+      "sourceAnimationId": "ba-ch0088_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6dc3b56630c9bd36cd978c8c09b434a9f483ec3f871cffbb46576ad7e4e94c81",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0089_home",
@@ -1043,9 +1484,12 @@
       ],
       "characterKey": "Kasumi",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10078.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0089_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0089_spr"
+      "sourceAnimationId": "ba-ch0089_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "88a825b2441a4ed7bc050b537344f216f4a019a4eeea9843052ee8bf17e9ccce",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0092_home",
@@ -1062,9 +1506,12 @@
       ],
       "characterKey": "Nonomi",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10044.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0092_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0092_spr"
+      "sourceAnimationId": "ba-ch0092_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "dd6193be46e07b2835a4af26e07c7bb35d14fd4747ac5cf9e46ef78af0239bbe",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0095_home",
@@ -1081,9 +1528,12 @@
       ],
       "characterKey": "Noa",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10052.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0095_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0095_spr"
+      "sourceAnimationId": "ba-ch0095_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f348872b79fe9812bcc70057197e9e4a94c885ee9a9edfb47bcc154c27952e16",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0098_home",
@@ -1100,9 +1550,12 @@
       ],
       "characterKey": "Asuna",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10028.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0098_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0098_spr"
+      "sourceAnimationId": "ba-ch0098_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8fa00422f9974f45e35ff5868b3cb82651cc54543ccb74bcc4eba48c1f441997",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0099_home",
@@ -1119,9 +1572,12 @@
       ],
       "characterKey": "Akane",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-20019.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0099_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0099_spr"
+      "sourceAnimationId": "ba-ch0099_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "61ce62d901d09f134c7a4af98942749a5e26a7a2dde6c12a3db3eb3964df7029",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0100_home",
@@ -1138,9 +1594,12 @@
       ],
       "characterKey": "Karin",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10027.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0100_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0100_spr"
+      "sourceAnimationId": "ba-ch0100_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1a9764c303ffcbd23f84e0115953c63a81f1183180e7cff2ce5592b4958f3249",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0101_home",
@@ -1157,9 +1616,12 @@
       ],
       "characterKey": "Neru",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10026.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0101_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0101_spr"
+      "sourceAnimationId": "ba-ch0101_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ef334cfab5064e93059bc5eda1e29105bd53899ac3cea0ee1689ce65cfce6da7",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0107_home",
@@ -1176,9 +1638,12 @@
       ],
       "characterKey": "Kaho",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10065.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0107_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0107_spr"
+      "sourceAnimationId": "ba-ch0107_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "43dce8185783cd69e6c3f9b3016f2aa0d3f6999b0be951f75f2505a1930c217b",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0110_home",
@@ -1195,9 +1660,12 @@
       ],
       "characterKey": "Umika",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10090.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0110_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0110_spr"
+      "sourceAnimationId": "ba-ch0110_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c76becd4f49f9ef2914a4e420f41bd9313c3f05a05805ff243ba8f49242654a5",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0114_home",
@@ -1214,9 +1682,12 @@
       ],
       "characterKey": "Tsukuyo",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10040.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0114_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0114_spr"
+      "sourceAnimationId": "ba-ch0114_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1058bd6d7efe98b68164b67d3f87e0478118dabb440bbf5981064eac2d053779",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0123_home",
@@ -1233,9 +1704,12 @@
       ],
       "characterKey": "Shigure",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-20031.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0123_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0123_spr"
+      "sourceAnimationId": "ba-ch0123_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "14104f5296e16a573ce755c7ad4e8fd2aae19d3636e1b0f99e641ee300eeeade",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0124_home",
@@ -1252,9 +1726,12 @@
       ],
       "characterKey": "Meru",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10075.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0124_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0124_spr"
+      "sourceAnimationId": "ba-ch0124_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2ad40360b514f1f8e1d8e396359f9966c23ba5dfab3d2677b02bc3b6ff257694",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0135_home",
@@ -1271,9 +1748,12 @@
       ],
       "characterKey": "Rumi",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10069.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0135_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0135_spr"
+      "sourceAnimationId": "ba-ch0135_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "441f32c42f08ca89be061705548cbaaed62a1e61dd4871849029dafe9926a253",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0137_home",
@@ -1290,9 +1770,12 @@
       ],
       "characterKey": "Kokona",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10050.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0137_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0137_spr"
+      "sourceAnimationId": "ba-ch0137_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b29d781fb049f7a26ee03ae38f7f13c656c8126047b74a9c6bc882ce9aabcff2",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0138_home",
@@ -1309,9 +1792,12 @@
       ],
       "characterKey": "Mina",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10070.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0138_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0138_spr"
+      "sourceAnimationId": "ba-ch0138_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ffa6eff5eed1d2f715b70c644e365157250da20258ba167ea776eba27a56ad06",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0141_home",
@@ -1328,9 +1814,12 @@
       ],
       "characterKey": "Fubuki",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-20037.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0141_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0141_spr"
+      "sourceAnimationId": "ba-ch0141_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f14b687e7b824389b60a8172d9f19526fb247415fa3cf31bf22b14552ace2eb1",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0144_home",
@@ -1347,9 +1836,12 @@
       ],
       "characterKey": "Saki",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-20014.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0144_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0144_spr"
+      "sourceAnimationId": "ba-ch0144_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7c52cce9bf624e95f05878f63726bf5d3957586f414ebb3804b3fba95cd55246",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0145_home",
@@ -1366,9 +1858,12 @@
       ],
       "characterKey": "Miyu",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10039.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0145_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0145_spr"
+      "sourceAnimationId": "ba-ch0145_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a0ccd346f2f14447db2a3959d6b7e06b0b37ca8199dee6eea79000eba8f954a8",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0152_home",
@@ -1385,9 +1880,12 @@
       ],
       "characterKey": "Mine",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10058.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0152_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0152_spr"
+      "sourceAnimationId": "ba-ch0152_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "501bbe01d5e7c600170e64b806833399176d36902ae3846eb7f46c77a0ab57ab",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0155_home",
@@ -1404,9 +1902,12 @@
       ],
       "characterKey": "Natsu",
       "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
-      "preview": "./assets/portraits/ba-10029.webp",
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0155_home.webp",
       "assetType": "lobby",
-      "sourceAnimationId": "ba-ch0155_spr"
+      "sourceAnimationId": "ba-ch0155_spr",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "786133baa95068aa3373af8c7eb26d1daf0d2d1d68adf12ecf785a562d7ba1a3",
+      "previewAnimation": "Idle_01"
     }
   ],
   "sources": [
