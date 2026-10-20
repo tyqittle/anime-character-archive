@@ -23,7 +23,16 @@ for (const scene of catalog.images) {
   assert.ok(fs.existsSync(path.join(root,scene.url)),'Missing local CG '+scene.url);
  }
 }
+const bundledIds=['c012','c191','c170','c112','c200','c181','c280','c282','c222','c270'];
+for (const id of bundledIds) {
+ const file='assets/portraits/'+id+'.js';
+ const content=read(file);
+ assert.ok(content.includes('data:image/png;base64,iVBOR'), 'Missing real embedded PNG for '+id);
+ assert.ok(content.length>100000, 'Portrait unexpectedly empty: '+id);
+}
 const player=read('spine.html'),gallery=read('gallery.html'),index=read('index.html');
+assert.ok(gallery.includes('assets/portraits/c012.js'),'Missing local portrait assets in gallery');
+assert.ok(gallery.includes('window.WINTER_PORTRAITS'),'Gallery does not render actual cached images');
 assert.ok(!/<iframe\b/i.test(player),'Third-party embed must not be used');
 assert.ok(!/<iframe\b/i.test(gallery),'Third-party embed must not be used');
 assert.ok(player.includes('new spine.SpinePlayer'),'Independent Spine renderer missing');
