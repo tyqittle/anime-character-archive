@@ -49,7 +49,7 @@ body{background:radial-gradient(ellipse 56% 32% at 85% -5%,#322d62 0,transparent
   <div class="side-caption">内容索引</div>
   <a class="side-link active" href="./characters.html">✦ <span>角色图鉴</span></a>
   <a class="side-link" href="./spine.html">▶ <span>动态立绘</span></a>
-  <div class="side-caption">角色分类</div>
+  <div class="side-caption">精选角色分组</div>
   <nav id="sideGroups" aria-label="候选角色外观组"></nav>
   <div class="side-caption">资料属性</div>
   <p style="padding:0 9px;color:#8ba6bd;font-size:11px">角色资料与动态立绘独立浏览；素材来源保留在详情中。</p>
@@ -98,7 +98,8 @@ function iconFor(id){return ROOT+'images/sprite/si_'+id+'_00_s.png'}
 function filterItems(){
  var q=$('query').value.trim().toLocaleLowerCase(),rarity=$('rarityFilter').value,kind=$('kindFilter').value;
  var out=items.filter(function(x){
- if(selectedGroup!=='all'&&x.groupId!==selectedGroup)return false;
+ if(selectedGroup==='unassigned'&&x.groupId)return false;
+ if(selectedGroup!=='all'&&selectedGroup!=='unassigned'&&x.groupId!==selectedGroup)return false;
  if(onlyFav&&!favorites.has(x.id))return false;
  if(mode!=='all'&&x.kind!==mode)return false;
  if(kind!=='all'&&x.kind!==kind)return false;
@@ -113,9 +114,9 @@ function filterItems(){
  });
  return out;
 }
-function countGroup(id){return items.filter(function(c){return c.groupId===id}).length}
+function countGroup(id){return items.filter(function(c){return id==='unassigned'?!c.groupId:c.groupId===id}).length}
 function drawGroups(){
- $('sideGroups').innerHTML='<button class="group-nav '+(selectedGroup==='all'?'active':'')+'" data-action="group" data-value="all">◈ 全部游戏角色 <span class="count">'+items.length+'</span></button>'+groups.map(function(g){return '<button class="group-nav '+(selectedGroup===g.id?'active':'')+'" data-action="group" data-value="'+g.id+'">✧ '+safe(g.zh)+' <small>'+safe(g.en)+'</small><span class="count">'+countGroup(g.id)+'</span></button>'}).join('');
+ $('sideGroups').innerHTML='<button class="group-nav '+(selectedGroup==='all'?'active':'')+'" data-action="group" data-value="all">◈ 全部游戏角色 <span class="count">'+items.length+'</span></button>'+groups.map(function(g){return '<button class="group-nav '+(selectedGroup===g.id?'active':'')+'" data-action="group" data-value="'+g.id+'">✧ '+safe(g.zh)+' <small>'+safe(g.en)+'</small><span class="count">'+countGroup(g.id)+'</span></button>'}).join('')+'<button class="group-nav '+(selectedGroup==='unassigned'?'active':'')+'" data-action="group" data-value="unassigned">◈ 其他角色 <span class="count">'+countGroup('unassigned')+'</span></button>';
  $('featured').innerHTML=groups.map(function(g){return '<button class="feat '+(selectedGroup===g.id?'active':'')+'" data-action="group" data-value="'+g.id+'"><img src="'+safe(iconFor(g.uid))+'" alt="" loading="lazy" decoding="async"><div style="min-width:0"><b>'+safe(g.zh)+'</b><span>'+safe(g.en)+' · '+countGroup(g.id)+' 组图</span></div></button>'}).join('');
 }
 function render(){
