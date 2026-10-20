@@ -1,0 +1,33 @@
+name: Verify Spine animation in Chrome
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/spine-browser-test.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install headless browser driver
+        run: npm install --no-save --no-package-lock playwright-core@1.56.1
+      - name: Start local static site
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/site.log 2>&1 &
+          sleep 2
+      - name: Test actual character playback in Chromium
+        run: node scripts/test_spine_browser.mjs
+      - name: Upload browser test details even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: spine-browser-results
+          path: /tmp/spine-browser-results.json
+          if-no-files-found: warn
