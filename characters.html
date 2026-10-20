@@ -159,24 +159,27 @@ function drawGroups(){
 $('sideGroups').addEventListener('toggle',function(e){
  if(e.target.matches('details.game-section')&&e.target.open)fillGameLinks(e.target);
 },true);
-function render(){
+function render(append){
  if(!items.length){$('gallery').innerHTML='<div class="blank">没有加载到图片资料。检查网络后刷新页面。</div>';return}
- active=filterItems();
+ if(!append)active=filterItems();
  $('resultInfo').textContent='匹配 '+active.length+' 项 · 已移除头像记录 · 全身立绘候选';
  $('favCount').textContent='☆ 已收藏 '+favorites.size+' 项';
  $('favFilter').classList.toggle('active',onlyFav);
  document.querySelectorAll('[data-action="mode"]').forEach(function(e){e.classList.toggle('active',e.dataset.value===mode)});
- drawGroups();
- var shown=active.slice(0,page*36);
- $('gallery').innerHTML=shown.length?shown.map(function(c){
+ if(!groupsReady){drawGroups();groupsReady=true;}
+ var shown=active.slice(0,page*PAGE_SIZE);
+ var incoming=append?active.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE):shown;
+ var markup=shown.length?incoming.map(function(c){
  var label=c.kind==='full'?'全身立绘':'头像资料';
  var details=[gameNames[c.gameId]||c.game||'',c.zh||'',c.manufacturer||'',c.rarity||'',c.variant?'服装 / 变体':''].filter(Boolean).join(' · ')||'游戏角色';
- return '<article class="card"><button class="card-img '+(c.kind==='icon'?'icon-only':'')+'" data-action="view" data-id="'+safe(c.id)+'" aria-label="查看 '+safe(c.name)+'"><img src="'+safe(c.image)+'" alt="'+safe(c.name)+' 角色美术" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="ribbon">'+label+'</span><span class="error-note">源站暂时无法显示</span></button><button class="fav '+(favorites.has(c.id)?'on':'')+'" title="收藏角色" data-action="fav" data-id="'+safe(c.id)+'" aria-label="'+(favorites.has(c.id)?'取消收藏':'收藏')+'">'+(favorites.has(c.id)?'★':'☆')+'</button><div class="card-info"><h3 title="'+safe(c.name)+'">'+safe(c.zh?c.zh+' · '+c.name:c.name)+'</h3><p title="'+safe(details)+'">'+safe(details)+'</p><div class="card-bottom"><span>'+safe(c.id)+'</span><a href="'+safe(c.source)+'" target="_blank" rel="noopener noreferrer">原始来源 ↗</a></div></div></article>';
+ return '<article class="card"><button class="card-img '+(c.kind==='icon'?'icon-only':'')+'" data-action="view" data-id="'+safe(c.id)+'" aria-label="查看 '+safe(c.name)+'"><img src="'+safe(previewFor(c))+'" alt="'+safe(c.name)+' 角色美术" loading="lazy" decoding="async" fetchpriority="low" referrerpolicy="no-referrer" width="360" height="480"><span class="ribbon">'+label+'</span><span class="error-note">源站暂时无法显示</span></button><button class="fav '+(favorites.has(c.id)?'on':'')+'" title="收藏角色" data-action="fav" data-id="'+safe(c.id)+'" aria-label="'+(favorites.has(c.id)?'取消收藏':'收藏')+'">'+(favorites.has(c.id)?'★':'☆')+'</button><div class="card-info"><h3 title="'+safe(c.name)+'">'+safe(c.zh?c.zh+' · '+c.name:c.name)+'</h3><p title="'+safe(details)+'">'+safe(details)+'</p><div class="card-bottom"><span>'+safe(c.id)+'</span><a href="'+safe(c.source)+'" target="_blank" rel="noopener noreferrer">原始来源 ↗</a></div></div></article>';
  }).join(''):'<div class="blank">没有符合条件的角色。试着清除搜索、稀有度或分类筛选。</div>';
+ if(append&&$('gallery').querySelector('.card'))$('gallery').insertAdjacentHTML('beforeend',markup);
+ else $('gallery').innerHTML=markup;
  $('more').hidden=shown.length>=active.length;
  $('more').textContent='加载更多角色（'+shown.length+' / '+active.length+'） ↓';
 }
-function startGroup(id){selectedGroup=id;page=1;mode='all';onlyFav=false;$('kindFilter').value='all';render();$('explore').scrollIntoView({behavior:'smooth',block:'start'})}
+function startGroup(id){selectedGroup=id;page=1;mode='all';onlyFav=false;$('kindFilter').value='all';render();updateGroupNav();$('explore').scrollIntoView({behavior:'smooth',block:'start'})}
 function showOne(id){
  var c=items.find(function(x){return x.id===id});if(!c)return;
  activeId=id;$('viewTitle').textContent=(c.zh?c.zh+' · ':'')+c.name;
@@ -193,13 +196,13 @@ document.addEventListener('click',function(e){
  var target=e.target.closest('[data-action]');if(!target)return;
  var action=target.dataset.action,id=target.dataset.id,value=target.dataset.value;
  if(action==='group')startGroup(value);
- else if(action==='reset'){$('query').value='';$('rarityFilter').value='all';$('kindFilter').value='all';selectedGroup='all';mode='all';onlyFav=false;page=1;render();$('explore').scrollIntoView({behavior:'smooth'})}
+ else if(action==='reset'){$('query').value='';$('rarityFilter').value='all';$('kindFilter').value='all';selectedGroup='all';mode='all';onlyFav=false;page=1;render();updateGroupNav();$('explore').scrollIntoView({behavior:'smooth'})}
  else if(action==='mode'){mode=value;$('kindFilter').value='all';page=1;render()}
  else if(action==='favorites'){onlyFav=!onlyFav;page=1;render()}
  else if(action==='view')showOne(id);
  else if(action==='close')$('viewer').close();
  else if(action==='fav'){if(favorites.has(id))favorites.delete(id);else favorites.add(id);remember();render();if($('viewer').open&&activeId===id)showOne(id)}
- else if(action==='more'){page++;render()}
+ else if(action==='more'){page++;render(true)}
  else if(action==='step')navigate(Number(target.dataset.step));
  else if(action==='random'){var pool=filterItems();if(pool.length)showOne(pool[Math.floor(Math.random()*pool.length)].id)}
 });
@@ -209,8 +212,10 @@ document.addEventListener('error',function(e){
  if(img.closest('.card-img')){img.closest('.card-img').classList.add('error')}
 },true);
 document.addEventListener('keydown',function(e){if(!$('viewer').open)return;if(e.key==='ArrowLeft')navigate(-1);if(e.key==='ArrowRight')navigate(1)});
-['query','rarityFilter','kindFilter','sort'].forEach(function(id){$(id).addEventListener(id==='query'?'input':'change',function(){page=1;render()})});
-fetch('./data/characters.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(function(db){
+var searchDelay=null;
+['query','rarityFilter','kindFilter','sort'].forEach(function(id){$(id).addEventListener(id==='query'?'input':'change',function(){page=1;if(id==='query'){clearTimeout(searchDelay);searchDelay=setTimeout(function(){render()},140)}else{clearTimeout(searchDelay);render()}})});
+$('gameFilter').addEventListener('change',function(){selectedGroup=this.value==='all'?'all':'game:'+this.value;page=1;render();updateGroupNav()});
+fetch('./data/characters.json',{cache:'default'}).then(function(r){if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(function(db){
  if(!Array.isArray(db.characters))throw Error('索引数据格式错误');
  items=db.characters.filter(function(c){return c&&c.id&&c.gameId&&c.characterKey&&c.kind==='full'&&/^\.\/assets\/portraits\/[a-zA-Z0-9_-]+\.(?:png|webp)$/.test(c.image)});
  $('totalStat').textContent=items.length;
