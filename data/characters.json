@@ -6,8 +6,8 @@
   "sourceIndex": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/js/json/l2d.json",
   "sourceRepository": "https://github.com/Nikke-db/Nikke-db.github.io",
   "counts": {
-    "total": 455,
-    "full": 455
+    "total": 463,
+    "full": 463
   },
   "characters": [
     {
@@ -5521,6 +5521,22 @@
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
     },
     {
+      "id": "gfl2-nemesis",
+      "name": "纳美西丝",
+      "zh": "纳美西丝",
+      "nameEn": "Nemesis",
+      "gameId": "gfl2",
+      "game": "少女前线2：追放",
+      "characterKey": "纳美西丝",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/gfl2-nemesis.webp",
+      "source": "https://iopwiki.com/wiki/File:Nemesis_Whole.png",
+      "originalImage": "https://iopwiki.com/images/a/aa/Nemesis_Whole.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
       "id": "gfl2-leva",
       "name": "莱娅",
       "zh": "莱娅",
@@ -8117,6 +8133,118 @@
       "characterKey": "iDoll Sun"
     },
     {
+      "id": "starrail-1005",
+      "name": "卡芙卡",
+      "zh": "卡芙卡",
+      "nameEn": "Kafka",
+      "gameId": "starrail",
+      "game": "崩坏：星穹铁道",
+      "characterKey": "卡芙卡",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/starrail-1005.webp",
+      "source": "https://github.com/ScobbleQ/HoYo-Assets/tree/main/starrail/splash",
+      "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/starrail/splash/1005.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "starrail-1102",
+      "name": "希儿",
+      "zh": "希儿",
+      "nameEn": "Seele",
+      "gameId": "starrail",
+      "game": "崩坏：星穹铁道",
+      "characterKey": "希儿",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/starrail-1102.webp",
+      "source": "https://github.com/ScobbleQ/HoYo-Assets/tree/main/starrail/splash",
+      "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/starrail/splash/1102.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "starrail-1310",
+      "name": "流萤",
+      "zh": "流萤",
+      "nameEn": "Firefly",
+      "gameId": "starrail",
+      "game": "崩坏：星穹铁道",
+      "characterKey": "流萤",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/starrail-1310.webp",
+      "source": "https://github.com/ScobbleQ/HoYo-Assets/tree/main/starrail/splash",
+      "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/starrail/splash/1310.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "starrail-1208",
+      "name": "符玄",
+      "zh": "符玄",
+      "nameEn": "Fu Xuan",
+      "gameId": "starrail",
+      "game": "崩坏：星穹铁道",
+      "characterKey": "符玄",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/starrail-1208.webp",
+      "source": "https://github.com/ScobbleQ/HoYo-Assets/tree/main/starrail/splash",
+      "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/starrail/splash/1208.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "starrail-1212",
+      "name": "镜流",
+      "zh": "镜流",
+      "nameEn": "Jingliu",
+      "gameId": "starrail",
+      "game": "崩坏：星穹铁道",
+      "characterKey": "镜流",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/starrail-1212.webp",
+      "source": "https://github.com/ScobbleQ/HoYo-Assets/tree/main/starrail/splash",
+      "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/starrail/splash/1212.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "starrail-1308",
+      "name": "黄泉",
+      "zh": "黄泉",
+      "nameEn": "Acheron",
+      "gameId": "starrail",
+      "game": "崩坏：星穹铁道",
+      "characterKey": "黄泉",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/starrail-1308.webp",
+      "source": "https://github.com/ScobbleQ/HoYo-Assets/tree/main/starrail/splash",
+      "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/starrail/splash/1308.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
+      "id": "starrail-1307",
+      "name": "黑天鹅",
+      "zh": "黑天鹅",
+      "nameEn": "Black Swan",
+      "gameId": "starrail",
+      "game": "崩坏：星穹铁道",
+      "characterKey": "黑天鹅",
+      "groupId": "",
+      "kind": "full",
+      "image": "./assets/portraits/starrail-1307.webp",
+      "source": "https://github.com/ScobbleQ/HoYo-Assets/tree/main/starrail/splash",
+      "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/starrail/splash/1307.png",
+      "variant": false,
+      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
+    },
+    {
       "id": "wutheringwaves-yinlin",
       "name": "吟霖",
       "zh": "吟霖",
@@ -8179,6 +8307,11 @@
       "id": "wutheringwaves",
       "name": "鸣潮",
       "en": "Wuthering Waves"
+    },
+    {
+      "id": "starrail",
+      "name": "崩坏：星穹铁道",
+      "en": "Honkai: Star Rail"
     }
   ]
 }
