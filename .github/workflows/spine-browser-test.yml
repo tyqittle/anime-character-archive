@@ -5,6 +5,7 @@ on:
     paths:
       - '.github/workflows/spine-browser-test.yml'
       - 'scripts/test_spine_browser.mjs'
+      - 'scripts/test_bluearchive_atlas_uv.mjs'
       - 'spine.html'
       - 'data/spine-characters.json'
       - 'tests/smoke.mjs'
@@ -26,6 +27,8 @@ jobs:
         run: |
           python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/site.log 2>&1 &
           sleep 2
+      - name: Test Blue Archive atlas rotation UV mapping in Chromium
+        run: node scripts/test_bluearchive_atlas_uv.mjs
       - name: Test actual character playback in Chromium
         run: node scripts/test_spine_browser.mjs
       - name: Upload browser test details even on failure
@@ -33,5 +36,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: spine-browser-results
-          path: /tmp/spine-browser-results.json
+          path: |
+            /tmp/spine-browser-results.json
+            /tmp/ba-rotation-results.json
+            /tmp/ba-ch0145-after-fix.png
           if-no-files-found: warn
