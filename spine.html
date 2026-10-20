@@ -29,8 +29,8 @@ footer{padding:24px;text-align:center;color:#92a8bb;font-size:12px}
 <header><div class="sitebar"><a class="sitebrand" href="./characters.html">✦ 次元角色档案馆</a><nav><a href="./characters.html">角色图鉴</a><a class="selected" href="./spine.html">▶ 动态立绘</a></nav></div><h1>动态立绘剧场</h1><p>选择角色，欣赏 Spine 骨骼动画。可以切换动作、暂停和全屏。</p></header>
 <div class="wrap">
 <section class="side">
-<h2>角色动画</h2><label for="gameFilter">选择游戏</label><select id="gameFilter"><option value="all">全部游戏</option><option value="nikke">胜利女神：妮姬</option><option value="bluearchive">蔚蓝档案（待完成角色匹配）</option></select><label for="characterSearch">搜索角色（中文、英文或编号）</label><input id="characterSearch" type="search" placeholder="例如：安妮丝 / Rapi / c012"><label for="characters">当前选中的角色</label><select id="characters"><option value="">请选择角色…</option></select><div id="characterCards" class="character-cards" aria-label="角色图片选择列表"></div><p class="note" id="selectionNote">点击下面的角色卡片，即可选中并播放。</p><button id="nikke" class="primary" disabled>▶ 播放选中角色</button><p class="note">这是本站自己渲染的 Spine 动画；骨骼与贴图暂从社区原始文件地址加载，不嵌入对方网页。若资源下载失败，将尝试备用镜像，并在超时后显示错误。</p><button id="testUrls" type="button">检测选中角色的资源连通性</button><hr><h2>播放测试</h2>
-<label for="version">骨骼版本</label><select id="version"><option value="4.0">Spine 4.0</option><option value="4.1">Spine 4.1</option><option value="4.2">Spine 4.2</option></select>
+<h2>角色动画</h2><label for="gameFilter">选择游戏</label><select id="gameFilter"><option value="all">全部游戏</option><option value="nikke">胜利女神：妮姬</option><option value="bluearchive">蔚蓝档案（部分动画待验证）</option></select><label for="characterSearch">搜索角色（中文、英文或编号）</label><input id="characterSearch" type="search" placeholder="例如：安妮丝 / Rapi / c012"><label for="characters">当前选中的角色</label><select id="characters"><option value="">请选择角色…</option></select><div id="characterCards" class="character-cards" aria-label="角色图片选择列表"></div><p class="note" id="selectionNote">点击下面的角色卡片，即可选中并播放。</p><button id="nikke" class="primary" disabled>▶ 播放选中角色</button><p class="note">这是本站自己渲染的 Spine 动画；骨骼与贴图暂从社区原始文件地址加载，不嵌入对方网页。若资源下载失败，将尝试备用镜像，并在超时后显示错误。</p><button id="testUrls" type="button">检测选中角色的资源连通性</button><hr><h2>播放测试</h2>
+<label for="version">骨骼版本</label><select id="version"><option value="3.8">Spine 3.8（兼容性待验证）</option><option value="4.0">Spine 4.0</option><option value="4.1">Spine 4.1</option><option value="4.2">Spine 4.2</option></select>
 <button id="demo" class="primary">▶ 播放官方示例动画</button>
 <p class="note">演示资源由 Spine 官方提供，用于核对播放器是否能真正渲染动作；<strong>不是 NIKKE 人物</strong>。</p>
 <hr>
@@ -70,7 +70,7 @@ const nikkePortraits={"wiki-2b":{"image":"./assets/portraits/wiki-2b.webp","name
 let searchTimer=null;
 function charInfo(c){
  const p=nikkePortraits[c.id];
- const image=p?.image||'';
+ const image=c.preview||p?.image||'';
  return {image, zh:p?.name||'',name:c.name||c.id};
 }
 function refreshCharacters(){
@@ -183,6 +183,7 @@ function blobToUri(blob){return new Promise((resolve,reject)=>{const reader=new 
 let sequence=0;
 async function playCharacter(c){
  const current=++sequence;
+ if(c.versionUnverified){status('该资源的 Spine 版本与实际播放尚未验证，暂不冒充可播放成品。角色身份与预览图已匹配；请等待兼容性验证。',true);return}
  if(!setVersion(c.spineVersion))return;
  const packId=(c.gameId||'nikke')+'-'+c.id;
  status((c.versionUnverified?'该资源骨骼版本尚未验证，可能无法播放。':'')+'正在查找 '+c.name+' 的本地缓存…');
@@ -278,6 +279,6 @@ $('version').onchange=()=>{
   if(chosen()&&params.get('id'))playCharacter(chosen());
  }catch(e){status('角色索引无法加载：'+e.message+'。请在静态服务器中打开网页，或直接导入本地资源。',true)}
 })();
-if(['4.0','4.1','4.2'].includes(params.get('v')))$('version').value=params.get('v');
+if(['3.8','4.0','4.1','4.2'].includes(params.get('v')))$('version').value=params.get('v');
 refreshSaved().then(async()=>{const packId=params.get('pack');if(!packId)return;try{const pack=await dbAction('readonly',s=>s.get(packId));if(pack){$('savedPacks').value=packId;$('savedPacks').onchange();playPack(pack)}else status('本地缓存中找不到 '+packId,true)}catch(e){status('读取本地缓存失败：'+e.message,true)}});
 </script></body></html>
