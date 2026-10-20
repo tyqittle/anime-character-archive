@@ -178,10 +178,24 @@ function imagePages(atlasText){
  return [...new Set(atlasText.replace(/^\uFEFF/,'').split(/\r?\n/).map(x=>x.trim())
   .filter(x=>/\.(png|webp|jpg|jpeg)$/i.test(x)&&!x.includes(':')))];
 }
+// Spine binary header stores two length-prefixed UTF-8 strings: hash and export version.
+// Decode the header BEFORE asking a runtime to parse the entire skeleton.
+async function detectSpineVersion(blob){
+ const bytes=new Uint8Array(await blob.slice(0,256).arrayBuffer());let pos=0;
+ function str(){let len=0,shift=0,b;do{if(pos>=bytes.length||shift>28)throw Error('骨骼头部不完整');b=bytes[pos++];len|=(b&127)<<shift;shift+=7}while(b&128);
+  if(len===0)return null;len--;if(len>120||pos+len>bytes.length)throw Error('骨骼文件头无效');
+  const out=new TextDecoder().decode(bytes.subarray(pos,pos+len));pos+=len;return out;
+ }
+ try{const hash=str(),version=str();if(!/^\\d+\\.\\d+(?:\\.\\d+)?/.test(version||''))throw Error('无法识别导出版本');return {hash,version,majorMinor:version.split('.').slice(0,2).join('.')}}
+ catch(e){throw Error('无法解析 Spine 骨骼文件头：'+e.message)}
+}
 async function downloadPack(c,mirror){
  const paths=urls(c,mirror),stem=c.base.split('/').pop();
  const [skelBlob,atlasBlob]=await Promise.all([downloadBlob(paths.skeleton),downloadBlob(paths.atlas)]);
  if(skelBlob.size<100||atlasBlob.size<20)throw Error('骨骼或图集文件大小异常');
+ const detected=await detectSpineVersion(skelBlob);
+ status('检测到 '+c.name+' 的 Spine 骨骼导出版本：'+detected.version);
+ if(!['3.8','4.0','4.1','4.2'].includes(detected.majorMinor))throw Error('目前不支持 Spine '+detected.version+'，已停止错误版本解析');
  const atlasText=(await atlasBlob.text()).replace(/^\uFEFF/,'');
  const pages=imagePages(atlasText);
  if(!pages.length)throw Error('图集中没有图片文件名');
@@ -195,7 +209,7 @@ async function downloadPack(c,mirror){
   if(blob.size<100)throw Error('贴图为空：'+page);
   data[page]=await blobToUri(blob);
  }
- return {id:(c.gameId||'nikke')+'-'+c.id,version:c.spineVersion,skeleton:stem+'.skel',atlas:stem+'.atlas',rawDataURIs:data};
+ return {id:(c.gameId||'nikke')+'-'+c.id,version:detected.majorMinor,exportVersion:detected.version,skeleton:stem+'.skel',atlas:stem+'.atlas',rawDataURIs:data};
 }
 function blobToUri(blob){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(reader.error);reader.readAsDataURL(blob)})}
 let sequence=0;
