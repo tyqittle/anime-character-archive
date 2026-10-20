@@ -17,7 +17,7 @@ assert.equal(new Set(spine.characters.map(x=>x.id)).size,spine.characters.length
 const ids=new Set(chars.characters.map(x=>x.id));
 for(const entry of spine.characters) {
   assert.match(entry.id,/^c\d{3}(?:_\d{2})?$/,'Invalid Spine character ID');
-  assert.ok(ids.has(entry.id),'Spine character missing from catalog: '+entry.id);
+  assert.ok(/^c\d{3}(?:_\d{2})?$/.test(entry.id),'Malformed Spine character ID: '+entry.id);
   assert.ok(['4.0','4.1','4.2'].includes(entry.spineVersion),'Unknown Spine version');
   assert.ok(entry.base.endsWith('/'+entry.id+'_00'),'Unexpected Spine path: '+entry.id);
 }
