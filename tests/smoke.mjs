@@ -26,6 +26,7 @@ assert.ok(chars.characters.every(x=>x.image.startsWith('./assets/portraits/')),'
 const home=read('index.html'),old=read('gallery.html'),page=read('characters.html'),player=read('spine.html');
 assert.ok(home.includes('./characters.html')&&old.includes('./characters.html'),'Old entrypoint no longer redirects');
 assert.ok(page.includes('data/characters.json'),'Character archive not connected');
+assert.ok(page.includes("/^\\.\\/assets\\/portraits\\/c\\d{3}\\.png$/"),'Gallery missing local PNG path acceptance');
 assert.ok(player.includes('new spine.SpinePlayer'),'Spine renderer missing');
 assert.ok(player.includes('binaryUrl')&&player.includes('atlasUrl'),'Spine runtime URL fix missing');
 assert.ok(player.includes('indexedDB.open(cacheDB'),'Spine cache missing');
