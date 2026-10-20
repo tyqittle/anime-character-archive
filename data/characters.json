@@ -2,7 +2,7 @@
   "version": 1,
   "game": "GODDESS OF VICTORY: NIKKE",
   "generatedAt": "2026-10-20",
-  "note": "只保留全身立绘来源的候选记录，移除头像缩略图条目；原图尚需目视核验，加载失败不降级成头像。",
+  "note": "静态全身立绘已镜像至本仓库；动态 Spine 仍使用第三方资源。原图来源保存在 originalImage 和 source 字段。",
   "sourceIndex": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/js/json/l2d.json",
   "sourceRepository": "https://github.com/Nikke-db/Nikke-db.github.io",
   "counts": {
@@ -17,7 +17,7 @@
       "zh": "安妮丝",
       "groupId": "N-01",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c012_00.png",
+      "image": "./assets/portraits/c012.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c012_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c012_00.png",
       "rarity": "SR",
@@ -25,7 +25,8 @@
       "class": "Defender",
       "squad": "Counters",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c012_00.png"
     },
     {
       "id": "c015",
@@ -33,7 +34,7 @@
       "zh": "安妮丝",
       "groupId": "N-01",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c015_00.png",
+      "image": "./assets/portraits/c015.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c015_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c015_00.png",
       "rarity": "SSR",
@@ -41,7 +42,8 @@
       "class": "Supporter",
       "squad": "Counters",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c015_00.png"
     },
     {
       "id": "c233",
@@ -49,7 +51,7 @@
       "zh": "桃乐丝",
       "groupId": "N-06",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c233_00.png",
+      "image": "./assets/portraits/c233.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c233_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c233_00.png",
       "rarity": "SSR",
@@ -57,7 +59,8 @@
       "class": "Supporter",
       "squad": "Inherit",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c233_00.png"
     },
     {
       "id": "c352",
@@ -65,7 +68,7 @@
       "zh": "海伦",
       "groupId": "N-04",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c352_00.png",
+      "image": "./assets/portraits/c352.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c352_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c352_00.png",
       "rarity": "SSR",
@@ -73,7 +76,8 @@
       "class": "Attacker",
       "squad": "Aegis",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c352_00.png"
     },
     {
       "id": "c353",
@@ -81,7 +85,7 @@
       "zh": "海伦",
       "groupId": "N-04",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c353_00.png",
+      "image": "./assets/portraits/c353.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c353_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c353_00.png",
       "rarity": "SSR",
@@ -89,7 +93,8 @@
       "class": "Attacker",
       "squad": "Aegis",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c353_00.png"
     },
     {
       "id": "c181",
@@ -97,7 +102,7 @@
       "zh": "梅登",
       "groupId": "N-09",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c181_00.png",
+      "image": "./assets/portraits/c181.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c181_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c181_00.png",
       "rarity": "SSR",
@@ -105,7 +110,8 @@
       "class": "Attacker",
       "squad": "Extrinsic",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c181_00.png"
     },
     {
       "id": "c260",
@@ -113,7 +119,7 @@
       "zh": "神罚",
       "groupId": "N-08",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c260_00.png",
+      "image": "./assets/portraits/c260.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c260_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c260_00.png",
       "rarity": "SSR",
@@ -121,7 +127,8 @@
       "class": "Attacker",
       "squad": "The Heretics",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c260_00.png"
     },
     {
       "id": "c170",
@@ -129,7 +136,7 @@
       "zh": "普丽瓦蒂",
       "groupId": "N-03",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c170_00.png",
+      "image": "./assets/portraits/c170.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c170_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c170_00.png",
       "rarity": "SSR",
@@ -137,7 +144,8 @@
       "class": "Attacker",
       "squad": "Triangle",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c170_00.png"
     },
     {
       "id": "c010",
@@ -145,7 +153,7 @@
       "zh": "拉毗",
       "groupId": "N-02",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c010_00.png",
+      "image": "./assets/portraits/c010.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c010_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c010_00.png",
       "rarity": "SR",
@@ -153,7 +161,8 @@
       "class": "Attacker",
       "squad": "Counters",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c010_00.png"
     },
     {
       "id": "c280",
@@ -161,7 +170,7 @@
       "zh": "罗珊娜",
       "groupId": "N-11",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c280_00.png",
+      "image": "./assets/portraits/c280.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c280_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c280_00.png",
       "rarity": "SSR",
@@ -169,7 +178,8 @@
       "class": "Attacker",
       "squad": "Underworld Queen",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c280_00.png"
     },
     {
       "id": "c200",
@@ -177,7 +187,7 @@
       "zh": "露菲",
       "groupId": "N-05",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c200_00.png",
+      "image": "./assets/portraits/c200.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c200_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c200_00.png",
       "rarity": "SSR",
@@ -185,7 +195,8 @@
       "class": "Attacker",
       "squad": "Talentum",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c200_00.png"
     },
     {
       "id": "c203",
@@ -193,7 +204,7 @@
       "zh": "露菲",
       "groupId": "N-05",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c203_00.png",
+      "image": "./assets/portraits/c203.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c203_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c203_00.png",
       "rarity": "SSR",
@@ -201,7 +212,8 @@
       "class": "Defender",
       "squad": "Talentum",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c203_00.png"
     },
     {
       "id": "c282",
@@ -209,7 +221,7 @@
       "zh": "樱花",
       "groupId": "N-10",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c282_00.png",
+      "image": "./assets/portraits/c282.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c282_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c282_00.png",
       "rarity": "SSR",
@@ -217,7 +229,8 @@
       "class": "Supporter",
       "squad": "Underworld Queen",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c282_00.png"
     },
     {
       "id": "c222",
@@ -225,7 +238,7 @@
       "zh": "红莲",
       "groupId": "N-07",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c222_00.png",
+      "image": "./assets/portraits/c222.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c222_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c222_00.png",
       "rarity": "SSR",
@@ -233,7 +246,8 @@
       "class": "Attacker",
       "squad": "Pioneer",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c222_00.png"
     },
     {
       "id": "c112",
@@ -241,7 +255,7 @@
       "zh": "毒蛇",
       "groupId": "N-12",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c112_00.png",
+      "image": "./assets/portraits/c112.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c112_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c112_00.png",
       "rarity": "SSR",
@@ -249,7 +263,8 @@
       "class": "Attacker",
       "squad": "Exotic",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c112_00.png"
     },
     {
       "id": "c172",
@@ -257,7 +272,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c172_00.png",
+      "image": "./assets/portraits/c172.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c172_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c172_00.png",
       "rarity": "SSR",
@@ -265,7 +280,8 @@
       "class": "Supporter",
       "squad": "Triangle",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c172_00.png"
     },
     {
       "id": "c191",
@@ -273,7 +289,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c191_00.png",
+      "image": "./assets/portraits/c191.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c191_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c191_00.png",
       "rarity": "SSR",
@@ -281,7 +297,8 @@
       "class": "Attacker",
       "squad": "Unlimited",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c191_00.png"
     },
     {
       "id": "c351",
@@ -289,7 +306,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c351_00.png",
+      "image": "./assets/portraits/c351.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c351_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c351_00.png",
       "rarity": "SR",
@@ -297,7 +314,8 @@
       "class": "Defender",
       "squad": "Aegis",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c351_00.png"
     },
     {
       "id": "c121",
@@ -305,7 +323,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c121_00.png",
+      "image": "./assets/portraits/c121.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c121_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c121_00.png",
       "rarity": "SSR",
@@ -313,7 +331,8 @@
       "class": "Supporter",
       "squad": "Recall & Release",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c121_00.png"
     },
     {
       "id": "c432",
@@ -321,7 +340,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c432_00.png",
+      "image": "./assets/portraits/c432.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c432_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c432_00.png",
       "rarity": "SSR",
@@ -329,7 +348,8 @@
       "class": "Attacker",
       "squad": "Prima Donna",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c432_00.png"
     },
     {
       "id": "c060",
@@ -337,7 +357,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c060_00.png",
+      "image": "./assets/portraits/c060.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c060_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c060_00.png",
       "rarity": "SR",
@@ -345,7 +365,8 @@
       "class": "Attacker",
       "squad": "The Carronades",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c060_00.png"
     },
     {
       "id": "c381",
@@ -353,7 +374,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c381_00.png",
+      "image": "./assets/portraits/c381.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c381_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c381_00.png",
       "rarity": "SSR",
@@ -361,7 +382,8 @@
       "class": "Supporter",
       "squad": "Happy Zoo",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c381_00.png"
     },
     {
       "id": "c270",
@@ -369,7 +391,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c270_00.png",
+      "image": "./assets/portraits/c270.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c270_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c270_00.png",
       "rarity": "SSR",
@@ -377,7 +399,8 @@
       "class": "Defender",
       "squad": "777",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c270_00.png"
     },
     {
       "id": "c070",
@@ -385,7 +408,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c070_00.png",
+      "image": "./assets/portraits/c070.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c070_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c070_00.png",
       "rarity": "SSR",
@@ -393,7 +416,8 @@
       "class": "Attacker",
       "squad": "Infinity Rail",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c070_00.png"
     },
     {
       "id": "c080",
@@ -401,7 +425,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c080_00.png",
+      "image": "./assets/portraits/c080.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c080_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c080_00.png",
       "rarity": "SSR",
@@ -409,7 +433,8 @@
       "class": "Defender",
       "squad": "Mighty Tools",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c080_00.png"
     },
     {
       "id": "c311",
@@ -417,7 +442,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c311_00.png",
+      "image": "./assets/portraits/c311.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c311_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c311_00.png",
       "rarity": "SSR",
@@ -425,7 +450,8 @@
       "class": "Supporter",
       "squad": "Maid For You",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c311_00.png"
     },
     {
       "id": "c110",
@@ -433,7 +459,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c110_00.png",
+      "image": "./assets/portraits/c110.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c110_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c110_00.png",
       "rarity": "SSR",
@@ -441,7 +467,8 @@
       "class": "Defender",
       "squad": "Exotic",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c110_00.png"
     },
     {
       "id": "c040",
@@ -449,7 +476,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c040_00.png",
+      "image": "./assets/portraits/c040.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c040_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c040_00.png",
       "rarity": "SSR",
@@ -457,7 +484,8 @@
       "class": "Attacker",
       "squad": "Perilous Siege",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c040_00.png"
     },
     {
       "id": "c020",
@@ -465,7 +493,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c020_00.png",
+      "image": "./assets/portraits/c020.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c020_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c020_00.png",
       "rarity": "SR",
@@ -473,7 +501,8 @@
       "class": "Defender",
       "squad": "The Scouts",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c020_00.png"
     },
     {
       "id": "c072",
@@ -481,7 +510,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c072_00.png",
+      "image": "./assets/portraits/c072.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c072_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c072_00.png",
       "rarity": "SSR",
@@ -489,7 +518,8 @@
       "class": "Defender",
       "squad": "Infinity Rail",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c072_00.png"
     },
     {
       "id": "c202",
@@ -497,7 +527,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c202_00.png",
+      "image": "./assets/portraits/c202.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c202_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c202_00.png",
       "rarity": "SSR",
@@ -505,7 +535,8 @@
       "class": "Supporter",
       "squad": "Talentum",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c202_00.png"
     },
     {
       "id": "c101",
@@ -513,7 +544,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c101_00.png",
+      "image": "./assets/portraits/c101.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c101_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c101_00.png",
       "rarity": "SSR",
@@ -521,7 +552,8 @@
       "class": "Attacker",
       "squad": "Matis",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c101_00.png"
     },
     {
       "id": "c090",
@@ -529,7 +561,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c090_00.png",
+      "image": "./assets/portraits/c090.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c090_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c090_00.png",
       "rarity": "SSR",
@@ -537,7 +569,8 @@
       "class": "Supporter",
       "squad": "Absolute",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c090_00.png"
     },
     {
       "id": "c241",
@@ -545,7 +578,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c241_00.png",
+      "image": "./assets/portraits/c241.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c241_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c241_00.png",
       "rarity": "SSR",
@@ -553,7 +586,8 @@
       "class": "Attacker",
       "squad": "Nepenthe",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c241_00.png"
     },
     {
       "id": "c291",
@@ -561,7 +595,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c291_00.png",
+      "image": "./assets/portraits/c291.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c291_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c291_00.png",
       "rarity": "SR",
@@ -569,7 +603,8 @@
       "class": "Defender",
       "squad": "M.M.R.",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c291_00.png"
     },
     {
       "id": "c092",
@@ -577,7 +612,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c092_00.png",
+      "image": "./assets/portraits/c092.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c092_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c092_00.png",
       "rarity": "SSR",
@@ -585,7 +620,8 @@
       "class": "Defender",
       "squad": "Absolute",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c092_00.png"
     },
     {
       "id": "c210",
@@ -593,7 +629,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c210_00.png",
+      "image": "./assets/portraits/c210.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c210_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c210_00.png",
       "rarity": "SSR",
@@ -601,7 +637,8 @@
       "class": "Supporter",
       "squad": "Protocol",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c210_00.png"
     },
     {
       "id": "c242",
@@ -609,7 +646,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c242_00.png",
+      "image": "./assets/portraits/c242.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c242_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c242_00.png",
       "rarity": "SSR",
@@ -617,7 +654,8 @@
       "class": "Defender",
       "squad": "Nepenthe",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c242_00.png"
     },
     {
       "id": "c142",
@@ -625,7 +663,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c142_00.png",
+      "image": "./assets/portraits/c142.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c142_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c142_00.png",
       "rarity": "SSR",
@@ -633,7 +671,8 @@
       "class": "Supporter",
       "squad": "Cafe Sweety",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c142_00.png"
     },
     {
       "id": "c180",
@@ -641,7 +680,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c180_00.png",
+      "image": "./assets/portraits/c180.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c180_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c180_00.png",
       "rarity": "SSR",
@@ -649,7 +688,8 @@
       "class": "Attacker",
       "squad": "Extrinsic",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c180_00.png"
     },
     {
       "id": "c400",
@@ -657,7 +697,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c400_00.png",
+      "image": "./assets/portraits/c400.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c400_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c400_00.png",
       "rarity": "SSR",
@@ -665,7 +705,8 @@
       "class": "Attacker",
       "squad": "Real Kindness",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c400_00.png"
     },
     {
       "id": "c230",
@@ -673,7 +714,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c230_00.png",
+      "image": "./assets/portraits/c230.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c230_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c230_00.png",
       "rarity": "SSR",
@@ -681,7 +722,8 @@
       "class": "Attacker",
       "squad": "Inherit",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c230_00.png"
     },
     {
       "id": "c802",
@@ -689,7 +731,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c802_00.png",
+      "image": "./assets/portraits/c802.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c802_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c802_00.png",
       "rarity": "SR",
@@ -697,7 +739,8 @@
       "class": "Supporter",
       "squad": "Devil Hunter",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c802_00.png"
     },
     {
       "id": "c304",
@@ -705,7 +748,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c304_00.png",
+      "image": "./assets/portraits/c304.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c304_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c304_00.png",
       "rarity": "R",
@@ -713,7 +756,8 @@
       "class": "Defender",
       "squad": "Replace",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c304_00.png"
     },
     {
       "id": "c305",
@@ -721,7 +765,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c305_00.png",
+      "image": "./assets/portraits/c305.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c305_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c305_00.png",
       "rarity": "R",
@@ -729,7 +773,8 @@
       "class": "Supporter",
       "squad": "Replace",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c305_00.png"
     },
     {
       "id": "c308",
@@ -737,7 +782,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c308_00.png",
+      "image": "./assets/portraits/c308.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c308_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c308_00.png",
       "rarity": "R",
@@ -745,7 +790,8 @@
       "class": "Supporter",
       "squad": "Replace",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c308_00.png"
     },
     {
       "id": "c231",
@@ -753,7 +799,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c231_00.png",
+      "image": "./assets/portraits/c231.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c231_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c231_00.png",
       "rarity": "SSR",
@@ -761,7 +807,8 @@
       "class": "Attacker",
       "squad": "Inherit",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c231_00.png"
     },
     {
       "id": "c111",
@@ -769,7 +816,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c111_00.png",
+      "image": "./assets/portraits/c111.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c111_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c111_00.png",
       "rarity": "SSR",
@@ -777,7 +824,8 @@
       "class": "Defender",
       "squad": "Exotic",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c111_00.png"
     },
     {
       "id": "c150",
@@ -785,7 +833,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c150_00.png",
+      "image": "./assets/portraits/c150.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c150_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c150_00.png",
       "rarity": "SSR",
@@ -793,7 +841,8 @@
       "class": "Attacker",
       "squad": "Master Hand",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c150_00.png"
     },
     {
       "id": "c100",
@@ -801,7 +850,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c100_00.png",
+      "image": "./assets/portraits/c100.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c100_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c100_00.png",
       "rarity": "SSR",
@@ -809,7 +858,8 @@
       "class": "Attacker",
       "squad": "Matis",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c100_00.png"
     },
     {
       "id": "c082",
@@ -817,7 +867,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c082_00.png",
+      "image": "./assets/portraits/c082.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c082_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c082_00.png",
       "rarity": "SSR",
@@ -825,7 +875,8 @@
       "class": "Supporter",
       "squad": "Mighty Tools",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c082_00.png"
     },
     {
       "id": "c190",
@@ -833,7 +884,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c190_00.png",
+      "image": "./assets/portraits/c190.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c190_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c190_00.png",
       "rarity": "SSR",
@@ -841,7 +892,8 @@
       "class": "Defender",
       "squad": "Unlimited",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c190_00.png"
     },
     {
       "id": "c800",
@@ -849,7 +901,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c800_00.png",
+      "image": "./assets/portraits/c800.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c800_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c800_00.png",
       "rarity": "SSR",
@@ -857,7 +909,8 @@
       "class": "Defender",
       "squad": "Devil Hunter",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c800_00.png"
     },
     {
       "id": "c013",
@@ -865,7 +918,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c013_00.png",
+      "image": "./assets/portraits/c013.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c013_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c013_00.png",
       "rarity": "SR",
@@ -873,7 +926,8 @@
       "class": "Attacker",
       "squad": "Counters",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c013_00.png"
     },
     {
       "id": "c130",
@@ -881,7 +935,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c130_00.png",
+      "image": "./assets/portraits/c130.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c130_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c130_00.png",
       "rarity": "SSR",
@@ -889,7 +943,8 @@
       "class": "Supporter",
       "squad": "Seraphim",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c130_00.png"
     },
     {
       "id": "c132",
@@ -897,7 +952,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c132_00.png",
+      "image": "./assets/portraits/c132.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c132_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c132_00.png",
       "rarity": "SSR",
@@ -905,7 +960,8 @@
       "class": "Supporter",
       "squad": "Seraphim",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c132_00.png"
     },
     {
       "id": "c254",
@@ -913,7 +969,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c254_00.png",
+      "image": "./assets/portraits/c254.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c254_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c254_00.png",
       "rarity": "",
@@ -921,7 +977,8 @@
       "class": "",
       "squad": "",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c254_00.png"
     },
     {
       "id": "c350",
@@ -929,7 +986,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c350_00.png",
+      "image": "./assets/portraits/c350.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c350_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c350_00.png",
       "rarity": "SSR",
@@ -937,7 +994,8 @@
       "class": "Supporter",
       "squad": "Aegis",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c350_00.png"
     },
     {
       "id": "c102",
@@ -945,7 +1003,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c102_00.png",
+      "image": "./assets/portraits/c102.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c102_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c102_00.png",
       "rarity": "SSR",
@@ -953,7 +1011,8 @@
       "class": "Attacker",
       "squad": "Matis",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c102_00.png"
     },
     {
       "id": "c061",
@@ -961,7 +1020,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c061_00.png",
+      "image": "./assets/portraits/c061.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c061_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c061_00.png",
       "rarity": "SR",
@@ -969,7 +1028,8 @@
       "class": "Supporter",
       "squad": "The Carronades",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c061_00.png"
     },
     {
       "id": "c161",
@@ -977,7 +1037,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c161_00.png",
+      "image": "./assets/portraits/c161.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c161_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c161_00.png",
       "rarity": "SR",
@@ -985,7 +1045,8 @@
       "class": "Defender",
       "squad": "Wardress",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c161_00.png"
     },
     {
       "id": "c141",
@@ -993,7 +1054,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c141_00.png",
+      "image": "./assets/portraits/c141.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c141_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c141_00.png",
       "rarity": "SSR",
@@ -1001,7 +1062,8 @@
       "class": "Attacker",
       "squad": "Cafe Sweety",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c141_00.png"
     },
     {
       "id": "c032",
@@ -1009,7 +1071,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c032_00.png",
+      "image": "./assets/portraits/c032.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c032_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c032_00.png",
       "rarity": "SSR",
@@ -1017,7 +1079,8 @@
       "class": "Supporter",
       "squad": "A.C.P.U.",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c032_00.png"
     },
     {
       "id": "c120",
@@ -1025,7 +1088,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c120_00.png",
+      "image": "./assets/portraits/c120.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c120_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c120_00.png",
       "rarity": "SR",
@@ -1033,7 +1096,8 @@
       "class": "Supporter",
       "squad": "Recall & Release",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c120_00.png"
     },
     {
       "id": "c011",
@@ -1041,7 +1105,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c011_00.png",
+      "image": "./assets/portraits/c011.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c011_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c011_00.png",
       "rarity": "SR",
@@ -1049,7 +1113,8 @@
       "class": "Supporter",
       "squad": "Counters",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c011_00.png"
     },
     {
       "id": "c014",
@@ -1057,7 +1122,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c014_00.png",
+      "image": "./assets/portraits/c014.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c014_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c014_00.png",
       "rarity": "SSR",
@@ -1065,7 +1130,8 @@
       "class": "Attacker",
       "squad": "Counters",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c014_00.png"
     },
     {
       "id": "c380",
@@ -1073,7 +1139,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c380_00.png",
+      "image": "./assets/portraits/c380.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c380_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c380_00.png",
       "rarity": "SSR",
@@ -1081,7 +1147,8 @@
       "class": "Defender",
       "squad": "Happy Zoo",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c380_00.png"
     },
     {
       "id": "c193",
@@ -1089,7 +1156,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c193_00.png",
+      "image": "./assets/portraits/c193.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c193_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c193_00.png",
       "rarity": "SR",
@@ -1097,7 +1164,8 @@
       "class": "Attacker",
       "squad": "Unlimited",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c193_00.png"
     },
     {
       "id": "c261",
@@ -1105,7 +1173,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c261_00.png",
+      "image": "./assets/portraits/c261.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c261_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c261_00.png",
       "rarity": "SSR",
@@ -1113,7 +1181,8 @@
       "class": "Attacker",
       "squad": "Heretic",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c261_00.png"
     },
     {
       "id": "c232",
@@ -1121,7 +1190,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c232_00.png",
+      "image": "./assets/portraits/c232.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c232_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c232_00.png",
       "rarity": "SSR",
@@ -1129,7 +1198,8 @@
       "class": "Defender",
       "squad": "Inherit",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c232_00.png"
     },
     {
       "id": "c271",
@@ -1137,7 +1207,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c271_00.png",
+      "image": "./assets/portraits/c271.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c271_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c271_00.png",
       "rarity": "SSR",
@@ -1145,7 +1215,8 @@
       "class": "Attacker",
       "squad": "777",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c271_00.png"
     },
     {
       "id": "c430",
@@ -1153,7 +1224,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c430_00.png",
+      "image": "./assets/portraits/c430.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c430_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c430_00.png",
       "rarity": "SSR",
@@ -1161,7 +1232,8 @@
       "class": "Supporter",
       "squad": "Prima Donna",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c430_00.png"
     },
     {
       "id": "c212",
@@ -1169,7 +1241,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c212_00.png",
+      "image": "./assets/portraits/c212.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c212_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c212_00.png",
       "rarity": "SSR",
@@ -1177,7 +1249,8 @@
       "class": "Defender",
       "squad": "Protocol",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c212_00.png"
     },
     {
       "id": "c131",
@@ -1185,7 +1258,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c131_00.png",
+      "image": "./assets/portraits/c131.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c131_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c131_00.png",
       "rarity": "SSR",
@@ -1193,7 +1266,8 @@
       "class": "Supporter",
       "squad": "Seraphim",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c131_00.png"
     },
     {
       "id": "c030",
@@ -1201,7 +1275,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c030_00.png",
+      "image": "./assets/portraits/c030.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c030_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c030_00.png",
       "rarity": "SSR",
@@ -1209,7 +1283,8 @@
       "class": "Defender",
       "squad": "A.C.P.U.",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c030_00.png"
     },
     {
       "id": "c801",
@@ -1217,7 +1292,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c801_00.png",
+      "image": "./assets/portraits/c801.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c801_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c801_00.png",
       "rarity": "SSR",
@@ -1225,7 +1300,8 @@
       "class": "Attacker",
       "squad": "Devil Hunter",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c801_00.png"
     },
     {
       "id": "c302",
@@ -1233,7 +1309,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c302_00.png",
+      "image": "./assets/portraits/c302.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c302_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c302_00.png",
       "rarity": "R",
@@ -1241,7 +1317,8 @@
       "class": "Supporter",
       "squad": "Replace",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c302_00.png"
     },
     {
       "id": "c303",
@@ -1249,7 +1326,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c303_00.png",
+      "image": "./assets/portraits/c303.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c303_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c303_00.png",
       "rarity": "R",
@@ -1257,7 +1334,8 @@
       "class": "Attacker",
       "squad": "Replace",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c303_00.png"
     },
     {
       "id": "c307",
@@ -1265,7 +1343,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c307_00.png",
+      "image": "./assets/portraits/c307.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c307_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c307_00.png",
       "rarity": "R",
@@ -1273,7 +1351,8 @@
       "class": "Supporter",
       "squad": "Replace",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c307_00.png"
     },
     {
       "id": "c402",
@@ -1281,7 +1360,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c402_00.png",
+      "image": "./assets/portraits/c402.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c402_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c402_00.png",
       "rarity": "SSR",
@@ -1289,7 +1368,8 @@
       "class": "Supporter",
       "squad": "Real Kindness",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c402_00.png"
     },
     {
       "id": "c221",
@@ -1297,7 +1377,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c221_00.png",
+      "image": "./assets/portraits/c221.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c221_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c221_00.png",
       "rarity": "SSR",
@@ -1305,7 +1385,8 @@
       "class": "Supporter",
       "squad": "Pioneer",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c221_00.png"
     },
     {
       "id": "c392",
@@ -1313,7 +1394,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c392_00.png",
+      "image": "./assets/portraits/c392.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c392_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c392_00.png",
       "rarity": "SSR",
@@ -1321,7 +1402,8 @@
       "class": "Defender",
       "squad": "School Circle",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c392_00.png"
     },
     {
       "id": "c240",
@@ -1329,7 +1411,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c240_00.png",
+      "image": "./assets/portraits/c240.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c240_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c240_00.png",
       "rarity": "SSR",
@@ -1337,7 +1419,8 @@
       "class": "Supporter",
       "squad": "LifeTonic",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c240_00.png"
     },
     {
       "id": "c022",
@@ -1345,7 +1428,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c022_00.png",
+      "image": "./assets/portraits/c022.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c022_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c022_00.png",
       "rarity": "SSR",
@@ -1353,7 +1436,8 @@
       "class": "Attacker",
       "squad": "The Scouts",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c022_00.png"
     },
     {
       "id": "c401",
@@ -1361,7 +1445,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c401_00.png",
+      "image": "./assets/portraits/c401.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c401_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c401_00.png",
       "rarity": "SSR",
@@ -1369,7 +1453,8 @@
       "class": "Defender",
       "squad": "Real Kindness",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c401_00.png"
     },
     {
       "id": "c220",
@@ -1377,7 +1462,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c220_00.png",
+      "image": "./assets/portraits/c220.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c220_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c220_00.png",
       "rarity": "SSR",
@@ -1385,7 +1470,8 @@
       "class": "Attacker",
       "squad": "Pioneer",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c220_00.png"
     },
     {
       "id": "c312",
@@ -1393,7 +1479,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c312_00.png",
+      "image": "./assets/portraits/c312.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c312_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c312_00.png",
       "rarity": "SSR",
@@ -1401,7 +1487,8 @@
       "class": "Supporter",
       "squad": "Maid For You",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c312_00.png"
     },
     {
       "id": "c300",
@@ -1409,7 +1496,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c300_00.png",
+      "image": "./assets/portraits/c300.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c300_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c300_00.png",
       "rarity": "R",
@@ -1417,7 +1504,8 @@
       "class": "Attacker",
       "squad": "Replace",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c300_00.png"
     },
     {
       "id": "c301",
@@ -1425,7 +1513,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c301_00.png",
+      "image": "./assets/portraits/c301.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c301_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c301_00.png",
       "rarity": "R",
@@ -1433,7 +1521,8 @@
       "class": "Defender",
       "squad": "Replace",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c301_00.png"
     },
     {
       "id": "c306",
@@ -1441,7 +1530,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c306_00.png",
+      "image": "./assets/portraits/c306.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c306_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c306_00.png",
       "rarity": "R",
@@ -1449,7 +1538,8 @@
       "class": "Supporter",
       "squad": "Replace",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c306_00.png"
     },
     {
       "id": "c071",
@@ -1457,7 +1547,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c071_00.png",
+      "image": "./assets/portraits/c071.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c071_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c071_00.png",
       "rarity": "SSR",
@@ -1465,7 +1555,8 @@
       "class": "Supporter",
       "squad": "Infinity Rail",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c071_00.png"
     },
     {
       "id": "c140",
@@ -1473,7 +1564,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c140_00.png",
+      "image": "./assets/portraits/c140.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c140_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c140_00.png",
       "rarity": "SSR",
@@ -1481,7 +1572,8 @@
       "class": "Attacker",
       "squad": "Cafe Sweety",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c140_00.png"
     },
     {
       "id": "c091",
@@ -1489,7 +1581,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c091_00.png",
+      "image": "./assets/portraits/c091.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c091_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c091_00.png",
       "rarity": "SSR",
@@ -1497,7 +1589,8 @@
       "class": "Attacker",
       "squad": "Absolute",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c091_00.png"
     },
     {
       "id": "c431",
@@ -1505,7 +1598,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c431_00.png",
+      "image": "./assets/portraits/c431.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c431_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c431_00.png",
       "rarity": "SSR",
@@ -1513,7 +1606,8 @@
       "class": "Attacker",
       "squad": "Prima Donna",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c431_00.png"
     },
     {
       "id": "c201",
@@ -1521,7 +1615,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c201_00.png",
+      "image": "./assets/portraits/c201.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c201_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c201_00.png",
       "rarity": "SSR",
@@ -1529,7 +1623,8 @@
       "class": "Supporter",
       "squad": "Talentum",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c201_00.png"
     },
     {
       "id": "c171",
@@ -1537,7 +1632,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c171_00.png",
+      "image": "./assets/portraits/c171.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c171_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c171_00.png",
       "rarity": "SSR",
@@ -1545,7 +1640,8 @@
       "class": "Attacker",
       "squad": "Triangle",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c171_00.png"
     },
     {
       "id": "c160",
@@ -1553,7 +1649,7 @@
       "zh": "",
       "groupId": "",
       "kind": "full",
-      "image": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c160_00.png",
+      "image": "./assets/portraits/c160.png",
       "avatar": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/sprite/si_c160_00_s.png",
       "source": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/images/FB/c160_00.png",
       "rarity": "SSR",
@@ -1561,7 +1657,8 @@
       "class": "Defender",
       "squad": "Wardress",
       "variant": false,
-      "license": "第三方游戏美术；再使用许可未确认"
+      "license": "第三方游戏美术；再使用许可未确认",
+      "originalImage": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c160_00.png"
     }
   ]
 }
