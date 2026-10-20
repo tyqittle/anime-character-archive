@@ -29,7 +29,7 @@ footer{padding:24px;text-align:center;color:#92a8bb;font-size:12px}
 <header><h1>冬境 · Spine 动态角色播放器</h1><p>由本站自己的 HTML、JavaScript 和官方 Spine 运行时驱动。不嵌入其他网站，不跳转到 Nikke-DB。</p></header>
 <div class="wrap">
 <section class="side">
-<h2>角色动画</h2><label for="characters">选择 NIKKE 人物</label><select id="characters"><option value="">正在加载角色索引…</option></select><button id="nikke" class="primary" disabled>▶ 播放选中角色</button><p class="note">这是本站自己渲染的 Spine 动画；骨骼与贴图暂从社区原始文件地址加载，不嵌入对方网页。部分资源可能有跨域或网络限制。</p><hr><h2>播放测试</h2>
+<h2>角色动画</h2><label for="characters">选择 NIKKE 人物</label><select id="characters"><option value="">正在加载角色索引…</option></select><button id="nikke" class="primary" disabled>▶ 播放选中角色</button><p class="note">这是本站自己渲染的 Spine 动画；骨骼与贴图暂从社区原始文件地址加载，不嵌入对方网页。若资源下载失败，将尝试备用镜像，并在超时后显示错误。</p><button id="testUrls" type="button">检测选中角色的资源连通性</button><hr><h2>播放测试</h2>
 <label for="version">骨骼版本</label><select id="version"><option value="4.0">Spine 4.0</option><option value="4.1">Spine 4.1</option><option value="4.2">Spine 4.2</option></select>
 <button id="demo" class="primary">▶ 播放官方示例动画</button>
 <p class="note">演示资源由 Spine 官方提供，用于核对播放器是否能真正渲染动作；<strong>不是 NIKKE 人物</strong>。</p>
@@ -55,8 +55,9 @@ footer{padding:24px;text-align:center;color:#92a8bb;font-size:12px}
 const $=id=>document.getElementById(id);
 const runtimeRoot='https://unpkg.com/@esotericsoftware/spine-player@';
 const params=new URLSearchParams(location.search);
-let loadedVersion='', loadPromise=null, player=null, allCharacters=[], chosenFileList=[], currentAttempt=0;
+let loadedVersion='', loadPromise=null, player=null, allCharacters=[], chosenFileList=[], currentAttempt=0, watchdog=null;
 const manifestUrl='./data/spine-characters.json';
+function stopWatchdog(){if(watchdog){clearTimeout(watchdog);watchdog=null}}
 function status(message,error=false){$('status').textContent=message;$('status').classList.toggle('error',error)}
 function chosen(){return allCharacters.find(c=>c.id===$('characters').value)}
 function setVersion(v){
@@ -71,7 +72,7 @@ function ensureRuntime(version){
  loadPromise=new Promise((resolve,reject)=>{
   const base=runtimeRoot+version+'.*/dist/';
   const css=document.createElement('link');css.rel='stylesheet';css.href=base+'spine-player.css';document.head.append(css);
-  const js=document.createElement('script');js.src=base+'iife/spine-player.js';
+  const js=document.createElement('script');js.src=base+'iife/spine-player.js';js.crossOrigin='anonymous';
   js.onload=()=>window.spine?.SpinePlayer?resolve():reject(Error('运行时脚本已加载但 SpinePlayer 不存在'));
   js.onerror=()=>{loadPromise=null;reject(Error('Spine 运行时下载失败，请检查网络'))};document.head.append(js)
  });
@@ -86,19 +87,21 @@ function clearPlayer(){
 }
 async function show(options,title,onError){
  const attempt=++currentAttempt;
+ stopWatchdog();
  status('正在加载 '+title+' 的骨骼、图集与贴图…');$('title').textContent=title;
  try{
   await ensureRuntime($('version').value);
   if(attempt!==currentAttempt)return;
   clearPlayer();
   const config={...options,showControls:true,premultipliedAlpha:true,alpha:false,backgroundColor:'#142238ff',
-   success:(p)=>{if(attempt!==currentAttempt)return;player=p;status('播放成功：'+title+'。底部控制栏可以切换动作、暂停和全屏。')},
-   error:(_p,reason)=>{if(attempt!==currentAttempt)return;
+   success:(p)=>{if(attempt!==currentAttempt)return;stopWatchdog();player=p;status('播放成功：'+title+'。底部控制栏可以切换动作、暂停和全屏。')},
+   error:(_p,reason)=>{if(attempt!==currentAttempt)return;stopWatchdog();
     if(onError)onError(String(reason||'资源加载失败'));else status('加载失败：'+String(reason||'请核查 Spine 版本及资源路径'),true)}
   };
   $('player').replaceChildren();
   player=new spine.SpinePlayer('player',config);
- }catch(e){if(attempt===currentAttempt)status('播放器初始化失败：'+(e.message||String(e)),true)}
+  watchdog=setTimeout(()=>{if(attempt!==currentAttempt)return;stopWatchdog();if(onError)onError('30 秒内未完成加载，可能是源站拒绝访问、图片下载缓慢或 WebGL 初始化失败');else status('加载超时（30 秒）。请检查浏览器网络控制台及源站访问。',true)},30000);
+ }catch(e){stopWatchdog();if(attempt===currentAttempt)status('播放器初始化失败：'+(e.message||String(e)),true)}
 }
 function urls(c,mirror){
  const base=mirror==='legacy'?'https://nikke-db-legacy.pages.dev/l2d/'+c.id+'/'+c.id+'_00':c.base;
@@ -113,6 +116,7 @@ function playCharacter(c,mirror='github'){
  });
 }
 $('nikke').onclick=()=>{const c=chosen();if(c)playCharacter(c)};
+$('testUrls').onclick=async()=>{const c=chosen();if(!c){status('请先选择角色。',true);return}status('检测 '+c.name+' 的骨骼与图集…');const all=[c.base+'.skel',c.base+'.atlas'];const out=await Promise.all(all.map(async url=>{const ctrl=new AbortController();const timer=setTimeout(()=>ctrl.abort(),12000);try{const r=await fetch(url,{signal:ctrl.signal,cache:'no-store'});return(url.split('/').pop()+': '+(r.ok?'HTTP '+r.status+' 可读取':'HTTP '+r.status))}catch(e){return(url.split('/').pop()+': '+(e.name==='AbortError'?'请求超时':'网络或跨域限制 '+e.message))}finally{clearTimeout(timer)}}));status('网络诊断：'+out.join('；')+'。请注意：这只检测骨骼与图集，贴图和实际渲染仍需点“播放”验证。')};
 $('characters').onchange=()=>{$('nikke').disabled=!chosen();const c=chosen();if(c&&loadedVersion&&loadedVersion!==c.spineVersion)status('该角色使用 Spine '+c.spineVersion+'。播放时将自动刷新以切换版本。')};
 $('demo').onclick=()=>{
  const version=$('version').value;
