@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/spine-browser-test.yml'
+      - 'scripts/test_spine_browser.mjs'
   workflow_dispatch:
 permissions:
   contents: read
