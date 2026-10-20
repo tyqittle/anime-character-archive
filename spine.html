@@ -26,7 +26,7 @@ hr{border:0;border-top:1px solid #ffffff23;margin:21px 0}
 footer{padding:24px;text-align:center;color:#92a8bb;font-size:12px}
 @media(max-width:850px){.wrap{grid-template-columns:1fr;padding:12px}.side{order:2}.stage{order:1}#player{height:65vh;min-height:340px}}
 .character-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-height:440px;overflow:auto;margin:12px 0;padding-right:4px}.character-card{display:flex;flex-direction:column;align-items:center;gap:5px;background:#18283e;border:1px solid #40516b;border-radius:12px;padding:7px;cursor:pointer;color:#fff;text-align:center;min-width:0}.character-card:hover,.character-card.active{border-color:#88c9ff;background:#244263}.character-card img{width:100%;height:130px;object-fit:contain;background:#101927;border-radius:7px}.character-card .nm{font-size:12px;overflow-wrap:anywhere}.character-card small{font-size:10px;color:#b4c5d6}.character-card .fallback{display:grid;place-items:center;height:130px;width:100%;font-size:12px;color:#aabacf}.character-card[aria-pressed="true"]{outline:2px solid #8dcfff;outline-offset:1px}</style><style id="archive-refresh">body{background:radial-gradient(ellipse 65% 45% at 70% 0,#292852 0,transparent 80%),#090d19}.sitebar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 22px}.sitebrand{font-size:19px;font-weight:800;color:#e9e5ff;text-decoration:none}.sitebar nav{display:flex;gap:10px}.sitebar nav a{color:#bdc9ec;text-decoration:none;padding:9px 15px;border:1px solid #ffffff24;border-radius:12px}.sitebar nav a.selected{background:#665ac044;border-color:#9690ff;color:#fff}header{background:#10182a9e;border-bottom:1px solid #8a7de52d}.side,.stage{background:#11192c;border-color:#8a85c82c;border-radius:21px}button.primary{background:linear-gradient(110deg,#5d54ad,#3d649c);border-color:#8e8cf5}button:hover{border-color:#aaa0ff}#player{background:radial-gradient(circle,#343558,#0b1020 75%)}</style></head><body>
-<header><div class="sitebar"><a class="sitebrand" href="./characters.html">✦ 次元角色档案馆</a><nav><a href="./characters.html">角色图鉴</a><a class="selected" href="./spine.html">▶ 动态立绘</a></nav></div><h1>动态立绘剧场 · 修复版 2026-10-20</h1><p>选择角色，欣赏 Spine 骨骼动画。可以切换动作、暂停和全屏。</p></header>
+<header><div class="sitebar"><a class="sitebrand" href="./characters.html">✦ 次元角色档案馆</a><nav><a href="./characters.html">角色图鉴</a><a class="selected" href="./spine.html">▶ 动态立绘</a></nav></div><h1>动态立绘剧场 · 动作自动播放版 2026-10-20</h1><p>选择角色，欣赏 Spine 骨骼动画。可以切换动作、暂停和全屏。</p></header>
 <div class="wrap">
 <section class="side">
 <h2>角色动画</h2><label for="gameFilter">选择游戏</label><select id="gameFilter"><option value="all">全部游戏</option><option value="nikke">胜利女神：妮姬</option><option value="bluearchive">蔚蓝档案（部分动画待验证）</option></select><label for="characterSearch">搜索角色（中文、英文或编号）</label><input id="characterSearch" type="search" placeholder="例如：安妮丝 / Rapi / c012"><label for="characters">当前选中的角色</label><select id="characters"><option value="">请选择角色…</option></select><div id="characterCards" class="character-cards" aria-label="角色图片选择列表"></div><p class="note" id="selectionNote">点击下面的角色卡片，即可选中并播放。</p><button id="nikke" class="primary" disabled>▶ 播放选中角色</button><p class="note">这是本站自己渲染的 Spine 动画；骨骼与贴图暂从社区原始文件地址加载，不嵌入对方网页。若资源下载失败，将尝试备用镜像，并在超时后显示错误。</p><button id="testUrls" type="button">检测选中角色的资源连通性</button><hr><h2>播放测试</h2>
@@ -152,7 +152,20 @@ async function show(options,title,onError){
   const normalized={...options,atlasUrl:atlasPath};
   if(skeletonPath){if(/\.json(?:[?#]|$)/i.test(skeletonPath))normalized.jsonUrl=skeletonPath;else if($('version').value==='3.8')normalized.skelUrl=skeletonPath;else normalized.binaryUrl=skeletonPath;}
   const config={...normalized,showControls:true,premultipliedAlpha:true,alpha:false,backgroundColor:'#142238ff',
-   success:(p)=>{if(attempt!==currentAttempt)return;stopWatchdog();player=p;status('播放成功：'+title+'。底部控制栏可以切换动作、暂停和全屏。')},
+   success:(p)=>{
+    if(attempt!==currentAttempt)return;
+    stopWatchdog();player=p;
+    const names=(p.skeleton?.data?.animations||[]).map(a=>a.name).filter(Boolean);
+    if(!names.length){status('骨骼已显示，但没有找到可播放的动作。',true);return}
+    const preferred=names.find(n=>/^(idle|idle_0?1|stand|breath|loop|wait|default)$/i.test(n))
+      ||names.find(n=>/idle|stand|breath|wait/i.test(n))
+      ||names[0];
+    try{
+      p.setAnimation(preferred,true);
+      p.play();
+      status('正在播放：'+title+' · '+preferred+'（共 '+names.length+' 个动作，可用底部控制栏切换）');
+    }catch(e){status('骨骼已加载，但自动播放动作失败：'+e.message,true)}
+   },
    error:(_p,reason)=>{if(attempt!==currentAttempt)return;stopWatchdog();
     if(onError)onError(String(reason||'资源加载失败'));else status('加载失败：'+String(reason||'请核查 Spine 版本及资源路径'),true)}
   };
