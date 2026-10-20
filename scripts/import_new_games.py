@@ -21,7 +21,7 @@ INDEX = ROOT / "data" / "characters.json"
 DEST = ROOT / "assets" / "portraits"
 UA = {"User-Agent": "Mozilla/5.0 (compatible; WinterCharacterArchive/1.0)", "Accept": "image/avif,image/webp,image/png,image/*;q=0.8"}
 HOYO = "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/"
-WUWA = "https://raw.githubusercontent.com/TomyJan/WutheringWaves-UIResources/main/UIResources/UiLuckdraw/Image/"
+WUWA = "https://raw.githubusercontent.com/TomyJan/WutheringWaves-UIResources/3.7/UIResources/UiLuckdraw/Image/"
 
 GAMES = {
     "genshin": ("原神", "Genshin Impact"),
@@ -49,7 +49,7 @@ CURATED = [
     ("gfl2", "klukai", "可露凯", "Klukai", "https://iopwiki.com/images/e/e4/Klukai_Whole.png", "https://iopwiki.com/wiki/File:Klukai_Whole.png"),
     ("gfl2", "leva", "莱娅", "Leva", "https://iopwiki.com/images/1/14/Leva_whole.png", "https://iopwiki.com/wiki/File:Leva_whole.png"),
     ("gfl2", "nemesis", "纳美西丝", "Nemesis", "https://iopwiki.com/wiki/Special:FilePath/Nemesis_Whole.png", "https://iopwiki.com/wiki/File:Nemesis_Whole.png"),
-    ("wutheringwaves", "jiyan", "忌炎", "Jiyan", WUWA+"T_RoleImgjiyan_UI.png", "https://github.com/TomyJan/WutheringWaves-UIResources/tree/main/UIResources/UiLuckdraw/Image"),
+    ("wutheringwaves", "jiyan", "忌炎", "Jiyan", WUWA+"T_RoleImgjiyan_UI.png", "https://github.com/TomyJan/WutheringWaves-UIResources/tree/3.7/UIResources/UiLuckdraw/Image"),
     ("wutheringwaves", "yinlin", "吟霖", "Yinlin", WUWA+"T_RoleImgyinlin_UI.png", "https://github.com/TomyJan/WutheringWaves-UIResources/tree/main/UIResources/UiLuckdraw/Image"),
 ]
 
