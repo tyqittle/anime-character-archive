@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a1221"><title>冬境 · 独立 Spine 动画播放器</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,"Microsoft YaHei",sans-serif;background:#080e19;color:#f0f7ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 60% 0,#203955 0,transparent 65%),#080e19;min-height:100vh}
+a{color:#b9e8ff}header{padding:24px 28px;border-bottom:1px solid #ffffff20}
+header h1{margin:0;font-size:clamp(25px,4vw,38px)}header p{margin:8px 0 0;color:#a4bad0}
+.wrap{max-width:1470px;margin:auto;padding:22px;display:grid;grid-template-columns:310px minmax(0,1fr);gap:18px}
+.side,.stage{border:1px solid #ffffff24;border-radius:18px;background:#111b2a;min-width:0;overflow:hidden}
+.side{padding:20px;align-self:start}.side h2{font-size:17px;margin:0 0 14px}
+label{display:block;font-size:13px;color:#c4d2e5;margin:13px 0 6px}
+select,input,button{font:inherit;color:white;background:#1a2d44;border:1px solid #4a647d;border-radius:10px;padding:11px;max-width:100%}select,input{width:100%}
+button{cursor:pointer}button:hover{border-color:#a7e2ff}button:disabled{opacity:.4;cursor:not-allowed}
+.primary{width:100%;margin:12px 0 0;background:#315f79;border-color:#539ac1;font-weight:650}
+.note{font-size:13px;line-height:1.65;color:#a8b9cc}.note strong{color:white}
+hr{border:0;border-top:1px solid #ffffff23;margin:21px 0}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding:14px 16px;gap:10px;background:#142338}
+.head strong{font-size:15px}.head small{color:#9fb3c7}
+#player{height:min(72vh,760px);min-height:410px;background:radial-gradient(circle at center,#304057,#0a1321 75%);position:relative}
+#placeholder{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#b8c9da;padding:24px;pointer-events:none}
+#placeholder[hidden]{display:none}
+#status{padding:14px 16px;font-size:13px;color:#bcd3e7;border-top:1px solid #ffffff20;white-space:pre-wrap}
+#status.error{color:#ffaeb2}.guide{margin:14px 0;padding:14px;background:#1b2b40;border-radius:12px}
+#fileList{font-size:12px;color:#b7cce0;overflow-wrap:anywhere}
+footer{padding:24px;text-align:center;color:#92a8bb;font-size:12px}
+@media(max-width:850px){.wrap{grid-template-columns:1fr;padding:12px}.side{order:2}.stage{order:1}#player{height:65vh;min-height:340px}}
+</style></head><body>
+<header><h1>冬境 · Spine 动态角色播放器</h1><p>由本站自己的 HTML、JavaScript 和官方 Spine 运行时驱动。不嵌入其他网站，不跳转到 Nikke-DB。</p></header>
+<div class="wrap">
+<section class="side">
+<h2>角色动画</h2><label for="characters">选择 NIKKE 人物</label><select id="characters"><option value="">正在加载角色索引…</option></select><button id="nikke" class="primary" disabled>▶ 播放选中角色</button><p class="note">这是本站自己渲染的 Spine 动画；骨骼与贴图暂从社区原始文件地址加载，不嵌入对方网页。若资源下载失败，将尝试备用镜像，并在超时后显示错误。</p><button id="testUrls" type="button">检测选中角色的资源连通性</button><hr><h2>播放测试</h2>
+<label for="version">骨骼版本</label><select id="version"><option value="4.0">Spine 4.0</option><option value="4.1">Spine 4.1</option><option value="4.2">Spine 4.2</option></select>
+<button id="demo" class="primary">▶ 播放官方示例动画</button>
+<p class="note">演示资源由 Spine 官方提供，用于核对播放器是否能真正渲染动作；<strong>不是 NIKKE 人物</strong>。</p>
+<hr>
+<h2>加载你自己的角色素材</h2>
+<label for="files">选择整套 Spine 资源</label>
+<input type="file" id="files" multiple accept=".skel,.json,.atlas,.png,.webp,.jpg,.jpeg,.atlas.txt,.skel.bytes">
+<p class="note">一次选中相同角色的 <code>.skel</code>（或 <code>.json</code>）、<code>.atlas</code>，以及图集中引用的全部贴图。文件只在你的浏览器内读取，不上传。</p>
+<div id="fileList">尚未选择文件。</div>
+<button id="local" class="primary" disabled>▶ 播放已选择文件</button><button id="saveLocal" type="button" disabled style="width:100%;margin-top:8px">保存已选择素材到本机浏览器</button><label for="savedPacks">已保存的本地动画包</label><select id="savedPacks"><option value="">暂无本地动画包</option></select><button id="playSaved" type="button" style="width:100%;margin-top:8px" disabled>▶ 播放已保存动画</button><button id="deleteSaved" type="button" style="width:100%;margin-top:8px" disabled>删除选中的本地动画包</button>
+<div class="guide"><strong>使用说明</strong><p class="note">1. 先点“播放官方示例动画”，确认运行时可加载。<br>2. 有角色 Spine 三件套后，一次性选择全部文件。<br>3. 选择对应的骨骼版本，点击播放。<br>4. 成功后可以使用播放器自带的动作控制。</p></div>
+<hr>
+<p class="note">当前仓库只有剧情 CG 和角色索引，尚没有可确认可播放的 NIKKE 骨骼文件。这一页提供独立播放器本身，不宣称已经集成 NIKKE 的动态角色资源。</p>
+<a href="./gallery.html">← 返回独立影像画廊</a>
+</section>
+<section class="stage"><div class="head"><strong id="title">动画预览</strong><small>官方 Spine Web Player · 本站直接渲染</small></div>
+<div id="player"><div id="placeholder">请选择一个演示或导入本地动画文件。<br>这里将直接显示动态人物，而不是头像或第三方网站。</div></div>
+<div id="status" role="status" aria-live="polite">就绪。请先测试官方示例。</div></section>
+</div>
+<footer>Spine 运行时 © Esoteric Software · 游戏角色及其素材版权归各自权利人。仅用于个人研究和获授权的资源播放。</footer>
+<script>
+'use strict';
+const $=id=>document.getElementById(id);
+const runtimeRoot='https://unpkg.com/@esotericsoftware/spine-player@';
+const params=new URLSearchParams(location.search);
+let loadedVersion='', loadPromise=null, player=null, allCharacters=[], chosenFileList=[], currentAttempt=0, watchdog=null;
+const manifestUrl='./data/spine-characters.json';
+const cacheDB='winter-spine-local-v1';
+function openDB(){return new Promise((resolve,reject)=>{const req=indexedDB.open(cacheDB,1);req.onupgradeneeded=()=>req.result.createObjectStore('packs',{keyPath:'id'});req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error)})}
+async function dbAction(mode,fn){const db=await openDB();try{return await new Promise((resolve,reject)=>{const tx=db.transaction('packs',mode);const store=tx.objectStore('packs');let req;try{req=fn(store)}catch(e){reject(e);return}req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);tx.onabort=()=>reject(tx.error)})}finally{db.close()}}
+const cacheAll=()=>dbAction('readonly',s=>s.getAll());
+async function refreshSaved(){try{const all=await cacheAll();const select=$('savedPacks');select.replaceChildren(new Option(all.length?'选择已保存素材…':'暂无本地动画包',''),...all.map(p=>new Option(p.id+' · Spine '+p.version,p.id)));$('playSaved').disabled=true;$('deleteSaved').disabled=true}catch(e){status('浏览器缓存不可用：'+e.message,true)}}
+function stopWatchdog(){if(watchdog){clearTimeout(watchdog);watchdog=null}}
+function status(message,error=false){$('status').textContent=message;$('status').classList.toggle('error',error)}
+function chosen(){return allCharacters.find(c=>c.id===$('characters').value)}
+function setVersion(v, packId=''){
+ if($('version').value===v)return true;
+ if(loadedVersion&&loadedVersion!==v){const next=new URL(location.href);next.searchParams.set('v',v);if(packId){next.searchParams.set('pack',packId);next.searchParams.delete('id')}else{next.searchParams.set('id',$('characters').value);next.searchParams.delete('pack')}location.href=next.toString();return false}
+ $('version').value=v;return true;
+}
+function ensureRuntime(version){
+ if(loadedVersion===version&&window.spine?.SpinePlayer)return Promise.resolve();
+ if(loadPromise){if(loadedVersion!==version)return Promise.reject(Error('切换版本请刷新页面'));return loadPromise}
+ loadedVersion=version;
+ loadPromise=new Promise((resolve,reject)=>{
+  const base=runtimeRoot+version+'.*/dist/';
+  const css=document.createElement('link');css.rel='stylesheet';css.href=base+'spine-player.css';document.head.append(css);
+  const js=document.createElement('script');js.src=base+'iife/spine-player.js';js.crossOrigin='anonymous';
+  js.onload=()=>window.spine?.SpinePlayer?resolve():reject(Error('运行时脚本已加载但 SpinePlayer 不存在'));
+  js.onerror=()=>{loadPromise=null;reject(Error('Spine 运行时下载失败，请检查网络'))};document.head.append(js)
+ });
+ return loadPromise;
+}
+function clearPlayer(){
+ try{player?.dispose?.()}catch(e){console.warn(e)}
+ player=null;
+ const ph=document.createElement('div');ph.id='placeholder';ph.textContent='正在准备动画画布…';
+ $('player').replaceChildren(ph);
+ return ph;
+}
+async function show(options,title,onError){
+ const attempt=++currentAttempt;
+ stopWatchdog();
+ status('正在加载 '+title+' 的骨骼、图集与贴图…');$('title').textContent=title;
+ try{
+  await ensureRuntime($('version').value);
+  if(attempt!==currentAttempt)return;
+  clearPlayer();
+  const config={...options,showControls:true,premultipliedAlpha:true,alpha:false,backgroundColor:'#142238ff',
+   success:(p)=>{if(attempt!==currentAttempt)return;stopWatchdog();player=p;status('播放成功：'+title+'。底部控制栏可以切换动作、暂停和全屏。')},
+   error:(_p,reason)=>{if(attempt!==currentAttempt)return;stopWatchdog();
+    if(onError)onError(String(reason||'资源加载失败'));else status('加载失败：'+String(reason||'请核查 Spine 版本及资源路径'),true)}
+  };
+  $('player').replaceChildren();
+  watchdog=setTimeout(()=>{if(attempt!==currentAttempt)return;stopWatchdog();if(onError)onError('30 秒内未完成加载，可能是源站拒绝访问、图片下载缓慢或 WebGL 初始化失败');else status('加载超时（30 秒）。请检查浏览器网络控制台及源站访问。',true)},30000);
+  player=new spine.SpinePlayer('player',config);
+ }catch(e){stopWatchdog();if(attempt===currentAttempt)status('播放器初始化失败：'+(e.message||String(e)),true)}
+}
+function urls(c,mirror){
+ const base=mirror==='legacy'?'https://nikke-db-legacy.pages.dev/l2d/'+c.id+'/'+c.id+'_00':c.base;
+ return {skeleton:base+'.skel',atlas:base+'.atlas',base};
+}
+async function downloadBlob(url,timeout=24000){
+ const controller=new AbortController(), timer=setTimeout(()=>controller.abort(),timeout);
+ try{
+  const response=await fetch(url,{signal:controller.signal,cache:'force-cache'});
+  if(!response.ok)throw Error('HTTP '+response.status+' '+url.split('/').pop());
+  return response.blob();
+ }finally{clearTimeout(timer)}
+}
+function imagePages(atlasText){
+ return [...new Set(atlasText.replace(/^\uFEFF/,'').split(/\r?\n/).map(x=>x.trim())
+  .filter(x=>/\.(png|webp|jpg|jpeg)$/i.test(x)&&!x.includes(':')))];
+}
+async function downloadPack(c,mirror){
+ const paths=urls(c,mirror),stem=c.id+'_00';
+ const [skelBlob,atlasBlob]=await Promise.all([downloadBlob(paths.skeleton),downloadBlob(paths.atlas)]);
+ if(skelBlob.size<100||atlasBlob.size<20)throw Error('骨骼或图集文件大小异常');
+ const atlasText=(await atlasBlob.text()).replace(/^\uFEFF/,'');
+ const pages=imagePages(atlasText);
+ if(!pages.length)throw Error('图集中没有图片文件名');
+ const data={};
+ data[stem+'.skel']=await blobToUri(skelBlob);
+ data[stem+'.atlas']=await blobToUri(new Blob([atlasText],{type:'text/plain'}));
+ for(let i=0;i<pages.length;i++){
+  const page=pages[i],url=paths.base.slice(0,paths.base.lastIndexOf('/')+1)+page;
+  status('已读取骨骼与图集，正在下载贴图 '+(i+1)+'/'+pages.length+'：'+page);
+  const blob=await downloadBlob(url,60000);
+  if(blob.size<100)throw Error('贴图为空：'+page);
+  data[page]=await blobToUri(blob);
+ }
+ return {id:'nikke-'+c.id,version:c.spineVersion,skeleton:stem+'.skel',atlas:stem+'.atlas',rawDataURIs:data};
+}
+function blobToUri(blob){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(reader.error);reader.readAsDataURL(blob)})}
+let sequence=0;
+async function playCharacter(c){
+ const current=++sequence;
+ if(!setVersion(c.spineVersion))return;
+ const packId='nikke-'+c.id;
+ status('正在查找 '+c.name+' 的本地缓存…');
+ try{
+  let pack=await dbAction('readonly',s=>s.get(packId)).catch(()=>null);
+  if(pack){
+   if(current!==sequence)return;
+   status('已找到本地缓存，直接启动 '+c.name+' …');
+   await playPack(pack);
+   return;
+  }
+  let failure='';
+  for(const mirror of ['github','legacy']){
+   if(current!==sequence)return;
+   try{
+    status('正在从 '+(mirror==='github'?'原始素材目录':'备用镜像')+'读取 '+c.name+' 的完整动画文件…');
+    pack=await downloadPack(c,mirror);
+    if(current!==sequence)return;
+    try{await dbAction('readwrite',s=>s.put(pack));refreshSaved()}catch(e){status('已下载动画，但浏览器空间不足，无法缓存：'+e.message)}
+    if(current!==sequence)return;
+    await playPack(pack);
+    return;
+   }catch(e){failure+=mirror+'：'+(e.message||e)+'；';}
+  }
+  if(current===sequence)status('角色资源下载失败。'+failure+'可选择本地导入已获得的动画文件。',true);
+ }catch(e){if(current===sequence)status('播放失败：'+(e.message||String(e)),true)}
+}
+$('nikke').onclick=()=>{const c=chosen();if(c)playCharacter(c)};
+$('testUrls').onclick=async()=>{
+ const c=chosen();if(!c){status('请先选择角色。',true);return}
+ status('正在检查 '+c.name+' 的骨骼、图集和图集中的贴图…');
+ const abort=new AbortController(), timer=setTimeout(()=>abort.abort(),12000);
+ try{
+  const roots=[c.base+'.skel',c.base+'.atlas'];
+  const results=await Promise.all(roots.map(async url=>{try{
+   const r=await fetch(url,{signal:abort.signal,cache:'no-store'});
+   if(!r.ok)throw Error('HTTP '+r.status);
+   const value=url.endsWith('.atlas')?await r.text():null;
+   return {file:url.split('/').pop(),ok:true,atlas:value};
+  }catch(e){return {file:url.split('/').pop(),ok:false,error:e.name==='AbortError'?'12秒超时':e.message}}}));
+  const atlas=results.find(r=>r.file.endsWith('.atlas'));
+  if(atlas?.ok){
+    const pages=[...new Set(atlas.atlas.split(/\r?\n/).map(x=>x.trim().replace(/^\uFEFF/,'')).filter(x=>/\.(png|jpg|jpeg|webp)$/i.test(x)))];
+    const root=c.base.slice(0,c.base.lastIndexOf('/')+1);
+    for(const page of pages.slice(0,8)){
+      const url=root+page, controller=new AbortController(), t=setTimeout(()=>controller.abort(),8000);
+      try{
+       const r=await fetch(url,{method:'HEAD',signal:controller.signal});
+       results.push({file:page,ok:r.ok||r.status===405,error:r.ok?'':('HTTP '+r.status)});
+      }catch(e){results.push({file:page,ok:false,error:e.name==='AbortError'?'8秒超时':e.message})}
+      finally{clearTimeout(t)}
+    }
+  }
+  status('资源检测结果：\n'+results.map(r=>(r.ok?'✓ ':'✗ ')+r.file+(r.error?'：'+r.error:'：可访问')).join('\n')+'\n注意：检测通过不代表 Spine 版本或动画渲染一定成功。',results.some(r=>!r.ok));
+ }catch(e){status('检测异常：'+e.message,true)}
+ finally{clearTimeout(timer)}
+}
+$('characters').onchange=()=>{$('nikke').disabled=!chosen();const c=chosen();if(c&&loadedVersion&&loadedVersion!==c.spineVersion)status('该角色使用 Spine '+c.spineVersion+'。播放时将自动刷新以切换版本。')};
+$('demo').onclick=()=>{
+ const version=$('version').value;
+ const base='https://esotericsoftware.com/files/examples/'+version+'/spineboy/export/';
+ show({skeleton:base+'spineboy-pro.skel',atlas:base+'spineboy-pma.atlas',animation:'walk'},'Spineboy 官方示例');
+};
+$('files').onchange=e=>{
+ chosenFileList=Array.from(e.target.files||[]);
+ $('fileList').textContent=chosenFileList.length?chosenFileList.map(f=>f.name).join(' · '):'尚未选择文件。';
+ $('local').disabled=!chosenFileList.some(f=>/\.(skel|json)$/i.test(f.name))||!chosenFileList.some(f=>/\.atlas$/i.test(f.name));$('saveLocal').disabled=$('local').disabled;
+};
+function toDataUri(file){return new Promise((resolve,reject)=>{const r=new FileReader;r.onload=()=>resolve(r.result);r.onerror=()=>reject(r.error);r.readAsDataURL(file)})}
+function basename(s){return s.replace(/\\/g,'/').split('/').pop()}
+function skeletonAndAtlas(files){const skeleton=files.find(f=>/\.(skel|json)$/i.test(f.name));const atlas=files.find(f=>/\.atlas$/i.test(f.name));if(!skeleton||!atlas)throw Error('请同时选择骨骼和 .atlas 文件');return {skeleton,atlas}}
+async function preparePack(files){const {skeleton,atlas}=skeletonAndAtlas(files);const rawDataURIs={};for(const f of files){rawDataURIs[basename(f.name)]=await toDataUri(f)}const lines=(await atlas.text()).split(/\r?\n/).map(x=>x.trim().replace(/^\uFEFF/,''));const pages=lines.filter(x=>/\.(png|jpg|jpeg|webp)$/i.test(x));const missing=pages.filter(x=>!rawDataURIs[basename(x)]);if(missing.length)throw Error('缺少贴图文件：'+missing.join('、'));const atlasName=basename(atlas.name),skeletonName=basename(skeleton.name);
+// The atlas BOM breaks some Spine parsers; rewrite the in-memory text without changing original files.
+rawDataURIs[atlasName]='data:text/plain;charset=utf-8;base64,'+btoa(unescape(encodeURIComponent((await atlas.text()).replace(/^\uFEFF/,''))));
+return {id:skeletonName,version:$('version').value,skeleton:skeletonName,atlas:atlasName,rawDataURIs}}
+function playPack(pack){if(!setVersion(pack.version,pack.id))return;return show({skeleton:pack.skeleton,atlas:pack.atlas,rawDataURIs:pack.rawDataURIs},'动态角色 · '+pack.id)}
+$('saveLocal').onclick=async()=>{try{status('正在保存到浏览器本地缓存…');const pack=await preparePack(chosenFileList);await dbAction('readwrite',s=>s.put(pack));await refreshSaved();status('已保存 '+pack.id+'。以后可直接从“已保存的本地动画包”加载，无须重新选择素材文件。')}catch(e){status('保存失败：'+e.message,true)}};
+$('savedPacks').onchange=()=>{$('playSaved').disabled=!$('savedPacks').value;$('deleteSaved').disabled=!$('savedPacks').value};
+$('playSaved').onclick=async()=>{try{const pack=await dbAction('readonly',s=>s.get($('savedPacks').value));if(!pack)throw Error('素材包不存在');playPack(pack)}catch(e){status('本地素材播放失败：'+e.message,true)}};
+$('deleteSaved').onclick=async()=>{const id=$('savedPacks').value;if(!id)return;if(!confirm('删除本机保存的动画素材包：'+id+'？'))return;try{await dbAction('readwrite',s=>s.delete(id));await refreshSaved();status('已删除本机动画素材包 '+id)}catch(e){status('删除失败：'+e.message,true)}};
+$('local').onclick=async()=>{try{status('正在读取本地动画文件…');const pack=await preparePack(chosenFileList);await playPack(pack)}catch(e){status('本地动画无法播放：'+(e.message||String(e)),true)}};
+$('version').onchange=()=>{
+ if(loadedVersion&&loadedVersion!==$('version').value){const url=new URL(location.href);url.searchParams.set('v',$('version').value);url.searchParams.delete('id');location.href=url.toString()}
+};
+(async()=>{
+ try{
+  const r=await fetch(manifestUrl,{cache:'no-store'});if(!r.ok)throw Error('HTTP '+r.status);
+  const db=await r.json();allCharacters=db.characters||[];
+  $('characters').replaceChildren(new Option('请选择角色…',''),...allCharacters.map(c=>new Option(c.name+' ('+c.id+')',c.id)));
+  const requested=params.get('id');if(requested&&allCharacters.some(x=>x.id===requested))$('characters').value=requested;
+  $('nikke').disabled=!chosen();
+  status('已准备 '+allCharacters.length+' 位角色动画索引。请选择角色并点击播放。');
+  if(chosen()&&params.get('id'))playCharacter(chosen());
+ }catch(e){status('角色索引无法加载：'+e.message+'。请在静态服务器中打开网页，或直接导入本地资源。',true)}
+})();
+if(['4.0','4.1','4.2'].includes(params.get('v')))$('version').value=params.get('v');
+refreshSaved().then(async()=>{const packId=params.get('pack');if(!packId)return;try{const pack=await dbAction('readonly',s=>s.get(packId));if(pack){$('savedPacks').value=packId;$('savedPacks').onchange();playPack(pack)}else status('本地缓存中找不到 '+packId,true)}catch(e){status('读取本地缓存失败：'+e.message,true)}});
+</script></body></html>
