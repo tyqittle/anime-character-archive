@@ -34,11 +34,14 @@ def main():
    id_='wiki-'+re.sub('[^a-z0-9]+','-',name.lower()).strip('-')
    file=DIR/(id_+ext)
    file.write_bytes(contents)
-   db['characters'].append({'id':id_,'name':name,'zh':'','groupId':'','kind':'full','image':'./assets/portraits/'+file.name,'avatar':'','source':'https://nikke-goddess-of-victory-international.fandom.com/wiki/File:'+urllib.parse.quote(name.replace(' ','_')+'_FB.png'),'originalImage':url,'rarity':'','manufacturer':'','class':'','squad':'','variant':False,'license':'第三方游戏美术；权利归原作者'})
+   db['characters'].append({'id':id_,'name':name,'zh':'','gameId':'nikke','game':'胜利女神：妮姬','characterKey':name,'groupId':'','kind':'full','image':'./assets/portraits/'+file.name,'avatar':'','source':'https://nikke-goddess-of-victory-international.fandom.com/wiki/File:'+urllib.parse.quote(name.replace(' ','_')+'_FB.png'),'originalImage':url,'rarity':'','manufacturer':'','class':'','squad':'','variant':False,'license':'第三方游戏美术；权利归原作者'})
+   known.add(name.lower())
    added.append(name)
   except Exception as e:print('SKIP',name,type(e).__name__,str(e)[:150],flush=True)
   time.sleep(0.1)
  db['counts']={'full':len(db['characters']),'total':len(db['characters'])}
- if added:FILE.write_text(json.dumps(db,ensure_ascii=False,indent=2)+chr(10),encoding='utf-8')
+ if added:
+  db['characters'].sort(key=lambda x:(x.get('gameId',''),x.get('characterKey',''),x.get('id','')))
+  FILE.write_text(json.dumps(db,ensure_ascii=False,indent=2)+chr(10),encoding='utf-8')
  print('Imported:',','.join(added),'count',len(added))
 if __name__=='__main__':main()
