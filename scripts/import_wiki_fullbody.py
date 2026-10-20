@@ -14,7 +14,7 @@ def read_json(params):
  with urllib.request.urlopen(req,timeout=25) as response:return json.load(response)
 def get_page(title):
  d=read_json({'action':'query','titles':'File:'+title,'prop':'imageinfo','iiprop':'url|size|mime','format':'json','formatversion':'2'})
- p=d['query']['pages'][0];print('WIKI',title,'PAGE',str(p)[:350],flush=True);return p.get('imageinfo',[{}])[0]
+ p=d['query']['pages'][0];return p.get('imageinfo',[{}])[0]
 def main():
  db=json.loads(FILE.read_text(encoding='utf-8'))
  DIR.mkdir(parents=True,exist_ok=True)
@@ -25,7 +25,7 @@ def main():
   try:
    info=get_page(name+' FB.png')
    url=info.get('url','')
-   if not url or info.get('mime')!='image/png' or not 50000<int(info.get('size',0))<12000000:continue
+   if not url or not 50000<int(info.get('size',0))<12000000:continue
    req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Referer':'https://nikke-goddess-of-victory-international.fandom.com/'})
    with urllib.request.urlopen(req,timeout=40) as response:contents=response.read(12000001)
    if not contents.startswith(b'\\x89PNG\\r\\n\\x1a\\n') or not 50000<len(contents)<12000000:continue
