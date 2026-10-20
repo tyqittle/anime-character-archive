@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "https://github.com/Nikke-db/Nikke-db.github.io",
-  "note": "NIKKE 及 Blue Archive Spine 资源索引；Blue Archive 已确认所列三件套在源仓库存在，骨骼版本与浏览器实际播放尚未验证；动态资源从第三方加载。",
+  "note": "Blue Archive 名称依据公开编号对照表匹配；Spine 3.8 为来源说明提示的候选版本，未逐条验证。资源可达、预览存在与成功播放是不同状态。",
   "characters": [
     {
       "id": "c010",
@@ -719,9 +719,9 @@
     },
     {
       "id": "ba-ch0058_spr",
-      "name": "BA · CH0058",
+      "name": "Hifumi (Swimsuit)",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0058_spr/CH0058_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0058_spr",
@@ -729,13 +729,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Hifumi",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-20005.webp"
     },
     {
       "id": "ba-ch0060_spr",
-      "name": "BA · CH0060",
+      "name": "Tsurugi (Swimsuit)",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0060_spr/CH0060_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0060_spr",
@@ -743,13 +746,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Tsurugi",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10013.webp"
     },
     {
       "id": "ba-ch0063_spr",
-      "name": "BA · CH0063",
+      "name": "Hina (Swimsuit)",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0063_spr/CH0063_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0063_spr",
@@ -757,13 +763,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Hina",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10022.webp"
     },
     {
       "id": "ba-ch0064_spr",
-      "name": "BA · CH0064",
+      "name": "Iori (Swimsuit)",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0064_spr/CH0064_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0064_spr",
@@ -771,13 +780,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Iori",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10023.webp"
     },
     {
       "id": "ba-ch0066_spr",
-      "name": "BA · CH0066",
+      "name": "Shun (Small)",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0066_spr/CH0066_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0066_spr",
@@ -785,13 +797,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Shun",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10025.webp"
     },
     {
       "id": "ba-ch0069_spr",
-      "name": "BA · CH0069",
+      "name": "Mika",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0069_spr/CH0069_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0069_spr",
@@ -799,13 +814,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Mika",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10059.webp"
     },
     {
       "id": "ba-ch0070_spr",
-      "name": "BA · CH0070",
+      "name": "Seia",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0070_spr/CH0070_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0070_spr",
@@ -813,13 +831,15 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Seia",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f"
     },
     {
       "id": "ba-ch0071_spr",
-      "name": "BA · CH0071",
+      "name": "Ichika",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0071_spr/CH0071_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0071_spr",
@@ -827,13 +847,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Ichika",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10077.webp"
     },
     {
       "id": "ba-ch0079_spr",
-      "name": "BA · CH0079",
+      "name": "Makoto",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0079_spr/CH0079_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0079_spr",
@@ -841,13 +864,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Makoto",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-20033.webp"
     },
     {
       "id": "ba-ch0080_spr",
-      "name": "BA · CH0080",
+      "name": "Satsuki",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0080_spr/CH0080_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0080_spr",
@@ -855,13 +881,15 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Satsuki",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f"
     },
     {
       "id": "ba-ch0086_spr",
-      "name": "BA · CH0086",
+      "name": "Kayoko (New Year)",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0086_spr/CH0086_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0086_spr",
@@ -869,13 +897,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Kayoko",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10064.webp"
     },
     {
       "id": "ba-ch0087_spr",
-      "name": "BA · CH0087",
+      "name": "Haruka (New Year)",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0087_spr/CH0087_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0087_spr",
@@ -883,13 +914,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Haruka",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-20025.webp"
     },
     {
       "id": "ba-ch0088_spr",
-      "name": "BA · CH0088",
+      "name": "Megu",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0088_spr/CH0088_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0088_spr",
@@ -897,13 +931,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Megu",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10060.webp"
     },
     {
       "id": "ba-ch0089_spr",
-      "name": "BA · CH0089",
+      "name": "Kasumi",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0089_spr/CH0089_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0089_spr",
@@ -911,13 +948,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Kasumi",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10078.webp"
     },
     {
       "id": "ba-ch0092_spr",
-      "name": "BA · CH0092",
+      "name": "Nonomi (Swimsuit)",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0092_spr/CH0092_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0092_spr",
@@ -925,13 +965,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Nonomi",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10044.webp"
     },
     {
       "id": "ba-ch0095_spr",
-      "name": "BA · CH0095",
+      "name": "Noa",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0095_spr/CH0095_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0095_spr",
@@ -939,13 +982,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Noa",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10052.webp"
     },
     {
       "id": "ba-ch0098_spr",
-      "name": "BA · CH0098",
+      "name": "Asuna (Bunny)",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0098_spr/CH0098_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0098_spr",
@@ -953,13 +999,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Asuna",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10028.webp"
     },
     {
       "id": "ba-ch0099_spr",
-      "name": "BA · CH0099",
+      "name": "Akane (Bunny)",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0099_spr/CH0099_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0099_spr",
@@ -967,13 +1016,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Akane",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-20019.webp"
     },
     {
       "id": "ba-ch0100_spr",
-      "name": "BA · CH0100",
+      "name": "Karin (Bunny)",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0100_spr/CH0100_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0100_spr",
@@ -981,13 +1033,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Karin",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10027.webp"
     },
     {
       "id": "ba-ch0101_spr",
-      "name": "BA · CH0101",
+      "name": "Neru (Bunny)",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0101_spr/CH0101_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0101_spr",
@@ -995,13 +1050,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Neru",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10026.webp"
     },
     {
       "id": "ba-ch0107_spr",
-      "name": "BA · CH0107",
+      "name": "Kaho",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0107_spr/CH0107_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0107_spr",
@@ -1009,13 +1067,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Kaho",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10065.webp"
     },
     {
       "id": "ba-ch0109_spr",
-      "name": "BA · CH0109",
+      "name": "Niya",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0109_spr/CH0109_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0109_spr",
@@ -1023,13 +1084,15 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Niya",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f"
     },
     {
       "id": "ba-ch0110_spr",
-      "name": "BA · CH0110",
+      "name": "Umika",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0110_spr/CH0110_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0110_spr",
@@ -1037,13 +1100,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Umika",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10090.webp"
     },
     {
       "id": "ba-ch0113_spr",
-      "name": "BA · CH0113",
+      "name": "Michiru",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0113_spr/CH0113_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0113_spr",
@@ -1051,13 +1117,15 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Michiru",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f"
     },
     {
       "id": "ba-ch0114_spr",
-      "name": "BA · CH0114",
+      "name": "Tsukuyo",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0114_spr/CH0114_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0114_spr",
@@ -1065,13 +1133,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Tsukuyo",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10040.webp"
     },
     {
       "id": "ba-ch0123_spr",
-      "name": "BA · CH0123",
+      "name": "Shigure (Hot Spring)",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0123_spr/CH0123_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0123_spr",
@@ -1079,13 +1150,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Shigure",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-20031.webp"
     },
     {
       "id": "ba-ch0124_spr",
-      "name": "BA · CH0124",
+      "name": "Meru",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0124_spr/CH0124_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0124_spr",
@@ -1093,13 +1167,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Meru",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10075.webp"
     },
     {
       "id": "ba-ch0125_spr",
-      "name": "BA · CH0125",
+      "name": "Meru (Hot Spring)",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0125_spr/CH0125_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0125_spr",
@@ -1107,13 +1184,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Meru",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10075.webp"
     },
     {
       "id": "ba-ch0135_spr",
-      "name": "BA · CH0135",
+      "name": "Rumi",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0135_spr/CH0135_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0135_spr",
@@ -1121,13 +1201,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Rumi",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10069.webp"
     },
     {
       "id": "ba-ch0137_spr",
-      "name": "BA · CH0137",
+      "name": "Kokona",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0137_spr/CH0137_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0137_spr",
@@ -1135,13 +1218,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Kokona",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10050.webp"
     },
     {
       "id": "ba-ch0138_spr",
-      "name": "BA · CH0138",
+      "name": "Mina",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0138_spr/CH0138_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0138_spr",
@@ -1149,13 +1235,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Mina",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10070.webp"
     },
     {
       "id": "ba-ch0139_spr",
-      "name": "BA · CH0139",
+      "name": "Kisaki",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0139_spr/CH0139_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0139_spr",
@@ -1163,13 +1252,15 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Kisaki",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f"
     },
     {
       "id": "ba-ch0141_spr",
-      "name": "BA · CH0141",
+      "name": "Fubuki",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0141_spr/CH0141_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0141_spr",
@@ -1177,13 +1268,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Fubuki",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-20037.webp"
     },
     {
       "id": "ba-ch0144_spr",
-      "name": "BA · CH0144",
+      "name": "Saki",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0144_spr/CH0144_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0144_spr",
@@ -1191,13 +1285,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Saki",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-20014.webp"
     },
     {
       "id": "ba-ch0145_spr",
-      "name": "BA · CH0145",
+      "name": "Miyu",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0145_spr/CH0145_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0145_spr",
@@ -1205,13 +1302,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Miyu",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10039.webp"
     },
     {
       "id": "ba-ch0152_spr",
-      "name": "BA · CH0152",
+      "name": "Mine",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0152_spr/CH0152_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0152_spr",
@@ -1219,13 +1319,16 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Mine",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10058.webp"
     },
     {
       "id": "ba-ch0155_spr",
-      "name": "BA · CH0155",
+      "name": "Natsu",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0155_spr/CH0155_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0155_spr",
@@ -1233,7 +1336,10 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Natsu",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f",
+      "preview": "./assets/portraits/ba-10029.webp"
     },
     {
       "id": "ba-ch0156_spr",
@@ -1251,9 +1357,9 @@
     },
     {
       "id": "ba-ch0157_spr",
-      "name": "BA · CH0157",
+      "name": "Yume",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0157_spr/CH0157_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0157_spr",
@@ -1261,13 +1367,15 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Yume",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f"
     },
     {
       "id": "ba-ch0158_spr",
-      "name": "BA · CH0158",
+      "name": "Rio",
       "gameId": "bluearchive",
-      "spineVersion": "4.0",
+      "spineVersion": "3.8",
       "versionUnverified": true,
       "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Characters/CH0158_spr/CH0158_spr",
       "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Characters/CH0158_spr",
@@ -1275,7 +1383,9 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "characterKey": "Rio",
+      "nameSource": "https://gist.github.com/pkpc99/5786820b588cf026757d44e57c991e4f"
     }
   ],
   "sources": [
