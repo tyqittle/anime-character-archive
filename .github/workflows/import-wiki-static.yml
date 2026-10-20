@@ -28,3 +28,4 @@ jobs:
             git push origin HEAD:main
           fi
 # refresh importer diagnostics
+# retry PNG signature verification
