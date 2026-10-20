@@ -14,7 +14,7 @@ def read_json(params):
  with urllib.request.urlopen(req,timeout=25) as response:return json.load(response)
 def get_page(title):
  d=read_json({'action':'query','titles':'File:'+title,'prop':'imageinfo','iiprop':'url|size|mime','format':'json','formatversion':'2'})
- p=d['query']['pages'][0];return p.get('imageinfo',[{}])[0]
+ p=d['query']['pages'][0];print('WIKI',title,'PAGE',str(p)[:350],flush=True);return p.get('imageinfo',[{}])[0]
 def main():
  db=json.loads(FILE.read_text(encoding='utf-8'))
  DIR.mkdir(parents=True,exist_ok=True)
