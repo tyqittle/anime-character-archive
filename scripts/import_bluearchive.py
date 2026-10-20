@@ -34,7 +34,7 @@ def main():
  existing={x['id'] for x in db['characters']}
  ASSETS.mkdir(parents=True,exist_ok=True)
  count=0
- for sid in range(10000,10040):
+ for sid in range(10000,10210):
   student=lookup.get(str(sid))
   if not student:continue
   name=student.get('Name',student.get('name'))
