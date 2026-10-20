@@ -10,7 +10,8 @@ const chars=JSON.parse(read('data/characters.json'));
 const spine=JSON.parse(read('data/spine-characters.json'));
 
 assert.ok(Array.isArray(chars.characters)&&chars.characters.length>0,'Missing character records');
-assert.ok(chars.characters.every(x=>x.kind==='full'&&/\/images\/FB\//.test(x.image)),'Avatar-only record found');
+assert.ok(chars.characters.every(x=>x.kind==='full'&&(x.image===`./assets/portraits/${x.id}.png`||x.image===`https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/${x.id}_00.png`)),'Unexpected full-body image path');
+for(const entry of chars.characters){if(entry.image.startsWith('./assets/')) assert.ok(fs.existsSync(path.join(root,entry.image)),'Missing local PNG: '+entry.id); }
 assert.equal(new Set(chars.characters.map(x=>x.id)).size,chars.characters.length,'Duplicate character IDs');
 assert.ok(Array.isArray(spine.characters)&&spine.characters.length>0,'Missing Spine records');
 assert.equal(new Set(spine.characters.map(x=>x.id)).size,spine.characters.length,'Duplicate Spine IDs');
