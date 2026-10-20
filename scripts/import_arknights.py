@@ -16,10 +16,13 @@ def main():
     db=json.loads(FILE.read_text(encoding='utf8'))
     existing={r['id'] for r in db['characters']}
     entries=json.loads(download(SOURCE,5_000_000))
-    limit=int(os.environ.get('ARKNIGHTS_IMPORT_LIMIT','30'))
+    if not isinstance(entries,list):
+        raise RuntimeError('Arknights source did not return a directory listing')
+    limit=int(os.environ.get('ARKNIGHTS_IMPORT_LIMIT','60'))
     count=0
     ASSETS.mkdir(parents=True,exist_ok=True)
-    # Only plain charpack png files (full illustrations). Skip thumbnails marked b.
+    # Import original charpack illustrations only; skip lower-resolution b variants.
+    # Existing IDs are excluded, so every run advances to new characters.
     for entry in sorted(entries,key=lambda x:x['name']):
         if count>=limit:break
         name=entry.get('name','')
