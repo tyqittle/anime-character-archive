@@ -16,13 +16,15 @@ assert.ok(chars.characters.every(x=>x.kind==='full'&&((x.image===`./assets/portr
 for(const entry of chars.characters){if(entry.image.startsWith('./assets/')) assert.ok(fs.existsSync(path.join(root,entry.image)),'Missing local PNG: '+entry.id); }
 assert.equal(new Set(chars.characters.map(x=>x.id)).size,chars.characters.length,'Duplicate character IDs');
 assert.ok(Array.isArray(spine.characters)&&spine.characters.length>0,'Missing Spine records');
+assert.ok(spine.characters.some(x=>x.gameId==='bluearchive'&&x.assetType==='lobby'),'Missing Blue Archive lobby character models');
+assert.ok(!spine.characters.some(x=>x.gameId==='bluearchive'&&x.base.includes('/Spine_Characters/')),'Battle chibi sprites must not be used as full-body animations');
 assert.equal(new Set(spine.characters.map(x=>x.id)).size,spine.characters.length,'Duplicate Spine IDs');
 const ids=new Set(chars.characters.map(x=>x.id));
 for(const entry of spine.characters) {
   assert.ok(entry.gameId==='bluearchive'||/^c\d{3}(?:_\d{2})?$/.test(entry.id),'Invalid Spine character ID');
-  assert.ok(entry.gameId==='bluearchive'?/^ba-ch\d+_spr$/.test(entry.id):/^c\d{3}(?:_\d{2})?$/.test(entry.id),'Malformed Spine character ID: '+entry.id);
+  assert.ok(entry.gameId==='bluearchive'?/^ba-ch\d+_home$/.test(entry.id):/^c\d{3}(?:_\d{2})?$/.test(entry.id),'Malformed Spine character ID: '+entry.id);
   assert.ok(['3.8','4.0','4.1','4.2'].includes(entry.spineVersion),'Unknown Spine version');
-  assert.ok(entry.gameId==='bluearchive'?entry.base.endsWith('/'+entry.id.slice(3).toUpperCase().replace('_SPR','_spr')):entry.base.endsWith('/'+entry.id+'_00'),'Unexpected Spine path: '+entry.id);
+  assert.ok(entry.gameId==='bluearchive'?(entry.assetType==='lobby'&&entry.base.includes('/Spine_Lobbies/Spr/')&&entry.base.endsWith('/'+('CH'+entry.id.match(/ch(\d+)_home/)[1]+'_home'))):entry.base.endsWith('/'+entry.id+'_00'),'Unexpected Spine path: '+entry.id);
 }
 assert.ok(chars.characters.every(x=>x.image.startsWith('./assets/portraits/')),'Not all static images are local');
 const home=read('index.html'),old=read('gallery.html'),page=read('characters.html'),player=read('spine.html');
