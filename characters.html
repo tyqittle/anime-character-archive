@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090f1d">
+<meta name="description" content="寒潮王座游戏角色图鉴：可搜索的 NIKKE 全身立绘、头像与服装资料，附来源、收藏和筛选。">
+<title>角色图鉴 · 寒潮王座 WINTER ARCHIVE</title>
+<style>
+:root{color-scheme:dark;--bg:#090e18;--panel:#111b2b;--panel2:#162337;--line:#293c54;--text:#f2f7ff;--muted:#95abc2;--accent:#a4dffa;--gold:#ead5a2;--green:#8ad9b4;--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 45% 26% at 75% 4%,#193854 0,transparent 95%),radial-gradient(ellipse 42% 30% at 10% 60%,#151c35 0,transparent 95%),var(--bg);color:var(--text);font:14px/1.55 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+a{color:inherit;text-decoration:none}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #c7eefd;outline-offset:3px}
+.shell{max-width:1660px;margin:auto;display:grid;grid-template-columns:244px minmax(0,1fr);min-height:100vh}
+.sidebar{position:sticky;top:0;height:100vh;overflow:auto;border-right:1px solid var(--line);background:#0c1523e8;padding:24px 17px}
+.identity{display:flex;align-items:center;gap:11px;padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:24px}.snow{display:grid;place-items:center;width:44px;height:44px;border-radius:13px;background:linear-gradient(140deg,#1a3551,#284963);font-size:27px;flex:none}.brand{font:700 18px Georgia,"Microsoft YaHei",serif;letter-spacing:.08em}.over{font-size:10px;letter-spacing:.24em;color:var(--accent);font-weight:800}.side-caption{padding:12px 9px 7px;color:var(--muted);font-size:11px;letter-spacing:.12em}.side-link,.group-nav{width:100%;display:flex;align-items:center;gap:10px;border:1px solid transparent;border-radius:11px;padding:10px 11px;color:#bfd0e0;text-align:left;background:transparent;transition:background .2s}.side-link:hover,.group-nav:hover{background:#1b2b3c}.side-link.active,.group-nav.active{border-color:#365671;background:#21394c;color:white}.count{margin-left:auto;font:600 11px/1.2 system-ui;color:var(--muted)}.group-nav small{color:#91a8ba;font-size:11px}
+.main{min-width:0;padding:0 clamp(16px,3.2vw,56px) 70px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:23px 0;border-bottom:1px solid var(--line)}.crumb{font-size:11px;color:#9bb4c7;letter-spacing:.12em}.top-actions{display:flex;gap:8px;flex-wrap:wrap}.btn{border:1px solid #37506a;background:#182b3e;padding:9px 14px;border-radius:11px;color:#e3f4ff;display:inline-flex;gap:8px;align-items:center;justify-content:center;font-weight:650;white-space:nowrap}.btn:hover{border-color:#92c9e3;background:#264158}.btn-primary{color:#102032;background:#c4e6f8;border-color:#c4e6f8}.btn-primary:hover{background:white}.btn-ghost{background:transparent}.btn.sm{font-size:12px;padding:7px 11px}.btn:disabled{opacity:.5;cursor:not-allowed}
+.hero{position:relative;min-height:276px;overflow:hidden;margin-top:28px;border:1px solid #38516b;border-radius:24px;background:radial-gradient(ellipse at 65% 30%,#2c4c65,transparent 60%),linear-gradient(120deg,#111d2e,#183148 70%,#111925);display:flex;align-items:center}
+.hero-content{position:relative;z-index:2;padding:35px clamp(20px,4vw,46px);max-width:620px}.hero h1{font-family:Georgia,"Microsoft YaHei",serif;font-weight:650;font-size:clamp(32px,4.2vw,57px);margin:9px 0 9px;line-height:1.15;letter-spacing:.08em}.hero p{max-width:470px;color:#b1c4d7;margin:0}.hero-stat{display:flex;gap:19px;flex-wrap:wrap;margin-top:22px;color:#b9cfdf;font-size:12px}.hero-stat strong{color:#fff;font-size:24px;margin-right:5px;font-variant-numeric:tabular-nums}
+.hero-art{position:absolute;right:-10px;top:0;height:110%;width:53%;display:flex;align-items:end;justify-content:end;opacity:.79;pointer-events:none;mask-image:linear-gradient(90deg,transparent 0,#000 30%,#000 90%)}.hero-art img{width:37%;height:108%;object-fit:contain;object-position:bottom;margin-left:-9%;filter:drop-shadow(0 0 18px #01060ab0)}.hero-art img:nth-child(2){height:118%;width:43%;z-index:1}.hero-art img:nth-child(3){height:95%;width:39%}
+.disclaimer{margin:17px 0 26px;color:#a5b8ca;line-height:1.65;padding:12px 15px;border:1px solid #354457;background:#111c2bc9;border-radius:12px;font-size:12px}.disclaimer a{text-decoration:underline;color:#bfe7fa}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:28px 0 13px}.section-head h2{font:600 23px Georgia,"Microsoft YaHei",serif;letter-spacing:.07em;margin:0}.section-head p{color:var(--muted);font-size:12px;margin:4px 0 0}.mini{font-size:12px;color:var(--muted)}
+.featured{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}.feat{display:flex;align-items:center;gap:8px;min-width:0;background:#162338;border:1px solid #31445a;border-radius:12px;padding:8px;text-align:left;color:white}.feat:hover,.feat.active{border-color:#88c7df;background:#254055}.feat img{width:43px;height:43px;object-fit:cover;border-radius:9px;background:#243b51;flex:none}.feat b{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:12px}.feat span{display:block;font-size:10px;color:#a3b9ce}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:14px}.search{flex:1 1 270px;display:flex;align-items:center;gap:10px;background:#121f30;border:1px solid #3b5068;border-radius:12px;padding:0 13px}.search input{height:43px;color:white;border:0;outline:0;background:transparent;width:100%;min-width:0}.search:focus-within{border-color:#a8dcf1}.select{background:#152437;color:#dfedfb;border:1px solid #39516a;border-radius:11px;padding:10px;min-height:43px;max-width:170px}.segments{display:flex;flex-wrap:wrap;gap:7px;margin:15px 0 8px}.chip{background:#152337;border:1px solid #30455a;color:#adbed1;border-radius:999px;padding:7px 13px;font-size:12px}.chip.active{background:#d3e8f8;color:#0c1b2e;border-color:#d3e8f8;font-weight:800}.chip:hover{border-color:#85bdda}
+.gallery{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px;margin-top:15px;min-height:150px}.card{position:relative;min-width:0;background:#131f2f;border:1px solid #273f54;border-radius:16px;overflow:hidden;transition:border .2s,transform .2s}.card:hover{border-color:#85b9d1;transform:translateY(-2px)}.card-img{height:clamp(180px,20vw,272px);position:relative;display:block;width:100%;padding:0;border:0;background:radial-gradient(ellipse at 50% 44%,#2e4b66,#162638 60%,#101a2a);overflow:hidden}.card-img:before{content:"";position:absolute;width:70%;height:70%;border-radius:50%;left:15%;top:16%;border:1px solid #ffffff12}.card-img>img{position:relative;z-index:1;width:100%;height:100%;object-fit:contain;object-position:bottom;transition:transform .3s ease}.card:hover .card-img>img{transform:scale(1.06)}.card-img.icon-only img{width:78%;height:78%;margin:11%;object-fit:contain;object-position:center;filter:drop-shadow(0 8px 14px #02070acc)}.ribbon{position:absolute;z-index:2;left:9px;top:9px;background:#0b1926e8;border:1px solid #49627a;padding:4px 7px;border-radius:7px;color:#d5e7f2;font-size:10px}.fav{position:absolute;z-index:3;right:9px;top:9px;background:#0b1827dd;color:#f3e2be;border:1px solid #59718a;border-radius:99px;width:29px;height:29px;font-size:17px;display:grid;place-items:center}.fav.on{background:#624d2b;color:#ffde89;border-color:#bfa66a}.card-info{padding:12px}.card-info h3{font-size:14px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;margin:0;color:#f6fbff}.card-info p{font-size:11px;color:#91a7bd;margin:4px 0 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.card-bottom{display:flex;justify-content:space-between;gap:5px;align-items:center;color:#a8c8dc;font-size:10px}.card-bottom a{color:#b7e2f5;text-decoration:underline;text-underline-offset:3px}.error-note{position:absolute;inset:0;display:none;place-items:center;padding:30px;color:#aeb9c9;text-align:center;font-size:12px}.card-img.error img{display:none}.card-img.error .error-note{display:grid}.blank{grid-column:1/-1;border:1px dashed #46607a;border-radius:15px;color:#a6bbd1;padding:52px 18px;text-align:center}.more-row{display:flex;justify-content:center;margin:28px 0}.footer{padding:34px 0;border-top:1px solid #28384a;margin-top:46px;font-size:12px;color:#8ea3b8;line-height:1.7}
+dialog{max-width:min(1080px,96vw);width:100%;max-height:94vh;background:#111c2b;border:1px solid #55758e;color:var(--text);border-radius:18px;padding:0;box-shadow:0 30px 100px #000c}dialog::backdrop{background:#020810d9;backdrop-filter:blur(9px)}.view-head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 20px;border-bottom:1px solid #33485c}.view-head h2{font-size:17px;margin:0}.view-body{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(230px,.8fr);max-height:75vh;overflow:auto}.view-picture{height:min(68vh,780px);min-height:340px;background:radial-gradient(ellipse at 50% 50%,#2c4862,#101826 73%);display:grid;place-items:center;padding:10px;position:relative}.view-picture img{max-width:100%;max-height:100%;object-fit:contain}.view-picture .error-note{font-size:14px}.view-picture.error img{display:none}.view-picture.error .error-note{display:grid}.view-meta{padding:24px;overflow:auto}.view-meta h3{font-size:26px;margin:0 0 5px}.view-meta p{color:#a9bdcd}.taglist{display:flex;gap:7px;flex-wrap:wrap;margin:16px 0 20px}.taglist span{font-size:11px;color:#c5d5e1;background:#203347;border:1px solid #426079;border-radius:20px;padding:5px 9px}.view-controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.view-controls .btn{font-size:12px}
+@media(min-width:1500px){.gallery{grid-template-columns:repeat(6,minmax(0,1fr))}}@media(max-width:1200px){.featured{grid-template-columns:repeat(4,minmax(0,1fr))}.gallery{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:900px){.shell{grid-template-columns:188px minmax(0,1fr)}.sidebar{padding:18px 10px}.featured{grid-template-columns:repeat(3,minmax(0,1fr))}.gallery{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-art{opacity:.45}}
+@media(max-width:650px){.shell{display:block}.sidebar{height:auto;position:relative;border-right:0;border-bottom:1px solid #293a4d;padding:11px 15px}.identity{padding:0;border:0;margin:0}.sidebar .side-caption,.sidebar .group-nav,.sidebar .side-link:not(.active){display:none}.main{padding:0 14px 40px}.top{padding:12px 0;flex-wrap:wrap}.hero{min-height:240px;margin-top:15px}.hero-content{padding:24px 18px}.hero-art{opacity:.27;width:80%}.hero h1{font-size:33px}.featured{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.feat{padding:6px}.feat img{width:34px;height:34px}.feat b{font-size:11px}.feat span{font-size:9px}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.card-img{height:210px}.card-info{padding:9px}.card-info h3{font-size:12px}.view-body{grid-template-columns:1fr;max-height:79vh}.view-picture{height:45vh;min-height:230px}.view-meta{padding:17px}.view-meta h3{font-size:21px}.select{max-width:130px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+  <div class="identity"><div class="snow">❄</div><div><div class="brand">寒潮王座</div><div class="over">WINTER ARCHIVE</div></div></div>
+  <div class="side-caption">内容索引</div>
+  <a class="side-link" href="./index.html">◫ <span>日常剧情 CG</span></a>
+  <a class="side-link active" href="./characters.html">♧ <span>角色图鉴</span></a>
+  <div class="side-caption">角色快捷入口</div>
+  <nav id="sideGroups" aria-label="候选角色外观组"></nav>
+  <div class="side-caption">资料属性</div>
+  <p style="padding:0 9px;color:#8ba6bd;font-size:11px">角色立绘与原来的剧情 CG 分开管理。原游戏人物不自动对应小说人物。</p>
+</aside>
+<main class="main">
+  <header class="top"><div class="crumb">WINTER ARCHIVE / CHARACTER LIBRARY</div><div class="top-actions"><a href="./index.html" class="btn btn-ghost sm">← 返回剧情 CG</a><a href="https://github.com/Nikke-db/Nikke-db.github.io" target="_blank" rel="noopener noreferrer" class="btn sm">图源资料库 ↗</a></div></header>
+  <section class="hero">
+   <div class="hero-content"><div class="over">THE CHARACTER COLLECTION · NIKKE</div><h1>角色 · 冬境图鉴</h1><p>浏览角色形象、全身立绘与服装头像，寻找适合《寒潮王座》的视觉参考。每条资料都有可追溯的原始文件来源。</p><div class="hero-stat"><span><strong id="totalStat">—</strong>角色/造型条目</span><span><strong id="fullStat">—</strong>全身立绘</span><span><strong id="iconStat">—</strong>头像条目</span></div></div>
+   <div class="hero-art" aria-hidden="true"><img src="https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c012_00.png" alt=""><img src="https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c010_00.png" alt=""><img src="https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/c233_00.png" alt=""></div>
+  </section>
+  <div class="disclaimer">⚑ <strong>素材使用边界：</strong>这些是《胜利女神：NIKKE》已有的游戏角色美术，版权归原权利人；目前未获得再分发或商用授权。本页远程引用源站图片，仅用于私人选型原型研究，公开使用前仍须核实展示许可。<a href="./index.html">已有剧情 CG 在另一个画廊</a>。</div>
+  <section aria-labelledby="featuredTitle"><div class="section-head"><div><h2 id="featuredTitle">重点候选角色</h2><p>快速查看已有的 12 组角色外观参考，不代表剧情人物绑定。</p></div><button class="btn sm" data-action="reset">查看全部 ↗</button></div><div id="featured" class="featured"></div></section>
+  <section id="explore" aria-labelledby="browseTitle">
+    <div class="section-head"><div><h2 id="browseTitle">探索角色图库</h2><p id="resultInfo">正在载入图片索引…</p></div><span id="favCount" class="mini"></span></div>
+    <div class="toolbar"><label class="search">⌕ <input id="query" type="search" placeholder="搜索角色、中文名、英文名、服装、阵营…" autocomplete="off"></label><select id="kindFilter" class="select" aria-label="图像类别"><option value="all">所有图像类别</option><option value="full">全身立绘</option><option value="icon">头像/造型资料</option></select><select id="rarityFilter" class="select" aria-label="稀有度"><option value="all">全部稀有度</option><option value="SSR">SSR</option><option value="SR">SR</option><option value="R">R</option><option value="unknown">未标记</option></select><select id="sort" class="select" aria-label="排序方式"><option value="featured">重点角色优先</option><option value="name">名称 A—Z</option><option value="nameDesc">名称 Z—A</option></select></div>
+    <div class="segments" role="group" aria-label="内容筛选"><button class="chip active" data-action="mode" data-value="all">全部资料</button><button class="chip" data-action="mode" data-value="full">高清立绘</button><button class="chip" data-action="mode" data-value="icon">服装/头像</button><button class="chip" id="favFilter" data-action="favorites">☆ 我的收藏</button><button class="chip" data-action="random">⤨ 随机看一位</button></div>
+    <div id="gallery" class="gallery" aria-live="polite"><div class="blank">正在载入角色索引…</div></div>
+    <div class="more-row"><button id="more" class="btn" data-action="more" hidden>加载更多角色 ↓</button></div>
+  </section>
+  <footer class="footer">寒潮王座 · 角色外观研究资料库。角色图源：<a href="https://github.com/Nikke-db/Nikke-db.github.io" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">Nikke-db 社区档案</a>。页面只储存文件索引及来源 URL；收藏保存在当前浏览器，不会上传。图源可能因外站变动或访问限制而失效。人物版权及使用许可需要另行核实。</footer>
+</main>
+</div>
+<dialog id="viewer" aria-label="角色大图浏览"><div class="view-head"><h2 id="viewTitle">查看角色</h2><button class="btn sm" data-action="close">✕ 关闭</button></div><div class="view-body"><div class="view-picture" id="viewPicture"><img id="viewImg" alt=""><div class="error-note">图片无法加载，请通过「来源文件」访问原页面。</div></div><div class="view-meta" id="viewMeta"></div></div></dialog>
+<script>
+'use strict';
+var ROOT='https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/';
+var groups=[
+{id:'N-01',en:'Anis',zh:'安妮丝',uid:'c012'},
+{id:'N-02',en:'Rapi',zh:'拉毗',uid:'c010'},
+{id:'N-03',en:'Privaty',zh:'普丽瓦蒂',uid:'c170'},
+{id:'N-04',en:'Helm',zh:'海伦',uid:'c352'},
+{id:'N-05',en:'Rupee',zh:'露菲',uid:'c200'},
+{id:'N-06',en:'Dorothy',zh:'桃乐丝',uid:'c233'},
+{id:'N-07',en:'Scarlet',zh:'红莲',uid:'c222'},
+{id:'N-08',en:'Modernia',zh:'神罚',uid:'c260'},
+{id:'N-09',en:'Maiden',zh:'梅登',uid:'c181'},
+{id:'N-10',en:'Sakura',zh:'樱花',uid:'c282'},
+{id:'N-11',en:'Rosanna',zh:'罗珊娜',uid:'c280'},
+{id:'N-12',en:'Viper',zh:'毒蛇',uid:'c112'}];
+var $=function(id){return document.getElementById(id)};
+var safe=function(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]})};
+var items=[],active=[],selectedGroup='all',activeId='',page=1,mode='all',onlyFav=false;
+var favorites=new Set();
+try{favorites=new Set(JSON.parse(localStorage.getItem('winter-characters-favorites-v1')||'[]'))}catch(e){}
+function iconFor(id){return ROOT+'images/sprite/si_'+id+'_00_s.png'}
+function filterItems(){
+ var q=$('query').value.trim().toLocaleLowerCase(),rarity=$('rarityFilter').value,kind=$('kindFilter').value;
+ var out=items.filter(function(x){
+ if(selectedGroup!=='all'&&x.groupId!==selectedGroup)return false;
+ if(onlyFav&&!favorites.has(x.id))return false;
+ if(mode!=='all'&&x.kind!==mode)return false;
+ if(kind!=='all'&&x.kind!==kind)return false;
+ if(rarity!=='all'&&(rarity==='unknown'?(x.rarity!==''):(x.rarity!==rarity)))return false;
+ return !q||[x.name,x.zh,x.id,x.squad,x.manufacturer,x.class,x.rarity].join(' ').toLocaleLowerCase().includes(q);
+ });
+ var sort=$('sort').value;
+ out.sort(function(a,b){
+ if(sort==='name')return a.name.localeCompare(b.name,'en');
+ if(sort==='nameDesc')return b.name.localeCompare(a.name,'en');
+ return Number(!!b.groupId)-Number(!!a.groupId)||Number(b.kind==='full')-Number(a.kind==='full')||a.name.localeCompare(b.name,'en');
+ });
+ return out;
+}
+function countGroup(id){return items.filter(function(c){return c.groupId===id}).length}
+function drawGroups(){
+ $('sideGroups').innerHTML='<button class="group-nav '+(selectedGroup==='all'?'active':'')+'" data-action="group" data-value="all">◈ 全部游戏角色 <span class="count">'+items.length+'</span></button>'+groups.map(function(g){return '<button class="group-nav '+(selectedGroup===g.id?'active':'')+'" data-action="group" data-value="'+g.id+'">✧ '+safe(g.zh)+' <small>'+safe(g.en)+'</small><span class="count">'+countGroup(g.id)+'</span></button>'}).join('');
+ $('featured').innerHTML=groups.map(function(g){return '<button class="feat '+(selectedGroup===g.id?'active':'')+'" data-action="group" data-value="'+g.id+'"><img src="'+safe(iconFor(g.uid))+'" alt="" loading="lazy" decoding="async"><div style="min-width:0"><b>'+safe(g.zh)+'</b><span>'+safe(g.en)+' · '+countGroup(g.id)+' 组图</span></div></button>'}).join('');
+}
+function render(){
+ if(!items.length){$('gallery').innerHTML='<div class="blank">没有加载到图片资料。检查网络后刷新页面。</div>';return}
+ active=filterItems();
+ $('resultInfo').textContent='匹配 '+active.length+' 项 · 全身立绘与头像分开标记；不是全部高清文件';
+ $('favCount').textContent='☆ 已收藏 '+favorites.size+' 项';
+ $('favFilter').classList.toggle('active',onlyFav);
+ document.querySelectorAll('[data-action="mode"]').forEach(function(e){e.classList.toggle('active',e.dataset.value===mode)});
+ drawGroups();
+ var shown=active.slice(0,page*36);
+ $('gallery').innerHTML=shown.length?shown.map(function(c){
+ var label=c.kind==='full'?'全身立绘':'头像资料';
+ var details=[c.zh||'',c.manufacturer||'',c.rarity||'',c.variant?'服装 / 变体':''].filter(Boolean).join(' · ')||'NIKKE 原始角色';
+ return '<article class="card"><button class="card-img '+(c.kind==='icon'?'icon-only':'')+'" data-action="view" data-id="'+safe(c.id)+'" aria-label="查看 '+safe(c.name)+'"><img src="'+safe(c.image)+'" data-avatar="'+safe(c.avatar)+'" alt="'+safe(c.name)+' 角色美术" loading="lazy" decoding="async" referrerpolicy="no-referrer"><span class="ribbon">'+label+'</span><span class="error-note">源站暂时无法显示</span></button><button class="fav '+(favorites.has(c.id)?'on':'')+'" title="收藏角色" data-action="fav" data-id="'+safe(c.id)+'" aria-label="'+(favorites.has(c.id)?'取消收藏':'收藏')+'">'+(favorites.has(c.id)?'★':'☆')+'</button><div class="card-info"><h3 title="'+safe(c.name)+'">'+safe(c.zh?c.zh+' · '+c.name:c.name)+'</h3><p title="'+safe(details)+'">'+safe(details)+'</p><div class="card-bottom"><span>'+safe(c.id)+'</span><a href="'+safe(c.source)+'" target="_blank" rel="noopener noreferrer">原始来源 ↗</a></div></div></article>';
+ }).join(''):'<div class="blank">没有符合条件的角色。试着清除搜索、稀有度或分类筛选。</div>';
+ $('more').hidden=shown.length>=active.length;
+ $('more').textContent='加载更多角色（'+shown.length+' / '+active.length+'） ↓';
+}
+function startGroup(id){selectedGroup=id;page=1;mode='all';onlyFav=false;$('kindFilter').value='all';render();$('explore').scrollIntoView({behavior:'smooth',block:'start'})}
+function showOne(id){
+ var c=items.find(function(x){return x.id===id});if(!c)return;
+ activeId=id;$('viewTitle').textContent=(c.zh?c.zh+' · ':'')+c.name;
+ var view=$('viewer'),pic=$('viewPicture'),img=$('viewImg');
+ pic.classList.remove('error');
+ img.dataset.fallback='';img.dataset.avatar=c.avatar;img.alt=c.name+' '+(c.kind==='full'?'全身立绘':'头像');img.src=c.image;
+ var tags=[c.kind==='full'?'全身立绘':'头像 / 造型资料',c.rarity,c.manufacturer,c.class,c.squad,c.id,c.groupId?'候选外观组 '+c.groupId:''];
+ $('viewMeta').innerHTML='<div class="over">GODDESS OF VICTORY: NIKKE</div><h3>'+safe(c.zh||c.name)+'</h3><p>'+safe(c.name)+'</p><div class="taglist">'+tags.filter(Boolean).map(function(t){return '<span>'+safe(t)+'</span>'}).join('')+'</div><p>'+(c.kind==='full'?'此条目有来源档案中的独立全身角色图片。':'此条目仅有角色头像/造型缩略图，不应视作已收录高清全身立绘。')+'</p><p style="font-size:12px">原始资料来源：Nikke-db 社区项目。图片由游戏版权方持有，商业和公开使用前请核实许可。</p><div class="view-controls"><a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="'+safe(c.source)+'">↗ 来源文件</a><a class="btn" target="_blank" rel="noopener noreferrer" href="'+safe(c.image)+'">查看原图</a><button class="btn" data-action="fav" data-id="'+safe(c.id)+'">'+(favorites.has(c.id)?'★ 已收藏':'☆ 收藏')+'</button></div><div class="view-controls"><button class="btn" data-action="step" data-step="-1">← 上一张</button><button class="btn" data-action="step" data-step="1">下一张 →</button></div>';
+ if(!view.open)view.showModal();
+}
+function navigate(step){var i=active.findIndex(function(x){return x.id===activeId});if(i>=0&&active.length)showOne(active[(i+step+active.length)%active.length].id)}
+function remember(){try{localStorage.setItem('winter-characters-favorites-v1',JSON.stringify(Array.from(favorites)))}catch(e){}}
+document.addEventListener('click',function(e){
+ var target=e.target.closest('[data-action]');if(!target)return;
+ var action=target.dataset.action,id=target.dataset.id,value=target.dataset.value;
+ if(action==='group')startGroup(value);
+ else if(action==='reset'){$('query').value='';$('rarityFilter').value='all';$('kindFilter').value='all';selectedGroup='all';mode='all';onlyFav=false;page=1;render();$('explore').scrollIntoView({behavior:'smooth'})}
+ else if(action==='mode'){mode=value;$('kindFilter').value='all';page=1;render()}
+ else if(action==='favorites'){onlyFav=!onlyFav;page=1;render()}
+ else if(action==='view')showOne(id);
+ else if(action==='close')$('viewer').close();
+ else if(action==='fav'){if(favorites.has(id))favorites.delete(id);else favorites.add(id);remember();render();if($('viewer').open&&activeId===id)showOne(id)}
+ else if(action==='more'){page++;render()}
+ else if(action==='step')navigate(Number(target.dataset.step));
+ else if(action==='random'){var pool=filterItems();if(pool.length)showOne(pool[Math.floor(Math.random()*pool.length)].id)}
+});
+document.addEventListener('error',function(e){
+ var img=e.target;if(!(img instanceof HTMLImageElement))return;
+ if(img.id==='viewImg'){if(!img.dataset.fallback&&img.dataset.avatar&&img.src!==img.dataset.avatar){img.dataset.fallback='avatar';img.src=img.dataset.avatar}else $('viewPicture').classList.add('error');return}
+ if(img.closest('.card-img')){if(!img.dataset.fallback&&img.dataset.avatar&&img.src!==img.dataset.avatar){img.dataset.fallback='avatar';img.src=img.dataset.avatar}else img.closest('.card-img').classList.add('error')}
+},true);
+document.addEventListener('keydown',function(e){if(!$('viewer').open)return;if(e.key==='ArrowLeft')navigate(-1);if(e.key==='ArrowRight')navigate(1)});
+['query','rarityFilter','kindFilter','sort'].forEach(function(id){$(id).addEventListener(id==='query'?'input':'change',function(){page=1;render()})});
+fetch('./data/characters.json',{cache:'no-store'}).then(function(r){if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(function(db){
+ if(!Array.isArray(db.characters))throw Error('索引数据格式错误');
+ items=db.characters.filter(function(c){return /^https:\/\/raw\.githubusercontent\.com\//.test(c.image)&&/^https:\/\/github\.com\//.test(c.source)});
+ $('totalStat').textContent=items.length;$('fullStat').textContent=items.filter(function(x){return x.kind==='full'}).length;$('iconStat').textContent=items.filter(function(x){return x.kind==='icon'}).length;
+ render();
+ var hash=decodeURIComponent(location.hash.slice(1));
+ if(hash&&items.some(function(x){return x.id===hash}))showOne(hash);
+}).catch(function(e){$('resultInfo').textContent='角色索引加载失败：'+e.message;$('gallery').innerHTML='<div class="blank">图片索引加载失败。请从正式部署的网址访问，并检查 data/characters.json 是否存在。<p>'+safe(e.message)+'</p></div>'});
+</script>
+</body></html>
