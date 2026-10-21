@@ -85,7 +85,7 @@ var groupsReady=false,peopleByGame={},PAGE_SIZE=24;
 var favorites=new Set();
 try{favorites=new Set(JSON.parse(localStorage.getItem('winter-characters-favorites-v1')||'[]'))}catch(e){}
 function iconFor(id){return ROOT+'images/sprite/si_'+id+'_00_s.png'}
-function previewFor(c){var src=c.thumb&&/^\.\/assets\/thumbs\/[a-zA-Z0-9_-]+\.webp$/.test(c.thumb)?c.thumb:c.image;return c.gameId==='genshin'&&src===c.thumb?src+'?crop=20261021':src}
+function previewFor(c){var src=c.thumb&&/^\.\/assets\/thumbs\/[a-zA-Z0-9_-]+\.webp$/.test(c.thumb)?c.thumb:c.image;return src===c.thumb&&(c.gameId==='genshin'||c.gameId==='wutheringwaves')?src+(c.gameId==='genshin'?'?crop=20261021':'?wuwa=fullbody-20261021'):src}
 function filterItems(){
  var q=$('query').value.trim().toLocaleLowerCase(),rarity=$('rarityFilter').value,kind=$('kindFilter').value;
  var out=items.filter(function(x){
