@@ -112,6 +112,7 @@ const script=page.match(/<script>([\s\S]*?)<\/script>/)?.[1];
 assert.ok(script,'Missing gallery script');
 const filterItemsSource=page.slice(page.indexOf('function filterItems(){'),page.indexOf('function fillGameLinks('));
 assert.ok(filterItemsSource.startsWith('function filterItems(){'),'Gallery rarity filter function missing');
+const executeRarityFilter=new Function('items',String.fromCharCode(36),'selectedGroup','onlyFav','favorites','mode',filterItemsSource+';return filterItems();');
 const sampleRarities=[
  {id:'empty',name:'Empty',gameId:'nikke',kind:'full',rarity:''},
  {id:'absent',name:'Absent',gameId:'nikke',kind:'full'},
@@ -119,7 +120,11 @@ const sampleRarities=[
 ];
 function selectRarityTest(rarity){
  const inputs={query:{value:''},rarityFilter:{value:rarity},kindFilter:{value:'all'},sort:{value:'name'}};
- return new Function('items','
+ const pick=id=>inputs[id];
+ return executeRarityFilter(sampleRarities,pick,'all',false,new Set(),'all').map(x=>x.id).sort();
+}
+assert.deepEqual(selectRarityTest('unknown'),['absent','empty'],'Unmarked rarity must exclude rated entries');
+assert.deepEqual(selectRarityTest('SSR'),['known'],'SSR rarity must exclude unmarked entries');
 new Function(script);
 assert.ok(page.includes('function drawGroups()')&&page.includes('game-section')&&page.includes('characterKey'),'Missing dynamic game and character classification');
 assert.ok(page.includes('id="viewLoading"')&&page.includes('class="view-loading"'),'Missing stable modal loading state');
