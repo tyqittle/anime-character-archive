@@ -228,7 +228,7 @@ assert.ok(viewerCSS.includes('height:var(--viewer-art-height'),'Detail dialog sh
 const theaterCSS=read('assets/spine-theater-layout.css');
 assert.ok(player.includes('class="side-sitebar"')&&player.includes('class="side-nav"'),'Spine site navigation must live inside the sidebar');
 assert.ok(!player.includes('<header>'),'Spine theater must not waste vertical space on a full-width header');
-assert.ok(player.includes('v=20261021-card-height-fix-v2'),'Layout stylesheet version must invalidate prior broken card-grid CSS');
+assert.ok(player.includes('v=20261021-azurlane-live2d-v3'),'Layout stylesheet version must invalidate cached pre-AzurLane stage CSS');
 assert.ok(theaterCSS.includes('grid-auto-rows:max-content')&&theaterCSS.includes('min-height:164px'),'Grid rows and cards must have non-collapsing heights');
 assert.ok(theaterCSS.includes('height:100dvh')&&theaterCSS.includes('grid-template-columns:clamp('),'Desktop stage must fit the viewport');
 assert.ok(theaterCSS.includes('.character-cards{flex:1 1 auto')&&theaterCSS.includes('overflow-y:auto'),'Only the card grid should scroll internally');
@@ -248,6 +248,27 @@ assert.ok(player.includes('refreshCardSelection();'),'Character list must sync h
 assert.ok(player.includes('id="loadNotice"')&&player.includes("'loadNotice').hidden=!loading"),'Dynamic stage needs a loading indicator');
 assert.ok(player.includes('class="advanced-tools"'),'Advanced tools must be optional');
 
+const azure=JSON.parse(read('data/live2d-azurlane.json'));
+assert.equal(azure.characters.length,178,'Azur Lane Cubism model source index must contain 178 model directories');
+assert.equal(new Set(azure.characters.map(c=>c.id)).size,178,'Azur Lane model skin ids must be distinct');
+for(const c of azure.characters){
+  assert.equal(c.gameId,'azurlane');
+  assert.equal(c.engine,'cubism');
+  assert.match(c.id,/^al-[a-z0-9_]+$/);
+  assert.match(c.modelUrl,/\/live2d\/([a-zA-Z0-9_]+)\/\1\.model3\.json$/,'Cubism model must reference its own skin');
+  assert.ok(c.modelUrl.includes('88cb6e56a0ad472fe7e546509f096545d2bbc5b9'),'Remote Cubism files must be commit pinned');
+  if(c.preview){
+    assert.equal(c.previewSource,'upstream-ship-thumbnail');
+    assert.ok(c.preview.endsWith('/'+c.skinCode+'.png'),'Azur Lane preview cannot borrow another skin thumbnail');
+  }
+}
+const live2dFrame=read('azurlane-stage.html');
+new Function(live2dFrame.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1]||'');
+assert.ok(live2dFrame.includes('PIXI.live2d.Live2DModel.fromSync'),'Azur Lane needs a real Cubism renderer, not an image swap');
+assert.ok(live2dFrame.includes('88cb6e56a0ad472fe7e546509f096545d2bbc5b9'),'Cubism runtime must be pinned');
+assert.ok(player.includes('value="azurlane"')&&player.includes("c.gameId==='azurlane'"),'Azur Lane must be a regular selection in the dynamic theater');
+assert.ok(player.includes('azurlaneFrame')&&player.includes('azurlane-stage.html')&&player.includes('sendAzurLane('),'Live2D must open inside the same player panel and support controls');
+assert.ok(read('assets/spine-theater-layout.css').includes('.azurlane-live2d-frame'),'Cubism stage must fit existing responsive player area');
 assert.ok(player.includes('bd2CatalogUrl')&&player.includes('value="browndust2"'),'Missing complete BD2 loader and game selection');
 assert.ok(player.includes('value="konosuba"')&&player.includes("c.skeletonFormat==='json'"),'New game and external JSON Spine support missing');
 assert.ok(spine.characters.filter(c=>c.gameId==='bluearchive').length>=179,'Blue Archive lobby expansion missing');
