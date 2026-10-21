@@ -17,3 +17,5 @@ jobs:
           node-version: '22'
       - name: Validate archive metadata and entrypoints
         run: node tests/smoke.mjs
+      - name: Syntax-check the Python local launcher
+        run: python3 -m py_compile start_site.py
