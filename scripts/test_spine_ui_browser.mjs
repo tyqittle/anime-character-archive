@@ -30,7 +30,8 @@ try{
   if(await page.locator('#characters').inputValue()!=='bd2-char000701')throw Error('Card did not select its character');
   await page.selectOption('#characters','bd2-char000201');
   await page.waitForFunction(()=>new URL(location.href).searchParams.get('id')==='bd2-char000201'&&sequence>=3,null,{timeout:10000});
-  await page.evaluate(()=>status('正在读取角色测试数据…'));
+  // Isolate the synthetic loading-overlay assertion from any genuine asynchronous fetch updates.
+  await page.evaluate(()=>{cancelCharacterDownload();status('正在读取角色测试数据…')});
   if(await page.locator('#loadNotice').evaluate(el=>el.hidden))throw Error('Loading notice did not appear');
   await page.evaluate(()=>status('正在播放：测试',false));
   if(!(await page.locator('#loadNotice').evaluate(el=>el.hidden)))throw Error('Loading notice remained after playback');
