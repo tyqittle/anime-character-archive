@@ -33,7 +33,7 @@ try{
   await page.selectOption('#gameFilter',game);
   await page.waitForTimeout(300);
   await page.selectOption('#characters',id);
-  await page.click('#nikke');
+  if(await page.locator('#nikke').count())throw Error('Main play button still present');
   const deadline=Date.now()+130000;
   let state='timeout',message='';
   while(Date.now()<deadline){

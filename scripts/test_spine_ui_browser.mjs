@@ -14,15 +14,22 @@ try{
   await page.waitForFunction(()=>typeof allCharacters!=='undefined'&&allCharacters.some(x=>x.id==='bd2-char000201'),null,{timeout:20000});
   if(await page.locator('.advanced-tools').evaluate(el=>el.open))throw Error('Advanced tools are expanded by default');
   await page.selectOption('#gameFilter','browndust2');
+  if(await page.locator('#nikke').count())throw Error('Main play button must not exist');
   await page.selectOption('#characters','bd2-char000201');
   const selected=await page.evaluate(()=>({
    url:new URL(location.href).searchParams.get('id'),
    selected:document.querySelector('#characters').value,
    active:[...document.querySelectorAll('#characterCards button[aria-pressed="true"]')].length,
-   canPlay:!document.querySelector('#nikke').disabled
+   autoStarted:sequence>0
   }));
-  if(selected.url!=='bd2-char000201'||selected.selected!=='bd2-char000201'||selected.active!==1||!selected.canPlay)
-   throw Error('Selected card, dropdown, URL are out of sync: '+JSON.stringify(selected));
+  if(selected.url!=='bd2-char000201'||selected.selected!=='bd2-char000201'||selected.active!==1||!selected.autoStarted)
+   throw Error('Dropdown did not auto-play and sync the selection: '+JSON.stringify(selected));
+  const firstAttempt=await page.evaluate(()=>sequence);
+  await page.locator('#characterCards .character-card').filter({hasText:'bd2-char000701'}).click();
+  await page.waitForFunction(n=>sequence>n,firstAttempt,{timeout:10000});
+  if(await page.locator('#characters').inputValue()!=='bd2-char000701')throw Error('Card did not select its character');
+  await page.selectOption('#characters','bd2-char000201');
+  await page.waitForFunction(()=>new URL(location.href).searchParams.get('id')==='bd2-char000201'&&sequence>=3,null,{timeout:10000});
   await page.evaluate(()=>status('正在读取角色测试数据…'));
   if(await page.locator('#loadNotice').evaluate(el=>el.hidden))throw Error('Loading notice did not appear');
   await page.evaluate(()=>status('正在播放：测试',false));

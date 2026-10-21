@@ -20,7 +20,7 @@ try{
    await page.waitForFunction(id=>typeof allCharacters!=='undefined'&&allCharacters.some(c=>c.id===id),character.id,{timeout:20000});
    await page.selectOption('#gameFilter','browndust2');
    await page.selectOption('#characters',character.id);
-   await page.click('#nikke');
+   if(await page.locator('#nikke').count())throw Error('Main play button still present');
    await page.waitForFunction(()=>{
     const message=document.querySelector('#status')?.textContent||'';
     return message.startsWith('正在播放：')||/^(?:角色资源下载失败|播放失败|播放器初始化失败|加载失败|加载超时|本地素材播放失败)/.test(message);
