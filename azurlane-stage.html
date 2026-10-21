@@ -28,13 +28,20 @@ function message(s){warn.textContent=s;warn.hidden=false}
 function verifyName(name){return typeof name==='string'&&/^[a-zA-Z0-9_]{2,100}$/.test(name)}
 function fit(){
  if(!app||!model)return;
+ // Live2D models have nonzero local-bound origins. Subtracting bounds.x/y
+ // is essential: centering by model.width alone can cut off half the skin.
  const w=app.renderer.width,h=app.renderer.height;
  model.scale.set(1);
- const naturalW=Math.max(1,model.width),naturalH=Math.max(1,model.height);
- baseScale=Math.min(w*.85/naturalW,h*.9/naturalH,2.0);
- model.scale.set(baseScale*zoom);
- model.x=(w-model.width)/2+offsetX;
- model.y=(h-model.height)/2+offsetY;
+ let bounds=model.getLocalBounds();
+ if(!bounds||!Number.isFinite(bounds.width)||!Number.isFinite(bounds.height)||bounds.width<=0||bounds.height<=0)
+  bounds={x:0,y:0,width:Math.max(1,model.width),height:Math.max(1,model.height)};
+ baseScale=Math.min(w*.88/Math.max(1,bounds.width),h*.84/Math.max(1,bounds.height),3);
+ const factor=baseScale*zoom;
+ model.scale.set(factor);
+ model.position.set(
+  w/2-(bounds.x+bounds.width/2)*factor+offsetX,
+  h/2-(bounds.y+bounds.height/2)*factor+offsetY
+ );
 }
 function setZoom(value){zoom=Math.max(.35,Math.min(3.5,value));fit();notify('zoom',{zoom})}
 function motion(name){

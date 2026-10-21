@@ -5,7 +5,7 @@ cf=Path('data/live2d-azurlane.json'); af=Path('data/azurlane-import-audit.json')
 catalog=json.loads(cf.read_text()); audit=json.loads(af.read_text())
 count=0;missing=[]
 for c in catalog['characters']:
- if c.get('sourceRepo')!='MilkyLan/AzurLane-Live2d':continue
+ if c.get('gameId')!='azurlane':continue
  p=Path('assets/animation-previews')/('azurlane-'+c['id']+'.webp')
  if not p.exists():missing.append(c['id']);continue
  try:
@@ -15,9 +15,9 @@ for c in catalog['characters']:
  c['previewSource']='matching-live2d-animation-frame'
  c['playbackStatus']='browser-preview-captured'
  count+=1
-audit['newSourceRealRenderedPreviews']=count
-audit['newSourceMissingRealPreviews']=missing
-audit['previewNotice']=f'{count}/64 new skins have real model-specific WebGL captures, remaining entries use placeholders or existing exact-skin thumbnail.'
+audit['sourceMatchedRenderedPreviews']=count
+audit['sourceMatchedMissingPreviews']=missing
+audit['previewNotice']=f'{count} model-specific WebGL frame thumbnails captured; remaining skins retain exact-source thumbnails or placeholders.'
 cf.write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
 af.write_text(json.dumps(audit,ensure_ascii=False,indent=2)+'\n')
-print('LIVE2D_PREVIEWS_PUBLISHED',count,'/64')
+print('LIVE2D_PREVIEWS_PUBLISHED',count,'/242')

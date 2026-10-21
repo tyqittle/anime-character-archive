@@ -2,7 +2,7 @@ import {chromium} from 'playwright-core';
 import fs from 'node:fs';
 import path from 'node:path';
 const shard=Number(process.argv[2]||0),count=Number(process.argv[3]||8);
-const all=JSON.parse(fs.readFileSync('data/live2d-azurlane.json','utf8')).characters.filter(c=>c.sourceRepo==='MilkyLan/AzurLane-Live2d');
+const all=JSON.parse(fs.readFileSync('data/live2d-azurlane.json','utf8')).characters.filter(c=>c.gameId==='azurlane'&&!c.preview);
 const characters=all.filter((c,i)=>i%count===shard);
 const executablePath=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'].find(fs.existsSync);
 fs.mkdirSync('tmp/al-frames',{recursive:true});
@@ -19,7 +19,7 @@ try{
    if(!status.startsWith('正在播放：'))throw Error(status);
    const canvas=page.frameLocator('iframe.azurlane-live2d-frame').locator('#live2dCanvas');
    await canvas.waitFor({state:'visible'});
-   await page.waitForTimeout(1500);
+   await page.waitForTimeout(1800);
    await canvas.screenshot({path:path.join('tmp/al-frames',c.id+'.png'),timeout:18000});
    console.log('LIVE2D_RENDER_PASS',c.id);
    ok++;
