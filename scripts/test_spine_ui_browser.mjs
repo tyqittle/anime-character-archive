@@ -20,20 +20,24 @@ try{
   await pilotCard.waitFor({timeout:15000});
   if((await pilotCard.locator('.nm').textContent())!=='戴安娜')throw Error('BD2 card shows bulky unformatted bilingual name');
   if((await pilotCard.locator('small').textContent()).includes('bd2-char'))throw Error('Raw model ID is cluttering the character card');
-  if(await page.locator('#characterCards img').count()){
-   const imgs=await page.locator('#characterCards img').all();
-   if(imgs.length!==5)throw Error('Expected all five matching BD2 character previews');
-   for(const img of imgs){
-    await img.scrollIntoViewIfNeeded();
-    await img.evaluate(el=>new Promise((resolve,reject)=>{
-     if(el.complete){el.naturalWidth>60?resolve():reject(Error('Decoded thumbnail is empty'));return}
-     el.addEventListener('load',()=>resolve(),{once:true});
-     el.addEventListener('error',()=>reject(Error('Missing thumbnail file')),{once:true});
-    }));
-    const valid=await img.evaluate(el=>el.naturalWidth>60&&el.naturalHeight>60);
-    if(!valid)throw Error('Published character preview did not decode');
-   }
+  const cards=page.locator('#characterCards .character-card');
+  if(await cards.count()!==209)throw Error('Expected all 209 BD2 costumes, got '+await cards.count());
+  const imgs=page.locator('#characterCards img');
+  if(await imgs.count()!==209)throw Error('All 209 costumes must show exact-model thumbnails, not placeholders');
+  for(const index of [0,1,2,3,4,50,104,153,201,208]){
+   const img=imgs.nth(index);
+   await img.scrollIntoViewIfNeeded();
+   await img.evaluate(el=>new Promise((resolve,reject)=>{
+    if(el.complete){el.naturalWidth>60?resolve():reject(Error('Thumbnail failed to decode'));return}
+    el.addEventListener('load',()=>resolve(),{once:true});
+    el.addEventListener('error',()=>reject(Error('Thumbnail request failed')),{once:true});
+   }));
+   if(!await img.evaluate(el=>el.naturalHeight>60))throw Error('Blank thumbnail '+index);
   }
+  await page.selectOption('#bd2CharacterFilter','Diana');
+  const roleCount=await cards.count();
+  if(roleCount<1||roleCount>=209)throw Error('BD2 role selector failed to group costumes');
+  await page.selectOption('#bd2CharacterFilter','');
   await page.selectOption('#gameFilter','browndust2');
   if(await page.locator('#playSaved, #local').count())throw Error('Advanced play buttons still exist');
   await page.selectOption('#characters','bd2-char000201');
