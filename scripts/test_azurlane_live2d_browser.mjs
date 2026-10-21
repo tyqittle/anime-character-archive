@@ -1,0 +1,50 @@
+// Smoke-verify real Azur Lane Cubism rendering in the existing Spine theater.
+// Run with: python3 -m http.server 8765 & node scripts/test_azurlane_live2d_browser.mjs
+import {chromium} from 'playwright-core';
+import {createRequire} from 'node:module';
+import fs from 'node:fs';
+
+const browserPath=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'].find(fs.existsSync);
+if(!browserPath)throw Error('Chromium is not installed');
+const cases=['al-bulaimodun_2','al-aierdeliqi_4'];
+const browser=await chromium.launch({headless:true,executablePath:browserPath,args:['--no-sandbox','--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const results=[];
+try{
+ const page=await browser.newPage({viewport:{width:1366,height:850},deviceScaleFactor:1});
+ const errors=[];
+ page.on('pageerror',err=>errors.push(err.message));
+ for(const id of cases){
+  await page.goto('http://127.0.0.1:8765/spine.html?id='+id,{waitUntil:'domcontentloaded',timeout:30000});
+  await page.waitForFunction(id=>document.getElementById('characters')?.value===id, id,{timeout:30000});
+  await page.waitForFunction(()=>{const s=document.querySelector('#status')?.textContent||'';return s.startsWith('正在播放：')||s.includes('失败')||s.includes('超时')},{timeout:110000});
+  const stage=await page.evaluate(()=>({
+   game:document.querySelector('#gameFilter')?.value,
+   status:document.querySelector('#status')?.textContent,
+   frame:!!document.querySelector('#player iframe.azurlane-live2d-frame'),
+   canSelectAction:!document.querySelector('#animationPicker')?.disabled,
+   navStable:document.querySelector('.side-sitebar')!==null,
+   docHeight:document.documentElement.scrollHeight,
+   viewportH:innerHeight
+  }));
+  if(!stage.status.startsWith('正在播放：')||stage.game!=='azurlane'||!stage.frame||!stage.canSelectAction)
+    throw Error('Cubism model did not reach playable stage: '+id+' '+JSON.stringify(stage)+' browserErrors='+errors.join('; '));
+  if(stage.docHeight>stage.viewportH+3)throw Error('Azur Lane introduced desktop scrolling: '+JSON.stringify(stage));
+  const frame=page.frameLocator('iframe.azurlane-live2d-frame');
+  const hasPixi=await frame.locator('#live2dCanvas').evaluate(el=>({
+   width:el.width,height:el.height,hasContext:!!el.getContext('webgl2')||!!el.getContext('webgl')
+  }));
+  if(hasPixi.width<300||hasPixi.height<240||!hasPixi.hasContext)
+    throw Error('No actual WebGL Live2D canvas: '+id+' '+JSON.stringify(hasPixi));
+  const actions=await page.locator('#animationPicker option').count();
+  if(actions<2)throw Error('Cubism motions were not registered: '+id);
+  await page.locator('#animationPicker').selectOption({index:Math.min(1,actions-1)});
+  await page.locator('#zoomIn').click();
+  await page.waitForFunction(()=>document.querySelector('#zoomValue')?.textContent!=='100%',{timeout:10000});
+  const zoom=await page.locator('#zoomValue').textContent();
+  results.push({id,actions,zoom,status:stage.status,canvas:hasPixi});
+  console.log('PASS_LIVE2D_MODEL',JSON.stringify({id,actions,zoom}));
+ }
+ await page.close();
+ fs.writeFileSync('/tmp/azurlane-live2d-test-results.json',JSON.stringify({results,errors},null,2));
+ if(errors.length)throw Error('Page errors: '+errors.join('; '));
+}finally{await browser.close();}
