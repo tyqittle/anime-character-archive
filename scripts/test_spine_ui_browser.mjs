@@ -21,9 +21,17 @@ try{
   if((await pilotCard.locator('.nm').textContent())!=='戴安娜')throw Error('BD2 card shows bulky unformatted bilingual name');
   if((await pilotCard.locator('small').textContent()).includes('bd2-char'))throw Error('Raw model ID is cluttering the character card');
   if(await page.locator('#characterCards img').count()){
-   for(const img of await page.locator('#characterCards img').all()){
-    const valid=await img.evaluate(el=>el.complete&&el.naturalWidth>60);
-    if(!valid)throw Error('Published character preview did not load');
+   const imgs=await page.locator('#characterCards img').all();
+   if(imgs.length!==5)throw Error('Expected all five matching BD2 character previews');
+   for(const img of imgs){
+    await img.scrollIntoViewIfNeeded();
+    await img.evaluate(el=>new Promise((resolve,reject)=>{
+     if(el.complete){el.naturalWidth>60?resolve():reject(Error('Decoded thumbnail is empty'));return}
+     el.addEventListener('load',()=>resolve(),{once:true});
+     el.addEventListener('error',()=>reject(Error('Missing thumbnail file')),{once:true});
+    }));
+    const valid=await img.evaluate(el=>el.naturalWidth>60&&el.naturalHeight>60);
+    if(!valid)throw Error('Published character preview did not decode');
    }
   }
   await page.selectOption('#gameFilter','browndust2');
@@ -38,7 +46,7 @@ try{
   if(selected.url!=='bd2-char000201'||selected.selected!=='bd2-char000201'||selected.active!==1||!selected.autoStarted)
    throw Error('Dropdown did not auto-play and sync the selection: '+JSON.stringify(selected));
   const firstAttempt=await page.evaluate(()=>sequence);
-  await page.locator('#characterCards .character-card').filter({hasText:'bd2-char000701'}).click();
+  await page.locator('#characterCards .character-card').filter({hasText:'日蚀'}).click();
   await page.waitForFunction(n=>sequence>n,firstAttempt,{timeout:10000});
   if(await page.locator('#characters').inputValue()!=='bd2-char000701')throw Error('Card did not select its character');
   await page.selectOption('#characters','bd2-char000201');
