@@ -23,3 +23,25 @@
 .character-card[aria-pressed="true"]{border-color:#c4b8ff;background:#2d2c57;box-shadow:0 0 0 1px #aca2ff5e inset}
 @media(max-width:850px){#loadNotice{top:63px}.character-cards{max-height:260px}}
 @media(prefers-reduced-motion:reduce){.load-spinner{animation:none}}
+
+/* Theater v3: keep Spine's auto-fit renderer while improving inspection. */
+.stage-toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;background:#11182a;border-bottom:1px solid #ffffff1b;flex-wrap:wrap}
+.toolbar-main,.toolbar-view{display:flex;align-items:center;gap:8px;min-width:0}
+.toolbar-main{flex:1 1 230px}.toolbar-view{flex:0 0 auto}
+.tool-label{margin:0;color:#aebdd6;white-space:nowrap;font-size:12px}
+.stage-toolbar .animation-picker{width:auto;flex:1 1 180px;min-width:125px;max-width:340px;height:35px;padding:6px 9px;font-size:12px;border-radius:8px;background:#1c2940;color:#e8edff}
+.stage-toolbar .tool-btn{width:auto;min-height:35px;padding:5px 12px;border-radius:8px;color:#e1e6fc;background:#1b2942;border:1px solid #ffffff2c;white-space:nowrap;font-size:13px}
+.stage-toolbar .tool-btn:hover:not(:disabled){background:#374368;border-color:#b0adff}
+.stage-toolbar .tool-btn:disabled{opacity:.35}
+.stage-toolbar .zoom-value{min-width:43px;text-align:center;color:#c1cbe0;font-size:12px;user-select:none;font-variant-numeric:tabular-nums}
+#player{overflow:hidden;min-height:400px}
+#player canvas.portrait-canvas{cursor:grab;will-change:transform;max-width:none}
+#player canvas.portrait-canvas:active{cursor:grabbing}
+.stage-hint{font-size:11px;line-height:1.5;margin:0;padding:7px 16px;color:#8393ac;border-top:1px solid #ffffff10;background:#101729}
+.stage:fullscreen{width:100vw;height:100dvh;max-width:none;display:flex;flex-direction:column;border:0;border-radius:0;background:#090e19}
+.stage:fullscreen #player{flex:1;min-height:0;height:auto;max-height:none}
+.stage:fullscreen .stage-hint{display:none}
+.stage:fullscreen .stage-toolbar{flex:none}
+.stage:fullscreen .head,.stage:fullscreen #status{flex:none}
+@media(max-width:620px){.stage-toolbar{padding:9px;gap:8px}.toolbar-main{flex:1 1 100%;min-width:0}.toolbar-view{width:100%;justify-content:center}.stage-toolbar .animation-picker{max-width:none}.stage-toolbar .tool-btn{padding:5px 10px}.stage-hint{font-size:10px}#player{min-height:290px}}
+@media(prefers-reduced-motion:reduce){#player canvas.portrait-canvas{will-change:auto}}
