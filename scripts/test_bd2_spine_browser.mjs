@@ -23,11 +23,11 @@ try{
    await page.click('#nikke');
    await page.waitForFunction(()=>{
     const message=document.querySelector('#status')?.textContent||'';
-    return message.includes('正在播放：')||/资源下载失败|加载失败|播放失败|初始化失败|加载超时|无法播放/.test(message);
+    return message.startsWith('正在播放：')||/^(?:角色资源下载失败|播放失败|播放器初始化失败|加载失败|加载超时|本地素材播放失败)/.test(message);
    },null,{timeout:120000});
    const status=await page.locator('#status').textContent();
    result.playerStatus=status;
-   if(!status.includes('正在播放：'))throw Error(status);
+   if(!status.startsWith('正在播放：'))throw Error(status);
    const canvas=page.locator('#player canvas').first();
    await canvas.waitFor({timeout:15000});
    const rect=await canvas.evaluate(c=>({width:c.width,height:c.height}));
