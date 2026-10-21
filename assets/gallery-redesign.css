@@ -75,3 +75,15 @@ body{background:radial-gradient(ellipse 50% 35% at 75% 0%,#292034 0,transparent 
 .feat:hover{transform:translateY(-3px)}
 @media(max-width:650px){.top{min-height:54px}.top-actions .btn{font-size:11px;padding:7px 5px}.top-divider{margin:0 3px}.hero:after{background:linear-gradient(90deg,#16111df2,#16111d99 52%,transparent)}.hero-content{max-width:83%}.hero h1{font-size:clamp(29px,8vw,40px)}}
 @media(prefers-reduced-motion:reduce){.card,.feat{transition:none}.card:hover,.feat:hover{transform:none}}
+
+/* Detail artwork must never flash the card's cropped preview.
+   Reserve stable geometry and reveal only a decoded full-size original. */
+#viewer .view-picture{overflow:hidden;isolation:isolate}
+#viewer #viewImg{display:block;width:100%;height:100%;max-width:100%;max-height:100%;object-fit:contain;object-position:center center}
+#viewer .view-picture.is-loading #viewImg{visibility:hidden}
+#viewer .view-picture .view-loading{display:none;position:absolute;inset:0;z-index:2;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:#b9c1d1;font-size:12px;background:radial-gradient(ellipse at center,#24233555,transparent 70%);pointer-events:none}
+#viewer .view-picture.is-loading .view-loading{display:flex}
+#viewer .view-picture.error .view-loading{display:none}
+#viewer .view-spinner{width:28px;height:28px;border:2px solid #ffffff28;border-top-color:#e8c3d7;border-radius:50%;animation:viewerSpin .85s linear infinite}
+@keyframes viewerSpin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){#viewer .view-spinner{animation:none;border-top-color:#e8c3d7}}
