@@ -340,7 +340,7 @@ function ensureRuntime(version){
    }catch(e){failures.push(url+'：'+e.message)}
   }
   window.spine=oldNamespace;loadedVersion=oldVersion;
-  throw Error('Spine '+version+' 运行时全部加载失败。\\n'+failures.join('\\n'));
+  throw Error('Spine '+version+' 运行时全部加载失败。\n'+failures.join('\n'));
  });
  runtimeQueue=request.catch(()=>{});
  return request;
@@ -624,7 +624,7 @@ function playPack(pack){
     ?'data:text/plain;charset=utf-8,'+encodeURIComponent(clean)
     :'data:text/plain,'+clean;
  }
- if(!setVersion(pack.version,pack.id))return;
+ setVersion(pack.version);
  const matching=allCharacters.find(c=>(c.gameId||'nikke')+'-'+c.id===pack.id);
  const title=matching?((matching.zh?matching.zh+' · ':'')+(matching.gameId==='browndust2'?(matching.costume||matching.name).replace(/_/g,' '):matching.name)):'动态角色 · '+pack.id;
  // Brown Dust 2 character atlases omit "pma: true": they carry straight-alpha
