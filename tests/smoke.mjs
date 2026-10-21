@@ -334,7 +334,15 @@ for(const c of extra.characters){
  assert.ok(!allIds.has(c.id),'Duplicate model ID across catalogs: '+c.id);
  allIds.add(c.id);
  assert.ok(['girlsfrontline','konosuba','arknights'].includes(c.gameId));
- assert.ok(!c.preview&&c.status==='unverified-playback','Unverified models must not show borrowed previews');
+ if(c.preview){
+  assert.equal(c.preview,'./assets/animation-previews/'+c.gameId+'-'+c.id+'.webp','Preview must be exact-model screenshot');
+  assert.equal(c.previewSource,c.engine==='cubism'?'matching-live2d-animation-frame':'matching-spine-animation-frame');
+  assert.equal(c.status,'browser-preview-captured');
+  const fp=path.join(root,c.preview);
+  assert.ok(fs.existsSync(fp),'Matching model preview not present: '+c.id);
+  const image=fs.readFileSync(fp);
+  assert.ok(image.length>500&&image.toString('ascii',0,4)==='RIFF'&&image.toString('ascii',8,12)==='WEBP','Invalid generated WebP: '+c.id);
+ }else assert.equal(c.status,'unverified-playback','Missing screenshot must retain unverified status');
  if(c.engine==='cubism'){
   assert.ok(c.modelUrl.startsWith('https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/'));
   assert.ok(c.modelUrl.endsWith('.model3.json')&&c.skinCode);
