@@ -49,8 +49,6 @@ CURATED = [
     ("gfl2", "klukai", "可露凯", "Klukai", "https://iopwiki.com/images/e/e4/Klukai_Whole.png", "https://iopwiki.com/wiki/File:Klukai_Whole.png"),
     ("gfl2", "leva", "莱娅", "Leva", "https://iopwiki.com/images/1/14/Leva_whole.png", "https://iopwiki.com/wiki/File:Leva_whole.png"),
     ("gfl2", "nemesis", "纳美西丝", "Nemesis", "https://iopwiki.com/images/a/aa/Nemesis_Whole.png", "https://iopwiki.com/wiki/File:Nemesis_Whole.png"),
-    ("wutheringwaves", "jiyan", "忌炎", "Jiyan", WUWA+"T_RoleImgjiyan_UI.png", "https://github.com/TomyJan/WutheringWaves-UIResources/tree/3.7/UIResources/UiLuckdraw/Image"),
-    ("wutheringwaves", "yinlin", "吟霖", "Yinlin", WUWA+"T_RoleImgyinlin_UI.png", "https://github.com/TomyJan/WutheringWaves-UIResources/tree/main/UIResources/UiLuckdraw/Image"),
     ("wutheringwaves", "jinhsi", "今汐", "Jinhsi", "https://wiki.biligame.com/wutheringwaves/Special:FilePath/%E8%A7%92%E8%89%B2_%E4%BB%8A%E6%B1%90_%E7%AB%8B%E7%BB%98.png", "https://wiki.biligame.com/wutheringwaves/共鸣者/今汐"),
     ("wutheringwaves", "changli", "长离", "Changli", "https://patchwiki.biligame.com/images/wutheringwaves/2/25/rwnmwv8y5wjcn98wix521fksfqddhgq.png", "https://wiki.biligame.com/wutheringwaves/共鸣者/长离"),
     ("wutheringwaves", "shorekeeper", "守岸人", "Shorekeeper", "https://patchwiki.biligame.com/images/wutheringwaves/5/56/101neg0k0er0rkh019ljtj5ev6jgac3.png", "https://wiki.biligame.com/wutheringwaves/共鸣者/守岸人"),
@@ -100,6 +98,12 @@ def clean_fullbody(blob):
 
 def main():
     db = json.loads(INDEX.read_text(encoding="utf-8"))
+    db["characters"] = [
+        c for c in db.get("characters", [])
+        if not (c.get("gameId") == "wutheringwaves"
+                and ("T_RoleImgjiyan_UI" in c.get("originalImage", "")
+                     or "T_RoleImgyinlin_UI" in c.get("originalImage", "")))
+    ]
     existing = {c["id"] for c in db.get("characters", [])}
     DEST.mkdir(parents=True,exist_ok=True)
     added = []
