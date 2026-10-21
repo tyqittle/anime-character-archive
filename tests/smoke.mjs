@@ -166,6 +166,12 @@ assert.ok(viewerCSS.includes('height:var(--viewer-art-height'),'Detail dialog sh
 
 
 assert.ok(player.includes('new spine.SpinePlayer'),'Spine renderer missing');
+assert.ok(player.includes("next.searchParams.set('id',matching.id)"),'Runtime switching must preserve the selected catalog character');
+assert.ok(player.includes('rememberSelectedCharacter()'),'Character selection must keep its deep link');
+assert.ok(player.includes('refreshCardSelection();'),'Character list must sync highlighting');
+assert.ok(player.includes('id="loadNotice"')&&player.includes("'loadNotice').hidden=!loading"),'Dynamic stage needs a loading indicator');
+assert.ok(player.includes('class="advanced-tools"'),'Advanced tools must be optional');
+
 assert.ok(player.includes('bd2PilotUrl')&&player.includes('value="browndust2"'),'Missing BD2 pilot loader or game selection');
 assert.ok(player.includes("c.gameId==='bluearchive'||c.gameId==='browndust2'"),'BD2 must not use NIKKE legacy mirror');
 
