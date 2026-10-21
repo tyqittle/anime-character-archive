@@ -1,4 +1,5 @@
 // Produce preview WebP files from the EXACT Spine models used in this site.
+// Re-render after BD2 straight-alpha blending fix; old images had white halos.
 // No atlas sprites, other costumes, or unrelated promotional images.
 import fs from 'node:fs';
 import path from 'node:path';

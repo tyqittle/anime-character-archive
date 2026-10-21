@@ -29,6 +29,8 @@ try{
    result.playerStatus=status;
    if(!status.startsWith('正在播放：'))throw Error(status);
    if(await page.locator('#player button').count())throw Error('Embedded Spine player still contains a play button');
+   const settings=await page.evaluate(()=>({pma:player?.config?.premultipliedAlpha,hasPlayer:!!player}));
+   if(!settings.hasPlayer||settings.pma!==false)throw Error('BD2 straight-alpha renderer not active: '+JSON.stringify(settings));
    const canvas=page.locator('#player canvas').first();
    await canvas.waitFor({timeout:15000});
    const rect=await canvas.evaluate(c=>({width:c.width,height:c.height}));
