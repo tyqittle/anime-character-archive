@@ -20,6 +20,47 @@ try{
   page.on('pageerror',e=>pageErrors.push(e.message));
   await page.goto('http://127.0.0.1:8765/characters.html',{waitUntil:'domcontentloaded',timeout:30000});
   await page.waitForFunction(()=>window.items?.length>=540,{timeout:30000});
+  // Static and dynamic pages must use the same compact left navigation.
+  // On desktop the gallery scrolls internally; on mobile the document scrolls.
+  const shell=await page.evaluate(()=>{
+    const box=el=>{const r=el.getBoundingClientRect();return {width:r.width,height:r.height,top:r.top,bottom:r.bottom}};
+    const rail=document.querySelector('.archive-sidebar');
+    const main=document.querySelector('.archive-gallery-main');
+    const gallery=document.querySelector('#gallery');
+    const nav=rail?.querySelector('.side-nav');
+    const doc=document.documentElement;
+    const top=main?.querySelector('.top');
+    return {
+      navLinks:[...(nav?.querySelectorAll('a')||[])].map(x=>x.textContent.trim()),
+      activeNav:nav?.querySelector('[aria-current="page"]')?.textContent.trim(),
+      docsHeight:doc.scrollHeight,bodyHeight:document.body.scrollHeight,
+      viewportHeight:innerHeight,viewportWidth:innerWidth,
+      bodyOverflow:getComputedStyle(document.body).overflowY,
+      sidebar:box(rail),main:box(main),gallery:box(gallery),
+      galleryOverflow:getComputedStyle(gallery).overflowY,
+      galleryScrollHeight:gallery.scrollHeight,galleryClientHeight:gallery.clientHeight,
+      modal:!!document.querySelector('#viewer'),featured:!!document.querySelector('#featured')
+    };
+  });
+  if(shell.navLinks.join('|')!=='角色图鉴|动态立绘'||shell.activeNav!=='角色图鉴')
+    throw Error('Static gallery navigation differs from Spine player: '+JSON.stringify(shell));
+  if(!shell.modal||!shell.featured)throw Error('Gallery modal or featured controls were removed');
+  if(viewport.width>850){
+    if(shell.docsHeight>shell.viewportHeight+2||shell.bodyHeight>shell.viewportHeight+2)
+      throw Error('Static workspace causes full-document scrolling: '+JSON.stringify(shell));
+    if(shell.sidebar.bottom>shell.viewportHeight+1||shell.main.bottom>shell.viewportHeight+1)
+      throw Error('Static workspace escapes viewport: '+JSON.stringify(shell));
+    if(!['auto','scroll'].includes(shell.galleryOverflow)||shell.gallery.height<150)
+      throw Error('Static gallery needs an internal full-size scroll surface: '+JSON.stringify(shell));
+    const first=await page.locator('#gallery .card').first().evaluate(el=>{
+      const card=el.getBoundingClientRect(),image=el.querySelector('.card-img')?.getBoundingClientRect();
+      return {cardH:card.height,imageH:image?.height};
+    });
+    if(first.cardH<160||first.imageH<150)throw Error('Static cards were compressed by viewport layout: '+JSON.stringify(first));
+  }else if(shell.main.width<290){
+    throw Error('Mobile gallery lost usable width: '+JSON.stringify(shell));
+  }
+
   // Favoriting must retain existing thumbnail elements instead of flashing
   // the whole grid. Exercise the real delegated click path.
   const firstFavId=await page.evaluate(()=>{
