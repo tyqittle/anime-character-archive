@@ -124,6 +124,16 @@ assert.ok(page.includes("LEGACY_FAVORITES_STORAGE_KEY='winter-characters-favorit
 assert.ok(page.includes("FAVORITES_STORAGE_KEY='anime-character-archive-favorites-v1'"),'Favorite storage key must match the current project');
 assert.ok(page.includes('localStorage.setItem(FAVORITES_STORAGE_KEY,savedFavorites)'),'Existing favorites must survive a repository rename');
 assert.ok(page.includes(brandName)&&player.includes(brandName),'Both gallery and player titles should match the project branding');
+const archiveShellCSS=read('assets/archive-shell.css');
+assert.ok(page.includes('class="side-sitebar"')&&player.includes('class="side-sitebar"'),'Both gallery pages must use the same sidebar brand');
+assert.ok(page.includes('class="side-nav"')&&player.includes('class="side-nav"'),'Both pages must use identical static/dynamic navigation placement');
+assert.ok(page.includes('aria-current="page"')&&player.includes('aria-current="page"'),'Each page must mark its active navigation link');
+assert.ok(page.includes('archive-shell.css?v=unified-shell-20261021-v1')&&player.includes('archive-shell.css?v=unified-shell-20261021-v1'),'Both pages must load the same versioned design system');
+assert.ok(page.includes('class="archive-gallery-main"')&&page.includes('class="archive-extras"'),'Static gallery must present its library before an optional expanded welcome area');
+assert.ok(page.includes('id="featured"')&&page.includes('id="heroArt"')&&page.includes('id="totalStat"'),'Static features and statistics must remain wired to the original controls');
+assert.ok(archiveShellCSS.includes('grid-auto-rows:max-content')&&archiveShellCSS.includes('overflow-y:auto'),'Full-height static gallery must retain independently scrolling full-height cards');
+assert.ok(archiveShellCSS.includes('max-width:850px')&&archiveShellCSS.includes('min-width:851px'),'Unified shell needs both small-screen and desktop rules');
+
 const localLauncher=read('start_site.py');
 assert.ok(localLauncher.includes('Anime Character Archive')&&localLauncher.includes("'/characters.html'"),'Local launcher must use the current project name and gallery entrypoint');
 assert.ok(!localLauncher.includes('Winter Gallery')&&!localLauncher.includes('data/catalog.json'),'Local launcher still relies on a retired site or missing catalog');
