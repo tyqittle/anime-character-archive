@@ -1,0 +1,41 @@
+name: Publish completed BD2 batch preview artifacts
+on:
+  workflow_run:
+    workflows: ["Batch render full Brown Dust 2 character gallery"]
+    types: [completed]
+permissions:
+  actions: read
+  contents: write
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Recover previews from completed render job artifacts
+        uses: actions/download-artifact@v4
+        with:
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          pattern: bd2-shard-*
+          path: build/bd2-results/
+          merge-multiple: false
+      - name: Verify every rendered preview belongs to its actual model
+        run: node scripts/merge_bd2_bulk_previews.mjs
+      - name: Validate gallery manifest and image presence
+        run: node tests/smoke.mjs
+      - name: Publish new verified model previews
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/spine-bd2-characters.json data/bd2-preview-audit.json assets/animation-previews/browndust2-bd2-char*.webp
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish recovered BD2 character previews from completed batch"
+            git push origin HEAD:main
+          fi
