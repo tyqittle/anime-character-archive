@@ -1,0 +1,239 @@
+{
+  "date": "2026-10-21",
+  "source": "https://github.com/Nikke-db/Nikke-db.github.io",
+  "sourceCommit": "65d1c9517608cbfa1a4e62971f0afe5ca99cbee2",
+  "sourceIndexCount": 267,
+  "sourceCharacterSkinEntriesWithDirectory": 211,
+  "previousIndexedNikke": 102,
+  "addedNikke": 109,
+  "currentIndexedNikke": 211,
+  "excludedCharacterEntriesWithoutDirectory": [
+    {
+      "id": "c053",
+      "name": "liqueur"
+    },
+    {
+      "id": "c081",
+      "name": "Acre"
+    },
+    {
+      "id": "c122",
+      "name": "c122"
+    },
+    {
+      "id": "c211",
+      "name": "c211"
+    },
+    {
+      "id": "c320",
+      "name": "Bibli"
+    },
+    {
+      "id": "c340",
+      "name": "Siren"
+    },
+    {
+      "id": "c342",
+      "name": "Pin"
+    },
+    {
+      "id": "c913",
+      "name": "c913"
+    }
+  ],
+  "excludedSceneOrNonCharacterEntries": [
+    {
+      "id": "c9999",
+      "name": "Self"
+    },
+    {
+      "id": "c9999",
+      "name": "Choice"
+    },
+    {
+      "id": "bluewaterisland",
+      "name": "Blue Water Island"
+    },
+    {
+      "id": "bowwowparadise",
+      "name": "Bow Wow Paradise"
+    },
+    {
+      "id": "777",
+      "name": "777"
+    },
+    {
+      "id": "cherryblossom",
+      "name": "Cherry Blossom"
+    },
+    {
+      "id": "ltk",
+      "name": "License to Kill"
+    },
+    {
+      "id": "maidinvalentine",
+      "name": "Maid in Valentine"
+    },
+    {
+      "id": "queensorder",
+      "name": "Queen's Order"
+    },
+    {
+      "id": "nyanyaparadise",
+      "name": "Nya Nya Paradise"
+    },
+    {
+      "id": "goldenship",
+      "name": "Golden Ship"
+    },
+    {
+      "id": "seayouagain",
+      "name": "Sea You Again"
+    },
+    {
+      "id": "outerautomata",
+      "name": "Outer Automata"
+    },
+    {
+      "id": "nocallerid",
+      "name": "No Caller ID"
+    },
+    {
+      "id": "schooloflock",
+      "name": "School Of Lock"
+    },
+    {
+      "id": "smol_anchor",
+      "name": "Smol Anchor"
+    },
+    {
+      "id": "smol_bolt",
+      "name": "Smol Bolt"
+    },
+    {
+      "id": "smol_frima",
+      "name": "Smol Frima"
+    },
+    {
+      "id": "smol_helm",
+      "name": "Smol Helm"
+    },
+    {
+      "id": "smol_liter",
+      "name": "Smol Liter"
+    },
+    {
+      "id": "smol_mary",
+      "name": "Smol Mary"
+    },
+    {
+      "id": "smol_mast",
+      "name": "Smol Mast"
+    },
+    {
+      "id": "smol_pepper",
+      "name": "Smol Pepper"
+    },
+    {
+      "id": "smol_rapi",
+      "name": "Smol Rapi"
+    },
+    {
+      "id": "smol_yan",
+      "name": "Smol Yan"
+    },
+    {
+      "id": "story0001",
+      "name": "Story 00-01"
+    },
+    {
+      "id": "story0001_2",
+      "name": "Story 00-01 no filter"
+    },
+    {
+      "id": "story0002",
+      "name": "Story 00-02"
+    },
+    {
+      "id": "story0002_2",
+      "name": "Story 00-02 no filter"
+    },
+    {
+      "id": "story0003",
+      "name": "Story 00-03"
+    },
+    {
+      "id": "story0201",
+      "name": "Story 02-01"
+    },
+    {
+      "id": "story0401",
+      "name": "Story 04-01"
+    },
+    {
+      "id": "story0401_2",
+      "name": "Story 04-02"
+    },
+    {
+      "id": "story0405",
+      "name": "Story 04-05"
+    },
+    {
+      "id": "story0702",
+      "name": "Story 07-02"
+    },
+    {
+      "id": "story1201",
+      "name": "Story 12-01"
+    },
+    {
+      "id": "story1302",
+      "name": "Story 13-02"
+    },
+    {
+      "id": "story1303",
+      "name": "Story 13-03"
+    },
+    {
+      "id": "story1401",
+      "name": "Story 14-01"
+    },
+    {
+      "id": "story1403",
+      "name": "Story 14-03"
+    },
+    {
+      "id": "story1405",
+      "name": "Story 14-05"
+    },
+    {
+      "id": "story1501",
+      "name": "Story 15-01"
+    },
+    {
+      "id": "story1902",
+      "name": "Story 19-01"
+    },
+    {
+      "id": "story2002",
+      "name": "Story 20-01"
+    },
+    {
+      "id": "story2101",
+      "name": "Story 21-01"
+    },
+    {
+      "id": "story2201",
+      "name": "Story 22-01"
+    },
+    {
+      "id": "story2202",
+      "name": "Story 22-02"
+    },
+    {
+      "id": "story2206",
+      "name": "Story 22-06"
+    }
+  ],
+  "note": "All 211 NIKKE rows are source-directory indexed, NOT necessarily verified Spine loads. Of these 109 are newly indexed and have no local animation preview until individual Chromium rendering succeeds. Broken upstream references are excluded. Remote skeletons, atlas and textures not mirrored locally."
+}
