@@ -67,7 +67,9 @@ footer{padding:24px;text-align:center;color:#92a8bb;font-size:12px}
 const $=id=>document.getElementById(id);
 const runtimeRoot='https://unpkg.com/@esotericsoftware/spine-player@';
 const params=new URLSearchParams(location.search);
-let loadedVersion='', loadPromise=null, player=null, allCharacters=[], chosenFileList=[], currentAttempt=0, watchdog=null;
+let loadedVersion='', runtimeQueue=Promise.resolve(), player=null, allCharacters=[], chosenFileList=[], currentAttempt=0, watchdog=null;
+const runtimeCache=new Map();
+let runtimeCss=null;
 let viewZoom=1,viewOffsetX=0,viewOffsetY=0;
 const clampViewZoom=value=>Math.min(3.5,Math.max(.5,value));
 function setViewerToolsEnabled(ready){
@@ -143,7 +145,7 @@ document.addEventListener('fullscreenchange',()=>{
  $('fullscreenStage').setAttribute('aria-label',document.fullscreenElement?'退出全屏':'全屏观看');
 });
 
-const manifestUrl='./data/spine-characters.json?v=20261020-frame133';
+const manifestUrl='./data/spine-characters.json?v=20261021-nikke514';
 const bd2CatalogUrl='./data/spine-bd2-characters.json?v=20261021-bulk209';
 const embeddedCharacters=[{"id":"c010","name":"Rapi","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010/c010_00"},{"id":"c011","name":"Neon","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c011/c011_00"},{"id":"c012","name":"Anis","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c012/c012_00"},{"id":"c013","name":"Marian","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c013/c013_00"},{"id":"c015","name":"Anis: Sparkling Summer","spineVersion":"4.1","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c015/c015_00"},{"id":"c040","name":"D","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c040/c040_00"},{"id":"c060","name":"Belorta","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c060/c060_00"},{"id":"c070","name":"Brid","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070/c070_00"},{"id":"c072","name":"Diesel","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c072/c072_00"},{"id":"c080","name":"Centi","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c080/c080_00"},{"id":"c090","name":"Emma","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090/c090_00"},{"id":"c101","name":"Drake","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c101/c101_00"},{"id":"c110","name":"Crow","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c110/c110_00"},{"id":"c112","name":"Viper","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c112/c112_00"},{"id":"c170","name":"Privaty","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c170/c170_00"},{"id":"c180","name":"Guillotine","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c180/c180_00"},{"id":"c181","name":"Maiden","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c181/c181_00"},{"id":"c191","name":"Alice","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c191/c191_00"},{"id":"c200","name":"Rupee","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c200/c200_00"},{"id":"c203","name":"Rupee: Winter Shopper","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c203/c203_00"},{"id":"c222","name":"Scarlet","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c222/c222_00"},{"id":"c230","name":"Harran","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c230/c230_00"},{"id":"c233","name":"Dorothy","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c233/c233_00"},{"id":"c260","name":"Modernia","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c260/c260_00"},{"id":"c270","name":"Blanc","spineVersion":"4.1","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c270/c270_00"},{"id":"c280","name":"Rosanna","spineVersion":"4.1","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c280/c280_00"},{"id":"c282","name":"Sakura","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c282/c282_00"},{"id":"c352","name":"Helm","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c352/c352_00"},{"id":"c353","name":"Helm: Aquamarine","spineVersion":"4.1","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c353/c353_00"},{"id":"c400","name":"Guilty","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c400/c400_00"}];
 // Keep this legacy IndexedDB name intentionally: renaming it would hide previously downloaded Spine packs in users' browsers.
@@ -243,28 +245,9 @@ $('gameFilter').onchange=()=>{
 $('bd2CharacterFilter').onchange=()=>{refreshCharacters();rememberSelectedCharacter()};
 $('characterSearch').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(refreshCharacters,140)};
 
-function setVersion(v, packId=''){
- // Spine 3.8 and 4.x have incompatible globals; preserve the character
- // selection across the required runtime reload instead of losing it.
- if(loadedVersion&&loadedVersion!==v){
-  const next=new URL(location.href);
-  next.searchParams.set('v',v);
-  const matching=allCharacters.find(c=>(c.gameId||'nikke')+'-'+c.id===packId);
-  if(matching){
-   next.searchParams.set('id',matching.id);
-   next.searchParams.delete('pack');
-  }else if(packId){
-   next.searchParams.set('pack',packId);
-   next.searchParams.delete('id');
-  }else{
-   const c=chosen();
-   if(c)next.searchParams.set('id',c.id);
-   else next.searchParams.delete('id');
-   next.searchParams.delete('pack');
-  }
-  location.assign(next.toString());
-  return false;
- }
+function setVersion(v){
+ // Runtime transitions do not navigate: preserve current UI, filters and scroll.
+ if(!['3.8','4.0','4.1','4.2'].includes(v))throw Error('不支持的 Spine 版本：'+v);
  if($('version').value!==v)$('version').value=v;
  return true;
 }
@@ -305,40 +288,62 @@ function patchSpine38AtlasRotations(){
  };
  proto.__fixedFullRotations=true;
 }
+// Keep incompatible Spine namespace objects isolated and cached by version.
+function activateRuntimeStylesheet(href){
+ if(!runtimeCss){
+  runtimeCss=document.createElement('link');
+  runtimeCss.id='spine-runtime-styles';
+  runtimeCss.rel='stylesheet';
+  document.head.append(runtimeCss);
+ }
+ if(runtimeCss.getAttribute('href')!==href)runtimeCss.href=href;
+}
 function ensureRuntime(version){
- if(loadedVersion===version&&window.spine?.SpinePlayer)return Promise.resolve();
- if(loadPromise){if(loadedVersion!==version)return Promise.reject(Error('切换版本请刷新页面'));return loadPromise}
- loadedVersion=version;
- const legacy=version==='3.8';
- const local='./vendor/spine38/';
- const cdns=legacy?[local,'https://raw.githubusercontent.com/EsotericSoftware/spine-runtimes/3.8/spine-ts/build/']:[runtimeRoot+version+'.*/dist/'];
- loadPromise=(async()=>{
+ // Serialize script registration so rapid selection cannot corrupt globals.
+ const request=runtimeQueue.then(async()=>{
+  if(loadedVersion===version&&window.spine?.SpinePlayer)return;
+  if(player)clearPlayer();
+  const cached=runtimeCache.get(version);
+  if(cached){
+   window.spine=cached.namespace;
+   activateRuntimeStylesheet(cached.stylesheet);
+   loadedVersion=version;
+   return;
+  }
+  const oldNamespace=window.spine,oldVersion=loadedVersion;
+  const legacy=version==='3.8',local='./vendor/spine38/';
+  const bases=legacy?[local,'https://raw.githubusercontent.com/EsotericSoftware/spine-runtimes/3.8/spine-ts/build/']:[runtimeRoot+version+'.*/dist/'];
   const failures=[];
-  for(const base of cdns){
-   const url=base+(legacy&&base!==local?'spine-player.js':legacy?'spine-player.js':'iife/spine-player.js');
+  for(const base of bases){
+   const url=base+(legacy?'spine-player.js':'iife/spine-player.js');
+   window.spine=undefined; // Never merge a 3.8 and a 4.x namespace.
    try{
-    status('正在加载 Spine '+version+' 播放引擎：'+url);
+    status('正在切换 Spine '+version+' 播放引擎，无需刷新页面…');
     await new Promise((resolve,reject)=>{
      const script=document.createElement('script');
+     script.dataset.spineRuntime=version;
      const timeout=setTimeout(()=>{script.remove();reject(Error('超时（15秒）'))},15000);
      script.src=url;
      script.onload=()=>{
-       clearTimeout(timeout);
-       if(!window.spine?.SpinePlayer){reject(Error('脚本已加载但未注册 SpinePlayer'));return}
-       try{if(legacy)patchSpine38AtlasRotations();resolve()}catch(e){reject(e)}
-      };
-     script.onerror=()=>{clearTimeout(timeout);reject(Error('脚本请求失败（可能为404或网络拦截）'))};
+      clearTimeout(timeout);
+      if(!window.spine?.SpinePlayer){reject(Error('脚本已加载但未注册 SpinePlayer'));return}
+      try{if(legacy)patchSpine38AtlasRotations();resolve()}catch(e){reject(e)}
+     };
+     script.onerror=()=>{clearTimeout(timeout);script.remove();reject(Error('脚本请求失败（可能为404或网络拦截）'))};
      document.head.append(script);
     });
-    const css=document.createElement('link');css.rel='stylesheet';
-    css.href=legacy?(base===local?local+'spine-player.css':'https://raw.githubusercontent.com/EsotericSoftware/spine-runtimes/3.8/spine-ts/player/css/spine-player.css'):base+'spine-player.css';
-    document.head.append(css);
+    const stylesheet=legacy?(base===local?local+'spine-player.css':'https://raw.githubusercontent.com/EsotericSoftware/spine-runtimes/3.8/spine-ts/player/css/spine-player.css'):base+'spine-player.css';
+    runtimeCache.set(version,{namespace:window.spine,stylesheet});
+    activateRuntimeStylesheet(stylesheet);
+    loadedVersion=version;
     return;
    }catch(e){failures.push(url+'：'+e.message)}
   }
+  window.spine=oldNamespace;loadedVersion=oldVersion;
   throw Error('Spine '+version+' 运行时全部加载失败。\\n'+failures.join('\\n'));
- })().catch(e=>{loadPromise=null;loadedVersion='';throw e});
- return loadPromise;
+ });
+ runtimeQueue=request.catch(()=>{});
+ return request;
 }
 function clearPlayer(){
  try{player?.dispose?.()}catch(e){console.warn(e)}
@@ -640,18 +645,13 @@ $('savedPacks').onchange=async()=>{
 };
 $('deleteSaved').onclick=async()=>{const id=$('savedPacks').value;if(!id)return;if(!confirm('删除本机保存的动画素材包：'+id+'？'))return;try{await dbAction('readwrite',s=>s.delete(id));await refreshSaved();status('已删除本机动画素材包 '+id)}catch(e){status('删除失败：'+e.message,true)}};
 $('version').onchange=()=>{
- if(loadedVersion&&loadedVersion!==$('version').value){
-  cancelCharacterDownload();
-  const url=new URL(location.href);
-  url.searchParams.set('v',$('version').value);
-  const c=chosen();
-  if(c)url.searchParams.set('id',c.id);
-  else url.searchParams.delete('id');
-  url.searchParams.delete('pack');
-  location.assign(url.toString());
- }
+ const v=$('version').value;
+ const url=new URL(location.href);
+ url.searchParams.set('v',v);
+ history.replaceState(null,'',url.pathname+url.search+url.hash);
+ status('已选 Spine '+v+'；下一次播放将无刷新切换至对应引擎。');
 };
-(async()=>{
+ (async()=>{
  try{
   allCharacters=embeddedCharacters;
   if(location.protocol!=='file:'){try{const r=await fetch(manifestUrl,{cache:'no-store'});if(r.ok){const db=await r.json();if(Array.isArray(db.characters)&&db.characters.length)allCharacters=db.characters}}catch(e){console.warn('使用离线内嵌角色目录',e)}}
