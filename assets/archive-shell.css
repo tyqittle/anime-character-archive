@@ -65,6 +65,7 @@ body{background:radial-gradient(ellipse 65% 45% at 70% 0,#292852 0,transparent 8
  .archive-gallery-main .archive-extras .featured{grid-template-columns:repeat(6,minmax(0,1fr))}
  .archive-gallery-main .archive-extras .disclaimer{font-size:11px;margin:10px 0 0;padding:10px}
 }
+.archive-head-context{font-size:11px;color:#9fb3c7;white-space:nowrap;max-width:45%;overflow:hidden;text-overflow:ellipsis}
 .archive-heading{display:flex;flex-direction:column;min-width:0;gap:2px}
 .archive-heading strong{font-family:inherit;font-size:14px;font-weight:750;line-height:1.25;color:#eef1ff}
 .archive-heading small{font-size:11px;color:#9fb3c7}
