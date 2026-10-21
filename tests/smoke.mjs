@@ -117,7 +117,16 @@ for(const entry of spine.characters){
 }
 console.log('Spine preview audit: '+previewDigests.size+' verified, '+unrendered+' awaiting real rendering.');
 assert.ok(chars.characters.every(x=>x.image.startsWith('./assets/portraits/')),'Not all static images are local');
-const home=read('index.html'),old=read('gallery.html'),page=read('characters.html'),player=read('spine.html');
+const galleryModules=["assets/js/gallery/state.js","assets/js/gallery/catalog.js","assets/js/gallery/viewer.js","assets/js/gallery/events.js","assets/js/gallery/bootstrap.js"];
+const spineModules=["assets/js/spine/state.js","assets/js/spine/viewer-controls.js","assets/js/spine/catalog.js","assets/js/spine/spine-runtime.js","assets/js/spine/spine-assets.js","assets/js/spine/live2d-bridge.js","assets/js/spine/playback.js","assets/js/spine/local-tools.js","assets/js/spine/bootstrap.js"];
+const gallerySource=galleryModules.map(read).join('\n');
+const spineSource=spineModules.map(read).join('\n');
+const home=read('index.html'),old=read('gallery.html'),page=read('characters.html')+'\n'+gallerySource,player=read('spine.html')+'\n'+spineSource;
+for(const [file,source] of [...galleryModules.map(f=>[f,'characters.html']),...spineModules.map(f=>[f,'spine.html'])]){
+ assert.ok(fs.existsSync(path.join(root,file)),'Referenced module missing: '+file);
+ assert.ok(read(source).includes('./'+file+'?v=20261021-modules-v1'),'HTML must load versioned script module: '+file);
+ new Function(read(file));
+}
 assert.ok(home.includes('./characters.html')&&old.includes('./characters.html'),'Old entrypoint no longer redirects');
 assert.ok(page.includes('data/characters.json'),'Character archive not connected');
 const brandName='Anime Character Archive';
@@ -140,7 +149,7 @@ assert.ok(page.includes('class="side-sitebar"')&&player.includes('class="side-si
 assert.ok(page.includes('class="side-nav"')&&player.includes('class="side-nav"'),'Both pages must use identical static/dynamic navigation placement');
 assert.ok(page.includes('aria-current="page"')&&player.includes('aria-current="page"'),'Each page must mark its active navigation link');
 assert.ok(page.includes('archive-shell.css?v=unified-shell-20261021-v2')&&player.includes('archive-shell.css?v=unified-shell-20261021-v2'),'Both pages must load the same versioned design system');
-assert.ok(page.includes('class="archive-gallery-main"')&&page.includes('class="archive-extras"'),'Static gallery must present its library before an optional expanded welcome area');
+assert.ok(page.includes('id="explore"')&&page.includes('class="archive-extras"'),'Static gallery must present its library before an optional expanded welcome area');
 assert.ok(page.includes('id="featured"')&&page.includes('id="heroArt"')&&page.includes('id="totalStat"'),'Static features and statistics must remain wired to the original controls');
 assert.ok(archiveShellCSS.includes('grid-auto-rows:max-content')&&archiveShellCSS.includes('overflow-y:auto'),'Full-height static gallery must retain independently scrolling full-height cards');
 assert.ok(archiveShellCSS.includes('max-width:850px')&&archiveShellCSS.includes('min-width:851px'),'Unified shell needs both small-screen and desktop rules');
@@ -170,14 +179,14 @@ function inspectIdentity(relative=''){
   }
   if(p===path.join('tests','smoke.mjs')||!identityExtensions.has(path.extname(p)))continue;
   const raw=read(p);
-  const content=p==='characters.html'?raw.replaceAll('winter-characters-favorites-v1','[legacy-favorites-migration]'):raw;
+  const content=raw.replaceAll('winter-characters-favorites-v1','[legacy-favorites-migration]');
   assert.ok(!outdatedIdentity.test(content),'Retired project name or Pages path found in '+p);
  }
 }
 inspectIdentity();
 
 
-const script=page.match(/<script>([\s\S]*?)<\/script>/)?.[1];
+const script=gallerySource;
 assert.ok(script,'Missing gallery script');
 const filterItemsSource=page.slice(page.indexOf('function filterItems(){'),page.indexOf('function fillGameLinks('));
 assert.ok(filterItemsSource.startsWith('function filterItems(){'),'Gallery rarity filter function missing');
@@ -197,7 +206,7 @@ assert.deepEqual(selectRarityTest('SSR'),['known'],'SSR rarity must exclude unma
 new Function(script);
 assert.ok(page.includes('data-action="retry-view"')&&page.includes('viewRetryNonce=Date.now()'),'Failed original image must support retry');
 assert.ok(page.includes("addEventListener('touchstart'")&&page.includes("addEventListener('touchend'"),'Mobile artwork swipe is missing');
-const spineScript=player.match(/<script>([\s\S]*?)<\/script>/)?.[1];
+const spineScript=spineSource;
 assert.ok(spineScript,'Spine player script is missing');
 new Function(spineScript);
 assert.ok(player.includes('function cancelCharacterDownload()')&&player.includes('activeCharacterAbort.abort()'),'Stale dynamic downloads must be aborted');
@@ -208,7 +217,7 @@ assert.ok(!player.includes('id="playSaved"')&&!player.includes('id="local"'),'Im
 assert.ok(player.includes("$('characters').onchange=()=>")&&player.includes('playCharacter(c);'),'Dropdown must autoplay the selected character');
 assert.ok(page.includes('function drawGroups()')&&page.includes('game-section')&&page.includes('characterKey'),'Missing dynamic game and character classification');
 assert.ok(page.includes('id="viewLoading"')&&page.includes('class="view-loading"'),'Missing stable modal loading state');
-const showOne=page.slice(page.indexOf('function showOne(id){'),page.indexOf('function navigate(step){'));
+const showOne=gallerySource.slice(gallerySource.indexOf('function showOne(id){'),gallerySource.indexOf('function navigate(step){'));
 assert.ok(showOne.includes("img.src=c.image"),'Detail viewer must show the original full artwork');
 assert.ok(showOne.includes("img.decode().then"),'Detail viewer must wait for full artwork decoding');
 assert.ok(showOne.includes("pic.classList.add('is-loading')"),'Detail viewer must mask the artwork until fully loaded');
@@ -228,8 +237,8 @@ assert.ok(viewerCSS.includes('height:var(--viewer-art-height'),'Detail dialog sh
 const theaterCSS=read('assets/spine-theater-layout.css');
 assert.ok(player.includes('class="side-sitebar"')&&player.includes('class="side-nav"'),'Spine site navigation must live inside the sidebar');
 assert.ok(!player.includes('<header>'),'Spine theater must not waste vertical space on a full-width header');
-assert.ok(player.includes('v=20261021-azurlane-live2d-v3'),'Layout stylesheet version must invalidate cached pre-AzurLane stage CSS');
-assert.ok(theaterCSS.includes('grid-auto-rows:max-content')&&theaterCSS.includes('min-height:164px'),'Grid rows and cards must have non-collapsing heights');
+assert.ok(player.includes('spine-theater-layout.css?v=20261021-loading-speed-v5'),'Layout stylesheet version must invalidate cached pre-AzurLane stage CSS');
+assert.ok(theaterCSS.includes('grid-auto-rows:max-content')&&theaterCSS.includes('min-height:188px'),'Grid rows and cards must have non-collapsing heights');
 assert.ok(theaterCSS.includes('height:100dvh')&&theaterCSS.includes('grid-template-columns:clamp('),'Desktop stage must fit the viewport');
 assert.ok(theaterCSS.includes('.character-cards{flex:1 1 auto')&&theaterCSS.includes('overflow-y:auto'),'Only the card grid should scroll internally');
 assert.ok(theaterCSS.includes('.stage:fullscreen')&&theaterCSS.includes('@media(max-width:850px)'),'Mobile and fullscreen layouts must be preserved');
@@ -249,17 +258,22 @@ assert.ok(player.includes('id="loadNotice"')&&player.includes("'loadNotice').hid
 assert.ok(player.includes('class="advanced-tools"'),'Advanced tools must be optional');
 
 const azure=JSON.parse(read('data/live2d-azurlane.json'));
-assert.equal(azure.characters.length,178,'Azur Lane Cubism model source index must contain 178 model directories');
-assert.equal(new Set(azure.characters.map(c=>c.id)).size,178,'Azur Lane model skin ids must be distinct');
+assert.equal(azure.characters.length,242,'Azur Lane should index 178 baseline plus 64 unique additional skins');
+assert.equal(new Set(azure.characters.map(c=>c.id)).size,242,'Azur Lane model skin ids must be distinct');
 for(const c of azure.characters){
   assert.equal(c.gameId,'azurlane');
   assert.equal(c.engine,'cubism');
   assert.match(c.id,/^al-[a-z0-9_]+$/);
   assert.match(c.modelUrl,/\/live2d\/([a-zA-Z0-9_]+)\/\1\.model3\.json$/,'Cubism model must reference its own skin');
-  assert.ok(c.modelUrl.includes('88cb6e56a0ad472fe7e546509f096545d2bbc5b9'),'Remote Cubism files must be commit pinned');
+  assert.ok(/88cb6e56a0ad472fe7e546509f096545d2bbc5b9|1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3/.test(c.modelUrl),'Cubism source files must be pinned to audited commits');
   if(c.preview){
-    assert.equal(c.previewSource,'upstream-ship-thumbnail');
-    assert.ok(c.preview.endsWith('/'+c.skinCode+'.png'),'Azur Lane preview cannot borrow another skin thumbnail');
+    assert.ok(['upstream-ship-thumbnail','matching-live2d-animation-frame'].includes(c.previewSource),'Unverified Azur Lane preview: '+c.id);
+    if(c.previewSource==='upstream-ship-thumbnail')
+     assert.ok(c.preview.endsWith('/'+c.skinCode+'.png'),'Azur Lane preview cannot borrow another skin thumbnail');
+    else {
+     assert.equal(c.preview,'./assets/animation-previews/azurlane-'+c.id+'.webp','Live2D preview must match the exact skin');
+     assert.ok(fs.existsSync(path.join(root,c.preview)),'Live2D model screenshot missing: '+c.id);
+    }
   }
 }
 const live2dFrame=read('azurlane-stage.html');
@@ -284,10 +298,22 @@ console.log('PASS: '+chars.characters.length+' classified static artworks across
 
 // Guard against accidentally double-escaped Spine version regexps.
 // A prior regression rejected valid 3.8 export headers before playback began.
-const playerSource=read('spine.html');
+const playerSource=spineSource;
 const versionCheck=playerSource.match(/if\(!\/(\^.*?)\/\.test\(version\|\|''\)\)/);
 assert.ok(versionCheck,'Missing Spine export-version validation');
 const versionRegexp=new RegExp(versionCheck[1]);
 assert.ok(versionRegexp.test('3.8.99'),'Spine version regex rejects valid 3.8 export');
 assert.ok(versionRegexp.test('4.1.24'),'Spine version regex rejects valid 4.1 export');
 assert.ok(!versionRegexp.test('unrecognized'),'Spine version regex accepted invalid export');
+
+// Module integration contract: all modules must be present, parse, and execute in order.
+const galleryHTML=read('characters.html'),spineHTML=read('spine.html');
+for(const [html,modules] of [[galleryHTML,galleryModules],[spineHTML,spineModules]]){
+ const loaded=[...html.matchAll(/<script defer src="\.\/([^"?]+)\?v=20261021-modules-v1"><\/script>/g)].map(x=>x[1]);
+ assert.deepEqual(loaded,modules,'Browser modules must preserve the documented dependency order');
+ assert.ok(!/<script>\s*['"]use strict/.test(html),'Page-level application logic must live in feature modules');
+}
+for(const item of ['assets/gallery-base.css','assets/gallery-theme.css','assets/spine-base.css','assets/spine-theme.css']){
+ assert.ok(fs.existsSync(path.join(root,item)),'Extracted CSS is missing: '+item);
+ assert.ok(read(item).length>100,'Extracted CSS is empty: '+item);
+}

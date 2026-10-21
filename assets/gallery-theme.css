@@ -1,0 +1,12 @@
+:root{--bg:#090d19;--panel:#111b30;--panel2:#17233d;--line:#313d62;--accent:#a6a4ff}
+body{background:radial-gradient(ellipse 56% 32% at 85% -5%,#322d62 0,transparent 80%),radial-gradient(ellipse 34% 45% at 4% 70%,#142747 0,transparent 85%),#090d19}
+.sidebar{background:linear-gradient(180deg,#121a30,#0b1222);border-right:1px solid #ffffff18}
+.identity .snow{background:linear-gradient(145deg,#756cff,#c18efa);color:white;box-shadow:0 6px 26px #705bf455}
+.identity .brand{font-size:15px;letter-spacing:.02em}
+.side-link{border-radius:12px;transition:.2s}
+.side-link.active{background:linear-gradient(100deg,#6557bc55,#26365e);border-color:#8079cc88}
+.hero{border-radius:24px;background:linear-gradient(115deg,#2c2958,#152544 60%,#131d33);border:1px solid #8884e536;box-shadow:0 20px 65px #05081655}
+.hero h1{letter-spacing:.01em}
+.top{background:#0b1120a8;backdrop-filter:blur(15px)}
+.btn{transition:transform .2s,border-color .2s,background .2s}
+.btn:hover{transform:translateY(-2px);border-color:#a4a0f5}

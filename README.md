@@ -7,6 +7,10 @@
 - **动态立绘**：https://tyqittle.github.io/anime-character-archive/spine.html
 - **GitHub 仓库**：https://github.com/tyqittle/anime-character-archive
 
+## 功能模块化（2026-10-21）
+
+图鉴与动态剧场的业务 JS 已分别拆到 `assets/js/gallery/`、`assets/js/spine/`，原页面的大段内联 CSS 同时移入 `assets/gallery-*.css`、`assets/spine-*.css`。页面保留 HTML 和有序 `defer` 脚本依赖，部署仍为 GitHub Pages，无新增构建步骤。完整架构、各模块职责和测试规范见 [架构文档](./docs/ARCHITECTURE.md)。
+
 ## 项目结构
 
 | 路径 | 用途 |
