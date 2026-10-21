@@ -35,7 +35,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-abeikelongbi_3_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-adaerbote_2",
@@ -66,7 +68,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-adaerbote_3.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-aerbien_3",
@@ -240,7 +244,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-ailunsamuna_2_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-ailunsamuna_3",
@@ -302,7 +308,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-aimierbeierding_3_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-aimudeng_2",
@@ -332,7 +340,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-aimudeng_2_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-aisaikesi_4",
@@ -378,7 +388,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-ankeleiqi_2_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-ankeleiqi_3",
@@ -534,7 +546,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-beianpudunii_2.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-beierfasite_2",
@@ -580,7 +594,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-beikaluolaina_2_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-beilaosenlin_2",
@@ -819,7 +835,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-chaijun_4_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-chaijun_5",
@@ -914,7 +932,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-dafeng_2_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-dafeng_3",
@@ -1023,7 +1043,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-daofeng_5_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-dewenjun_2",
@@ -1102,7 +1124,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-dulianglai_2.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-dunkeerke_2",
@@ -1148,7 +1172,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-edu_3_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-edu_4",
@@ -1513,7 +1539,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-jialisuoniye_3_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-jialisuoniye_4",
@@ -1561,7 +1589,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-jianwu_2.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-jianye_2",
@@ -1591,7 +1621,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-jianye_2_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-jianye_3",
@@ -1955,7 +1987,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-lafeier_2.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-lafeiii_3",
@@ -1969,7 +2003,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-lafeiii_3.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-leigensibao_2",
@@ -2062,7 +2098,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-linuo_3_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-lisailiu_2",
@@ -2124,7 +2162,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-longfeng_2_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-longwu_2",
@@ -2234,7 +2274,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-maliluosi_3_doa.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-masaina_2",
@@ -2328,7 +2370,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-mojiaduoer_3.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-nabulesi_2",
@@ -2360,7 +2404,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-naximofu_2.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-nengdai_2",
@@ -2454,7 +2500,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-ougen_6_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-ougen_8",
@@ -2659,7 +2707,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-qiye_7_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-qiye_9",
@@ -2722,7 +2772,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-rangbaer_5.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-shengluyisi_2",
@@ -2753,7 +2805,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-shengluyisi_2_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-shengluyisi_3",
@@ -3102,7 +3156,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-weiyan_4_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-weiyan_6",
@@ -3309,7 +3365,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-xinnong_3_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-xinnong_4",
@@ -3482,7 +3540,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-xukufu_3_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-yanusi_3",
@@ -3684,7 +3744,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-z23_hx.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-z46_2",
@@ -3714,7 +3776,9 @@
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-z46_3.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-z46_4",
