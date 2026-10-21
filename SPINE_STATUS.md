@@ -37,3 +37,12 @@
 - **为美好的世界献上祝福！Fantastic Days**：导入126套 Spine 3.8.95 JSON 骨骼战斗动画，覆盖67个角色名称；资源来自 HaiKonofanDesu/konofan-assets-jp-sortet 固定提交 869daaf357ba3622b4a792350b258499cdb78468，索引另有完整图集路径。这是**战斗小人动画**，不是全身原画立绘。
 - 播放器新增 3.8 JSON 骨骼加载分支（源文件扩展名 txt），并保留原本 3.8/4.x 骨骼版本自动识别。
 - 新索引与真实预览是两项独立验证。自动渲染只为当前模型生成专属 WebP 和 SHA-256 记录，失败项不能用其他角色/皮肤图片代替；原始文件仍从外部源站下载。
+
+## 碧蓝航线 Cubism Live2D 扩容（2026-10-21）
+
+- 现有动态剧场新增了“碧蓝航线（Live2D 动态皮肤）”分类，单独使用 `azurlane-stage.html` 的 Cubism 引擎，无须整页重载，也不会干扰 Spine 版本切换。
+- 来自 Chaoray/AzurLane-Live2D-Viewer（提交 `88cb6e56a0ad472fe7e546509f096545d2bbc5b9`）的目录经 Git 树校验，**178/178** 含有对应皮肤的 `model3.json` 和 `moc3` 文件。模型记录见 `data/live2d-azurlane.json`。
+- **153 套静态缩略图**使用上游相同皮肤编号的 shipmodels 文件，不是动态帧截图；其余 25 套不借用不同皮肤的图，显示占位图。
+- 资源使用源站 CDN 按需加载，未将第三方模型的 moc3/贴图复制到 GitHub；站内已有的其他游戏 Spine 内容保持原样。
+- 实际播放结果不能由文件存在推断。已添加 Chromium/WebGL 验证工作流 `.github/workflows/azurlane-live2d-check.yml`，检查选定模型的模型加载、动作切换、缩放及无整页滚动。当前仍须等待线上浏览器测试结论。
+- 动态资源索引总计 1206 条（之前含独立 BD2 的 1028 + 此批 Cubism 的 178）；这个合计**不是**已逐条成功播放的数量。
