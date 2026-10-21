@@ -73,16 +73,28 @@ assert.ok(!spine.characters.some(x=>x.gameId==='bluearchive'&&x.base.includes('/
 assert.equal(new Set(spine.characters.map(x=>x.id)).size,spine.characters.length,'Duplicate Spine IDs');
 const ids=new Set(chars.characters.map(x=>x.id));
 for(const entry of spine.characters) {
-  assert.ok(entry.gameId==='bluearchive'||/^c\d{3}(?:_\d{2})?$/.test(entry.id),'Invalid Spine character ID');
-  assert.ok(entry.gameId==='bluearchive'?/^ba-ch\d+_home$/.test(entry.id):/^c\d{3}(?:_\d{2})?$/.test(entry.id),'Malformed Spine character ID: '+entry.id);
-  assert.ok(['3.8','4.0','4.1','4.2'].includes(entry.spineVersion),'Unknown Spine version');
-  assert.ok(entry.gameId==='bluearchive'?(entry.assetType==='lobby'&&entry.base.includes('/Spine_Lobbies/Spr/')&&entry.base.endsWith('/'+('CH'+entry.id.match(/ch(\d+)_home/)[1]+'_home'))):entry.base.endsWith('/'+entry.id+'_00'),'Unexpected Spine path: '+entry.id);
+  const blue=entry.gameId==='bluearchive';
+  assert.ok(blue || (entry.gameId==='nikke' && /^c\d{3}(?:_\d+|_old)?$/.test(entry.id)), 'Invalid Spine character ID: '+entry.id);
+  assert.ok(blue ? /^ba-ch\d+_home$/.test(entry.id) : /^c\d{3}(?:_\d+|_old)?$/.test(entry.id), 'Malformed Spine ID: '+entry.id);
+  assert.ok(['3.8','4.0','4.1','4.2'].includes(entry.spineVersion), 'Unknown Spine version: '+entry.id);
+  if(blue){
+    assert.ok(entry.assetType==='lobby' && entry.base.includes('/Spine_Lobbies/Spr/') && entry.base.endsWith('/'+('CH'+entry.id.match(/ch(\d+)_home/)[1]+'_home')), 'Invalid Blue Archive lobby resource: '+entry.id);
+  }else{
+    assert.ok(entry.base.includes('/l2d/'+entry.id+'/'), 'NIKKE resource directory mismatch: '+entry.id);
+    assert.ok(entry.base.endsWith('/'+entry.id+'_00') || entry.base.endsWith('/'+entry.id), 'NIKKE Spine basename mismatch: '+entry.id);
+  }
 }
-// Every dynamic preview is a unique frame extracted from that exact character's Spine
-// binary, NOT a reused base character portrait or an unrelated static illustration.
+// No preview may be invented for an indexed but not yet rendered model.
+// For verified frame previews, independently prove correct ID, bytes and hash.
 const previewDigests=new Set();
+let unrendered=0;
 for(const entry of spine.characters){
   const expected='./assets/animation-previews/'+entry.gameId+'-'+entry.id+'.webp';
+  if(!entry.preview) {
+    unrendered++;
+    assert.notEqual(entry.previewSource,'matching-spine-animation-frame', 'Unrendered entry falsely claims a verified preview: '+entry.id);
+    continue;
+  }
   assert.equal(entry.preview,expected,'Wrong character animation preview: '+entry.id);
   assert.equal(entry.previewSource,'matching-spine-animation-frame','Unverified/guessed preview: '+entry.id);
   const bytes=fs.readFileSync(path.join(root,expected));
@@ -92,6 +104,7 @@ for(const entry of spine.characters){
   assert.ok(!previewDigests.has(sha),'Two distinct dynamic character previews share the same image: '+entry.id);
   previewDigests.add(sha);
 }
+console.log('Spine preview audit: '+previewDigests.size+' verified, '+unrendered+' awaiting real rendering.');
 assert.ok(chars.characters.every(x=>x.image.startsWith('./assets/portraits/')),'Not all static images are local');
 const home=read('index.html'),old=read('gallery.html'),page=read('characters.html'),player=read('spine.html');
 assert.ok(home.includes('./characters.html')&&old.includes('./characters.html'),'Old entrypoint no longer redirects');
