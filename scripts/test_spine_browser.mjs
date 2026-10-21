@@ -18,6 +18,17 @@ try{
  await page.goto(url,{waitUntil:'domcontentloaded',timeout:30000});
  await page.waitForFunction(()=>document.querySelectorAll('#characters option').length>5,{timeout:20000});
  console.log('INITIAL_OPTION_COUNT',await page.locator('#characters option').count());
+ // Searching or switching games must reuse already decoded preview elements.
+ const preservedId=await page.evaluate(()=>{
+  const first=document.querySelector('#characterCards .character-card');
+  window.__firstSpineCard=first;
+  return first?.querySelector('small')?.textContent||'';
+ });
+ await page.selectOption('#gameFilter','bluearchive');
+ await page.selectOption('#gameFilter','all');
+ const previewPreserved=await page.evaluate(()=>document.querySelector('#characterCards .character-card')===window.__firstSpineCard);
+ if(!previewPreserved)throw Error('Spine filters rebuilt preview cards instead of reusing them: '+preservedId);
+ console.log('PASSED_SPINE_PREVIEW_NODE_REUSE',preservedId);
  for(const [game,id] of [['nikke','c010_01'],['nikke','c010'],['nikke','c012'],['nikke','c015'],['bluearchive','ba-ch0058_home'],['bluearchive','ba-ch0060_home'],['bluearchive','ba-ch0063_home'],['bluearchive','ba-ch0069_home'],['bluearchive','ba-ch0107_home']]){
   await page.selectOption('#gameFilter',game);
   await page.waitForTimeout(300);
