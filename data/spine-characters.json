@@ -12,7 +12,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c010.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "2020886635153dee30fb0f8b3249b48585b0ebeab6ac58aa1f783e433576e1d0",
+      "previewSha256": "160c956628016cdb78333bde78ee2ae66ebcd5d46f768771081e04ce2bededf2",
       "previewAnimation": "idle",
       "characterName": "Rapi"
     },
@@ -25,7 +25,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c010_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "bd27bb62e208cc837269ef54f1a36fa9cc87ba482b59fa213c6e302c37d0b2d1",
+      "previewSha256": "62edf5b8207caa8a9183676eb9f66a0d524297b3438515070f21e79a65efb052",
       "previewAnimation": "idle",
       "characterName": "Rapi",
       "costumeName": "Rapi_old"
@@ -39,7 +39,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c010_02.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "718190900e240cd7b91880da5d422ee8753e87b7a805a1af9e8b215bb63696a7",
+      "previewSha256": "d735758176ed26b0bb2d9f54c303e848f70dc0fe14feb0a6e31f22019dccba87",
       "previewAnimation": "idle",
       "characterName": "Rapi",
       "costumeName": "Rapi White Promise"
@@ -53,7 +53,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c010_03.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "8269845e66b63b09cb2a3254d6a4dd3ad420333c0e000a23fc121082245d712a",
+      "previewSha256": "c3827f6ffa075afd572e5a53e976bb51cff0c29e63e27090f78b6fe497b7eb44",
       "previewAnimation": "idle",
       "characterName": "Rapi",
       "costumeName": "Rapi Classic Vacation"
@@ -67,7 +67,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c011.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "f1185cc3af1a46877b4082648362af1ad34aed256fb2729447d12266c3697c9d",
+      "previewSha256": "34c8438f0263036c29038fa511b4ccf1416e01d323f39b5c0d407e338c5ba946",
       "previewAnimation": "idle",
       "characterName": "Neon"
     },
@@ -80,7 +80,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c011_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "a2ed611756c6b494f0175dbe64c7842f23ef5663c192cd862728748bdff71765",
+      "previewSha256": "9da8f9c8fbb75d53369ffd24eaf693596568f4bacde492718cef548bc87ca636",
       "previewAnimation": "idle",
       "characterName": "Neon",
       "costumeName": "Neon Bling Bullet"
@@ -94,7 +94,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c012.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "b98721f9c6d2f38b6d77dddf7a2213304cbf5fad307f1d28636944bbd6e7a5f2",
+      "previewSha256": "c695ef3ccd90c979749cd0bde788f01f49c3f8f96cdccd9876a252bcccbc8b75",
       "previewAnimation": "idle",
       "characterName": "Anis"
     },
@@ -107,7 +107,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c013.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "5c689abec5b0a6289eaec48b7133f80d078d06c58e15e35c271359bfe6b66a90",
+      "previewSha256": "b3db902b0d1c8c1a5a5d2f92e2d949ea03ac3fe1cd6350a34c84bee02553501b",
       "previewAnimation": "idle",
       "characterName": "Marian"
     },
@@ -118,7 +118,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c014/c014_00",
       "characterName": "Neon: Blue Ocean",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c014.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "cd3a6cebebe04f9ea363d4f9598839b31724831c9941755986efd154bbfc2cd9",
+      "previewAnimation": "idle"
     },
     {
       "id": "c015",
@@ -129,7 +133,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c015.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "c08273848fc638ee7cc56d84c61b7a3dd73fa5e06699c7cb36ceb65734772f3e",
+      "previewSha256": "77fcddedd912c042bd85eb47cd47b3d5504ffeb63777c5f03f7d6d0d40fc783e",
       "previewAnimation": "idle",
       "characterName": "Anis: Sparkling Summer"
     },
@@ -142,7 +146,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c020.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "d1ae4240e69c27fcf0ebb904a757b5ce03427b729cd3475f2348ce94514aa134",
+      "previewSha256": "aae5020ff5fcd7eae68a33659bcf61dffcf49eff5d4133af395eca0db6522860",
       "previewAnimation": "idle",
       "characterName": "Delta"
     },
@@ -153,7 +157,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c022/c022_00",
       "characterName": "Signal",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c022.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "adb37edeb8e9b17b86e67e79ef43795cb39b9f20b4681a4c96d6e9348be1d837",
+      "previewAnimation": "idle"
     },
     {
       "id": "c022_01",
@@ -164,7 +172,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c022_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "015e5418a89d8b443ba6d5d20d93c9c9b0a67731820e9655a0f82a8d09b58df6",
+      "previewSha256": "67aabcb24b8612a329f885c0feb13334b364ced2d483514fe7d713455c7290f4",
       "previewAnimation": "idle",
       "characterName": "Signal",
       "costumeName": "Signal Dramatic Chocolate"
@@ -176,7 +184,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c030/c030_00",
       "characterName": "Poli",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c030.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "50fb57c78435039db42abc74ae42ef200e87c48d1143b8239b4e9988c379b40c",
+      "previewAnimation": "idle"
     },
     {
       "id": "c030_01",
@@ -187,7 +199,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c030_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "72f7a5f7d24bd10b8eba5ac332b2764af5b766cf29236447c3b182a4211a1747",
+      "previewSha256": "8f499971841583af1c45b4c12e5655b1aa89a50fc1768bb5889dfade8d187b15",
       "previewAnimation": "idle",
       "characterName": "Poli",
       "costumeName": "Poli Sweet Holic"
@@ -199,7 +211,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c032/c032_00",
       "characterName": "Miranda",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c032.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c902ab2ab1f069b071aed10bca7b9ccd598581a9d32a87a24914ae5e55f36632",
+      "previewAnimation": "idle"
     },
     {
       "id": "c040",
@@ -210,7 +226,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c040.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "2ad698a226a87e1226814c494ff089e9de605f3bd4d274e3c7361f20de8368f8",
+      "previewSha256": "ffa2864c0ef20c3cca09238bb2ec88adac330b3ef1f04a233ad9b81b262dd2e8",
       "previewAnimation": "idle",
       "characterName": "D"
     },
@@ -221,7 +237,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c041/c041_00",
       "characterName": "K",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c041.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "51aa016d547784286de24c3445166c3689098416d5ed9dd06a1d53dfc375e2cc",
+      "previewAnimation": "idle"
     },
     {
       "id": "c060",
@@ -232,7 +252,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c060.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "8d75c9dfe3ae8fc41e180bfcc5eba3193491f7a48b76955f58bee902a703ed92",
+      "previewSha256": "e827838a96bb75c684995751d8b3af2b5603082da197eb959ed3e48119678dd6",
       "previewAnimation": "idle",
       "characterName": "Belorta"
     },
@@ -245,7 +265,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c061.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "d86881328dea04657b7053eb34aa3777a57b9f909278f28fa54ea8acf90e3cc3",
+      "previewSha256": "fd7c81dfbdb18bfc6576c558c8daeebf62815e44088723d8a1b0633a8aa5252d",
       "previewAnimation": "idle",
       "characterName": "Mica"
     },
@@ -258,7 +278,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c070.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "2ce706982ab962c0983b9e365ea50a6cd756e9246718a673dae5b84ef546518d",
+      "previewSha256": "6abca060d8529f3fb2c56f5c7f16de3c31403f28caccb9fd5034879496ce5e8f",
       "previewAnimation": "idle",
       "characterName": "Brid"
     },
@@ -271,7 +291,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c070_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "75c2b23085dc0e2084ed402526d2ec6759aadf6de1bfa346ad49089170110303",
+      "previewSha256": "21084e7693055363abaff16baa741b1081292dbef2ff8f3991ca0f00dc2c9e60",
       "previewAnimation": "idle",
       "characterName": "Brid",
       "costumeName": "Brid Model Worker"
@@ -285,7 +305,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c070_02.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "49f774f21aef97a2d2a5684347e86906eaed371be2064f18b31d98f77cd9dbf1",
+      "previewSha256": "a31a71fd74b6f38ddd87aa44f1a3d7e97149ecf08eb87c4134b7b7116fa27185",
       "previewAnimation": "idle",
       "characterName": "Brid",
       "costumeName": "Brid Black Moon"
@@ -297,7 +317,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c071/c071_00",
       "characterName": "Soline",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c071.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9e633a7cc354ac4665c9043d9a5488d8a905260d61c4773dbb231e2b3f8475ea",
+      "previewAnimation": "idle"
     },
     {
       "id": "c072",
@@ -308,7 +332,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c072.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "7de83ef0a0e8e28df4be324fd06877836c976787d1c75f7f96bc3b03f4d0e898",
+      "previewSha256": "3b7050f2715597f9daa2777dd7c6a311a7a99684a61d0c8356045aa8989c51d9",
       "previewAnimation": "idle",
       "characterName": "Diesel"
     },
@@ -321,7 +345,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c072_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "57174482a0fd0f2da4241654fd2b68b84d96a91dfa73335652644ceae9086623",
+      "previewSha256": "29a98908e91322ee0909f1743e792677499ac44c400b06db1830aa9dbdd11126",
       "previewAnimation": "idle",
       "characterName": "Diesel",
       "costumeName": "Diesel Black Sunday"
@@ -335,7 +359,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c080.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "57f4a4939668662fabf8892fbc75b57e00230d7d370cf248d32a9a2d8c7c35aa",
+      "previewSha256": "4169b98555f5704a0f613fab0354f6e3bac4ac96f7ab479c86359f33a1afbbba",
       "previewAnimation": "idle",
       "characterName": "Centi"
     },
@@ -348,7 +372,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c080_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "9e840c9143d39ca53de69cb529f6cfc53e21657f1181d3930dd32800325bef73",
+      "previewSha256": "5a28e155d357eeebf3222d0fe4a1d417f5fb0befce94e12c554fd53d46fc0b91",
       "previewAnimation": "idle",
       "characterName": "Centi",
       "costumeName": "Centi Supreme Holiday"
@@ -362,7 +386,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c082.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "eb52a7cfe4293f8fb63bb7e7bc5174aaad71af4cb4e27ed5bc4a020f37317b45",
+      "previewSha256": "4ab0958ee9cb4025d9920d8ea348175fdbe5e5412536ceacaa124660d6097286",
       "previewAnimation": "idle",
       "characterName": "Liter"
     },
@@ -375,7 +399,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c082_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "11f474ecfe09ace07cdcfe1da98bc0898bac933ef4de13e2805ee9e6b01ffc70",
+      "previewSha256": "e0cff40a78a0795b44629676ef092cc5795e73cefba2a5c736b53ae128435dd0",
       "previewAnimation": "idle",
       "characterName": "Liter",
       "costumeName": "Liter Guardfish"
@@ -389,7 +413,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c090.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "928272bcbdecf52406901adf9c33740151d0dbf8d4b21270681d2d724f6fafa3",
+      "previewSha256": "1983687c0884a1d9ccb0b8937bee9660f896d96bdf8543754b2ec79c8bc73fdf",
       "previewAnimation": "idle",
       "characterName": "Emma"
     },
@@ -402,7 +426,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c090_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "d62368b90430b8d89967f662eb818cbcd25187d0806b242148cbe8fb98531a4f",
+      "previewSha256": "0393a59b82f9856af0ed4f29482cb8aebc04ff3089dcb08df19b8020ede00254",
       "previewAnimation": "idle",
       "characterName": "Emma",
       "costumeName": "Emma Color Me Red"
@@ -416,7 +440,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c090_02.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "8c9f37a16230605d68866b9cd4a85e0e0fd1e2162e48004ac0b49655e6bc8b56",
+      "previewSha256": "f6c7b8a44b6a45109b23892bd286de2dd71cb48bc3474e986f697edf1db7867f",
       "previewAnimation": "idle",
       "characterName": "Emma",
       "costumeName": "Emma Office Therapy"
@@ -428,7 +452,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c091/c091_00",
       "characterName": "Vesti",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c091.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "fcf9c899d3d88b50c3b45442e31cc619c6d62864ba8450959c64c1bc1498c057",
+      "previewAnimation": "idle"
     },
     {
       "id": "c092",
@@ -439,7 +467,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c092.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "f29a6410b8d1d1c9a3bc2b23611ba2720090fd688ce6d3acc08d39caca2c5707",
+      "previewSha256": "2b7581ddfba6cc55434fe15ba5f295d2abe2e29c2a835fa2b6eac0e0fe3ebc4b",
       "previewAnimation": "idle",
       "characterName": "Eunhwa"
     },
@@ -452,7 +480,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c100.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "340d5909c609456486a04532684765a3f432e04ff86d7602e980e3d0bcc45f69",
+      "previewSha256": "775e2eaa8e9a9b3f95565ba6ccc0326f30542e5cf0e4a334f74c91f54f22f9f8",
       "previewAnimation": "idle",
       "characterName": "Laplace"
     },
@@ -465,7 +493,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c101.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "9f306abca5d38a919286391571b93eb00373a7bbf0ee75e3a10751a9e94427ea",
+      "previewSha256": "f3e27fcaf2dedfe4d02a0dc1c7de0b09bcb6098160ad2dc20a7c2ce89c6f7d89",
       "previewAnimation": "idle",
       "characterName": "Drake"
     },
@@ -478,7 +506,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c101_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "ed7f4daa467a621d1fee8f79e2be93bd9947c57050d8b9d1d114495b0b6a929c",
+      "previewSha256": "a6b898bde1188fad4f6a6fc9a3964e7a9ce1609462327ede55ed0e6c8124bad1",
       "previewAnimation": "idle",
       "characterName": "Drake",
       "costumeName": "Drake Villain Racer"
@@ -492,7 +520,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c102.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "71605148d6e006b6b05556bf93f5feb4272e2489939c607d5df9e9506069c833",
+      "previewSha256": "0a776531c25809ac5ccd8cd87f4dbaa3939bb2698718ba5e0c854aa450a635e1",
       "previewAnimation": "idle",
       "characterName": "Maxwell"
     },
@@ -505,7 +533,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c102_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "124d78299a7a2eeb41c9ee0b8d77b334ac84b0a72d51007d0f8b54053dab2f37",
+      "previewSha256": "1055e771c4cfb38d18a2ee546fdbc0dc6f4c02f9c9257b7e1d04fdd25fd4cb85",
       "previewAnimation": "idle",
       "characterName": "Maxwell",
       "costumeName": "Maxwell Mechanic White"
@@ -519,7 +547,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c110.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "5c8a1a1c23a87c9b1529d5b347b6b03cdc8549b5f72a14163e454e41cbd6983f",
+      "previewSha256": "e937d172f6d31741f5e06d98a3763baea4acdebc1d59e960cab3d2d0f4d086e5",
       "previewAnimation": "idle",
       "characterName": "Crow"
     },
@@ -532,7 +560,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c111.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "e7fae7392ffb75495c7b7939301c50767626258769603911b33110665e0c0b16",
+      "previewSha256": "163402c3a2bc00ecb11d3d74d9fd6829b24cd6f9393ac1b6c872503fed68eeb4",
       "previewAnimation": "idle",
       "characterName": "Jackal"
     },
@@ -545,7 +573,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c112.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "c1992026c7326e4f00cd0682b43582004e0f4ad9864297b1c0f2a5032075be75",
+      "previewSha256": "3694ff8b3a79f8cbc08e3a699328373606dfd355295dc1d829f460a22d2a2ea3",
       "previewAnimation": "idle",
       "characterName": "Viper"
     },
@@ -558,7 +586,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c112_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "c68019b6e575f181122691cf9b21100a8d59293c473979007bebe00468699965",
+      "previewSha256": "69be86eb6fd667bc742fc9d4b8ebe7561b850b1494ea669c7ddf068ec629baa6",
       "previewAnimation": "idle",
       "characterName": "Viper",
       "costumeName": "Viper Toxic Rabbit"
@@ -570,7 +598,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c120/c120_00",
       "characterName": "N102",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c120.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "cd423a38bce1a8bd3926163096abbd97e3bdee21759743b23d335043fbc267c7",
+      "previewAnimation": "idle"
     },
     {
       "id": "c121",
@@ -581,7 +613,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c121.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "10745c67fd6101cbcf9eb43bad2f3a6f3780cc29ef3ea8faf96fe11a6481963d",
+      "previewSha256": "2d89c164c5b2b92a9c33c0c16231b98c4f51a34350a34e064c6bd8ea3b0f2823",
       "previewAnimation": "idle",
       "characterName": "Anne: Miracle Fairy"
     },
@@ -594,7 +626,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c130.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "3638612c093282150acc331232e6565b1f4f1f0e82bdc963636b5c720e6da2b7",
+      "previewSha256": "7a2bf9ea507e075d9912ac412130dccb14a5354f0c0cfab6678881403f810a3c",
       "previewAnimation": "idle",
       "characterName": "Mary"
     },
@@ -605,7 +637,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c131/c131_00",
       "characterName": "Pepper",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c131.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "917a51602205c34b613d978d30d5a34f4bdb2f0e0316a5be47fd729b1d62e2f2",
+      "previewAnimation": "idle"
     },
     {
       "id": "c131_01",
@@ -616,7 +652,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c131_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "f98f0709aea05c8daa4869d14e419f4a3bf2d135577791c8d6be78c56970cb7d",
+      "previewSha256": "a21ad73747e9c6a27c73b32c20319c4dc81245fe0fdad52ee9f041bd317b4a3a",
       "previewAnimation": "idle",
       "characterName": "Pepper",
       "costumeName": "Pepper Ocean Vitamin"
@@ -630,7 +666,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c132.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "9d86769c4150f59c8190b46d4c5a49c365b8c3c9f49b2ab08ef0b0d5fbc7c6af",
+      "previewSha256": "47ec89e2eae1f85b3a9d5b5c72b1ad652d0557821323cf48b85ed5dfb8c1c52f",
       "previewAnimation": "idle",
       "characterName": "Mary: Bay Goddess"
     },
@@ -641,7 +677,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c140/c140_00",
       "characterName": "Sugar",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c140.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ce356ee75fad6416dd145ab86f86f165c5dbbd717ba9320b1bc3baa9da4d26d5",
+      "previewAnimation": "idle"
     },
     {
       "id": "c140_01",
@@ -652,7 +692,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c140_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "787ba799d8669b9dfc3297bd334028af995529f27e28f5e3f4d6b6f44f36b6b2",
+      "previewSha256": "b9be442a6c84ceb84846c5ca39acc5533f4767ef3d80f9fe32da2a017a0f4bcd",
       "previewAnimation": "idle",
       "characterName": "Sugar",
       "costumeName": "Sugar Hard-Boiled"
@@ -664,7 +704,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c141/c141_00",
       "characterName": "Milk",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c141.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8dfb19398b189cb1d45cbe0ade2a3d6ec89db8a6f5760ba4209149b7ac98d330",
+      "previewAnimation": "idle"
     },
     {
       "id": "c141_01",
@@ -675,7 +719,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c141_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "792fd9bcb03b66ad411f4c1ed93e12dc3b1f5a033d6cd4ce42dee87367cdc9fc",
+      "previewSha256": "9093ebb64816090325807f84955d9ffc25f2a44fcfdec281881912d3d7d8cdcd",
       "previewAnimation": "idle",
       "characterName": "Milk",
       "costumeName": "Milk Extreme Fighter"
@@ -689,7 +733,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c142.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "c82ef8a8f6834bfd0e944ca4cd1663b863abfdc587078849197864ed091140e8",
+      "previewSha256": "d69873b5b1664967e8e839b80b1a03d0510b0b26d3a66899c779c3d21eeca9fd",
       "previewAnimation": "idle",
       "characterName": "Frima"
     },
@@ -702,7 +746,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c142_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "1741c04e78d34fb422a2d1e4a2d917f9ae63b1c0804bc686d84ba2fe01a7ecec",
+      "previewSha256": "ebc4fb078c5accac8fd1773794c201e05765ea21bc04aa0d57675b7fb75ab987",
       "previewAnimation": "idle",
       "characterName": "Frima",
       "costumeName": "Frima Sea of Sloth"
@@ -716,7 +760,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c150.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "2e70fcb00e7d3b79980bc4961747d1b2f905d24cc61213b2c28f3c2fbd844b79",
+      "previewSha256": "e65a141f170903fd88fc31c21ce133e1343b9054bbbef04617ab07caee1a4ab5",
       "previewAnimation": "idle",
       "characterName": "Julia"
     },
@@ -729,7 +773,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c150_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "b437f4e3fda60c699e67a21d5e1c0aa7f95277c9b38e94d8a760e8b8662d5d48",
+      "previewSha256": "c37e2a51febc7eb2eae9bdcbe925cc7982c9bdcb71935220cb692456241f352e",
       "previewAnimation": "idle",
       "characterName": "Julia",
       "costumeName": "Julia Mild Nocturne"
@@ -741,7 +785,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c160/c160_00",
       "characterName": "Yuni",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c160.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "cdba21502a4ca3fbff6ad262eb4b1eacd65224c979ccea19d6f0d4a295cbe6a4",
+      "previewAnimation": "idle"
     },
     {
       "id": "c160_01",
@@ -752,7 +800,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c160_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "a9a31d1ca704b1a5848cf9528f290f9ed93a0058b4e41529e916065081b7f097",
+      "previewSha256": "41848cbef376e8cdbdc8441f730d65acac3e65dd77a18486c82897b7a111bed6",
       "previewAnimation": "idle",
       "characterName": "Yuni",
       "costumeName": "Yuni Pretty In Pink"
@@ -766,7 +814,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c161.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "de25da72ad1742c305c50309b2fccd47e82fd2881aba3f4c823804c9852a6108",
+      "previewSha256": "6bdc5b5eb76622449729e981118f25dc4235a6509d25b2628b0a79c17bdbe673",
       "previewAnimation": "idle",
       "characterName": "Mihara"
     },
@@ -779,7 +827,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c170.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "6f65b1ce6ede6df7b77b7a01ea167bcc8451c18d854b4f02c3f9a60bddef6f5b",
+      "previewSha256": "c429c291307e274ee899aa7751b9eb97637ed7e0ad080a3d86899de77907222a",
       "previewAnimation": "idle",
       "characterName": "Privaty"
     },
@@ -792,7 +840,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c170_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "4ed36c38adc357732c36463160ba775d2eb614a044aa101f67923d3a859a334a",
+      "previewSha256": "469225571274bdca66f16cdfe58f4e9b1aba6d42e27ca622a4af4aa67a5f63ca",
       "previewAnimation": "idle",
       "characterName": "Privaty",
       "costumeName": "Privaty Government Grunt"
@@ -804,7 +852,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c171/c171_00",
       "characterName": "Yulha",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c171.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "58b40dedefaa2512559c6abdc6e00b23d3ff99dc880b11a80fe187c38e9d7c62",
+      "previewAnimation": "idle"
     },
     {
       "id": "c172",
@@ -815,7 +867,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c172.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "9c9cb3cf902e421ab3de209279386aaf2535c77751a7712ff6366dac2e985e55",
+      "previewSha256": "0af280c4a800e45b5189656a157a420c5a4785bba08248bfce0ea45b26b4841f",
       "previewAnimation": "idle",
       "characterName": "Admi"
     },
@@ -828,7 +880,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c180.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "67d79a3f94daf69ee2839aadb3b67b5cb6e71653f4f2fb70c5be50ff3ecb20ea",
+      "previewSha256": "4ff1fbf364c737866ab732d29aacdeba0843d82c9354e360ecf3230be6bc28ea",
       "previewAnimation": "idle",
       "characterName": "Guillotine"
     },
@@ -841,7 +893,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c181.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "e70f987f964ce35378ad328c3b039812bd5d7a4316979232cc8b08e15d5b007b",
+      "previewSha256": "906a196701505149950bcff42554d0a7b8a19dcc0d7a5b2eb0f1a664fc732ccf",
       "previewAnimation": "idle",
       "characterName": "Maiden"
     },
@@ -854,7 +906,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c181_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "cf0ccb960cbfae6fd75b439ba9c42718e743811826ba8e46c42272c5580accad",
+      "previewSha256": "22c052a81ae5082235bcb875ebaebbcc65597359cc4759a91e0e9f487c4ff9a6",
       "previewAnimation": "idle",
       "characterName": "Maiden",
       "costumeName": "Maiden Covert Nurse"
@@ -868,7 +920,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c190.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "7afd37782a6a9851a2a313fc210bbb69a962e599226e78178c29ecc1c2d08802",
+      "previewSha256": "aee8f30617ee518e30db0ddc0dc411d284dd6955ccb822845728fde0a6bd7f70",
       "previewAnimation": "idle",
       "characterName": "Ludmilla"
     },
@@ -881,7 +933,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c191.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "2b9772e8b85eec9da6401986503c13523c72f809d70131d2fe142335471395bd",
+      "previewSha256": "e8a9459a380b0e6adcf8c5ca44c837e3cf7d8f3c3cd35197355c3c05d2780782",
       "previewAnimation": "idle",
       "characterName": "Alice"
     },
@@ -894,7 +946,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c191_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "d2b8ae4c48e1cfd6703ef5dc358211d3e8b346565f81ff18c656d4bc7c0a90ec",
+      "previewSha256": "e6c889d7603daf86ef738f7153216625b426eef55193f84782178eb03cd7a89d",
       "previewAnimation": "idle",
       "characterName": "Alice",
       "costumeName": "Alice Sweet Home"
@@ -906,7 +958,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c193/c193_00",
       "characterName": "Neve",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c193.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "973f7d6de133c792d957fe2febb58fcee24f50e37a655b345c66c0cd50652cdf",
+      "previewAnimation": "idle"
     },
     {
       "id": "c200",
@@ -917,7 +973,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c200.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "650fa4ba8cd44331227c4220282b3e7e78b7be0086b189b817598263b65f5b55",
+      "previewSha256": "67d1980be03db7b951a953cc6b7426a08dd98f56ef4a525cae9b64e5aa8fb5a4",
       "previewAnimation": "idle",
       "characterName": "Rupee"
     },
@@ -930,7 +986,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c200_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "b18d8e5130cafaf7124bcde51522da2137a0a9c4cc27b12013d5dcb08fc4e71d",
+      "previewSha256": "53700a3615ab996d26120ae8564b1501143f4029dd1d7ca762f70e2cf54f8cdb",
       "previewAnimation": "idle",
       "characterName": "Rupee",
       "costumeName": "Rupee Rabbit Deluxe"
@@ -942,7 +998,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c201/c201_00",
       "characterName": "Yan",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c201.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "681f9da95b31c962667df71a5c045f9eabd22204b54d604b80d94b31686ad92f",
+      "previewAnimation": "idle"
     },
     {
       "id": "c201_01",
@@ -953,7 +1013,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c201_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "7b9ac80ff8480cb50841b5e49b69404663fbe5b50b2f8402e76760052171e667",
+      "previewSha256": "69babff8ad79b2b44f34d8ced79e53fb91716bb1df128b43d8e8a5e94ed16d09",
       "previewAnimation": "idle",
       "characterName": "Yan",
       "costumeName": "Yan Sunrise Market"
@@ -967,7 +1027,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c202.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "894071d76abf6d3db171955dcb262889b1e74e71cd8d19d326df8cc881d5a6cb",
+      "previewSha256": "c96b7b2ab6e8edb73cbbae0b34fd43f442ae6c6bb2748c82792fe2c01d9bf158",
       "previewAnimation": "idle",
       "characterName": "Dolla"
     },
@@ -980,7 +1040,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c202_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "f7120171adeb3e036a9c76c7f5e27bfc06ea4f286bba3d6a69979b21217c835b",
+      "previewSha256": "4b265695478e5ec42095d75f0dcdd33265c938439c700c557443b7447f05bbce",
       "previewAnimation": "idle",
       "characterName": "Dolla",
       "costumeName": "Dolla Dark Rose"
@@ -994,7 +1054,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c203.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "3b6f3919bc16a9785832f11408c898b1652416a06df0316f09b0c3b69f8e12cd",
+      "previewSha256": "ed2db8fc1ce467d5f220d11bf6694ee1cfd4ea25abb1dddb11d08d59782900c0",
       "previewAnimation": "idle",
       "characterName": "Rupee: Winter Shopper"
     },
@@ -1007,7 +1067,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c210.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "8c3012961f4a628ae45fe5a9d24b101228bda9eb3215695ff2b1dc57fd5e66dc",
+      "previewSha256": "33a725ea2e30b10d56181d533d6240cfb94c9116a422da244cf811a5d286dd09",
       "previewAnimation": "idle",
       "characterName": "Exia"
     },
@@ -1020,7 +1080,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c210_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "6a366b788da8338b8b73ef3809b819e68efd312a4067788329bae18612bec83c",
+      "previewSha256": "03c8aa160698568fc53ad1487eec82a86f3ac042c5e7774563a8c189df7bd3fc",
       "previewAnimation": "idle",
       "characterName": "Exia",
       "costumeName": "Exia Joy to the Nerds"
@@ -1032,7 +1092,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c212/c212_00",
       "characterName": "Novel",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c212.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c6bc1fe85d6d5ac985670c65b75aba9e1bab1a04da59845d6a38e39b36a9a3ad",
+      "previewAnimation": "idle"
     },
     {
       "id": "c212_01",
@@ -1043,7 +1107,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c212_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "e7b165a69917e91bbe9e53586e47a746b5d4a35a5088760254ee4599c0b001e6",
+      "previewSha256": "baa6dc2d8287d4d2c7ec99e8a331af880ff3fe0f51d11640633220b8ac6af661",
       "previewAnimation": "idle",
       "characterName": "Novel",
       "costumeName": "Novel Penguin Holmes"
@@ -1057,7 +1121,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c212_02.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "7d4fe34834e8d89afde4413d90d36857e168e64e55bc787d22683861d88eee5f",
+      "previewSha256": "add1f8f78193a353ae66254294b34fe4101f0a1458f35e7bce132683af0d9c3a",
       "previewAnimation": "idle",
       "characterName": "Novel",
       "costumeName": "Novel Detective Nurse"
@@ -1069,7 +1133,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c220/c220_00",
       "characterName": "Snow White",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c220.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "fab1de2a2aa7b4f91c9cf6c6d4a9aff9ef80457ff382204640af8ec32241b840",
+      "previewAnimation": "idle"
     },
     {
       "id": "c221",
@@ -1078,7 +1146,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c221/c221_00",
       "characterName": "Rapunzel",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c221.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "763938e5137ea6ca457d54f08a98b1d9261aabf3e09816954ed24709712b8c64",
+      "previewAnimation": "idle"
     },
     {
       "id": "c222",
@@ -1089,7 +1161,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c222.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "b1c7896e52300c76d0fff8f477c960b1f24d698ef92b837c52e1da84cd091e48",
+      "previewSha256": "ec8aa808975a77f178548f0583418383fc04c5dfdbe2f63ffdb5a3715baa0ef5",
       "previewAnimation": "idle",
       "characterName": "Scarlet"
     },
@@ -1102,7 +1174,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c230.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "21c26fc2156d9957ff8888cd9a5d8697abfd70328caa4ea06ebf53c63e45e6c1",
+      "previewSha256": "0302686c03ca7919e590652787fb620ce55432ef477003abe3619989acfdd566",
       "previewAnimation": "idle",
       "characterName": "Harran"
     },
@@ -1115,7 +1187,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c231.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "1a6818c3a6f17db6006a8f3cc90d85013ab370a54d898105bb19417fc09624bc",
+      "previewSha256": "37ea1bd942e77ed7f84cf9b2f3bf7d123b1a997ef66cd7368757d39363e58671",
       "previewAnimation": "idle",
       "characterName": "Isabel"
     },
@@ -1126,7 +1198,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c232/c232_00",
       "characterName": "Noah",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c232.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "697abd15179ad464e3bdca3316acb72cf8a37229ed4609a0b38982e8e612dcc3",
+      "previewAnimation": "idle"
     },
     {
       "id": "c233",
@@ -1137,7 +1213,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c233.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "ac1bea8c50fbe48f2659a8d5a160a7643d13b1478c46b7b4b5202654463aa55a",
+      "previewSha256": "66c359f0c17004258e751c9a402857328e60d125bf348769c8116eb3443aaacd",
       "previewAnimation": "idle",
       "characterName": "Dorothy"
     },
@@ -1148,7 +1224,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c240/c240_00",
       "characterName": "Rumani",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c240.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "eef9372a7fe6c68bab1861e06e3efe625035bc08639c69fb5af676c8b728dfec",
+      "previewAnimation": "idle"
     },
     {
       "id": "c241",
@@ -1159,7 +1239,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c241.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "a4a3127d24740a2ef8ad7077bb9edb0923bd2a6e0ffe7a0bbe5de95e3e572756",
+      "previewSha256": "0a16f709df66373e08ace9c59632e7370c8326e5afbb84e6124166120bcf436d",
       "previewAnimation": "idle",
       "characterName": "Epinel"
     },
@@ -1172,7 +1252,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c242.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "8e6fcfb52a13474884fff32422d361a4ad03532681b85b8db17d7297b378eabf",
+      "previewSha256": "07431af82e7f173c3696c16696bdfee9501dccfa9b050723d3882e51d784c9b7",
       "previewAnimation": "idle",
       "characterName": "Folkwang"
     },
@@ -1183,7 +1263,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c250/c250_00",
       "characterName": "c250",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c250.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4091c55286cb4f7bfcf5a4190e6fcd523a0856e5e6bc42a4984b03df5b399ec3",
+      "previewAnimation": "idle"
     },
     {
       "id": "c251",
@@ -1192,7 +1276,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c251/c251_00",
       "characterName": "Mass Produced Blue",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c251.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "30db26be6142fa3ba945ebf3155f63c1617acac1e8bcd7f822aa980639045138",
+      "previewAnimation": "idle"
     },
     {
       "id": "c252",
@@ -1201,7 +1289,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c252/c252_00",
       "characterName": "Mass Produced Orange",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c252.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e1cd8e084c51244af186cb928a12197b8cdd3bd9e59df7df6e54f18ad97d9a54",
+      "previewAnimation": "idle"
     },
     {
       "id": "c253",
@@ -1210,7 +1302,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c253/c253_00",
       "characterName": "Mass Produced Green",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c253.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6aa10a3c713725aa0e5e787bab15dfe1e248a50fef293bbbf5c804810905228c",
+      "previewAnimation": "idle"
     },
     {
       "id": "c254",
@@ -1221,7 +1317,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c254.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "a9f6d4d440db889435c49f28e881a5005b4b180df591788c2cec7de23092fb72",
+      "previewSha256": "3fd693c3687f2426c89cb9e5334da9d33b7436d24bb82887746eb0c6ec1aacd9",
       "previewAnimation": "idle",
       "characterName": "Mass Produced Purple"
     },
@@ -1232,7 +1328,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c255/c255_00",
       "characterName": "Mass Produced White",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c255.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b7b75636c35564445eec93045e7dc2f051551dde5a8fcc6a20036a3dc38e5deb",
+      "previewAnimation": "idle"
     },
     {
       "id": "c260",
@@ -1243,7 +1343,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c260.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "b220146b23160815a1dbbec8025e69b5b8a0537d4ab146c372731ef90f314d9e",
+      "previewSha256": "b153e83772e9c5634c9459673ba0a4eda76705b4c84064957c261268d00ed17f",
       "previewAnimation": "idle",
       "characterName": "Modernia"
     },
@@ -1256,7 +1356,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c260_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "28d90353e75a52db024e9c5fc68681b2c8b5772082ac4842c231d102016bcf28",
+      "previewSha256": "6e488b0d4a3c96476f2ca40de3662078292d6b06c72be5804f758071d9a831aa",
       "previewAnimation": "idle",
       "characterName": "Modernia",
       "costumeName": "Modernia First Affection"
@@ -1268,7 +1368,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c261/c261_00",
       "characterName": "Nihilister",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c261.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "99880eb83719c55cb2929cfb800fbe88b949ca3e15fe8af0994e874f71b008ed",
+      "previewAnimation": "idle"
     },
     {
       "id": "c262",
@@ -1277,7 +1381,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c262/c262_00",
       "characterName": "Liberalio",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c262.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "33d34a31746bfaa2b6767ea18dbc6adf5126fa30ec32b8b26827034aad5c822b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c263",
@@ -1286,7 +1394,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c263/c263_00",
       "characterName": "Indivilia",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c263.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1fe27cd9ebf004d9d7a50759951ef8f9ab9b871b4cddcf174e23a6387ae1791a",
+      "previewAnimation": "idle"
     },
     {
       "id": "c270",
@@ -1297,7 +1409,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c270.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "a6b4186244b612ae81df5271a9f375a6b8d5575dfc55f7fd5c998b3836f606fd",
+      "previewSha256": "de4d2dba96e2d6ada668bfec18a3088bf75d1a29ad226d66a63ce414ce7c15de",
       "previewAnimation": "idle",
       "characterName": "Blanc"
     },
@@ -1308,7 +1420,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c271/c271_00",
       "characterName": "Noir",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c271.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6dbc1411ed32b37506c4760572ef2d39c47d929ca24f129618878ca7397cfe2d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c272",
@@ -1317,7 +1433,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c272/c272_00",
       "characterName": "Rouge",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c272.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "cea75cd96c9b32d4066de1fdddcf9de7d2d8f0c3d422029ebd9c44357abf85e6",
+      "previewAnimation": "idle"
     },
     {
       "id": "c280",
@@ -1328,7 +1448,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c280.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "67547b04dad0ea928f7af9fd6d8c346ec0a43a847eebdeaef13a0524ec63a214",
+      "previewSha256": "8e35684e0f91e5ddbf16e9d881c3e5d4f0e2565db95f07208acb02a9555cc203",
       "previewAnimation": "idle",
       "characterName": "Rosanna"
     },
@@ -1339,7 +1459,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c281/c281_00",
       "characterName": "Moran",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c281.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "17686e0a547299220a4c0feafe9797abec738693870621e1cf7e3ede21999208",
+      "previewAnimation": "idle"
     },
     {
       "id": "c282",
@@ -1350,7 +1474,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c282.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "06e15bf9707f23d66121064c2c7a2cae1f5f71115bfb06cc24f9f4447ec3dc73",
+      "previewSha256": "04897a49a1254dcc2d6484835fa779b7888fca6ad41c018d7514da3023a6500e",
       "previewAnimation": "idle",
       "characterName": "Sakura"
     },
@@ -1363,7 +1487,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c282_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "b99bd546045307720d3a3a10501d999f7cbdeaa4033b491fc7609f3a8b26f3a5",
+      "previewSha256": "97c5f9f07988296337ffc1f594eba123c112ebfc456ce51cd87eff6833af7cbe",
       "previewAnimation": "idle",
       "characterName": "Sakura",
       "costumeName": "Sakura Midnight Stealth"
@@ -1375,7 +1499,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c290/c290_00",
       "characterName": "Mana",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c290.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c25db9ab82027b2b81f9e0c8cc0f105601b21ae1d43d78913e0d32b9c23e99f9",
+      "previewAnimation": "idle"
     },
     {
       "id": "c291",
@@ -1386,7 +1514,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c291.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "60e55691951ee01fb1989f9f47761e760f3e964012eb1551cd5398009acc82b9",
+      "previewSha256": "b29189f2e7048d995de349a67ece892ff41ecf2986fd795e5c2111475e8ed6f4",
       "previewAnimation": "idle",
       "characterName": "Ether"
     },
@@ -1397,7 +1525,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c300/c300_00",
       "characterName": "Soldier EG",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c300.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "0a7ec0c304c20cc015a276a9aa43c9b3b206b5eb7d70b5c652a122991c1da5e4",
+      "previewAnimation": "idle"
     },
     {
       "id": "c301",
@@ -1406,7 +1538,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c301/c301_00",
       "characterName": "Soldier FA",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c301.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "75d2804f3c516ee4d4091b2bbdd4d85df61aa1bb7b19841cc835ba4484254558",
+      "previewAnimation": "idle"
     },
     {
       "id": "c302",
@@ -1415,7 +1551,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c302/c302_00",
       "characterName": "Product 08",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c302.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f93bfddab5555c34f84ea6409c15fc8720e098c3081840519209b442769f6209",
+      "previewAnimation": "idle"
     },
     {
       "id": "c303",
@@ -1424,7 +1564,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c303/c303_00",
       "characterName": "Product 12",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c303.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6b732596b690c0f4aed30bd49ddd8e2ef4ed97c7de8d49a48206852df980a71e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c304",
@@ -1435,7 +1579,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c304.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "dd7139f5a4d3c9be43eabdad48bf458559e000aff708d8b2abd66719ccd7087e",
+      "previewSha256": "bc5c1e3d909d818d52254ee5b6af21f58d7a79b8d5a237a701b6f08bf6c759cf",
       "previewAnimation": "idle",
       "characterName": "iDoll Flower"
     },
@@ -1448,7 +1592,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c305.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "45e45840ee8caf5ccb1a5eea9dd5b85fed8033858d0ef537d658df7dfad00d79",
+      "previewSha256": "95ef6dc311e6ee1ce65f5d2893c9c45718e22b452d843312e8c0f5773cc0ab9e",
       "previewAnimation": "idle",
       "characterName": "iDoll Ocean"
     },
@@ -1459,7 +1603,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c306/c306_00",
       "characterName": "Soldier OW",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c306.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f41d9b4c1d260d3c02ccf72378ead9ddef1e46c19c47ac555b9744ba04b811b6",
+      "previewAnimation": "idle"
     },
     {
       "id": "c307",
@@ -1468,7 +1616,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c307/c307_00",
       "characterName": "Product 23",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c307.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "cc7c453f5a6fdb0ab903060b9e5da5f65c2f8d81807e4b54bfb526084e7abb78",
+      "previewAnimation": "idle"
     },
     {
       "id": "c308",
@@ -1479,7 +1631,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c308.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "dd62965150930f35cf9a823a12069b7af55988651c27d26a819f191d00d853c5",
+      "previewSha256": "9e5a21b89815ec76538d0fa65dce1a97df7634ea2c8e7561e45a2a49594aea1c",
       "previewAnimation": "idle",
       "characterName": "iDoll Sun"
     },
@@ -1490,7 +1642,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c310/c310_00",
       "characterName": "Ade",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c310.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8c5fa5b67eb1a63bfa2bd5152a9452c22e671707b134c4aef31cce22e3e95fa1",
+      "previewAnimation": "idle"
     },
     {
       "id": "c311",
@@ -1501,7 +1657,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c311.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "63e936c143220b53f8319984be6d3c60699d166a79231114afed500411175510",
+      "previewSha256": "d27aca05b9c357aea8f875e58bdb41ce8128ca0a0fbd8c069fce00913930ede6",
       "previewAnimation": "idle",
       "characterName": "Cocoa"
     },
@@ -1512,7 +1668,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c312/c312_00",
       "characterName": "Soda",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c312.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "01f782be1ca6e4c5558ab62a4bc60d45867b280459f11ce36d3003faac542231",
+      "previewAnimation": "idle"
     },
     {
       "id": "c321",
@@ -1521,7 +1681,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c321/c321_00",
       "characterName": "Marciana",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c321.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e05dfdcf353402593dbf32fa7711592435630c4aac5a5bdafb7d1f03b0fa43db",
+      "previewAnimation": "idle"
     },
     {
       "id": "c330",
@@ -1530,7 +1694,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c330/c330_00",
       "characterName": "Crown",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c330.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b5cdecaeb8d9795ef80cc4d7870ce59fe7ed17ab2d00e9dc04962c157a7cb0b5",
+      "previewAnimation": "idle"
     },
     {
       "id": "c331",
@@ -1539,7 +1707,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c331/c331_00",
       "characterName": "Chime",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c331.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7decdf58563bf7a21b214d18ab84caeb502b85a8c4dca1ae7e6b413613440aab",
+      "previewAnimation": "idle"
     },
     {
       "id": "c350",
@@ -1550,7 +1722,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c350.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "64831c100bb4182b76fd2a25b496ef5b431b2595e60f44dcc71d3129b2011b13",
+      "previewSha256": "0bf258275c94c48c4e262f0fba9293ed75b8f2c9633448dabfc1f86c327daf4b",
       "previewAnimation": "idle",
       "characterName": "Mast"
     },
@@ -1563,7 +1735,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c350_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "55a2461378f92ed9858767038c3c9ac5aa215ad7851f86afafb1dd151261b834",
+      "previewSha256": "766c52fd7eee24502ba8c45b7b869b4cff9c3a1a0a980088ef5f81d6f822ac0a",
       "previewAnimation": "idle",
       "characterName": "Mast",
       "costumeName": "Mast A Pirate's Heart"
@@ -1576,7 +1748,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c350_old/c350_old_00",
       "characterName": "Mast",
       "costumeName": "Mast_old",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c350_old.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7b45f536390d25b1ba4e92e6528dfc2b9bcfb7e79bb6004dbffbdcc153cc31a3",
+      "previewAnimation": "idle"
     },
     {
       "id": "c351",
@@ -1587,7 +1763,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c351.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "8adffc3d880bf495c55b4510c4d3af65ed1cfb29fb6cf67abf11d64a9759b27b",
+      "previewSha256": "fd5285075ee4dbe58c41d7a578946d44f45bba122090d2fbf5a8df7a12653c90",
       "previewAnimation": "idle",
       "characterName": "Anchor"
     },
@@ -1600,7 +1776,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c352.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "62a5d135861e26824db4bfa6511124ab517efbbedae7918f652636e2bd8007db",
+      "previewSha256": "7feda06a2e5b580f4bdb42959fc85aefd506af4f604ba6dfa181e5e8a3998281",
       "previewAnimation": "idle",
       "characterName": "Helm"
     },
@@ -1613,7 +1789,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c352_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "45a7ad8306ffd4376d568a8dceed47343ab729214d33402b5c551ab14449e835",
+      "previewSha256": "b3ce3e51c7789306569b29c1b0af1e869b51bd1727a2b2ca200cbbd14a9ebf64",
       "previewAnimation": "idle",
       "characterName": "Helm",
       "costumeName": "Helm Chandelier"
@@ -1627,7 +1803,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c353.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "58e0833580dba2c961dda79cae70a37d4d5c47d55a018189bb369c395c8b8a5c",
+      "previewSha256": "e30bb3bc85f694bdfd2aa18b8795c97bd268aaca2b56513ad83d924389894be6",
       "previewAnimation": "idle",
       "characterName": "Helm: Aquamarine"
     },
@@ -1638,7 +1814,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c361/c361_00",
       "characterName": "Kilo",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c361.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c0479d4ad43957f3ecee808d783eaabb46259ce110bb572db6988037fc014e83",
+      "previewAnimation": "idle"
     },
     {
       "id": "c371",
@@ -1647,7 +1827,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c371/c371_00",
       "characterName": "Endless",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c371.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "064cdd9a8a03c7deae4df2dcdb4a58ef8fd147b8d4aa4baaed91eb9b5a267a87",
+      "previewAnimation": "idle"
     },
     {
       "id": "c380",
@@ -1656,7 +1840,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c380/c380_00",
       "characterName": "Nero",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c380.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "126b08f3a926867705944b47379236a07af257fc3ca610d4a7e438c380527c3b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c381",
@@ -1667,7 +1855,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c381.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "0669638cade28ba1eae1a14bd21fd8a700443f7cc8c2f47f2837fde2462e1659",
+      "previewSha256": "88e70e965340fd1de240049b46c847f3b2177eb45593c996b3892a0bcfdf706c",
       "previewAnimation": "idle",
       "characterName": "Biscuit"
     },
@@ -1678,7 +1866,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c382/c382_00",
       "characterName": "Leona",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c382.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "af8c92269076daf7a1756aa11cd6e5fec293c99fa1d2017baa88bd3c8d725ab8",
+      "previewAnimation": "idle"
     },
     {
       "id": "c390",
@@ -1687,7 +1879,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c390/c390_00",
       "characterName": "Zwei",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c390.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "eaa26e6bffee1fccb6d4ee73e1113b96484e8957b27f6786ae8e7ae2e4952701",
+      "previewAnimation": "idle"
     },
     {
       "id": "c391",
@@ -1696,7 +1892,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c391/c391_00",
       "characterName": "Ein",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c391.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "534149e8570236b95fd25a4a799adaff04e9014a7c96d2c7465e2414fc3019e7",
+      "previewAnimation": "idle"
     },
     {
       "id": "c392",
@@ -1705,7 +1905,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c392/c392_00",
       "characterName": "Rei",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c392.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ea301c5e330f3b9d80c359e7517bc73dd4fcf3e2c523036d0d519eb318667f75",
+      "previewAnimation": "idle"
     },
     {
       "id": "c400",
@@ -1716,7 +1920,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c400.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "e4fb7aacdc88d97bdee80e464e3135a6728c0102516bac3f154f419e4a08c646",
+      "previewSha256": "4b1b903c500070b9c2f505b5c0fb7fe510df20f4a8a44a9a62ca287d65e31f3d",
       "previewAnimation": "idle",
       "characterName": "Guilty"
     },
@@ -1727,7 +1931,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c401/c401_00",
       "characterName": "Sin",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c401.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a5b44e491fdd06da0eef3d29d78ede124435262d3d9c697d65d75c1f58f9244b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c402",
@@ -1736,7 +1944,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c402/c402_00",
       "characterName": "Quency",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c402.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "484cf27c788d805e4edb6f034c53ccdeaa82ce3ed046fba06d29d996e670386b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c430",
@@ -1745,7 +1957,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c430/c430_00",
       "characterName": "Noise",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c430.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d092d9fb94e29fafa43e4dcf85a70748e359ab4a62abcb75e2763d6215dd079a",
+      "previewAnimation": "idle"
     },
     {
       "id": "c430_01",
@@ -1756,7 +1972,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c430_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "7fc79d4f8dd70fce907c8bc2a4531d68cb919413c0d9e84e522bf67823bce7a1",
+      "previewSha256": "b74ab8d9ad338154034870527db5118538d4e4852a08624996dedef279ba0054",
       "previewAnimation": "idle",
       "characterName": "Noise",
       "costumeName": "Noise Cherry Blossom Stage"
@@ -1768,7 +1984,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c431/c431_00",
       "characterName": "Volume",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c431.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "71acb35cee68693bf9a7b244c3a5ee5a5e621d060b6f3b6df3cde2cec2360f28",
+      "previewAnimation": "idle"
     },
     {
       "id": "c432",
@@ -1779,7 +1999,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c432.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "1edad69318036c490538adddd9527744a7e872d469ac9efedffbddcfa3c1aaec",
+      "previewSha256": "886400082f52abd244ed206f99c2767da355d8a717c8eb005c885cf499c0bc9e",
       "previewAnimation": "idle",
       "characterName": "Aria"
     },
@@ -1790,7 +2010,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c450/c450_00",
       "characterName": "Naga",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c450.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c956b7932a4e6069ac5dec99d819129490f1a6ddf7db6afbd0b1912731350890",
+      "previewAnimation": "idle"
     },
     {
       "id": "c451",
@@ -1799,7 +2023,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c451/c451_00",
       "characterName": "Tia",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c451.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "847c9f762c1fdd5ed9bfe2da90193ec774e7077b63b56b98c2a2710882b912cf",
+      "previewAnimation": "idle"
     },
     {
       "id": "c470",
@@ -1808,7 +2036,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c470/c470_00",
       "characterName": "Red Hood",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c470.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2d3cf511c3360f04b0050fa7bbfea345158cef51fff177e1c79b3b2911a731c9",
+      "previewAnimation": "idle"
     },
     {
       "id": "c800",
@@ -1819,7 +2051,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c800.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "339342a76fe92e3fb6b3b50e9bf9a2ca886f6476184fab6985dc9d88496fe406",
+      "previewSha256": "71c02659b41be98fe3d842759135afb93c29a47cd47dc0c7e3e3b4023d95dc0c",
       "previewAnimation": "idle",
       "characterName": "Makima"
     },
@@ -1832,7 +2064,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c800_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "4a2c5e064519a3cbb8f558279ddd832fbce4ec5b08770be14731611279aaa354",
+      "previewSha256": "fc8727cfbf92946f86278a9068c2458361d3cceb1091b733da3a2e634853ef45",
       "previewAnimation": "idle",
       "characterName": "Makima",
       "costumeName": "Makima Coat Off"
@@ -1844,7 +2076,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c801/c801_00",
       "characterName": "Power",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c801.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "eb6d797f861c6a2a7d61f37fc5ebe98c1ec54d68ae555cfa6e51df917e7a86ca",
+      "previewAnimation": "idle"
     },
     {
       "id": "c802",
@@ -1855,7 +2091,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c802.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "dc5e3784473a4bdb58634daef02eaad2c36ec73dea53e58d23dc5188645cb161",
+      "previewSha256": "1e68751c1ad8007997fddc5f4ea6886abcfe08afd23158b6ac7f924c1e054da5",
       "previewAnimation": "idle",
       "characterName": "Himeno"
     },
@@ -1866,7 +2102,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c803/c803_00",
       "characterName": "Denji",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c803.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "61babe5f24257b50d216dedb46dd05fec7fcc6a304fdbaaf8cc4ac535e154bca",
+      "previewAnimation": "idle"
     },
     {
       "id": "c803_01",
@@ -1877,7 +2117,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c803_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "523eba68a1453454b224bdc22a01ae89bd06f8fdd889a7a8643d228ba9c3bb9c",
+      "previewSha256": "ecc5905d70cf23c478edd4bc4250971e744ec58ffd691865f36bbc581ce07cf1",
       "previewAnimation": "idle",
       "characterName": "Denji",
       "costumeName": "Denji Chainsaw Man"
@@ -1889,7 +2129,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c804/c804_00",
       "characterName": "Aki Hayakawa",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c804.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "bd1ba95a40510b1b51b9c68dfa36f7a24a09c15ec5b43a7519cdc4099b66dda0",
+      "previewAnimation": "idle"
     },
     {
       "id": "c810",
@@ -1898,7 +2142,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c810/c810_00",
       "characterName": "2B",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c810.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8cf216643dc4e822905973388c230c741ef60ff817bc0c004a92b1e35526814b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c810_01",
@@ -1909,7 +2157,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c810_01.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "8156c5ddbd8a55db024f3f418b9f5fe32fee2fd9bce6c15ef1683290b92049b5",
+      "previewSha256": "29a3d5552858213a50c4bf93ca9bbeb28ad8f9b9b7a23e9e98f6471342bc01ed",
       "previewAnimation": "idle",
       "characterName": "2B",
       "costumeName": "2B Metamorphic Damage"
@@ -1923,7 +2171,7 @@
       "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c810_02.webp",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "ba407e6795e7b5974f522b7d11e1b127561231fa0b7a8f553f947bd669171f50",
+      "previewSha256": "46eea6779f3af1fbafef6467fe2951ac3002a938de634e3f46a69f2897506eaf",
       "previewAnimation": "idle",
       "characterName": "2B",
       "costumeName": "2B YoRHa Uniform 1"
@@ -1935,7 +2183,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c811/c811_00",
       "characterName": "A2",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c811.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6397c287deee00b26b6f21848c91707792f8ec8b0d02fa189f3d8f7b07af0847",
+      "previewAnimation": "idle"
     },
     {
       "id": "c811_01",
@@ -1945,7 +2197,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c811_01/c811_01_00",
       "characterName": "A2",
       "costumeName": "A2 Metamorphic Damage",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c811_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e463c01aa808fb5f915d7c7eb3548e12170951f888fed82687d7001991bf27c0",
+      "previewAnimation": "idle"
     },
     {
       "id": "c811_02",
@@ -1955,7 +2211,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c811_02/c811_02_00",
       "characterName": "A2",
       "costumeName": "A2 YoRHa Uniform Prototype",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c811_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "523dc01dcc5a50090ca9d312934d775dfcdbd2a613aa4d174ac61c28140da57f",
+      "previewAnimation": "idle"
     },
     {
       "id": "c812",
@@ -1964,7 +2224,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c812/c812_00",
       "characterName": "Pascal",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c812.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c05999850230139bdb5f19bfaeb4c67ca0c20921c2ebd0b66769a4582f3954c3",
+      "previewAnimation": "idle"
     },
     {
       "id": "c813",
@@ -1973,7 +2237,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c813/c813_00",
       "characterName": "9S",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c813.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f3b67584fdc88132917babb7a0c380cc503ed8a41977be39dadc6235a74be05e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c900",
@@ -1982,7 +2250,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c900/c900_00",
       "characterName": "Ingrid",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c900.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1e9a178047a132612d08184a214e43b366913cb58e44733b2c68272556727cd1",
+      "previewAnimation": "idle"
     },
     {
       "id": "c901",
@@ -1991,7 +2263,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c901/c901_00",
       "characterName": "Syuen",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c901.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f2f8a54139f99de405607217cfee4a536f8cb57f233b291184f6c4263c5183ac",
+      "previewAnimation": "idle"
     },
     {
       "id": "c902",
@@ -2000,7 +2276,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c902/c902_00",
       "characterName": "Mustang",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c902.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1251a5fe7eb5f96c9cad46c160e850312ff1c54900df792332c89343f1601a40",
+      "previewAnimation": "idle"
     },
     {
       "id": "c903",
@@ -2009,7 +2289,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c903/c903_00",
       "characterName": "Andersen",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c903.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7bb3e0822cad830384ccf61c65a751bb25de73dc5f23e3dd5379c02089136c0b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c903_01",
@@ -2019,7 +2303,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c903_01/c903_01_00",
       "characterName": "Andersen",
       "costumeName": "Andersen Soaked",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c903_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "52afe906af1b433edec0cfe0c2be37585a3c77b919ed7ba8ce3463e5fb80c024",
+      "previewAnimation": "idle"
     },
     {
       "id": "c904",
@@ -2028,7 +2316,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c904/c904_00",
       "characterName": "Enikk",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c904.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "36b3bd678a8994cd35cd560d247fc4afc1470a954e25eb1af6631b46eb21d52e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c905",
@@ -2037,7 +2329,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c905/c905_00",
       "characterName": "Rian",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c905.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e8842eed7fef474cfc52b2cad72a5a5489206c56edd67b697db3347e236cdbaf",
+      "previewAnimation": "idle"
     },
     {
       "id": "c907",
@@ -2046,7 +2342,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c907/c907_00",
       "characterName": "Shifty",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c907.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9072d35d731f8c421784001a91509a655a35bb33cbbb765b4ecbd5fff08c8838",
+      "previewAnimation": "idle"
     },
     {
       "id": "c907_01",
@@ -2056,7 +2356,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c907_01/c907_01_00",
       "characterName": "Shifty",
       "costumeName": "Shifty_old",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c907_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e4b1bdeca514522870825c8c19ab6d184a5dd1c341d7ccdeb7aa39d197df8f53",
+      "previewAnimation": "idle"
     },
     {
       "id": "c908",
@@ -2065,7 +2369,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c908/c908_00",
       "characterName": "Papillon",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c908.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "0e435d98b0437788d2f37ee5a277576106bc81f814ce4cb25abdfc6d34dba5c5",
+      "previewAnimation": "idle"
     },
     {
       "id": "c910",
@@ -2074,7 +2382,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c910/c910_00",
       "characterName": "Hologram",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c910.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "5dccbee4e70769504b55fbc50e624eeea376e01a2747e95b9bd156abe6f6d12b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c911",
@@ -2083,7 +2395,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c911/c911_00",
       "characterName": "Faceless Man",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c911.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ba38f2adbd1686857896aa7f320dc437f08544db6f7a00e6962fb9f1c3a1a10f",
+      "previewAnimation": "idle"
     },
     {
       "id": "c912",
@@ -2092,7 +2408,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c912/c912_00",
       "characterName": "Faceless Woman",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c912.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "eafd3a242bd9c86b7483de851275ade3671fb676dbbcc01d517cbbea73f24a9d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c914",
@@ -2101,7 +2421,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c914/c914_00",
       "characterName": "Burningum",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c914.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "caba927f6c4b53d1a6a6d2f989da54fbab8f162e18e51cc5b4cb3df66a83b002",
+      "previewAnimation": "idle"
     },
     {
       "id": "c916",
@@ -2110,7 +2434,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c916/c916_00",
       "characterName": "Faceless NPC 1",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c916.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "427a7382b43788b83ab91d03a6922b12cd83f9a583a0a81d55ac9bdb1e7e9314",
+      "previewAnimation": "idle"
     },
     {
       "id": "c917",
@@ -2119,7 +2447,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c917/c917_00",
       "characterName": "Faceless NPC 2",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c917.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "742be8c6bc88231e621e22a19bb357c77f43d27cd5e38e5f31967f39b1fa5074",
+      "previewAnimation": "idle"
     },
     {
       "id": "c918",
@@ -2128,7 +2460,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c918/c918_00",
       "characterName": "Faceless NPC 3",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c918.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "fbae49859c1be07c844ff87f2aa2c4f4e18be9cefad59fc98c0572930a536e40",
+      "previewAnimation": "idle"
     },
     {
       "id": "c919",
@@ -2137,7 +2473,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c919/c919_00",
       "characterName": "Faceless NPC 4",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c919.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "16a4c80fad24082287d32edce46b15f1b4f756a5190a699b18fbf4e5cb53db1c",
+      "previewAnimation": "idle"
     },
     {
       "id": "c920",
@@ -2146,7 +2486,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c920/c920_00",
       "characterName": "Faceless NPC 5",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c920.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ae501eaa055e33f31f1097d6afdf86242977d5c39cd96e15cd033870fd400776",
+      "previewAnimation": "idle"
     },
     {
       "id": "c921",
@@ -2155,7 +2499,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c921/c921_00",
       "characterName": "Faceless NPC 6",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c921.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "27d51052f8311b8b925d264edc4aa7a1d2b426d27323f49006bfcb797b51e7de",
+      "previewAnimation": "idle"
     },
     {
       "id": "c922",
@@ -2164,7 +2512,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c922/c922_00",
       "characterName": "Faceless NPC 7",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c922.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4ce635a3689d3f3dab41e2fb55e84ae2c551229e5f49fe6b4980178e1e3994b3",
+      "previewAnimation": "idle"
     },
     {
       "id": "c923",
@@ -2173,7 +2525,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c923/c923_00",
       "characterName": "Faceless NPC 8",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c923.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b80f4f6842cd20c8c71f8f4c36db49662f6de0b211bd570f4a734a296afea47d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c924",
@@ -2182,7 +2538,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c924/c924_00",
       "characterName": "Faceless NPC 9",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c924.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "16d4fbc2e860f04c2d4c6acd92d8238a742854cf1a2ee34148b6dcfcaa3d6b24",
+      "previewAnimation": "idle"
     },
     {
       "id": "c925",
@@ -2191,7 +2551,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c925/c925_00",
       "characterName": "Johan",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c925.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c9148781dab098bcb7789a577da79038139eb2f212f0e0c8a4cb1b8467ea1b93",
+      "previewAnimation": "idle"
     },
     {
       "id": "c928",
@@ -2200,7 +2564,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c928/c928_00",
       "characterName": "Einkk",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c928.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3da922e3b0cef28bc1ed623160c172bec0f6f95fc7a941b3269f18e38fe4ba65",
+      "previewAnimation": "idle"
     },
     {
       "id": "c929",
@@ -2209,7 +2577,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c929/c929_00",
       "characterName": "Cecil",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c929.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "077760c9d01cde8d94a2c35f40e96c101750ef4090325dd3d8e901eb7d2d023d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c930",
@@ -2218,7 +2590,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c930/c930_00",
       "characterName": "Beatrice",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c930.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2aa58a22473a7db4b6ede20688721c968aaa100d8c983d0a6793f42c71eb02c7",
+      "previewAnimation": "idle"
     },
     {
       "id": "c931",
@@ -2227,7 +2603,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c931/c931_00",
       "characterName": "Collection Robot",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c931.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b329f0313cd934145e45fec51774dd66738d5ac45e6e3498c24a72f74621e792",
+      "previewAnimation": "idle"
     },
     {
       "id": "c932",
@@ -2236,7 +2616,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c932/c932_00",
       "characterName": "Bolt Junior",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c932.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8ca42f0f9bb11f1f4396078c3524faee00bce2439ee5dcccada7be1589bcffc4",
+      "previewAnimation": "idle"
     },
     {
       "id": "c933",
@@ -2245,7 +2629,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c933/c933_00",
       "characterName": "Bolt",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c933.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "464045117cb36188ce4df8aa5c36512ea4e3a9562936f53dbb3f437ca472bb4a",
+      "previewAnimation": "idle"
     },
     {
       "id": "c934",
@@ -2254,7 +2642,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c934/c934_00",
       "characterName": "Angelina",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c934.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "92add208a3db9151a95e6ddf6f5ab49a344f129c78c88b8882c82b122ed66f0b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c935",
@@ -2263,7 +2655,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c935/c935_00",
       "characterName": "Joseph",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c935.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ac578ea9a14614628d1bfbff5a628d2c036dbfcb3e59125704665430b1f0627b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c936",
@@ -2272,7 +2668,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c936/c936_00",
       "characterName": "Max",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c936.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a2cdce05b5c07015452c680fc198446a12da385be25a0a978ae20ebeca42f92b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c937",
@@ -2281,7 +2681,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c937/c937_00",
       "characterName": "Booboo",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c937.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8eaf9f65d12ac597d44a782c3013799639fd6c408f10177b12d85e3523a18c69",
+      "previewAnimation": "idle"
     },
     {
       "id": "c939",
@@ -2290,7 +2694,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c939/c939_00",
       "characterName": "Doban",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c939.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d089511a275c80df33090607c19eb377e5e1d849e52feabafde31a6d01b19df1",
+      "previewAnimation": "idle"
     },
     {
       "id": "c940",
@@ -2299,7 +2707,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c940/c940_00",
       "characterName": "E.H.",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c940.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9753b44146d8f853f255c4d4452a868c50da40961f8947410f3c8f830909992a",
+      "previewAnimation": "idle"
     },
     {
       "id": "c941",
@@ -2308,7 +2720,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c941/c941_00",
       "characterName": "Pinne",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c941.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "fbb8677148aa7e4079aeaaf75e9b5abcfd67f8cc992de101ef6b3c3a439149d8",
+      "previewAnimation": "idle"
     },
     {
       "id": "c945",
@@ -2317,7 +2733,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c945/c945_00",
       "characterName": "Katie",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c945.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "10ffa12dabb4e50088b82f9605cdae5be5ae3e105d875ff14529a74b295b1dab",
+      "previewAnimation": "idle"
     },
     {
       "id": "c946",
@@ -2326,7 +2746,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c946/c946_00",
       "characterName": "Ruru",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c946.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d01d59675916d7d4704561570f7da7bc1cfee5c6a1e16ef7f41e25892d33c20b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c962",
@@ -2335,7 +2759,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c962/c962_00",
       "characterName": "Product 12: B-0006",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c962.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "221ce84f8dc93c0453bdae89b93166d9a47fe4e67deb0ea11198fa9b036253ff",
+      "previewAnimation": "idle"
     },
     {
       "id": "c963",
@@ -2344,7 +2772,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c963/c963_00",
       "characterName": "Product 12: C-1002",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c963.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b02c2987181015d859695c271abc017c957cab22015599c6e56d62ddc3949485",
+      "previewAnimation": "idle"
     },
     {
       "id": "c964",
@@ -2353,7 +2785,11 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c964/c964_00",
       "characterName": "Product 12: 6000-D",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c964.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "28d07b75627733e34323f5a3a966190254746f8df0fecdf4285af7688197aa02",
+      "previewAnimation": "idle"
     },
     {
       "id": "ba-ch0058_home",
@@ -2374,7 +2810,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0058_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "774703247c3268712f776f703addad52687c0e9fee2633843f57c4348a7f65e5",
+      "previewSha256": "9f7b0a3b3a7ab5215f00b1c6b7d081745a8497637ee14a4833325d4b294f152e",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2396,7 +2832,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0060_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "023e5decabd9a04a8153d36b4df7cd0ab15025f605b6497ea1c7fea9f34eeeb6",
+      "previewSha256": "0ed1bb9a4d4de5738e5c8ed5284265cf280ead803e4ecb0d90c6b3987ca65ec0",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2418,7 +2854,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0063_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "1869856e7bfea7945b7acee8adb72c0bdaed882083958071b62f449244e6f878",
+      "previewSha256": "3238605dd2a4bfbd7e7f899e1647b7fc17b99f1e5c7cbd8535d194ccd25f0a78",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2440,7 +2876,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0064_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "541d02af556fd4226142ea158ccf8f9fc97272dfe7fa634bf225e1e3cd8fde32",
+      "previewSha256": "5c7b30c894de7428364c37e33aec7fabfa9b795be132939e423844b7c2a4f79a",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2462,7 +2898,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0066_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "4dbfd1b0eefc8b463c996a3d21d5fb3ae196f4f3224fede8ab7ff3711bd086f2",
+      "previewSha256": "91048104dc39fc0c6f4e70e28b9f9050a63b3958fd041a760e7792aba2907cf6",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2484,7 +2920,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0069_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "33a1d359723aa54d0f45460e1b8ddcbe840e407f6b83cbc332a35e0e277a9f7f",
+      "previewSha256": "68a2758326fa41d2da8fe21d72a9ba4252f587fd72fe13f3e6edd4afcf15c260",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2506,7 +2942,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0071_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "c8dc2531ce8e97e2b2a11c437e09d016d9449e6701973302ad4a947975be0ec0",
+      "previewSha256": "a84469e444daf802f12efbce03bf7209687b6c03281f1f0bc3d3a44020bd916b",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2528,7 +2964,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0079_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "2a79a69cc6b3108e11896a56511e00bcc436807aecc6dce3a67c43d8ad5de991",
+      "previewSha256": "5ad90f89d852ca047d31c947684939954e5c5060f9b97ec1a0141c2314e1b0fa",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2550,7 +2986,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0086_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "57d9d40c8952dab98ec332cfb76bb5e703a04bd1e3b91ac2782ab3a2d5f2c240",
+      "previewSha256": "0bd1eb3575e15a31e8d1efc95dbeaed4b905cfef3f240bca25b44e17a0d421a2",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2572,7 +3008,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0087_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "feb0535a2d95ebcda9fa48708eeca8441b6991a36b148fe30163327a898b34ca",
+      "previewSha256": "57d66e850de4c056b8f3a28800d8733b86cf1f173a42fc5ffb49bc938748652c",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2594,7 +3030,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0088_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "6dc3b56630c9bd36cd978c8c09b434a9f483ec3f871cffbb46576ad7e4e94c81",
+      "previewSha256": "f44ea3fdcaf874ab744c2e9acab0f638c0350e3d58b560fb79e835112bd96bcd",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2616,7 +3052,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0089_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "88a825b2441a4ed7bc050b537344f216f4a019a4eeea9843052ee8bf17e9ccce",
+      "previewSha256": "c707222f1cd8566f62f08afec52efdd994064eb57c69398fab4927810e9c6f7b",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2638,7 +3074,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0092_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "dd6193be46e07b2835a4af26e07c7bb35d14fd4747ac5cf9e46ef78af0239bbe",
+      "previewSha256": "2c87180d38660242fb4b4dee00515705f404f8a7265fc8b812feda22a1c454f9",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2660,7 +3096,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0095_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "f348872b79fe9812bcc70057197e9e4a94c885ee9a9edfb47bcc154c27952e16",
+      "previewSha256": "14d74d178fd4571db50dc0d75f1d98c3da33dd9390e0a834f30a3f4da880020e",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2682,7 +3118,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0098_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "8fa00422f9974f45e35ff5868b3cb82651cc54543ccb74bcc4eba48c1f441997",
+      "previewSha256": "f8e337f09796e1dfcf4365488df0855e0a4820065d62ae008ff778629afc38e3",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2704,7 +3140,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0099_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "61ce62d901d09f134c7a4af98942749a5e26a7a2dde6c12a3db3eb3964df7029",
+      "previewSha256": "4e7f1ab8365a89a848b64dbb7653b19a68ba445e49be4ccafb4b66be5468da94",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2726,7 +3162,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0100_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "1a9764c303ffcbd23f84e0115953c63a81f1183180e7cff2ce5592b4958f3249",
+      "previewSha256": "fbe640eab5865e8a5ddfd32cdf52a2955938cf636884d1b0b80d56af572d7e55",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2748,7 +3184,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0101_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "ef334cfab5064e93059bc5eda1e29105bd53899ac3cea0ee1689ce65cfce6da7",
+      "previewSha256": "b41e68521552e8d27e780d1c195a39f8955c19864095a373240564e26f6cc795",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2770,7 +3206,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0107_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "43dce8185783cd69e6c3f9b3016f2aa0d3f6999b0be951f75f2505a1930c217b",
+      "previewSha256": "926922c5be7923b6afe0f06110c389badc6cff6c6341f10cf578c03e6eeded6a",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2792,7 +3228,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0110_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "c76becd4f49f9ef2914a4e420f41bd9313c3f05a05805ff243ba8f49242654a5",
+      "previewSha256": "c333795c4857547536a10fb610efab69f13e108c4e12a8b01fc12a5dad5885a4",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2814,7 +3250,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0114_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "1058bd6d7efe98b68164b67d3f87e0478118dabb440bbf5981064eac2d053779",
+      "previewSha256": "e12743e2929e72b30bbde9f0a5a61d74f5398e18d594481547079bf9bf37bddd",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2836,7 +3272,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0123_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "14104f5296e16a573ce755c7ad4e8fd2aae19d3636e1b0f99e641ee300eeeade",
+      "previewSha256": "3b2d676cf35ace226c9ce5992935208e64bf539f8afc12f19c5cc0faa7fec89a",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2858,7 +3294,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0124_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "2ad40360b514f1f8e1d8e396359f9966c23ba5dfab3d2677b02bc3b6ff257694",
+      "previewSha256": "8c1a4bf25f9d1214189e535f65fcc4e38dd5015a689f0ada0e11b06e1b4e4e5e",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2880,7 +3316,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0135_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "441f32c42f08ca89be061705548cbaaed62a1e61dd4871849029dafe9926a253",
+      "previewSha256": "62f0f2c97afd5eef24c6e45f335690e22faa78c9557d358cb8d432a6878e8669",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2902,7 +3338,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0137_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "b29d781fb049f7a26ee03ae38f7f13c656c8126047b74a9c6bc882ce9aabcff2",
+      "previewSha256": "088b9678516f154b26629ad7e604e502b8aabc5f38a284661d6c7c15fb37aade",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2924,7 +3360,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0138_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "ffa6eff5eed1d2f715b70c644e365157250da20258ba167ea776eba27a56ad06",
+      "previewSha256": "ad7131e8f86e78dfdc49b3d1ea0aa921d24728b4040f20d3f35bd7bd9415bd0f",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2946,7 +3382,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0141_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "f14b687e7b824389b60a8172d9f19526fb247415fa3cf31bf22b14552ace2eb1",
+      "previewSha256": "6b03ed68a952b57dc0e69104c1d8b2f91814822baa2cbac0df897c12be70a34b",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2968,7 +3404,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0144_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "7c52cce9bf624e95f05878f63726bf5d3957586f414ebb3804b3fba95cd55246",
+      "previewSha256": "a1821798359f9b6c45e67c50e3cde6dbd7edebe58b97b362fbc149aacbfccc42",
       "previewAnimation": "Idle_01"
     },
     {
@@ -2990,7 +3426,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0145_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "a0ccd346f2f14447db2a3959d6b7e06b0b37ca8199dee6eea79000eba8f954a8",
+      "previewSha256": "7b6a4250944638b7ef19bd809df3ff9a000518fd758330692d2087df540af3d6",
       "previewAnimation": "Idle_01"
     },
     {
@@ -3012,7 +3448,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0152_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "501bbe01d5e7c600170e64b806833399176d36902ae3846eb7f46c77a0ab57ab",
+      "previewSha256": "68e6add73fa46d40beb68e01b49a4af619bd926a78b952e694d2dd4e5d4d8b35",
       "previewAnimation": "Idle_01"
     },
     {
@@ -3034,7 +3470,7 @@
       "assetType": "lobby",
       "sourceAnimationId": "ba-ch0155_spr",
       "previewSource": "matching-spine-animation-frame",
-      "previewSha256": "786133baa95068aa3373af8c7eb26d1daf0d2d1d68adf12ecf785a562d7ba1a3",
+      "previewSha256": "63e8186ba2cacb170cd367521ffe7a4e02a225b6d19ed23ce77b58e754a0c66d",
       "previewAnimation": "Idle_01"
     }
   ],

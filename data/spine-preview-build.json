@@ -1,9 +1,11 @@
 {
-  "total": 133,
-  "source": "All preview images rendered from the matching animation on the same Spine player",
+  "total": 242,
+  "renderAttempted": 242,
+  "renderSucceeded": 242,
+  "renderFailed": 0,
   "byGame": {
-    "nikke": 102,
+    "nikke": 211,
     "bluearchive": 31
   },
-  "warning": "Pose is a frame of the same animation; costumes and backgrounds may differ from official marketing portraits."
+  "warning": "Index presence does not prove playback. Only real matching animation frames have previews."
 }
