@@ -44,9 +44,9 @@ for report in reports:
 if INCREMENTAL:
     expected = {
         key for key, c in valid.items()
-        if key[0] == 'nikke' and not (
+        if key[0] in ('bluearchive', 'konosuba') and not (
             c.get('previewSource') == 'matching-spine-animation-frame'
-            and c.get('preview') == './assets/animation-previews/nikke-' + c['id'] + '.webp'
+            and c.get('preview') == './assets/animation-previews/' + key[0] + '-' + c['id'] + '.webp'
             and c.get('previewSha256')
         )
     }
@@ -74,7 +74,7 @@ summary = {
     'renderAttempted': len(seen),
     'renderSucceeded': len(good),
     'renderFailed': len(bad),
-    'byGame': {g: sum(c.get('gameId') == g for c in characters) for g in ('nikke', 'bluearchive')},
+    'byGame': {g: sum(c.get('gameId') == g for c in characters) for g in ('nikke', 'bluearchive', 'konosuba')},
     'warning': 'Index presence does not prove playback. Only real matching animation frames have previews.'
 }
 (ROOT / 'data/spine-preview-build.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
