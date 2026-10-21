@@ -45,6 +45,22 @@ assert.ok(chars.characters.every(x=>x.image.startsWith('./assets/portraits/')),'
 const home=read('index.html'),old=read('gallery.html'),page=read('characters.html'),player=read('spine.html');
 assert.ok(home.includes('./characters.html')&&old.includes('./characters.html'),'Old entrypoint no longer redirects');
 assert.ok(page.includes('data/characters.json'),'Character archive not connected');
+const brandName='Anime Character Archive';
+const baseUrl='https://tyqittle.github.io/anime-character-archive/';
+const repoUrl='https://github.com/tyqittle/anime-character-archive';
+const readme=read('README.md');
+const localGuide=read('LOCAL_START.md');
+const probe=read('.github/workflows/pages-live-probe.yml');
+assert.ok(readme.includes(brandName)&&readme.includes(baseUrl)&&readme.includes(repoUrl),'README has outdated repository identity or website URL');
+assert.ok(localGuide.includes(baseUrl),'Local-start guide points to an obsolete GitHub Pages location');
+assert.ok(!readme.includes('tyqittle.github.io/winter-cg-archive')&&!localGuide.includes('tyqittle.github.io/winter-cg-archive'),'Old Pages URL in documentation');
+assert.ok(probe.includes('GITHUB_REPOSITORY#*/'),'Pages probe must adapt automatically to the repository name');
+assert.ok(!probe.includes('/winter-cg-archive/'),'Pages probe still checks the retired repository path');
+assert.ok(page.includes("LEGACY_FAVORITES_STORAGE_KEY='winter-characters-favorites-v1'"),'The legacy localStorage favorites key must remain migratable');
+assert.ok(page.includes("FAVORITES_STORAGE_KEY='anime-character-archive-favorites-v1'"),'Favorite storage key must match the current project');
+assert.ok(page.includes('localStorage.setItem(FAVORITES_STORAGE_KEY,savedFavorites)'),'Existing favorites must survive a repository rename');
+assert.ok(page.includes(brandName)&&player.includes(brandName),'Both gallery and player titles should match the project branding');
+
 const script=page.match(/<script>([\s\S]*?)<\/script>/)?.[1];
 assert.ok(script,'Missing gallery script');
 new Function(script);
