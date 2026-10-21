@@ -20,6 +20,26 @@ try{
   page.on('pageerror',e=>pageErrors.push(e.message));
   await page.goto('http://127.0.0.1:8765/characters.html',{waitUntil:'domcontentloaded',timeout:30000});
   await page.waitForFunction(()=>window.items?.length>=540,{timeout:30000});
+  // Favoriting must retain existing thumbnail elements instead of flashing
+  // the whole grid. Exercise the real delegated click path.
+  const firstFavId=await page.evaluate(()=>{
+    const first=document.querySelector('#gallery .card');
+    window.__galleryFirstImage=first.querySelector('.card-img img');
+    return first.querySelector('button.fav').dataset.id;
+  });
+  await page.locator('#gallery .card .fav').first().click();
+  const stable=await page.evaluate(id=>{
+    const first=document.querySelector('#gallery .card');
+    return {
+      sameImage:first.querySelector('.card-img img')===window.__galleryFirstImage,
+      marked:first.querySelector('button.fav').classList.contains('on'),
+      persisted:window.favorites.has(id),
+    };
+  },firstFavId);
+  if(!stable.sameImage||!stable.marked||!stable.persisted)
+    throw Error('Favorite click rebuilt gallery thumbnails or failed state update: '+JSON.stringify(stable));
+  await page.locator('#gallery .card .fav').first().click();
+  console.log('PASSED_GALLERY_FAVORITE_STABILITY',viewport.width,firstFavId);
   for(const tc of cases){
    await page.evaluate(id=>window.showOne(id),tc.id);
    await page.waitForFunction(id=>{
