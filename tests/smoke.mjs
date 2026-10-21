@@ -211,7 +211,9 @@ assert.ok(!player.includes('if(!(e.ctrlKey||e.metaKey)'),'Wheel zoom must not re
 assert.ok(player.includes('id="animationPicker"')&&player.includes("p.setAnimation(preferred,true)"),'Animation selector missing');
 assert.ok(player.includes('requestFullscreen()')&&player.includes('resetViewerTransform()'),'Fullscreen or fit control missing');
 
-assert.ok(player.includes("next.searchParams.set('id',matching.id)"),'Runtime switching must preserve the selected catalog character');
+assert.ok(player.includes('const runtimeCache=new Map()')&&player.includes('runtimeQueue=Promise.resolve()'),'Cross-version switching must cache isolated Spine engines');
+assert.ok(!player.includes('location.assign(')&&!player.includes('location.reload('),'Switching Spine versions must not reload the page');
+assert.ok(player.includes('history.replaceState('),'Deep links must update without navigation');
 assert.ok(player.includes('rememberSelectedCharacter()'),'Character selection must keep its deep link');
 assert.ok(player.includes('refreshCardSelection();'),'Character list must sync highlighting');
 assert.ok(player.includes('id="loadNotice"')&&player.includes("'loadNotice').hidden=!loading"),'Dynamic stage needs a loading indicator');
