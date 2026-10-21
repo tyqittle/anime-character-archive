@@ -9,6 +9,18 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const chars=JSON.parse(read('data/characters.json'));
 const spine=JSON.parse(read('data/spine-characters.json'));
+const bd2=JSON.parse(read('data/spine-bd2-pilot.json'));
+assert.equal(bd2.characters.length,5,'Expected exactly five BD2 full-body pilot models');
+assert.equal(new Set(bd2.characters.map(c=>c.id)).size,5,'BD2 model ids must be unique');
+for(const c of bd2.characters){
+ assert.equal(c.gameId,'browndust2');
+ assert.equal(c.assetType,'character-full-spine');
+ assert.ok(c.base.includes(bd2.pinnedSourceCommit),'Pilot model URL must be pinned to upstream commit');
+ assert.match(c.base,/\/assets\/spine\/character\/[^/]+\/[^/]+\/char\d{6}$/);
+ assert.ok(!c.preview&&c.previewSource==='not-rendered','Never show unverified or wrong costume previews');
+ assert.equal(c.status,'unverified-playback','Do not predeclare BD2 candidates playable');
+}
+
 
 
 const spineDiagnostics=JSON.parse(read('data/spine-diagnostics.json'));
@@ -154,6 +166,9 @@ assert.ok(viewerCSS.includes('height:var(--viewer-art-height'),'Detail dialog sh
 
 
 assert.ok(player.includes('new spine.SpinePlayer'),'Spine renderer missing');
+assert.ok(player.includes('bd2PilotUrl')&&player.includes('value="browndust2"'),'Missing BD2 pilot loader or game selection');
+assert.ok(player.includes("c.gameId==='bluearchive'||c.gameId==='browndust2'"),'BD2 must not use NIKKE legacy mirror');
+
 assert.ok(player.includes('binaryUrl')&&player.includes('atlasUrl'),'Spine runtime URL fix missing');
 assert.ok(player.includes('indexedDB.open(cacheDB'),'Spine cache missing');
 assert.ok(!/<iframe\b/i.test(player),'Third-party iframe not allowed');
