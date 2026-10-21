@@ -19,11 +19,11 @@ jobs:
     # from the commit that only adds those newly rendered previews.
     if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, '[preview-render]') }}
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 23
     strategy:
       fail-fast: false
       matrix:
-        shard: [0,1,2,3,4,5,6,7,8,9]
+        shard: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -36,7 +36,7 @@ jobs:
           python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/preview-server.log 2>&1 &
           sleep 2
       - name: Render actual matching character animations for shard
-        run: SPINE_PREVIEW_INCREMENTAL=1 node scripts/render_spine_previews.mjs ${{ matrix.shard }} 10
+        run: SPINE_PREVIEW_INCREMENTAL=1 node scripts/render_spine_previews.mjs ${{ matrix.shard }} 40
       - name: Upload preview images and exact ID mapping
         if: always()
         uses: actions/upload-artifact@v4
