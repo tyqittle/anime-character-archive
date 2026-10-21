@@ -77,7 +77,7 @@ body{background:radial-gradient(ellipse 56% 32% at 85% -5%,#322d62 0,transparent
 'use strict';
 var ROOT='https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/';
 var groups=[];
-var gameNames={nikke:'胜利女神：妮姬',bluearchive:'蔚蓝档案',arknights:'明日方舟',genshin:'原神',starrail:'崩坏：星穹铁道',gfl2:'少女前线2：追放',wutheringwaves:'鸣潮'};
+var gameNames={nikke:'胜利女神：妮姬',bluearchive:'蔚蓝档案',arknights:'明日方舟',genshin:'原神',starrail:'崩坏：星穹铁道',gfl2:'少女前线2：追放',wutheringwaves:'鸣潮',zzz:'绝区零',reverse1999:'重返未来：1999'};
 var $=function(id){return document.getElementById(id)};
 var safe=function(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]})};
 var items=[],active=[],selectedGroup='all',activeId='',page=1,mode='all',onlyFav=false;
@@ -224,7 +224,7 @@ document.addEventListener('keydown',function(e){if(!$('viewer').open)return;if(e
 var searchDelay=null;
 ['query','rarityFilter','kindFilter','sort'].forEach(function(id){$(id).addEventListener(id==='query'?'input':'change',function(){page=1;if(id==='query'){clearTimeout(searchDelay);searchDelay=setTimeout(function(){render()},140)}else{clearTimeout(searchDelay);render()}})});
 $('gameFilter').addEventListener('change',function(){selectedGroup=this.value==='all'?'all':'game:'+this.value;page=1;render();updateGroupNav()});
-fetch('./data/characters.json?v=uniform-20261021-v2',{cache:'default'}).then(function(r){if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(function(db){
+fetch('./data/characters.json?v=two-new-games-20261021',{cache:'default'}).then(function(r){if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(function(db){
  if(!Array.isArray(db.characters))throw Error('索引数据格式错误');
  items=db.characters.filter(function(c){return c&&c.id&&c.gameId&&c.characterKey&&c.kind==='full'&&/^\.\/assets\/portraits\/[a-zA-Z0-9_-]+\.(?:png|webp)$/.test(c.image)});
  $('totalStat').textContent=items.length;
