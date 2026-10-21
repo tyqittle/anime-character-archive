@@ -166,6 +166,11 @@ assert.ok(viewerCSS.includes('height:var(--viewer-art-height'),'Detail dialog sh
 
 
 assert.ok(player.includes('new spine.SpinePlayer'),'Spine renderer missing');
+assert.ok(player.includes('connectCanvasGestures')&&player.includes("canvas.addEventListener('pointermove'"),'Theater lacks dragging');
+assert.ok(player.includes("canvas.addEventListener('wheel'")&&player.includes('adjustViewerZoom'),'Ctrl-wheel zoom missing');
+assert.ok(player.includes('id="animationPicker"')&&player.includes("p.setAnimation(preferred,true)"),'Animation selector missing');
+assert.ok(player.includes('requestFullscreen()')&&player.includes('resetViewerTransform()'),'Fullscreen or fit control missing');
+
 assert.ok(player.includes("next.searchParams.set('id',matching.id)"),'Runtime switching must preserve the selected catalog character');
 assert.ok(player.includes('rememberSelectedCharacter()'),'Character selection must keep its deep link');
 assert.ok(player.includes('refreshCardSelection();'),'Character list must sync highlighting');
