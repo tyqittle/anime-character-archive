@@ -69,7 +69,7 @@ body{background:radial-gradient(ellipse 56% 32% at 85% -5%,#322d62 0,transparent
     <div id="gallery" class="gallery" aria-live="polite"><div class="blank">正在载入角色索引…</div></div>
     <div class="more-row"><button id="more" class="btn" data-action="more" hidden>加载更多角色 ↓</button></div>
   </section>
-  <footer class="footer">次元角色档案馆 · 多游戏角色图鉴。资料来源：<a href="https://github.com/Nikke-db/Nikke-db.github.io" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">Nikke-db 社区档案</a>。本站保存静态立绘，Spine 动态资源仍由外部站点提供；收藏只保存在当前浏览器。人物版权及使用许可需要另行核实。</footer>
+  <footer class="footer">次元角色档案馆 · Anime Character Archive · 多游戏角色图鉴。完整项目见 <a href="https://github.com/tyqittle/anime-character-archive" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">GitHub 仓库</a>。各角色的原始素材来源请查看对应条目；本站保存静态立绘与缩略图，部分 Spine 动态资源依赖第三方来源。收藏仅保存在本浏览器。人物美术版权及使用许可需另行核实。</footer>
 </main>
 </div>
 <dialog id="viewer" aria-label="角色大图浏览"><div class="view-head"><h2 id="viewTitle">查看角色</h2><button class="btn sm" data-action="close">✕ 关闭</button></div><div class="view-body"><div class="view-picture" id="viewPicture"><img id="viewImg" alt=""><div class="view-loading" id="viewLoading" role="status" aria-live="polite"><span class="view-spinner" aria-hidden="true"></span><span>正在加载完整立绘…</span></div><div class="error-note">图片无法加载，请通过「来源文件」访问原页面。</div></div><div class="view-meta" id="viewMeta"></div></div></dialog>
@@ -82,8 +82,18 @@ var $=function(id){return document.getElementById(id)};
 var safe=function(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c]})};
 var items=[],active=[],selectedGroup='all',activeId='',page=1,mode='all',onlyFav=false;
 var groupsReady=false,peopleByGame={},PAGE_SIZE=24;
+var FAVORITES_STORAGE_KEY='anime-character-archive-favorites-v1';
+var LEGACY_FAVORITES_STORAGE_KEY='winter-characters-favorites-v1';
 var favorites=new Set();
-try{favorites=new Set(JSON.parse(localStorage.getItem('winter-characters-favorites-v1')||'[]'))}catch(e){}
+try{
+ // Preserve bookmarks already saved before the repository rename.
+ var savedFavorites=localStorage.getItem(FAVORITES_STORAGE_KEY);
+ if(savedFavorites===null){
+  savedFavorites=localStorage.getItem(LEGACY_FAVORITES_STORAGE_KEY);
+  if(savedFavorites!==null)localStorage.setItem(FAVORITES_STORAGE_KEY,savedFavorites);
+ }
+ favorites=new Set(JSON.parse(savedFavorites||'[]'));
+}catch(e){}
 function iconFor(id){return ROOT+'images/sprite/si_'+id+'_00_s.png'}
 function previewFor(c){var src=c.thumb&&/^\.\/assets\/thumbs\/[a-zA-Z0-9_-]+\.webp$/.test(c.thumb)?c.thumb:c.image;return src===c.thumb?src+'?frame=game-expansion-20261021':src}
 function filterItems(){
@@ -239,7 +249,7 @@ function showOne(id){
  }
 }
 function navigate(step){var i=active.findIndex(function(x){return x.id===activeId});if(i>=0&&active.length)showOne(active[(i+step+active.length)%active.length].id)}
-function remember(){try{localStorage.setItem('winter-characters-favorites-v1',JSON.stringify(Array.from(favorites)))}catch(e){}}
+function remember(){try{localStorage.setItem(FAVORITES_STORAGE_KEY,JSON.stringify(Array.from(favorites)))}catch(e){}}
 document.addEventListener('click',function(e){
  var target=e.target.closest('[data-action]');if(!target)return;
  var action=target.dataset.action,id=target.dataset.id,value=target.dataset.value;
