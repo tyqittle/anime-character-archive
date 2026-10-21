@@ -1,27 +1,40 @@
 #!/usr/bin/env python3
-"""Build lightweight, local WebP thumbnails for the character archive.
+"""Generate consistently framed lightweight character-gallery previews.
 
-Only validated thumbnails are referenced by the catalog. Full-size artwork is
-never overwritten, and is loaded in the browser only in the detail viewer.
-No external runtime image proxy or hotlinks required.
+Every art variant keeps its original full image. The thumbnails are:
+ - alpha-trimmed (eliminates invisible PNG canvas),
+ - centered on a portrait-shaped crop for wide effect/splash artwork,
+ - scaled onto the same 420x560 transparent presentation frame.
+
+A detail click continues to load the UNMODIFIED high-resolution artwork.
 """
 from __future__ import annotations
 
+import hashlib
 import io
 import json
 import os
 import pathlib
 import sys
-from PIL import Image, ImageOps, UnidentifiedImageError
+from PIL import Image, ImageOps
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "data" / "characters.json"
 OUTPUT = ROOT / "assets" / "thumbs"
+STATE = OUTPUT / ".thumb-build-state.json"
+BUILD_VERSION = "uniform-portrait-v2-20261021"
 SIZE = (420, 560)
-QUALITY = 76
+QUALITY = 77
+PAD = 6
 FORCE = os.environ.get("THUMBS_FORCE", "").lower() in {"1", "true", "yes"}
-# Rebuild only the affected game on a focused-art tweak; avoid changing 460 unrelated thumbnails.
 FORCE_GAME = os.environ.get("THUMBS_FORCE_GAME", "").strip().lower()
+
+# Specific splash illustrations whose central effects visually dwarf the person.
+# Preview-only focal hints, never change a stored source image.
+FOCAL_OVERRIDES = {
+    "ak-char_002_amiya-2": (0.52, 0.49, 1.45),
+    "ak-char_1001_amiya2-2": (0.49, 0.52, 1.23),
+}
 
 
 def image_path(image):
@@ -33,97 +46,123 @@ def image_path(image):
     return ROOT / "assets" / "portraits" / name
 
 
-def focus_character_crop(im, game_id):
-    """Crop *only* wide Genshin splash compositions for vertical card previews.
-
-    The source remains unchanged for the modal and download. Genshin's 2:1
-    horizontal gacha artwork is currently letterboxed into a 2:3 vertical
-    gallery card, which makes the person extremely small. The character
-    figures in the curated eight originals sit near the composition centre,
-    so retain full original height and crop symmetric scenery on the sides.
-    This is image *cropping*, not stretching, and is intentionally limited to
-    that game's curated splash sources.
-    """
-    if game_id != "genshin" or im.width / im.height <= 1.15:
+def alpha_trim(im):
+    """Trim transparent margins but do not discard opaque body or costume."""
+    im = ImageOps.exif_transpose(im).convert("RGBA")
+    channel = im.getchannel("A")
+    if channel.getextrema()[0] >= 250:
         return im
-    target_width = round(im.height * 0.75)
-    if target_width >= im.width:
-        return im
-    # Central vertical 3:4 crop, preserving head and feet. Wide fantasy
-    # background effects outside the frame remain in the untouched original.
-    centre_x = im.width // 2
-    x0 = min(max(0, centre_x - target_width // 2), im.width - target_width)
-    return im.crop((x0, 0, x0 + target_width, im.height))
+    # Ignore barely-visible PNG export specks.
+    mask = channel.point(lambda a: 255 if a >= 14 else 0)
+    bbox = mask.getbbox()
+    if bbox is None:
+        raise ValueError("fully transparent artwork")
+    left, top, right, bottom = bbox
+    if right-left < 75 or bottom-top < 100:
+        raise ValueError("artwork occupies almost no area")
+    # A few pixels margin keep hair, weapon and trailing ribbons in the frame.
+    margin = max(4, round(min(im.size) * 0.008))
+    return im.crop((max(0,left-margin),max(0,top-margin),
+                    min(im.width,right+margin),min(im.height,bottom+margin)))
 
 
-def make_thumbnail(original, output, game_id=None):
-    with Image.open(original) as im:
-        im = ImageOps.exif_transpose(im)
-        im.load()
-        if im.width < 100 or im.height < 100:
-            raise ValueError("unexpected source dimensions")
-        im = focus_character_crop(im, game_id)
-        im.thumbnail(SIZE, Image.Resampling.LANCZOS, reducing_gap=2.0)
-        if im.mode not in ("RGB", "RGBA"):
-            im = im.convert("RGBA" if "A" in im.getbands() or "transparency" in im.info else "RGB")
-        buf = io.BytesIO()
-        im.save(buf, "WEBP", quality=QUALITY, method=4)
-        payload = buf.getvalue()
-        if len(payload) < 500:
-            raise ValueError("invalid thumbnail")
-        with Image.open(io.BytesIO(payload)) as verify:
-            verify.verify()
-        output.write_bytes(payload)
-        return len(payload)
+def portrait_focus(im, item_id):
+    """Preview wide scenes at character scale; originals remain uncropped."""
+    width,height=im.size
+    if height == 0:
+        raise ValueError("zero-height artwork")
+    ratio=width/height
+    # Wide action splashes need a portrait focal window, not a tiny letterbox.
+    if ratio > 0.82:
+        target_w = max(2, round(height * 0.76))
+        # Keep entire height and cut only background/effect art to the sides.
+        if target_w < width:
+            cx=FOCAL_OVERRIDES.get(item_id,(.5,.5,1))[0]
+            left=max(0,min(width-target_w,round(width*cx-target_w/2)))
+            im=im.crop((left,0,left+target_w,height))
+    focus_x,focus_y,zoom=FOCAL_OVERRIDES.get(item_id,(.5,.5,1.0))
+    if zoom > 1:
+        nw=max(1,round(im.width/zoom))
+        nh=max(1,round(im.height/zoom))
+        x=max(0,min(im.width-nw,round(im.width*focus_x-nw/2)))
+        y=max(0,min(im.height-nh,round(im.height*focus_y-nh/2)))
+        im=im.crop((x,y,x+nw,y+nh))
+    return im
+
+
+def make_thumbnail(original,output,item_id):
+    with Image.open(original) as src:
+        src.load()
+        if src.width < 160 or src.height < 160:
+            raise ValueError("small or invalid source")
+        im=portrait_focus(alpha_trim(src),item_id)
+        im.thumbnail((SIZE[0]-PAD*2,SIZE[1]-PAD*2),
+                     Image.Resampling.LANCZOS,reducing_gap=2.0)
+        frame=Image.new("RGBA",SIZE,(0,0,0,0))
+        frame.alpha_composite(im,((SIZE[0]-im.width)//2,(SIZE[1]-im.height)//2))
+        buf=io.BytesIO()
+        frame.save(buf,"WEBP",quality=QUALITY,method=4)
+        data=buf.getvalue()
+        if len(data) < 500:raise ValueError("invalid thumbnail")
+        with Image.open(io.BytesIO(data)) as check:
+            check.verify()
+        output.write_bytes(data)
+        return len(data)
 
 
 def main():
-    catalog = json.loads(CATALOG.read_text(encoding="utf-8"))
-    OUTPUT.mkdir(parents=True, exist_ok=True)
-    built = 0
-    found = 0
-    failed = []
-    old_total = 0
-    new_total = 0
-    seen = set()
-    for char in catalog.get("characters", []):
-        source = image_path(char.get("image"))
+    catalog=json.loads(CATALOG.read_text(encoding="utf8"))
+    OUTPUT.mkdir(parents=True,exist_ok=True)
+    try: state=json.loads(STATE.read_text(encoding="utf8"))
+    except (FileNotFoundError,ValueError):state={}
+    state_is_current=state.get("version")==BUILD_VERSION
+    cached=state.get("files",{}) if state_is_current else {}
+    new_state={}
+    built=0;kept=0;failed=[];original_bytes=0;thumbnail_bytes=0
+    for character in catalog.get("characters",[]):
+        source=image_path(character.get("image"))
         if source is None or not source.is_file():
-            char.pop("thumb", None)
-            failed.append((char.get("id"), "source missing or invalid"))
+            character.pop("thumb",None)
+            failed.append((character.get("id"),"source missing"))
             continue
-        relative_thumb = "./assets/thumbs/" + source.stem + ".webp"
-        output = OUTPUT / (source.stem + ".webp")
-        old_total += source.stat().st_size
-        refresh = FORCE or FORCE_GAME == str(char.get("gameId", "")).lower()
-        if not refresh and output.is_file() and output.stat().st_size >= 500:
-            found += 1
+        name=source.stem+".webp"
+        out=OUTPUT/name
+        original_bytes+=source.stat().st_size
+        # Hash source bytes so an updated full-resolution portrait invalidates
+        # the preview even if its filename stays unchanged.
+        digest=hashlib.sha256(source.read_bytes()).hexdigest()[:20]
+        valid=(not FORCE and FORCE_GAME!=character.get("gameId","").lower()
+               and state_is_current and cached.get(name)==digest
+               and out.is_file() and out.stat().st_size>=500)
+        if valid:
+            kept+=1
         else:
             try:
-                new_len = make_thumbnail(source, output, char.get("gameId"))
-                built += 1
-                if built % 30 == 0:
-                    print("Generated", built, "thumbnails", flush=True)
+                make_thumbnail(source,out,character.get("id",""))
+                built+=1
+                if built%40==0:print("GENERATED",built,flush=True)
             except Exception as exc:
-                char.pop("thumb", None)
-                failed.append((char.get("id"), str(exc)))
-                print("SKIP", char.get("id"), str(exc)[:160], flush=True)
+                character.pop("thumb",None)
+                failed.append((character.get("id"),str(exc)))
+                print("THUMBNAIL_FAILED",character.get("id"),str(exc),flush=True)
                 continue
-        char["thumb"] = relative_thumb
-        new_total += output.stat().st_size
-        seen.add(relative_thumb)
-    new_index = json.dumps(catalog, ensure_ascii=False, indent=2) + "\n"
-    if CATALOG.read_text(encoding="utf-8") != new_index:
-        CATALOG.write_text(new_index, encoding="utf-8")
-    print("SUMMARY entries",len(catalog.get("characters", [])),"thumbnails",len(seen),
-          "built",built,"cached",found,"failed",len(failed), flush=True)
-    print("Original bytes",old_total,"thumbnail bytes",new_total,
-          "ratio",round(new_total/max(old_total,1)*100,2),"%", flush=True)
+        character["thumb"]="./assets/thumbs/"+name
+        new_state[name]=digest
+        thumbnail_bytes+=out.stat().st_size
+    index_json=json.dumps(catalog,ensure_ascii=False,indent=2)+"\n"
+    if CATALOG.read_text(encoding="utf8")!=index_json:
+        CATALOG.write_text(index_json,encoding="utf8")
+    STATE.write_text(json.dumps({"version":BUILD_VERSION,"files":new_state},
+                                 indent=1,ensure_ascii=False)+"\n",encoding="utf8")
+    print("SUMMARY total",len(catalog.get("characters",[])),
+          "generated",built,"cached",kept,"failed",len(failed),
+          "thumb_MB",round(thumbnail_bytes/1048576,2),
+          "original_MB",round(original_bytes/1048576,2),flush=True)
     if failed:
-        print("FAILED ITEMS",failed[:30],flush=True)
-    if not seen:
-        print("No thumbnails available",file=sys.stderr)
+        print("FAILED",failed[:40],flush=True)
+    if len(new_state)<300:
+        print("Too few valid thumbnails",file=sys.stderr)
         raise SystemExit(1)
 
-if __name__ == "__main__":
+if __name__=="__main__":
     main()
