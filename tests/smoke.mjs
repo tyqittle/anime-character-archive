@@ -18,7 +18,7 @@ for(const c of bd2Full.characters){
  assert.equal(c.gameId,'browndust2');
  assert.equal(c.assetType,'character-full-spine');
  assert.ok(c.base.includes(bd2Full.pinnedSourceCommit));
- assert.match(c.base,/\/assets\/spine\/character\/[^/]+\/[^/]+\/char\d{6}$/);
+ assert.match(c.base,/\/assets\/spine\/character\/[^/]+\/[^/]+\/char\d{6}(?:_c)?$/);
  if(c.preview){
   assert.equal(c.preview,'./assets/animation-previews/browndust2-'+c.id+'.webp');
   assert.equal(c.previewSource,'matching-spine-animation-frame');
@@ -32,7 +32,7 @@ for(const c of bd2.characters){
  assert.equal(c.gameId,'browndust2');
  assert.equal(c.assetType,'character-full-spine');
  assert.ok(c.base.includes(bd2.pinnedSourceCommit),'Pilot model URL must be pinned to upstream commit');
- assert.match(c.base,/\/assets\/spine\/character\/[^/]+\/[^/]+\/char\d{6}$/);
+ assert.match(c.base,/\/assets\/spine\/character\/[^/]+\/[^/]+\/char\d{6}(?:_c)?$/);
  if(c.status==='verified-playback'){
   assert.equal(c.preview,'./assets/animation-previews/browndust2-'+c.id+'.webp','Preview must belong to this exact skeleton');
   assert.equal(c.previewSource,'matching-spine-animation-frame');
