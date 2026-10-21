@@ -1,4 +1,5 @@
 // Sharded real-browser capture: successful, nonblank model screenshots only.
+// Rebuild missing exact-model preview frames after 2026-10-22 catalog/UI fixes.
 // Usage: node scripts/capture_newgame_previews.mjs SHARD SHARDS
 import fs from 'node:fs';
 import path from 'node:path';
