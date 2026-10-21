@@ -19,7 +19,7 @@ from PIL import Image, ImageOps, UnidentifiedImageError
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 INDEX = ROOT / "data" / "characters.json"
 DEST = ROOT / "assets" / "portraits"
-UA = {"User-Agent": "Mozilla/5.0 (compatible; WinterCharacterArchive/1.0)", "Accept": "image/avif,image/webp,image/png,image/*;q=0.8"}
+UA = {"User-Agent": "Mozilla/5.0 (compatible; AnimeCharacterArchive/1.0)", "Accept": "image/avif,image/webp,image/png,image/*;q=0.8"}
 HOYO = "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/"
 WUWA = "https://raw.githubusercontent.com/TomyJan/WutheringWaves-UIResources/3.7/UIResources/UiLuckdraw/Image/"
 
