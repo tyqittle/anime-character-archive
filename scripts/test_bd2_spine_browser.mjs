@@ -41,6 +41,15 @@ try{
    await page.locator('#resetView').click();
    const reset=await canvas.evaluate(c=>c.style.transform);
    if(!reset.includes('scale(1)'))throw Error('Reset-view button failed: '+reset);
+   // Real wheel input, no keyboard modifier; it must change the actual art.
+   await canvas.hover();
+   await page.mouse.wheel(0,-250);
+   await page.waitForFunction(()=>viewZoom>1.1,null,{timeout:5000});
+   const wheelZoom=await canvas.evaluate(c=>c.style.transform);
+   if(!wheelZoom.includes('scale('))throw Error('Wheel did not transform the canvas: '+wheelZoom);
+   await page.mouse.wheel(0,250);
+   await page.waitForFunction(()=>viewZoom<1.1,null,{timeout:5000});
+   await page.locator('#resetView').click();
    await canvas.evaluate(c=>{
     c.dispatchEvent(new PointerEvent('pointerdown',{pointerId:71,pointerType:'mouse',button:0,clientX:100,clientY:100,bubbles:true}));
     c.dispatchEvent(new PointerEvent('pointermove',{pointerId:71,pointerType:'mouse',button:0,clientX:136,clientY:121,bubbles:true}));

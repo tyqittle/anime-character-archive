@@ -49,7 +49,7 @@
 
 ### 动态立绘播放器：观赏模式（2026-10-21）
 
-参考 [Spine 官方 Web Player](https://esotericsoftware.com/spine-player)、[Spine Viewer（PixiJS）](https://github.com/sksketer/Spine-Viewer) 和 [BD2-L2D-Viewer](https://github.com/Jelosus2/BD2-L2D-Viewer) 的交互方式，增强站内播放器，而非搬运第三方网站：保留 Spine 官方骨骼渲染，但关闭内置底部播放控制栏；选择角色卡片或下拉框条目即可自动播放，上方动作、缩放和全屏功能保留；同时提供顶部的动作快速切换、一键适应画面、50%～350% 缩放、鼠标和触屏拖拽、移动端双指缩放及舞台全屏。普通页面滚轮仍用于滚动，需按 Ctrl/⌘ 配合滚轮进行缩放；双击画面可重置。
+参考 [Spine 官方 Web Player](https://esotericsoftware.com/spine-player)、[Spine Viewer（PixiJS）](https://github.com/sksketer/Spine-Viewer) 和 [BD2-L2D-Viewer](https://github.com/Jelosus2/BD2-L2D-Viewer) 的交互方式，增强站内播放器，而非搬运第三方网站：保留 Spine 官方骨骼渲染，但关闭内置底部播放控制栏；选择角色卡片或下拉框条目即可自动播放，上方动作、缩放和全屏功能保留；同时提供顶部的动作快速切换、一键适应画面、50%～350% 缩放、鼠标和触屏拖拽、移动端双指缩放及舞台全屏。鼠标在角色画面上时直接滚轮即可放大缩小（无需 Ctrl/⌘），在画面外仍然正常滚动网页；双击画面可重置。
 
 画面缩放与移动仅调整 Canvas 在浏览器中的显示层，不篡改骨骼坐标、Atlas UV 或播放器原生的动画自动适配。Spine 3.8 与 4.x 的不兼容版本切换仍须重载页面，但选中角色和链接状态会保留。角色资源仍在用户播放时从第三方源按需加载，不能将加载索引数量等同于已验证成功播放的动画数量。
 

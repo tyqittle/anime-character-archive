@@ -58,7 +58,7 @@ footer{padding:24px;text-align:center;color:#92a8bb;font-size:12px}
  </div>
 </div>
 <div id="player"><div id="placeholder">请点击角色卡片或从下拉框选中角色。<br>选中后将自动播放动态立绘。</div></div><div id="loadNotice" hidden aria-hidden="true"><span class="load-spinner"></span><span id="loadNoticeText">正在加载动画…</span></div>
-<p class="stage-hint">拖动画面移动 · Ctrl / ⌘ + 滚轮缩放 · 双击还原 · 手机双指缩放</p>
+<p class="stage-hint">鼠标在人物画面上直接滚轮缩放 · 拖动平移 · 双击还原 · 手机双指缩放</p>
 <div id="status" role="status" aria-live="polite">选择角色即可自动播放。</div></section>
 </div>
 <footer>Spine 运行时 © Esoteric Software · 游戏角色及其素材版权归各自权利人。仅用于个人研究和获授权的资源播放。</footer>
@@ -103,13 +103,29 @@ function connectCanvasGestures(activePlayer){
  const finish=e=>{pointers.delete(e.pointerId);if(pointers.size<2)pinchOrigin=0};
  canvas.addEventListener('pointerup',finish);
  canvas.addEventListener('pointercancel',finish);
- canvas.addEventListener('wheel',e=>{
-  if(!(e.ctrlKey||e.metaKey)||activePlayer!==player)return;
-  e.preventDefault();adjustViewerZoom(e.deltaY<0?1.12:1/1.12);
- },{passive:false});
  canvas.addEventListener('dblclick',()=>{if(activePlayer===player)resetViewerTransform()});
  syncViewTransform();
 }
+// Handle native wheel events on the persistent stage (not per-character
+// canvases). Zoom directly without requiring a Ctrl or Meta modifier.
+$('player').addEventListener('wheel',e=>{
+ if(!player?.canvas||!Number.isFinite(e.deltaY)||e.deltaY===0)return;
+ e.preventDefault();
+ e.stopPropagation();
+ const dy=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?$('player').clientHeight:1);
+ const oldZoom=viewZoom;
+ const nextZoom=clampViewZoom(oldZoom*Math.exp(-dy*0.0015));
+ if(nextZoom===oldZoom)return;
+ // Zoom about the pointer, rather than pulling the character offscreen.
+ const bounds=$('player').getBoundingClientRect();
+ const x=e.clientX-(bounds.left+bounds.width/2);
+ const y=e.clientY-(bounds.top+bounds.height/2);
+ const ratio=nextZoom/oldZoom;
+ viewOffsetX=x-(x-viewOffsetX)*ratio;
+ viewOffsetY=y-(y-viewOffsetY)*ratio;
+ viewZoom=nextZoom;
+ syncViewTransform();
+},{passive:false,capture:true});
 $('zoomIn').addEventListener('click',()=>adjustViewerZoom(1.2));
 $('zoomOut').addEventListener('click',()=>adjustViewerZoom(1/1.2));
 $('resetView').addEventListener('click',resetViewerTransform);
