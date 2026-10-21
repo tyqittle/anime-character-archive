@@ -16,8 +16,9 @@ if len(valid) != len(characters):
     raise RuntimeError('Duplicate catalog game/id pairs')
 
 reports = sorted(DIRECTORY.glob('preview-mapping-*.json'))
-if len(reports) != 10:
-    raise RuntimeError(f'Expected 10 render shard reports, got {len(reports)}')
+expected_shards = 40 if INCREMENTAL else 10
+if len(reports) != expected_shards:
+    raise RuntimeError(f'Expected {expected_shards} render shard reports, got {len(reports)}')
 seen, good, bad = set(), {}, []
 for report in reports:
     content = json.loads(report.read_text(encoding='utf-8'))
