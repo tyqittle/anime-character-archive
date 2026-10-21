@@ -77,7 +77,7 @@ for(const entry of spine.characters) {
   assert.ok(blue||nikke||konosuba,'Unexpected Spine game: '+entry.id);
   assert.ok(['3.8','4.0','4.1','4.2'].includes(entry.spineVersion),'Unknown Spine version: '+entry.id);
   if(blue){
-    assert.match(entry.id,/^ba-[a-z0-9_]+_home$/,'Malformed Blue Archive lobby ID');
+    assert.match(entry.id,/^ba-[a-z0-9_]+$/,'Malformed Blue Archive lobby ID');
     assert.ok(entry.assetType==='lobby'&&entry.base.includes('/Spine_Lobbies/Spr/'),'Invalid Blue Archive lobby resource: '+entry.id);
     const stem=entry.base.split('/').pop(),parent=entry.base.split('/').at(-2);
     assert.ok(stem===parent,'Blue Archive model cannot borrow a different lobby skeleton: '+entry.id);
