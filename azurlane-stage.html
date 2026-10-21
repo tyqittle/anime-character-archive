@@ -63,7 +63,7 @@ async function load(name,id,modelUrl){
   next=PIXI.live2d.Live2DModel.fromSync(url);
   if(!next||!next.once)throw Error('Live2D 模型加载器未初始化');
   await new Promise((resolve,reject)=>{
-   const timer=setTimeout(()=>reject(Error('模型加载超时（45 秒）')),45000);
+   const timer=setTimeout(()=>reject(Error('模型加载超时（90 秒）')),90000);
    next.once('load',()=>{clearTimeout(timer);resolve()});
    next.once('error',e=>{clearTimeout(timer);reject(e instanceof Error?e:Error(String(e)))});
   });
