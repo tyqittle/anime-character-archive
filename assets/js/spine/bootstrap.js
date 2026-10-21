@@ -41,6 +41,7 @@
     }}
    }catch(e){console.warn('新游戏动态目录暂不可用',e)}
   }
+  allCharacters=uniqueAnimationEntries(allCharacters);
   refreshCharacters();
   const requested=params.get('id');if(requested&&allCharacters.some(x=>x.id===requested&&true)){const hit=allCharacters.find(x=>x.id===requested);$('gameFilter').value=hit.gameId||'nikke';refreshCharacters();$('characters').value=requested;refreshCardSelection();}
   status('已载入 '+allCharacters.length+' 条动画索引。按游戏、角色、服装筛选，点击即播放；不会一次下载全部模型。');
