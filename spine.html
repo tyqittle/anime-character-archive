@@ -25,7 +25,7 @@ hr{border:0;border-top:1px solid #ffffff23;margin:21px 0}
 #fileList{font-size:12px;color:#b7cce0;overflow-wrap:anywhere}
 footer{padding:24px;text-align:center;color:#92a8bb;font-size:12px}
 @media(max-width:850px){.wrap{grid-template-columns:1fr;padding:12px}.side{order:2}.stage{order:1}#player{height:65vh;min-height:340px}}
-.character-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-height:440px;overflow:auto;margin:12px 0;padding-right:4px}.character-card{display:flex;flex-direction:column;align-items:center;gap:5px;background:#18283e;border:1px solid #40516b;border-radius:12px;padding:7px;cursor:pointer;color:#fff;text-align:center;min-width:0}.character-card:hover,.character-card.active{border-color:#88c9ff;background:#244263}.character-card img{width:100%;height:130px;object-fit:contain;background:#101927;border-radius:7px}.character-card .nm{font-size:12px;overflow-wrap:anywhere}.character-card small{font-size:10px;color:#b4c5d6}.character-card .fallback{display:grid;place-items:center;height:130px;width:100%;font-size:12px;color:#aabacf}.character-card[aria-pressed="true"]{outline:2px solid #8dcfff;outline-offset:1px}</style><style id="archive-refresh">body{background:radial-gradient(ellipse 65% 45% at 70% 0,#292852 0,transparent 80%),#090d19}.sitebar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 22px}.sitebrand{font-size:19px;font-weight:800;color:#e9e5ff;text-decoration:none}.sitebar nav{display:flex;gap:10px}.sitebar nav a{color:#bdc9ec;text-decoration:none;padding:9px 15px;border:1px solid #ffffff24;border-radius:12px}.sitebar nav a.selected{background:#665ac044;border-color:#9690ff;color:#fff}header{background:#10182a9e;border-bottom:1px solid #8a7de52d}.side,.stage{background:#11192c;border-color:#8a85c82c;border-radius:21px}button.primary{background:linear-gradient(110deg,#5d54ad,#3d649c);border-color:#8e8cf5}button:hover{border-color:#aaa0ff}#player{background:radial-gradient(circle,#343558,#0b1020 75%)}</style><link rel="stylesheet" href="./assets/spine-theater-layout.css?v=20261021-theater-v3"></head><body>
+.character-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-height:440px;overflow:auto;margin:12px 0;padding-right:4px}.character-card{display:flex;flex-direction:column;align-items:center;gap:5px;background:#18283e;border:1px solid #40516b;border-radius:12px;padding:7px;cursor:pointer;color:#fff;text-align:center;min-width:0}.character-card:hover,.character-card.active{border-color:#88c9ff;background:#244263}.character-card img{width:100%;height:130px;object-fit:contain;background:#101927;border-radius:7px}.character-card .nm{font-size:12px;overflow-wrap:anywhere}.character-card small{font-size:10px;color:#b4c5d6}.character-card .fallback{display:grid;place-items:center;height:130px;width:100%;font-size:12px;color:#aabacf}.character-card[aria-pressed="true"]{outline:2px solid #8dcfff;outline-offset:1px}</style><style id="archive-refresh">body{background:radial-gradient(ellipse 65% 45% at 70% 0,#292852 0,transparent 80%),#090d19}.sitebar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 22px}.sitebrand{font-size:19px;font-weight:800;color:#e9e5ff;text-decoration:none}.sitebar nav{display:flex;gap:10px}.sitebar nav a{color:#bdc9ec;text-decoration:none;padding:9px 15px;border:1px solid #ffffff24;border-radius:12px}.sitebar nav a.selected{background:#665ac044;border-color:#9690ff;color:#fff}header{background:#10182a9e;border-bottom:1px solid #8a7de52d}.side,.stage{background:#11192c;border-color:#8a85c82c;border-radius:21px}button.primary{background:linear-gradient(110deg,#5d54ad,#3d649c);border-color:#8e8cf5}button:hover{border-color:#aaa0ff}#player{background:radial-gradient(circle,#343558,#0b1020 75%)}</style><link rel="stylesheet" href="./assets/spine-theater-layout.css?v=20261021-thumbnails-v4"></head><body>
 <header><div class="sitebar"><a class="sitebrand" href="./characters.html">✦ 次元角色档案馆</a><nav><a href="./characters.html">角色图鉴</a><a class="selected" href="./spine.html">▶ 动态立绘</a></nav></div><h1>动态立绘剧场</h1><p>选中角色自动播放 Spine 动画，支持切换动作、缩放与全屏观赏。</p></header>
 <div class="wrap">
 <section class="side">
@@ -184,7 +184,12 @@ function refreshCharacters(){
  const game=$('gameFilter').value,query=$('characterSearch').value.toLowerCase().trim();
  const filtered=allCharacters.filter(c=>{const info=charInfo(c);return (game==='all'||(c.gameId||'nikke')===game)&&(!query||[c.id,c.name,info.zh,c.gameId].join(' ').toLowerCase().includes(query))});
  const previously=$('characters').value;
- $('characters').replaceChildren(new Option('请选择角色…',''),...filtered.map(c=>{const info=charInfo(c);return new Option((info.zh&&info.zh!==c.name?info.zh+' · ':'')+c.name+' ('+c.id+')',c.id)}));
+ $('characters').replaceChildren(new Option('请选择角色…',''),...filtered.map(c=>{
+  const info=charInfo(c);
+  const display=c.gameId==='browndust2'?(info.zh||c.name)+' · '+(c.costume||'').replace(/_/g,' ')
+    :(info.zh&&info.zh!==c.name?info.zh+' · ':'')+c.name;
+  return new Option(display,c.id)
+ }));
  if(filtered.some(c=>c.id===previously))$('characters').value=previously;
  const area=$('characterCards'),visibleCards=[];
  for(const c of filtered.slice(0,240)){
@@ -199,8 +204,11 @@ function refreshCharacters(){
     img.title='从当前角色的 Spine 动画直接截取的预览画面';card.append(img);
    }else{const placeholder=document.createElement('div');placeholder.className='fallback';placeholder.textContent=c.gameId==='browndust2'?'真实模型预览待生成':'暂无预览图';card.append(placeholder)}
    const label=document.createElement('span');label.className='nm';
-   label.textContent=info.zh&&info.zh!==c.name?info.zh+' / '+c.name:c.name;card.append(label);
-   const code=document.createElement('small');code.textContent=c.id+(c.versionUnverified?' · 动画待验证':'');card.append(code);
+   label.textContent=c.gameId==='browndust2'?(info.zh||c.name):(info.zh&&info.zh!==c.name?info.zh+' / '+c.name:c.name);
+   card.append(label);
+   const code=document.createElement('small');
+   code.textContent=c.gameId==='browndust2'?(c.costume||'').replace(/_/g,' '):c.id;
+   code.title=c.id;card.append(code);
    card.onclick=()=>{$('characters').value=c.id;$('selectionNote').textContent='已选：'+label.textContent+' · 正在自动播放';refreshCardSelection();rememberSelectedCharacter();playCharacter(c);if(matchMedia('(max-width:850px)').matches)$('player').scrollIntoView({behavior:'smooth',block:'center'});};
    characterCardCache.set(c.id,card);
   }
@@ -208,7 +216,7 @@ function refreshCharacters(){
   visibleCards.push(card);
  }
  area.replaceChildren(...visibleCards);
- $('selectionNote').textContent=filtered.length?'共 '+filtered.length+' 条模型；仅展示角色与服装对应的真实预览。棕色尘埃2为试播候选。':'当前筛选没有匹配的角色。';
+ $('selectionNote').textContent=filtered.length?'共 '+filtered.length+' 套动画 · 点击卡片可直接播放':'当前筛选没有匹配的角色。';
 }
 function refreshCardSelection(){const cards=$('characterCards').querySelectorAll('button');const ids=allCharacters.filter(c=>{const game=$('gameFilter').value,q=$('characterSearch').value.toLowerCase().trim(),info=charInfo(c);return (game==='all'||(c.gameId||'nikke')===game)&&(!q||[c.id,c.name,info.zh,c.gameId].join(' ').toLowerCase().includes(q))}).slice(0,240);cards.forEach((b,i)=>b.setAttribute('aria-pressed',String(ids[i]?.id===$('characters').value)))}
 // Keep a refreshable deep link without re-rendering the gallery or navigating.
@@ -600,7 +608,9 @@ function playPack(pack){
     :'data:text/plain,'+clean;
  }
  if(!setVersion(pack.version,pack.id))return;
- return show({skeleton:pack.skeleton,atlas:pack.atlas,rawDataURIs:pack.rawDataURIs,premultipliedAlpha:!String(pack.id||'').startsWith('bluearchive-')},'动态角色 · '+pack.id)
+ const matching=allCharacters.find(c=>(c.gameId||'nikke')+'-'+c.id===pack.id);
+ const title=matching?((matching.zh?matching.zh+' · ':'')+(matching.gameId==='browndust2'?(matching.costume||matching.name).replace(/_/g,' '):matching.name)):'动态角色 · '+pack.id;
+ return show({skeleton:pack.skeleton,atlas:pack.atlas,rawDataURIs:pack.rawDataURIs,premultipliedAlpha:!String(pack.id||'').startsWith('bluearchive-')},title)
 }
 $('saveLocal').onclick=async()=>{try{status('正在保存到浏览器本地缓存…');const pack=await preparePack(chosenFileList);await dbAction('readwrite',s=>s.put(pack));await refreshSaved();status('已保存 '+pack.id+'。以后可直接从“已保存的本地动画包”加载，无须重新选择素材文件。')}catch(e){status('保存失败：'+e.message,true)}};
 $('savedPacks').onchange=async()=>{

@@ -15,6 +15,18 @@ try{
   if(await page.locator('.advanced-tools').evaluate(el=>el.open))throw Error('Advanced tools are expanded by default');
   await page.selectOption('#gameFilter','browndust2');
   if(await page.locator('#nikke').count())throw Error('Main play button must not exist');
+  const pilotCard=page.locator('#characterCards .character-card').filter({hasText:'戴安娜'});
+  await page.selectOption('#gameFilter','browndust2');
+  await pilotCard.waitFor({timeout:15000});
+  if((await pilotCard.locator('.nm').textContent())!=='戴安娜')throw Error('BD2 card shows bulky unformatted bilingual name');
+  if((await pilotCard.locator('small').textContent()).includes('bd2-char'))throw Error('Raw model ID is cluttering the character card');
+  if(await page.locator('#characterCards img').count()){
+   for(const img of await page.locator('#characterCards img').all()){
+    const valid=await img.evaluate(el=>el.complete&&el.naturalWidth>60);
+    if(!valid)throw Error('Published character preview did not load');
+   }
+  }
+  await page.selectOption('#gameFilter','browndust2');
   if(await page.locator('#playSaved, #local').count())throw Error('Advanced play buttons still exist');
   await page.selectOption('#characters','bd2-char000201');
   const selected=await page.evaluate(()=>({

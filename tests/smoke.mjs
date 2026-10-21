@@ -17,8 +17,15 @@ for(const c of bd2.characters){
  assert.equal(c.assetType,'character-full-spine');
  assert.ok(c.base.includes(bd2.pinnedSourceCommit),'Pilot model URL must be pinned to upstream commit');
  assert.match(c.base,/\/assets\/spine\/character\/[^/]+\/[^/]+\/char\d{6}$/);
- assert.ok(!c.preview&&c.previewSource==='not-rendered','Never show unverified or wrong costume previews');
- assert.equal(c.status,'unverified-playback','Do not predeclare BD2 candidates playable');
+ if(c.status==='verified-playback'){
+  assert.equal(c.preview,'./assets/animation-previews/browndust2-'+c.id+'.webp','Preview must belong to this exact skeleton');
+  assert.equal(c.previewSource,'matching-spine-animation-frame');
+  assert.ok(fs.existsSync(path.join(root,c.preview)),'Missing captured exact-model thumbnail');
+  assert.equal(c.versionUnverified,false);
+ }else{
+  assert.equal(c.status,'unverified-playback');
+  assert.ok(!c.preview&&c.previewSource==='not-rendered','Never show a wrong or unverified thumbnail');
+ }
 }
 
 

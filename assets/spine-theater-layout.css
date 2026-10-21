@@ -52,3 +52,20 @@
 #loadNotice{top:122px}
 @media(max-width:850px){#loadNotice{top:112px}}
 @media(max-width:620px){#loadNotice{top:116px}}
+
+/* Proper portrait thumbnails: portrait first, short name second, no raw IDs. */
+.character-card{gap:5px;justify-content:flex-start;padding:7px}
+.character-card img,.character-card .fallback{
+ width:100%;height:170px;min-height:170px;max-height:170px;
+ object-fit:contain;background:#142238;border-radius:9px;
+}
+.character-card .nm{font-size:13px;font-weight:650;line-height:1.35;
+ display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;
+ line-clamp:2;overflow:hidden;min-height:18px;overflow-wrap:normal}
+.character-card small{font-size:10.5px;line-height:1.3;
+ display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;
+ line-clamp:2;overflow:hidden;overflow-wrap:anywhere}
+.character-card .fallback{font-size:11px;padding:10px}
+@media(min-width:851px){.character-card img,.character-card .fallback{height:170px;min-height:170px;max-height:170px}}
+@media(max-width:850px){.character-card img,.character-card .fallback{height:130px;min-height:130px;max-height:130px}}
+@media(max-width:420px){.character-card img,.character-card .fallback{height:120px;min-height:120px;max-height:120px}}

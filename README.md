@@ -57,7 +57,7 @@
 
 已在动态立绘页面加入「棕色尘埃2（全身模型试播）」分类，首批五套分别来自 Justia / Knight of Blood、Eclipse / Dimension Witch、Dalvi / Bright Moon、Diana / Adventurer of the Unknown、Angelica / The Fallen。源文件位于 [Zormolo/Brown-Dust-2-Assets](https://github.com/Zormolo/Brown-Dust-2-Assets)，来源 URL 固定到上游提交 `94a3ac97b8fab7ee054e0826de7d912de0a233ef`，包含每套一一匹配的 `.skel`、`.atlas`、`.png`；Atlas 贴图引用已经逐一核对。
 
-这五套是独立的**试播候选目录**，没有计入前述133条动态索引；文件存在不代表骨骼渲染已经成功。没有真实模型截图之前，我们不会用其他人物或服装图片冒充对应预览。播放器仅在用户点击后从第三方资源仓库下载必要文件，不再分发原始游戏骨骼或贴图。另有 `.github/workflows/bd2-spine-browser-test.yml` 在 Chromium 中对真实资源做启动与画面变化验证，运行结果及截图请见 GitHub Actions。
+这五套是独立的**骨骼模型目录**；真正的人物预览由 `scripts/generate_bd2_spine_previews.mjs` 在 Chromium 中播放对应动画后截取，写入 `assets/animation-previews/`，不使用其他角色或服装的素材。这五套此前是独立的**试播候选目录**，没有计入前述133条动态索引；文件存在不代表骨骼渲染已经成功。没有真实模型截图之前，我们不会用其他人物或服装图片冒充对应预览。播放器仅在用户点击后从第三方资源仓库下载必要文件，不再分发原始游戏骨骼或贴图。另有 `.github/workflows/bd2-spine-browser-test.yml` 在 Chromium 中对真实资源做启动与画面变化验证，运行结果及截图请见 GitHub Actions。
 
 [更多说明：SPINE_STATUS.md](./SPINE_STATUS.md)
 
