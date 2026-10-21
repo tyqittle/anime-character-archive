@@ -104,7 +104,7 @@ function filterItems(){
  if(onlyFav&&!favorites.has(x.id))return false;
  if(mode!=='all'&&x.kind!==mode)return false;
  if(kind!=='all'&&x.kind!==kind)return false;
- if(rarity!=='all'&&(rarity==='unknown'?(x.rarity!==''):(x.rarity!==rarity)))return false;
+ if(rarity!=='all'&&(rarity==='unknown'?Boolean(String(x.rarity||'').trim()):x.rarity!==rarity))return false;
  return !q||[x.name,x.zh,x.id,x.game,x.characterKey,x.squad,x.manufacturer,x.class,x.rarity].join(' ').toLocaleLowerCase().includes(q);
  });
  var sort=$('sort').value;
