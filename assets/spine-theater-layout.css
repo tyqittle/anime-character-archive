@@ -132,3 +132,8 @@
 /* Portraits are always letterboxed, never cropped; generated portrait thumbnails have their own subject-aware framing. */
 .character-card img{object-fit:contain!important;object-position:50% 50%;flex-shrink:0}
 .character-cards{grid-auto-rows:max-content}
+
+/* Show the correct skin's lightweight preview while its heavy Live2D textures load. */
+#player .azurlane-loading-cover{position:absolute;inset:0;z-index:2;pointer-events:none;display:grid;place-items:center;align-content:center;gap:10px;background:#142238;padding:20px}
+#player .azurlane-loading-cover img{display:block;max-width:95%;max-height:calc(100% - 52px);width:auto;height:auto;object-fit:contain}
+#player .azurlane-loading-caption{font-size:12px;color:#cad8eb;text-align:center;padding:7px 12px;background:#17253acc;border-radius:9px;overflow-wrap:anywhere}

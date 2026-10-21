@@ -546,11 +546,31 @@ function ensureAzurLaneFrame(){
  azurlaneFrame.setAttribute('allow','autoplay');
  $('player').replaceChildren(azurlaneFrame);
 }
+function presentAzurLanePreview(c){
+ const playerNode=$('player');
+ playerNode.querySelector('.azurlane-loading-cover')?.remove();
+ const cover=document.createElement('div');
+ cover.className='azurlane-loading-cover';
+ cover.setAttribute('aria-hidden','true');
+ if(c.preview&&(['upstream-ship-thumbnail','matching-live2d-animation-frame'].includes(c.previewSource))){
+  const img=document.createElement('img');
+  img.src=c.preview;
+  img.alt='';
+  img.decoding='async';
+  cover.append(img);
+ }
+ const note=document.createElement('span');
+ note.className='azurlane-loading-caption';
+ note.textContent='正在载入 '+c.name+' 的动态模型…';
+ cover.append(note);
+ playerNode.append(cover);
+}
 function playAzurLane(c){
  if(azurlaneFrame&&azurlanePlayingId===c.id&&azurlanePending?.id===c.id)return;
  cancelCharacterDownload();
  ensureAzurLaneFrame();
  azurlanePending=c;azurlanePlayingId='';
+ presentAzurLanePreview(c);
  $('title').textContent=c.name;
  $('stageContext').textContent='碧蓝航线 · Cubism Live2D';
  $('animationPicker').disabled=true;
@@ -575,6 +595,7 @@ window.addEventListener('message',event=>{
  }
  if(data.id!==azurlanePending?.id)return;
  if(data.kind==='playing'){
+  $('player').querySelector('.azurlane-loading-cover')?.remove();
   azurlanePlayingId=data.id;
   setViewerToolsEnabled(true);
   const actions=Array.isArray(data.motions)?data.motions.filter(x=>typeof x==='string'):[];

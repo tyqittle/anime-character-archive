@@ -17,6 +17,7 @@ try{
   await page.goto('http://127.0.0.1:8765/spine.html?id='+id,{waitUntil:'domcontentloaded',timeout:30000});
   await page.waitForFunction(id=>document.getElementById('characters')?.value===id, id,{timeout:30000});
   await page.waitForFunction(()=>{const s=document.querySelector('#status')?.textContent||'';return s.startsWith('正在播放：')||s.includes('失败')||s.includes('超时')},{timeout:110000});
+  if(await page.locator('#player .azurlane-loading-cover').count())throw Error('Loading cover was not cleared after model startup: '+id);
   const stage=await page.evaluate(()=>({
    game:document.querySelector('#gameFilter')?.value,
    status:document.querySelector('#status')?.textContent,
