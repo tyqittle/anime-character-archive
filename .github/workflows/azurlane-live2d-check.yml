@@ -1,0 +1,39 @@
+name: Validate Azur Lane Live2D playback
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'azurlane-stage.html'
+      - 'spine.html'
+      - 'data/live2d-azurlane.json'
+      - 'scripts/test_azurlane_live2d_browser.mjs'
+      - '.github/workflows/azurlane-live2d-check.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test-cubism:
+    runs-on: ubuntu-latest
+    timeout-minutes: 9
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser testing dependency
+        run: npm install --no-save --no-package-lock playwright-core@1.56.1
+      - name: Start local archive
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/azurlane-server.log 2>&1 &
+          sleep 2
+      - name: Verify two real Cubism models render, move and switch in same viewer
+        run: node scripts/test_azurlane_live2d_browser.mjs
+      - name: Upload results for investigation
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: azurlane-browser-test
+          path: |
+            /tmp/azurlane-live2d-test-results.json
+            /tmp/azurlane-server.log
+          if-no-files-found: ignore
