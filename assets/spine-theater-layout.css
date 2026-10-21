@@ -45,3 +45,10 @@
 .stage:fullscreen .head,.stage:fullscreen #status{flex:none}
 @media(max-width:620px){.stage-toolbar{padding:9px;gap:8px}.toolbar-main{flex:1 1 100%;min-width:0}.toolbar-view{width:100%;justify-content:center}.stage-toolbar .animation-picker{max-width:none}.stage-toolbar .tool-btn{padding:5px 10px}.stage-hint{font-size:10px}#player{min-height:290px}}
 @media(prefers-reduced-motion:reduce){#player canvas.portrait-canvas{will-change:auto}}
+
+/* The player renders an opaque #142238 canvas; match its surround so panning
+   never exposes an obviously different rectangular backdrop. */
+#player{background:#142238}
+#loadNotice{top:122px}
+@media(max-width:850px){#loadNotice{top:112px}}
+@media(max-width:620px){#loadNotice{top:116px}}
