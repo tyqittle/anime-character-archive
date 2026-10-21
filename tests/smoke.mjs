@@ -126,6 +126,14 @@ function selectRarityTest(rarity){
 assert.deepEqual(selectRarityTest('unknown'),['absent','empty'],'Unmarked rarity must exclude rated entries');
 assert.deepEqual(selectRarityTest('SSR'),['known'],'SSR rarity must exclude unmarked entries');
 new Function(script);
+assert.ok(page.includes('data-action="retry-view"')&&page.includes('viewRetryNonce=Date.now()'),'Failed original image must support retry');
+assert.ok(page.includes("addEventListener('touchstart'")&&page.includes("addEventListener('touchend'"),'Mobile artwork swipe is missing');
+const spineScript=player.match(/<script>([\s\S]*?)<\/script>/)?.[1];
+assert.ok(spineScript,'Spine player script is missing');
+new Function(spineScript);
+assert.ok(player.includes('function cancelCharacterDownload()')&&player.includes('activeCharacterAbort.abort()'),'Stale dynamic downloads must be aborted');
+assert.ok(player.includes('externalSignal.addEventListener')&&player.includes('controller.signal'),'Spine download cancellation signal missing');
+assert.ok(player.includes("$('nikke').disabled=!chosen();"),'Playing a role must not depend on its thumbnail');
 assert.ok(page.includes('function drawGroups()')&&page.includes('game-section')&&page.includes('characterKey'),'Missing dynamic game and character classification');
 assert.ok(page.includes('id="viewLoading"')&&page.includes('class="view-loading"'),'Missing stable modal loading state');
 const showOne=page.slice(page.indexOf('function showOne(id){'),page.indexOf('function navigate(step){'));

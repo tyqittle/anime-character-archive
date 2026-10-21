@@ -72,7 +72,7 @@ body{background:radial-gradient(ellipse 56% 32% at 85% -5%,#322d62 0,transparent
   <footer class="footer">次元角色档案馆 · Anime Character Archive · 多游戏角色图鉴。完整项目见 <a href="https://github.com/tyqittle/anime-character-archive" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">GitHub 仓库</a>。各角色的原始素材来源请查看对应条目；本站保存静态立绘与缩略图，部分 Spine 动态资源依赖第三方来源。收藏仅保存在本浏览器。人物美术版权及使用许可需另行核实。</footer>
 </main>
 </div>
-<dialog id="viewer" aria-label="角色大图浏览"><div class="view-head"><h2 id="viewTitle">查看角色</h2><button class="btn sm" data-action="close">✕ 关闭</button></div><div class="view-body"><div class="view-picture" id="viewPicture"><img id="viewImg" alt=""><div class="view-loading" id="viewLoading" role="status" aria-live="polite"><span class="view-spinner" aria-hidden="true"></span><span>正在加载完整立绘…</span></div><div class="error-note">图片无法加载，请通过「来源文件」访问原页面。</div></div><div class="view-meta" id="viewMeta"></div></div></dialog>
+<dialog id="viewer" aria-label="角色大图浏览"><div class="view-head"><h2 id="viewTitle">查看角色</h2><button class="btn sm" data-action="close">✕ 关闭</button></div><div class="view-body"><div class="view-picture" id="viewPicture"><img id="viewImg" alt=""><div class="view-loading" id="viewLoading" role="status" aria-live="polite"><span class="view-spinner" aria-hidden="true"></span><span>正在加载完整立绘…</span></div><div class="error-note" role="alert"><span>完整立绘加载失败，请检查网络或查看来源。</span><button type="button" class="btn sm" data-action="retry-view">重新加载原图</button></div></div><div class="view-meta" id="viewMeta"></div></div></dialog>
 <script>
 'use strict';
 var ROOT='https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/';
@@ -190,7 +190,7 @@ function render(append){
  $('more').textContent='加载更多角色（'+shown.length+' / '+active.length+'） ↓';
 }
 function startGroup(id){selectedGroup=id;page=1;mode='all';onlyFav=false;$('kindFilter').value='all';render();updateGroupNav();$('explore').scrollIntoView({behavior:'smooth',block:'start'})}
-var viewerLoadToken=0;
+var viewerLoadToken=0,viewRetryNonce=0;
 function sizeViewerFor(c){
  // Original dimensions are saved in the catalog during thumbnail generation;
  // this lets us size the dialog before the full-resolution image downloads.
@@ -239,7 +239,8 @@ function showOne(id){
  };
  // The viewport stays the same size while the ORIGINAL file downloads.
  // Keep it hidden until the full-resolution bitmap has actually decoded.
- img.src=c.image;
+ img.src=c.image+(viewRetryNonce?(c.image.includes('?')?'&':'?')+'retry='+viewRetryNonce:'');
+ viewRetryNonce=0;
  if(typeof img.decode==='function'){
   img.decode().then(function(){finish(img.naturalWidth>0)},function(){finish(false)});
  }else{
@@ -305,6 +306,7 @@ document.addEventListener('click',function(e){
  else if(action==='fav'){if(favorites.has(id))favorites.delete(id);else favorites.add(id);remember();if(onlyFav)render();else syncFavoriteButtons(id)}
  else if(action==='more'){page++;render(true)}
  else if(action==='step')navigate(Number(target.dataset.step));
+ else if(action==='retry-view'&&activeId){viewRetryNonce=Date.now();showOne(activeId)}
  else if(action==='random'){var pool=filterItems();if(pool.length)showOne(pool[Math.floor(Math.random()*pool.length)].id)}
 });
 document.addEventListener('error',function(e){
@@ -319,6 +321,11 @@ window.addEventListener('resize',function(){
  if(c)sizeViewerFor(c);
 });
 document.addEventListener('keydown',function(e){if(!$('viewer').open)return;if(e.key==='ArrowLeft')navigate(-1);if(e.key==='ArrowRight')navigate(1)});
+// Swipe between original artworks on phones, without hijacking vertical gestures.
+var viewTouchStart=null;
+$('viewPicture').addEventListener('touchstart',function(e){viewTouchStart=e.touches.length===1?{x:e.touches[0].clientX,y:e.touches[0].clientY}:null},{passive:true});
+$('viewPicture').addEventListener('touchend',function(e){if(!viewTouchStart||!$('viewer').open||!e.changedTouches.length)return;var dx=e.changedTouches[0].clientX-viewTouchStart.x,dy=e.changedTouches[0].clientY-viewTouchStart.y;viewTouchStart=null;if(Math.abs(dx)>65&&Math.abs(dx)>Math.abs(dy)*1.4)navigate(dx<0?1:-1)},{passive:true});
+$('viewPicture').addEventListener('touchcancel',function(){viewTouchStart=null},{passive:true});
 var searchDelay=null;
 ['query','rarityFilter','kindFilter','sort'].forEach(function(id){$(id).addEventListener(id==='query'?'input':'change',function(){page=1;if(id==='query'){clearTimeout(searchDelay);searchDelay=setTimeout(function(){render()},140)}else{clearTimeout(searchDelay);render()}})});
 $('gameFilter').addEventListener('change',function(){selectedGroup=this.value==='all'?'all':'game:'+this.value;page=1;render();updateGroupNav()});

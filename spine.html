@@ -268,13 +268,15 @@ function urls(c,mirror){
  const base=mirror==='legacy'?'https://nikke-db-legacy.pages.dev/l2d/'+c.id+'/'+c.id+'_00':c.base;
  return {skeleton:base+'.skel',atlas:base+'.atlas',base};
 }
-async function downloadBlob(url,timeout=24000){
- const controller=new AbortController(), timer=setTimeout(()=>controller.abort(),timeout);
+async function downloadBlob(url,timeout=24000,externalSignal){
+ const controller=new AbortController(),onAbort=()=>controller.abort();
+ if(externalSignal){if(externalSignal.aborted)controller.abort();else externalSignal.addEventListener('abort',onAbort,{once:true})}
+ const timer=setTimeout(()=>controller.abort(),timeout);
  try{
   const response=await fetch(url,{signal:controller.signal,cache:'force-cache'});
   if(!response.ok)throw Error('HTTP '+response.status+' '+url.split('/').pop());
   return response.blob();
- }finally{clearTimeout(timer)}
+ }finally{clearTimeout(timer);externalSignal?.removeEventListener('abort',onAbort)}
 }
 function imagePages(atlasText){
  return [...new Set(atlasText.replace(/^\uFEFF/,'').split(/\r?\n/).map(x=>x.trim())
@@ -300,14 +302,14 @@ async function detectSpineVersion(blob){
  if(!/^\d+\.\d+(?:\.\d+)?/.test(version||''))throw Error('无法解析骨骼导出版本（文件头不支持或文件损坏）');
  return {hash:found.hash,version,majorMinor:version.split('.').slice(0,2).join('.')};
 }
-async function downloadPack(c,mirror){
+async function downloadPack(c,mirror,signal,isCurrent=()=>true){
  // Detect the actual export version for NIKKE and Blue Archive before selecting a runtime.
  const paths=urls(c,mirror),stem=c.base.split('/').pop();
- const [skelBlob,atlasBlob]=await Promise.all([downloadBlob(paths.skeleton),downloadBlob(paths.atlas)]);
+ const [skelBlob,atlasBlob]=await Promise.all([downloadBlob(paths.skeleton,24000,signal),downloadBlob(paths.atlas,24000,signal)]);
  if(skelBlob.size<100||atlasBlob.size<20)throw Error('骨骼或图集文件大小异常');
  const detected=await detectSpineVersion(skelBlob);
  if(!['3.8','4.0','4.1','4.2'].includes(detected.majorMinor))throw Error('不支持的骨骼版本 '+detected.version);
- status('检测到 '+c.name+' 的 Spine 版本：'+detected.version);
+ if(isCurrent())status('检测到 '+c.name+' 的 Spine 版本：'+detected.version);
  const atlasText=(await atlasBlob.text()).replace(/^\uFEFF/,'');
  const pages=imagePages(atlasText);
  if(!pages.length)throw Error('图集中没有图片文件名');
@@ -320,20 +322,29 @@ async function downloadPack(c,mirror){
  async function fetchTexturePages(){
   while(nextPage<pages.length){
    const page=pages[nextPage++],url=paths.base.slice(0,paths.base.lastIndexOf('/')+1)+page;
-   const blob=await downloadBlob(url,60000);
+   const blob=await downloadBlob(url,60000,signal);
    if(blob.size<100)throw Error('贴图为空：'+page);
    data[page]=await blobToUri(blob);
    completedPages++;
-   status('已读取骨骼与图集，正在下载贴图 '+completedPages+'/'+pages.length);
+   if(isCurrent())status('已读取骨骼与图集，正在下载贴图 '+completedPages+'/'+pages.length);
   }
  }
  await Promise.all(Array.from({length:Math.min(3,pages.length)},()=>fetchTexturePages()));
+ if(signal?.aborted)throw Error('下载已取消');
  return {id:(c.gameId||'nikke')+'-'+c.id,version:detected.majorMinor,exportVersion:detected.version,headerChecked:true,skeleton:stem+'.skel',atlas:stem+'.atlas',rawDataURIs:data};
 }
 function blobToUri(blob){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(reader.error);reader.readAsDataURL(blob)})}
-let sequence=0;
+let sequence=0,activeCharacterAbort=null;
+function cancelCharacterDownload(){
+ ++sequence;
+ if(activeCharacterAbort){activeCharacterAbort.abort();activeCharacterAbort=null}
+ ++currentAttempt;
+ stopWatchdog();
+}
 async function playCharacter(c){
- const current=++sequence;
+ cancelCharacterDownload();
+ const current=sequence,controller=new AbortController();
+ activeCharacterAbort=controller;
  if(c.versionUnverified)status('尝试播放尚未确认版本的动画；如果失败将报告实际加载错误。');
  // Read the .skel header before choosing the matching runtime.
  const packId=(c.gameId||'nikke')+'-'+c.id;
@@ -356,7 +367,7 @@ async function playCharacter(c){
    if(current!==sequence)return;
    try{
     status('正在从 '+(mirror==='github'?'原始素材目录':'备用镜像')+'读取 '+c.name+' 的完整动画文件…');
-    pack=await downloadPack(c,mirror);
+    pack=await downloadPack(c,mirror,controller.signal,()=>current===sequence);
     if(current!==sequence)return;
     try{await dbAction('readwrite',s=>s.put(pack));refreshSaved()}catch(e){status('已下载动画，但浏览器空间不足，无法缓存：'+e.message)}
     if(current!==sequence)return;
@@ -366,6 +377,7 @@ async function playCharacter(c){
   }
   if(current===sequence)status('角色资源下载失败。'+failure+'可选择本地导入已获得的动画文件。',true);
  }catch(e){if(current===sequence)status('播放失败：'+(e.message||String(e)),true)}
+ finally{if(activeCharacterAbort===controller)activeCharacterAbort=null}
 }
 $('nikke').onclick=()=>{const c=chosen();if(c)playCharacter(c)};
 $('testUrls').onclick=async()=>{
@@ -399,6 +411,7 @@ $('testUrls').onclick=async()=>{
 }
 $('characters').onchange=()=>{$('nikke').disabled=!chosen();const c=chosen();if(c&&loadedVersion&&loadedVersion!==c.spineVersion)status('该角色使用 Spine '+c.spineVersion+'。播放时将自动刷新以切换版本。')};
 $('demo').onclick=()=>{
+ cancelCharacterDownload();
  const version=$('version').value;
  const base='https://esotericsoftware.com/files/examples/'+version+'/spineboy/export/';
  show({skeleton:base+'spineboy-pro.skel',atlas:base+'spineboy-pma.atlas',animation:'walk'},'Spineboy 官方示例');
@@ -439,11 +452,11 @@ function playPack(pack){
 }
 $('saveLocal').onclick=async()=>{try{status('正在保存到浏览器本地缓存…');const pack=await preparePack(chosenFileList);await dbAction('readwrite',s=>s.put(pack));await refreshSaved();status('已保存 '+pack.id+'。以后可直接从“已保存的本地动画包”加载，无须重新选择素材文件。')}catch(e){status('保存失败：'+e.message,true)}};
 $('savedPacks').onchange=()=>{$('playSaved').disabled=!$('savedPacks').value;$('deleteSaved').disabled=!$('savedPacks').value};
-$('playSaved').onclick=async()=>{try{const pack=await dbAction('readonly',s=>s.get($('savedPacks').value));if(!pack)throw Error('素材包不存在');playPack(pack)}catch(e){status('本地素材播放失败：'+e.message,true)}};
+$('playSaved').onclick=async()=>{cancelCharacterDownload();try{const pack=await dbAction('readonly',s=>s.get($('savedPacks').value));if(!pack)throw Error('素材包不存在');playPack(pack)}catch(e){status('本地素材播放失败：'+e.message,true)}};
 $('deleteSaved').onclick=async()=>{const id=$('savedPacks').value;if(!id)return;if(!confirm('删除本机保存的动画素材包：'+id+'？'))return;try{await dbAction('readwrite',s=>s.delete(id));await refreshSaved();status('已删除本机动画素材包 '+id)}catch(e){status('删除失败：'+e.message,true)}};
-$('local').onclick=async()=>{try{status('正在读取本地动画文件…');const pack=await preparePack(chosenFileList);await playPack(pack)}catch(e){status('本地动画无法播放：'+(e.message||String(e)),true)}};
+$('local').onclick=async()=>{cancelCharacterDownload();try{status('正在读取本地动画文件…');const pack=await preparePack(chosenFileList);await playPack(pack)}catch(e){status('本地动画无法播放：'+(e.message||String(e)),true)}};
 $('version').onchange=()=>{
- if(loadedVersion&&loadedVersion!==$('version').value){const url=new URL(location.href);url.searchParams.set('v',$('version').value);url.searchParams.delete('id');location.href=url.toString()}
+ if(loadedVersion&&loadedVersion!==$('version').value){cancelCharacterDownload();const url=new URL(location.href);url.searchParams.set('v',$('version').value);url.searchParams.delete('id');location.href=url.toString()}
 };
 (async()=>{
  try{
@@ -451,7 +464,7 @@ $('version').onchange=()=>{
   if(location.protocol!=='file:'){try{const r=await fetch(manifestUrl,{cache:'no-store'});if(r.ok){const db=await r.json();if(Array.isArray(db.characters)&&db.characters.length)allCharacters=db.characters}}catch(e){console.warn('使用离线内嵌角色目录',e)}}
   refreshCharacters();
   const requested=params.get('id');if(requested&&allCharacters.some(x=>x.id===requested&&true)){const hit=allCharacters.find(x=>x.id===requested);$('gameFilter').value=hit.gameId||'nikke';refreshCharacters();$('characters').value=requested;refreshCardSelection();}
-  $('nikke').disabled=!chosen()||!charInfo(chosen()).image;
+  $('nikke').disabled=!chosen();
   status('已准备 '+allCharacters.length+' 位角色动画索引。请选择角色并点击播放。');
   if(chosen()&&params.get('id'))playCharacter(chosen());
  }catch(e){status('角色索引无法加载：'+e.message+'。请在静态服务器中打开网页，或直接导入本地资源。',true)}
