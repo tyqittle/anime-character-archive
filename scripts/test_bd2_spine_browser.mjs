@@ -46,7 +46,7 @@ try{
     c.dispatchEvent(new PointerEvent('pointerup',{pointerId:71,pointerType:'mouse',button:0,clientX:136,clientY:121,bubbles:true}));
    });
    const panned=await canvas.evaluate(c=>c.style.transform);
-   if(!panned.includes('translate(36px,21px)'))throw Error('Dragging did not pan the character: '+panned);
+   if(!/translate\(36px,\s*21px\)/.test(panned))throw Error('Dragging did not pan the character: '+panned);
    await page.locator('#resetView').click();
    if(rect.width<200||rect.height<200)throw Error('Canvas is too small: '+JSON.stringify(rect));
    await page.waitForTimeout(500);
