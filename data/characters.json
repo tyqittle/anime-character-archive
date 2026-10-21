@@ -24,7 +24,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_009_12fce_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_009_12fce-1.webp"
+      "thumb": "./assets/thumbs/ak-char_009_12fce-1.webp",
+      "imageWidth": 1460,
+      "imageHeight": 1460
     },
     {
       "id": "ak-char_1015_aglna2-1",
@@ -40,7 +42,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1015_aglna2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1015_aglna2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1015_aglna2-1.webp",
+      "imageWidth": 1424,
+      "imageHeight": 1424
     },
     {
       "id": "ak-char_1016_agoat2-1",
@@ -56,7 +60,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1016_agoat2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1016_agoat2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1016_agoat2-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1016_agoat2-2",
@@ -72,7 +78,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1016_agoat2_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1016_agoat2-2.webp"
+      "thumb": "./assets/thumbs/ak-char_1016_agoat2-2.webp",
+      "imageWidth": 2536,
+      "imageHeight": 2536
     },
     {
       "id": "ak-char_002_amiya-1",
@@ -88,7 +96,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_002_amiya_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_002_amiya-1.webp"
+      "thumb": "./assets/thumbs/ak-char_002_amiya-1.webp",
+      "imageWidth": 1340,
+      "imageHeight": 1340
     },
     {
       "id": "ak-char_002_amiya-2",
@@ -104,7 +114,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_002_amiya_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_002_amiya-2.webp"
+      "thumb": "./assets/thumbs/ak-char_002_amiya-2.webp",
+      "imageWidth": 2248,
+      "imageHeight": 2248
     },
     {
       "id": "ak-char_002_amiya_test-1",
@@ -120,7 +132,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_002_amiya_test_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_002_amiya_test-1.webp"
+      "thumb": "./assets/thumbs/ak-char_002_amiya_test-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_002_amiya_winter-1",
@@ -136,7 +150,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_002_amiya_winter_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_002_amiya_winter-1.webp"
+      "thumb": "./assets/thumbs/ak-char_002_amiya_winter-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1001_amiya2-2",
@@ -152,7 +168,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1001_amiya2_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1001_amiya2-2.webp"
+      "thumb": "./assets/thumbs/ak-char_1001_amiya2-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1001_amiya2_casc-1",
@@ -168,7 +186,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1001_amiya2_casc_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1001_amiya2_casc-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1001_amiya2_casc-1.webp",
+      "imageWidth": 2560,
+      "imageHeight": 2560
     },
     {
       "id": "ak-char_103_angel-1",
@@ -184,7 +204,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_103_angel_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_103_angel-1.webp"
+      "thumb": "./assets/thumbs/ak-char_103_angel-1.webp",
+      "imageWidth": 1280,
+      "imageHeight": 1280
     },
     {
       "id": "ak-char_103_angel-2",
@@ -200,7 +222,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_103_angel_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_103_angel-2.webp"
+      "thumb": "./assets/thumbs/ak-char_103_angel-2.webp",
+      "imageWidth": 1280,
+      "imageHeight": 1280
     },
     {
       "id": "ak-char_103_angel_kfc-1",
@@ -216,7 +240,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_103_angel_kfc_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_103_angel_kfc-1.webp"
+      "thumb": "./assets/thumbs/ak-char_103_angel_kfc-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_103_angel_wild-1",
@@ -232,7 +258,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_103_angel_wild_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_103_angel_wild-1.webp"
+      "thumb": "./assets/thumbs/ak-char_103_angel_wild-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1041_angel2-1",
@@ -248,7 +276,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1041_angel2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1041_angel2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1041_angel2-1.webp",
+      "imageWidth": 1360,
+      "imageHeight": 1360
     },
     {
       "id": "ak-char_1041_angel2-2",
@@ -264,7 +294,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1041_angel2_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1041_angel2-2.webp"
+      "thumb": "./assets/thumbs/ak-char_1041_angel2-2.webp",
+      "imageWidth": 2560,
+      "imageHeight": 2560
     },
     {
       "id": "ak-char_122_beagle-1",
@@ -280,7 +312,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_122_beagle_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_122_beagle-1.webp"
+      "thumb": "./assets/thumbs/ak-char_122_beagle-1.webp",
+      "imageWidth": 1224,
+      "imageHeight": 1224
     },
     {
       "id": "ak-char_122_beagle_boc-1",
@@ -296,7 +330,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_122_beagle_boc_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_122_beagle_boc-1.webp"
+      "thumb": "./assets/thumbs/ak-char_122_beagle_boc-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1040_blaze2-1",
@@ -312,7 +348,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1040_blaze2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1040_blaze2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1040_blaze2-1.webp",
+      "imageWidth": 1500,
+      "imageHeight": 1500
     },
     {
       "id": "ak-char_129_bluep-1",
@@ -328,7 +366,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_129_bluep_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_129_bluep-1.webp"
+      "thumb": "./assets/thumbs/ak-char_129_bluep-1.webp",
+      "imageWidth": 1196,
+      "imageHeight": 1196
     },
     {
       "id": "ak-char_129_bluep-2",
@@ -344,7 +384,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_129_bluep_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_129_bluep-2.webp"
+      "thumb": "./assets/thumbs/ak-char_129_bluep-2.webp",
+      "imageWidth": 1304,
+      "imageHeight": 1304
     },
     {
       "id": "ak-char_137_brownb-1",
@@ -360,7 +402,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_137_brownb_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_137_brownb-1.webp"
+      "thumb": "./assets/thumbs/ak-char_137_brownb-1.webp",
+      "imageWidth": 1264,
+      "imageHeight": 1264
     },
     {
       "id": "ak-char_137_brownb-2",
@@ -376,7 +420,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_137_brownb_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_137_brownb-2.webp"
+      "thumb": "./assets/thumbs/ak-char_137_brownb-2.webp",
+      "imageWidth": 1024,
+      "imageHeight": 1024
     },
     {
       "id": "ak-char_137_brownb_kitchen-1",
@@ -392,7 +438,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_137_brownb_kitchen_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_137_brownb_kitchen-1.webp"
+      "thumb": "./assets/thumbs/ak-char_137_brownb_kitchen-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1049_catap2-1",
@@ -408,7 +456,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1049_catap2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1049_catap2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1049_catap2-1.webp",
+      "imageWidth": 1332,
+      "imageHeight": 1332
     },
     {
       "id": "ak-char_010_chen-1",
@@ -424,7 +474,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_010_chen_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_010_chen-1.webp"
+      "thumb": "./assets/thumbs/ak-char_010_chen-1.webp",
+      "imageWidth": 1200,
+      "imageHeight": 1200
     },
     {
       "id": "ak-char_010_chen-2",
@@ -440,7 +492,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_010_chen_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_010_chen-2.webp"
+      "thumb": "./assets/thumbs/ak-char_010_chen-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_010_chen_nian-2",
@@ -456,7 +510,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_010_chen_nian_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_010_chen_nian-2.webp"
+      "thumb": "./assets/thumbs/ak-char_010_chen_nian-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1013_chen2-1",
@@ -472,7 +528,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1013_chen2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1013_chen2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1013_chen2-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1013_chen2-2",
@@ -488,7 +546,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1013_chen2_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1013_chen2-2.webp"
+      "thumb": "./assets/thumbs/ak-char_1013_chen2-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1050_chen3-1",
@@ -504,7 +564,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1050_chen3_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1050_chen3-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1050_chen3-1.webp",
+      "imageWidth": 1356,
+      "imageHeight": 1356
     },
     {
       "id": "ak-char_113_cqbw-1",
@@ -520,7 +582,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_113_cqbw_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_113_cqbw-1.webp"
+      "thumb": "./assets/thumbs/ak-char_113_cqbw-1.webp",
+      "imageWidth": 1352,
+      "imageHeight": 1352
     },
     {
       "id": "ak-char_113_cqbw-2",
@@ -536,7 +600,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_113_cqbw_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_113_cqbw-2.webp"
+      "thumb": "./assets/thumbs/ak-char_113_cqbw-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_110_deepcl-1",
@@ -552,7 +618,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_110_deepcl_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_110_deepcl-1.webp"
+      "thumb": "./assets/thumbs/ak-char_110_deepcl-1.webp",
+      "imageWidth": 1280,
+      "imageHeight": 1280
     },
     {
       "id": "ak-char_110_deepcl-2",
@@ -568,7 +636,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_110_deepcl_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_110_deepcl-2.webp"
+      "thumb": "./assets/thumbs/ak-char_110_deepcl-2.webp",
+      "imageWidth": 1304,
+      "imageHeight": 1304
     },
     {
       "id": "ak-char_130_doberm-1",
@@ -584,7 +654,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_130_doberm_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_130_doberm-1.webp"
+      "thumb": "./assets/thumbs/ak-char_130_doberm-1.webp",
+      "imageWidth": 1328,
+      "imageHeight": 1328
     },
     {
       "id": "ak-char_130_doberm-2",
@@ -600,7 +672,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_130_doberm_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_130_doberm-2.webp"
+      "thumb": "./assets/thumbs/ak-char_130_doberm-2.webp",
+      "imageWidth": 1024,
+      "imageHeight": 1024
     },
     {
       "id": "ak-char_127_estell-1",
@@ -616,7 +690,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_127_estell_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_127_estell-1.webp"
+      "thumb": "./assets/thumbs/ak-char_127_estell-1.webp",
+      "imageWidth": 1088,
+      "imageHeight": 1088
     },
     {
       "id": "ak-char_127_estell-2",
@@ -632,7 +708,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_127_estell_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_127_estell-2.webp"
+      "thumb": "./assets/thumbs/ak-char_127_estell-2.webp",
+      "imageWidth": 1260,
+      "imageHeight": 1260
     },
     {
       "id": "ak-char_1032_excu2-1",
@@ -648,7 +726,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1032_excu2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1032_excu2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1032_excu2-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_123_fang-1",
@@ -664,7 +744,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_123_fang_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_123_fang-1.webp"
+      "thumb": "./assets/thumbs/ak-char_123_fang-1.webp",
+      "imageWidth": 1328,
+      "imageHeight": 1328
     },
     {
       "id": "ak-char_123_fang_winter-1",
@@ -680,7 +762,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_123_fang_winter_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_123_fang_winter-1.webp"
+      "thumb": "./assets/thumbs/ak-char_123_fang_winter-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1036_fang2-1",
@@ -696,7 +780,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1036_fang2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1036_fang2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1036_fang2-1.webp",
+      "imageWidth": 1292,
+      "imageHeight": 1292
     },
     {
       "id": "ak-char_131_flameb-1",
@@ -712,7 +798,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_131_flameb_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_131_flameb-1.webp"
+      "thumb": "./assets/thumbs/ak-char_131_flameb-1.webp",
+      "imageWidth": 1596,
+      "imageHeight": 1596
     },
     {
       "id": "ak-char_131_flameb-2",
@@ -728,7 +816,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_131_flameb_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_131_flameb-2.webp"
+      "thumb": "./assets/thumbs/ak-char_131_flameb-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1022_flwr2-1",
@@ -744,7 +834,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1022_flwr2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1022_flwr2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1022_flwr2-1.webp",
+      "imageWidth": 1264,
+      "imageHeight": 1264
     },
     {
       "id": "ak-char_1022_flwr2-2",
@@ -760,7 +852,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1022_flwr2_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1022_flwr2-2.webp"
+      "thumb": "./assets/thumbs/ak-char_1022_flwr2-2.webp",
+      "imageWidth": 2496,
+      "imageHeight": 2496
     },
     {
       "id": "ak-char_109_fmout-1",
@@ -776,7 +870,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_109_fmout_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_109_fmout-1.webp"
+      "thumb": "./assets/thumbs/ak-char_109_fmout-1.webp",
+      "imageWidth": 1320,
+      "imageHeight": 1320
     },
     {
       "id": "ak-char_109_fmout-2",
@@ -792,7 +888,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_109_fmout_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_109_fmout-2.webp"
+      "thumb": "./assets/thumbs/ak-char_109_fmout-2.webp",
+      "imageWidth": 1416,
+      "imageHeight": 1416
     },
     {
       "id": "ak-char_109_fmout_epoque-2",
@@ -808,7 +906,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_109_fmout_epoque_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_109_fmout_epoque-2.webp"
+      "thumb": "./assets/thumbs/ak-char_109_fmout_epoque-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_106_franka-1",
@@ -824,7 +924,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_106_franka_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_106_franka-1.webp"
+      "thumb": "./assets/thumbs/ak-char_106_franka-1.webp",
+      "imageWidth": 1356,
+      "imageHeight": 1356
     },
     {
       "id": "ak-char_106_franka-2",
@@ -840,7 +942,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_106_franka_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_106_franka-2.webp"
+      "thumb": "./assets/thumbs/ak-char_106_franka-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_106_franka_ncg-1",
@@ -856,7 +960,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_106_franka_ncg_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_106_franka_ncg-1.webp"
+      "thumb": "./assets/thumbs/ak-char_106_franka_ncg-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1023_ghost2-1",
@@ -872,7 +978,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1023_ghost2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1023_ghost2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1023_ghost2-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1023_ghost2-2",
@@ -888,7 +996,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1023_ghost2_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1023_ghost2-2.webp"
+      "thumb": "./assets/thumbs/ak-char_1023_ghost2-2.webp",
+      "imageWidth": 2216,
+      "imageHeight": 2216
     },
     {
       "id": "ak-char_1027_greyy2-1",
@@ -904,7 +1014,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1027_greyy2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1027_greyy2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1027_greyy2-1.webp",
+      "imageWidth": 1220,
+      "imageHeight": 1220
     },
     {
       "id": "ak-char_1027_greyy2-2",
@@ -920,7 +1032,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1027_greyy2_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1027_greyy2-2.webp"
+      "thumb": "./assets/thumbs/ak-char_1027_greyy2-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1027_greyy2_breaker-1",
@@ -936,7 +1050,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1027_greyy2_breaker_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1027_greyy2_breaker-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1027_greyy2_breaker-1.webp",
+      "imageWidth": 1908,
+      "imageHeight": 1908
     },
     {
       "id": "ak-char_1026_gvial2-1",
@@ -952,7 +1068,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1026_gvial2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1026_gvial2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1026_gvial2-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1026_gvial2-2",
@@ -968,7 +1086,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1026_gvial2_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1026_gvial2-2.webp"
+      "thumb": "./assets/thumbs/ak-char_1026_gvial2-2.webp",
+      "imageWidth": 2520,
+      "imageHeight": 2520
     },
     {
       "id": "ak-char_135_halo-1",
@@ -984,7 +1104,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_135_halo_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_135_halo-1.webp"
+      "thumb": "./assets/thumbs/ak-char_135_halo-1.webp",
+      "imageWidth": 1228,
+      "imageHeight": 1228
     },
     {
       "id": "ak-char_1047_halo2-1",
@@ -1000,7 +1122,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1047_halo2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1047_halo2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1047_halo2-1.webp",
+      "imageWidth": 1368,
+      "imageHeight": 1368
     },
     {
       "id": "ak-char_1024_hbisc2-1",
@@ -1016,7 +1140,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1024_hbisc2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1024_hbisc2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1024_hbisc2-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1024_hbisc2-2",
@@ -1032,7 +1158,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1024_hbisc2_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1024_hbisc2-2.webp"
+      "thumb": "./assets/thumbs/ak-char_1024_hbisc2-2.webp",
+      "imageWidth": 2384,
+      "imageHeight": 2384
     },
     {
       "id": "ak-char_1024_hbisc2_unveiling-2",
@@ -1048,7 +1176,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1024_hbisc2_unveiling_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1024_hbisc2_unveiling-2.webp"
+      "thumb": "./assets/thumbs/ak-char_1024_hbisc2_unveiling-2.webp",
+      "imageWidth": 2096,
+      "imageHeight": 2096
     },
     {
       "id": "ak-char_1051_headb2-1",
@@ -1064,7 +1194,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1051_headb2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1051_headb2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1051_headb2-1.webp",
+      "imageWidth": 1400,
+      "imageHeight": 1400
     },
     {
       "id": "ak-char_115_headbr-1",
@@ -1080,7 +1212,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_115_headbr_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_115_headbr-1.webp"
+      "thumb": "./assets/thumbs/ak-char_115_headbr-1.webp",
+      "imageWidth": 1320,
+      "imageHeight": 1320
     },
     {
       "id": "ak-char_115_headbr-2",
@@ -1096,7 +1230,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_115_headbr_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_115_headbr-2.webp"
+      "thumb": "./assets/thumbs/ak-char_115_headbr-2.webp",
+      "imageWidth": 1500,
+      "imageHeight": 1500
     },
     {
       "id": "ak-char_115_headbr_it-1",
@@ -1112,7 +1248,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_115_headbr_it_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_115_headbr_it-1.webp"
+      "thumb": "./assets/thumbs/ak-char_115_headbr_it-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_115_headbr_marthe-2",
@@ -1128,7 +1266,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_115_headbr_marthe_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_115_headbr_marthe-2.webp"
+      "thumb": "./assets/thumbs/ak-char_115_headbr_marthe-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_120_hibisc-1",
@@ -1144,7 +1284,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_120_hibisc_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_120_hibisc-1.webp"
+      "thumb": "./assets/thumbs/ak-char_120_hibisc-1.webp",
+      "imageWidth": 1280,
+      "imageHeight": 1280
     },
     {
       "id": "ak-char_120_hibisc_nian-1",
@@ -1160,7 +1302,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_120_hibisc_nian_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_120_hibisc_nian-1.webp"
+      "thumb": "./assets/thumbs/ak-char_120_hibisc_nian-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1044_hsgma2-1",
@@ -1176,7 +1320,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1044_hsgma2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1044_hsgma2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1044_hsgma2-1.webp",
+      "imageWidth": 1624,
+      "imageHeight": 1624
     },
     {
       "id": "ak-char_136_hsguma-1",
@@ -1192,7 +1338,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_136_hsguma_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_136_hsguma-1.webp"
+      "thumb": "./assets/thumbs/ak-char_136_hsguma-1.webp",
+      "imageWidth": 1428,
+      "imageHeight": 1428
     },
     {
       "id": "ak-char_136_hsguma-2",
@@ -1208,7 +1356,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_136_hsguma_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_136_hsguma-2.webp"
+      "thumb": "./assets/thumbs/ak-char_136_hsguma-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_017_huang-1",
@@ -1224,7 +1374,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_017_huang_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_017_huang-1.webp"
+      "thumb": "./assets/thumbs/ak-char_017_huang-1.webp",
+      "imageWidth": 1452,
+      "imageHeight": 1452
     },
     {
       "id": "ak-char_017_huang-2",
@@ -1240,7 +1392,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_017_huang_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_017_huang-2.webp"
+      "thumb": "./assets/thumbs/ak-char_017_huang-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_017_huang_as-1",
@@ -1256,7 +1410,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_017_huang_as_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_017_huang_as-1.webp"
+      "thumb": "./assets/thumbs/ak-char_017_huang_as-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_134_ifrit-1",
@@ -1272,7 +1428,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_134_ifrit_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_134_ifrit-1.webp"
+      "thumb": "./assets/thumbs/ak-char_134_ifrit-1.webp",
+      "imageWidth": 1280,
+      "imageHeight": 1280
     },
     {
       "id": "ak-char_134_ifrit-2",
@@ -1288,7 +1446,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_134_ifrit_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_134_ifrit-2.webp"
+      "thumb": "./assets/thumbs/ak-char_134_ifrit-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_134_ifrit_kfc-1",
@@ -1304,7 +1464,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_134_ifrit_kfc_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_134_ifrit_kfc-1.webp"
+      "thumb": "./assets/thumbs/ak-char_134_ifrit_kfc-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_134_ifrit_rilakkuma-1",
@@ -1320,7 +1482,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_134_ifrit_rilakkuma_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_134_ifrit_rilakkuma-1.webp"
+      "thumb": "./assets/thumbs/ak-char_134_ifrit_rilakkuma-1.webp",
+      "imageWidth": 1968,
+      "imageHeight": 1968
     },
     {
       "id": "ak-char_134_ifrit_summer-1",
@@ -1336,7 +1500,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_134_ifrit_summer_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_134_ifrit_summer-1.webp"
+      "thumb": "./assets/thumbs/ak-char_134_ifrit_summer-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1034_jesca2-1",
@@ -1352,7 +1518,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1034_jesca2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1034_jesca2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1034_jesca2-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1034_jesca2-2",
@@ -1368,7 +1536,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1034_jesca2_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1034_jesca2-2.webp"
+      "thumb": "./assets/thumbs/ak-char_1034_jesca2-2.webp",
+      "imageWidth": 2252,
+      "imageHeight": 2252
     },
     {
       "id": "ak-char_1034_jesca2_cfa-1",
@@ -1384,7 +1554,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1034_jesca2_cfa_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1034_jesca2_cfa-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1034_jesca2_cfa-1.webp",
+      "imageWidth": 1652,
+      "imageHeight": 1652
     },
     {
       "id": "ak-char_003_kalts-1",
@@ -1400,7 +1572,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_003_kalts_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_003_kalts-1.webp"
+      "thumb": "./assets/thumbs/ak-char_003_kalts-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_003_kalts-2",
@@ -1416,7 +1590,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_003_kalts_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_003_kalts-2.webp"
+      "thumb": "./assets/thumbs/ak-char_003_kalts-2.webp",
+      "imageWidth": 2560,
+      "imageHeight": 2560
     },
     {
       "id": "ak-char_1052_kalts2-1",
@@ -1432,7 +1608,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1052_kalts2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1052_kalts2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1052_kalts2-1.webp",
+      "imageWidth": 2260,
+      "imageHeight": 2260
     },
     {
       "id": "ak-char_124_kroos-1",
@@ -1448,7 +1626,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_124_kroos_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_124_kroos-1.webp"
+      "thumb": "./assets/thumbs/ak-char_124_kroos-1.webp",
+      "imageWidth": 1280,
+      "imageHeight": 1280
     },
     {
       "id": "ak-char_124_kroos_witch-1",
@@ -1464,7 +1644,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_124_kroos_witch_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_124_kroos_witch-1.webp"
+      "thumb": "./assets/thumbs/ak-char_124_kroos_witch-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1021_kroos2-1",
@@ -1480,7 +1662,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1021_kroos2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1021_kroos2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1021_kroos2-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1021_kroos2-2",
@@ -1496,7 +1680,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1021_kroos2_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1021_kroos2-2.webp"
+      "thumb": "./assets/thumbs/ak-char_1021_kroos2-2.webp",
+      "imageWidth": 2224,
+      "imageHeight": 2224
     },
     {
       "id": "ak-char_121_lava-1",
@@ -1512,7 +1698,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_121_lava_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_121_lava-1.webp"
+      "thumb": "./assets/thumbs/ak-char_121_lava-1.webp",
+      "imageWidth": 1280,
+      "imageHeight": 1280
     },
     {
       "id": "ak-char_1011_lava2-1",
@@ -1528,7 +1716,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1011_lava2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1011_lava2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1011_lava2-1.webp",
+      "imageWidth": 1280,
+      "imageHeight": 1280
     },
     {
       "id": "ak-char_1011_lava2-2",
@@ -1544,7 +1734,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1011_lava2_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1011_lava2-2.webp"
+      "thumb": "./assets/thumbs/ak-char_1011_lava2-2.webp",
+      "imageWidth": 2300,
+      "imageHeight": 2300
     },
     {
       "id": "ak-char_1043_leizi2-1",
@@ -1560,7 +1752,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1043_leizi2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1043_leizi2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1043_leizi2-1.webp",
+      "imageWidth": 1364,
+      "imageHeight": 1364
     },
     {
       "id": "ak-char_107_liskam-1",
@@ -1576,7 +1770,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_107_liskam_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_107_liskam-1.webp"
+      "thumb": "./assets/thumbs/ak-char_107_liskam-1.webp",
+      "imageWidth": 1384,
+      "imageHeight": 1384
     },
     {
       "id": "ak-char_107_liskam-2",
@@ -1592,7 +1788,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_107_liskam_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_107_liskam-2.webp"
+      "thumb": "./assets/thumbs/ak-char_107_liskam-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_107_liskam_nian-2",
@@ -1608,7 +1806,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_107_liskam_nian_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_107_liskam_nian-2.webp"
+      "thumb": "./assets/thumbs/ak-char_107_liskam_nian-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_107_liskam_striker-1",
@@ -1624,7 +1824,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_107_liskam_striker_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_107_liskam_striker-1.webp"
+      "thumb": "./assets/thumbs/ak-char_107_liskam_striker-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_133_mm-1",
@@ -1640,7 +1842,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_133_mm_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_133_mm-1.webp"
+      "thumb": "./assets/thumbs/ak-char_133_mm-1.webp",
+      "imageWidth": 1280,
+      "imageHeight": 1280
     },
     {
       "id": "ak-char_133_mm-2",
@@ -1656,7 +1860,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_133_mm_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_133_mm-2.webp"
+      "thumb": "./assets/thumbs/ak-char_133_mm-2.webp",
+      "imageWidth": 1024,
+      "imageHeight": 1024
     },
     {
       "id": "ak-char_117_myrrh-1",
@@ -1672,7 +1878,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_117_myrrh_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_117_myrrh-1.webp"
+      "thumb": "./assets/thumbs/ak-char_117_myrrh-1.webp",
+      "imageWidth": 1280,
+      "imageHeight": 1280
     },
     {
       "id": "ak-char_117_myrrh-2",
@@ -1688,7 +1896,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_117_myrrh_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_117_myrrh-2.webp"
+      "thumb": "./assets/thumbs/ak-char_117_myrrh-2.webp",
+      "imageWidth": 1500,
+      "imageHeight": 1500
     },
     {
       "id": "ak-char_117_myrrh_wild-1",
@@ -1704,7 +1914,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_117_myrrh_wild_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_117_myrrh_wild-1.webp"
+      "thumb": "./assets/thumbs/ak-char_117_myrrh_wild-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1014_nearl2-1",
@@ -1720,7 +1932,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1014_nearl2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1014_nearl2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1014_nearl2-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1030_noirc2-1",
@@ -1736,7 +1950,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1030_noirc2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1030_noirc2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1030_noirc2-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1030_noirc2-2",
@@ -1752,7 +1968,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1030_noirc2_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1030_noirc2-2.webp"
+      "thumb": "./assets/thumbs/ak-char_1030_noirc2-2.webp",
+      "imageWidth": 2528,
+      "imageHeight": 2528
     },
     {
       "id": "ak-char_1048_orchd2-1",
@@ -1768,7 +1986,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1048_orchd2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1048_orchd2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1048_orchd2-1.webp",
+      "imageWidth": 1768,
+      "imageHeight": 1768
     },
     {
       "id": "ak-char_1042_phatm2-1",
@@ -1784,7 +2004,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1042_phatm2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1042_phatm2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1042_phatm2-1.webp",
+      "imageWidth": 1584,
+      "imageHeight": 1584
     },
     {
       "id": "ak-char_128_plosis-1",
@@ -1800,7 +2022,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_128_plosis_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_128_plosis-1.webp"
+      "thumb": "./assets/thumbs/ak-char_128_plosis-1.webp",
+      "imageWidth": 1316,
+      "imageHeight": 1316
     },
     {
       "id": "ak-char_128_plosis-2",
@@ -1816,7 +2040,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_128_plosis_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_128_plosis-2.webp"
+      "thumb": "./assets/thumbs/ak-char_128_plosis-2.webp",
+      "imageWidth": 1524,
+      "imageHeight": 1524
     },
     {
       "id": "ak-char_1020_reed2-1",
@@ -1832,7 +2058,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1020_reed2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1020_reed2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1020_reed2-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1046_sbell2-1",
@@ -1848,7 +2076,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1046_sbell2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1046_sbell2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1046_sbell2-1.webp",
+      "imageWidth": 1400,
+      "imageHeight": 1400
     },
     {
       "id": "ak-char_126_shotst-1",
@@ -1864,7 +2094,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_126_shotst_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_126_shotst-1.webp"
+      "thumb": "./assets/thumbs/ak-char_126_shotst-1.webp",
+      "imageWidth": 1320,
+      "imageHeight": 1320
     },
     {
       "id": "ak-char_126_shotst-2",
@@ -1880,7 +2112,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_126_shotst_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_126_shotst-2.webp"
+      "thumb": "./assets/thumbs/ak-char_126_shotst-2.webp",
+      "imageWidth": 1464,
+      "imageHeight": 1464
     },
     {
       "id": "ak-char_112_siege-1",
@@ -1896,7 +2130,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_112_siege_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_112_siege-1.webp"
+      "thumb": "./assets/thumbs/ak-char_112_siege-1.webp",
+      "imageWidth": 1316,
+      "imageHeight": 1316
     },
     {
       "id": "ak-char_112_siege-2",
@@ -1912,7 +2148,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_112_siege_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_112_siege-2.webp"
+      "thumb": "./assets/thumbs/ak-char_112_siege-2.webp",
+      "imageWidth": 1460,
+      "imageHeight": 1460
     },
     {
       "id": "ak-char_112_siege_striker-2",
@@ -1928,7 +2166,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_112_siege_striker_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_112_siege_striker-2.webp"
+      "thumb": "./assets/thumbs/ak-char_112_siege_striker-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_112_siege_wild-2",
@@ -1944,7 +2184,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_112_siege_wild_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_112_siege_wild-2.webp"
+      "thumb": "./assets/thumbs/ak-char_112_siege_wild-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1019_siege2-1",
@@ -1960,7 +2202,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1019_siege2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1019_siege2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1019_siege2-1.webp",
+      "imageWidth": 1512,
+      "imageHeight": 1512
     },
     {
       "id": "ak-char_1019_siege2-2",
@@ -1976,7 +2220,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1019_siege2_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1019_siege2-2.webp"
+      "thumb": "./assets/thumbs/ak-char_1019_siege2-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_108_silent-1",
@@ -1992,7 +2238,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_108_silent_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_108_silent-1.webp"
+      "thumb": "./assets/thumbs/ak-char_108_silent-1.webp",
+      "imageWidth": 1280,
+      "imageHeight": 1280
     },
     {
       "id": "ak-char_108_silent-2",
@@ -2008,7 +2256,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_108_silent_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_108_silent-2.webp"
+      "thumb": "./assets/thumbs/ak-char_108_silent-2.webp",
+      "imageWidth": 1376,
+      "imageHeight": 1376
     },
     {
       "id": "ak-char_108_silent_sweep-1",
@@ -2024,7 +2274,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_108_silent_sweep_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_108_silent_sweep-1.webp"
+      "thumb": "./assets/thumbs/ak-char_108_silent_sweep-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_108_silent_winter-2",
@@ -2040,7 +2292,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_108_silent_winter_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_108_silent_winter-2.webp"
+      "thumb": "./assets/thumbs/ak-char_108_silent_winter-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1012_skadi2-1",
@@ -2056,7 +2310,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1012_skadi2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1012_skadi2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1012_skadi2-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1031_slent2-1",
@@ -2072,7 +2328,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1031_slent2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1031_slent2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1031_slent2-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_101_sora-1",
@@ -2088,7 +2346,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_101_sora_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_101_sora-1.webp"
+      "thumb": "./assets/thumbs/ak-char_101_sora-1.webp",
+      "imageWidth": 1128,
+      "imageHeight": 1128
     },
     {
       "id": "ak-char_101_sora-2",
@@ -2104,7 +2364,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_101_sora_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_101_sora-2.webp"
+      "thumb": "./assets/thumbs/ak-char_101_sora-2.webp",
+      "imageWidth": 1480,
+      "imageHeight": 1480
     },
     {
       "id": "ak-char_101_sora_summer-1",
@@ -2120,7 +2382,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_101_sora_summer_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_101_sora_summer-1.webp"
+      "thumb": "./assets/thumbs/ak-char_101_sora_summer-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1045_svash2-1",
@@ -2136,7 +2400,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1045_svash2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1045_svash2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1045_svash2-1.webp",
+      "imageWidth": 1544,
+      "imageHeight": 1544
     },
     {
       "id": "ak-char_1033_swire2-1",
@@ -2152,7 +2418,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1033_swire2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1033_swire2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1033_swire2-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_102_texas-1",
@@ -2168,7 +2436,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_102_texas_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_102_texas-1.webp"
+      "thumb": "./assets/thumbs/ak-char_102_texas-1.webp",
+      "imageWidth": 1344,
+      "imageHeight": 1344
     },
     {
       "id": "ak-char_102_texas-2",
@@ -2184,7 +2454,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_102_texas_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_102_texas-2.webp"
+      "thumb": "./assets/thumbs/ak-char_102_texas-2.webp",
+      "imageWidth": 1392,
+      "imageHeight": 1392
     },
     {
       "id": "ak-char_102_texas_winter-1",
@@ -2200,7 +2472,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_102_texas_winter_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_102_texas_winter-1.webp"
+      "thumb": "./assets/thumbs/ak-char_102_texas_winter-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1028_texas2-1",
@@ -2216,7 +2490,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1028_texas2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1028_texas2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1028_texas2-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1028_texas2-2",
@@ -2232,7 +2508,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1028_texas2_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1028_texas2-2.webp"
+      "thumb": "./assets/thumbs/ak-char_1028_texas2-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1028_texas2_iteration-1",
@@ -2248,7 +2526,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1028_texas2_iteration_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1028_texas2_iteration-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1028_texas2_iteration-1.webp",
+      "imageWidth": 2432,
+      "imageHeight": 2432
     },
     {
       "id": "ak-char_1039_thorn2-1",
@@ -2264,7 +2544,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1039_thorn2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1039_thorn2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1039_thorn2-1.webp",
+      "imageWidth": 1308,
+      "imageHeight": 1308
     },
     {
       "id": "ak-char_140_whitew-1",
@@ -2280,7 +2562,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_140_whitew_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_140_whitew-1.webp"
+      "thumb": "./assets/thumbs/ak-char_140_whitew-1.webp",
+      "imageWidth": 1264,
+      "imageHeight": 1264
     },
     {
       "id": "ak-char_140_whitew-2",
@@ -2296,7 +2580,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_140_whitew_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_140_whitew-2.webp"
+      "thumb": "./assets/thumbs/ak-char_140_whitew-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_1038_whitw2-1",
@@ -2312,7 +2598,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1038_whitw2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1038_whitw2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1038_whitw2-1.webp",
+      "imageWidth": 1672,
+      "imageHeight": 1672
     },
     {
       "id": "ak-char_1038_whitw2-2",
@@ -2328,7 +2616,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1038_whitw2_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1038_whitw2-2.webp"
+      "thumb": "./assets/thumbs/ak-char_1038_whitw2-2.webp",
+      "imageWidth": 2560,
+      "imageHeight": 2560
     },
     {
       "id": "ak-char_1035_wisdel-1",
@@ -2344,7 +2634,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1035_wisdel_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1035_wisdel-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1035_wisdel-1.webp",
+      "imageWidth": 1624,
+      "imageHeight": 1624
     },
     {
       "id": "ak-char_1029_yato2-1",
@@ -2360,7 +2652,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_1029_yato2_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_1029_yato2-1.webp"
+      "thumb": "./assets/thumbs/ak-char_1029_yato2-1.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ak-char_118_yuki-1",
@@ -2376,7 +2670,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_118_yuki_1.png",
       "variant": false,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_118_yuki-1.webp"
+      "thumb": "./assets/thumbs/ak-char_118_yuki-1.webp",
+      "imageWidth": 1280,
+      "imageHeight": 1280
     },
     {
       "id": "ak-char_118_yuki-2",
@@ -2392,7 +2688,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_118_yuki_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_118_yuki-2.webp"
+      "thumb": "./assets/thumbs/ak-char_118_yuki-2.webp",
+      "imageWidth": 1372,
+      "imageHeight": 1372
     },
     {
       "id": "ak-char_118_yuki_boc-2",
@@ -2408,7 +2706,9 @@
       "originalImage": "https://raw.githubusercontent.com/fexli/ArknightsResource/main/charpack/char_118_yuki_boc_2.png",
       "variant": true,
       "license": "游戏美术版权归鹰角网络；第三方来源不代表可自由再分发",
-      "thumb": "./assets/thumbs/ak-char_118_yuki_boc-2.webp"
+      "thumb": "./assets/thumbs/ak-char_118_yuki_boc-2.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "ba-23000",
@@ -2428,7 +2728,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-23000.webp"
+      "thumb": "./assets/thumbs/ba-23000.webp",
+      "imageWidth": 500,
+      "imageHeight": 1024
     },
     {
       "id": "ba-20019",
@@ -2448,7 +2750,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20019.webp"
+      "thumb": "./assets/thumbs/ba-20019.webp",
+      "imageWidth": 576,
+      "imageHeight": 1318
     },
     {
       "id": "ba-20034",
@@ -2468,7 +2772,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20034.webp"
+      "thumb": "./assets/thumbs/ba-20034.webp",
+      "imageWidth": 1094,
+      "imageHeight": 1429
     },
     {
       "id": "ba-10087",
@@ -2488,7 +2794,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10087.webp"
+      "thumb": "./assets/thumbs/ba-10087.webp",
+      "imageWidth": 372,
+      "imageHeight": 1243
     },
     {
       "id": "ba-20008",
@@ -2508,7 +2816,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20008.webp"
+      "thumb": "./assets/thumbs/ba-20008.webp",
+      "imageWidth": 407,
+      "imageHeight": 1220
     },
     {
       "id": "ba-10015",
@@ -2528,7 +2838,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10015.webp"
+      "thumb": "./assets/thumbs/ba-10015.webp",
+      "imageWidth": 916,
+      "imageHeight": 1035
     },
     {
       "id": "ba-10066",
@@ -2548,7 +2860,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10066.webp"
+      "thumb": "./assets/thumbs/ba-10066.webp",
+      "imageWidth": 760,
+      "imageHeight": 1180
     },
     {
       "id": "ba-10000",
@@ -2568,7 +2882,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10000.webp"
+      "thumb": "./assets/thumbs/ba-10000.webp",
+      "imageWidth": 614,
+      "imageHeight": 1024
     },
     {
       "id": "ba-10031",
@@ -2588,7 +2904,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10031.webp"
+      "thumb": "./assets/thumbs/ba-10031.webp",
+      "imageWidth": 724,
+      "imageHeight": 1312
     },
     {
       "id": "ba-10089",
@@ -2608,7 +2926,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10089.webp"
+      "thumb": "./assets/thumbs/ba-10089.webp",
+      "imageWidth": 473,
+      "imageHeight": 1346
     },
     {
       "id": "ba-10028",
@@ -2628,7 +2948,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10028.webp"
+      "thumb": "./assets/thumbs/ba-10028.webp",
+      "imageWidth": 960,
+      "imageHeight": 1327
     },
     {
       "id": "ba-10042",
@@ -2648,7 +2970,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10042.webp"
+      "thumb": "./assets/thumbs/ba-10042.webp",
+      "imageWidth": 861,
+      "imageHeight": 1353
     },
     {
       "id": "ba-26013",
@@ -2668,7 +2992,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-26013.webp"
+      "thumb": "./assets/thumbs/ba-26013.webp",
+      "imageWidth": 525,
+      "imageHeight": 1453
     },
     {
       "id": "ba-23005",
@@ -2688,7 +3014,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-23005.webp"
+      "thumb": "./assets/thumbs/ba-23005.webp",
+      "imageWidth": 336,
+      "imageHeight": 1024
     },
     {
       "id": "ba-26007",
@@ -2708,7 +3036,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-26007.webp"
+      "thumb": "./assets/thumbs/ba-26007.webp",
+      "imageWidth": 1416,
+      "imageHeight": 1309
     },
     {
       "id": "ba-10019",
@@ -2728,7 +3058,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10019.webp"
+      "thumb": "./assets/thumbs/ba-10019.webp",
+      "imageWidth": 849,
+      "imageHeight": 1128
     },
     {
       "id": "ba-10021",
@@ -2748,7 +3080,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10021.webp"
+      "thumb": "./assets/thumbs/ba-10021.webp",
+      "imageWidth": 938,
+      "imageHeight": 1191
     },
     {
       "id": "ba-10017",
@@ -2768,7 +3102,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10017.webp"
+      "thumb": "./assets/thumbs/ba-10017.webp",
+      "imageWidth": 787,
+      "imageHeight": 960
     },
     {
       "id": "ba-20009",
@@ -2788,7 +3124,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20009.webp"
+      "thumb": "./assets/thumbs/ba-20009.webp",
+      "imageWidth": 859,
+      "imageHeight": 1132
     },
     {
       "id": "ba-20013",
@@ -2808,7 +3146,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20013.webp"
+      "thumb": "./assets/thumbs/ba-20013.webp",
+      "imageWidth": 636,
+      "imageHeight": 1224
     },
     {
       "id": "ba-10030",
@@ -2828,7 +3168,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10030.webp"
+      "thumb": "./assets/thumbs/ba-10030.webp",
+      "imageWidth": 1857,
+      "imageHeight": 1383
     },
     {
       "id": "ba-26000",
@@ -2848,7 +3190,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-26000.webp"
+      "thumb": "./assets/thumbs/ba-26000.webp",
+      "imageWidth": 523,
+      "imageHeight": 1024
     },
     {
       "id": "ba-10047",
@@ -2868,7 +3212,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10047.webp"
+      "thumb": "./assets/thumbs/ba-10047.webp",
+      "imageWidth": 1236,
+      "imageHeight": 1328
     },
     {
       "id": "ba-10001",
@@ -2888,7 +3234,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10001.webp"
+      "thumb": "./assets/thumbs/ba-10001.webp",
+      "imageWidth": 604,
+      "imageHeight": 1024
     },
     {
       "id": "ba-20032",
@@ -2908,7 +3256,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20032.webp"
+      "thumb": "./assets/thumbs/ba-20032.webp",
+      "imageWidth": 1075,
+      "imageHeight": 1265
     },
     {
       "id": "ba-20037",
@@ -2928,7 +3278,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20037.webp"
+      "thumb": "./assets/thumbs/ba-20037.webp",
+      "imageWidth": 718,
+      "imageHeight": 1073
     },
     {
       "id": "ba-20022",
@@ -2948,7 +3300,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20022.webp"
+      "thumb": "./assets/thumbs/ba-20022.webp",
+      "imageWidth": 874,
+      "imageHeight": 1251
     },
     {
       "id": "ba-23001",
@@ -2968,7 +3322,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-23001.webp"
+      "thumb": "./assets/thumbs/ba-23001.webp",
+      "imageWidth": 578,
+      "imageHeight": 1024
     },
     {
       "id": "ba-20021",
@@ -2988,7 +3344,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20021.webp"
+      "thumb": "./assets/thumbs/ba-20021.webp",
+      "imageWidth": 996,
+      "imageHeight": 1096
     },
     {
       "id": "ba-23002",
@@ -3008,7 +3366,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-23002.webp"
+      "thumb": "./assets/thumbs/ba-23002.webp",
+      "imageWidth": 612,
+      "imageHeight": 978
     },
     {
       "id": "ba-10074",
@@ -3028,7 +3388,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10074.webp"
+      "thumb": "./assets/thumbs/ba-10074.webp",
+      "imageWidth": 792,
+      "imageHeight": 1294
     },
     {
       "id": "ba-23007",
@@ -3048,7 +3410,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-23007.webp"
+      "thumb": "./assets/thumbs/ba-23007.webp",
+      "imageWidth": 652,
+      "imageHeight": 1333
     },
     {
       "id": "ba-10085",
@@ -3068,7 +3432,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10085.webp"
+      "thumb": "./assets/thumbs/ba-10085.webp",
+      "imageWidth": 428,
+      "imageHeight": 1176
     },
     {
       "id": "ba-23003",
@@ -3088,7 +3454,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-23003.webp"
+      "thumb": "./assets/thumbs/ba-23003.webp",
+      "imageWidth": 606,
+      "imageHeight": 1024
     },
     {
       "id": "ba-20025",
@@ -3108,7 +3476,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20025.webp"
+      "thumb": "./assets/thumbs/ba-20025.webp",
+      "imageWidth": 443,
+      "imageHeight": 1161
     },
     {
       "id": "ba-10002",
@@ -3128,7 +3498,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10002.webp"
+      "thumb": "./assets/thumbs/ba-10002.webp",
+      "imageWidth": 634,
+      "imageHeight": 1024
     },
     {
       "id": "ba-10057",
@@ -3148,7 +3520,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10057.webp"
+      "thumb": "./assets/thumbs/ba-10057.webp",
+      "imageWidth": 876,
+      "imageHeight": 1301
     },
     {
       "id": "ba-20030",
@@ -3168,7 +3542,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20030.webp"
+      "thumb": "./assets/thumbs/ba-20030.webp",
+      "imageWidth": 935,
+      "imageHeight": 1269
     },
     {
       "id": "ba-20007",
@@ -3188,7 +3564,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20007.webp"
+      "thumb": "./assets/thumbs/ba-20007.webp",
+      "imageWidth": 870,
+      "imageHeight": 1222
     },
     {
       "id": "ba-20000",
@@ -3208,7 +3586,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20000.webp"
+      "thumb": "./assets/thumbs/ba-20000.webp",
+      "imageWidth": 612,
+      "imageHeight": 965
     },
     {
       "id": "ba-10003",
@@ -3228,7 +3608,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10003.webp"
+      "thumb": "./assets/thumbs/ba-10003.webp",
+      "imageWidth": 556,
+      "imageHeight": 1024
     },
     {
       "id": "ba-20005",
@@ -3248,7 +3630,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20005.webp"
+      "thumb": "./assets/thumbs/ba-20005.webp",
+      "imageWidth": 1030,
+      "imageHeight": 1219
     },
     {
       "id": "ba-20020",
@@ -3268,7 +3652,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20020.webp"
+      "thumb": "./assets/thumbs/ba-20020.webp",
+      "imageWidth": 884,
+      "imageHeight": 1198
     },
     {
       "id": "ba-10004",
@@ -3288,7 +3674,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10004.webp"
+      "thumb": "./assets/thumbs/ba-10004.webp",
+      "imageWidth": 1400,
+      "imageHeight": 927
     },
     {
       "id": "ba-10022",
@@ -3308,7 +3696,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10022.webp"
+      "thumb": "./assets/thumbs/ba-10022.webp",
+      "imageWidth": 687,
+      "imageHeight": 1128
     },
     {
       "id": "ba-10086",
@@ -3328,7 +3718,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10086.webp"
+      "thumb": "./assets/thumbs/ba-10086.webp",
+      "imageWidth": 968,
+      "imageHeight": 1292
     },
     {
       "id": "ba-10036",
@@ -3348,7 +3740,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10036.webp"
+      "thumb": "./assets/thumbs/ba-10036.webp",
+      "imageWidth": 790,
+      "imageHeight": 1254
     },
     {
       "id": "ba-20028",
@@ -3368,7 +3762,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20028.webp"
+      "thumb": "./assets/thumbs/ba-20028.webp",
+      "imageWidth": 567,
+      "imageHeight": 1262
     },
     {
       "id": "ba-10102",
@@ -3388,7 +3784,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10102.webp"
+      "thumb": "./assets/thumbs/ba-10102.webp",
+      "imageWidth": 458,
+      "imageHeight": 1516
     },
     {
       "id": "ba-20017",
@@ -3408,7 +3806,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20017.webp"
+      "thumb": "./assets/thumbs/ba-20017.webp",
+      "imageWidth": 972,
+      "imageHeight": 1248
     },
     {
       "id": "ba-10005",
@@ -3428,7 +3828,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10005.webp"
+      "thumb": "./assets/thumbs/ba-10005.webp",
+      "imageWidth": 673,
+      "imageHeight": 1024
     },
     {
       "id": "ba-10045",
@@ -3448,7 +3850,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10045.webp"
+      "thumb": "./assets/thumbs/ba-10045.webp",
+      "imageWidth": 866,
+      "imageHeight": 1084
     },
     {
       "id": "ba-10098",
@@ -3468,7 +3872,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10098.webp"
+      "thumb": "./assets/thumbs/ba-10098.webp",
+      "imageWidth": 650,
+      "imageHeight": 1054
     },
     {
       "id": "ba-10099",
@@ -3488,7 +3894,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10099.webp"
+      "thumb": "./assets/thumbs/ba-10099.webp",
+      "imageWidth": 480,
+      "imageHeight": 1054
     },
     {
       "id": "ba-10077",
@@ -3508,7 +3916,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10077.webp"
+      "thumb": "./assets/thumbs/ba-10077.webp",
+      "imageWidth": 894,
+      "imageHeight": 1329
     },
     {
       "id": "ba-10006",
@@ -3528,7 +3938,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10006.webp"
+      "thumb": "./assets/thumbs/ba-10006.webp",
+      "imageWidth": 845,
+      "imageHeight": 1024
     },
     {
       "id": "ba-10023",
@@ -3548,7 +3960,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10023.webp"
+      "thumb": "./assets/thumbs/ba-10023.webp",
+      "imageWidth": 1001,
+      "imageHeight": 1288
     },
     {
       "id": "ba-20016",
@@ -3568,7 +3982,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20016.webp"
+      "thumb": "./assets/thumbs/ba-20016.webp",
+      "imageWidth": 617,
+      "imageHeight": 1114
     },
     {
       "id": "ba-10009",
@@ -3588,7 +4004,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10009.webp"
+      "thumb": "./assets/thumbs/ba-10009.webp",
+      "imageWidth": 810,
+      "imageHeight": 1024
     },
     {
       "id": "ba-10014",
@@ -3608,7 +4026,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10014.webp"
+      "thumb": "./assets/thumbs/ba-10014.webp",
+      "imageWidth": 664,
+      "imageHeight": 1119
     },
     {
       "id": "ba-10046",
@@ -3628,7 +4048,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10046.webp"
+      "thumb": "./assets/thumbs/ba-10046.webp",
+      "imageWidth": 1056,
+      "imageHeight": 1228
     },
     {
       "id": "ba-26002",
@@ -3648,7 +4070,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-26002.webp"
+      "thumb": "./assets/thumbs/ba-26002.webp",
+      "imageWidth": 628,
+      "imageHeight": 1024
     },
     {
       "id": "ba-20015",
@@ -3668,7 +4092,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20015.webp"
+      "thumb": "./assets/thumbs/ba-20015.webp",
+      "imageWidth": 621,
+      "imageHeight": 992
     },
     {
       "id": "ba-10065",
@@ -3688,7 +4114,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10065.webp"
+      "thumb": "./assets/thumbs/ba-10065.webp",
+      "imageWidth": 638,
+      "imageHeight": 1275
     },
     {
       "id": "ba-10096",
@@ -3708,7 +4136,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10096.webp"
+      "thumb": "./assets/thumbs/ba-10096.webp",
+      "imageWidth": 587,
+      "imageHeight": 1260
     },
     {
       "id": "ba-20023",
@@ -3728,7 +4158,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20023.webp"
+      "thumb": "./assets/thumbs/ba-20023.webp",
+      "imageWidth": 447,
+      "imageHeight": 1248
     },
     {
       "id": "ba-10027",
@@ -3748,7 +4180,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10027.webp"
+      "thumb": "./assets/thumbs/ba-10027.webp",
+      "imageWidth": 933,
+      "imageHeight": 1279
     },
     {
       "id": "ba-20001",
@@ -3768,7 +4202,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20001.webp"
+      "thumb": "./assets/thumbs/ba-20001.webp",
+      "imageWidth": 863,
+      "imageHeight": 1024
     },
     {
       "id": "ba-10078",
@@ -3788,7 +4224,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10078.webp"
+      "thumb": "./assets/thumbs/ba-10078.webp",
+      "imageWidth": 998,
+      "imageHeight": 1293
     },
     {
       "id": "ba-10064",
@@ -3808,7 +4246,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10064.webp"
+      "thumb": "./assets/thumbs/ba-10064.webp",
+      "imageWidth": 324,
+      "imageHeight": 1285
     },
     {
       "id": "ba-10088",
@@ -3828,7 +4268,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10088.webp"
+      "thumb": "./assets/thumbs/ba-10088.webp",
+      "imageWidth": 447,
+      "imageHeight": 1290
     },
     {
       "id": "ba-10049",
@@ -3848,7 +4290,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10049.webp"
+      "thumb": "./assets/thumbs/ba-10049.webp",
+      "imageWidth": 755,
+      "imageHeight": 1260
     },
     {
       "id": "ba-10091",
@@ -3868,7 +4312,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10091.webp"
+      "thumb": "./assets/thumbs/ba-10091.webp",
+      "imageWidth": 444,
+      "imageHeight": 1383
     },
     {
       "id": "ba-10083",
@@ -3888,7 +4334,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10083.webp"
+      "thumb": "./assets/thumbs/ba-10083.webp",
+      "imageWidth": 736,
+      "imageHeight": 1280
     },
     {
       "id": "ba-10093",
@@ -3908,7 +4356,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10093.webp"
+      "thumb": "./assets/thumbs/ba-10093.webp",
+      "imageWidth": 663,
+      "imageHeight": 1222
     },
     {
       "id": "ba-26012",
@@ -3928,7 +4378,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-26012.webp"
+      "thumb": "./assets/thumbs/ba-26012.webp",
+      "imageWidth": 641,
+      "imageHeight": 1361
     },
     {
       "id": "ba-10020",
@@ -3948,7 +4400,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10020.webp"
+      "thumb": "./assets/thumbs/ba-10020.webp",
+      "imageWidth": 754,
+      "imageHeight": 1174
     },
     {
       "id": "ba-10050",
@@ -3968,7 +4422,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10050.webp"
+      "thumb": "./assets/thumbs/ba-10050.webp",
+      "imageWidth": 693,
+      "imageHeight": 1017
     },
     {
       "id": "ba-10084",
@@ -3988,7 +4444,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10084.webp"
+      "thumb": "./assets/thumbs/ba-10084.webp",
+      "imageWidth": 422,
+      "imageHeight": 1207
     },
     {
       "id": "ba-26001",
@@ -4008,7 +4466,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-26001.webp"
+      "thumb": "./assets/thumbs/ba-26001.webp",
+      "imageWidth": 512,
+      "imageHeight": 1024
     },
     {
       "id": "ba-10076",
@@ -4028,7 +4488,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10076.webp"
+      "thumb": "./assets/thumbs/ba-10076.webp",
+      "imageWidth": 872,
+      "imageHeight": 1206
     },
     {
       "id": "ba-10063",
@@ -4048,7 +4510,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10063.webp"
+      "thumb": "./assets/thumbs/ba-10063.webp",
+      "imageWidth": 870,
+      "imageHeight": 1207
     },
     {
       "id": "ba-10007",
@@ -4068,7 +4532,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10007.webp"
+      "thumb": "./assets/thumbs/ba-10007.webp",
+      "imageWidth": 729,
+      "imageHeight": 1024
     },
     {
       "id": "ba-20033",
@@ -4088,7 +4554,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20033.webp"
+      "thumb": "./assets/thumbs/ba-20033.webp",
+      "imageWidth": 1020,
+      "imageHeight": 1367
     },
     {
       "id": "ba-10054",
@@ -4108,7 +4576,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10054.webp"
+      "thumb": "./assets/thumbs/ba-10054.webp",
+      "imageWidth": 832,
+      "imageHeight": 1293
     },
     {
       "id": "ba-23008",
@@ -4128,7 +4598,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-23008.webp"
+      "thumb": "./assets/thumbs/ba-23008.webp",
+      "imageWidth": 569,
+      "imageHeight": 1263
     },
     {
       "id": "ba-10037",
@@ -4148,7 +4620,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10037.webp"
+      "thumb": "./assets/thumbs/ba-10037.webp",
+      "imageWidth": 611,
+      "imageHeight": 1233
     },
     {
       "id": "ba-20003",
@@ -4168,7 +4642,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20003.webp"
+      "thumb": "./assets/thumbs/ba-20003.webp",
+      "imageWidth": 886,
+      "imageHeight": 1504
     },
     {
       "id": "ba-20004",
@@ -4188,7 +4664,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20004.webp"
+      "thumb": "./assets/thumbs/ba-20004.webp",
+      "imageWidth": 713,
+      "imageHeight": 993
     },
     {
       "id": "ba-10060",
@@ -4208,7 +4686,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10060.webp"
+      "thumb": "./assets/thumbs/ba-10060.webp",
+      "imageWidth": 892,
+      "imageHeight": 1139
     },
     {
       "id": "ba-10075",
@@ -4228,7 +4708,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10075.webp"
+      "thumb": "./assets/thumbs/ba-10075.webp",
+      "imageWidth": 572,
+      "imageHeight": 928
     },
     {
       "id": "ba-10016",
@@ -4248,7 +4730,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10016.webp"
+      "thumb": "./assets/thumbs/ba-10016.webp",
+      "imageWidth": 773,
+      "imageHeight": 1028
     },
     {
       "id": "ba-10095",
@@ -4268,7 +4752,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10095.webp"
+      "thumb": "./assets/thumbs/ba-10095.webp",
+      "imageWidth": 738,
+      "imageHeight": 1114
     },
     {
       "id": "ba-10059",
@@ -4288,7 +4774,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10059.webp"
+      "thumb": "./assets/thumbs/ba-10059.webp",
+      "imageWidth": 816,
+      "imageHeight": 1367
     },
     {
       "id": "ba-10034",
@@ -4308,7 +4796,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10034.webp"
+      "thumb": "./assets/thumbs/ba-10034.webp",
+      "imageWidth": 798,
+      "imageHeight": 1274
     },
     {
       "id": "ba-20029",
@@ -4328,7 +4818,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20029.webp"
+      "thumb": "./assets/thumbs/ba-20029.webp",
+      "imageWidth": 1460,
+      "imageHeight": 1133
     },
     {
       "id": "ba-10070",
@@ -4348,7 +4840,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10070.webp"
+      "thumb": "./assets/thumbs/ba-10070.webp",
+      "imageWidth": 638,
+      "imageHeight": 1408
     },
     {
       "id": "ba-10058",
@@ -4368,7 +4862,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10058.webp"
+      "thumb": "./assets/thumbs/ba-10058.webp",
+      "imageWidth": 942,
+      "imageHeight": 1333
     },
     {
       "id": "ba-20026",
@@ -4388,7 +4884,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20026.webp"
+      "thumb": "./assets/thumbs/ba-20026.webp",
+      "imageWidth": 570,
+      "imageHeight": 1249
     },
     {
       "id": "ba-10079",
@@ -4408,7 +4906,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10079.webp"
+      "thumb": "./assets/thumbs/ba-10079.webp",
+      "imageWidth": 346,
+      "imageHeight": 1137
     },
     {
       "id": "ba-10041",
@@ -4428,7 +4928,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10041.webp"
+      "thumb": "./assets/thumbs/ba-10041.webp",
+      "imageWidth": 895,
+      "imageHeight": 1327
     },
     {
       "id": "ba-10038",
@@ -4448,7 +4950,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10038.webp"
+      "thumb": "./assets/thumbs/ba-10038.webp",
+      "imageWidth": 431,
+      "imageHeight": 1186
     },
     {
       "id": "ba-10071",
@@ -4468,7 +4972,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10071.webp"
+      "thumb": "./assets/thumbs/ba-10071.webp",
+      "imageWidth": 570,
+      "imageHeight": 1226
     },
     {
       "id": "ba-10039",
@@ -4488,7 +4994,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10039.webp"
+      "thumb": "./assets/thumbs/ba-10039.webp",
+      "imageWidth": 543,
+      "imageHeight": 1151
     },
     {
       "id": "ba-26010",
@@ -4508,7 +5016,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-26010.webp"
+      "thumb": "./assets/thumbs/ba-26010.webp",
+      "imageWidth": 603,
+      "imageHeight": 1133
     },
     {
       "id": "ba-10097",
@@ -4528,7 +5038,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10097.webp"
+      "thumb": "./assets/thumbs/ba-10097.webp",
+      "imageWidth": 506,
+      "imageHeight": 1295
     },
     {
       "id": "ba-20018",
@@ -4548,7 +5060,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20018.webp"
+      "thumb": "./assets/thumbs/ba-20018.webp",
+      "imageWidth": 603,
+      "imageHeight": 937
     },
     {
       "id": "ba-10094",
@@ -4568,7 +5082,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10094.webp"
+      "thumb": "./assets/thumbs/ba-10094.webp",
+      "imageWidth": 867,
+      "imageHeight": 1226
     },
     {
       "id": "ba-10032",
@@ -4588,7 +5104,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10032.webp"
+      "thumb": "./assets/thumbs/ba-10032.webp",
+      "imageWidth": 595,
+      "imageHeight": 1150
     },
     {
       "id": "ba-20024",
@@ -4608,7 +5126,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20024.webp"
+      "thumb": "./assets/thumbs/ba-20024.webp",
+      "imageWidth": 796,
+      "imageHeight": 1185
     },
     {
       "id": "ba-10029",
@@ -4628,7 +5148,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10029.webp"
+      "thumb": "./assets/thumbs/ba-10029.webp",
+      "imageWidth": 323,
+      "imageHeight": 1026
     },
     {
       "id": "ba-10008",
@@ -4648,7 +5170,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10008.webp"
+      "thumb": "./assets/thumbs/ba-10008.webp",
+      "imageWidth": 724,
+      "imageHeight": 1003
     },
     {
       "id": "ba-10026",
@@ -4668,7 +5192,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10026.webp"
+      "thumb": "./assets/thumbs/ba-10026.webp",
+      "imageWidth": 613,
+      "imageHeight": 1026
     },
     {
       "id": "ba-10052",
@@ -4688,7 +5214,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10052.webp"
+      "thumb": "./assets/thumbs/ba-10052.webp",
+      "imageWidth": 696,
+      "imageHeight": 1260
     },
     {
       "id": "ba-20010",
@@ -4708,7 +5236,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20010.webp"
+      "thumb": "./assets/thumbs/ba-20010.webp",
+      "imageWidth": 1005,
+      "imageHeight": 1200
     },
     {
       "id": "ba-26006",
@@ -4728,7 +5258,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-26006.webp"
+      "thumb": "./assets/thumbs/ba-26006.webp",
+      "imageWidth": 705,
+      "imageHeight": 990
     },
     {
       "id": "ba-10044",
@@ -4748,7 +5280,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10044.webp"
+      "thumb": "./assets/thumbs/ba-10044.webp",
+      "imageWidth": 1410,
+      "imageHeight": 1269
     },
     {
       "id": "ba-10068",
@@ -4768,7 +5302,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10068.webp"
+      "thumb": "./assets/thumbs/ba-10068.webp",
+      "imageWidth": 560,
+      "imageHeight": 1010
     },
     {
       "id": "ba-10082",
@@ -4788,7 +5324,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10082.webp"
+      "thumb": "./assets/thumbs/ba-10082.webp",
+      "imageWidth": 861,
+      "imageHeight": 1353
     },
     {
       "id": "ba-10069",
@@ -4808,7 +5346,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10069.webp"
+      "thumb": "./assets/thumbs/ba-10069.webp",
+      "imageWidth": 444,
+      "imageHeight": 1303
     },
     {
       "id": "ba-10072",
@@ -4828,7 +5368,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10072.webp"
+      "thumb": "./assets/thumbs/ba-10072.webp",
+      "imageWidth": 605,
+      "imageHeight": 1235
     },
     {
       "id": "ba-20014",
@@ -4848,7 +5390,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20014.webp"
+      "thumb": "./assets/thumbs/ba-20014.webp",
+      "imageWidth": 458,
+      "imageHeight": 1172
     },
     {
       "id": "ba-10061",
@@ -4868,7 +5412,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10061.webp"
+      "thumb": "./assets/thumbs/ba-10061.webp",
+      "imageWidth": 758,
+      "imageHeight": 1385
     },
     {
       "id": "ba-10048",
@@ -4888,7 +5434,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10048.webp"
+      "thumb": "./assets/thumbs/ba-10048.webp",
+      "imageWidth": 847,
+      "imageHeight": 1378
     },
     {
       "id": "ba-10101",
@@ -4908,7 +5456,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10101.webp"
+      "thumb": "./assets/thumbs/ba-10101.webp",
+      "imageWidth": 472,
+      "imageHeight": 1356
     },
     {
       "id": "ba-26011",
@@ -4928,7 +5478,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-26011.webp"
+      "thumb": "./assets/thumbs/ba-26011.webp",
+      "imageWidth": 428,
+      "imageHeight": 1161
     },
     {
       "id": "ba-20002",
@@ -4948,7 +5500,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20002.webp"
+      "thumb": "./assets/thumbs/ba-20002.webp",
+      "imageWidth": 631,
+      "imageHeight": 972
     },
     {
       "id": "ba-20006",
@@ -4968,7 +5522,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20006.webp"
+      "thumb": "./assets/thumbs/ba-20006.webp",
+      "imageWidth": 751,
+      "imageHeight": 979
     },
     {
       "id": "ba-20012",
@@ -4988,7 +5544,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20012.webp"
+      "thumb": "./assets/thumbs/ba-20012.webp",
+      "imageWidth": 687,
+      "imageHeight": 1263
     },
     {
       "id": "ba-20011",
@@ -5008,7 +5566,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20011.webp"
+      "thumb": "./assets/thumbs/ba-20011.webp",
+      "imageWidth": 484,
+      "imageHeight": 1183
     },
     {
       "id": "ba-20036",
@@ -5028,7 +5588,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20036.webp"
+      "thumb": "./assets/thumbs/ba-20036.webp",
+      "imageWidth": 427,
+      "imageHeight": 1118
     },
     {
       "id": "ba-10056",
@@ -5048,7 +5610,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10056.webp"
+      "thumb": "./assets/thumbs/ba-10056.webp",
+      "imageWidth": 996,
+      "imageHeight": 1173
     },
     {
       "id": "ba-26003",
@@ -5068,7 +5632,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-26003.webp"
+      "thumb": "./assets/thumbs/ba-26003.webp",
+      "imageWidth": 495,
+      "imageHeight": 1024
     },
     {
       "id": "ba-10055",
@@ -5088,7 +5654,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10055.webp"
+      "thumb": "./assets/thumbs/ba-10055.webp",
+      "imageWidth": 522,
+      "imageHeight": 1040
     },
     {
       "id": "ba-20031",
@@ -5108,7 +5676,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20031.webp"
+      "thumb": "./assets/thumbs/ba-20031.webp",
+      "imageWidth": 819,
+      "imageHeight": 1224
     },
     {
       "id": "ba-26004",
@@ -5128,7 +5698,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-26004.webp"
+      "thumb": "./assets/thumbs/ba-26004.webp",
+      "imageWidth": 627,
+      "imageHeight": 970
     },
     {
       "id": "ba-10010",
@@ -5148,7 +5720,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10010.webp"
+      "thumb": "./assets/thumbs/ba-10010.webp",
+      "imageWidth": 540,
+      "imageHeight": 1024
     },
     {
       "id": "ba-10024",
@@ -5168,7 +5742,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10024.webp"
+      "thumb": "./assets/thumbs/ba-10024.webp",
+      "imageWidth": 818,
+      "imageHeight": 1102
     },
     {
       "id": "ba-20027",
@@ -5188,7 +5764,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20027.webp"
+      "thumb": "./assets/thumbs/ba-20027.webp",
+      "imageWidth": 447,
+      "imageHeight": 1266
     },
     {
       "id": "ba-10100",
@@ -5208,7 +5786,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10100.webp"
+      "thumb": "./assets/thumbs/ba-10100.webp",
+      "imageWidth": 1120,
+      "imageHeight": 1517
     },
     {
       "id": "ba-23006",
@@ -5228,7 +5808,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-23006.webp"
+      "thumb": "./assets/thumbs/ba-23006.webp",
+      "imageWidth": 701,
+      "imageHeight": 1039
     },
     {
       "id": "ba-26008",
@@ -5248,7 +5830,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-26008.webp"
+      "thumb": "./assets/thumbs/ba-26008.webp",
+      "imageWidth": 971,
+      "imageHeight": 1219
     },
     {
       "id": "ba-10080",
@@ -5268,7 +5852,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10080.webp"
+      "thumb": "./assets/thumbs/ba-10080.webp",
+      "imageWidth": 547,
+      "imageHeight": 1194
     },
     {
       "id": "ba-10011",
@@ -5288,7 +5874,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10011.webp"
+      "thumb": "./assets/thumbs/ba-10011.webp",
+      "imageWidth": 494,
+      "imageHeight": 1024
     },
     {
       "id": "ba-10025",
@@ -5308,7 +5896,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10025.webp"
+      "thumb": "./assets/thumbs/ba-10025.webp",
+      "imageWidth": 685,
+      "imageHeight": 1007
     },
     {
       "id": "ba-10012",
@@ -5328,7 +5918,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10012.webp"
+      "thumb": "./assets/thumbs/ba-10012.webp",
+      "imageWidth": 655,
+      "imageHeight": 1024
     },
     {
       "id": "ba-10062",
@@ -5348,7 +5940,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10062.webp"
+      "thumb": "./assets/thumbs/ba-10062.webp",
+      "imageWidth": 645,
+      "imageHeight": 1368
     },
     {
       "id": "ba-10067",
@@ -5368,7 +5962,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10067.webp"
+      "thumb": "./assets/thumbs/ba-10067.webp",
+      "imageWidth": 412,
+      "imageHeight": 1422
     },
     {
       "id": "ba-20035",
@@ -5388,7 +5984,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-20035.webp"
+      "thumb": "./assets/thumbs/ba-20035.webp",
+      "imageWidth": 468,
+      "imageHeight": 1314
     },
     {
       "id": "ba-10040",
@@ -5408,7 +6006,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10040.webp"
+      "thumb": "./assets/thumbs/ba-10040.webp",
+      "imageWidth": 514,
+      "imageHeight": 1152
     },
     {
       "id": "ba-10013",
@@ -5428,7 +6028,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10013.webp"
+      "thumb": "./assets/thumbs/ba-10013.webp",
+      "imageWidth": 849,
+      "imageHeight": 1044
     },
     {
       "id": "ba-10035",
@@ -5448,7 +6050,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10035.webp"
+      "thumb": "./assets/thumbs/ba-10035.webp",
+      "imageWidth": 763,
+      "imageHeight": 1245
     },
     {
       "id": "ba-10073",
@@ -5468,7 +6072,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10073.webp"
+      "thumb": "./assets/thumbs/ba-10073.webp",
+      "imageWidth": 791,
+      "imageHeight": 1299
     },
     {
       "id": "ba-10090",
@@ -5488,7 +6094,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10090.webp"
+      "thumb": "./assets/thumbs/ba-10090.webp",
+      "imageWidth": 625,
+      "imageHeight": 1311
     },
     {
       "id": "ba-10051",
@@ -5508,7 +6116,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10051.webp"
+      "thumb": "./assets/thumbs/ba-10051.webp",
+      "imageWidth": 1115,
+      "imageHeight": 1400
     },
     {
       "id": "ba-23004",
@@ -5528,7 +6138,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-23004.webp"
+      "thumb": "./assets/thumbs/ba-23004.webp",
+      "imageWidth": 678,
+      "imageHeight": 1024
     },
     {
       "id": "ba-10033",
@@ -5548,7 +6160,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10033.webp"
+      "thumb": "./assets/thumbs/ba-10033.webp",
+      "imageWidth": 1004,
+      "imageHeight": 1319
     },
     {
       "id": "ba-10043",
@@ -5568,7 +6182,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10043.webp"
+      "thumb": "./assets/thumbs/ba-10043.webp",
+      "imageWidth": 1247,
+      "imageHeight": 1514
     },
     {
       "id": "ba-10092",
@@ -5588,7 +6204,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10092.webp"
+      "thumb": "./assets/thumbs/ba-10092.webp",
+      "imageWidth": 524,
+      "imageHeight": 1263
     },
     {
       "id": "ba-26005",
@@ -5608,7 +6226,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-26005.webp"
+      "thumb": "./assets/thumbs/ba-26005.webp",
+      "imageWidth": 497,
+      "imageHeight": 1024
     },
     {
       "id": "ba-10081",
@@ -5628,7 +6248,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10081.webp"
+      "thumb": "./assets/thumbs/ba-10081.webp",
+      "imageWidth": 1268,
+      "imageHeight": 1217
     },
     {
       "id": "ba-10053",
@@ -5648,7 +6270,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10053.webp"
+      "thumb": "./assets/thumbs/ba-10053.webp",
+      "imageWidth": 765,
+      "imageHeight": 1215
     },
     {
       "id": "ba-10018",
@@ -5668,7 +6292,9 @@
       "squad": "",
       "variant": false,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-10018.webp"
+      "thumb": "./assets/thumbs/ba-10018.webp",
+      "imageWidth": 600,
+      "imageHeight": 1095
     },
     {
       "id": "ba-26009",
@@ -5688,7 +6314,9 @@
       "squad": "",
       "variant": true,
       "license": "游戏角色美术权利归原权利人，资源索引来自 SchaleDB",
-      "thumb": "./assets/thumbs/ba-26009.webp"
+      "thumb": "./assets/thumbs/ba-26009.webp",
+      "imageWidth": 638,
+      "imageHeight": 1070
     },
     {
       "id": "genshin-10000091",
@@ -5705,7 +6333,9 @@
       "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/genshin/splash/10000091.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/genshin-10000091.webp"
+      "thumb": "./assets/thumbs/genshin-10000091.webp",
+      "imageWidth": 2048,
+      "imageHeight": 1024
     },
     {
       "id": "genshin-10000037",
@@ -5722,7 +6352,9 @@
       "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/genshin/splash/10000037.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/genshin-10000037.webp"
+      "thumb": "./assets/thumbs/genshin-10000037.webp",
+      "imageWidth": 2048,
+      "imageHeight": 1024
     },
     {
       "id": "genshin-10000002",
@@ -5739,7 +6371,9 @@
       "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/genshin/splash/10000002.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/genshin-10000002.webp"
+      "thumb": "./assets/thumbs/genshin-10000002.webp",
+      "imageWidth": 2048,
+      "imageHeight": 1024
     },
     {
       "id": "genshin-10000073",
@@ -5756,7 +6390,9 @@
       "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/genshin/splash/10000073.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/genshin-10000073.webp"
+      "thumb": "./assets/thumbs/genshin-10000073.webp",
+      "imageWidth": 2048,
+      "imageHeight": 1024
     },
     {
       "id": "genshin-10000046",
@@ -5773,7 +6409,9 @@
       "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/genshin/splash/10000046.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/genshin-10000046.webp"
+      "thumb": "./assets/thumbs/genshin-10000046.webp",
+      "imageWidth": 2048,
+      "imageHeight": 1024
     },
     {
       "id": "genshin-10000089",
@@ -5790,7 +6428,9 @@
       "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/genshin/splash/10000089.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/genshin-10000089.webp"
+      "thumb": "./assets/thumbs/genshin-10000089.webp",
+      "imageWidth": 2048,
+      "imageHeight": 1024
     },
     {
       "id": "genshin-10000096",
@@ -5807,7 +6447,9 @@
       "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/genshin/splash/10000096.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/genshin-10000096.webp"
+      "thumb": "./assets/thumbs/genshin-10000096.webp",
+      "imageWidth": 2048,
+      "imageHeight": 1024
     },
     {
       "id": "genshin-10000052",
@@ -5824,7 +6466,9 @@
       "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/genshin/splash/10000052.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/genshin-10000052.webp"
+      "thumb": "./assets/thumbs/genshin-10000052.webp",
+      "imageWidth": 1648,
+      "imageHeight": 1024
     },
     {
       "id": "gfl2-klukai",
@@ -5841,7 +6485,9 @@
       "originalImage": "https://iopwiki.com/images/e/e4/Klukai_Whole.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/gfl2-klukai.webp"
+      "thumb": "./assets/thumbs/gfl2-klukai.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "gfl2-nemesis",
@@ -5858,7 +6504,9 @@
       "originalImage": "https://iopwiki.com/images/a/aa/Nemesis_Whole.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/gfl2-nemesis.webp"
+      "thumb": "./assets/thumbs/gfl2-nemesis.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "gfl2-leva",
@@ -5875,7 +6523,9 @@
       "originalImage": "https://iopwiki.com/images/1/14/Leva_whole.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/gfl2-leva.webp"
+      "thumb": "./assets/thumbs/gfl2-leva.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "wiki-2b",
@@ -5896,7 +6546,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "2B",
-      "thumb": "./assets/thumbs/wiki-2b.webp"
+      "thumb": "./assets/thumbs/wiki-2b.webp",
+      "imageWidth": 1423,
+      "imageHeight": 1920
     },
     {
       "id": "wiki-9s",
@@ -5917,7 +6569,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "9S",
-      "thumb": "./assets/thumbs/wiki-9s.webp"
+      "thumb": "./assets/thumbs/wiki-9s.webp",
+      "imageWidth": 506,
+      "imageHeight": 924
     },
     {
       "id": "wiki-a2",
@@ -5938,7 +6592,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "A2",
-      "thumb": "./assets/thumbs/wiki-a2.webp"
+      "thumb": "./assets/thumbs/wiki-a2.webp",
+      "imageWidth": 742,
+      "imageHeight": 2019
     },
     {
       "id": "wiki-ade",
@@ -5959,7 +6615,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Ade",
-      "thumb": "./assets/thumbs/wiki-ade.webp"
+      "thumb": "./assets/thumbs/wiki-ade.webp",
+      "imageWidth": 496,
+      "imageHeight": 614
     },
     {
       "id": "wiki-ade-agent-bunny",
@@ -5980,7 +6638,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Ade",
-      "thumb": "./assets/thumbs/wiki-ade-agent-bunny.webp"
+      "thumb": "./assets/thumbs/wiki-ade-agent-bunny.webp",
+      "imageWidth": 503,
+      "imageHeight": 965
     },
     {
       "id": "c172",
@@ -6001,7 +6661,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Admi",
-      "thumb": "./assets/thumbs/c172.webp"
+      "thumb": "./assets/thumbs/c172.webp",
+      "imageWidth": 333,
+      "imageHeight": 816
     },
     {
       "id": "c191",
@@ -6022,7 +6684,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Alice",
-      "thumb": "./assets/thumbs/c191.webp"
+      "thumb": "./assets/thumbs/c191.webp",
+      "imageWidth": 395,
+      "imageHeight": 791
     },
     {
       "id": "wiki-alice-wonderland-bunny",
@@ -6043,7 +6707,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Alice",
-      "thumb": "./assets/thumbs/wiki-alice-wonderland-bunny.webp"
+      "thumb": "./assets/thumbs/wiki-alice-wonderland-bunny.webp",
+      "imageWidth": 486,
+      "imageHeight": 895
     },
     {
       "id": "c351",
@@ -6064,7 +6730,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Anchor",
-      "thumb": "./assets/thumbs/c351.webp"
+      "thumb": "./assets/thumbs/c351.webp",
+      "imageWidth": 789,
+      "imageHeight": 945
     },
     {
       "id": "c012",
@@ -6085,7 +6753,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Anis",
-      "thumb": "./assets/thumbs/c012.webp"
+      "thumb": "./assets/thumbs/c012.webp",
+      "imageWidth": 415,
+      "imageHeight": 877
     },
     {
       "id": "c015",
@@ -6106,7 +6776,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Anis",
-      "thumb": "./assets/thumbs/c015.webp"
+      "thumb": "./assets/thumbs/c015.webp",
+      "imageWidth": 643,
+      "imageHeight": 994
     },
     {
       "id": "wiki-anis-star",
@@ -6127,7 +6799,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Anis",
-      "thumb": "./assets/thumbs/wiki-anis-star.webp"
+      "thumb": "./assets/thumbs/wiki-anis-star.webp",
+      "imageWidth": 1496,
+      "imageHeight": 2107
     },
     {
       "id": "c121",
@@ -6148,7 +6822,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Anne",
-      "thumb": "./assets/thumbs/c121.webp"
+      "thumb": "./assets/thumbs/c121.webp",
+      "imageWidth": 480,
+      "imageHeight": 762
     },
     {
       "id": "wiki-arcana",
@@ -6169,7 +6845,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Arcana",
-      "thumb": "./assets/thumbs/wiki-arcana.webp"
+      "thumb": "./assets/thumbs/wiki-arcana.webp",
+      "imageWidth": 389,
+      "imageHeight": 947
     },
     {
       "id": "c432",
@@ -6190,7 +6868,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Aria",
-      "thumb": "./assets/thumbs/c432.webp"
+      "thumb": "./assets/thumbs/c432.webp",
+      "imageWidth": 406,
+      "imageHeight": 923
     },
     {
       "id": "wiki-bay",
@@ -6211,7 +6891,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Bay",
-      "thumb": "./assets/thumbs/wiki-bay.webp"
+      "thumb": "./assets/thumbs/wiki-bay.webp",
+      "imageWidth": 435,
+      "imageHeight": 859
     },
     {
       "id": "c060",
@@ -6232,7 +6914,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Belorta",
-      "thumb": "./assets/thumbs/c060.webp"
+      "thumb": "./assets/thumbs/c060.webp",
+      "imageWidth": 354,
+      "imageHeight": 703
     },
     {
       "id": "c381",
@@ -6253,7 +6937,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Biscuit",
-      "thumb": "./assets/thumbs/c381.webp"
+      "thumb": "./assets/thumbs/c381.webp",
+      "imageWidth": 547,
+      "imageHeight": 819
     },
     {
       "id": "c270",
@@ -6274,7 +6960,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Blanc",
-      "thumb": "./assets/thumbs/c270.webp"
+      "thumb": "./assets/thumbs/c270.webp",
+      "imageWidth": 710,
+      "imageHeight": 1001
     },
     {
       "id": "c070",
@@ -6295,7 +6983,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Brid",
-      "thumb": "./assets/thumbs/c070.webp"
+      "thumb": "./assets/thumbs/c070.webp",
+      "imageWidth": 758,
+      "imageHeight": 863
     },
     {
       "id": "c080",
@@ -6316,7 +7006,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Centi",
-      "thumb": "./assets/thumbs/c080.webp"
+      "thumb": "./assets/thumbs/c080.webp",
+      "imageWidth": 338,
+      "imageHeight": 899
     },
     {
       "id": "wiki-chime",
@@ -6337,7 +7029,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Chime",
-      "thumb": "./assets/thumbs/wiki-chime.webp"
+      "thumb": "./assets/thumbs/wiki-chime.webp",
+      "imageWidth": 461,
+      "imageHeight": 743
     },
     {
       "id": "wiki-cinderella",
@@ -6358,7 +7052,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Cinderella",
-      "thumb": "./assets/thumbs/wiki-cinderella.webp"
+      "thumb": "./assets/thumbs/wiki-cinderella.webp",
+      "imageWidth": 918,
+      "imageHeight": 851
     },
     {
       "id": "wiki-clay",
@@ -6379,7 +7075,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Clay",
-      "thumb": "./assets/thumbs/wiki-clay.webp"
+      "thumb": "./assets/thumbs/wiki-clay.webp",
+      "imageWidth": 486,
+      "imageHeight": 919
     },
     {
       "id": "c311",
@@ -6400,7 +7098,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Cocoa",
-      "thumb": "./assets/thumbs/c311.webp"
+      "thumb": "./assets/thumbs/c311.webp",
+      "imageWidth": 413,
+      "imageHeight": 752
     },
     {
       "id": "c110",
@@ -6421,7 +7121,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Crow",
-      "thumb": "./assets/thumbs/c110.webp"
+      "thumb": "./assets/thumbs/c110.webp",
+      "imageWidth": 485,
+      "imageHeight": 943
     },
     {
       "id": "wiki-crown",
@@ -6442,7 +7144,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Crown",
-      "thumb": "./assets/thumbs/wiki-crown.webp"
+      "thumb": "./assets/thumbs/wiki-crown.webp",
+      "imageWidth": 1014,
+      "imageHeight": 1137
     },
     {
       "id": "c040",
@@ -6463,7 +7167,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "D",
-      "thumb": "./assets/thumbs/c040.webp"
+      "thumb": "./assets/thumbs/c040.webp",
+      "imageWidth": 646,
+      "imageHeight": 902
     },
     {
       "id": "c020",
@@ -6484,7 +7190,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Delta",
-      "thumb": "./assets/thumbs/c020.webp"
+      "thumb": "./assets/thumbs/c020.webp",
+      "imageWidth": 444,
+      "imageHeight": 794
     },
     {
       "id": "c072",
@@ -6505,7 +7213,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Diesel",
-      "thumb": "./assets/thumbs/c072.webp"
+      "thumb": "./assets/thumbs/c072.webp",
+      "imageWidth": 461,
+      "imageHeight": 910
     },
     {
       "id": "c202",
@@ -6526,7 +7236,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Dolla",
-      "thumb": "./assets/thumbs/c202.webp"
+      "thumb": "./assets/thumbs/c202.webp",
+      "imageWidth": 391,
+      "imageHeight": 853
     },
     {
       "id": "c233",
@@ -6547,7 +7259,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Dorothy",
-      "thumb": "./assets/thumbs/c233.webp"
+      "thumb": "./assets/thumbs/c233.webp",
+      "imageWidth": 803,
+      "imageHeight": 962
     },
     {
       "id": "c101",
@@ -6568,7 +7282,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Drake",
-      "thumb": "./assets/thumbs/c101.webp"
+      "thumb": "./assets/thumbs/c101.webp",
+      "imageWidth": 347,
+      "imageHeight": 928
     },
     {
       "id": "wiki-ein",
@@ -6589,7 +7305,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Ein",
-      "thumb": "./assets/thumbs/wiki-ein.webp"
+      "thumb": "./assets/thumbs/wiki-ein.webp",
+      "imageWidth": 681,
+      "imageHeight": 808
     },
     {
       "id": "wiki-elegg",
@@ -6610,7 +7328,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Elegg",
-      "thumb": "./assets/thumbs/wiki-elegg.webp"
+      "thumb": "./assets/thumbs/wiki-elegg.webp",
+      "imageWidth": 400,
+      "imageHeight": 746
     },
     {
       "id": "c090",
@@ -6631,7 +7351,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Emma",
-      "thumb": "./assets/thumbs/c090.webp"
+      "thumb": "./assets/thumbs/c090.webp",
+      "imageWidth": 327,
+      "imageHeight": 923
     },
     {
       "id": "c241",
@@ -6652,7 +7374,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Epinel",
-      "thumb": "./assets/thumbs/c241.webp"
+      "thumb": "./assets/thumbs/c241.webp",
+      "imageWidth": 456,
+      "imageHeight": 632
     },
     {
       "id": "c291",
@@ -6673,7 +7397,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Ether",
-      "thumb": "./assets/thumbs/c291.webp"
+      "thumb": "./assets/thumbs/c291.webp",
+      "imageWidth": 673,
+      "imageHeight": 916
     },
     {
       "id": "c092",
@@ -6694,7 +7420,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Eunhwa",
-      "thumb": "./assets/thumbs/c092.webp"
+      "thumb": "./assets/thumbs/c092.webp",
+      "imageWidth": 413,
+      "imageHeight": 1007
     },
     {
       "id": "c210",
@@ -6715,7 +7443,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Exia",
-      "thumb": "./assets/thumbs/c210.webp"
+      "thumb": "./assets/thumbs/c210.webp",
+      "imageWidth": 259,
+      "imageHeight": 880
     },
     {
       "id": "wiki-flora",
@@ -6736,7 +7466,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Flora",
-      "thumb": "./assets/thumbs/wiki-flora.webp"
+      "thumb": "./assets/thumbs/wiki-flora.webp",
+      "imageWidth": 540,
+      "imageHeight": 822
     },
     {
       "id": "c242",
@@ -6757,7 +7489,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Folkwang",
-      "thumb": "./assets/thumbs/c242.webp"
+      "thumb": "./assets/thumbs/c242.webp",
+      "imageWidth": 341,
+      "imageHeight": 948
     },
     {
       "id": "c142",
@@ -6778,7 +7512,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Frima",
-      "thumb": "./assets/thumbs/c142.webp"
+      "thumb": "./assets/thumbs/c142.webp",
+      "imageWidth": 462,
+      "imageHeight": 855
     },
     {
       "id": "wiki-grave",
@@ -6799,7 +7535,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Grave",
-      "thumb": "./assets/thumbs/wiki-grave.webp"
+      "thumb": "./assets/thumbs/wiki-grave.webp",
+      "imageWidth": 581,
+      "imageHeight": 843
     },
     {
       "id": "c180",
@@ -6820,7 +7558,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Guillotine",
-      "thumb": "./assets/thumbs/c180.webp"
+      "thumb": "./assets/thumbs/c180.webp",
+      "imageWidth": 416,
+      "imageHeight": 719
     },
     {
       "id": "c400",
@@ -6841,7 +7581,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Guilty",
-      "thumb": "./assets/thumbs/c400.webp"
+      "thumb": "./assets/thumbs/c400.webp",
+      "imageWidth": 541,
+      "imageHeight": 924
     },
     {
       "id": "c230",
@@ -6862,7 +7604,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Harran",
-      "thumb": "./assets/thumbs/c230.webp"
+      "thumb": "./assets/thumbs/c230.webp",
+      "imageWidth": 896,
+      "imageHeight": 1003
     },
     {
       "id": "c352",
@@ -6883,7 +7627,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Helm",
-      "thumb": "./assets/thumbs/c352.webp"
+      "thumb": "./assets/thumbs/c352.webp",
+      "imageWidth": 690,
+      "imageHeight": 1024
     },
     {
       "id": "c353",
@@ -6904,7 +7650,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Helm",
-      "thumb": "./assets/thumbs/c353.webp"
+      "thumb": "./assets/thumbs/c353.webp",
+      "imageWidth": 393,
+      "imageHeight": 984
     },
     {
       "id": "c802",
@@ -6925,7 +7673,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Himeno",
-      "thumb": "./assets/thumbs/c802.webp"
+      "thumb": "./assets/thumbs/c802.webp",
+      "imageWidth": 320,
+      "imageHeight": 948
     },
     {
       "id": "wiki-indivilia",
@@ -6946,7 +7696,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Indivilia",
-      "thumb": "./assets/thumbs/wiki-indivilia.webp"
+      "thumb": "./assets/thumbs/wiki-indivilia.webp",
+      "imageWidth": 558,
+      "imageHeight": 1009
     },
     {
       "id": "c231",
@@ -6967,7 +7719,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Isabel",
-      "thumb": "./assets/thumbs/c231.webp"
+      "thumb": "./assets/thumbs/c231.webp",
+      "imageWidth": 1024,
+      "imageHeight": 838
     },
     {
       "id": "c111",
@@ -6988,7 +7742,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Jackal",
-      "thumb": "./assets/thumbs/c111.webp"
+      "thumb": "./assets/thumbs/c111.webp",
+      "imageWidth": 456,
+      "imageHeight": 964
     },
     {
       "id": "c150",
@@ -7009,7 +7765,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Julia",
-      "thumb": "./assets/thumbs/c150.webp"
+      "thumb": "./assets/thumbs/c150.webp",
+      "imageWidth": 547,
+      "imageHeight": 801
     },
     {
       "id": "wiki-k",
@@ -7030,7 +7788,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "K",
-      "thumb": "./assets/thumbs/wiki-k.webp"
+      "thumb": "./assets/thumbs/wiki-k.webp",
+      "imageWidth": 494,
+      "imageHeight": 906
     },
     {
       "id": "c100",
@@ -7051,7 +7811,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Laplace",
-      "thumb": "./assets/thumbs/c100.webp"
+      "thumb": "./assets/thumbs/c100.webp",
+      "imageWidth": 578,
+      "imageHeight": 778
     },
     {
       "id": "wiki-leona",
@@ -7072,7 +7834,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Leona",
-      "thumb": "./assets/thumbs/wiki-leona.webp"
+      "thumb": "./assets/thumbs/wiki-leona.webp",
+      "imageWidth": 559,
+      "imageHeight": 949
     },
     {
       "id": "c082",
@@ -7093,7 +7857,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Liter",
-      "thumb": "./assets/thumbs/c082.webp"
+      "thumb": "./assets/thumbs/c082.webp",
+      "imageWidth": 401,
+      "imageHeight": 757
     },
     {
       "id": "c190",
@@ -7114,7 +7880,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Ludmilla",
-      "thumb": "./assets/thumbs/c190.webp"
+      "thumb": "./assets/thumbs/c190.webp",
+      "imageWidth": 666,
+      "imageHeight": 943
     },
     {
       "id": "c181",
@@ -7135,7 +7903,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Maiden",
-      "thumb": "./assets/thumbs/c181.webp"
+      "thumb": "./assets/thumbs/c181.webp",
+      "imageWidth": 704,
+      "imageHeight": 828
     },
     {
       "id": "c800",
@@ -7156,7 +7926,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Makima",
-      "thumb": "./assets/thumbs/c800.webp"
+      "thumb": "./assets/thumbs/c800.webp",
+      "imageWidth": 318,
+      "imageHeight": 888
     },
     {
       "id": "wiki-mana",
@@ -7177,7 +7949,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Mana",
-      "thumb": "./assets/thumbs/wiki-mana.webp"
+      "thumb": "./assets/thumbs/wiki-mana.webp",
+      "imageWidth": 313,
+      "imageHeight": 887
     },
     {
       "id": "wiki-marciana",
@@ -7198,7 +7972,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Marciana",
-      "thumb": "./assets/thumbs/wiki-marciana.webp"
+      "thumb": "./assets/thumbs/wiki-marciana.webp",
+      "imageWidth": 481,
+      "imageHeight": 952
     },
     {
       "id": "c013",
@@ -7219,7 +7995,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Marian",
-      "thumb": "./assets/thumbs/c013.webp"
+      "thumb": "./assets/thumbs/c013.webp",
+      "imageWidth": 532,
+      "imageHeight": 975
     },
     {
       "id": "c130",
@@ -7240,7 +8018,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Mary",
-      "thumb": "./assets/thumbs/c130.webp"
+      "thumb": "./assets/thumbs/c130.webp",
+      "imageWidth": 342,
+      "imageHeight": 709
     },
     {
       "id": "c132",
@@ -7261,7 +8041,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Mary",
-      "thumb": "./assets/thumbs/c132.webp"
+      "thumb": "./assets/thumbs/c132.webp",
+      "imageWidth": 415,
+      "imageHeight": 951
     },
     {
       "id": "c254",
@@ -7282,7 +8064,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Mass Produced Purple",
-      "thumb": "./assets/thumbs/c254.webp"
+      "thumb": "./assets/thumbs/c254.webp",
+      "imageWidth": 254,
+      "imageHeight": 826
     },
     {
       "id": "c350",
@@ -7303,7 +8087,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Mast",
-      "thumb": "./assets/thumbs/c350.webp"
+      "thumb": "./assets/thumbs/c350.webp",
+      "imageWidth": 904,
+      "imageHeight": 938
     },
     {
       "id": "c102",
@@ -7324,7 +8110,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Maxwell",
-      "thumb": "./assets/thumbs/c102.webp"
+      "thumb": "./assets/thumbs/c102.webp",
+      "imageWidth": 786,
+      "imageHeight": 844
     },
     {
       "id": "c061",
@@ -7345,7 +8133,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Mica",
-      "thumb": "./assets/thumbs/c061.webp"
+      "thumb": "./assets/thumbs/c061.webp",
+      "imageWidth": 435,
+      "imageHeight": 699
     },
     {
       "id": "c161",
@@ -7366,7 +8156,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Mihara",
-      "thumb": "./assets/thumbs/c161.webp"
+      "thumb": "./assets/thumbs/c161.webp",
+      "imageWidth": 528,
+      "imageHeight": 923
     },
     {
       "id": "c141",
@@ -7387,7 +8179,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Milk",
-      "thumb": "./assets/thumbs/c141.webp"
+      "thumb": "./assets/thumbs/c141.webp",
+      "imageWidth": 362,
+      "imageHeight": 926
     },
     {
       "id": "c032",
@@ -7408,7 +8202,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Miranda",
-      "thumb": "./assets/thumbs/c032.webp"
+      "thumb": "./assets/thumbs/c032.webp",
+      "imageWidth": 392,
+      "imageHeight": 737
     },
     {
       "id": "c260",
@@ -7429,7 +8225,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Modernia",
-      "thumb": "./assets/thumbs/c260.webp"
+      "thumb": "./assets/thumbs/c260.webp",
+      "imageWidth": 821,
+      "imageHeight": 1022
     },
     {
       "id": "wiki-moran",
@@ -7450,7 +8248,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Moran",
-      "thumb": "./assets/thumbs/wiki-moran.webp"
+      "thumb": "./assets/thumbs/wiki-moran.webp",
+      "imageWidth": 444,
+      "imageHeight": 862
     },
     {
       "id": "c120",
@@ -7471,7 +8271,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "N102",
-      "thumb": "./assets/thumbs/c120.webp"
+      "thumb": "./assets/thumbs/c120.webp",
+      "imageWidth": 214,
+      "imageHeight": 662
     },
     {
       "id": "wiki-naga",
@@ -7492,7 +8294,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Naga",
-      "thumb": "./assets/thumbs/wiki-naga.webp"
+      "thumb": "./assets/thumbs/wiki-naga.webp",
+      "imageWidth": 304,
+      "imageHeight": 814
     },
     {
       "id": "c011",
@@ -7513,7 +8317,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Neon",
-      "thumb": "./assets/thumbs/c011.webp"
+      "thumb": "./assets/thumbs/c011.webp",
+      "imageWidth": 351,
+      "imageHeight": 773
     },
     {
       "id": "c014",
@@ -7534,7 +8340,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Neon",
-      "thumb": "./assets/thumbs/c014.webp"
+      "thumb": "./assets/thumbs/c014.webp",
+      "imageWidth": 786,
+      "imageHeight": 852
     },
     {
       "id": "c380",
@@ -7555,7 +8363,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Nero",
-      "thumb": "./assets/thumbs/c380.webp"
+      "thumb": "./assets/thumbs/c380.webp",
+      "imageWidth": 350,
+      "imageHeight": 974
     },
     {
       "id": "c193",
@@ -7576,7 +8386,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Neve",
-      "thumb": "./assets/thumbs/c193.webp"
+      "thumb": "./assets/thumbs/c193.webp",
+      "imageWidth": 589,
+      "imageHeight": 998
     },
     {
       "id": "c261",
@@ -7597,7 +8409,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Nihilister",
-      "thumb": "./assets/thumbs/c261.webp"
+      "thumb": "./assets/thumbs/c261.webp",
+      "imageWidth": 955,
+      "imageHeight": 988
     },
     {
       "id": "c232",
@@ -7618,7 +8432,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Noah",
-      "thumb": "./assets/thumbs/c232.webp"
+      "thumb": "./assets/thumbs/c232.webp",
+      "imageWidth": 639,
+      "imageHeight": 748
     },
     {
       "id": "c271",
@@ -7639,7 +8455,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Noir",
-      "thumb": "./assets/thumbs/c271.webp"
+      "thumb": "./assets/thumbs/c271.webp",
+      "imageWidth": 600,
+      "imageHeight": 998
     },
     {
       "id": "c430",
@@ -7660,7 +8478,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Noise",
-      "thumb": "./assets/thumbs/c430.webp"
+      "thumb": "./assets/thumbs/c430.webp",
+      "imageWidth": 472,
+      "imageHeight": 891
     },
     {
       "id": "c212",
@@ -7681,7 +8501,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Novel",
-      "thumb": "./assets/thumbs/c212.webp"
+      "thumb": "./assets/thumbs/c212.webp",
+      "imageWidth": 373,
+      "imageHeight": 821
     },
     {
       "id": "c131",
@@ -7702,7 +8524,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Pepper",
-      "thumb": "./assets/thumbs/c131.webp"
+      "thumb": "./assets/thumbs/c131.webp",
+      "imageWidth": 317,
+      "imageHeight": 719
     },
     {
       "id": "wiki-phantom",
@@ -7723,7 +8547,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Phantom",
-      "thumb": "./assets/thumbs/wiki-phantom.webp"
+      "thumb": "./assets/thumbs/wiki-phantom.webp",
+      "imageWidth": 489,
+      "imageHeight": 860
     },
     {
       "id": "c030",
@@ -7744,7 +8570,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Poli",
-      "thumb": "./assets/thumbs/c030.webp"
+      "thumb": "./assets/thumbs/c030.webp",
+      "imageWidth": 450,
+      "imageHeight": 664
     },
     {
       "id": "c801",
@@ -7765,7 +8593,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Power",
-      "thumb": "./assets/thumbs/c801.webp"
+      "thumb": "./assets/thumbs/c801.webp",
+      "imageWidth": 333,
+      "imageHeight": 941
     },
     {
       "id": "c170",
@@ -7786,7 +8616,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Privaty",
-      "thumb": "./assets/thumbs/c170.webp"
+      "thumb": "./assets/thumbs/c170.webp",
+      "imageWidth": 425,
+      "imageHeight": 762
     },
     {
       "id": "c302",
@@ -7807,7 +8639,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Product 08",
-      "thumb": "./assets/thumbs/c302.webp"
+      "thumb": "./assets/thumbs/c302.webp",
+      "imageWidth": 408,
+      "imageHeight": 906
     },
     {
       "id": "c303",
@@ -7828,7 +8662,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Product 12",
-      "thumb": "./assets/thumbs/c303.webp"
+      "thumb": "./assets/thumbs/c303.webp",
+      "imageWidth": 463,
+      "imageHeight": 911
     },
     {
       "id": "c307",
@@ -7849,7 +8685,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Product 23",
-      "thumb": "./assets/thumbs/c307.webp"
+      "thumb": "./assets/thumbs/c307.webp",
+      "imageWidth": 520,
+      "imageHeight": 906
     },
     {
       "id": "c402",
@@ -7870,7 +8708,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Quency",
-      "thumb": "./assets/thumbs/c402.webp"
+      "thumb": "./assets/thumbs/c402.webp",
+      "imageWidth": 508,
+      "imageHeight": 950
     },
     {
       "id": "wiki-quiry",
@@ -7891,7 +8731,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Quiry",
-      "thumb": "./assets/thumbs/wiki-quiry.webp"
+      "thumb": "./assets/thumbs/wiki-quiry.webp",
+      "imageWidth": 452,
+      "imageHeight": 700
     },
     {
       "id": "c010",
@@ -7912,7 +8754,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Rapi",
-      "thumb": "./assets/thumbs/c010.webp"
+      "thumb": "./assets/thumbs/c010.webp",
+      "imageWidth": 780,
+      "imageHeight": 1762
     },
     {
       "id": "c221",
@@ -7933,7 +8777,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Rapunzel",
-      "thumb": "./assets/thumbs/c221.webp"
+      "thumb": "./assets/thumbs/c221.webp",
+      "imageWidth": 785,
+      "imageHeight": 921
     },
     {
       "id": "wiki-red-hood",
@@ -7954,7 +8800,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Red Hood",
-      "thumb": "./assets/thumbs/wiki-red-hood.webp"
+      "thumb": "./assets/thumbs/wiki-red-hood.webp",
+      "imageWidth": 891,
+      "imageHeight": 992
     },
     {
       "id": "c392",
@@ -7975,7 +8823,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Rei",
-      "thumb": "./assets/thumbs/c392.webp"
+      "thumb": "./assets/thumbs/c392.webp",
+      "imageWidth": 605,
+      "imageHeight": 715
     },
     {
       "id": "c280",
@@ -7996,7 +8846,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Rosanna",
-      "thumb": "./assets/thumbs/c280.webp"
+      "thumb": "./assets/thumbs/c280.webp",
+      "imageWidth": 481,
+      "imageHeight": 925
     },
     {
       "id": "wiki-rouge",
@@ -8017,7 +8869,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Rouge",
-      "thumb": "./assets/thumbs/wiki-rouge.webp"
+      "thumb": "./assets/thumbs/wiki-rouge.webp",
+      "imageWidth": 667,
+      "imageHeight": 941
     },
     {
       "id": "c240",
@@ -8038,7 +8892,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Rumani",
-      "thumb": "./assets/thumbs/c240.webp"
+      "thumb": "./assets/thumbs/c240.webp",
+      "imageWidth": 313,
+      "imageHeight": 855
     },
     {
       "id": "c200",
@@ -8059,7 +8915,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Rupee",
-      "thumb": "./assets/thumbs/c200.webp"
+      "thumb": "./assets/thumbs/c200.webp",
+      "imageWidth": 492,
+      "imageHeight": 921
     },
     {
       "id": "c203",
@@ -8080,7 +8938,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Rupee",
-      "thumb": "./assets/thumbs/c203.webp"
+      "thumb": "./assets/thumbs/c203.webp",
+      "imageWidth": 844,
+      "imageHeight": 1001
     },
     {
       "id": "c282",
@@ -8101,7 +8961,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Sakura",
-      "thumb": "./assets/thumbs/c282.webp"
+      "thumb": "./assets/thumbs/c282.webp",
+      "imageWidth": 474,
+      "imageHeight": 927
     },
     {
       "id": "c222",
@@ -8122,7 +8984,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Scarlet",
-      "thumb": "./assets/thumbs/c222.webp"
+      "thumb": "./assets/thumbs/c222.webp",
+      "imageWidth": 882,
+      "imageHeight": 971
     },
     {
       "id": "c022",
@@ -8143,7 +9007,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Signal",
-      "thumb": "./assets/thumbs/c022.webp"
+      "thumb": "./assets/thumbs/c022.webp",
+      "imageWidth": 290,
+      "imageHeight": 785
     },
     {
       "id": "c401",
@@ -8164,7 +9030,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Sin",
-      "thumb": "./assets/thumbs/c401.webp"
+      "thumb": "./assets/thumbs/c401.webp",
+      "imageWidth": 442,
+      "imageHeight": 934
     },
     {
       "id": "c220",
@@ -8185,7 +9053,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Snow White",
-      "thumb": "./assets/thumbs/c220.webp"
+      "thumb": "./assets/thumbs/c220.webp",
+      "imageWidth": 1024,
+      "imageHeight": 1024
     },
     {
       "id": "c312",
@@ -8206,7 +9076,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Soda",
-      "thumb": "./assets/thumbs/c312.webp"
+      "thumb": "./assets/thumbs/c312.webp",
+      "imageWidth": 574,
+      "imageHeight": 821
     },
     {
       "id": "c300",
@@ -8227,7 +9099,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Soldier EG",
-      "thumb": "./assets/thumbs/c300.webp"
+      "thumb": "./assets/thumbs/c300.webp",
+      "imageWidth": 343,
+      "imageHeight": 877
     },
     {
       "id": "c301",
@@ -8248,7 +9122,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Soldier FA",
-      "thumb": "./assets/thumbs/c301.webp"
+      "thumb": "./assets/thumbs/c301.webp",
+      "imageWidth": 486,
+      "imageHeight": 887
     },
     {
       "id": "c306",
@@ -8269,7 +9145,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Soldier OW",
-      "thumb": "./assets/thumbs/c306.webp"
+      "thumb": "./assets/thumbs/c306.webp",
+      "imageWidth": 285,
+      "imageHeight": 881
     },
     {
       "id": "c071",
@@ -8290,7 +9168,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Soline",
-      "thumb": "./assets/thumbs/c071.webp"
+      "thumb": "./assets/thumbs/c071.webp",
+      "imageWidth": 595,
+      "imageHeight": 882
     },
     {
       "id": "c140",
@@ -8311,7 +9191,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Sugar",
-      "thumb": "./assets/thumbs/c140.webp"
+      "thumb": "./assets/thumbs/c140.webp",
+      "imageWidth": 705,
+      "imageHeight": 807
     },
     {
       "id": "wiki-tia",
@@ -8332,7 +9214,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Tia",
-      "thumb": "./assets/thumbs/wiki-tia.webp"
+      "thumb": "./assets/thumbs/wiki-tia.webp",
+      "imageWidth": 816,
+      "imageHeight": 1653
     },
     {
       "id": "wiki-tove",
@@ -8353,7 +9237,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Tove",
-      "thumb": "./assets/thumbs/wiki-tove.webp"
+      "thumb": "./assets/thumbs/wiki-tove.webp",
+      "imageWidth": 380,
+      "imageHeight": 899
     },
     {
       "id": "wiki-trony",
@@ -8374,7 +9260,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Trony",
-      "thumb": "./assets/thumbs/wiki-trony.webp"
+      "thumb": "./assets/thumbs/wiki-trony.webp",
+      "imageWidth": 587,
+      "imageHeight": 945
     },
     {
       "id": "c091",
@@ -8395,7 +9283,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Vesti",
-      "thumb": "./assets/thumbs/c091.webp"
+      "thumb": "./assets/thumbs/c091.webp",
+      "imageWidth": 388,
+      "imageHeight": 832
     },
     {
       "id": "c112",
@@ -8416,7 +9306,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Viper",
-      "thumb": "./assets/thumbs/c112.webp"
+      "thumb": "./assets/thumbs/c112.webp",
+      "imageWidth": 364,
+      "imageHeight": 969
     },
     {
       "id": "c431",
@@ -8437,7 +9329,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Volume",
-      "thumb": "./assets/thumbs/c431.webp"
+      "thumb": "./assets/thumbs/c431.webp",
+      "imageWidth": 577,
+      "imageHeight": 924
     },
     {
       "id": "c201",
@@ -8458,7 +9352,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Yan",
-      "thumb": "./assets/thumbs/c201.webp"
+      "thumb": "./assets/thumbs/c201.webp",
+      "imageWidth": 651,
+      "imageHeight": 848
     },
     {
       "id": "c171",
@@ -8479,7 +9375,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Yulha",
-      "thumb": "./assets/thumbs/c171.webp"
+      "thumb": "./assets/thumbs/c171.webp",
+      "imageWidth": 417,
+      "imageHeight": 872
     },
     {
       "id": "c160",
@@ -8500,7 +9398,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Yuni",
-      "thumb": "./assets/thumbs/c160.webp"
+      "thumb": "./assets/thumbs/c160.webp",
+      "imageWidth": 414,
+      "imageHeight": 743
     },
     {
       "id": "wiki-zwei",
@@ -8521,7 +9421,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "Zwei",
-      "thumb": "./assets/thumbs/wiki-zwei.webp"
+      "thumb": "./assets/thumbs/wiki-zwei.webp",
+      "imageWidth": 447,
+      "imageHeight": 776
     },
     {
       "id": "c304",
@@ -8542,7 +9444,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "iDoll Flower",
-      "thumb": "./assets/thumbs/c304.webp"
+      "thumb": "./assets/thumbs/c304.webp",
+      "imageWidth": 335,
+      "imageHeight": 937
     },
     {
       "id": "c305",
@@ -8563,7 +9467,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "iDoll Ocean",
-      "thumb": "./assets/thumbs/c305.webp"
+      "thumb": "./assets/thumbs/c305.webp",
+      "imageWidth": 426,
+      "imageHeight": 840
     },
     {
       "id": "c308",
@@ -8584,7 +9490,9 @@
       "gameId": "nikke",
       "game": "胜利女神：妮姬",
       "characterKey": "iDoll Sun",
-      "thumb": "./assets/thumbs/c308.webp"
+      "thumb": "./assets/thumbs/c308.webp",
+      "imageWidth": 526,
+      "imageHeight": 1004
     },
     {
       "id": "reverse1999-3010-01",
@@ -8601,7 +9509,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/301001_x.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3010-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3010-01.webp",
+      "imageWidth": 701,
+      "imageHeight": 1809
     },
     {
       "id": "reverse1999-3070-01",
@@ -8618,7 +9528,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/307001_jialabona.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3070-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3070-01.webp",
+      "imageWidth": 574,
+      "imageHeight": 1792
     },
     {
       "id": "reverse1999-3047-01",
@@ -8635,7 +9547,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/304701_tumaoshoudai.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3047-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3047-01.webp",
+      "imageWidth": 574,
+      "imageHeight": 1922
     },
     {
       "id": "reverse1999-3023-01",
@@ -8652,7 +9566,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/302301_shisihangshi.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3023-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3023-01.webp",
+      "imageWidth": 903,
+      "imageHeight": 1758
     },
     {
       "id": "reverse1999-3049-01",
@@ -8669,7 +9585,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/304901_kachakacha.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3049-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3049-01.webp",
+      "imageWidth": 710,
+      "imageHeight": 1759
     },
     {
       "id": "reverse1999-3071-01",
@@ -8686,7 +9604,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/307101_kanjila.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3071-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3071-01.webp",
+      "imageWidth": 644,
+      "imageHeight": 1640
     },
     {
       "id": "reverse1999-3043-01",
@@ -8703,7 +9623,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/304301_tannante.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3043-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3043-01.webp",
+      "imageWidth": 942,
+      "imageHeight": 1795
     },
     {
       "id": "reverse1999-3061-01",
@@ -8720,7 +9642,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/306101_kongbutong.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3061-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3061-01.webp",
+      "imageWidth": 790,
+      "imageHeight": 1864
     },
     {
       "id": "reverse1999-3064-01",
@@ -8737,7 +9661,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/306401_wajueyishu.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3064-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3064-01.webp",
+      "imageWidth": 749,
+      "imageHeight": 1863
     },
     {
       "id": "reverse1999-3052-01",
@@ -8754,7 +9680,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/305201_xinbabieta.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3052-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3052-01.webp",
+      "imageWidth": 1303,
+      "imageHeight": 1721
     },
     {
       "id": "reverse1999-3062-01",
@@ -8771,7 +9699,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/306201_meilanni.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3062-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3062-01.webp",
+      "imageWidth": 884,
+      "imageHeight": 1862
     },
     {
       "id": "reverse1999-3003-01",
@@ -8788,7 +9718,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/300301_hujisheng.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3003-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3003-01.webp",
+      "imageWidth": 728,
+      "imageHeight": 1698
     },
     {
       "id": "reverse1999-3039-01",
@@ -8805,7 +9737,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/303901_nimengdishi.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3039-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3039-01.webp",
+      "imageWidth": 865,
+      "imageHeight": 1752
     },
     {
       "id": "reverse1999-3056-01",
@@ -8822,7 +9756,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/305601_jiexika.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3056-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3056-01.webp",
+      "imageWidth": 614,
+      "imageHeight": 1489
     },
     {
       "id": "reverse1999-3051-01",
@@ -8839,7 +9775,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/305101_wennifuleide.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3051-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3051-01.webp",
+      "imageWidth": 572,
+      "imageHeight": 1852
     },
     {
       "id": "reverse1999-3041-01",
@@ -8856,7 +9794,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/304101_madierda.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3041-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3041-01.webp",
+      "imageWidth": 568,
+      "imageHeight": 1809
     },
     {
       "id": "reverse1999-3063-01",
@@ -8873,7 +9813,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/306301_pikelesi.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3063-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3063-01.webp",
+      "imageWidth": 1531,
+      "imageHeight": 1748
     },
     {
       "id": "reverse1999-3004-01",
@@ -8890,7 +9832,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/300401_hongnujian.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3004-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3004-01.webp",
+      "imageWidth": 778,
+      "imageHeight": 1642
     },
     {
       "id": "reverse1999-3009-02",
@@ -8907,7 +9851,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/300902_sufubi.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3009-02.webp"
+      "thumb": "./assets/thumbs/reverse1999-3009-02.webp",
+      "imageWidth": 1050,
+      "imageHeight": 1478
     },
     {
       "id": "reverse1999-3060-01",
@@ -8924,7 +9870,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/306001_jinmier.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3060-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3060-01.webp",
+      "imageWidth": 659,
+      "imageHeight": 1756
     },
     {
       "id": "reverse1999-3072-01",
@@ -8941,7 +9889,9 @@
       "originalImage": "https://raw.githubusercontent.com/dasilva333/r1999-web-gallery/main/characters_master/307201_zongmaoshali.png",
       "variant": false,
       "license": "游戏美术版权归深蓝互动及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/reverse1999-3072-01.webp"
+      "thumb": "./assets/thumbs/reverse1999-3072-01.webp",
+      "imageWidth": 750,
+      "imageHeight": 1523
     },
     {
       "id": "starrail-1005",
@@ -8958,7 +9908,9 @@
       "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/starrail/splash/1005.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/starrail-1005.webp"
+      "thumb": "./assets/thumbs/starrail-1005.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "starrail-1102",
@@ -8975,7 +9927,9 @@
       "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/starrail/splash/1102.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/starrail-1102.webp"
+      "thumb": "./assets/thumbs/starrail-1102.webp",
+      "imageWidth": 2048,
+      "imageHeight": 1924
     },
     {
       "id": "starrail-1310",
@@ -8992,7 +9946,9 @@
       "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/starrail/splash/1310.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/starrail-1310.webp"
+      "thumb": "./assets/thumbs/starrail-1310.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "starrail-1208",
@@ -9009,7 +9965,9 @@
       "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/starrail/splash/1208.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/starrail-1208.webp"
+      "thumb": "./assets/thumbs/starrail-1208.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "starrail-1212",
@@ -9026,7 +9984,9 @@
       "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/starrail/splash/1212.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/starrail-1212.webp"
+      "thumb": "./assets/thumbs/starrail-1212.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "starrail-1308",
@@ -9043,7 +10003,9 @@
       "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/starrail/splash/1308.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/starrail-1308.webp"
+      "thumb": "./assets/thumbs/starrail-1308.webp",
+      "imageWidth": 1967,
+      "imageHeight": 2048
     },
     {
       "id": "starrail-1307",
@@ -9060,7 +10022,9 @@
       "originalImage": "https://raw.githubusercontent.com/ScobbleQ/HoYo-Assets/main/starrail/splash/1307.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/starrail-1307.webp"
+      "thumb": "./assets/thumbs/starrail-1307.webp",
+      "imageWidth": 2048,
+      "imageHeight": 2048
     },
     {
       "id": "wutheringwaves-danjin",
@@ -9077,7 +10041,9 @@
       "originalImage": "https://wiki.biligame.com/wutheringwaves/Special:FilePath/Mc%20wiki%20role%20danjin%20x1500.png",
       "variant": false,
       "license": "《鸣潮》美术版权属于库洛游戏及原权利人；来源公开不等于获准再分发",
-      "thumb": "./assets/thumbs/wutheringwaves-danjin.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-danjin.webp",
+      "imageWidth": 694,
+      "imageHeight": 1254
     },
     {
       "id": "wutheringwaves-jinhsi",
@@ -9094,7 +10060,9 @@
       "originalImage": "https://wiki.biligame.com/wutheringwaves/Special:FilePath/%E8%A7%92%E8%89%B2_%E4%BB%8A%E6%B1%90_%E7%AB%8B%E7%BB%98.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/wutheringwaves-jinhsi.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-jinhsi.webp",
+      "imageWidth": 1075,
+      "imageHeight": 1496
     },
     {
       "id": "wutheringwaves-cartethyia",
@@ -9111,7 +10079,9 @@
       "originalImage": "https://wiki.biligame.com/wutheringwaves/Special:FilePath/%E8%A7%92%E8%89%B2_%E5%8D%A1%E6%8F%90%E5%B8%8C%E5%A8%85_%E7%AB%8B%E7%BB%98.png",
       "variant": false,
       "license": "《鸣潮》美术版权属于库洛游戏及原权利人；来源公开不等于获准再分发",
-      "thumb": "./assets/thumbs/wutheringwaves-cartethyia.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-cartethyia.webp",
+      "imageWidth": 1362,
+      "imageHeight": 2025
     },
     {
       "id": "wutheringwaves-yinlin",
@@ -9128,7 +10098,9 @@
       "originalImage": "https://wiki.biligame.com/wutheringwaves/Special:FilePath/%E8%A7%92%E8%89%B2_%E5%90%9F%E9%9C%96_%E7%AB%8B%E7%BB%98.png",
       "variant": false,
       "license": "《鸣潮》美术版权属于库洛游戏及原权利人；来源公开不等于获准再分发",
-      "thumb": "./assets/thumbs/wutheringwaves-yinlin.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-yinlin.webp",
+      "imageWidth": 1174,
+      "imageHeight": 2200
     },
     {
       "id": "wutheringwaves-shorekeeper",
@@ -9145,7 +10117,9 @@
       "originalImage": "https://patchwiki.biligame.com/images/wutheringwaves/5/56/101neg0k0er0rkh019ljtj5ev6jgac3.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/wutheringwaves-shorekeeper.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-shorekeeper.webp",
+      "imageWidth": 1040,
+      "imageHeight": 1675
     },
     {
       "id": "wutheringwaves-zhezhi",
@@ -9162,7 +10136,9 @@
       "originalImage": "https://wiki.biligame.com/wutheringwaves/Special:FilePath/%E8%A7%92%E8%89%B2_%E6%8A%98%E6%9E%9D_%E7%AB%8B%E7%BB%98.png",
       "variant": false,
       "license": "《鸣潮》美术版权属于库洛游戏及原权利人；来源公开不等于获准再分发",
-      "thumb": "./assets/thumbs/wutheringwaves-zhezhi.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-zhezhi.webp",
+      "imageWidth": 1487,
+      "imageHeight": 2200
     },
     {
       "id": "wutheringwaves-sanhua",
@@ -9179,7 +10155,9 @@
       "originalImage": "https://wiki.biligame.com/wutheringwaves/Special:FilePath/Mc%20wiki%20role%20sanhua%20x1500.png",
       "variant": false,
       "license": "《鸣潮》美术版权属于库洛游戏及原权利人；来源公开不等于获准再分发",
-      "thumb": "./assets/thumbs/wutheringwaves-sanhua.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-sanhua.webp",
+      "imageWidth": 924,
+      "imageHeight": 1469
     },
     {
       "id": "wutheringwaves-taoqi",
@@ -9196,7 +10174,9 @@
       "originalImage": "https://wiki.biligame.com/wutheringwaves/Special:FilePath/Mc%20wiki%20role%20taoqi%20x1500.png",
       "variant": false,
       "license": "《鸣潮》美术版权属于库洛游戏及原权利人；来源公开不等于获准再分发",
-      "thumb": "./assets/thumbs/wutheringwaves-taoqi.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-taoqi.webp",
+      "imageWidth": 1074,
+      "imageHeight": 1364
     },
     {
       "id": "wutheringwaves-camellya",
@@ -9213,7 +10193,9 @@
       "originalImage": "https://patchwiki.biligame.com/images/wutheringwaves/3/33/piby5xz6lt334blop556739h476l24j.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/wutheringwaves-camellya.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-camellya.webp",
+      "imageWidth": 1098,
+      "imageHeight": 1729
     },
     {
       "id": "wutheringwaves-roccia",
@@ -9230,7 +10212,9 @@
       "originalImage": "https://wiki.biligame.com/wutheringwaves/Special:FilePath/%E8%A7%92%E8%89%B2_%E6%B4%9B%E5%8F%AF%E5%8F%AF_%E7%AB%8B%E7%BB%98.png",
       "variant": false,
       "license": "《鸣潮》美术版权属于库洛游戏及原权利人；来源公开不等于获准再分发",
-      "thumb": "./assets/thumbs/wutheringwaves-roccia.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-roccia.webp",
+      "imageWidth": 1030,
+      "imageHeight": 1636
     },
     {
       "id": "wutheringwaves-lumi",
@@ -9247,7 +10231,9 @@
       "originalImage": "https://wiki.biligame.com/wutheringwaves/Special:FilePath/%E8%A7%92%E8%89%B2_%E7%81%AF%E7%81%AF_%E7%AB%8B%E7%BB%98.png",
       "variant": false,
       "license": "《鸣潮》美术版权属于库洛游戏及原权利人；来源公开不等于获准再分发",
-      "thumb": "./assets/thumbs/wutheringwaves-lumi.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-lumi.webp",
+      "imageWidth": 979,
+      "imageHeight": 1833
     },
     {
       "id": "wutheringwaves-chixia",
@@ -9264,7 +10250,9 @@
       "originalImage": "https://wiki.biligame.com/wutheringwaves/Special:FilePath/Mc%20wiki%20role%20chixia%20x1500.png",
       "variant": false,
       "license": "《鸣潮》美术版权属于库洛游戏及原权利人；来源公开不等于获准再分发",
-      "thumb": "./assets/thumbs/wutheringwaves-chixia.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-chixia.webp",
+      "imageWidth": 681,
+      "imageHeight": 1233
     },
     {
       "id": "wutheringwaves-carlotta",
@@ -9281,7 +10269,9 @@
       "originalImage": "https://wiki.biligame.com/wutheringwaves/Special:FilePath/%E8%A7%92%E8%89%B2_%E7%8F%82%E8%8E%B1%E5%A1%94_%E7%AB%8B%E7%BB%98.png",
       "variant": false,
       "license": "《鸣潮》美术版权属于库洛游戏及原权利人；来源公开不等于获准再分发",
-      "thumb": "./assets/thumbs/wutheringwaves-carlotta.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-carlotta.webp",
+      "imageWidth": 1014,
+      "imageHeight": 1443
     },
     {
       "id": "wutheringwaves-baizhi",
@@ -9298,7 +10288,9 @@
       "originalImage": "https://wiki.biligame.com/wutheringwaves/Special:FilePath/%E8%A7%92%E8%89%B2_%E7%99%BD%E8%8A%B7_%E7%AB%8B%E7%BB%98.png",
       "variant": false,
       "license": "《鸣潮》美术版权属于库洛游戏及原权利人；来源公开不等于获准再分发",
-      "thumb": "./assets/thumbs/wutheringwaves-baizhi.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-baizhi.webp",
+      "imageWidth": 1048,
+      "imageHeight": 1432
     },
     {
       "id": "wutheringwaves-yangyang",
@@ -9315,7 +10307,9 @@
       "originalImage": "https://wiki.biligame.com/wutheringwaves/Special:FilePath/%E8%A7%92%E8%89%B2_%E7%A7%A7%E7%A7%A7_%E7%AB%8B%E7%BB%98.png",
       "variant": false,
       "license": "《鸣潮》美术版权属于库洛游戏及原权利人；来源公开不等于获准再分发",
-      "thumb": "./assets/thumbs/wutheringwaves-yangyang.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-yangyang.webp",
+      "imageWidth": 1501,
+      "imageHeight": 2200
     },
     {
       "id": "wutheringwaves-verina",
@@ -9332,7 +10326,9 @@
       "originalImage": "https://wiki.biligame.com/wutheringwaves/Special:FilePath/Mc%20wiki%20role%20verina%20x1500.png",
       "variant": false,
       "license": "《鸣潮》美术版权属于库洛游戏及原权利人；来源公开不等于获准再分发",
-      "thumb": "./assets/thumbs/wutheringwaves-verina.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-verina.webp",
+      "imageWidth": 1203,
+      "imageHeight": 1449
     },
     {
       "id": "wutheringwaves-phoebe",
@@ -9349,7 +10345,9 @@
       "originalImage": "https://wiki.biligame.com/wutheringwaves/Special:FilePath/%E8%A7%92%E8%89%B2_%E8%8F%B2%E6%AF%94_%E7%AB%8B%E7%BB%98.png",
       "variant": false,
       "license": "《鸣潮》美术版权属于库洛游戏及原权利人；来源公开不等于获准再分发",
-      "thumb": "./assets/thumbs/wutheringwaves-phoebe.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-phoebe.webp",
+      "imageWidth": 1255,
+      "imageHeight": 2003
     },
     {
       "id": "wutheringwaves-zani",
@@ -9366,7 +10364,9 @@
       "originalImage": "https://wiki.biligame.com/wutheringwaves/Special:FilePath/%E8%A7%92%E8%89%B2_%E8%B5%9E%E5%A6%AE_%E7%AB%8B%E7%BB%98.png",
       "variant": false,
       "license": "《鸣潮》美术版权属于库洛游戏及原权利人；来源公开不等于获准再分发",
-      "thumb": "./assets/thumbs/wutheringwaves-zani.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-zani.webp",
+      "imageWidth": 1414,
+      "imageHeight": 2117
     },
     {
       "id": "wutheringwaves-youhu",
@@ -9383,7 +10383,9 @@
       "originalImage": "https://wiki.biligame.com/wutheringwaves/Special:FilePath/%E8%A7%92%E8%89%B2_%E9%87%89%E7%91%9A_%E7%AB%8B%E7%BB%98.png",
       "variant": false,
       "license": "《鸣潮》美术版权属于库洛游戏及原权利人；来源公开不等于获准再分发",
-      "thumb": "./assets/thumbs/wutheringwaves-youhu.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-youhu.webp",
+      "imageWidth": 989,
+      "imageHeight": 1762
     },
     {
       "id": "wutheringwaves-jianxin",
@@ -9400,7 +10402,9 @@
       "originalImage": "https://wiki.biligame.com/wutheringwaves/Special:FilePath/%E8%A7%92%E8%89%B2_%E9%89%B4%E5%BF%83_%E7%AB%8B%E7%BB%98.png",
       "variant": false,
       "license": "《鸣潮》美术版权属于库洛游戏及原权利人；来源公开不等于获准再分发",
-      "thumb": "./assets/thumbs/wutheringwaves-jianxin.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-jianxin.webp",
+      "imageWidth": 957,
+      "imageHeight": 1661
     },
     {
       "id": "wutheringwaves-changli",
@@ -9417,7 +10421,9 @@
       "originalImage": "https://patchwiki.biligame.com/images/wutheringwaves/2/25/rwnmwv8y5wjcn98wix521fksfqddhgq.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/wutheringwaves-changli.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-changli.webp",
+      "imageWidth": 1130,
+      "imageHeight": 1601
     },
     {
       "id": "wutheringwaves-lupa",
@@ -9434,7 +10440,9 @@
       "originalImage": "https://patchwiki.biligame.com/images/wutheringwaves/8/8b/9psbu0nhrkejgb9pohgse6nftw839mp.png",
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/wutheringwaves-lupa.webp"
+      "thumb": "./assets/thumbs/wutheringwaves-lupa.webp",
+      "imageWidth": 1600,
+      "imageHeight": 1790
     },
     {
       "id": "zzz-soldier11",
@@ -9451,7 +10459,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole05.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-soldier11.webp"
+      "thumb": "./assets/thumbs/zzz-soldier11.webp",
+      "imageWidth": 892,
+      "imageHeight": 1936
     },
     {
       "id": "zzz-rina",
@@ -9468,7 +10478,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole22.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-rina.webp"
+      "thumb": "./assets/thumbs/zzz-rina.webp",
+      "imageWidth": 1544,
+      "imageHeight": 2012
     },
     {
       "id": "zzz-yixuan",
@@ -9485,7 +10497,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole44.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-yixuan.webp"
+      "thumb": "./assets/thumbs/zzz-yixuan.webp",
+      "imageWidth": 1484,
+      "imageHeight": 2048
     },
     {
       "id": "zzz-yidhari",
@@ -9502,7 +10516,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole52.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-yidhari.webp"
+      "thumb": "./assets/thumbs/zzz-yidhari.webp",
+      "imageWidth": 1252,
+      "imageHeight": 2260
     },
     {
       "id": "zzz-evelyn",
@@ -9519,7 +10535,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole37.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-evelyn.webp"
+      "thumb": "./assets/thumbs/zzz-evelyn.webp",
+      "imageWidth": 1508,
+      "imageHeight": 2160
     },
     {
       "id": "zzz-caesar",
@@ -9536,7 +10554,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole25.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-caesar.webp"
+      "thumb": "./assets/thumbs/zzz-caesar.webp",
+      "imageWidth": 1416,
+      "imageHeight": 1908
     },
     {
       "id": "zzz-sunna",
@@ -9553,7 +10573,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole58.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-sunna.webp"
+      "thumb": "./assets/thumbs/zzz-sunna.webp",
+      "imageWidth": 807,
+      "imageHeight": 1800
     },
     {
       "id": "zzz-lucia",
@@ -9570,7 +10592,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole50.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-lucia.webp"
+      "thumb": "./assets/thumbs/zzz-lucia.webp",
+      "imageWidth": 1176,
+      "imageHeight": 2164
     },
     {
       "id": "zzz-corin",
@@ -9587,7 +10611,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole09.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-corin.webp"
+      "thumb": "./assets/thumbs/zzz-corin.webp",
+      "imageWidth": 1344,
+      "imageHeight": 1752
     },
     {
       "id": "zzz-yeshunguang",
@@ -9604,7 +10630,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole55.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-yeshunguang.webp"
+      "thumb": "./assets/thumbs/zzz-yeshunguang.webp",
+      "imageWidth": 1718,
+      "imageHeight": 2450
     },
     {
       "id": "zzz-nicole",
@@ -9621,7 +10649,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole12.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-nicole.webp"
+      "thumb": "./assets/thumbs/zzz-nicole.webp",
+      "imageWidth": 1078,
+      "imageHeight": 1904
     },
     {
       "id": "zzz-anby",
@@ -9638,7 +10668,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole01.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-anby.webp"
+      "thumb": "./assets/thumbs/zzz-anby.webp",
+      "imageWidth": 1268,
+      "imageHeight": 1716
     },
     {
       "id": "zzz-seed",
@@ -9655,7 +10687,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole48.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-seed.webp"
+      "thumb": "./assets/thumbs/zzz-seed.webp",
+      "imageWidth": 891,
+      "imageHeight": 1999
     },
     {
       "id": "zzz-trigger",
@@ -9672,7 +10706,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole39.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-trigger.webp"
+      "thumb": "./assets/thumbs/zzz-trigger.webp",
+      "imageWidth": 1392,
+      "imageHeight": 2364
     },
     {
       "id": "zzz-zhuyuan",
@@ -9689,7 +10725,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole23.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-zhuyuan.webp"
+      "thumb": "./assets/thumbs/zzz-zhuyuan.webp",
+      "imageWidth": 1016,
+      "imageHeight": 2300
     },
     {
       "id": "zzz-burnice",
@@ -9706,7 +10744,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole32.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-burnice.webp"
+      "thumb": "./assets/thumbs/zzz-burnice.webp",
+      "imageWidth": 1420,
+      "imageHeight": 2188
     },
     {
       "id": "zzz-yuzuha",
@@ -9723,7 +10763,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole47.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-yuzuha.webp"
+      "thumb": "./assets/thumbs/zzz-yuzuha.webp",
+      "imageWidth": 1264,
+      "imageHeight": 2440
     },
     {
       "id": "zzz-yanagi",
@@ -9740,7 +10782,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole31.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-yanagi.webp"
+      "thumb": "./assets/thumbs/zzz-yanagi.webp",
+      "imageWidth": 1604,
+      "imageHeight": 2280
     },
     {
       "id": "zzz-grace",
@@ -9757,7 +10801,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole20.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-grace.webp"
+      "thumb": "./assets/thumbs/zzz-grace.webp",
+      "imageWidth": 780,
+      "imageHeight": 2008
     },
     {
       "id": "zzz-jufufu",
@@ -9774,7 +10820,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole43.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-jufufu.webp"
+      "thumb": "./assets/thumbs/zzz-jufufu.webp",
+      "imageWidth": 1064,
+      "imageHeight": 1712
     },
     {
       "id": "zzz-pulchra",
@@ -9791,7 +10839,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole38.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-pulchra.webp"
+      "thumb": "./assets/thumbs/zzz-pulchra.webp",
+      "imageWidth": 1412,
+      "imageHeight": 2400
     },
     {
       "id": "zzz-piper",
@@ -9808,7 +10858,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole28.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-piper.webp"
+      "thumb": "./assets/thumbs/zzz-piper.webp",
+      "imageWidth": 880,
+      "imageHeight": 1824
     },
     {
       "id": "zzz-alice",
@@ -9825,7 +10877,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole46.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-alice.webp"
+      "thumb": "./assets/thumbs/zzz-alice.webp",
+      "imageWidth": 1128,
+      "imageHeight": 2028
     },
     {
       "id": "zzz-aria",
@@ -9842,7 +10896,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole57.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-aria.webp"
+      "thumb": "./assets/thumbs/zzz-aria.webp",
+      "imageWidth": 1052,
+      "imageHeight": 2020
     },
     {
       "id": "zzz-nekomata",
@@ -9859,7 +10915,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole11.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-nekomata.webp"
+      "thumb": "./assets/thumbs/zzz-nekomata.webp",
+      "imageWidth": 932,
+      "imageHeight": 1480
     },
     {
       "id": "zzz-koleda",
@@ -9876,7 +10934,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole14.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-koleda.webp"
+      "thumb": "./assets/thumbs/zzz-koleda.webp",
+      "imageWidth": 1472,
+      "imageHeight": 1712
     },
     {
       "id": "zzz-dialyn",
@@ -9893,7 +10953,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole54.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-dialyn.webp"
+      "thumb": "./assets/thumbs/zzz-dialyn.webp",
+      "imageWidth": 1284,
+      "imageHeight": 2299
     },
     {
       "id": "zzz-jane",
@@ -9910,7 +10972,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole24.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-jane.webp"
+      "thumb": "./assets/thumbs/zzz-jane.webp",
+      "imageWidth": 1132,
+      "imageHeight": 2120
     },
     {
       "id": "zzz-astrayao",
@@ -9927,7 +10991,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole36.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-astrayao.webp"
+      "thumb": "./assets/thumbs/zzz-astrayao.webp",
+      "imageWidth": 1276,
+      "imageHeight": 2204
     },
     {
       "id": "zzz-ellen",
@@ -9944,7 +11010,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole21.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-ellen.webp"
+      "thumb": "./assets/thumbs/zzz-ellen.webp",
+      "imageWidth": 1644,
+      "imageHeight": 1932
     },
     {
       "id": "zzz-soukaku",
@@ -9961,7 +11029,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole17.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-soukaku.webp"
+      "thumb": "./assets/thumbs/zzz-soukaku.webp",
+      "imageWidth": 1332,
+      "imageHeight": 1776
     },
     {
       "id": "zzz-vivian",
@@ -9978,7 +11048,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole41.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-vivian.webp"
+      "thumb": "./assets/thumbs/zzz-vivian.webp",
+      "imageWidth": 1342,
+      "imageHeight": 2450
     },
     {
       "id": "zzz-miyabi",
@@ -9995,7 +11067,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole13.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-miyabi.webp"
+      "thumb": "./assets/thumbs/zzz-miyabi.webp",
+      "imageWidth": 1516,
+      "imageHeight": 2128
     },
     {
       "id": "zzz-soldier0anby",
@@ -10012,7 +11086,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole40.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-soldier0anby.webp"
+      "thumb": "./assets/thumbs/zzz-soldier0anby.webp",
+      "imageWidth": 1128,
+      "imageHeight": 2020
     },
     {
       "id": "zzz-lucy",
@@ -10029,7 +11105,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole27.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-lucy.webp"
+      "thumb": "./assets/thumbs/zzz-lucy.webp",
+      "imageWidth": 1356,
+      "imageHeight": 1560
     },
     {
       "id": "zzz-qingyi",
@@ -10046,7 +11124,9 @@
       "originalImage": "https://raw.githubusercontent.com/seriaati/ZZZAssets/main/agents/IconRole29.png",
       "variant": false,
       "license": "角色美术版权归米哈游及原权利人；来源公开不代表授权再分发",
-      "thumb": "./assets/thumbs/zzz-qingyi.webp"
+      "thumb": "./assets/thumbs/zzz-qingyi.webp",
+      "imageWidth": 984,
+      "imageHeight": 1712
     }
   ],
   "games": [
