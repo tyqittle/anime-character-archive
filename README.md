@@ -16,7 +16,8 @@
 | `spine.html` | Spine 动态角色浏览与播放 |
 | `data/characters.json` | 静态立绘记录、游戏分类、原图尺寸和素材来源 |
 | `data/spine-characters.json` | 原有 NIKKE / 蔚蓝档案 Spine 索引 |
-| `data/spine-bd2-pilot.json` | 棕色尘埃2五套全身角色 Spine 试播目录 |
+| `data/spine-bd2-characters.json` | 棕色尘埃2共 87 位角色、209 套全身动态服装 |
+| `data/spine-bd2-pilot.json` | 历史首批五套试播记录 |
 | `assets/portraits/` | 已收录的本地高清立绘（PNG / WebP） |
 | `assets/thumbs/` | 角色列表使用的轻量 WebP 缩略图 |
 | `assets/animation-previews/` | 动态立绘预览素材 |
@@ -53,11 +54,13 @@
 
 画面缩放与移动仅调整 Canvas 在浏览器中的显示层，不篡改骨骼坐标、Atlas UV 或播放器原生的动画自动适配。Spine 3.8 与 4.x 的不兼容版本切换仍须重载页面，但选中角色和链接状态会保留。角色资源仍在用户播放时从第三方源按需加载，不能将加载索引数量等同于已验证成功播放的动画数量。
 
-### 棕色尘埃2全身角色 Spine 试播
+### 棕色尘埃2：87 位角色、209 套全身动态立绘
 
-已在动态立绘页面加入「棕色尘埃2（全身模型试播）」分类，首批五套分别来自 Justia / Knight of Blood、Eclipse / Dimension Witch、Dalvi / Bright Moon、Diana / Adventurer of the Unknown、Angelica / The Fallen。源文件位于 [Zormolo/Brown-Dust-2-Assets](https://github.com/Zormolo/Brown-Dust-2-Assets)，来源 URL 固定到上游提交 `94a3ac97b8fab7ee054e0826de7d912de0a233ef`，包含每套一一匹配的 `.skel`、`.atlas`、`.png`；Atlas 贴图引用已经逐一核对。
+已从 [Brown-Dust-2-Assets](https://github.com/Zormolo/Brown-Dust-2-Assets) 的固定提交 `94a3ac97b8fab7ee054e0826de7d912de0a233ef` 扫描并收录该仓库 `assets/spine/character/` 下的全部 **209 套角色骨骼**，覆盖 **87 位角色**。每套都具有同名 `.skel`、`.atlas`、`.png` 文件。完整模型索引保存在 `data/spine-bd2-characters.json`，用户可通过「游戏 → 角色 → 服装」筛选，点击即可自动播放。
 
-这五套是独立的**骨骼模型目录**；真正的人物预览由 `scripts/generate_bd2_spine_previews.mjs` 在 Chromium 中播放对应动画后截取，写入 `assets/animation-previews/`，不使用其他角色或服装的素材。这五套此前是独立的**试播候选目录**，没有计入前述133条动态索引；文件存在不代表骨骼渲染已经成功。没有真实模型截图之前，我们不会用其他人物或服装图片冒充对应预览。播放器仅在用户点击后从第三方资源仓库下载必要文件，不再分发原始游戏骨骼或贴图。另有 `.github/workflows/bd2-spine-browser-test.yml` 在 Chromium 中对真实资源做启动与画面变化验证，运行结果及截图请见 GitHub Actions。
+已使用 GitHub Actions 的 12 个并行 Chromium 分片逐套载入骨骼动画，**209/209 套成功渲染对应人物预览**，并生成 **209 张一一对应的 WebP 缩略图**保存至 `assets/animation-previews/`（约 1.1 MB）。失败清单和核验数记录在 `data/bd2-preview-audit.json`。预览生成器为 `scripts/generate_bd2_bulk_previews.mjs`，发布验证脚本为 `scripts/merge_bd2_bulk_previews.mjs`。这属于批量自动渲染验证，并不代表对每一个动作和贴图细节都逐张人工审美审核。
+
+《棕色尘埃2》使用已经校正的 Straight Alpha 贴图混合模式，避免脸、手和腿部的白色边缘伪影。**原始模型骨骼/Atlas/贴图仍从来源 GitHub 按需加载**，本仓库存放完整索引及实际模型截图，而不是将数百 MB 的第三方版权素材整包转存。当前 209 条与 NIKKE 102 条、蔚蓝档案 31 条合计为 **342 条动态索引**，其中蔚蓝档案主要为回忆大厅动画而非全身角色立绘。
 
 [更多说明：SPINE_STATUS.md](./SPINE_STATUS.md)
 

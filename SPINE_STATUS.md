@@ -13,3 +13,11 @@
 检查方式：访问 [动态立绘页面](https://tyqittle.github.io/anime-character-archive/spine.html)，逐一试播并参考仓库中的 Spine 浏览器测试与诊断结果。
 
 **不要把静态检查成功或索引数量视为所有 Spine 动画均已播放成功的证明。**
+
+## 棕色尘埃2批量收录（2026-10-21）
+
+- 原始资源库固定提交下共有 87 位角色、209 套角色 Spine 模型；全部都有对应骨骼、Atlas、贴图。
+- 动态页面使用 `data/spine-bd2-characters.json` 而不是原先仅五套的 pilot 目录。
+- 209/209 套已使用 Chromium 逐套运行并生成专属 WebP 缩略图，素材地址在 `assets/animation-previews/`；详见 `data/bd2-preview-audit.json`。
+- 自动化成功只证明模型可被加载并渲染，不等同于所有动作和皮肤都通过人工精细检查。
+- 游戏原始骨骼和贴图仍由第三方 GitHub 源站按需加载，并未打包进本站。
