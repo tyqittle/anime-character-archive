@@ -189,7 +189,7 @@ const characterCardCache=new Map();
 function charInfo(c){
  // Only show a thumbnail actually captured from THIS exact Spine animation.
  // Never substitute the base character's portrait for a different costume.
- const exact=c.previewSource==='matching-spine-animation-frame'
+ const exact=['matching-spine-animation-frame','matching-live2d-animation-frame'].includes(c.previewSource)
   &&c.preview==='./assets/animation-previews/'+(c.gameId||'nikke')+'-'+c.id+'.webp';
  const image=exact?c.preview:(c.gameId==='azurlane'&&c.previewSource==='upstream-ship-thumbnail'?c.preview:'');
  return {image,zh:c.zh||nikkePortraits[c.id]?.name||'',name:c.name||c.id};
@@ -222,7 +222,7 @@ function refreshCharacters(){
     const img=document.createElement('img');img.loading='lazy';img.decoding='async';img.width=150;img.height=130;
     img.src=info.image;img.alt=info.zh||info.name;
     img.onerror=()=>{img.replaceWith(Object.assign(document.createElement('div'),{className:'fallback',textContent:'暂无预览图'}))};
-    img.title=c.gameId==='azurlane'?'上游角色静态缩略图（非动态模型截图）':'从当前角色的 Spine 动画直接截取的预览画面';card.append(img);
+    img.title=c.previewSource==='matching-live2d-animation-frame'?'当前皮肤真实 Live2D 截图':c.gameId==='azurlane'?'上游角色静态缩略图（非动态模型截图）':'从当前角色的 Spine 动画直接截取的预览画面';card.append(img);
    }else{const placeholder=document.createElement('div');placeholder.className='fallback';placeholder.textContent=c.gameId==='browndust2'?'真实模型预览待生成':'暂无预览图';card.append(placeholder)}
    const label=document.createElement('span');label.className='nm';
    label.textContent=c.gameId==='browndust2'?(info.zh||c.name):(info.zh&&info.zh!==c.name?info.zh+' / '+c.name:c.name);
