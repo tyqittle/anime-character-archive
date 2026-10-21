@@ -47,6 +47,12 @@
 
 `data/spine-characters.json` 当前包含 **133 条 Spine 索引**：NIKKE 102 条、蔚蓝档案 31 条。它们是待播放的动画资源索引，**不能据此推断全部动画已通过实际播放验证**。Spine 骨骼、Atlas 和贴图可能需要访问第三方来源；部分下载数据会缓存到浏览器 IndexedDB，本站并未全面镜像这些第三方动画文件。 为避免重新下载已缓存的动画包，播放器内部保留历史 IndexedDB 数据库名称作为兼容标识；它不是旧仓库网址，不应随仓库更名直接清除。
 
+### 动态立绘播放器：观赏模式（2026-10-21）
+
+参考 [Spine 官方 Web Player](https://esotericsoftware.com/spine-player)、[Spine Viewer（PixiJS）](https://github.com/sksketer/Spine-Viewer) 和 [BD2-L2D-Viewer](https://github.com/Jelosus2/BD2-L2D-Viewer) 的交互方式，增强站内播放器，而非搬运第三方网站：保留官方 Spine 渲染、时间轴、皮肤和速度控制，同时提供顶部的动作快速切换、一键适应画面、50%～350% 缩放、鼠标和触屏拖拽、移动端双指缩放及舞台全屏。普通页面滚轮仍用于滚动，需按 Ctrl/⌘ 配合滚轮进行缩放；双击画面可重置。
+
+画面缩放与移动仅调整 Canvas 在浏览器中的显示层，不篡改骨骼坐标、Atlas UV 或播放器原生的动画自动适配。Spine 3.8 与 4.x 的不兼容版本切换仍须重载页面，但选中角色和链接状态会保留。角色资源仍在用户播放时从第三方源按需加载，不能将加载索引数量等同于已验证成功播放的动画数量。
+
 ### 棕色尘埃2全身角色 Spine 试播
 
 已在动态立绘页面加入「棕色尘埃2（全身模型试播）」分类，首批五套分别来自 Justia / Knight of Blood、Eclipse / Dimension Witch、Dalvi / Bright Moon、Diana / Adventurer of the Unknown、Angelica / The Fallen。源文件位于 [Zormolo/Brown-Dust-2-Assets](https://github.com/Zormolo/Brown-Dust-2-Assets)，来源 URL 固定到上游提交 `94a3ac97b8fab7ee054e0826de7d912de0a233ef`，包含每套一一匹配的 `.skel`、`.atlas`、`.png`；Atlas 贴图引用已经逐一核对。
