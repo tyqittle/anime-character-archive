@@ -1,0 +1,52 @@
+name: Import Wuthering Waves female full-body artworks
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/import_wuwa_female.py'
+      - '.github/workflows/import-wuwa-female.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: art-import-main
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image validation dependencies
+        run: python -m pip install --disable-pip-version-check pillow
+      - name: Import genuine full-height illustrations and remove mislabelled half-body entries
+        run: python scripts/import_wuwa_female.py
+      - name: Verify character images are actually stored in the repository
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          from PIL import Image
+          db=json.loads(pathlib.Path('data/characters.json').read_text('utf8'))
+          items=[c for c in db['characters'] if c.get('gameId')=='wutheringwaves']
+          for c in items:
+              file=pathlib.Path(c['image'].removeprefix('./'))
+              assert file.exists() and file.stat().st_size>18000,(c['id'],file)
+              with Image.open(file) as image: image.verify()
+          assert all('T_RoleImg' not in c.get('originalImage','') for c in items),'A known half-body UI sprite is indexed'
+          print('Wuthering Waves validated',len(items),'artworks')
+          PY
+      - name: Commit checked artwork and catalog to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/characters.json assets/portraits/
+          if ! git diff --cached --quiet; then
+            git commit -m "Add verified Wuthering Waves female full-body artwork"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
