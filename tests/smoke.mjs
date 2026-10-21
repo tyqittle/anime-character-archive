@@ -73,15 +73,26 @@ assert.ok(!spine.characters.some(x=>x.gameId==='bluearchive'&&x.base.includes('/
 assert.equal(new Set(spine.characters.map(x=>x.id)).size,spine.characters.length,'Duplicate Spine IDs');
 const ids=new Set(chars.characters.map(x=>x.id));
 for(const entry of spine.characters) {
-  const blue=entry.gameId==='bluearchive';
-  assert.ok(blue || (entry.gameId==='nikke' && /^c\d{3}(?:_\d+|_old)?$/.test(entry.id)), 'Invalid Spine character ID: '+entry.id);
-  assert.ok(blue ? /^ba-ch\d+_home$/.test(entry.id) : /^c\d{3}(?:_\d+|_old)?$/.test(entry.id), 'Malformed Spine ID: '+entry.id);
-  assert.ok(['3.8','4.0','4.1','4.2'].includes(entry.spineVersion), 'Unknown Spine version: '+entry.id);
+  const blue=entry.gameId==='bluearchive',nikke=entry.gameId==='nikke',konosuba=entry.gameId==='konosuba';
+  assert.ok(blue||nikke||konosuba,'Unexpected Spine game: '+entry.id);
+  assert.ok(['3.8','4.0','4.1','4.2'].includes(entry.spineVersion),'Unknown Spine version: '+entry.id);
   if(blue){
-    assert.ok(entry.assetType==='lobby' && entry.base.includes('/Spine_Lobbies/Spr/') && entry.base.endsWith('/'+('CH'+entry.id.match(/ch(\d+)_home/)[1]+'_home')), 'Invalid Blue Archive lobby resource: '+entry.id);
+    assert.match(entry.id,/^ba-[a-z0-9_]+_home$/,'Malformed Blue Archive lobby ID');
+    assert.ok(entry.assetType==='lobby'&&entry.base.includes('/Spine_Lobbies/Spr/'),'Invalid Blue Archive lobby resource: '+entry.id);
+    const stem=entry.base.split('/').pop(),parent=entry.base.split('/').at(-2);
+    assert.ok(stem===parent,'Blue Archive model cannot borrow a different lobby skeleton: '+entry.id);
+  }else if(nikke){
+    assert.match(entry.id,/^c\d{3}(?:_\d+|_old)?$/,'Malformed NIKKE ID');
+    assert.ok(entry.base.includes('/l2d/'+entry.id+'/'),'NIKKE model directory mismatch: '+entry.id);
+    assert.ok(entry.base.endsWith('/'+entry.id+'_00')||entry.base.endsWith('/'+entry.id),'NIKKE Spine basename mismatch: '+entry.id);
   }else{
-    assert.ok(entry.base.includes('/l2d/'+entry.id+'/'), 'NIKKE resource directory mismatch: '+entry.id);
-    assert.ok(entry.base.endsWith('/'+entry.id+'_00') || entry.base.endsWith('/'+entry.id), 'NIKKE Spine basename mismatch: '+entry.id);
+    assert.match(entry.id,/^kf-\d+-\d+$/,'Malformed KonoSuba battle rig ID');
+    assert.equal(entry.spineVersion,'3.8');
+    assert.equal(entry.skeletonFormat,'json');
+    assert.ok(entry.skeletonUrl?.endsWith('.txt')&&entry.atlasUrl?.endsWith('.atlas'),'KonoSuba JSON export or atlas missing');
+    assert.ok(entry.skeletonUrl.startsWith('https://raw.githubusercontent.com/HaiKonofanDesu/konofan-assets-jp-sortet/869daaf357ba3622b4a792350b258499cdb78468/'),'KonoSuba assets must reference pinned source');
+    assert.equal(entry.base,entry.atlasUrl.slice(0,-6),'KonoSuba animation must use same base name as atlas');
+    assert.equal(entry.assetType,'battle-spine');
   }
 }
 // No preview may be invented for an indexed but not yet rendered model.
@@ -238,6 +249,10 @@ assert.ok(player.includes('id="loadNotice"')&&player.includes("'loadNotice').hid
 assert.ok(player.includes('class="advanced-tools"'),'Advanced tools must be optional');
 
 assert.ok(player.includes('bd2CatalogUrl')&&player.includes('value="browndust2"'),'Missing complete BD2 loader and game selection');
+assert.ok(player.includes('value="konosuba"')&&player.includes("c.skeletonFormat==='json'"),'New game and external JSON Spine support missing');
+assert.ok(spine.characters.filter(c=>c.gameId==='bluearchive').length>=179,'Blue Archive lobby expansion missing');
+assert.equal(spine.characters.filter(c=>c.gameId==='konosuba').length,126,'KonoSuba first batch must contain 126 distinct models');
+assert.equal(new Set(spine.characters.filter(c=>c.gameId==='konosuba').map(c=>c.characterName)).size,67,'KonoSuba names must include 67 characters');
 assert.ok(player.includes('id="bd2CharacterFilter"'),'BD2 character-to-costume filter is missing');
 assert.ok(player.includes("c.gameId==='bluearchive'||c.gameId==='browndust2'"),'BD2 must not use NIKKE legacy mirror');
 
