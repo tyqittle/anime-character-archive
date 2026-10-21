@@ -6,6 +6,7 @@ Run from the repository root with: python scripts/mirror_static_portraits.py
 """
 import json
 import pathlib
+import re
 import time
 import urllib.request
 
@@ -35,28 +36,45 @@ def download(url: str) -> bytes:
 
 def main():
     data = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    entries = data["characters"]
-    for entry in entries:
-        id_ = entry["id"]
-        if not (len(id_) == 4 and id_[0] == "c" and id_[1:].isdigit() and entry.get("kind") == "full"):
-            raise ValueError(f"Unexpected image entry: {id_}")
-        expected = f"{SOURCE_ROOT}{id_}_00.png"
-        source = entry.get("originalImage", entry["image"])
-        if source != expected:
-            raise ValueError(f"Unapproved upstream image path for {id_}: {source}")
+    all_entries = data["characters"]
+    # This tool restores only official NIKKE FB PNG mirrors.
+    # The repository also contains other games and separately sourced NIKKE
+    # wiki artwork; those records must remain completely unchanged.
+    entries = [
+        entry for entry in all_entries
+        if entry.get("gameId") == "nikke"
+        and re.fullmatch(r"c[0-9]{3}", entry.get("id", ""))
+        and entry.get("originalImage") == (
+            SOURCE_ROOT + entry["id"] + "_00.png"
+        )
+    ]
+    if not entries:
+        raise ValueError("No eligible NIKKE full-body source entries found")
     DEST.mkdir(parents=True, exist_ok=True)
+    repaired = 0
     for number, entry in enumerate(entries, 1):
         id_ = entry["id"]
         destination = DEST / f"{id_}.png"
-        if not (destination.is_file() and destination.read_bytes()[:8] == PNG_SIGNATURE):
+        expected_local = f"./assets/portraits/{id_}.png"
+        if entry.get("image") != expected_local:
+            raise ValueError(f"Unexpected local NIKKE asset path for {id_}: {entry.get('image')}")
+        valid = False
+        if destination.is_file():
+            with destination.open("rb") as file:
+                valid = file.read(8) == PNG_SIGNATURE
+        if not valid:
             contents = download(f"{SOURCE_ROOT}{id_}_00.png")
             destination.write_bytes(contents)
-        entry["originalImage"] = f"{SOURCE_ROOT}{id_}_00.png"
-        entry["image"] = f"./assets/portraits/{id_}.png"
-        print(f"[{number}/{len(entries)}] {destination.name} ({destination.stat().st_size} bytes)", flush=True)
-    data["note"] = "静态全身立绘已镜像至本仓库；动态 Spine 仍使用第三方资源。原图来源保存在 originalImage 和 source 字段。"
-    MANIFEST.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print("Static PNG mirror complete; no Spine assets were downloaded.")
+            repaired += 1
+            print(f"RESTORED [{number}/{len(entries)}] {destination.name} ({len(contents)} bytes)", flush=True)
+    print(
+        f"NIKKE source records checked: {len(entries)}; files restored: {repaired}; "
+        f"other game and wiki records untouched: {len(all_entries) - len(entries)}.",
+        flush=True,
+    )
+    # Do not rewrite the catalog: all paths and metadata remain unchanged.
+    # If a missing PNG was restored, run the thumbnail workflow separately.
+
 
 if __name__ == "__main__":
     main()
