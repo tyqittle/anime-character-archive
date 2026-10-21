@@ -67,10 +67,13 @@ async function load(name,id,modelUrl){
  if(model){try{app.stage.removeChild(model);model.destroy()}catch(e){}model=null}
  if(!app){notify('error',{error:initError||'Live2D 渲染库尚未加载'});return}
  message('正在加载 '+name+' 的 Cubism 模型与动作…');
+ if(app?.ticker)app.ticker.stop();
  const url=modelUrlFor(name,modelUrl);
  let next;
  try{
-  next=PIXI.live2d.Live2DModel.fromSync(url);
+  // Many skins define dozens of idle motions. Preloading all of them floods
+  // the network and delays textures. Fetch motions only when actually selected.
+  next=PIXI.live2d.Live2DModel.fromSync(url,{motionPreload:'NONE'});
   if(!next||!next.once)throw Error('Live2D 模型加载器未初始化');
   await new Promise((resolve,reject)=>{
    const timer=setTimeout(()=>reject(Error('模型加载超时（90 秒）')),90000);
@@ -92,6 +95,7 @@ async function load(name,id,modelUrl){
   model.on('pointermove',evt=>{if(model?.dragging&&evt?.data?.global){model.x=evt.data.global.x-model.dragX;model.y=evt.data.global.y-model.dragY}});
   for(const ev of ['pointerup','pointerupoutside'])model.on(ev,()=>{if(model)model.dragging=false});
   warn.hidden=true;
+  if(!document.hidden&&app?.ticker)app.ticker.start();
   notify('playing',{motions:actions,selectedMotion:initial,zoom,loadMs:Math.round(performance.now()-loadStartedAt),fpsCap:targetFPS});
  }catch(e){try{next?.destroy()}catch(_){}if(generation!==currentGeneration)return;model=null;readyId='';message('模型加载失败：'+(e?.message||String(e)));notify('error',{error:'模型加载失败：'+(e?.message||String(e))})}
 }
@@ -114,7 +118,8 @@ try{
  if(!window.PIXI?.Application||!PIXI.live2d?.Live2DModel)throw Error('第三方 PixiJS/Cubism 播放库未能初始化，请检查网络或扩展拦截');
  app=new PIXI.Application({view:document.getElementById('live2dCanvas'),autoStart:true,resizeTo:window,backgroundAlpha:0,antialias:false,resolution:1});
  // Reduce WebGL fill-rate and avoid struggling to hit 60 fps on large models.
- if(app.ticker)app.ticker.maxFPS=targetFPS;
+ if(app.ticker){app.ticker.maxFPS=targetFPS;app.ticker.stop()}
+ if(PIXI.Ticker?.shared)PIXI.Ticker.shared.maxFPS=targetFPS;
  document.addEventListener('visibilitychange',()=>{if(!app?.ticker)return;if(document.hidden)app.ticker.stop();else app.ticker.start()});
 
  message('Live2D 播放器已准备，正在等待选择角色…');
