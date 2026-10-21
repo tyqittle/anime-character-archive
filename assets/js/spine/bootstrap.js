@@ -29,6 +29,18 @@
     }}
    }catch(e){console.warn('棕色尘埃2完整目录暂不可用',e)}
   }
+  if(location.protocol!=='file:'){
+   try{
+    const response=await fetch(newGamesCatalogUrl,{cache:'default'});
+    if(response.ok){const catalog=await response.json();if(Array.isArray(catalog.characters)){
+     const known=new Set(allCharacters.map(c=>c.id));
+     for(const c of catalog.characters){
+      if(!['girlsfrontline','arknights','konosuba'].includes(c.gameId)||known.has(c.id))continue;
+      if((c.engine==='cubism'&&c.modelUrl)||(c.gameId==='arknights'&&c.base)){allCharacters.push(c);known.add(c.id)}
+     }
+    }}
+   }catch(e){console.warn('新游戏动态目录暂不可用',e)}
+  }
   refreshCharacters();
   const requested=params.get('id');if(requested&&allCharacters.some(x=>x.id===requested&&true)){const hit=allCharacters.find(x=>x.id===requested);$('gameFilter').value=hit.gameId||'nikke';refreshCharacters();$('characters').value=requested;refreshCardSelection();}
   status('已载入 '+allCharacters.length+' 条动画索引。按游戏、角色、服装筛选，点击即播放；不会一次下载全部模型。');

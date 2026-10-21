@@ -42,7 +42,7 @@ async function detectSpineVersion(blob){
  return {hash:found.hash,version,majorMinor:version.split('.').slice(0,2).join('.')};
 }
 async function downloadPack(c,mirror,signal,isCurrent=()=>true){
- const paths=urls(c,mirror),stem=c.base.split('/').pop();
+ const paths=urls(c,mirror),stem=c.resourceStem||decodeURIComponent(c.base.split('/').pop());
  // Start textures after the small atlas arrives, while the skeleton continues downloading.
  const skeletonResult=downloadBlob(paths.skeleton,60000,signal).then(blob=>({blob}),error=>({error}));
  const atlasBlob=await downloadBlob(paths.atlas,30000,signal);
@@ -55,7 +55,7 @@ async function downloadPack(c,mirror,signal,isCurrent=()=>true){
  let nextPage=0,completedPages=0;
  async function fetchTexturePages(){
   while(nextPage<pages.length){
-   const page=pages[nextPage++],url=paths.base.slice(0,paths.base.lastIndexOf('/')+1)+page;
+   const page=pages[nextPage++],url=paths.base.slice(0,paths.base.lastIndexOf('/')+1)+encodeURIComponent(page);
    const blob=await downloadBlob(url,60000,signal);
    if(blob.size<100)throw Error('贴图为空：'+page);
    data[page]=await blobToUri(blob);

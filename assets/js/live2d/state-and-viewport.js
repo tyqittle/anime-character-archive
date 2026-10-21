@@ -3,11 +3,21 @@
 const CHANNEL='anime-archive-azurlane-v1';
 const SOURCE='https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9';
 const MILKY_SOURCE='https://cdn.jsdelivr.net/gh/MilkyLan/AzurLane-Live2d@1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3';
-// Model URLs are accepted only from the two pinned, known archive snapshots.
-function modelUrlFor(name,candidate){
- const suffix='/live2d/'+name+'/'+name+'.model3.json';
- const allowed=[SOURCE+suffix,MILKY_SOURCE+suffix];
- return allowed.includes(candidate)?candidate:SOURCE+suffix;
+// Allow only commit-pinned, audited source trees; never arbitrary cross-origin URLs.
+const COMMUNITY_SOURCE='https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/';
+function modelUrlFor(name,candidate,id){
+ if(typeof candidate!=='string')return '';
+ if(id.startsWith('al-')){
+  const suffix='/live2d/'+name+'/'+name+'.model3.json';
+  return [SOURCE+suffix,MILKY_SOURCE+suffix].includes(candidate)?candidate:'';
+ }
+ if(!/^(?:gf|ks)-[a-z0-9_-]+$/.test(id)||!candidate.startsWith(COMMUNITY_SOURCE))return '';
+ try{
+  const sub=decodeURIComponent(candidate.slice(COMMUNITY_SOURCE.length));
+  const root=id.startsWith('gf-')?'少女前线 girls Frontline/live2dnew/':'为美好的世界献上祝福！Fantastic Days/';
+  if(sub.startsWith(root)&&!sub.includes('..')&&sub.endsWith('/'+name+'.model3.json'))return candidate;
+ }catch(e){}
+ return '';
 }
 const SAME_ORIGIN=location.origin;
 const warn=document.getElementById('warning');

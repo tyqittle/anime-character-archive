@@ -6,7 +6,7 @@ function ensureAzurLaneFrame(){
  clearPlayer();
  azurlaneFrame=document.createElement('iframe');
  azurlaneFrame.className='azurlane-live2d-frame';
- azurlaneFrame.title='碧蓝航线 · Live2D 模型画布';
+ azurlaneFrame.title='Live2D · Cubism 模型画布';
  azurlaneFrame.src='./azurlane-stage.html?v=20261021-live2d-modules-v1';
  azurlaneFrame.loading='eager';
  azurlaneFrame.setAttribute('allow','autoplay');
@@ -38,7 +38,7 @@ function playAzurLane(c){
  azurlanePending=c;azurlanePlayingId='';
  presentAzurLanePreview(c);
  $('title').textContent=c.name;
- $('stageContext').textContent='碧蓝航线 · Cubism Live2D';
+ $('stageContext').textContent=(c.gameId==='girlsfrontline'?'少女前线':c.gameId==='konosuba'?'为美好的世界献上祝福！':'碧蓝航线')+' · Cubism Live2D';
  $('animationPicker').disabled=true;
  $('animationPicker').replaceChildren(new Option('正在加载角色动作…',''));
  setViewerToolsEnabled(false);
@@ -57,7 +57,7 @@ window.addEventListener('message',event=>{
   return;
  }
  if(data.kind==='error'&&(!data.id||data.id===azurlanePending?.id)){
-  status('碧蓝航线 Live2D：'+data.error,true);return;
+  status('Live2D：'+data.error,true);return;
  }
  if(data.id!==azurlanePending?.id)return;
  if(data.kind==='playing'){
@@ -65,7 +65,7 @@ window.addEventListener('message',event=>{
   azurlanePlayingId=data.id;
   setViewerToolsEnabled(true);
   const actions=Array.isArray(data.motions)?data.motions.filter(x=>typeof x==='string'):[];
-  $('animationPicker').replaceChildren(...actions.map(x=>new Option(x,x)));
+  $('animationPicker').replaceChildren(...actions.map(x=>new Option(data.motionLabels?.[x]||x,x)));
   $('animationPicker').disabled=!actions.length;
   if(data.selectedMotion)$('animationPicker').value=data.selectedMotion;
   viewZoom=1;$('zoomValue').textContent='100%';

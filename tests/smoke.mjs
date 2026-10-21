@@ -325,3 +325,27 @@ for(const item of ['assets/gallery-base.css','assets/gallery-theme.css','assets/
 }
 
 assert.ok(!/<script>\s*['\"]use strict/.test(read('azurlane-stage.html')),'Cubism page must not contain application code');
+
+const extra=JSON.parse(read('data/spine-newgames.json'));
+const expectedNew={girlsfrontline:297,konosuba:61,arknights:359};
+assert.equal(extra.characters.length,717,'New model index should contain 717 entries');
+const allIds=new Set([...spine.characters.map(x=>x.id),...azure.characters.map(x=>x.id),...bd2Full.characters.map(x=>x.id)]);
+for(const c of extra.characters){
+ assert.ok(!allIds.has(c.id),'Duplicate model ID across catalogs: '+c.id);
+ allIds.add(c.id);
+ assert.ok(['girlsfrontline','konosuba','arknights'].includes(c.gameId));
+ assert.ok(!c.preview&&c.status==='unverified-playback','Unverified models must not show borrowed previews');
+ if(c.engine==='cubism'){
+  assert.ok(c.modelUrl.startsWith('https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/'));
+  assert.ok(c.modelUrl.endsWith('.model3.json')&&c.skinCode);
+ }else{
+  assert.equal(c.gameId,'arknights');
+  assert.ok(c.base.includes('1fb77e6c00310c155d2c368bdc8872be973f2739'));
+  assert.equal(c.assetType,'battle-spine');
+  assert.ok(c.resourceStem);
+ }
+}
+for(const [game,count] of Object.entries(expectedNew))
+ assert.equal(extra.characters.filter(x=>x.gameId===game).length,count,'Unexpected import count for '+game);
+assert.ok(spineHTML.includes('value="girlsfrontline"')&&spineHTML.includes('value="arknights"'),'New game filters not connected');
+assert.ok(spineSource.includes('newGamesCatalogUrl')&&spineSource.includes('visibleCardLimit+=240'),'New game loading/pagination missing');

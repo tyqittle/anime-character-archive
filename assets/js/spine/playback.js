@@ -1,11 +1,11 @@
 'use strict';
 async function playCharacter(c){
- if(c.gameId==='azurlane'){playAzurLane(c);return}
+ if(c.engine==='cubism'||c.gameId==='azurlane'){playAzurLane(c);return}
  cancelCharacterDownload();
  const current=sequence,controller=new AbortController();
  activeCharacterAbort=controller;
  $('title').textContent=(c.zh?c.zh+' · ':'')+c.name;
- $('stageContext').textContent=c.gameId==='browndust2'?'棕色尘埃2 · 全身角色':c.gameId==='bluearchive'?'蔚蓝档案 · 回忆大厅':c.gameId==='konosuba'?'为美好的世界献上祝福！· 战斗动画':'胜利女神：妮姬 · Spine';
+ $('stageContext').textContent=c.gameId==='browndust2'?'棕色尘埃2 · 全身角色':c.gameId==='bluearchive'?'蔚蓝档案 · 回忆大厅':c.gameId==='konosuba'?'为美好的世界献上祝福！· 战斗动画':c.gameId==='arknights'?'明日方舟 · Spine 战斗小人':'胜利女神：妮姬 · Spine';
  // Do not leave the previously selected character playing while downloading
  // a different skeleton; the stage now shows a dedicated loading notice.
  clearPlayer();

@@ -70,6 +70,12 @@
 - 原始 Cubism 二进制模型、贴图、动作、第三方播放器库仍由对应固定版本的外部 CDN 按需提供；站内只托管索引与播放器代码，不声称全部资源已镜像到 GitHub。
 - `.github/workflows/azurlane-live2d-check.yml` 和 `scripts/test_azurlane_live2d_browser.mjs` 用 Chromium 验证部分代表模型的真实 WebGL 画面及交互；**242 套全部通过播放验证的结论尚未成立**。新增 64 套已按源仓库目录核验 `.model3.json` / `.moc3`、贴图与动作文件，但目前没有对应的逐套播放器成功报告；其中 63 套在现有静态图片源中缺少精确皮肤预览，界面会明确显示占位而非错误的他人贴图。部分较新皮肤可能需要更新版 Cubism Core。
 
+## 动态立绘扩容（2026-10-22）
+
+本次 `data/spine-newgames.json` 新增 **717 套**：少女前线 297 套 Cubism 动态角色立绘（常态与受损）、为美好的世界献上祝福！61 套 Cubism Live2D（区别于原有 126 套 Spine 战斗小人）、明日方舟 359 套 BattleFront Spine 战斗小人。分别来自 [Eikanya/Live2d-model](https://github.com/Eikanya/Live2d-model) 固定提交 `7e446cbd95ec352cdb0f73c079e4d075d7d528ac` 和 [kiraio-moe/Arknights-Base](https://github.com/kiraio-moe/Arknights-Base) 固定提交 `1fb77e6c00310c155d2c368bdc8872be973f2739`。
+
+这些是经过源仓库文件树核验模型和对应贴图的索引，并**不是 717 套已全部在浏览器播放通过**。未截图的角色显示占位，不借用其他角色的错误立绘。明日方舟是战斗小人，明确与全身 Live2D 动态立绘分开标注；素材本体仍在相应第三方源按需获取。超过 240 条的分类可在左侧角色卡片列表内点击“继续显示角色”分批浏览。
+
 ## 动态立绘
 
 `data/spine-characters.json` 当前包含 **819 条 Spine 索引**：NIKKE 514 条、蔚蓝档案回忆大厅 179 条、《为美好的世界献上祝福！Fantastic Days》战斗动画 126 条。它们是待播放的动画资源索引，**不能据此推断全部动画已通过实际播放验证**。Spine 骨骼、Atlas 和贴图可能需要访问第三方来源；部分下载数据会缓存到浏览器 IndexedDB，本站并未全面镜像这些第三方动画文件。 为避免重新下载已缓存的动画包，播放器内部保留历史 IndexedDB 数据库名称作为兼容标识；它不是旧仓库网址，不应随仓库更名直接清除。

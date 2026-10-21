@@ -137,3 +137,6 @@
 #player .azurlane-loading-cover{position:absolute;inset:0;z-index:2;pointer-events:none;display:grid;place-items:center;align-content:center;gap:10px;background:#142238;padding:20px}
 #player .azurlane-loading-cover img{display:block;max-width:95%;max-height:calc(100% - 52px);width:auto;height:auto;object-fit:contain}
 #player .azurlane-loading-caption{font-size:12px;color:#cad8eb;text-align:center;padding:7px 12px;background:#17253acc;border-radius:9px;overflow-wrap:anywhere}
+
+.character-cards .load-more-characters{grid-column:1/-1;min-height:44px;width:100%;background:#213950;color:#eff4ff;border:1px solid #637ca5;border-radius:10px;padding:10px;font-size:12px}
+.character-cards .load-more-characters:hover{background:#344d70}
