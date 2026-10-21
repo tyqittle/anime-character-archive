@@ -21,7 +21,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "data" / "new_game_sources.json"
 CATALOG = ROOT / "data" / "characters.json"
 OUTPUT = ROOT / "assets" / "portraits"
-HEADERS = {"User-Agent":"Mozilla/5.0 (compatible; winter-cg-archive-importer/2.0)",
+HEADERS = {"User-Agent":"Mozilla/5.0 (compatible; anime-character-archive-importer/2.0)",
            "Accept":"image/png,image/webp,image/jpeg,image/*"}
 GAMES = {"zzz": ("绝区零", "Zenless Zone Zero"),
          "reverse1999": ("重返未来：1999", "Reverse: 1999")}
