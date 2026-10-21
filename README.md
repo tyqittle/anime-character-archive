@@ -16,7 +16,7 @@
 | `spine.html` | Spine 动态角色浏览与播放 |
 | `data/characters.json` | 静态立绘记录、游戏分类、原图尺寸和素材来源 |
 | `data/spine-characters.json` | NIKKE、蔚蓝档案及《为美好的世界献上祝福！》Spine 索引 |
-| `data/live2d-azurlane.json` | 碧蓝航线 178 套 Cubism Live2D 动态皮肤资源索引 |
+| `data/live2d-azurlane.json` | 碧蓝航线 242 套 Cubism Live2D 动态皮肤资源索引 |
 | `azurlane-stage.html` | 在动态剧场中隔离运行 Cubism Live2D 的画布 |
 | `data/spine-bd2-characters.json` | 棕色尘埃2共 87 位角色、209 套全身动态服装 |
 | `data/spine-bd2-pilot.json` | 历史首批五套试播记录 |
@@ -59,12 +59,12 @@
 
 ## 碧蓝航线 Live2D 动态皮肤（2026-10-21）
 
-本仓库已给统一的 [动态剧场](./spine.html) 新增“碧蓝航线（Live2D 动态皮肤）”游戏分类。来自 [Chaoray/AzurLane-Live2D-Viewer](https://github.com/Chaoray/AzurLane-Live2D-Viewer) 固定提交 `88cb6e56a0ad472fe7e546509f096545d2bbc5b9` 的 **178 套** `.model3.json` / `.moc3` 对应模型已建索引，`data/azurlane-import-audit.json` 有校验范围和完整来源。
+本仓库已给统一的 [动态剧场](./spine.html) 新增“碧蓝航线（Live2D 动态皮肤）”游戏分类。来自 [Chaoray/AzurLane-Live2D-Viewer](https://github.com/Chaoray/AzurLane-Live2D-Viewer) 固定提交 `88cb6e56a0ad472fe7e546509f096545d2bbc5b9` 的 **178 套** `.model3.json` / `.moc3` 对应模型，以及 [MilkyLan/AzurLane-Live2d](https://github.com/MilkyLan/AzurLane-Live2d) 固定提交 `1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3` 中不重复的 **64 套**，合计 **242 套**，均已建索引，`data/azurlane-import-audit.json` 有校验范围和完整来源。
 
 - 《碧蓝航线》主要使用 **Live2D Cubism**，并非 Spine；新增 `azurlane-stage.html` 在本站播放器右侧原区域内加载独立的 PixiJS/Cubism 引擎，避免两个运行时发生冲突、切换皮肤无需重载整个页面。支持动作菜单、缩放和全屏。
 - 153 套带与**该皮肤编号一致**的上游静态缩略图，其他 25 套使用“暂无预览图”。这些图明确属于**静态角色预览，不是动态帧截图**；为避免错误配图，HX 等特殊变体不会盗用基础皮肤的缩略图。
 - 原始 Cubism 二进制模型、贴图、动作、第三方播放器库仍由对应固定版本的外部 CDN 按需提供；站内只托管索引与播放器代码，不声称全部资源已镜像到 GitHub。
-- `.github/workflows/azurlane-live2d-check.yml` 和 `scripts/test_azurlane_live2d_browser.mjs` 用 Chromium 验证部分代表模型的真实 WebGL 画面及交互；**178 套全部通过播放验证的结论尚未成立**。部分较新皮肤可能需要更新版 Cubism Core。
+- `.github/workflows/azurlane-live2d-check.yml` 和 `scripts/test_azurlane_live2d_browser.mjs` 用 Chromium 验证部分代表模型的真实 WebGL 画面及交互；**242 套全部通过播放验证的结论尚未成立**。新增 64 套已按源仓库目录核验 `.model3.json` / `.moc3`、贴图与动作文件，但目前没有对应的逐套播放器成功报告；其中 63 套在现有静态图片源中缺少精确皮肤预览，界面会明确显示占位而非错误的他人贴图。部分较新皮肤可能需要更新版 Cubism Core。
 
 ## 动态立绘
 

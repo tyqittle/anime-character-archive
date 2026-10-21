@@ -6,7 +6,7 @@ import fs from 'node:fs';
 
 const browserPath=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'].find(fs.existsSync);
 if(!browserPath)throw Error('Chromium is not installed');
-const cases=['al-bulaimodun_2','al-aierdeliqi_4'];
+const cases=['al-bulaimodun_2','al-aierdeliqi_4','al-banerwei_3'];
 const browser=await chromium.launch({headless:true,executablePath:browserPath,args:['--no-sandbox','--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const results=[];
 try{
