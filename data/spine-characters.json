@@ -7581,7 +7581,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-airi_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8a12fb8cf63e9cdacde9881e0bc53e431a517ae7908a2c718e0efa7d1f2986d4",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-akane_home",
@@ -7597,7 +7601,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-akane_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9747b571da0045e3def7db4b1a2d30d105b50b7def7a967018067c1abf084488",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ako_home",
@@ -7613,7 +7621,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ako_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6d20234647ed329249d427df3160ba92ac0d0c8ab9f6aec00f9b3d4a123e506d",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ako_home_teen",
@@ -7629,7 +7641,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ako_home_teen.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7b647a1543033b3b04e9a94371db94c922dcd1f757c32845d813ec9efc931b72",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-aris_home",
@@ -7645,7 +7661,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-aris_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6b144add07c3e64472fe69fd0b308f2e35818c4c95a7c26b143093a7b54f75fd",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-aru_newyear_home",
@@ -7661,7 +7681,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-aru_newyear_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7d0de33a1fcbaaee583303a7c588a4065710dbb8af47bb41f909e8961552e9c8",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-asuna_home",
@@ -7677,7 +7701,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-asuna_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d270a040da1825dc679b32248ff70a216486207ea8fd489f5c13cf2c934899e5",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-atsuko_home",
@@ -7693,7 +7721,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-atsuko_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6172c8dbffa1f6fd650eb67259bafe00a72172565c626c8f4a629414c13012fb",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ayane_home",
@@ -7709,7 +7741,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ayane_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "5f3981d51f0533bd716756856958f3c7f6e07a053e7a55903bffb99744c80186",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-azusa_home",
@@ -7725,7 +7761,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-azusa_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "18dc71a8ffa70ec1cb3bfaf187cd1b3f12ec34e40e4371b9cc24f82a34e07eef",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-azusa_swimsuit_home",
@@ -7741,7 +7781,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-azusa_swimsuit_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e9573f248c6c424d5eb5c2bd8e7019a2bba316ec56f7f61dae4e5c776b1f20d9",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0081_home",
@@ -7757,7 +7801,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0081_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9d68b2b35859ef54c6e570ffb9bcfae3963d9e912a569c97aee2a20dab7358c3",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0113_home",
@@ -7773,7 +7821,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0113_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7be8f9f4e5e4940fb78fc4768883d4cfa2f970f78f26c2d2efb570183a26a874",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0156_home",
@@ -7789,7 +7841,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0156_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "23ccaff7dbc5e2d1072e83070e688b5fe9f7bc46fb0fe9575cb4dcf15b085b8e",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0159_home",
@@ -7805,7 +7861,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0159_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2c5f6dd25cff352bb9925abf3870daba2a13e5266f1c784c67614f2dbd27dbfa",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0160_home",
@@ -7821,7 +7881,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0160_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "cb8f135dd03fb850cd90544c9322b2b26e6abe63f265d5694f6cab6b62eb8088",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0161_home",
@@ -7837,7 +7901,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0161_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "fb819ef60df7306ed84452b3d92047cb3f55a5ff7cae6e614c3fa3595e7726b7",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0163_home",
@@ -7853,7 +7921,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0163_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e0ca63caa5659546475d0ac05e4e5da3eae1597e7c60541a4f82d7b05355c5b4",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0164_home",
@@ -7869,7 +7941,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0164_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "20f23b765ce0f76db1b8aade2b7df2b175664f446720d3eb7a477031e5308ff9",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0165_home",
@@ -7885,7 +7961,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0165_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b20a0a9bf44f459e32ab42ea59a0b70e1f8560789d39cb13122af2c08e5674ab",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0167_home",
@@ -7901,7 +7981,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0167_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3aed17936d08e462082ceea5c9366a5900c0ac53883bd32a629866697cf5f2d4",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0169_home",
@@ -7917,7 +8001,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0169_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "0f8a4c843e50e7040d768efca1f577bbff90a595f5742e095beaa52becd69d88",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0170_home",
@@ -7933,7 +8021,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0170_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "42e8d630719c1745626345eeaf7072cf349e761fc359258d36fecf911b184df2",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0175_home",
@@ -7949,7 +8041,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0175_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "151dd6b90efbb45eca6456ef2b3de7b45bdde228b4d7fd04c029fe4bb35e4d7b",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0176_home",
@@ -7965,7 +8061,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0176_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b3cdc0e64dc028b3fcb67834f4c6e985e663d57d4882b69bd8a123c0bc03970d",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0177_home",
@@ -7981,7 +8081,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0177_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "470df49c47f5b7f81145dfbc60231b8ff9a741cebe2aaf18f155634469358ce5",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0178_home",
@@ -7997,7 +8101,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0178_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7dbc30190f98a29a74652a30add2ce688ce6d2aeada76d0104219e1298a2e59d",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0179_home",
@@ -8013,7 +8121,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0179_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4849675e7883d1472c829aae5a3fa422f04a866a8e967015fe597848bca25a1d",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0180_home",
@@ -8029,7 +8141,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0180_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7f3fc0c62e21076a22bb081e38c676053aebdd0f3594e256058cc530aecde382",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0181_home",
@@ -8045,7 +8161,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0181_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "dd0017c665f1b97d7e7743bc24b724d9b43e86ad7d2004bb1682066a31803e6c",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0182_home",
@@ -8061,7 +8181,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0182_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6bd306c373253070c6995c0bd884d5b406bf96df150491facd946bb97f1709ad",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0183_home",
@@ -8077,7 +8201,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0183_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d147169afa0018e0d4c3a79fcc29ff1abf7e2c067cd2fb62390db1b3ba54f1c4",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0184_home",
@@ -8093,7 +8221,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0184_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4bbb7ed99cc6ceb04c3e495caaa520650e797c511f4c81e98ddf43b1d6955853",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0185_home",
@@ -8109,7 +8241,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0185_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "69759e24554eb192282ced277161729caa7624d656f91f7b4865bbecb5493ddb",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0186_home",
@@ -8125,7 +8261,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0186_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c4537a502beb3471ffa4a704cac65a74bb889a06e0d4c09a762433b6abaf134d",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0187_home",
@@ -8141,7 +8281,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0187_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "bbc77f91361c98c6a465cbdb46a94c62d5c8fe7f7b449f01b2bdfa7ceefe4686",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0188_home",
@@ -8157,7 +8301,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0188_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2c07f6335d7f886acb4f40bf3c36417db7847ab79de0a9225dc9df1f2efbbd0f",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0189_home",
@@ -8173,7 +8321,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0189_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "313187d31d2ab879cfe086793ca16ede440346d39b66c57bb8a8c49bfc904fa9",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0190_home",
@@ -8189,7 +8341,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0190_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ff70193efe9fce9fc1e53adc3913eca9cc4754d85f4478fbc48d3ff8c06bef60",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0191_home",
@@ -8205,7 +8361,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0191_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "20294fe4afe5198808079e44e8be52e0d30457eedc129da21ccbf6079bdf944d",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0192_home",
@@ -8221,7 +8381,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0192_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ac70553a1cf714c63afeade08a34eae342a7b3aedbbb7969b2ba3110b18ab119",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0193_home",
@@ -8237,7 +8401,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0193_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "978a9fda5402521bfe7b017c29961c68f80150eab226bbe9709b5fcf2e3e716e",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0194_home",
@@ -8253,7 +8421,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0194_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3b490742b8b875248139029a4eb05a4bfedbfaf19c474394717abd8c5731d31e",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0195_home",
@@ -8269,7 +8441,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0195_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "0ada73801987b01e42de7c81540e1b325b4c9e49ee037310a667347faa0984e6",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0196_home",
@@ -8285,7 +8461,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0196_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a71a32c449816936da7b6bc5c3570892369d47abf3a6b486acd39c4cb19fe374",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0198_home",
@@ -8301,7 +8481,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0198_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3f5330aafe44496231c8f708755dcc123ce328502cfd258856b5ecaeef10d5c7",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0200_home",
@@ -8317,7 +8501,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0200_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "0778012eb07487ee825471f03161e48acb675b1dc7959cb0ddc3be4a58de7a31",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0201_home",
@@ -8333,7 +8521,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0201_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a853f5006deb79a0040b4a3f02d30e6e0a850a836dd853248d07b7b85d4d1052",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0202_home",
@@ -8349,7 +8541,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0202_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8b1c9799cfb10f2e4768b50cb6dc789bed5cbc20a460f6809b0fe146cfe5744b",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0203_home",
@@ -8365,7 +8561,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0203_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c0bccc1b1c1d33359ababe77f1838700df6612c7ab2adc374c2a80bebacb4246",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0204_home",
@@ -8381,7 +8581,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0204_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "18c6d0fc3b2cc4daee2f01c4a4a824ae52863aaae50c6fec15a004ca3d9a6e03",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0205_home",
@@ -8397,7 +8601,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0205_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c427cc68d697cc6f7264732272ddff24e5544f61171f6380d1ae905c0c2e9576",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0209_home",
@@ -8413,7 +8621,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0209_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "5d9bb52bd175b432063c750151c1e5d8ae25edd56ab56fbf33b3c7659db83493",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0210_home",
@@ -8429,7 +8641,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0210_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8f0b9d44c17fa5dede7c9b480f649c42d1b4f2d0875165536a33ffa9a573feb9",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0211_home",
@@ -8445,7 +8661,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0211_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b2134d4fa73a073fb4bed0c8c5370861e35591e80b6592b192cbf6641cbf362f",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0214_home",
@@ -8461,7 +8681,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0214_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "257b28dbf0b665c02400c257135215b464fa8c541c9ce1e5c9eb029115a30781",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0215_home",
@@ -8477,7 +8701,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0215_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "459f66a81b775d43e6ea5ddc8e631eaa5e3e1303bc4604ae28fe594cb483212d",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0216_home",
@@ -8493,7 +8721,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0216_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "5f943a3434075291fa9415a3dc24164e7ad8d53203731f7b672f8c47fae93857",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0217_home",
@@ -8509,7 +8741,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0217_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6c3781323e3903a9c782637af9061f7c7619d620819b0009298a51972b3bc191",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0218_home",
@@ -8525,7 +8761,8 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "previewStatus": "render-failed"
     },
     {
       "id": "ba-ch0219_home",
@@ -8541,7 +8778,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0219_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "02e690837cf2ebcb02ad4d29cf587edf6f2b36c42948f9858a31af92413602dc",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0220_home",
@@ -8557,7 +8798,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0220_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e0cb2abd61df6b915f582316c86eb858727d79a8dde5fd03f0c38d874f75aa37",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0224_home",
@@ -8573,7 +8818,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0224_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "87df641752ff626364daab3287f11c52dc378cb25e0dc9ed48999d05064cf75c",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0225_home",
@@ -8589,7 +8838,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0225_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2af765d694f82d68797d4970fec4e7de8375486e477f6f180d3c226bc09e8695",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0230_home",
@@ -8605,7 +8858,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0230_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2c24a96f17a1f761639f64c716a3683a6a54587d4f7fc1be3df07a49d9dc09d2",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0231_home",
@@ -8621,7 +8878,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0231_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "26abc2270f98b138ac843e953bbb27f039adce690dcd422f9bc355c25df907c6",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0232_home",
@@ -8637,7 +8898,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0232_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3fb2bcd87331de6a6fce792f1f22c86eab7689c14c1484ed1949b8901c815dbc",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0233_home",
@@ -8653,7 +8918,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0233_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "49759c9c85f75ad1cdd7aada3a713659db949f38e4b7a7471da181fbdd3a6830",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0239_home",
@@ -8669,7 +8938,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0239_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9b5725871ffb47f6675c7845fd1c2366ed7fc0f005eb9b29410612c7a45c2e8b",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0240_home",
@@ -8685,7 +8958,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0240_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "cd698e68b93c198259ec37e08220aea9440d9137247b7263363e10a111dec6cb",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0250_home",
@@ -8701,7 +8978,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0250_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "08eb32dc5c96fddf33f2efa3b4d60becf406707f71adc6739e6a8b1e743a5dd3",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0251_home",
@@ -8717,7 +8998,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0251_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6aec10beb5e26848394c5549e719f4a2eacb05501431f24ac384c7303df0c4df",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0255_home",
@@ -8733,7 +9018,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0255_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "fcdd53c2a8c6b876aa9063c4495ae67144693b5209f63d5d06acd8a1f1fb0d2c",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0260_home",
@@ -8749,7 +9038,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0260_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a09a18ce50699f251bdff0ce9f6923f54558ff3f403f5f19896565de39443d96",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0261_home",
@@ -8765,7 +9058,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0261_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7d6cb5daf0c21346d37d9ab90cd96437d0240c96120c837685fe95eee2f52152",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch0262_home",
@@ -8781,7 +9078,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch0262_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "65549656b61d89215d3359b3a367240a814278689fe822ecad965f7b34501ddd",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch9997_home",
@@ -8797,7 +9098,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch9997_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4fb8b5c86c25b56e4b6d6fbb2c4ad81a37cbd2d0edb5c932628d0fd272555642",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch9998_home",
@@ -8813,7 +9118,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch9998_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ae22213e21d31afefb3adc6bac3e6b486d0e5859b0fcb17c58ba6ba27c23165f",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ch9999_home",
@@ -8829,7 +9138,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ch9999_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "66d16f193afd1c6365db204cbc793fe8caa621862f289a02f9bbab593298f2da",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-cherino_home",
@@ -8845,7 +9158,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-cherino_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "25432572e4be7627dce13d594070d28e456bd9edb6641439a99b5be8e006be99",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-chinatsu_home",
@@ -8861,7 +9178,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-chinatsu_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c41df01e06416a93623805c9a537b4383d6528e721a4954d6223230867c1a13b",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-chise_home",
@@ -8877,7 +9198,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-chise_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9449fceac837c690439367bdf42651555a30919e1c82eb2a43009433b8b8cd2b",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-eimi_home",
@@ -8893,7 +9218,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-eimi_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e7b6c98dc806050bc65a2ecc646e088806ff7328758ef4c3055b273b6d983648",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-hanae_home",
@@ -8909,7 +9238,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-hanae_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "dbf64473812cc1231d97b9682a3bf7ac3dcd67b2db70936af98f3277e357fe8a",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-hanako_home",
@@ -8925,7 +9258,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-hanako_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1928106c4572db71ffaa6a20513bf069727f8ef8afa6140b350c4e813bf170cf",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-hare_home",
@@ -8941,7 +9278,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-hare_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "cc06d6de8525b7fb19c910fcd9613d2d3190445076af3beb39a7e1fd3d76a58b",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-haruka_home",
@@ -8957,7 +9298,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-haruka_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "10db24ac2daebb1ed559f58b3150af9f8784de5d664240ad92182aa78fbe01e0",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-haruna_home",
@@ -8973,7 +9318,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-haruna_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "81ecf10260f001d59f93039308c54c8cb748b3ac864ae45df70810b8d2d038bb",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-hasumi_home",
@@ -8989,7 +9338,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-hasumi_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b1b13a76f401d621072a0153639ab1ec9ace5a4c8bc5e0ac4d65ad592e2484c9",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-hibiki_home",
@@ -9005,7 +9358,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-hibiki_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7db9d3a4644e8db583ad499c1a23d8b5116ad13a1353b38a563a1c9a788f2113",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-hihumi_home",
@@ -9021,7 +9378,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-hihumi_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "46b7da24b7cc16f5990827e5ff69167b4d7423c52c6091d591b94d6e804b6cfd",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-hina_home",
@@ -9037,7 +9398,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-hina_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ca3e5cccd5a6c10bf807e0283edf43bf7c29ea85bb3af6c2f67dc3f97b9454f0",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-hinata_home",
@@ -9053,7 +9418,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-hinata_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "56dc487c4f5894a259b9c982e8af250e78cf8f327bf9d2c3b1fe3627c50aa075",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-hiyori_home",
@@ -9069,7 +9438,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-hiyori_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "447c1f4073a3dfa49df1a71dd90c0c76132147c0ebb3d795e73a0b11cc583b0b",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-hoshino_swimsuit_home",
@@ -9085,7 +9458,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-hoshino_swimsuit_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "cc70865743c14a8055058c8a3b756eb513e89c1a4482385a03daad8a3fd0c33a",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-ibuki_home",
@@ -9101,7 +9478,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-ibuki_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "cb731cf6cd3af9b3d72f664bd7425f43c4d4d91a495bd8e512686e87df7c1030",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-iori_home",
@@ -9117,7 +9498,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-iori_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c97de773fad6452434db052aece74beea22b78221a82f9ad865de826a4ff4432",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-izumi_home",
@@ -9133,7 +9518,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-izumi_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "28b8f257193800285e533f13d2b2027eb5452cfcdacb2f468f60148d93e7cc70",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-izumi_swimsuit_home",
@@ -9149,7 +9538,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-izumi_swimsuit_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "73511f0fd0951ba0cf557d43f47e3c288b1939319e45d5c3c7ecc2e5e7f9a1d3",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-izumi_swimsuit_home_teen",
@@ -9165,7 +9558,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-izumi_swimsuit_home_teen.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "fb97c6e57a16781844600da90f43327a2e0617c6d30b65ede3bb57f4e82ac6f0",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-izuna_home",
@@ -9181,7 +9578,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-izuna_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "bce3f8aaa9cb41b9e1f1db0e04e06eaa5284defaa20acfad0ed86fcb2469105d",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-kaede_home",
@@ -9197,7 +9598,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-kaede_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c5bbd20b58101ef6a230b7a1dda7a302ade5c444d7aa4756fb18a47fcc655fb6",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-karin_home",
@@ -9213,7 +9618,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-karin_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6922828c5791bc933e725e739bb126914ddbb31515333c8d21a65a291e33ce4c",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-kayoko_home",
@@ -9229,7 +9638,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-kayoko_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2151477d4ddd54daae1742a9ae4147c9a3a2cab65c9017fc35d9e79cf83c6156",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-kirara_home",
@@ -9245,7 +9658,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-kirara_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "78d9b0004cc6f775228152b382081e5601937709b30754543af3d9694d531395",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-koharu_home",
@@ -9261,7 +9678,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-koharu_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "187d682fb89d48d6966337cdf6be8faaae4e97c7ad42b9827460be2ec9f7b17b",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-kotama_home",
@@ -9277,7 +9698,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-kotama_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a797d127f7146efe10c4f4053ab729988c191fb25f81cc13b0a34fb2f6b27a2c",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-kotori_home",
@@ -9293,7 +9718,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-kotori_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d4372b12ea737d857050d8fc3b22851f2bf812b7963b744d903d3fdba3160de3",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-lobbyayane_multi",
@@ -9309,7 +9738,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-lobbyayane_multi.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "05b3cc083ca771fac8072e400e7b7576618c732e09ab6e75424106a4f6f561b8",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-lobbyhoshino_multi",
@@ -9325,7 +9758,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-lobbyhoshino_multi.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7eb20845deef13b86cd6a68aba7484ecbd0e91a2772cd39154d1f81be22a0288",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-lobbynonomi_multi",
@@ -9341,7 +9778,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-lobbynonomi_multi.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6f4ce421a4b61e9639791ed34a6f1edec1b4e8d58c05773cf968741ebec7e77a",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-lobbyserika_multi",
@@ -9357,7 +9798,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-lobbyserika_multi.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b48df022b4d7b69455fb08b52a06744addb70a7b819e780e6e306a913c95bff5",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-lobbyshiroko_multi",
@@ -9373,7 +9818,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-lobbyshiroko_multi.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f289dce676d1f519d7b320425a7391ef617ea824eeee63d8558fa0f2660c1867",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-maki_home",
@@ -9389,7 +9838,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-maki_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1181a8e2c65da8e20023c904cbc802ded1d985e82aedf39485ae280e4289c5d4",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-marina_home",
@@ -9405,7 +9858,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-marina_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "011e9ca33e49ab4270ec56ed630bc84b807ed210754eb25d2ca209f1ebcea677",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-mashiro_home",
@@ -9421,7 +9878,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-mashiro_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9ed90eec47421d6a1f90db235dd1a83035cd9a0004c66b61293a1cf4f9f3a7f0",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-mashiro_swimsuit_home",
@@ -9437,7 +9898,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-mashiro_swimsuit_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "41a71143c67ce5b7d421b58ef9cac6342ec910b7c9705bfe50c8f01c0697c000",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-midori_home",
@@ -9453,7 +9918,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-midori_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "972cc40eeb05c93d7b50468a47bc9811700f358ac09e6df61c0dc40fecef2b0e",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-mimori_home",
@@ -9469,7 +9938,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-mimori_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9dfc5cd97a881c24b2b55327a9fc98d399d752d2e2a1d48d29e6003875a93454",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-misaki_home",
@@ -9485,7 +9958,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-misaki_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4e523a773742f931a183679e1de5d383bea4e4251e10a96247c59ab5f4f25837",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-miyako_home",
@@ -9501,7 +9978,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-miyako_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "982ff57367874c2a39cd04c8d744eea786ce02737ba5c35fe9d97f7306e69d5d",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-moe_home",
@@ -9517,7 +9998,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-moe_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4a54130543bb4e59156bf28b9d79b08f366a20bd7d6b836f36db2ce736e3d2b9",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-mutsuki_home",
@@ -9533,7 +10018,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-mutsuki_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1e44577cb6c38cca1ff4537c986641386d55ff1caf65f467206ce28203333e78",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-nagisa_home",
@@ -9549,7 +10038,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-nagisa_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9cf01155a298674faf8a72287f0e7c608593e45c26de304bf89228d0f1276331",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-neru_home",
@@ -9565,7 +10058,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-neru_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4dac2e42b77ea4670a3771e2e97b6e9c419c20457c6b750d2e7da6fd325e2f92",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-nodoka_home",
@@ -9581,7 +10078,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-nodoka_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9d9c5a4be4e6a5cf062029803e50e19fe9fa70bf3401da845c21d89df678e23a",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-nonomi_home",
@@ -9597,7 +10098,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-nonomi_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b71a33bf0059c57662f8bda4ad97aadaa0b1c528fdd9d9828c23cc07a8014171",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-pina_home",
@@ -9613,7 +10118,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-pina_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "5c813ff86d25ad93d6fb7290bbb0b39b97fc81e6018051894051b9b32971aaab",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-sakurako_home",
@@ -9629,7 +10138,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-sakurako_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2a30216821289ff81480a93fe8014229e199aeb3f29420f2a94a5a29e16d07f5",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-saori_home",
@@ -9645,7 +10158,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-saori_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9a6b7203145dbe9965a96255a46939e3c97d91888209596bc81e45de0b75d5ae",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-saya_casual_home",
@@ -9661,7 +10178,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-saya_casual_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1b30cb657ec36501421f8e4be7d60dc26d7002625b10d0fc14c72a19e8582b4f",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-saya_home",
@@ -9677,7 +10198,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-saya_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7698a11eb1c24d5d78e3e36ae79a8d45dc47fd3074d072e0fcc9658f57c2ee72",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-serika_home",
@@ -9693,7 +10218,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-serika_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "46762934a4c19530af17e3b3a8c180e17c555ff2ff38f5f85a2701334f6b739b",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-shigure_home",
@@ -9709,7 +10238,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-shigure_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a8703da62dc5f384af70b2a2eb4021b769d90e1eaa263b05b2e0a999e3f8971f",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-shimiko_home",
@@ -9725,7 +10258,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-shimiko_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f17096b8513bf71d6af4301ba191f3d76809288d377da9afbdba8884027069c7",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-shiroko_home",
@@ -9741,7 +10278,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-shiroko_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "049357d749e5ee868f3c63df1a55edc045b4af01063b2720413b790ce05cd44b",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-shiroko_ridingsuit_home",
@@ -9757,7 +10298,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-shiroko_ridingsuit_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3f9ad49de36d4a61db4ca5b08ed8915414149ae253b1a036de3f2144bc8277b9",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-shizuko_home",
@@ -9773,7 +10318,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-shizuko_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "5aefa249ba7d544c4032da952e8f901c60d979d7c96ebbc8884aa0736a35977e",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-shun_home",
@@ -9789,7 +10338,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-shun_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "fc3ae258727a5d58b0ad062d2507a2d03346221199233e7846c8977b6b95416e",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-sumire_home",
@@ -9805,7 +10358,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-sumire_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "162286cc032fc64fd3b47504472633ffe4705a2c2237528a16a3d6e9c41fa209",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-suzumi_home",
@@ -9821,7 +10378,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-suzumi_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "34462128f649e63bdaa29c53abcd651cd98b4dc7b9d95cc78bd9f8c0445c5356",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-tomoe_home",
@@ -9837,7 +10398,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-tomoe_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6c62a0e229e1e93d2690c2a6920d7cede3d342f4fb37020755ea38af3025d6da",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-tsubaki_home",
@@ -9853,7 +10418,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-tsubaki_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6c6f1136eb62e9a490a1d47cee09b6f5f60b5bae64a2be8b5838e7dba76a3d72",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-tsurugi_home",
@@ -9869,7 +10438,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-tsurugi_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d3a30f0866925d1676430d446e94afb7bea7c00c9d30a9cb2512ebc0ca5898c5",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-utaha_home",
@@ -9885,7 +10458,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-utaha_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "eeaf9ee6710322715d276c7e9b4a8d236573d5b7beca64900ac195ed36ccc5e6",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-yoshimi_home",
@@ -9901,7 +10478,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-yoshimi_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "26ac3888d42e3b28a50d3931a1c92c9c2044785c0fb13f4e8e9e4169523c739d",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-yuuka_home",
@@ -9917,7 +10498,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-yuuka_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6c676ce930b333f13bde9e4fbae877aa25c11e42ab0bcf7be5edc077c61ca15a",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "ba-zunko_home",
@@ -9933,7 +10518,11 @@
         "skel",
         "atlas",
         "png"
-      ]
+      ],
+      "preview": "./assets/animation-previews/bluearchive-ba-zunko_home.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4179090e828430cb552ce830f1d7cf806ab339e68c1d95e818fb6b5659c4283b",
+      "previewAnimation": "Idle_01"
     },
     {
       "id": "kf-1854189-1850189",
@@ -9950,7 +10539,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1854189-1850189.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "0c4eea2362d533e8206a031d05f2d52cd9c46433d04032e1c781209c1a1d099b",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1633161-1630161",
@@ -9967,7 +10560,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1633161-1630161.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d68b9297aa921ab41467df01dd08ba5cf3d450fcb01dd8c86d78f6f93faca549",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1604147-1600147",
@@ -9984,7 +10581,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1604147-1600147.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b7897beaf1afa355597f183afd0a7959237bd5061b1d67befd75369463aa2dbe",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1644161-1640161",
@@ -10001,7 +10602,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1644161-1640161.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7d131a848ab2748d48eaeeb82a26542d9970814dca9cde05a6a32ac1db87b22b",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2243241-2240241",
@@ -10018,7 +10623,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2243241-2240241.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "5d4848075ebeab44c7e0b5ccbd29867bd08dc989bfdee9fa416294aad428a3e2",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1191100-1190100",
@@ -10035,7 +10644,8 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "previewStatus": "render-failed"
     },
     {
       "id": "kf-1193207-1190100",
@@ -10052,7 +10662,8 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "previewStatus": "render-failed"
     },
     {
       "id": "kf-1194113-1190142",
@@ -10069,7 +10680,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1194113-1190142.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "705802eeeebb80c0162c6e95a4993f8f88853ead7e28e57f28fdc87bf6a78352",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1011100-1010100",
@@ -10086,7 +10701,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1011100-1010100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "699b74f23067670423d2ab8794aacead34d3f6d3cb108c83ac0be973f1d1be09",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1011100-1010244",
@@ -10103,7 +10722,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1011100-1010244.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "335b4e9f13f5084250b188c64af1454aaa1ca8a8d8ebde34a208880acce03a21",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1012100-1010253",
@@ -10120,7 +10743,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1012100-1010253.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c805b41c86946245c85c15d7bafcde6660e1d2a00f43444bac5398f7bc7fe023",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1101100-1100100",
@@ -10137,7 +10764,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1101100-1100100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "27aaef2710139672b10fa06254d10fb47cdd0c990dec4d87d883486c89cabe88",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1103118-1100100",
@@ -10154,7 +10785,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1103118-1100100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "cdc6f9f71a05da188eb73cbbfefeebc5caa1425ee56502c1df278c471a10a767",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1104169-1100253",
@@ -10171,7 +10806,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1104169-1100253.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "483e8902a7a13636cc8c1e065a4e5941fe5210894c1078aa9623c787b2aa5605",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2074220-2070220",
@@ -10188,7 +10827,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2074220-2070220.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "fe38a07c72f0a86915360233c62e3ea92ca3ad3490f1aacd4d8530011498a504",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1584147-1580147",
@@ -10205,7 +10848,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1584147-1580147.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b331ff8c7f5334e4edcfdebdd44619d04c2cbbefccdaa9df76be878661c63e0c",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2254241-2250241",
@@ -10222,7 +10869,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2254241-2250241.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "821c9a62a7c64965d7099c666b7213881d3271a34039b99a3c94431e336a0421",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1091100-1090100",
@@ -10239,7 +10890,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1091100-1090100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "78087448932509aaf928dde6ffed4bff79c02a25b499769ad25f737b43668ff5",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1093145-1090100",
@@ -10256,7 +10911,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1093145-1090100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ee1655683b343e078ea62b6916a1d3f96ed82874484e1286a3e52c56e43c4fa8",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1094142-1090107",
@@ -10273,7 +10932,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1094142-1090107.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1252740ed42e90c19adb83b22dc38e037318653b23c0fc11a9077e8853c19784",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1041100-1040100",
@@ -10290,7 +10953,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1041100-1040100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "0540b81aaebc9dc4f3dfc9813f0db8cf7412c35efa5ca6a0217b642e3630df49",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1043114-1040100",
@@ -10307,7 +10974,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1043114-1040100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7e804c15f3fa7b2ee7ec42736ab78767f7b83a138003bbe046e316ccfd84897a",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1043114-1040244",
@@ -10324,7 +10995,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1043114-1040244.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "126fba063a14ed3b6c95ef062cf12b02758fad3627597b66dcc4e69792470049",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1151100-1150100",
@@ -10341,7 +11016,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1151100-1150100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ff5c2ddc6cf2902bbae4015e402cdf95b0084eab075fcb2bdbd68142af1ca1fd",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1153144-1150100",
@@ -10358,7 +11037,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1153144-1150100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "672531ba7b4fb91828d3ec5779dee279b10204e8f339c2dfaeb326c4d9b6f15b",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1151100-1150144",
@@ -10375,7 +11058,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1151100-1150144.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d60f6146b5a3c0259f3f017f273d8575445d27c89599cc2c99aabe00c5b4cb99",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1261100-1260100",
@@ -10392,7 +11079,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1261100-1260100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d7e78eb6bea13abd00a32bce7ce5128c8ca0a53d4a907655fbede12d0c71e57f",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1264142-1260142",
@@ -10409,7 +11100,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1264142-1260142.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "56c7f5f206d46b77c2a15c521cfa88a2cb17b20644c346195fbce3b1192377b9",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1264245-1260245",
@@ -10426,7 +11121,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1264245-1260245.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a88c7f59c5a1113b728e1868f7a265b4dc7cb40b86817ed3b4f2a057a28f9944",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1031100-1030100",
@@ -10443,7 +11142,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1031100-1030100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d1f855707ebd0a618eeb59ece02ba8663bc7ad150aa880d53e1cfc1198b7cd96",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1031100-1030114",
@@ -10460,7 +11163,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1031100-1030114.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4b9081076d4437287efcd49f8033031a8eeaf57b33dfe66d3e2cb91334dd2494",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1031100-1030244",
@@ -10477,7 +11184,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1031100-1030244.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8ea8ec252dd11355daaf7b5b94f6bae531822da25e598586dd9d554e3ecdcafe",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1121100-1120100",
@@ -10494,7 +11205,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1121100-1120100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "61f4f4616053e26b427f4530faed48d5b1891848e38291f4d0657ac05732dab5",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1123134-1120100",
@@ -10511,7 +11226,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1123134-1120100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "5fc955456a1ed4f8b48840a9d34498532ebcf667202ad4255ab44125f1f8cdd3",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1121100-1120113",
@@ -10528,7 +11247,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1121100-1120113.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1fd610a603822ad907df6bf979a50756c8553d6a5d2990e5d992cbd1ff9893af",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2084220-2080220",
@@ -10545,7 +11268,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2084220-2080220.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "fa0ce0465d6e5dfd402b16ad95c9ad7eca73718c4a1c2fb74a31b9184e40edbb",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1474132-1470132",
@@ -10562,7 +11289,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1474132-1470132.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e3a83a9eae5f07c5e54062a67e1e41759f0e89af1f3a8641fbaaefe253d8e48c",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1474220-1470220",
@@ -10579,7 +11310,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1474220-1470220.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9c5803eef4bf3b463b0174c4614d25a5806ebda360edd505bf666a1f9c468ab3",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1161100-1160100",
@@ -10596,7 +11331,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1161100-1160100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c15fb89aec32d108c1538aa065f548b5dcba83e0427553c9ece5c723e5d14fa1",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1163110-1160100",
@@ -10613,7 +11352,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1163110-1160100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "5e14ae7a9c6d8a5af27b00e3c5ee794060dbc54bf50384da0bd8c58cb7901945",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1161100-1160105",
@@ -10630,7 +11373,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1161100-1160105.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8e13768aa726299349cb7b42df95b1fb151aaa96acba31448ca670c240743be8",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2004210-2000210",
@@ -10647,7 +11394,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2004210-2000210.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "01496e29bcfd2223fa9c0aa58098c0f518049f1e562706d1d9941be7602fe24b",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1944195-1940195",
@@ -10664,7 +11415,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1944195-1940195.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a40e672ef7621ada0e24dd7f9e3c85d4c8a62ec3a01b31d79f3380e6e8b60e7f",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1814100-1810100",
@@ -10681,7 +11436,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1814100-1810100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "954a6dbac5d1001f94b6963bc33b73aab9f13258f534e4f148bbe28ae9c54b4e",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2294247-2290247",
@@ -10698,7 +11457,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2294247-2290247.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f6cb10882509e80e0cc150d352da9194934ee76f0fd790dd733a0973f5cd9bd4",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2123225-2120225",
@@ -10715,7 +11478,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2123225-2120225.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c0ccd6d818a0abb37a114924f533f0ec94dcb8460063ec041b7f38448519bb75",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1071100-1070100",
@@ -10732,7 +11499,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1071100-1070100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "72176fe106d9f6df6f9ca221fabef5776ec71a023484a27517dc8a8eca27d4f7",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1071100-1070245",
@@ -10749,7 +11520,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1071100-1070245.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "35265d8e7d6eabdb3a605bca45d110aa1d1482cb7fff2feb604e408d58182cbf",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1071100-1074169",
@@ -10766,7 +11541,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1071100-1074169.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "40c080228699b87f22f59f6af83fa9658609df2a09b43158cd6b32cede9ca3e2",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1974203-1970203",
@@ -10783,7 +11562,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1974203-1970203.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "31f3034e47f242986716ecd5426acd5245204098542593c142cd7654b5d047ae",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1001100-1000100",
@@ -10800,7 +11583,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1001100-1000100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "457f10c3df249d452974828f61fc812fff62fe8b87c87b1d244e3a74bc74b6d6",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1003107-1000100",
@@ -10817,7 +11604,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1003107-1000100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "00a93437684a44b76e7e569773a57f1f3bf727ca65b2e685dcd92c3266ab2331",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1003107-1000244",
@@ -10834,7 +11625,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1003107-1000244.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2ab596ef40d79ab7a9482c5c6df87a3209fe3f20be9b234da2f870a5af66f9d8",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1081100-1080100",
@@ -10851,7 +11646,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1081100-1080100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3e7355ab11d96bb47968e54260185236c9aa638fc7fbdd5a9734bcbb7a5514b0",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1084117-1084117",
@@ -10868,7 +11667,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1084117-1084117.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "56c27d3d5089a0f8a3e88b543409021ed2ff726c3ee72cc35b5e7a1b296ce3db",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1084207-1080207",
@@ -10885,7 +11688,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1084207-1080207.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "af26101bcf67ea522b5016ef8b8cda7381c71e96d2fde4e56578b7121541b69c",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1844189-1840189",
@@ -10902,7 +11709,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1844189-1840189.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "fa4ebbb10d122250f09a9e8e34b8eccc524f78e64f04e3fa7fe894e618838da6",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1844248-1840248",
@@ -10919,7 +11730,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1844248-1840248.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "698f995bf156ee823c7bb53fb7d5e1147c17f1b2bb014bc87fd6940d0f175c93",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2114225-2110225",
@@ -10936,7 +11751,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2114225-2110225.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3e147ab402358f594a73dc8a1c908c22cc4bac08e2c72120bdd5853b40eb2184",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1141100-1140100",
@@ -10953,7 +11772,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1141100-1140100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6304f71829d6534ae4212ebb7787491e78de0514e2ab5e398e99f65c82087840",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1142102-1140100",
@@ -10970,7 +11793,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1142102-1140100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3484d33fec6e6fe55c954d1da3d68aaa52c4cdb2624024afa41e0f5722cdcaaa",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1142102-1140200",
@@ -10987,7 +11814,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1142102-1140200.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "83c9ccc871741131b9572bc84793f14533904237cf752c1f6cfc621e198f4c34",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1691100-1690100",
@@ -11004,7 +11835,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1691100-1690100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f10de5829bf469e3671b5032e5f7959857956b72a74bc6fc9a893619291a04a4",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1694154-1690154",
@@ -11021,7 +11856,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1694154-1690154.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "40b9684d434615b862115a9511fe64a312ed2a54682e548d0459a79c17a4357e",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1694107-1690107",
@@ -11038,7 +11877,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1694107-1690107.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a7d8a133538da7bb2a90b7c3df4a3831a91219dc361ed7eedf0a62c2af0b4e3f",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1953203-1950203",
@@ -11055,7 +11898,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1953203-1950203.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "48e8883ab39272e2e6f753ac08dd76b36c38a5ca24a141383f024100bd285bb0",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1954204-1950204",
@@ -11072,7 +11919,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1954204-1950204.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d05a0a7645d21313d3c260c5d3aac7837d519532128cbe058e3c3f2ef767c0fb",
+      "previewAnimation": "Attack"
     },
     {
       "id": "kf-1021100-1020100",
@@ -11089,7 +11940,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1021100-1020100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d1e35b14974845ed7fa2b4f03281081cc4d3e296356a38e08584a399c7d80571",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1021100-1020228",
@@ -11106,7 +11961,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1021100-1020228.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "fa9e5f4ad552334e4199de2e19576cb9ff84282258b73373484adb7f496e1605",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1021100-1020244",
@@ -11123,7 +11982,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1021100-1020244.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "0b289b0b452d91559167825203f126ea8c7466b69f1d80e8202ac95552e6a990",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1511100-1510100",
@@ -11140,7 +12003,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1511100-1510100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "078c162e6a3002eac5dd044b147b8962fd1e53e86b101048565d4ef94d51e924",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1514142-1514142",
@@ -11157,7 +12024,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1514142-1514142.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "0bb8614563bb0758e9364f717aabc54cf637e34b2702e552ccd8ada3f2274bd8",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1514117-1510117",
@@ -11174,7 +12045,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1514117-1510117.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ba70e11fcd52d4596d4d46339dce09313f9e6b7a2d0e466b1e050fb7fc2801d5",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1171100-1170100",
@@ -11191,7 +12066,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1171100-1170100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e2c8673941d8846e366e48f431a5d190fa08f8d34f2b3f199c96483f8ae1bf91",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1174113-1170142",
@@ -11208,7 +12087,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1174113-1170142.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3344b9e18a73594392d384a54f85cb66d7071eb4e183b9d25c8c825a27745501",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1171100-1170127",
@@ -11225,7 +12108,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1171100-1170127.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "78534172972b70fddc0d06f20da48f568b70981be7567c7dda644d9bb29fb5f0",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1181100-1180100",
@@ -11242,7 +12129,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1181100-1180100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "0ce8286c0a112f3221ac741115da55131f71fccf95d8f7465542df3e2408f7e4",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1183123-1180142",
@@ -11259,7 +12150,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1183123-1180142.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "49e1942dd440fec81d5b83f26734eb8eff570c519ca9bced2936c04c5f9214a3",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1183123-1180144",
@@ -11276,7 +12171,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1183123-1180144.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1dc3d4b44aa898a5a637f9965a6b916b0829e49e50f4d05b47e249758ff9a198",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1833189-1830189",
@@ -11293,7 +12192,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1833189-1830189.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "37c2432ff35b54cd229306c8ff84ff986588fffc413c919b6cecd38bc5afcacc",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1834247-1830247",
@@ -11310,7 +12213,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1834247-1830247.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "34fc7399f6fa699efb7f7b02ffc5b7a237e4544ceb9a3e47ef375e1800dd3928",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1834248-1830248",
@@ -11327,7 +12234,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1834248-1830248.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3a377014559f1dc90d0f3006499ddc63836334d2c82e297a30ccb70b5084498c",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2144225-2140225",
@@ -11344,7 +12255,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2144225-2140225.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6a6ec3a9a7cb4f40431877003b78b2ee2fdaed3bff034840113314b1eaa0904f",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2204236-2200236",
@@ -11361,7 +12276,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2204236-2200236.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "5ccac7b68014a9f4ab53dc4f58086ce002c8fc2de2b640ae3c026285b9e7548d",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1864189-1860189",
@@ -11378,7 +12297,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1864189-1860189.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "38539c7c095c12aba3e75a190b14f5b1ac2d40b45fdafb0135b4e7015f251f22",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1111100-1110100",
@@ -11395,7 +12318,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1111100-1110100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "345235acf4952353ebf4e105198c1e2e03de681191b9449523b25597d3c4eac8",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1112102-1110100",
@@ -11412,7 +12339,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1112102-1110100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8bc497a5d888592038d68eaeb8851c0e8244966c524da355f243b6b7683d1590",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1111100-1110130",
@@ -11429,7 +12360,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1111100-1110130.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1147828067e10a53c0ca95544245e0c1ed98cbc7aed7cc3f422e7d4948dc2079",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1924195-1924195",
@@ -11446,7 +12381,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1924195-1924195.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "0a4985721db8d18da199c73f12e5283b1869ec9898adb6fb8314765b07aae3ac",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2314100-2310100",
@@ -11463,7 +12402,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2314100-2310100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c4a19effee458cfefc555cdf67fd764ceaae1b3b6dc5685624d1ef50408be225",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1251100-1250100",
@@ -11480,7 +12423,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1251100-1250100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f52c5702a6c5cc084ce16a94affab1628565a964aa17d624308dac2d0c6b56d5",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1254142-1250142",
@@ -11497,7 +12444,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1254142-1250142.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e3100a8892bec35aa680fc0650aa5afd73af9e7061a85318b3cf448a58ba8a77",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1254245-1250245",
@@ -11514,7 +12465,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1254245-1250245.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c7b543fc5bb2a5130a510220c7561c5d1cb8b7cc7fd5e8c8c111e88edd9eb8ed",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2063220-2060220",
@@ -11531,7 +12486,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2063220-2060220.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4580d59d2922b7b263e95e4e7f3a9e35b5006f1d208b61af4b17efb2d3cc4d59",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1934195-1930195",
@@ -11548,7 +12507,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1934195-1930195.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "242bbff4689822a58358234b551895bf6b768e9dd92c7a8c727254bfdaaac988",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1504132-1500132",
@@ -11565,7 +12528,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1504132-1500132.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9b973f282256852664a1bad08fff2bb872f0f78c5c512ea0ee5c301a32ca8090",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1504220-1500220",
@@ -11582,7 +12549,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1504220-1500220.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "fde547f5c666c222f07979dcec6bb62463ca3ae59eab89c263afe682ba2e7284",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2174236-2170236",
@@ -11599,7 +12570,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2174236-2170236.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "dca11c392c4990b4a4ccc077237f9c3bf6b27c59d9a658602e93b054911b5b29",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2174243-2170243",
@@ -11616,7 +12591,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2174243-2170243.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "5921eb604791a1dd3262d0ad35ad23a673f508eb0fe02eb3e66f98bedbb00e53",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1131100-1130100",
@@ -11633,7 +12612,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1131100-1130100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2f5f7bde76f4d51dbf57f5ad9541c63b8a3875c23e356158adae65cf41c404bd",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1134100-1130100",
@@ -11650,7 +12633,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1134100-1130100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "681d48e21304426aa3d21650a434c9f6c346322d0e2dc3781bdcd1317ecd4b5f",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1131100-1130144",
@@ -11667,7 +12654,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1131100-1130144.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "5d3859378ec9e6ece3358109fcdcf1fd042a3d96b5e027004387f23ad9a49ea9",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1990212-1990212",
@@ -11684,7 +12675,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1990212-1990212.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "eb26d1d82fbb7290678afab9f565eef6b02bb4c74f3772be9649d5d8d5935dc0",
+      "previewAnimation": "Attack"
     },
     {
       "id": "kf-1993210-1990210",
@@ -11701,7 +12696,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1993210-1990210.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "54e216ba0281b9826cc376712245cec874777685247031ef94eed0b749a288a5",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1984210-1980210",
@@ -11718,7 +12717,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1984210-1980210.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "58fda9711796a36d67998c52866c9447397b63a3f8d8dbf8fceb0d072120fd01",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1964203-1960203",
@@ -11735,7 +12738,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1964203-1960203.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "253f2e2a14787036d1911c3d7054d686ef06c07f505b4b6b864bb616e89bb03b",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2304247-2300247",
@@ -11752,7 +12759,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2304247-2300247.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d92ea5e5c31c91eeab50741291459113d8b803dc6164d3359704b55e32bee381",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2234241-2230241",
@@ -11769,7 +12780,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2234241-2230241.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1632ba24b7b0165b9ca6b68ee57397f870e8e802dca274a2d7965f091a51ca25",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2234242-2230242",
@@ -11786,7 +12801,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2234242-2230242.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "0b7595c63f31900f2a0b7772111eb0b2eae6b4180e27b456a75d495b4c571664",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1654161-1650161",
@@ -11803,7 +12822,8 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "previewStatus": "render-failed"
     },
     {
       "id": "kf-1804100-1800100",
@@ -11820,7 +12840,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1804100-1800100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6889f85ee296448a13f7e0b9c14fe270fdfa3c0a7253df7261a6b59a34f41467",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2194236-2190236",
@@ -11837,7 +12861,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2194236-2190236.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "05476d37db6e30892ab0546ac6654b0f16a3271e7f0ad56a37666157ffb1d77e",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2283248-2280247",
@@ -11854,7 +12882,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2283248-2280247.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "cfe58f9b3f4a5e8d2b69a23799f426b54861653b8853108ea826a55ebbfd893c",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2184236-2180236",
@@ -11871,7 +12903,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2184236-2180236.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "bae4ee207cbf2c7472d1baea76ee7c2b979e7e61d94a24b29c08ba523313e53e",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2054220-2050220",
@@ -11888,7 +12924,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2054220-2050220.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2cfd941b68ad58e630c7d8a5643829fa08ab0dc95586a3346c083eed6dae4641",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1281100-1280100",
@@ -11905,7 +12945,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1281100-1280100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e068eec93859c982f5b05a648fcd666ca7fa202ce11fa3c0e5d44d0b67e92ece",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1284114-1280114",
@@ -11922,7 +12966,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1284114-1280114.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "794b0dc127d1061619a5decd02f1b3c0e374cf7e543fdf85b25d36e5e989e12c",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1284116-1280116",
@@ -11939,7 +12987,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1284116-1280116.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "bac39b15536f71fd4686679ca137084976e6d40edb25d5ec092888a912a4174f",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1051100-1050100",
@@ -11956,7 +13008,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1051100-1050100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "0b8e4427ab05c035aca9ab941633ed88ff0e89bdbbf8dec9007ed706aa1e53f5",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1053148-1050100",
@@ -11973,7 +13029,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1053148-1050100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "32fadc13eeb0f4c088b1d5b187e7e065f71ea6b91d887fb6c3483b71517d6cb2",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1054114-1050228",
@@ -11990,7 +13050,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1054114-1050228.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "13ba08212315db0e13ebf45c93424c0914e39e4c96faf0fde2bb8e4a08eace35",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2134225-2130225",
@@ -12007,7 +13071,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2134225-2130225.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a9e856351e2f97dab5f6e6d227224774ebd4ef193aae2e640609e5bd77c23713",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1061100-1060100",
@@ -12024,7 +13092,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1061100-1060100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "cbaeb73f12305c4d5d17a52a0ca390708874ca1073f4bf48abe9fda720168867",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1064114-1060100",
@@ -12041,7 +13113,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1064114-1060100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "805705c94531d1ee4245c56fa544f1d0490ef7f5aa98281a112140077c6e24b7",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-1064114-1060114",
@@ -12058,7 +13134,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-1064114-1060114.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "94bc87e0211ca379bb1f907f12a4925916083880ee85a54e6bf5c6f8ee04a886",
+      "previewAnimation": "Wait1Loop"
     },
     {
       "id": "kf-2094100-2090100",
@@ -12075,7 +13155,11 @@
       "exportVersion": "3.8.95",
       "versionUnverified": false,
       "source": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
-      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days"
+      "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
+      "preview": "./assets/animation-previews/konosuba-kf-2094100-2090100.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1e31aa592baa436cd27133a33f5c9cce12d8c305ae668ec7b8963f59edfb434d",
+      "previewAnimation": "Wait1Loop"
     }
   ],
   "sources": [

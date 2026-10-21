@@ -1,11 +1,12 @@
 {
-  "total": 545,
-  "renderAttempted": 303,
-  "renderSucceeded": 303,
-  "renderFailed": 0,
+  "total": 819,
+  "renderAttempted": 274,
+  "renderSucceeded": 270,
+  "renderFailed": 4,
   "byGame": {
     "nikke": 514,
-    "bluearchive": 31
+    "bluearchive": 179,
+    "konosuba": 126
   },
   "warning": "Index presence does not prove playback. Only real matching animation frames have previews."
 }

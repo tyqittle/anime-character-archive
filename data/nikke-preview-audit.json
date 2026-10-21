@@ -1,14 +1,36 @@
 {
   "summary": {
-    "total": 545,
-    "renderAttempted": 303,
-    "renderSucceeded": 303,
-    "renderFailed": 0,
+    "total": 819,
+    "renderAttempted": 274,
+    "renderSucceeded": 270,
+    "renderFailed": 4,
     "byGame": {
       "nikke": 514,
-      "bluearchive": 31
+      "bluearchive": 179,
+      "konosuba": 126
     },
     "warning": "Index presence does not prove playback. Only real matching animation frames have previews."
   },
-  "failures": []
+  "failures": [
+    {
+      "gameId": "konosuba",
+      "id": "kf-1654161-1650161",
+      "error": "Error: Screenshot is blank or lacks rendered character"
+    },
+    {
+      "gameId": "bluearchive",
+      "id": "ba-ch0218_home",
+      "error": "Error: 加载失败：Error: could not load skeleton .skel.<br><br>Error: Region not found in atlas: ￫ﾰﾔ￫ﾋﾤ￫ﾳﾴ￪ﾸﾰ￫ﾈﾈ￬ﾕﾌ(Sample02) (mesh attachment: ￫ﾰﾔ￫ﾋﾤ￫ﾳﾴ￪ﾸﾰ￫ﾈﾈ￬ﾕﾌ(Sample02))"
+    },
+    {
+      "gameId": "konosuba",
+      "id": "kf-1191100-1190100",
+      "error": "Error: 加载失败：Error: could not load skeleton .json.<br><br>Error: Region not found in atlas: 01_backhair_2_1 (mesh attachment: 01_backhair_2_1)"
+    },
+    {
+      "gameId": "konosuba",
+      "id": "kf-1193207-1190100",
+      "error": "Error: 加载失败：Error: could not load skeleton .json.<br><br>Error: Region not found in atlas: 01_backhair_2_1 (mesh attachment: 01_backhair_2_1)"
+    }
+  ]
 }
