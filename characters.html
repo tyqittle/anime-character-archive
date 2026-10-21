@@ -199,7 +199,12 @@ function render(append){
  $('more').hidden=shown.length>=active.length;
  $('more').textContent='加载更多角色（'+shown.length+' / '+active.length+'） ↓';
 }
-function startGroup(id){selectedGroup=id;page=1;mode='all';onlyFav=false;$('kindFilter').value='all';render();updateGroupNav();$('explore').scrollIntoView({behavior:'smooth',block:'start'})}
+function focusArchiveResults(){
+ // Desktop is a fixed-height workspace; only the gallery grid should scroll.
+ if(matchMedia('(min-width:851px)').matches){$('gallery').scrollTop=0;return}
+ $('explore').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function startGroup(id){selectedGroup=id;page=1;mode='all';onlyFav=false;$('kindFilter').value='all';render();updateGroupNav();focusArchiveResults()}
 var viewerLoadToken=0,viewRetryNonce=0;
 function sizeViewerFor(c){
  // Original dimensions are saved in the catalog during thumbnail generation;
@@ -308,7 +313,7 @@ document.addEventListener('click',function(e){
  var target=e.target.closest('[data-action]');if(!target)return;
  var action=target.dataset.action,id=target.dataset.id,value=target.dataset.value;
  if(action==='group')startGroup(value);
- else if(action==='reset'){$('query').value='';$('rarityFilter').value='all';$('kindFilter').value='all';selectedGroup='all';mode='all';onlyFav=false;page=1;render();updateGroupNav();$('explore').scrollIntoView({behavior:'smooth'})}
+ else if(action==='reset'){$('query').value='';$('rarityFilter').value='all';$('kindFilter').value='all';selectedGroup='all';mode='all';onlyFav=false;page=1;render();updateGroupNav();focusArchiveResults()}
  else if(action==='mode'){mode=value;$('kindFilter').value='all';page=1;render()}
  else if(action==='favorites'){onlyFav=!onlyFav;page=1;render()}
  else if(action==='view')showOne(id);
