@@ -1,63 +1,81 @@
 #!/usr/bin/env python3
-"""Install locally rendered Spine previews atomically after all CI shards finish.
-
-Only an exact catalog-wide mapping can replace any existing preview metadata.
-No name-based portrait fallback, no "same base art for all skins".
-"""
+"""Apply verified matching animation previews; retain successful renders in incremental mode."""
 import hashlib
 import json
 import pathlib
 import sys
 
-ROOT=pathlib.Path(__file__).resolve().parent.parent
-DIRECTORY=pathlib.Path(sys.argv[1]) if len(sys.argv)>1 else pathlib.Path('/tmp/spine-previews')
-MANIFEST=ROOT/'data/spine-characters.json'
-raw=json.loads(MANIFEST.read_text(encoding='utf-8'))
-characters=raw['characters']
-valid={(entry.get('gameId','nikke'),entry['id']):entry for entry in characters}
-if len(valid)!=len(characters):
-    raise RuntimeError('Duplicate catalog character IDs')
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+DIRECTORY = pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 and not sys.argv[1].startswith('--') else pathlib.Path('/tmp/spine-previews')
+INCREMENTAL = '--incremental' in sys.argv[1:]
+MANIFEST = ROOT / 'data/spine-characters.json'
+raw = json.loads(MANIFEST.read_text(encoding='utf-8'))
+characters = raw['characters']
+valid = {(c.get('gameId', 'nikke'), c['id']): c for c in characters}
+if len(valid) != len(characters):
+    raise RuntimeError('Duplicate catalog game/id pairs')
 
-reports=list(DIRECTORY.glob('preview-mapping-*.json'))
-if len(reports)!=10:raise RuntimeError(f'Expected 10 shard reports, got {len(reports)}')
-found={}
+reports = sorted(DIRECTORY.glob('preview-mapping-*.json'))
+if len(reports) != 10:
+    raise RuntimeError(f'Expected 10 render shard reports, got {len(reports)}')
+seen, good, bad = set(), {}, []
 for report in reports:
-    content=json.loads(report.read_text(encoding='utf-8'))
-    if content['failed'] or content['success']!=content['total']:
-        raise RuntimeError('There are failed preview renders in '+str(report))
+    content = json.loads(report.read_text(encoding='utf-8'))
     for entry in content['entries']:
-        key=(entry['gameId'],entry['id'])
-        if key not in valid or key in found or entry['status']!='ok':
-            raise RuntimeError('Unrecognized, duplicate or failed preview: '+str(key))
-        name=entry['preview']
-        if name!='./assets/animation-previews/'+key[0]+'-'+key[1]+'.webp':
-            raise RuntimeError('Preview points to a different animation: '+str(key)+' '+name)
-        file=DIRECTORY/name.removeprefix('./')
-        buf=file.read_bytes()
-        if len(buf)<1000 or buf[:4]!=b'RIFF' or buf[8:12]!=b'WEBP':
-            raise RuntimeError('Preview file is missing or corrupt: '+str(file))
-        if hashlib.sha256(buf).hexdigest()!=entry['sha256']:
-            raise RuntimeError('Preview hash mismatch: '+str(file))
-        found[key]=entry
-if set(found)!=set(valid):
-    missing=set(valid)-set(found)
-    raise RuntimeError(f'Catalog coverage is incomplete: {len(missing)} missing: {str(missing)[:400]}')
+        key = (entry['gameId'], entry['id'])
+        if key not in valid or key in seen:
+            raise RuntimeError('Unrecognized or duplicate render ID: ' + str(key))
+        seen.add(key)
+        if entry['status'] != 'ok':
+            bad.append({'gameId': key[0], 'id': key[1], 'error': str(entry.get('error', 'unknown'))[:240]})
+            continue
+        name = './assets/animation-previews/' + key[0] + '-' + key[1] + '.webp'
+        if entry.get('preview') != name:
+            raise RuntimeError('Preview linked to wrong animation: ' + str(key))
+        file = DIRECTORY / name[2:]
+        buf = file.read_bytes()
+        if len(buf) < 1000 or buf[:4] != b'RIFF' or buf[8:12] != b'WEBP':
+            raise RuntimeError('Preview invalid: ' + str(file))
+        if hashlib.sha256(buf).hexdigest() != entry['sha256']:
+            raise RuntimeError('Preview hash mismatch: ' + str(file))
+        good[key] = entry
 
-for key,record in valid.items():
-    image=found[key]
-    dest=ROOT/image['preview'][2:]
-    dest.parent.mkdir(parents=True,exist_ok=True)
-    dest.write_bytes((DIRECTORY/image['preview'][2:]).read_bytes())
-    record['preview']=image['preview']
-    record['previewSource']='matching-spine-animation-frame'
-    record['previewSha256']=image['sha256']
-    record['previewAnimation']=image['animation']
-MANIFEST.write_text(json.dumps(raw,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-summary={
-    'total':len(characters),
-    'source':'All preview images rendered from the matching animation on the same Spine player',
-    'byGame':{game:sum(x['gameId']==game for x in characters) for game in ['nikke','bluearchive']},
-    'warning':'Pose is a frame of the same animation; costumes and backgrounds may differ from official marketing portraits.'
+if INCREMENTAL:
+    expected = {
+        key for key, c in valid.items()
+        if key[0] == 'nikke' and not (
+            c.get('previewSource') == 'matching-spine-animation-frame'
+            and c.get('preview') == './assets/animation-previews/nikke-' + c['id'] + '.webp'
+            and c.get('previewSha256')
+        )
+    }
+    if seen != expected:
+        raise RuntimeError(f'Incremental coverage mismatch: missing={expected - seen} unexpected={seen - expected}')
+elif seen != set(valid) or bad:
+    raise RuntimeError(f'Full render incomplete: missing={len(set(valid)-seen)}, failed={len(bad)}')
+
+for key, entry in good.items():
+    destination = ROOT / entry['preview'][2:]
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_bytes((DIRECTORY / entry['preview'][2:]).read_bytes())
+    c = valid[key]
+    c['preview'] = entry['preview']
+    c['previewSource'] = 'matching-spine-animation-frame'
+    c['previewSha256'] = entry['sha256']
+    c['previewAnimation'] = entry.get('animation', '')
+    c.pop('previewStatus', None)
+for entry in bad:
+    valid[(entry['gameId'], entry['id'])]['previewStatus'] = 'render-failed'
+MANIFEST.write_text(json.dumps(raw, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+summary = {
+    'total': len(characters),
+    'renderAttempted': len(seen),
+    'renderSucceeded': len(good),
+    'renderFailed': len(bad),
+    'byGame': {g: sum(c.get('gameId') == g for c in characters) for g in ('nikke', 'bluearchive')},
+    'warning': 'Index presence does not prove playback. Only real matching animation frames have previews.'
 }
-(ROOT/'data/spine-preview-build.json').write_text(json.dumps(summary,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-print('SPINE_PREVIEWS_COMPLETE',json.dumps(summary,ensure_ascii=False))
+(ROOT / 'data/spine-preview-build.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+(ROOT / 'data/nikke-preview-audit.json').write_text(json.dumps({'summary': summary, 'failures': bad}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+print('SPINE_PREVIEW_RESULT', json.dumps(summary, ensure_ascii=False), flush=True)
