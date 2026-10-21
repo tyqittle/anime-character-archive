@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-21",
+  "status": "indexed source-traced models; not equal to playback verification",
+  "newGameSource": "https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet",
+  "newGamePinnedCommit": "869daaf357ba3622b4a792350b258499cdb78468",
+  "metadataCatalog": "https://github.com/cambacodes/spine-catalog",
+  "metadataCatalogCommit": "4fff4ac21b16af41b4f0e2d099627ec1d55aa735",
+  "blueArchiveSource": "https://github.com/kiraio-moe/Schale-Archive",
+  "blueArchiveSourceTree": "e0f13259dd8263c53946c3379b59b508a2fcfa97",
+  "blueArchiveExistingPreviews": 31,
+  "blueArchiveAdded": 148,
+  "blueArchiveTotal": 179,
+  "konosubaAdded": 126,
+  "konosubaNamedCharacters": 67,
+  "konosubaVariantLimitPerName": 3,
+  "sourceJSONVersionSample": "3.8.95",
+  "konosubaType": "Spine battle sprites, not full-sized character illustration",
+  "manifestTotals": {
+    "nikke": 514,
+    "bluearchive": 179,
+    "konosuba": 126
+  },
+  "manifestTotal": 819,
+  "brownDust2IndexedSeparately": 209,
+  "awaitingIndividualPreviewGeneration": 274,
+  "previewPolicy": "Per-model actual animation frame screenshot and SHA256 only; no borrowed art; failures recorded separately",
+  "originalSkeletonsMirroredLocally": false
+}
