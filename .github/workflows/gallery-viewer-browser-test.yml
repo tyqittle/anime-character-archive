@@ -1,0 +1,38 @@
+name: Verify full-art gallery viewer in Chrome
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'characters.html'
+      - 'assets/gallery-redesign.css'
+      - 'scripts/test_gallery_viewer_browser.mjs'
+      - '.github/workflows/gallery-viewer-browser-test.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  viewer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium automation
+        run: npm install --no-save --no-package-lock playwright-core@1.56.1
+      - name: Serve gallery files locally
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/gallery-site.log 2>&1 &
+          sleep 2
+      - name: Check full-art modal in desktop and phone viewports
+        run: node scripts/test_gallery_viewer_browser.mjs
+      - name: Upload browser screenshots and geometry results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gallery-viewer-browser-results
+          path: |
+            /tmp/gallery-viewer-results.json
+            /tmp/gallery-viewer-*.png
+          if-no-files-found: warn
