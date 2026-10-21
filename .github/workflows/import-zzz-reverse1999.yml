@@ -1,0 +1,60 @@
+name: Import ZZZ and Reverse 1999 full-body character art
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/new_game_sources.json'
+      - 'scripts/import_zzz_reverse1999.py'
+      - '.github/workflows/import-zzz-reverse1999.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: art-import-main
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install image verification
+        run: python -m pip install --disable-pip-version-check pillow
+      - name: Mirror verified full-character illustrations locally
+        run: python scripts/import_zzz_reverse1999.py
+      - name: Check game categories, original files and previews
+        run: |
+          python - <<'PY'
+          from PIL import Image
+          import json,pathlib
+          data=json.loads(pathlib.Path('data/characters.json').read_text(encoding='utf-8'))
+          totals={}
+          for row in data['characters']:
+              game=row.get('gameId')
+              if game not in ('zzz','reverse1999'):continue
+              p=pathlib.Path(row['image'].removeprefix('./'))
+              assert p.is_file() and p.stat().st_size>18000,(row['id'],p)
+              with Image.open(p) as image:
+                  image.verify()
+              assert row.get('source') and row.get('originalImage'),row['id']
+              assert row.get('kind')=='full',row['id']
+              totals[game]=totals.get(game,0)+1
+          print('VALIDATED full art',totals,flush=True)
+          assert totals.get('zzz',0)>=5,'ZZZ imported fewer than five valid characters'
+          assert totals.get('reverse1999',0)>=5,'Reverse 1999 imported fewer than five valid characters'
+          PY
+      - name: Commit locally stored WebP originals and updated catalog
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/characters.json assets/portraits/
+          if ! git diff --cached --quiet; then
+            git commit -m 'Add ZZZ and Reverse 1999 character illustrations to local gallery'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
