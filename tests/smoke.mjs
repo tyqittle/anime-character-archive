@@ -63,6 +63,10 @@ assert.ok(page.includes(brandName)&&player.includes(brandName),'Both gallery and
 const localLauncher=read('start_site.py');
 assert.ok(localLauncher.includes('Anime Character Archive')&&localLauncher.includes("'/characters.html'"),'Local launcher must use the current project name and gallery entrypoint');
 assert.ok(!localLauncher.includes('Winter Gallery')&&!localLauncher.includes('data/catalog.json'),'Local launcher still relies on a retired site or missing catalog');
+const mirrorScript=read('scripts/mirror_static_portraits.py');
+assert.ok(mirrorScript.includes('entry.get("gameId") == "nikke"')&&mirrorScript.includes('re.fullmatch(r"c[0-9]{3}"'),'NIKKE mirror task must not consume entries belonging to other games');
+assert.ok(!mirrorScript.includes('MANIFEST.write_text('),'NIKKE mirror task must not overwrite multi-game manifest metadata');
+
 assert.ok(old.includes("location.search+location.hash"),'Legacy gallery redirect should preserve game filters and deep links');
 assert.ok(read('spine-recovery-20261020.html').includes('Anime Character Archive'),'Archived recovery page should show the current project branding');
 
