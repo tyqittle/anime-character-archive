@@ -27,7 +27,7 @@ jobs:
         run: python -m pip install --disable-pip-version-check pillow
       - name: Render compressed previews and update catalog
         env:
-          THUMBS_FORCE_GAME: wutheringwaves
+          THUMBS_FORCE_GAME: ''
         run: python scripts/build_portrait_thumbs.py
       - name: Validate catalog-to-thumbnail linkage
         run: |
@@ -49,7 +49,8 @@ jobs:
                   im.verify()
               validated+=1
           print("Validated", validated, "thumbnails. Missing",len(missing),missing[:20])
-          assert validated >= 300, 'Too few thumbnail files generated'
+          assert validated == len(db['characters']), 'Every indexed artwork must have a thumbnail'
+          assert all(Image.open(pathlib.Path(c['thumb'].removeprefix('./'))).size == (420,560) for c in db['characters']), 'All preview frames must have the same geometry'
           PY
       - name: Publish thumbnail files in repository
         run: |
