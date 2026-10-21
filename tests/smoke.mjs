@@ -61,6 +61,28 @@ assert.ok(page.includes("FAVORITES_STORAGE_KEY='anime-character-archive-favorite
 assert.ok(page.includes('localStorage.setItem(FAVORITES_STORAGE_KEY,savedFavorites)'),'Existing favorites must survive a repository rename');
 assert.ok(page.includes(brandName)&&player.includes(brandName),'Both gallery and player titles should match the project branding');
 
+// Prevent a future commit from silently reintroducing paths or client
+// identifiers from the retired repository. The old favorites key is the one
+// intentional exception: users need it for a lossless localStorage migration.
+const identityExtensions=new Set(['.html','.md','.mjs','.js','.json','.yml','.yaml','.py','.css','.bat','.txt']);
+const ignoredIdentityDirs=new Set(['.git','vendor','portraits','thumbs','animation-previews']);
+const outdatedIdentity=/(?:winter[-_]cg[-_]archive|WinterCG|WinterCharacterArchive|tyqittle\\.github\\.io\\/winter[-_]cg[-_]archive)/i;
+function inspectIdentity(relative=''){
+ for(const entry of fs.readdirSync(path.join(root,relative),{withFileTypes:true})){
+  const p=path.join(relative,entry.name);
+  if(entry.isDirectory()){
+   if(!ignoredIdentityDirs.has(entry.name))inspectIdentity(p);
+   continue;
+  }
+  if(p===path.join('tests','smoke.mjs')||!identityExtensions.has(path.extname(p)))continue;
+  const raw=read(p);
+  const content=p==='characters.html'?raw.replaceAll('winter-characters-favorites-v1','[legacy-favorites-migration]'):raw;
+  assert.ok(!outdatedIdentity.test(content),'Retired project name or Pages path found in '+p);
+ }
+}
+inspectIdentity();
+
+
 const script=page.match(/<script>([\s\S]*?)<\/script>/)?.[1];
 assert.ok(script,'Missing gallery script');
 new Function(script);
