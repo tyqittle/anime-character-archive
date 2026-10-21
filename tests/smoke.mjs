@@ -16,6 +16,13 @@ assert.ok(new Set(chars.characters.map(x=>x.gameId)).size>=2,'Expected multiple 
 assert.ok(chars.characters.every(x=>x.kind==='full'&&((x.image===`./assets/portraits/${x.id}.png`||x.image===`./assets/portraits/${x.id}.webp`)||x.image===`https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/images/FB/${x.id}_00.png`)),'Unexpected full-body image path');
 for(const entry of chars.characters){if(entry.image.startsWith('./assets/')) assert.ok(fs.existsSync(path.join(root,entry.image)),'Missing local PNG: '+entry.id); }
 assert.equal(new Set(chars.characters.map(x=>x.id)).size,chars.characters.length,'Duplicate character IDs');
+assert.ok(!chars.characters.some(x=>/T_RoleImg(?:jiyan|yinlin)_UI\.png/i.test(x.originalImage||'')),'A previously rejected half-body Wuthering Waves UI sprite was reimported');
+for(const entry of chars.characters){
+ assert.ok(entry.thumb&&entry.thumb.startsWith('./assets/thumbs/'),'An artwork is missing its optimized preview: '+entry.id);
+ assert.ok(fs.existsSync(path.join(root,entry.thumb)),'A thumbnail file is missing: '+entry.id);
+ assert.ok(Number(entry.imageWidth)>0&&Number(entry.imageHeight)>0,'Original artwork dimensions missing: '+entry.id);
+}
+
 assert.ok(Array.isArray(spine.characters)&&spine.characters.length>0,'Missing Spine records');
 assert.ok(spine.characters.some(x=>x.gameId==='bluearchive'&&x.assetType==='lobby'),'Missing Blue Archive lobby character models');
 assert.ok(!spine.characters.some(x=>x.gameId==='bluearchive'&&x.base.includes('/Spine_Characters/')),'Battle chibi sprites must not be used as full-body animations');
