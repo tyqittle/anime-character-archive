@@ -1,0 +1,79 @@
+{
+  "version": "2026-10-21-pilot",
+  "gameId": "browndust2",
+  "pinnedSourceCommit": "94a3ac97b8fab7ee054e0826de7d912de0a233ef",
+  "source": "https://github.com/Zormolo/Brown-Dust-2-Assets",
+  "note": "全身角色Spine试播候选。已核对同名skel、atlas、png及图集单页贴图引用；真实浏览器播放仍需验证。禁止使用未配对预览图。",
+  "characters": [
+    {
+      "id": "bd2-char000201",
+      "name": "Justia · Knight of Blood",
+      "zh": "悠丝缇亚",
+      "gameId": "browndust2",
+      "assetType": "character-full-spine",
+      "costume": "Knight_of_Blood",
+      "base": "https://raw.githubusercontent.com/Zormolo/Brown-Dust-2-Assets/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Justia/Knight_of_Blood/char000201",
+      "spineVersion": "4.1",
+      "versionUnverified": true,
+      "preview": "",
+      "previewSource": "not-rendered",
+      "status": "unverified-playback"
+    },
+    {
+      "id": "bd2-char000701",
+      "name": "Eclipse · Dimension Witch",
+      "zh": "日蚀",
+      "gameId": "browndust2",
+      "assetType": "character-full-spine",
+      "costume": "Dimension_Witch",
+      "base": "https://raw.githubusercontent.com/Zormolo/Brown-Dust-2-Assets/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eclipse/Dimension_Witch/char000701",
+      "spineVersion": "4.1",
+      "versionUnverified": true,
+      "preview": "",
+      "previewSource": "not-rendered",
+      "status": "unverified-playback"
+    },
+    {
+      "id": "bd2-char061302",
+      "name": "Dalvi · Bright Moon",
+      "zh": "达尔维",
+      "gameId": "browndust2",
+      "assetType": "character-full-spine",
+      "costume": "Bright_Moon",
+      "base": "https://raw.githubusercontent.com/Zormolo/Brown-Dust-2-Assets/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Dalvi/Bright_Moon/char061302",
+      "spineVersion": "4.1",
+      "versionUnverified": true,
+      "preview": "",
+      "previewSource": "not-rendered",
+      "status": "unverified-playback"
+    },
+    {
+      "id": "bd2-char002401",
+      "name": "Diana · Adventurer of the Unknown",
+      "zh": "戴安娜",
+      "gameId": "browndust2",
+      "assetType": "character-full-spine",
+      "costume": "Adventurer_of_the_Unknown",
+      "base": "https://raw.githubusercontent.com/Zormolo/Brown-Dust-2-Assets/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Diana/Adventurer_of_the_Unknown/char002401",
+      "spineVersion": "4.1",
+      "versionUnverified": true,
+      "preview": "",
+      "previewSource": "not-rendered",
+      "status": "unverified-playback"
+    },
+    {
+      "id": "bd2-char066401",
+      "name": "Angelica · The Fallen",
+      "zh": "安洁莉卡",
+      "gameId": "browndust2",
+      "assetType": "character-full-spine",
+      "costume": "The_Fallen",
+      "base": "https://raw.githubusercontent.com/Zormolo/Brown-Dust-2-Assets/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Angelica/The_Fallen/char066401",
+      "spineVersion": "4.1",
+      "versionUnverified": true,
+      "preview": "",
+      "previewSource": "not-rendered",
+      "status": "unverified-playback"
+    }
+  ]
+}
