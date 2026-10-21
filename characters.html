@@ -369,7 +369,12 @@ fetch('./data/characters.json?v=zzz-reverse1999-ready-20261021',{cache:'default'
   requestAnimationFrame(function(){next.classList.add('visible')});
   Array.from(heroNode.children).forEach(function(old){if(old!==next){old.classList.remove('visible');setTimeout(function(){old.remove()},1100)}});
  }
- paintHero();
+ // The optional feature banner is collapsed; never load its images until opened.
+ var extras=document.querySelector('.archive-extras');
+ if(extras){
+  if(extras.open)paintHero();
+  extras.addEventListener('toggle',function(){if(extras.open)paintHero()});
+ }else paintHero();
  var reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
  var saveData=!!(navigator.connection&&navigator.connection.saveData);
  if(!reduceMotion&&!saveData){
