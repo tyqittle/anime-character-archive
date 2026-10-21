@@ -59,6 +59,13 @@ assert.ok(page.includes('viewerLoadToken'),'Rapid navigation must cancel stale i
 const viewerCSS=read('assets/gallery-redesign.css');
 assert.ok(viewerCSS.includes('#viewer .view-picture.is-loading #viewImg{visibility:hidden}'),'Modal must hide in-flight image rendering');
 assert.ok(viewerCSS.includes('object-position:center center'),'Modal image should remain centered');
+assert.ok(page.includes('function sizeViewerFor(c)'),'Detail dialog must adapt to original artwork aspect ratio');
+assert.ok(page.includes('c.imageWidth')&&page.includes('c.imageHeight'),'Dialog must rely on original source dimensions, not cropped thumbnail geometry');
+assert.ok(page.includes("sizeViewerFor(c);"),'Detail dialog should set aspect-ratio geometry before opening');
+assert.ok(viewerCSS.includes('grid-template-columns:minmax(0,1fr) var(--viewer-info-width'),'Detail dialog must allocate adaptive photo and metadata columns');
+assert.ok(viewerCSS.includes('position:absolute')&&viewerCSS.includes('max-height:none'),'Full image should not expand the layout grid or be cut off');
+assert.ok(viewerCSS.includes('height:var(--viewer-art-height'),'Detail dialog should resize to image proportions');
+
 
 assert.ok(player.includes('new spine.SpinePlayer'),'Spine renderer missing');
 assert.ok(player.includes('binaryUrl')&&player.includes('atlasUrl'),'Spine runtime URL fix missing');
