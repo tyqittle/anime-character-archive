@@ -15,7 +15,8 @@
 | `characters.html` | 多游戏静态立绘图鉴：按游戏与角色分类、搜索、筛选、收藏、大图浏览 |
 | `spine.html` | Spine 动态角色浏览与播放 |
 | `data/characters.json` | 静态立绘记录、游戏分类、原图尺寸和素材来源 |
-| `data/spine-characters.json` | 动态 Spine 资源与角色索引 |
+| `data/spine-characters.json` | 原有 NIKKE / 蔚蓝档案 Spine 索引 |
+| `data/spine-bd2-pilot.json` | 棕色尘埃2五套全身角色 Spine 试播目录 |
 | `assets/portraits/` | 已收录的本地高清立绘（PNG / WebP） |
 | `assets/thumbs/` | 角色列表使用的轻量 WebP 缩略图 |
 | `assets/animation-previews/` | 动态立绘预览素材 |
@@ -45,6 +46,12 @@
 ## 动态立绘
 
 `data/spine-characters.json` 当前包含 **133 条 Spine 索引**：NIKKE 102 条、蔚蓝档案 31 条。它们是待播放的动画资源索引，**不能据此推断全部动画已通过实际播放验证**。Spine 骨骼、Atlas 和贴图可能需要访问第三方来源；部分下载数据会缓存到浏览器 IndexedDB，本站并未全面镜像这些第三方动画文件。 为避免重新下载已缓存的动画包，播放器内部保留历史 IndexedDB 数据库名称作为兼容标识；它不是旧仓库网址，不应随仓库更名直接清除。
+
+### 棕色尘埃2全身角色 Spine 试播
+
+已在动态立绘页面加入「棕色尘埃2（全身模型试播）」分类，首批五套分别来自 Justia / Knight of Blood、Eclipse / Dimension Witch、Dalvi / Bright Moon、Diana / Adventurer of the Unknown、Angelica / The Fallen。源文件位于 [Zormolo/Brown-Dust-2-Assets](https://github.com/Zormolo/Brown-Dust-2-Assets)，来源 URL 固定到上游提交 `94a3ac97b8fab7ee054e0826de7d912de0a233ef`，包含每套一一匹配的 `.skel`、`.atlas`、`.png`；Atlas 贴图引用已经逐一核对。
+
+这五套是独立的**试播候选目录**，没有计入前述133条动态索引；文件存在不代表骨骼渲染已经成功。没有真实模型截图之前，我们不会用其他人物或服装图片冒充对应预览。播放器仅在用户点击后从第三方资源仓库下载必要文件，不再分发原始游戏骨骼或贴图。另有 `.github/workflows/bd2-spine-browser-test.yml` 在 Chromium 中对真实资源做启动与画面变化验证，运行结果及截图请见 GitHub Actions。
 
 [更多说明：SPINE_STATUS.md](./SPINE_STATUS.md)
 
