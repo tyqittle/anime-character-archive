@@ -19,7 +19,7 @@ MAX_FILE_SIZE = 15 * 1024 * 1024
 def download(url: str) -> bytes:
     for attempt in range(3):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": "winter-cg-archive-static-mirror/1.0"})
+            req = urllib.request.Request(url, headers={"User-Agent": "anime-character-archive-static-mirror/1.0"})
             with urllib.request.urlopen(req, timeout=60) as response:
                 length = response.headers.get("Content-Length")
                 if length and int(length) > MAX_FILE_SIZE:
