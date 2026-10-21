@@ -21,7 +21,7 @@ jobs:
           python - <<'PY'
           import json, pathlib, urllib.request, re, traceback
           src=json.loads(pathlib.Path('data/spine-characters.json').read_text())
-          targets=['c010','c012','ba-ch0058_spr','ba-ch0060_spr']
+          targets=['c010','c012','ba-ch0058_home','ba-ch0060_home']
           entries=[next(x for x in src['characters'] if x['id']==id) for id in targets]
           out=[]
           def spine38(b):
@@ -55,13 +55,13 @@ jobs:
                   item['text_first_96']=''.join(chr(b) if 32<=b<=126 else '.' for b in data[:96])
                   try:item['spine38_header']=spine38(data)
                   except Exception as exc:item['spine38_header_error']=str(exc)
-                  item['found_version_strings']=[m.group().decode('ascii') for m in re.finditer(rb'[234]\\.[0-9]\\.[0-9]{1,3}',data[:128])]
-                  item['likely_gzip']=data[:2]==b'\\x1f\\x8b'
+                  item['found_version_strings']=[m.group().decode('ascii') for m in re.finditer(rb'[234]\.[0-9]\.[0-9]{1,3}',data[:128])]
+                  item['likely_gzip']=data[:2]==b'\x1f\x8b'
                   item['likely_json']=data.lstrip().startswith((b'{',b'['))
               except Exception as e2:item['error']=repr(e2)
               print('SPINE_DIAGNOSTIC',json.dumps(item,ensure_ascii=False),flush=True)
               out.append(item)
-          pathlib.Path('data/spine-diagnostics.json').write_text(json.dumps({'diagnostics':out},indent=2,ensure_ascii=False)+'\\n')
+          pathlib.Path('data/spine-diagnostics.json').write_text(json.dumps({'diagnostics':out},indent=2,ensure_ascii=False)+'\n')
           PY
       - name: Save source inspection evidence
         run: |
