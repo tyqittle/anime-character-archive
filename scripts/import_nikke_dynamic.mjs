@@ -1,68 +1,74 @@
 #!/usr/bin/env node
 /**
- * Reconcile the NIKKE character + skin Spine source into the local catalog.
- * Exclude missing directories and event/story animations. Do not invent previews.
- * Run in the repository root: node scripts/import_nikke_dynamic.mjs
+ * Add all real NIKKE character/skin Spine file sets from upstream Git tree.
+ * This is a file-level inventory, not a playback assertion.
+ * Run from repo root: node scripts/import_nikke_dynamic.mjs
  */
 import fs from 'node:fs';
-const root = new URL('../', import.meta.url);
-const catalogURL = new URL('data/spine-characters.json', root);
-const auditURL = new URL('data/nikke-import-audit.json', root);
-const indexURL = 'https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/js/json/l2d.json';
-const directoryURL = 'https://api.github.com/repos/Nikke-db/Nikke-db.github.io/contents/l2d';
-async function getJSON(url) {
-  const resp = await fetch(url, {headers: {'User-Agent': 'Anime-Character-Archive-NIKKE-Importer'}});
-  if (!resp.ok) throw new Error(url + ' returned HTTP ' + resp.status);
-  return resp.json();
+const root=new URL('../',import.meta.url);
+const repo='https://api.github.com/repos/Nikke-db/Nikke-db.github.io';
+const index='https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/js/json/';
+async function getJSON(url){
+ const r=await fetch(url,{headers:{'User-Agent':'AnimeCharacterArchive-NIKKE-importer','Accept':'application/vnd.github+json'}});
+ if(!r.ok)throw Error(url+' HTTP '+r.status);return r.json();
 }
-const [source, entries] = await Promise.all([getJSON(indexURL), getJSON(directoryURL)]);
-const dirs = new Set(entries.filter(e => e.type === 'dir').map(e => e.name));
-const characterId = /^c\d{3}(?:_\d+|_old)?$/;
-const eligible = source.filter(e => characterId.test(e.id) && dirs.has(e.id));
-const missing = source.filter(e => characterId.test(e.id) && !dirs.has(e.id));
-const original = JSON.parse(fs.readFileSync(catalogURL, 'utf8'));
-const existing = original.characters.filter(e => e.gameId === 'nikke');
-const known = new Map(existing.map(e => [e.id, e]));
-const baseNames = new Map(eligible.filter(e => /^c\d{3}$/.test(e.id)).map(e => [e.id, e.name]));
-if (new Set(eligible.map(e => e.id)).size !== eligible.length) throw new Error('Duplicate NIKKE source IDs');
-const added = [];
-const nikke = eligible.map(src => {
-  const old = known.get(src.id), group = src.id.slice(0, 4);
-  const item = {
-    ...old,
-    id: src.id,
-    name: old?.name || src.name,
-    spineVersion: old?.spineVersion || String(src.version || '4.0'),
-    base: old?.base || 'https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/' + src.id + '/' + src.id + '_00',
-    gameId: 'nikke',
-    characterName: baseNames.get(group) || src.name.replace(/_old$/, '')
-  };
-  if (src.id !== group) item.costumeName = src.name;
-  if (!old) {
-    item.versionUnverified = true;
-    added.push(src.id);
-  }
-  return item;
+const [source,characters,rootTree,revision]=await Promise.all([
+ getJSON(index+'l2d.json'),getJSON(index+'Characters.json'),getJSON(repo+'/git/trees/main'),
+ getJSON(repo+'/git/refs/heads/main')
+]);
+const l2d=rootTree.tree.find(x=>x.path==='l2d'&&x.type==='tree');
+if(!l2d)throw Error('Upstream l2d tree not found');
+const tree=await getJSON(repo+'/git/trees/'+l2d.sha+'?recursive=1');
+if(tree.truncated)throw Error('Source tree was truncated; not safe to import');
+const assetSets=new Map();
+for(const file of tree.tree){
+ const m=file.path.match(/^(c\d{3}(?:_\d+|_old)?)\/([^/]+)$/);
+ if(!m||file.type!=='blob')continue;
+ const files=assetSets.get(m[1])||new Set();files.add(m[2]);assetSets.set(m[1],files);
+}
+const qualified=[...assetSets].map(([id,files])=>{
+ const fileBase=files.has(id+'_00.skel')&&files.has(id+'_00.atlas')?id+'_00':id;
+ return {id,fileBase,files};
+}).filter(x=>x.files.has(x.fileBase+'.skel')&&x.files.has(x.fileBase+'.atlas')&&[...x.files].some(y=>y.toLowerCase().endsWith('.png')))
+.sort((a,b)=>a.id.localeCompare(b.id,'en',{numeric:true}));
+const sourceNames=new Map(source.map(x=>[x.id,x.name]));
+const sourceVersions=new Map(source.map(x=>[x.id,x.version]));
+const unitNames=new Map(characters.map(x=>[x.id,x.name]));
+const staticData=JSON.parse(fs.readFileSync(new URL('data/characters.json',root),'utf8'));
+const staticNames=new Map(staticData.characters.filter(x=>x.gameId==='nikke'&&/^c\d{3}$/.test(x.id)).map(x=>[x.id,x.name]));
+const manifestPath=new URL('data/spine-characters.json',root);
+const manifest=JSON.parse(fs.readFileSync(manifestPath,'utf8'));
+const previous=manifest.characters.filter(x=>x.gameId==='nikke');
+const byId=new Map(previous.map(x=>[x.id,x]));
+const baseOld=new Map(previous.filter(x=>/^c\d{3}$/.test(x.id)).map(x=>[x.id,x.name]));
+const baseNames=new Map(qualified.filter(x=>/^c\d{3}$/.test(x.id)).map(x=>[x.id,
+ baseOld.get(x.id)||sourceNames.get(x.id)||unitNames.get(x.id)||staticNames.get(x.id)||'角色 '+x.id+'（待核对）'
+]));
+const added=[];
+const models=qualified.map(x=>{
+ const old=byId.get(x.id),base=x.id.slice(0,4),group=baseNames.get(base)||'角色 '+base+'（待核对）';
+ const variant=x.id!==base;
+ const label=sourceNames.get(x.id)||(variant?group+' · '+x.id.slice(5)+'号服装（待核对）':group);
+ const entry={...old,id:x.id,name:old?.name||label,gameId:'nikke',
+  spineVersion:old?.spineVersion||String(sourceVersions.get(x.id)||'4.0'),
+  base:old?.base||'https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/'+x.id+'/'+x.fileBase,
+  characterName:group};
+ if(variant)entry.costumeName=sourceNames.get(x.id)||x.id.slice(5)+'号服装（待核对）';
+ if(!old){entry.versionUnverified=true;added.push(x.id)}
+ return entry;
 });
-const indexedIds = new Set(nikke.map(e => e.id));
-original.characters = [
-  ...nikke,
-  ...existing.filter(e => !indexedIds.has(e.id)),
-  ...original.characters.filter(e => e.gameId !== 'nikke')
-];
-original.note = 'NIKKE character/skin directories indexed from upstream. Only per-character verified frame captures are shown as previews; Blue Archive lobby data preserved.';
-fs.writeFileSync(catalogURL, JSON.stringify(original, null, 2) + '\n');
-const audit = {
-  source: 'https://github.com/Nikke-db/Nikke-db.github.io',
-  sourceIndexCount: source.length,
-  sourceCharacterSkinEntriesWithDirectory: eligible.length,
-  previouslyIndexedNikke: existing.length,
-  newlyIndexed: added.length,
-  currentIndexedNikke: original.characters.filter(e => e.gameId === 'nikke').length,
-  newIds: added,
-  excludedCharacterEntriesWithoutDirectory: missing.map(e => ({id: e.id, name: e.name})),
-  excludedSceneOrNonCharacterEntries: source.filter(e => !characterId.test(e.id)).map(e => ({id: e.id, name: e.name})),
-  note: 'Source directory presence is not proof of successful skeleton download, renderer compatibility, or verified local preview. External model files are not mirrored.'
-};
-fs.writeFileSync(auditURL, JSON.stringify(audit, null, 2) + '\n');
-console.log('NIKKE_INDEX_SYNC', JSON.stringify({added: added.length, charactersAndSkins: audit.currentIndexedNikke, missingFolders: missing.length}));
+const qualifiedIDs=new Set(qualified.map(x=>x.id));
+const retained=previous.filter(x=>!qualifiedIDs.has(x.id));
+manifest.characters=[...models,...retained,...manifest.characters.filter(x=>x.gameId!=='nikke')];
+manifest.note='NIKKE source character/skin skeleton+atlas+texture folders imported; playback and true previews require individual verification; Blue Archive lobby records retained.';
+fs.writeFileSync(manifestPath,JSON.stringify(manifest,null,2)+'\n');
+const audit={source:'https://github.com/Nikke-db/Nikke-db.github.io',sourceCommit:revision.object.sha,
+ sourceL2DIndexEntries:source.length,modelsWithSkeletonAtlasAndTexture:qualified.length,
+ sourceIndexModelsMatched:qualified.filter(x=>sourceNames.has(x.id)).length,
+ additionalUnlistedModels:qualified.filter(x=>!sourceNames.has(x.id)).length,
+ previousNikkeEntries:previous.length,newlyIndexed:added.length,
+ currentNikkeSpineIndexes:models.length+retained.length,
+ retainedLegacyIndexes:retained.map(x=>x.id),newIds:added,
+ warning:'Folder-level check only. Individual model render, atlas texture page correctness, version and matching previews unverified; remote original Spine data not mirrored.'};
+fs.writeFileSync(new URL('data/nikke-import-audit.json',root),JSON.stringify(audit,null,2)+'\n');
+console.log('NIKKE_IMPORT',JSON.stringify({models:qualified.length,added:added.length,retained:retained.length}));
