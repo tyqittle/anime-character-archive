@@ -144,7 +144,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c016/c016_00",
       "characterName": "角色 c016（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c016.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6279f3ae2c7a0d20dd700fa074b29bdc2b6407bd23991a03a68f3e534beb0bbe",
+      "previewAnimation": "idle"
     },
     {
       "id": "c016_01",
@@ -154,7 +158,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c016_01/c016_01_00",
       "characterName": "角色 c016（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c016_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "10273e27d2e559fd82903aec054e5ff2924390afdad5f6637ea62577d7f1b124",
+      "previewAnimation": "idle"
     },
     {
       "id": "c016_02",
@@ -164,7 +172,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c016_02/c016_02_00",
       "characterName": "角色 c016（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c016_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b12a109bc7886d0d99b181ca32d2cca7aee431f989ee786668ba81ff0b396d0b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c016_03",
@@ -174,7 +186,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c016_03/c016_03_00",
       "characterName": "角色 c016（待核对）",
       "costumeName": "03号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c016_03.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "fa4ae0f45dd884a0198749939e679ff149d2d3d0deff2efe4c70628a16416f6f",
+      "previewAnimation": "idle"
     },
     {
       "id": "c017",
@@ -183,7 +199,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c017/c017_00",
       "characterName": "角色 c017（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c017.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "cbb82243166c036199aab15c2d42640ba632784bf5203b78fafc13bff60769df",
+      "previewAnimation": "idle"
     },
     {
       "id": "c017_01",
@@ -193,7 +213,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c017_01/c017_01_00",
       "characterName": "角色 c017（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c017_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6f213ce732953f3f075cbafb90fb776605e3901ebd886f331968bbad176b3c32",
+      "previewAnimation": "idle"
     },
     {
       "id": "c017_02",
@@ -203,7 +227,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c017_02/c017_02_00",
       "characterName": "角色 c017（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c017_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9e90f6a6bd9686bd78eeb51b7b880ee448c72c47c1c7dc0c894f7ff27f717555",
+      "previewAnimation": "idle"
     },
     {
       "id": "c018",
@@ -212,7 +240,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c018/c018_00",
       "characterName": "角色 c018（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c018.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a8b2f334cf23f3a856fbe36e2576d69e8e9ee364ea498ffe3853c28e84fc5113",
+      "previewAnimation": "idle"
     },
     {
       "id": "c020",
@@ -261,7 +293,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c023/c023_00",
       "characterName": "角色 c023（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c023.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3c5f5a44333654250cb5e0027e6c75f1ca37d95e8aa7fba4471087360b14d453",
+      "previewAnimation": "idle"
     },
     {
       "id": "c030",
@@ -298,7 +334,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c030_02/c030_02_00",
       "characterName": "Poli",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c030_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "93a5efbf191bf4709e8f21567c85bf9837c2ffec73d744368c29f2c3d397f3e6",
+      "previewAnimation": "idle"
     },
     {
       "id": "c032",
@@ -321,7 +361,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c032_01/c032_01_00",
       "characterName": "Miranda",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c032_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "69f690a1df151b4bbb292d72e5ecd0c5682f3a71b1aea42f0e8b8f0ec1baf16c",
+      "previewAnimation": "idle"
     },
     {
       "id": "c033",
@@ -330,7 +374,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c033/c033_00",
       "characterName": "角色 c033（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c033.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4e92d93e04f65c97bb2de1c607fe5d25eaa2072af8a7d5e1719a07c920817f05",
+      "previewAnimation": "idle"
     },
     {
       "id": "c040",
@@ -366,7 +414,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c041_01/c041_01_00",
       "characterName": "K",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c041_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "552dd8354575f51e59997c3cf679219b238014b06d1c14ce482a6c6a39379f7c",
+      "previewAnimation": "idle"
     },
     {
       "id": "c043",
@@ -375,7 +427,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c043/c043_00",
       "characterName": "角色 c043（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c043.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "469fc915a1b24017e25cf9460ab567d5330f0d771b89307bf5138b1957baa109",
+      "previewAnimation": "idle"
     },
     {
       "id": "c043_01",
@@ -385,7 +441,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c043_01/c043_01_00",
       "characterName": "角色 c043（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c043_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "849b63b3683fe9890ae2d41759f9a5eadefbd5844f4290b40f6f89ae52c02eb7",
+      "previewAnimation": "idle"
     },
     {
       "id": "c043_02",
@@ -395,7 +455,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c043_02/c043_02_00",
       "characterName": "角色 c043（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c043_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "724f831a03be5db6c84181c4ca750b9783f2333717367691a17c2a9be70b892b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c060",
@@ -430,7 +494,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c062/c062_00",
       "characterName": "角色 c062（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c062.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d287028731f73996a6bb555278ce14d957c95c1a6ebd8377ad2f007c370446c9",
+      "previewAnimation": "idle"
     },
     {
       "id": "c063",
@@ -439,7 +507,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c063/c063_00",
       "characterName": "角色 c063（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c063.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1a933a93ddddc1fbb0c110e175acfecd6515bd685d7699c5ab32416954194697",
+      "previewAnimation": "idle"
     },
     {
       "id": "c070",
@@ -530,7 +602,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c072_02/c072_02_00",
       "characterName": "Diesel",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c072_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e71437d28cd2a38ef26b4946a1313ae633e250a87b2d4cfd42b009ea59db07d1",
+      "previewAnimation": "idle"
     },
     {
       "id": "c072_04",
@@ -540,7 +616,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c072_04/c072_04_00",
       "characterName": "Diesel",
       "costumeName": "04号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c072_04.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "11fa33e246849674a9b088741b612b81931efe135c18570e59acc2b93c5f46fd",
+      "previewAnimation": "idle"
     },
     {
       "id": "c073",
@@ -549,7 +629,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c073/c073_00",
       "characterName": "角色 c073（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c073.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9038ae6b0b26528558eef523ae81aa81e13591d76007e6b8df95bd4e6424edd6",
+      "previewAnimation": "idle"
     },
     {
       "id": "c074",
@@ -558,7 +642,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c074/c074_00",
       "characterName": "角色 c074（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c074.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f8c70ac4fdcc272328f71268e06e00d239567a5b79aa8116f5bc8a483306bcaf",
+      "previewAnimation": "idle"
     },
     {
       "id": "c075",
@@ -567,7 +655,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c075/c075_00",
       "characterName": "角色 c075（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c075.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c9087ad8f99cda65abcc5130576ef7c7f10df5799293b8e3519bee3c209752ea",
+      "previewAnimation": "idle"
     },
     {
       "id": "c080",
@@ -604,7 +696,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c080_02/c080_02_00",
       "characterName": "Centi",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c080_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "0a707e34e9797bbee7e8f3c7c6911480030e44f8262e281bfd47d8227ea3eb4d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c082",
@@ -641,7 +737,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c082_02/c082_02_00",
       "characterName": "Liter",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c082_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8ac32723912db0e4eb98148061b284b3ce3f4a174dd3ceba3d73e3eca4909d7e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c082_80",
@@ -651,7 +751,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c082_80/c082_80_00",
       "characterName": "Liter",
       "costumeName": "80号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c082_80.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a317a6d264a4445c87b5c51696d90946d7d3f9ded57ae0cd59a8cfd8452c3459",
+      "previewAnimation": "idle"
     },
     {
       "id": "c090",
@@ -715,7 +819,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c091_01/c091_01_00",
       "characterName": "Vesti",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c091_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e1e4fcbbba21d7f1b7b1153804553000a268998866925364e73c96af6dae16ae",
+      "previewAnimation": "idle"
     },
     {
       "id": "c092",
@@ -737,7 +845,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c093/c093_00",
       "characterName": "角色 c093（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c093.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8b36988e4c9a71ea0d6ad21662d445cdaa65985c3116402a5f2919c26b536c9e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c093_01",
@@ -747,7 +859,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c093_01/c093_01_00",
       "characterName": "角色 c093（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c093_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1b2ed9269f16b1e67bc4ac5c5a1701af2a950690ca57860148dbbd3185f0bde3",
+      "previewAnimation": "idle"
     },
     {
       "id": "c094",
@@ -756,7 +872,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c094/c094_00",
       "characterName": "角色 c094（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c094.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c72aca79ed8848e25fdd19d96812b2eeeec2b36d5077262a55d6271c6dd0389d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c094_01",
@@ -766,7 +886,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c094_01/c094_01_00",
       "characterName": "角色 c094（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c094_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7047bfaeaf4556aab40be620f97ee45b742e9ae794043add89b8f3e90395662f",
+      "previewAnimation": "idle"
     },
     {
       "id": "c095",
@@ -775,7 +899,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c095/c095_00",
       "characterName": "角色 c095（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c095.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "018453aeca9901e48466631939a92ec815705cbe17e8ae00bf36addd9445d2e0",
+      "previewAnimation": "idle"
     },
     {
       "id": "c095_01",
@@ -785,7 +913,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c095_01/c095_01_00",
       "characterName": "角色 c095（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c095_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "88e6cd13810f21ad107397578c1be94b7f6f3d3dbab31a3f61d94c4855c74e18",
+      "previewAnimation": "idle"
     },
     {
       "id": "c100",
@@ -835,7 +967,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c101_02/c101_02_00",
       "characterName": "Drake",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c101_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e545d55f2353d7f3d40dba7e67dac54ea9b6186d66b1e02d4047358ca0832ff1",
+      "previewAnimation": "idle"
     },
     {
       "id": "c102",
@@ -871,7 +1007,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c103/c103_00",
       "characterName": "角色 c103（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c103.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "052a4ce4524e5c2a26b99eea68d8c10d290a4f7b7b0769a570dedf7581d646cb",
+      "previewAnimation": "idle"
     },
     {
       "id": "c103_01",
@@ -881,7 +1021,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c103_01/c103_01_00",
       "characterName": "角色 c103（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c103_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "64df798a60c588ca2fd7f86dfaf425bc0bb845f86224cea2a556e9cf72e34e2b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c104",
@@ -890,7 +1034,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c104/c104_00",
       "characterName": "角色 c104（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c104.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "061ca54cb8f38650146babe8f6e4870cd69ec92d3f654d4eb41c231c8ade362d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c105",
@@ -899,7 +1047,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c105/c105_00",
       "characterName": "角色 c105（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c105.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e0af0d40e94b5a47717236390f169c523cde5b7d83f368cd28fe60058e2d8dc4",
+      "previewAnimation": "idle"
     },
     {
       "id": "c105_01",
@@ -909,7 +1061,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c105_01/c105_01_00",
       "characterName": "角色 c105（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c105_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1103c4d8dfdcf19c4936a9af5f5a0aa26794b2a0e2f85de7e14a658b9f7717db",
+      "previewAnimation": "idle"
     },
     {
       "id": "c110",
@@ -945,7 +1101,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c111_01/c111_01_00",
       "characterName": "Jackal",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c111_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "440e0cded469b4fe9e4f6df27288d360214acdb4808bca1c8124ff9b08dc9f72",
+      "previewAnimation": "idle"
     },
     {
       "id": "c112",
@@ -982,7 +1142,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c112_02/c112_02_00",
       "characterName": "Viper",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c112_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6ae7c55e61add3e64d648f91959fbd8182790a531d4d29d0cbf3cd758d77293f",
+      "previewAnimation": "idle"
     },
     {
       "id": "c112_03",
@@ -992,7 +1156,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c112_03/c112_03_00",
       "characterName": "Viper",
       "costumeName": "03号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c112_03.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "77582a6eb2a7b86ddd33b7588dd2e84e02c86dff8a1bf5d8082bea3ae991ed9d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c113",
@@ -1001,7 +1169,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c113/c113_00",
       "characterName": "角色 c113（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c113.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "302c5b8745e4846a7a6abd813888f2f95206e84e0ffbb1b0586aee71afe53f95",
+      "previewAnimation": "idle"
     },
     {
       "id": "c113_01",
@@ -1011,7 +1183,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c113_01/c113_01_00",
       "characterName": "角色 c113（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c113_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ec674986a26f015fd59e44808849ef0442a4ca5dec5bbc2213ddc7f367a25ace",
+      "previewAnimation": "idle"
     },
     {
       "id": "c120",
@@ -1060,7 +1236,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c130_01/c130_01_00",
       "characterName": "Mary",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c130_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "68a03ea305c2e5d304a33d172acf4f5a40f81406f6fa048cca6c76b661008e05",
+      "previewAnimation": "idle"
     },
     {
       "id": "c131",
@@ -1137,7 +1317,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c140_02/c140_02_00",
       "characterName": "Sugar",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c140_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f2a436c1b1da1c0e1672d177d653ce59e814d9896503117eb96dcf5af1537354",
+      "previewAnimation": "idle"
     },
     {
       "id": "c140_03",
@@ -1147,7 +1331,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c140_03/c140_03_00",
       "characterName": "Sugar",
       "costumeName": "03号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c140_03.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "052f23122d08ddc40822a45eebfaa07afa511fb7a8d40a98aedbd694f17cb058",
+      "previewAnimation": "idle"
     },
     {
       "id": "c141",
@@ -1210,7 +1398,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c143/c143_00",
       "characterName": "角色 c143（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c143.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2aa283e4327fdc2ff24075fd0f0b332a6a5e0f7ea351e785bb87fd1e0caf46a7",
+      "previewAnimation": "idle"
     },
     {
       "id": "c150",
@@ -1247,7 +1439,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c150_02/c150_02_00",
       "characterName": "Julia",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c150_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a2d383a0dddbf9df9dde58139c6602047143fc222502351b06cd95b3fcd62747",
+      "previewAnimation": "idle"
     },
     {
       "id": "c160",
@@ -1296,7 +1492,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c162/c162_00",
       "characterName": "角色 c162（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c162.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "5a878a7ef359da0dacfe12c45298500e830090fc0a8a4a7e5fdc86733f20b533",
+      "previewAnimation": "idle"
     },
     {
       "id": "c162_01",
@@ -1306,7 +1506,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c162_01/c162_01_00",
       "characterName": "角色 c162（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c162_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ad1b642041f493277c3818cf3691e7d41db2ff059814e80698172f87276961da",
+      "previewAnimation": "idle"
     },
     {
       "id": "c170",
@@ -1343,7 +1547,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c170_02/c170_02_00",
       "characterName": "Privaty",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c170_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "cf31db6025cb6a724c677e9e61e02d9a76404ae01f853cc5d94cbcf83c6ea499",
+      "previewAnimation": "idle"
     },
     {
       "id": "c170_03",
@@ -1353,7 +1561,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c170_03/c170_03_00",
       "characterName": "Privaty",
       "costumeName": "03号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c170_03.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e90c2c4816f0dff3211cf3008a9bbe3a82d45603f74992ef026e1bf1dd0639dd",
+      "previewAnimation": "idle"
     },
     {
       "id": "c170_04",
@@ -1363,7 +1575,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c170_04/c170_04_00",
       "characterName": "Privaty",
       "costumeName": "04号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c170_04.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "45ce9e1c5c6040ef96972c44cddc53a0c2c5434104205be9f1ecf91fc7d5ae51",
+      "previewAnimation": "idle"
     },
     {
       "id": "c171",
@@ -1412,7 +1628,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c180_01/c180_01_00",
       "characterName": "Guillotine",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c180_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "16fc7e09221cee5c30bb9d2b31766cc1c0882e0039d85bba00481b8696a8baa6",
+      "previewAnimation": "idle"
     },
     {
       "id": "c181",
@@ -1449,7 +1669,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c181_02/c181_02_00",
       "characterName": "Maiden",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c181_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "57104772fe67cf3325b4d24d5833b9cde1d0cfd6bfdabca92f7f3e23fd41c0f5",
+      "previewAnimation": "idle"
     },
     {
       "id": "c182",
@@ -1458,7 +1682,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c182/c182_00",
       "characterName": "角色 c182（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c182.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "813479511c6248469f6d706eab02d20b7b2969b709f6bc9138c2f938c7f5aace",
+      "previewAnimation": "idle"
     },
     {
       "id": "c183",
@@ -1467,7 +1695,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c183/c183_00",
       "characterName": "角色 c183（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c183.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "30c9e7a60afc1523f905a90bcd646c828f54730f48f4fd007b3ee011dece8970",
+      "previewAnimation": "idle"
     },
     {
       "id": "c190",
@@ -1517,7 +1749,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c191_02/c191_02_00",
       "characterName": "Alice",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c191_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e1a362d502774429d22b5a7d42d614d18f18160782271799bedd25407a59f753",
+      "previewAnimation": "idle"
     },
     {
       "id": "c192",
@@ -1526,7 +1762,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c192/c192_00",
       "characterName": "角色 c192（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c192.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7070dac7cfab45921d1fbb85eca4aac319b0c0ac3d717e2d28199bf3424711f4",
+      "previewAnimation": "idle"
     },
     {
       "id": "c192_01",
@@ -1536,7 +1776,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c192_01/c192_01_00",
       "characterName": "角色 c192（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c192_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "218649df927c244eb0856be02cdab6c42d18331e33db7e2dfa7564997c0fa30e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c192_02",
@@ -1546,7 +1790,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c192_02/c192_02_00",
       "characterName": "角色 c192（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c192_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "0bc8e3ed627754f7eccaad51682db09a7656343bbb3554f97885427d3c021ebb",
+      "previewAnimation": "idle"
     },
     {
       "id": "c193",
@@ -1568,7 +1816,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c194/c194_00",
       "characterName": "角色 c194（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c194.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9c074b9cea765f86fd8cc10b52d86d6237e297bb0d30e0b85412d77fbbac832d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c195",
@@ -1577,7 +1829,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c195/c195_00",
       "characterName": "角色 c195（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c195.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "eec860d7c8e9ef87a9a2e446d35ad58ddda5362cfce28cb067859176191b2190",
+      "previewAnimation": "idle"
     },
     {
       "id": "c200",
@@ -1708,7 +1964,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c210_02/c210_02_00",
       "characterName": "Exia",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c210_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "bec1078424f43479af86e00b4d7157cf54a7ddfece401f1341468c063df3296f",
+      "previewAnimation": "idle"
     },
     {
       "id": "c210_03",
@@ -1718,7 +1978,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c210_03/c210_03_00",
       "characterName": "Exia",
       "costumeName": "03号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c210_03.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "53169d749213f66a917e1f47acde3f11247ffbe46ef10ebbe5c9ea9f897ba3f8",
+      "previewAnimation": "idle"
     },
     {
       "id": "c212",
@@ -1782,7 +2046,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c220_01/c220_01_00",
       "characterName": "Snow White",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c220_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3b90bd3e08814cf07aa917604fa8904a0bc00aa5140392c1dffee1c46b155381",
+      "previewAnimation": "idle"
     },
     {
       "id": "c221",
@@ -1818,7 +2086,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c222_01/c222_01_00",
       "characterName": "Scarlet",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c222_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f90776ceade8dd1af23689d146e06a2d45b1b837313e11ac49472b762e3fef1a",
+      "previewAnimation": "idle"
     },
     {
       "id": "c223",
@@ -1827,7 +2099,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c223/c223_00",
       "characterName": "角色 c223（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c223.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4f7fd880bf74e3e049ee4f94a3077ffdfc4cc6bec9c56e7e1d6f825319af8a24",
+      "previewAnimation": "idle"
     },
     {
       "id": "c223_01",
@@ -1837,7 +2113,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c223_01/c223_01_00",
       "characterName": "角色 c223（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c223_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8d434a5cc559d97ebfeeebe1d6959a5f1f12f28f9ba20c41041ec8a779b2e0b3",
+      "previewAnimation": "idle"
     },
     {
       "id": "c224",
@@ -1846,7 +2126,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c224/c224_00",
       "characterName": "角色 c224（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c224.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7535ea79113a8b94e066562de196fc5a771d30475d4284ed7ddf6820e578c2ca",
+      "previewAnimation": "idle"
     },
     {
       "id": "c225",
@@ -1855,7 +2139,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c225/c225_00",
       "characterName": "角色 c225（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c225.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a77a6c796624d5c23e569873bbae49778147fa99be3c23981d14f6842be5755d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c225_01",
@@ -1865,7 +2153,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c225_01/c225_01_00",
       "characterName": "角色 c225（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c225_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "dd6e31f480a1d25422ed31a2b6a689bd1e76e1d8c94717d4791229cac46b81d5",
+      "previewAnimation": "idle"
     },
     {
       "id": "c226",
@@ -1874,7 +2166,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c226/c226_00",
       "characterName": "角色 c226（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c226.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f6eb0ae6d8fc244278f50352bb63772705ba43563bbda0acaf2337fb1c7f04ce",
+      "previewAnimation": "idle"
     },
     {
       "id": "c227",
@@ -1883,7 +2179,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c227/c227_00",
       "characterName": "角色 c227（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c227.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d7822b28dcd4fff2e311c881f1dbdb431901d065b1d8123215701083a11b508f",
+      "previewAnimation": "idle"
     },
     {
       "id": "c230",
@@ -1906,7 +2206,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c230_01/c230_01_00",
       "characterName": "Harran",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c230_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4a7f93a286f0302e381e324899058c2a8db6eeb84b82643d9e2c299a4e70bbd6",
+      "previewAnimation": "idle"
     },
     {
       "id": "c231",
@@ -1929,7 +2233,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c231_01/c231_01_00",
       "characterName": "Isabel",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c231_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d63d42f1c76689b7e6844820fd041f47a1fd0fbcdf923798fc1a75dc4869340e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c232",
@@ -1965,7 +2273,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c233_01/c233_01_00",
       "characterName": "Dorothy",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c233_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1506e82cdf85a4cd68d3116464bc0586ff8510c949b4812ea6b813f10b844ff8",
+      "previewAnimation": "idle"
     },
     {
       "id": "c233_02",
@@ -1975,7 +2287,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c233_02/c233_02_00",
       "characterName": "Dorothy",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c233_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e2f61af93311ec8a9a05de7f9ab069ce53dc50c9910776444f107e74407e585a",
+      "previewAnimation": "idle"
     },
     {
       "id": "c233_80",
@@ -1985,7 +2301,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c233_80/c233_80_00",
       "characterName": "Dorothy",
       "costumeName": "80号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c233_80.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a6227794d4d9cf3a2be690fb5821b53cdbd0f05d12a2d1d025a0fb4aa5fbc540",
+      "previewAnimation": "idle"
     },
     {
       "id": "c234",
@@ -1994,7 +2314,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c234/c234_00",
       "characterName": "角色 c234（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c234.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "91e621e5ca3581fa10e7086204dfd46f5dec754538ab78846e43ba4735d9bb48",
+      "previewAnimation": "idle"
     },
     {
       "id": "c240",
@@ -2043,7 +2367,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c242_01/c242_01_00",
       "characterName": "Folkwang",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c242_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3bc099c244e932ece6d07d6f4eb6787b03ccfba8c6cb3e17dc109be41a82d851",
+      "previewAnimation": "idle"
     },
     {
       "id": "c250",
@@ -2158,7 +2486,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c260_02/c260_02_00",
       "characterName": "Modernia",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c260_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "39d77b623d9ae9fde46ee73db3a535cbbf8dfb852d367bc9ba97b67422764fdb",
+      "previewAnimation": "idle"
     },
     {
       "id": "c260_80",
@@ -2168,7 +2500,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c260_80/c260_80_00",
       "characterName": "Modernia",
       "costumeName": "80号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c260_80.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b58b8aec36e7b54bdb0ed02241424fea18330944d9487af063108ca98ed6b752",
+      "previewAnimation": "idle"
     },
     {
       "id": "c261",
@@ -2204,7 +2540,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c262_01/c262_01_00",
       "characterName": "Liberalio",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c262_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9240598006189f3ef77b18516594a5d46836bab48268f23742c0ca4b6c2ca90d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c263",
@@ -2240,7 +2580,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c270_01/c270_01_00",
       "characterName": "Blanc",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c270_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2f56e294a6eeeb4d6f39ce2005b3e014d31636477ea44705a8057f2d573e19de",
+      "previewAnimation": "idle"
     },
     {
       "id": "c270_02",
@@ -2250,7 +2594,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c270_02/c270_02_00",
       "characterName": "Blanc",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c270_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ba7a48f0241774b5641e075a116658beadbc6f54e6bd06175fa3542e63ef2bee",
+      "previewAnimation": "idle"
     },
     {
       "id": "c270_03",
@@ -2260,7 +2608,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c270_03/c270_03_00",
       "characterName": "Blanc",
       "costumeName": "03号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c270_03.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "bdae249a2487de01bbbe232af54a6800032bb60ea927d66d50546a806ce1793a",
+      "previewAnimation": "idle"
     },
     {
       "id": "c271",
@@ -2283,7 +2635,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c271_01/c271_01_00",
       "characterName": "Noir",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c271_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4b5a69d466891bcd3485a766aa9533d261545a749890bfef4e30c698fcd28b0d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c271_02",
@@ -2293,7 +2649,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c271_02/c271_02_00",
       "characterName": "Noir",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c271_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f536bcc23e212c7f19e6e321841728632cf73a60f5b2d291850242a2e1a3690a",
+      "previewAnimation": "idle"
     },
     {
       "id": "c272",
@@ -2316,7 +2676,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c272_01/c272_01_00",
       "characterName": "Rouge",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c272_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d7015bdaea1d8c9df8059dbe5aa052cfbc8a1b897218717654ac1c05c6f4d6e4",
+      "previewAnimation": "idle"
     },
     {
       "id": "c280",
@@ -2339,7 +2703,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c280_01/c280_01_00",
       "characterName": "Rosanna",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c280_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6dd994d31d7a155a66234aea86e0f4fbf7d8f4f10108d7c7c02f38a9d05c2ce4",
+      "previewAnimation": "idle"
     },
     {
       "id": "c281",
@@ -2362,7 +2730,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c281_01/c281_01_00",
       "characterName": "Moran",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c281_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "85cdd05a9fc5217a7d1b192a0aa978d9a691e925254a9032753c51b28dc38d65",
+      "previewAnimation": "idle"
     },
     {
       "id": "c281_02",
@@ -2372,7 +2744,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c281_02/c281_02_00",
       "characterName": "Moran",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c281_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a064f4864407a32420977804367471fa68249b349fcc7caea42adff7f49855da",
+      "previewAnimation": "idle"
     },
     {
       "id": "c282",
@@ -2408,7 +2784,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c283/c283_00",
       "characterName": "角色 c283（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c283.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7501a639e51e9d93696c122ced4e244f60f9711dc467740b7b2db171422577db",
+      "previewAnimation": "idle"
     },
     {
       "id": "c284",
@@ -2417,7 +2797,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c284/c284_00",
       "characterName": "角色 c284（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c284.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7ebb2a0f50811d4a53ac3b60288f4fb8fb6918ddad194b2a74e9a2cc0e34af6e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c290",
@@ -2440,7 +2824,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c290_01/c290_01_00",
       "characterName": "Mana",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c290_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "691eaa391a73fcedf32eb4424e4e63f94410205ab96ff3c70be403367970d22f",
+      "previewAnimation": "idle"
     },
     {
       "id": "c291",
@@ -2593,7 +2981,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c310_01/c310_01_00",
       "characterName": "Ade",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c310_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a38c403131f4870ce62302c2fa6ccd4cd8c1a46028cbcb2431d4f1eeb51f1dd5",
+      "previewAnimation": "idle"
     },
     {
       "id": "c311",
@@ -2628,7 +3020,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c313/c313_00",
       "characterName": "角色 c313（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c313.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "03cc9ff320f3b96266b42d74acb4debf1a54a1143132a4459a9339d60737040c",
+      "previewAnimation": "idle"
     },
     {
       "id": "c314",
@@ -2637,7 +3033,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c314/c314_00",
       "characterName": "角色 c314（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c314.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "47a6ea101ba03a4a408a49156d22ff1848c7478ee782f045962b2cddf033806a",
+      "previewAnimation": "idle"
     },
     {
       "id": "c315",
@@ -2646,7 +3046,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c315/c315_00",
       "characterName": "角色 c315（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c315.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "acbfed500efe3e0f205fb0467dd68d5cf02f6c2cbe8be36a045dddc3ed3a6135",
+      "previewAnimation": "idle"
     },
     {
       "id": "c316",
@@ -2655,7 +3059,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c316/c316_00",
       "characterName": "角色 c316（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c316.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3b79b01e14d628b230558367d2a37f3a3487445082a3bbc4b94c2b7f61aa1773",
+      "previewAnimation": "idle"
     },
     {
       "id": "c316_01",
@@ -2665,7 +3073,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c316_01/c316_01_00",
       "characterName": "角色 c316（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c316_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f24470b5595051330a6729db5637c4cdb1037766458194d44466d54f1495d489",
+      "previewAnimation": "idle"
     },
     {
       "id": "c321",
@@ -2688,7 +3100,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c321_01/c321_01_00",
       "characterName": "Marciana",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c321_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ab7c64c2bcae5f3f3d0666b0078c645729d225645af56a0137081a07cedff4b7",
+      "previewAnimation": "idle"
     },
     {
       "id": "c322",
@@ -2697,7 +3113,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c322/c322_00",
       "characterName": "角色 c322（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c322.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8d889df5a59e84d3e9449c1eca69ce166d1183c9ed807e1f8605c2b9ef1f3ffa",
+      "previewAnimation": "idle"
     },
     {
       "id": "c330",
@@ -2720,7 +3140,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c330_01/c330_01_00",
       "characterName": "Crown",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c330_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c548b21b9073010e64d1475b7ba96ee449be91b9e118cc439f6df265d9010d82",
+      "previewAnimation": "idle"
     },
     {
       "id": "c330_02",
@@ -2730,7 +3154,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c330_02/c330_02_00",
       "characterName": "Crown",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c330_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ec550e1f8b1c4d6af3e29adf81c8bb9f4090ee97c177cb5e55927c0e24f56340",
+      "previewAnimation": "idle"
     },
     {
       "id": "c331",
@@ -2780,7 +3208,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c350_02/c350_02_00",
       "characterName": "Mast",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c350_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c5d10a10be53ef7d66ce061545d6b9ef4e67edd14b1efad6fc8087415123ce98",
+      "previewAnimation": "idle"
     },
     {
       "id": "c350_old",
@@ -2817,7 +3249,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c351_01/c351_01_00",
       "characterName": "Anchor",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c351_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "de6e8854a7569bd3f4b38cc4c36a9e06b953409ddd29549fd94bcedc9b56a3cc",
+      "previewAnimation": "idle"
     },
     {
       "id": "c352",
@@ -2854,7 +3290,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c352_02/c352_02_00",
       "characterName": "Helm",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c352_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6d158e9b16cec96242bd4edf4c60a6efd3e5322871be09a954b8a4d52245a85e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c353",
@@ -2876,7 +3316,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c354/c354_00",
       "characterName": "角色 c354（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c354.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a1281a6431d3f38a0708a460056917da06f7a979e24cf253ebbf3e4c1c8b35f5",
+      "previewAnimation": "idle"
     },
     {
       "id": "c354_01",
@@ -2886,7 +3330,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c354_01/c354_01_00",
       "characterName": "角色 c354（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c354_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "333dc5c51a99a4f525bebe71de4b312b6f10349043013a13fa9660ab956d9ac4",
+      "previewAnimation": "idle"
     },
     {
       "id": "c355",
@@ -2895,7 +3343,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c355/c355_00",
       "characterName": "角色 c355（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c355.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3147c5c56a8a4e38f48746cdb60365d922e5d7cc8badf174bc6d93a5861914a4",
+      "previewAnimation": "idle"
     },
     {
       "id": "c361",
@@ -2917,7 +3369,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c370/c370_00",
       "characterName": "角色 c370（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c370.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "750e63b28fe11d9395065fa7eaaab8b3f2eac8b68cbc72bebc673625875128b9",
+      "previewAnimation": "idle"
     },
     {
       "id": "c371",
@@ -2966,7 +3422,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c381_01/c381_01_00",
       "characterName": "Biscuit",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c381_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f3bc04fc3504c7d71ac2c872229b9d6eda8015b9d754d7ed3363e95210264425",
+      "previewAnimation": "idle"
     },
     {
       "id": "c382",
@@ -2989,7 +3449,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c382_01/c382_01_00",
       "characterName": "Leona",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c382_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "20de36178ab8ac3d640a6edfa23fb0823897a1439e8cb99d5fb746dc06a5521d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c390",
@@ -3012,7 +3476,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c390_01/c390_01_00",
       "characterName": "Zwei",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c390_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d63ea7ddfe19f52d614494339d16ff5d4c32bb0a7440b0cbfee601d0424b7f3f",
+      "previewAnimation": "idle"
     },
     {
       "id": "c390_02",
@@ -3022,7 +3490,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c390_02/c390_02_00",
       "characterName": "Zwei",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c390_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "406844a57e1f9b26de026330afa2534651f58f5f149b0872845ea0231fb18000",
+      "previewAnimation": "idle"
     },
     {
       "id": "c391",
@@ -3045,7 +3517,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c391_01/c391_01_00",
       "characterName": "Ein",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c391_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d4e1ddc14dac34567d4d75e0db45caa2c0e973962b708085bd4f3274b1da6a9b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c392",
@@ -3081,7 +3557,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c400_01/c400_01_00",
       "characterName": "Guilty",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c400_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "10f063105ce4bd985be22c54f0d1fedb0c3eda8a4360b575438aec1cc8e53e80",
+      "previewAnimation": "idle"
     },
     {
       "id": "c401",
@@ -3104,7 +3584,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c401_01/c401_01_00",
       "characterName": "Sin",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c401_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9cbcaacc9847ef5ae10c6789b7496ca1921b5c84eaba78be10d7321f927ac5ff",
+      "previewAnimation": "idle"
     },
     {
       "id": "c402",
@@ -3126,7 +3610,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c403/c403_00",
       "characterName": "角色 c403（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c403.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "0ac57492db759646787159043866cc9d435ee7aed4112ba89b5b3ce8c1a8c150",
+      "previewAnimation": "idle"
     },
     {
       "id": "c403_01",
@@ -3136,7 +3624,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c403_01/c403_01_00",
       "characterName": "角色 c403（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c403_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8f0c186e4d75eb7ed50efbe17a5dd6f6f48acb397974c0a639de5f20f2b892ca",
+      "previewAnimation": "idle"
     },
     {
       "id": "c404",
@@ -3145,7 +3637,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c404/c404_00",
       "characterName": "角色 c404（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c404.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "70a97cafa7e691c826e4649e2130e46968ef656e48e952301566490ec238be0f",
+      "previewAnimation": "idle"
     },
     {
       "id": "c405",
@@ -3154,7 +3650,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c405/c405_00",
       "characterName": "角色 c405（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c405.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f455eef2344f4bcc4e22f645743ae02317e3561e267a8cd2cde31b5ed3305b17",
+      "previewAnimation": "idle"
     },
     {
       "id": "c411",
@@ -3163,7 +3663,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c411/c411_00",
       "characterName": "角色 c411（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c411.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f7a5cdba577067e2ca4242b50129b170b70a022d25624ff1a95f17a26011de53",
+      "previewAnimation": "idle"
     },
     {
       "id": "c411_01",
@@ -3173,7 +3677,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c411_01/c411_01_00",
       "characterName": "角色 c411（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c411_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "be36c2b0d5ffa7a2f027d4b44838c3f700ac2ada8d534edca038de85f5e2c34e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c412",
@@ -3182,7 +3690,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c412/c412_00",
       "characterName": "角色 c412（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c412.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7a5ec2a409b85dc71df485541b9dfa52d5515519a9364b6eb1de10d6124ed6e6",
+      "previewAnimation": "idle"
     },
     {
       "id": "c412_01",
@@ -3192,7 +3704,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c412_01/c412_01_00",
       "characterName": "角色 c412（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c412_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1c8e63cf0cabe515f577a717b811b2535412071d47e6459ec6f4832f31dd1070",
+      "previewAnimation": "idle"
     },
     {
       "id": "c430",
@@ -3229,7 +3745,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c430_02/c430_02_00",
       "characterName": "Noise",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c430_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "58244c8e46812dbfde6780c1f2674220dc890f53f21ae61881533ea763aa9c13",
+      "previewAnimation": "idle"
     },
     {
       "id": "c431",
@@ -3252,7 +3772,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c431_01/c431_01_00",
       "characterName": "Volume",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c431_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2842c531a4a808474839073f8e8348bf18836bb1e73078ab82f2ce02a5fd203a",
+      "previewAnimation": "idle"
     },
     {
       "id": "c432",
@@ -3274,7 +3798,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c440/c440_00",
       "characterName": "角色 c440（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c440.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "12962f8355825dd6a4be819601fc0ba4758134492139aa50b9830a5ae88970fe",
+      "previewAnimation": "idle"
     },
     {
       "id": "c441",
@@ -3283,7 +3811,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c441/c441_00",
       "characterName": "角色 c441（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c441.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "eb243e7b10d2c50b92ae163742b8156c94c247bca041ca207c46989375f83072",
+      "previewAnimation": "idle"
     },
     {
       "id": "c450",
@@ -3306,7 +3838,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c450_01/c450_01_00",
       "characterName": "Naga",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c450_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a22d0db91656a9558eaa799b0fa21991eb7af2f3ec6f552637ca2d476a7078b5",
+      "previewAnimation": "idle"
     },
     {
       "id": "c450_02",
@@ -3316,7 +3852,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c450_02/c450_02_00",
       "characterName": "Naga",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c450_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4a2fb59e0d29f2f64f134b2dcf4582e2991fcb41bfb9a58471ee35e11bfdf9bd",
+      "previewAnimation": "idle"
     },
     {
       "id": "c450_03",
@@ -3326,7 +3866,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c450_03/c450_03_00",
       "characterName": "Naga",
       "costumeName": "03号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c450_03.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c5944b2ae0a61dd5125293f4f8a6831b497dfe0fd9df11f2a47b5b8f496ffaff",
+      "previewAnimation": "idle"
     },
     {
       "id": "c451",
@@ -3349,7 +3893,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c451_01/c451_01_00",
       "characterName": "Tia",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c451_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "419fbab05ae088a7288c00b51a48b133c96fec20b5cb7cc9665a3c2961656362",
+      "previewAnimation": "idle"
     },
     {
       "id": "c451_02",
@@ -3359,7 +3907,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c451_02/c451_02_00",
       "characterName": "Tia",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c451_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "09448ff0864b50241bd22589b3c519fc9e54a32a766dc18585b0801f8deff3cd",
+      "previewAnimation": "idle"
     },
     {
       "id": "c451_03",
@@ -3369,7 +3921,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c451_03/c451_03_00",
       "characterName": "Tia",
       "costumeName": "03号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c451_03.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ad5587ef248b84114b0eef87ca2b5a51a7002101271bef736fd905e5fc271d08",
+      "previewAnimation": "idle"
     },
     {
       "id": "c470",
@@ -3392,7 +3948,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c470_01/c470_01_00",
       "characterName": "Red Hood",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c470_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b07baa492987016be31bb1550f161f919befbd1e478d0c6b1e09001362aa64bd",
+      "previewAnimation": "idle"
     },
     {
       "id": "c470_02",
@@ -3402,7 +3962,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c470_02/c470_02_00",
       "characterName": "Red Hood",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c470_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "87a95ddb133129c302a401fe84d90e2e9a5b617d811cd1457a47523310519877",
+      "previewAnimation": "idle"
     },
     {
       "id": "c471",
@@ -3411,7 +3975,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c471/c471_00",
       "characterName": "角色 c471（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c471.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3c7019c5af9e24cb6542eb4a72d0ffc735fb991ac35118eef1c2c6d43409cd0d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c472",
@@ -3420,7 +3988,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c472/c472_00",
       "characterName": "角色 c472（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c472.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9acaadabb5af3a526e2fc95939746f61343f47bc6833eed2c26635f8f7314bdb",
+      "previewAnimation": "idle"
     },
     {
       "id": "c473",
@@ -3429,7 +4001,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c473/c473_00",
       "characterName": "角色 c473（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c473.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b4251017d1cbc8caf6a24a45b54be739dc36bb53cec706e1d100aaafb4af5f6e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c480",
@@ -3438,7 +4014,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c480/c480_00",
       "characterName": "角色 c480（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c480.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8bd43d22a294b1a76c79a279c1942bc213a7ebeb58a8456a7f8f125c5c0d7630",
+      "previewAnimation": "idle"
     },
     {
       "id": "c481",
@@ -3447,7 +4027,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c481/c481_00",
       "characterName": "角色 c481（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c481.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4707e12d547302ce3b89ea8ca32159c54de226107e21f190e51608388e11e964",
+      "previewAnimation": "idle"
     },
     {
       "id": "c482",
@@ -3456,7 +4040,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c482/c482_00",
       "characterName": "角色 c482（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c482.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "04985c403245044e04265cba6fcbb93c8b3b7605bb3f96ff6bbf9ce9f09ccbc1",
+      "previewAnimation": "idle"
     },
     {
       "id": "c490",
@@ -3465,7 +4053,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c490/c490_00",
       "characterName": "角色 c490（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c490.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e40d431e46619954801f110562ab418bf8260460a31bc94afc2e8ee6dc6b3709",
+      "previewAnimation": "idle"
     },
     {
       "id": "c491",
@@ -3474,7 +4066,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c491/c491_00",
       "characterName": "角色 c491（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c491.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "dd0d49383f1d1fe0c59064820aa35d24a367b687cededca018ecfc5eb819b2d7",
+      "previewAnimation": "idle"
     },
     {
       "id": "c500",
@@ -3483,7 +4079,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c500/c500_00",
       "characterName": "角色 c500（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c500.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "073f9184b8ae3b40896ce5d5dede0e9bd246691e23073b2b8529053f19bd26cb",
+      "previewAnimation": "idle"
     },
     {
       "id": "c501",
@@ -3492,7 +4092,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c501/c501_00",
       "characterName": "角色 c501（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c501.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4e342b2438619d918fa2ae18136ae38b45b295d3a8bf441a1eb61f0780396812",
+      "previewAnimation": "idle"
     },
     {
       "id": "c501_01",
@@ -3502,7 +4106,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c501_01/c501_01_00",
       "characterName": "角色 c501（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c501_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f1a190e6481954213fb08fc624e61f3a162cb655823e248ea44ca25254f3cfcc",
+      "previewAnimation": "idle"
     },
     {
       "id": "c502",
@@ -3511,7 +4119,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c502/c502_00",
       "characterName": "角色 c502（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c502.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "224c103a71d7fc1d6ddc7dfdf39f3d0302f283d152b63a4d6799e78dce643478",
+      "previewAnimation": "idle"
     },
     {
       "id": "c510",
@@ -3520,7 +4132,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c510/c510_00",
       "characterName": "角色 c510（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c510.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "90adc9a76e0fb310035b55da45c553a8a430eda4be3401f74de4dcae0438febe",
+      "previewAnimation": "idle"
     },
     {
       "id": "c511",
@@ -3529,7 +4145,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c511/c511_00",
       "characterName": "角色 c511（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c511.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7c6b6871e284b18dd9bcde6f56f5156993f388fa5478481b9191f941d906a7fc",
+      "previewAnimation": "idle"
     },
     {
       "id": "c511_01",
@@ -3539,7 +4159,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c511_01/c511_01_00",
       "characterName": "角色 c511（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c511_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "defe154b07e03ed7daa5af277c4dad8e84f297b534d8bdeb0abdf8536fa7b476",
+      "previewAnimation": "idle"
     },
     {
       "id": "c511_02",
@@ -3549,7 +4173,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c511_02/c511_02_00",
       "characterName": "角色 c511（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c511_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8f1e24aeeaa490dfe1354158648be687572b51a41fee4fcc73ca36213bbfb192",
+      "previewAnimation": "idle"
     },
     {
       "id": "c511_03",
@@ -3559,7 +4187,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c511_03/c511_03_00",
       "characterName": "角色 c511（待核对）",
       "costumeName": "03号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c511_03.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8c2a4093cf26580732ff52af1e8cdd02a10259181b3270797001f6df3e8a4ec2",
+      "previewAnimation": "idle"
     },
     {
       "id": "c513",
@@ -3568,7 +4200,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c513/c513_00",
       "characterName": "角色 c513（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c513.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4780932900ebac8f539b1b60541c85ff8a2e25542a080cf4bed3991569582b01",
+      "previewAnimation": "idle"
     },
     {
       "id": "c513_01",
@@ -3578,7 +4214,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c513_01/c513_01_00",
       "characterName": "角色 c513（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c513_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "249a8e8a11f7f28f67f961f1b37bda15fa11772cd76040c6aa90452dde623494",
+      "previewAnimation": "idle"
     },
     {
       "id": "c513_02",
@@ -3588,7 +4228,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c513_02/c513_02_00",
       "characterName": "角色 c513（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c513_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2fc91be8a751bfbfbed0bec551983722a9931b55b0a998f39850cf703061aa9e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c513_03",
@@ -3598,7 +4242,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c513_03/c513_03_00",
       "characterName": "角色 c513（待核对）",
       "costumeName": "03号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c513_03.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d6ab989025d9eb0e5eaad8805fef824698c9c43f8fc7a97624fb1336ddc2b25e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c514",
@@ -3607,7 +4255,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c514/c514_00",
       "characterName": "角色 c514（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c514.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b802cb08ed89f0da4b2f47fdfb3a1d2ba14525c333073deed614febf4d12b3f8",
+      "previewAnimation": "idle"
     },
     {
       "id": "c514_01",
@@ -3617,7 +4269,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c514_01/c514_01_00",
       "characterName": "角色 c514（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c514_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ca3eb984c0fd4e00d4e5456306ac78b90d29af6a5c70a8be2e7b0141a5b0c653",
+      "previewAnimation": "idle"
     },
     {
       "id": "c515",
@@ -3626,7 +4282,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c515/c515_00",
       "characterName": "角色 c515（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c515.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d0c57e598e1ac37ab52d47902bb0d09fa0c72bf2d257d25203bb169a98401b91",
+      "previewAnimation": "idle"
     },
     {
       "id": "c520",
@@ -3635,7 +4295,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c520/c520_00",
       "characterName": "角色 c520（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c520.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2b0a7bde4c231a30bf71355bbce3427df2b1301179f3efec5a1f1e90499a3045",
+      "previewAnimation": "idle"
     },
     {
       "id": "c520_01",
@@ -3645,7 +4309,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c520_01/c520_01_00",
       "characterName": "角色 c520（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c520_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "fb86f50c3c8cbee13a2d8a6c15c738a4ddad0c51d66e5a521869f7d4a5cc6f13",
+      "previewAnimation": "idle"
     },
     {
       "id": "c521",
@@ -3654,7 +4322,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c521/c521_00",
       "characterName": "角色 c521（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c521.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3d3a60c77ec71aa7ff4ac3f1d6171d910dc7a83fa51842e6faa17bcc5d1f1520",
+      "previewAnimation": "idle"
     },
     {
       "id": "c521_01",
@@ -3664,7 +4336,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c521_01/c521_01_00",
       "characterName": "角色 c521（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c521_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "60462aada021e4041add152e5630a23a6ab23edfde353bcf8553839b6515662e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c530",
@@ -3673,7 +4349,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c530/c530_00",
       "characterName": "角色 c530（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c530.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "202680bda98e1adfb51b75331cf213984d52d3274721e8c22242ff6f72786536",
+      "previewAnimation": "idle"
     },
     {
       "id": "c531",
@@ -3682,7 +4362,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c531/c531_00",
       "characterName": "角色 c531（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c531.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c9488681f04f5ca85838f0d00fd5af602d2b23f415cfdf9e4969444d191f3d26",
+      "previewAnimation": "idle"
     },
     {
       "id": "c532",
@@ -3691,7 +4375,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c532/c532_00",
       "characterName": "角色 c532（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c532.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b3bfc30aeac79a78313b1b7260ecbdabf847cc896b6c7d826ac8641e5729d822",
+      "previewAnimation": "idle"
     },
     {
       "id": "c532_01",
@@ -3701,7 +4389,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c532_01/c532_01_00",
       "characterName": "角色 c532（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c532_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "0d40fa70e9f1f14848160072d4e93293afb6247e261c6f932c2505cb28c73a45",
+      "previewAnimation": "idle"
     },
     {
       "id": "c550",
@@ -3710,7 +4402,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c550/c550_00",
       "characterName": "角色 c550（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c550.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a77f64cbc69ff63597a39887adb88123bc83fd1cdcd41d6099f4c7887c7a21d1",
+      "previewAnimation": "idle"
     },
     {
       "id": "c550_01",
@@ -3720,7 +4416,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c550_01/c550_01_00",
       "characterName": "角色 c550（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c550_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7f98df694cd170106dbfd65f9692ccdd6779652bf7cfb88737dc71445cc0fcb6",
+      "previewAnimation": "idle"
     },
     {
       "id": "c551",
@@ -3729,7 +4429,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c551/c551_00",
       "characterName": "角色 c551（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c551.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "aa1222d4dc2fa58b5a2f41bd7a2ae61458705021ac31cd0f2222d6faedd98021",
+      "previewAnimation": "idle"
     },
     {
       "id": "c551_01",
@@ -3739,7 +4443,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c551_01/c551_01_00",
       "characterName": "角色 c551（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c551_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "22ceaa97a95a44f6a1f74f9a550a65f9380508ab1b63974f845e4407d66d9af8",
+      "previewAnimation": "idle"
     },
     {
       "id": "c560",
@@ -3748,7 +4456,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c560/c560_00",
       "characterName": "角色 c560（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c560.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "544c933e4de8104f10059b8a201deed87387f271b7da4efdb961c3630d2a2947",
+      "previewAnimation": "idle"
     },
     {
       "id": "c561",
@@ -3757,7 +4469,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c561/c561_00",
       "characterName": "角色 c561（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c561.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "74899d0ca66653a3e932f6d8716235e01ccceeb0b6340fa388f2b8f4215011d2",
+      "previewAnimation": "idle"
     },
     {
       "id": "c562",
@@ -3766,7 +4482,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c562/c562_00",
       "characterName": "角色 c562（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c562.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "5d6b094435e3d805b5dc833eae8bdd8ace7b27f14af7ef205fa8665becc8530a",
+      "previewAnimation": "idle"
     },
     {
       "id": "c563",
@@ -3775,7 +4495,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c563/c563_00",
       "characterName": "角色 c563（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c563.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b9f72cd495f310e6e463be11a41b0b92c255fc2dbb4a7575cf2860a5b8048782",
+      "previewAnimation": "idle"
     },
     {
       "id": "c570",
@@ -3784,7 +4508,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c570/c570_00",
       "characterName": "角色 c570（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c570.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1fffb0523f9ab441d4704d689e213954aac9113a25cd80e77aa9e534ab6b7061",
+      "previewAnimation": "idle"
     },
     {
       "id": "c570_99",
@@ -3794,7 +4522,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c570_99/c570_99",
       "characterName": "角色 c570（待核对）",
       "costumeName": "99号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c570_99.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8e67743c08d7397815cc9d416102c67abfa382ae1ce2f092d07c34e7e4ff7b23",
+      "previewAnimation": "idle"
     },
     {
       "id": "c571",
@@ -3803,7 +4535,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c571/c571_00",
       "characterName": "角色 c571（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c571.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e6edd29e86f5e3343232c4a97604273dba416c24be7c6621514bbcfcc5769c8e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c572",
@@ -3812,7 +4548,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c572/c572_00",
       "characterName": "角色 c572（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c572.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b9f76b069ebd25816c49b185d8c37baa2307eef56e1aa2a041608aff4deb35aa",
+      "previewAnimation": "idle"
     },
     {
       "id": "c580",
@@ -3821,7 +4561,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c580/c580_00",
       "characterName": "角色 c580（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c580.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "70426ed3ee113427ab1ff93c2a41dd15f26aff51fd2d070ed56ba8673e13b50e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c580_01",
@@ -3831,7 +4575,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c580_01/c580_01_00",
       "characterName": "角色 c580（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c580_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "34c4d4240ba2d8fbf471930aa56a2479d5a9eb3c477511481cd6e7cd43a67b42",
+      "previewAnimation": "idle"
     },
     {
       "id": "c581",
@@ -3840,7 +4588,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c581/c581_00",
       "characterName": "角色 c581（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c581.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f59ab6af2701a57362f3811e2ff0226a011260d5411317824999f9e619f4688c",
+      "previewAnimation": "idle"
     },
     {
       "id": "c582",
@@ -3849,7 +4601,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c582/c582_00",
       "characterName": "角色 c582（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c582.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6f61b3025d250c57592907afa75cdfe80e5db1897157eaf173c0b1f69e81201c",
+      "previewAnimation": "idle"
     },
     {
       "id": "c582_01",
@@ -3859,7 +4615,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c582_01/c582_01_00",
       "characterName": "角色 c582（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c582_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2374e307771bd78c7ec5b27640630cdfe9ef07717a0ccee714e074f80b2bb9b2",
+      "previewAnimation": "idle"
     },
     {
       "id": "c583",
@@ -3868,7 +4628,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c583/c583_00",
       "characterName": "角色 c583（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c583.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3481bc011f8afa8c9b3f152c68d37dabcc7d1e298eef6e5af3d3cec424e52ce6",
+      "previewAnimation": "idle"
     },
     {
       "id": "c590",
@@ -3877,7 +4641,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c590/c590_00",
       "characterName": "角色 c590（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c590.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f5d71a0cdd362527aeb90621c10c741e5c33223c9ba95c953d735ac17d60c3d8",
+      "previewAnimation": "idle"
     },
     {
       "id": "c600",
@@ -3886,7 +4654,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c600/c600_00",
       "characterName": "角色 c600（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c600.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "62276fa2ca4d5eff84cfcec681eb8d44d56b666ca6a27529266b5e9c9383af4b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c600_01",
@@ -3896,7 +4668,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c600_01/c600_01_00",
       "characterName": "角色 c600（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c600_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7a4faa03f2f0edafcd782def5df5a2f2435620c1104299d9dc067bc02e4015ad",
+      "previewAnimation": "idle"
     },
     {
       "id": "c600_02",
@@ -3906,7 +4682,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c600_02/c600_02_00",
       "characterName": "角色 c600（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c600_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c19269a7ea02a729bbaf9e05c4ee18a67e84ff8e46118fcc952ca668fdb85b7c",
+      "previewAnimation": "idle"
     },
     {
       "id": "c601",
@@ -3915,7 +4695,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c601/c601_00",
       "characterName": "角色 c601（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c601.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ea7023c8831e41ee96c80410d021934807c05ef8b4974c6cbdbe816369cea0fa",
+      "previewAnimation": "idle"
     },
     {
       "id": "c601_01",
@@ -3925,7 +4709,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c601_01/c601_01_00",
       "characterName": "角色 c601（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c601_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "93f0a7700c4aad6cf09cd0631d4d6650319696f65558824bb0eb5d664f5513c3",
+      "previewAnimation": "idle"
     },
     {
       "id": "c601_02",
@@ -3935,7 +4723,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c601_02/c601_02_00",
       "characterName": "角色 c601（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c601_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f3bdc11ed148dadc4d74d7dbee2652cc6a8211c9d5e7b7a51245465aba596978",
+      "previewAnimation": "idle"
     },
     {
       "id": "c610",
@@ -3944,7 +4736,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c610/c610_00",
       "characterName": "角色 c610（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c610.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6da4515b84be78bcc61a9ecd482201113c525f5f53ca40da3139b8053945313b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c620",
@@ -3953,7 +4749,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c620/c620_00",
       "characterName": "角色 c620（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c620.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6b11457d6a5c3ddb21aa322842ab6bf7186380d1de85b74640dab0cda54f4c0e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c800",
@@ -4097,7 +4897,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c810_03/c810_03_00",
       "characterName": "2B",
       "costumeName": "03号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c810_03.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9c0d4b3bbf9ec99ebc7e29ca23406e06c1b906aef9b1366c1b7e6f95df882315",
+      "previewAnimation": "idle"
     },
     {
       "id": "c811",
@@ -4148,7 +4952,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c811_03/c811_03_00",
       "characterName": "A2",
       "costumeName": "03号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c811_03.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "41cca5586b0b103b08fcf8955effcb0dd8275d25008728f391c8b4463e4a87e7",
+      "previewAnimation": "idle"
     },
     {
       "id": "c812",
@@ -4183,7 +4991,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c820/c820_00",
       "characterName": "角色 c820（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c820.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "85a719fc3e363af387c5507756cfd1af1fd1208acac2e2d9a394a1e00746cc73",
+      "previewAnimation": "idle"
     },
     {
       "id": "c820_01",
@@ -4193,7 +5005,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c820_01/c820_01_00",
       "characterName": "角色 c820（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c820_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "de8ff78ede193fcfb705ad9d7d4febb3929515472a740c46a44993ba95d3aadf",
+      "previewAnimation": "idle"
     },
     {
       "id": "c820_02",
@@ -4203,7 +5019,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c820_02/c820_02_00",
       "characterName": "角色 c820（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c820_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f18ab41a3b31e04e214ae872a51a842d720a6bb2b1eaaa0d4ead963c4c4a7537",
+      "previewAnimation": "idle"
     },
     {
       "id": "c821",
@@ -4212,7 +5032,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c821/c821_00",
       "characterName": "角色 c821（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c821.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "5de22b1a484c092e4bcd51f65d0220462edd81bcd13cab79b500cbd3ad3fce90",
+      "previewAnimation": "idle"
     },
     {
       "id": "c821_01",
@@ -4222,7 +5046,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c821_01/c821_01_00",
       "characterName": "角色 c821（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c821_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "65aa8cac41d910577ecf80e2e7e37d0ef98eedd7c08071dff96d49c9b6527b20",
+      "previewAnimation": "idle"
     },
     {
       "id": "c821_02",
@@ -4232,7 +5060,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c821_02/c821_02_00",
       "characterName": "角色 c821（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c821_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "21e3461b40249b1751223886eda4ee88811ec225383bce1be76d01504cc35b5e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c822",
@@ -4241,7 +5073,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c822/c822_00",
       "characterName": "角色 c822（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c822.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a7bbd37f43f51cb9d090cf7535fd1e1773b96f2f9406093b793a278e527ef7cd",
+      "previewAnimation": "idle"
     },
     {
       "id": "c830",
@@ -4250,7 +5086,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c830/c830_00",
       "characterName": "角色 c830（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c830.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "bfd9935be91ec27a1a948ade5e3baeef689f0933f1e7565f13c79ed579ee6a93",
+      "previewAnimation": "idle"
     },
     {
       "id": "c830_01",
@@ -4260,7 +5100,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c830_01/c830_01_00",
       "characterName": "角色 c830（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c830_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9f84cb864766bfad6d38fa66b15dac7186d9847a093dc693df0d08f114daf969",
+      "previewAnimation": "idle"
     },
     {
       "id": "c830_02",
@@ -4270,7 +5114,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c830_02/c830_02_00",
       "characterName": "角色 c830（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c830_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "193b4d437ba20ddb234ddd095b2a219bd3ba4d069101993dc764f426a4afd6c5",
+      "previewAnimation": "idle"
     },
     {
       "id": "c830_03",
@@ -4280,7 +5128,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c830_03/c830_03_00",
       "characterName": "角色 c830（待核对）",
       "costumeName": "03号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c830_03.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8861795a0f7b664ff524b2705c5e1b2951e44270c44bc4773f3c9f61d33506a6",
+      "previewAnimation": "idle"
     },
     {
       "id": "c831",
@@ -4289,7 +5141,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c831/c831_00",
       "characterName": "角色 c831（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c831.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1a051ebd3308252bb17b7d573c2724852a3b9708e5469f351375dc45726371d9",
+      "previewAnimation": "idle"
     },
     {
       "id": "c831_01",
@@ -4299,7 +5155,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c831_01/c831_01_00",
       "characterName": "角色 c831（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c831_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "608f866c5bb4c0e6fb7c64952f49f3d2964c7c0a5650ff642edf4d1b7ab25b82",
+      "previewAnimation": "idle"
     },
     {
       "id": "c831_02",
@@ -4309,7 +5169,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c831_02/c831_02_00",
       "characterName": "角色 c831（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c831_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "35b6e628a437d7d3376e5f4a0974e59707c2838e1a39ea09b1735da1ba81cabc",
+      "previewAnimation": "idle"
     },
     {
       "id": "c832",
@@ -4318,7 +5182,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c832/c832_00",
       "characterName": "角色 c832（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c832.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "189be2ad78f210830dd9aeaeae0967c52c0be8b632b51b6631fe271baee22a23",
+      "previewAnimation": "idle"
     },
     {
       "id": "c832_01",
@@ -4328,7 +5196,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c832_01/c832_01_00",
       "characterName": "角色 c832（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c832_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2cd06fc2f5178eadbbbead194cc765d590f9850eb8db9a7c023df54edd4e9d61",
+      "previewAnimation": "idle"
     },
     {
       "id": "c832_02",
@@ -4338,7 +5210,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c832_02/c832_02_00",
       "characterName": "角色 c832（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c832_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c0a88714923a2e90e572467ac723e19e510205e058f3d23a221b531d73e46551",
+      "previewAnimation": "idle"
     },
     {
       "id": "c832_03",
@@ -4348,7 +5224,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c832_03/c832_03_00",
       "characterName": "角色 c832（待核对）",
       "costumeName": "03号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c832_03.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7b65623635d79f1af0a80c37250a145a852440a80c031d16218ae02fea9012e1",
+      "previewAnimation": "idle"
     },
     {
       "id": "c832_04",
@@ -4358,7 +5238,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c832_04/c832_04_00",
       "characterName": "角色 c832（待核对）",
       "costumeName": "04号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c832_04.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "be21ed7906da9ad82d609563437eb979ac7ec367531b9190c37906cb5536850a",
+      "previewAnimation": "idle"
     },
     {
       "id": "c833",
@@ -4367,7 +5251,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c833/c833_00",
       "characterName": "角色 c833（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c833.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b8b9c8552b3a192b624f6e342897fd7ed36765e506da2c6d0fd1658ed343bcf7",
+      "previewAnimation": "idle"
     },
     {
       "id": "c834",
@@ -4376,7 +5264,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c834/c834_00",
       "characterName": "角色 c834（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c834.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "91e5110ebdb567448b31394d6e305a8f8a6c862314a1e7e0e2dc9069dc39b4bb",
+      "previewAnimation": "idle"
     },
     {
       "id": "c834_01",
@@ -4386,7 +5278,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c834_01/c834_01_00",
       "characterName": "角色 c834（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c834_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "42acf02e86d374283f4a339d0e0ec4a0fc0728709665403efb240604c2f9b080",
+      "previewAnimation": "idle"
     },
     {
       "id": "c834_02",
@@ -4396,7 +5292,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c834_02/c834_02_00",
       "characterName": "角色 c834（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c834_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "39fc071d580d868e865930eb325668064a0ba34f660ce88c06a79143a58b112a",
+      "previewAnimation": "idle"
     },
     {
       "id": "c835",
@@ -4405,7 +5305,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c835/c835_00",
       "characterName": "角色 c835（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c835.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7cf4e85076f7873fff285abd05ae4feb3841a90bc2eafc9ee3600ee3451a87f3",
+      "previewAnimation": "idle"
     },
     {
       "id": "c835_01",
@@ -4415,7 +5319,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c835_01/c835_01_00",
       "characterName": "角色 c835（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c835_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a76328cfba406159e31c121ae67e5c6aec172321762ed55506c506a37938b4f3",
+      "previewAnimation": "idle"
     },
     {
       "id": "c835_02",
@@ -4425,7 +5333,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c835_02/c835_02_00",
       "characterName": "角色 c835（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c835_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "08c3aa9e4a20f91833b931ebfd3a1fb96789ae5084d37c5821874b516b207053",
+      "previewAnimation": "idle"
     },
     {
       "id": "c836",
@@ -4434,7 +5346,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c836/c836_00",
       "characterName": "角色 c836（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c836.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a17f801cb5a65dcb5c5617a3a3847b6ea003965ef6b8106d35bc89f2e28be79c",
+      "previewAnimation": "idle"
     },
     {
       "id": "c840",
@@ -4443,7 +5359,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c840/c840_00",
       "characterName": "角色 c840（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c840.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7f8d2c426832743b02f98ea66b014dc84e7924dffec1af7c242050e4de10e618",
+      "previewAnimation": "idle"
     },
     {
       "id": "c840_01",
@@ -4453,7 +5373,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c840_01/c840_01_00",
       "characterName": "角色 c840（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c840_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "54aacd25c7202f86a30e5bb91a0b92ae68f661d65635d000134bfd48f4389eb6",
+      "previewAnimation": "idle"
     },
     {
       "id": "c840_02",
@@ -4463,7 +5387,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c840_02/c840_02_00",
       "characterName": "角色 c840（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c840_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "263f6ed4fa9200badea98fd41631f8d3feb0419103a1c608125b6c0b2ac59297",
+      "previewAnimation": "idle"
     },
     {
       "id": "c841",
@@ -4472,7 +5400,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c841/c841_00",
       "characterName": "角色 c841（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c841.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "147c5dde58959ead38db828dab633e5fd4676850197f2c33a01af84f6c76f4d0",
+      "previewAnimation": "idle"
     },
     {
       "id": "c841_01",
@@ -4482,7 +5414,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c841_01/c841_01_00",
       "characterName": "角色 c841（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c841_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8c8570643c85c2b4609f3599d3abd1e3e8d6f5e64933983ae376c25108aa8a1a",
+      "previewAnimation": "idle"
     },
     {
       "id": "c841_02",
@@ -4492,7 +5428,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c841_02/c841_02_00",
       "characterName": "角色 c841（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c841_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f8a55bb48d1bd1ce366e21557df366cade55332ffd19f0ffbb244f69e1362425",
+      "previewAnimation": "idle"
     },
     {
       "id": "c842",
@@ -4501,7 +5441,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c842/c842_00",
       "characterName": "角色 c842（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c842.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "40d51270355d9d55d45b4ba071cfa6471cf0e6be9d9f4c170d66be5ca95bfe25",
+      "previewAnimation": "idle"
     },
     {
       "id": "c850",
@@ -4510,7 +5454,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c850/c850_00",
       "characterName": "角色 c850（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c850.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "fec6092d64373c4d28ac1f64d506625c0190ae21239399eae846e96067d447e5",
+      "previewAnimation": "idle"
     },
     {
       "id": "c850_01",
@@ -4520,7 +5468,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c850_01/c850_01_00",
       "characterName": "角色 c850（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c850_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d72391e973bd7ef9b3b7685fa1a1d2ec68f40e0bed51c2cd7376cc5afb551555",
+      "previewAnimation": "idle"
     },
     {
       "id": "c850_02",
@@ -4530,7 +5482,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c850_02/c850_02_00",
       "characterName": "角色 c850（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c850_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "dd66373a4f55df0e357dd3dd8b4334b8bf3ba3ac3e15a73d288832f6838881b8",
+      "previewAnimation": "idle"
     },
     {
       "id": "c850_03",
@@ -4540,7 +5496,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c850_03/c850_03_00",
       "characterName": "角色 c850（待核对）",
       "costumeName": "03号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c850_03.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "02a2950691261a34ac4fcdccb1a225ed8ed20894c9e44287b235753d44bd863e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c851",
@@ -4549,7 +5509,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c851/c851_00",
       "characterName": "角色 c851（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c851.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "cf7c963047638597242d531041550e4f4e0ba2ed7fc72477f5691b85326819b4",
+      "previewAnimation": "idle"
     },
     {
       "id": "c851_01",
@@ -4559,7 +5523,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c851_01/c851_01_00",
       "characterName": "角色 c851（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c851_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "137541b7c3ab19abc53dd175d1f4656469c375e60d43c259a0bf190a2ada3a93",
+      "previewAnimation": "idle"
     },
     {
       "id": "c851_02",
@@ -4569,7 +5537,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c851_02/c851_02_00",
       "characterName": "角色 c851（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c851_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "0bffdf998e3070dac678d8f7696de9763113534d00527262030ac4d6026cb874",
+      "previewAnimation": "idle"
     },
     {
       "id": "c852",
@@ -4578,7 +5550,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c852/c852_00",
       "characterName": "角色 c852（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c852.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "50d6f97a6a44c8bf8d7dc416853e008679a068b5c107f40f5dc72b4cba14e0d7",
+      "previewAnimation": "idle"
     },
     {
       "id": "c853",
@@ -4587,7 +5563,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c853/c853_00",
       "characterName": "角色 c853（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c853.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "64a6905d5d1cf63b4eeba94a62c287448edf01332928a3ac8be6815b96494931",
+      "previewAnimation": "idle"
     },
     {
       "id": "c860",
@@ -4596,7 +5576,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c860/c860_00",
       "characterName": "角色 c860（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c860.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4d9528ea2e438d19cf94ce65ed8325771ee816aa8801d28f220b42fe24bcdeb7",
+      "previewAnimation": "idle"
     },
     {
       "id": "c860_01",
@@ -4606,7 +5590,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c860_01/c860_01_00",
       "characterName": "角色 c860（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c860_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e2a6ba8fb3bc04cebd653ff38130d8ef4913a8651194d32459ad85b7c43f9445",
+      "previewAnimation": "idle"
     },
     {
       "id": "c860_02",
@@ -4616,7 +5604,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c860_02/c860_02_00",
       "characterName": "角色 c860（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c860_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8698608d9e8560c592e260c5c7f262bbf3110ba0e7e670dacbea375ee6799972",
+      "previewAnimation": "idle"
     },
     {
       "id": "c861",
@@ -4625,7 +5617,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c861/c861_00",
       "characterName": "角色 c861（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c861.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ba50d78f7a96f87c38281ebdf03c53a38c4e7d7d422f1095a3c37577b81069e0",
+      "previewAnimation": "idle"
     },
     {
       "id": "c861_01",
@@ -4635,7 +5631,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c861_01/c861_01_00",
       "characterName": "角色 c861（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c861_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "845d92d3fdc0f03801a3709cfb634121d76534c403bdbf7dd8bd40ff082f6147",
+      "previewAnimation": "idle"
     },
     {
       "id": "c861_02",
@@ -4645,7 +5645,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c861_02/c861_02_00",
       "characterName": "角色 c861（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c861_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e86bde734138e6e2de9b3c7cbe4ad4ccd9ff77c973ac2b2d7ef8beba31a2f7dc",
+      "previewAnimation": "idle"
     },
     {
       "id": "c862",
@@ -4654,7 +5658,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c862/c862_00",
       "characterName": "角色 c862（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c862.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "aec0794fc39d49709c25d1c51eb667907ac6a43e0a27f7531452bcb1174a274e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c870",
@@ -4663,7 +5671,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c870/c870_00",
       "characterName": "角色 c870（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c870.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "72acf3ffb305811970ecb681da80bb00364f2a3112783f3499c8c9a1a9fd95b6",
+      "previewAnimation": "idle"
     },
     {
       "id": "c870_01",
@@ -4673,7 +5685,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c870_01/c870_01_00",
       "characterName": "角色 c870（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c870_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9a8888ab579acf8d9d2afcb0c3a447a8783f82b1ced1059df1c9eda53685e48a",
+      "previewAnimation": "idle"
     },
     {
       "id": "c870_02",
@@ -4683,7 +5699,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c870_02/c870_02_00",
       "characterName": "角色 c870（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c870_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "d2a9b73e4567738aad72e589d305fee6356093e54ef3572be1a9c636d7c9258b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c871",
@@ -4692,7 +5712,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c871/c871_00",
       "characterName": "角色 c871（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c871.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1d1ef91d2c00fb26c16c4cf8b25d049694ea3507c5e009cae9ca1ab103035d97",
+      "previewAnimation": "idle"
     },
     {
       "id": "c871_01",
@@ -4702,7 +5726,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c871_01/c871_01_00",
       "characterName": "角色 c871（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c871_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "043f8276849da7b9fd439408a2a07f7b820a674e7a322cef2c4e5f45ff32ea31",
+      "previewAnimation": "idle"
     },
     {
       "id": "c871_02",
@@ -4712,7 +5740,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c871_02/c871_02_00",
       "characterName": "角色 c871（待核对）",
       "costumeName": "02号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c871_02.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a00e10fb6dad1dca323b93a3c60afdeadc543e0e84c7fb36f4d0dab67042bbcf",
+      "previewAnimation": "idle"
     },
     {
       "id": "c872",
@@ -4721,7 +5753,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c872/c872_00",
       "characterName": "角色 c872（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c872.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9cf1b0b3d760a9b026db922522d946451d58d3e4b1724784ecff30079486e968",
+      "previewAnimation": "idle"
     },
     {
       "id": "c900",
@@ -4770,7 +5806,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c902_01/c902_01_00",
       "characterName": "Mustang",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c902_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2fe24052c73cf9989eabd9d229e3048f7949a3bf22b2e7769a60059d8c298dc5",
+      "previewAnimation": "idle"
     },
     {
       "id": "c903",
@@ -4886,7 +5926,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c910_01/c910_01_00",
       "characterName": "Hologram",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c910_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f15414289a40abf5fa86469e78f9805c4656c14aac04f07cf28c6f3bebc0057f",
+      "previewAnimation": "idle"
     },
     {
       "id": "c911",
@@ -4934,7 +5978,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c915/c915_00",
       "characterName": "角色 c915（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c915.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f00f057d1965e02f730dde52da22ed1e8580001ee7dd372bd1e5f2fb0ef166aa",
+      "previewAnimation": "idle"
     },
     {
       "id": "c916",
@@ -5126,7 +6174,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c931_01/c931_01_00",
       "characterName": "Collection Robot",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c931_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c33bfb8e42dbb513ac88b1f7353a4dcd08b6ae68168cfa9c4518446312338e06",
+      "previewAnimation": "idle"
     },
     {
       "id": "c932",
@@ -5252,7 +6304,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c942/c942_00",
       "characterName": "角色 c942（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c942.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a68baff2546f7ea9c60d8ab00bab4cddd71ca8c0487e6f4191a7c8b4223411f4",
+      "previewAnimation": "idle"
     },
     {
       "id": "c943",
@@ -5261,7 +6317,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c943/c943_00",
       "characterName": "角色 c943（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c943.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "5b72a6286dbf146ca898f5e1ad5defb864c879cd4c20d0bcaaa0e75346670740",
+      "previewAnimation": "idle"
     },
     {
       "id": "c944",
@@ -5270,7 +6330,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c944/c944_00",
       "characterName": "角色 c944（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c944.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a5f5da979e67351415309e1920d34d756b71c95b42d05c00c3f9d6d111776e73",
+      "previewAnimation": "idle"
     },
     {
       "id": "c945",
@@ -5305,7 +6369,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c947/c947_00",
       "characterName": "角色 c947（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c947.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7269a9de7551aa7946a3146dc1383531406b062270c834315a50ae20e8ffffdf",
+      "previewAnimation": "idle"
     },
     {
       "id": "c948",
@@ -5314,7 +6382,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c948/c948_00",
       "characterName": "角色 c948（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c948.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8f336cfcb52112ad475569f402ad1547c64d1890e20eba90a8b55861abbb2d29",
+      "previewAnimation": "idle"
     },
     {
       "id": "c951",
@@ -5323,7 +6395,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c951/c951_00",
       "characterName": "角色 c951（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c951.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "c60fb13bfe0e59b3fb784968f5720779fbd640f6336a32e5ec3ece4c0976136e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c952",
@@ -5332,7 +6408,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c952/c952_00",
       "characterName": "角色 c952（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c952.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "6cce41c60dd943e9c167351095fe6f157466d334e6d15e81a84258d69e63b96b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c960",
@@ -5341,7 +6421,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c960/c960_00",
       "characterName": "角色 c960（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c960.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "92b381b8d9545e2b30b8660713c0eeefba49e37b101bfaeecf07eb1ed3a2f4e3",
+      "previewAnimation": "idle"
     },
     {
       "id": "c961",
@@ -5350,7 +6434,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c961/c961_00",
       "characterName": "角色 c961（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c961.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "f791905fec534ca6e2eed8ed1f2aaa651bb8557cc8a33a3d1bb2fe7c4927e043",
+      "previewAnimation": "idle"
     },
     {
       "id": "c961_01",
@@ -5360,7 +6448,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c961_01/c961_01_00",
       "characterName": "角色 c961（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c961_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a69a42da15ac31108738587525e685e54ae0a5ea3613f5d1dc5f12a8b20f1373",
+      "previewAnimation": "idle"
     },
     {
       "id": "c962",
@@ -5408,7 +6500,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c965/c965_00",
       "characterName": "角色 c965（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c965.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2097212864210a5bbab0ff4b79f1d779fd985fbdf8ef9e72c7e1698205cb0c75",
+      "previewAnimation": "idle"
     },
     {
       "id": "c966",
@@ -5417,7 +6513,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c966/c966_00",
       "characterName": "角色 c966（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c966.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8899262907e5ddb543068bef4265be3c867a1e7eb4a45448da4bdca1d9b3526e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c967",
@@ -5426,7 +6526,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c967/c967_00",
       "characterName": "角色 c967（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c967.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ac5d58c9f7023191b19ce72e8aa0733f0cffd7410ec9926d953a63cb54e0f74b",
+      "previewAnimation": "idle"
     },
     {
       "id": "c968",
@@ -5435,7 +6539,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c968/c968_00",
       "characterName": "角色 c968（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c968.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8c17a49bc60deff5811ce313c755d8e502177ccebf7d22057b7571a6b350433f",
+      "previewAnimation": "idle"
     },
     {
       "id": "c969",
@@ -5444,7 +6552,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c969/c969_00",
       "characterName": "角色 c969（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c969.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "483e88f68038d83e4670e690ad8baa26f295c01acceb431990e4a5332317aea5",
+      "previewAnimation": "idle"
     },
     {
       "id": "c970",
@@ -5453,7 +6565,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c970/c970_00",
       "characterName": "角色 c970（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c970.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "50c0d567cceec89ada1b3ad7a0b4d9cc39e27d3c5f5f3ba3fa86196126ac2b55",
+      "previewAnimation": "idle"
     },
     {
       "id": "c971",
@@ -5462,7 +6578,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c971/c971_00",
       "characterName": "角色 c971（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c971.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3cf753bdb210fdc53adc6bdba1aa6f9e355b3b8c62e9b374c6b9392dfc59a7c0",
+      "previewAnimation": "idle"
     },
     {
       "id": "c971_01",
@@ -5472,7 +6592,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c971_01/c971_01_00",
       "characterName": "角色 c971（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c971_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2fbc80ae36d84fecff4858a9db37d63eb76c858c16b0a4b3e778d76a98bff0e3",
+      "previewAnimation": "idle"
     },
     {
       "id": "c973",
@@ -5481,7 +6605,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c973/c973_00",
       "characterName": "角色 c973（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c973.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "cef82c0cad7ba0f687ae7d27281f6591b4ceff5c4a33f5f5f8824ba705d3d560",
+      "previewAnimation": "idle"
     },
     {
       "id": "c974",
@@ -5490,7 +6618,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c974/c974_00",
       "characterName": "角色 c974（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c974.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "518f10800e265277a685ad20b5ece7d6a519e22322b445b032cc8d00c6ffed45",
+      "previewAnimation": "idle"
     },
     {
       "id": "c974_01",
@@ -5500,7 +6632,11 @@
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c974_01/c974_01_00",
       "characterName": "角色 c974（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c974_01.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "4acb51aec9d80292c783c4ad0ce2ac8646a71d901e08b94a4ad0319921744f47",
+      "previewAnimation": "idle"
     },
     {
       "id": "c975",
@@ -5509,7 +6645,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c975/c975_00",
       "characterName": "角色 c975（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c975.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "35bed2c14b59bf0a84dd5c2be90eb96d748beb6a8d90d475745200b5ef583158",
+      "previewAnimation": "idle"
     },
     {
       "id": "c976",
@@ -5518,7 +6658,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c976/c976_00",
       "characterName": "角色 c976（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c976.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "faac8a72c2e008e2bfba69844f792bffabeba6ab7658109a3f1ce90f35698325",
+      "previewAnimation": "idle"
     },
     {
       "id": "c977",
@@ -5527,7 +6671,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c977/c977_00",
       "characterName": "角色 c977（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c977.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "2e3b6280310027288664a790d5f4e7e58277be41f5bf56b068018ee76ef5e44e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c979",
@@ -5536,7 +6684,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c979/c979_00",
       "characterName": "角色 c979（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c979.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "b67d900787bb475ea0b6a283fe1888dc1545f788f865fbf82070add1ddf0f7c3",
+      "previewAnimation": "idle"
     },
     {
       "id": "c980",
@@ -5545,7 +6697,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c980/c980_00",
       "characterName": "角色 c980（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c980.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "7b4e69d57931ba7a91958170f4c1f737c5b48c1a0b1dff8c59996872106c28a1",
+      "previewAnimation": "idle"
     },
     {
       "id": "c981",
@@ -5554,7 +6710,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c981/c981_00",
       "characterName": "角色 c981（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c981.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "1f7ac20208d8556b92658fd897017aa60a52dd47c347c07abd59e65eaf254bb0",
+      "previewAnimation": "idle"
     },
     {
       "id": "c982",
@@ -5563,7 +6723,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c982/c982_00",
       "characterName": "角色 c982（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c982.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ed8acf0f58e2842ea3b7e43e07e524acc51155e7d9852451ed53ca34fb4df6f5",
+      "previewAnimation": "idle"
     },
     {
       "id": "c983",
@@ -5572,7 +6736,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c983/c983_00",
       "characterName": "角色 c983（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c983.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "844bd29290d8757a5dbc7b6d1a378376f38c31230ee32a1ca7bbe58a1cfd2e6c",
+      "previewAnimation": "idle"
     },
     {
       "id": "c985",
@@ -5581,7 +6749,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c985/c985_00",
       "characterName": "角色 c985（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c985.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "981ca3731ebd48e0df68390728920a7a99c0a77523045998a38552d9f9467024",
+      "previewAnimation": "idle"
     },
     {
       "id": "c988",
@@ -5590,7 +6762,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c988/c988_00",
       "characterName": "角色 c988（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c988.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "8ed767076d7dfbc40d29944c30d079700d43a71ac41b365a67406318b785e8b6",
+      "previewAnimation": "idle"
     },
     {
       "id": "c989",
@@ -5599,7 +6775,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c989/c989_00",
       "characterName": "角色 c989（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c989.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "bbe9988f5c5f6d61e968e7cc1fe56b252684a6a8ca02657de65ee2dd3d1e0fe0",
+      "previewAnimation": "idle"
     },
     {
       "id": "c990",
@@ -5608,7 +6788,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c990/c990_00",
       "characterName": "角色 c990（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c990.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "9572c16ab6cdc18b71483c2fe9f882bc9c0a804e1e8bcf94b5d0145402307890",
+      "previewAnimation": "idle"
     },
     {
       "id": "c991",
@@ -5617,7 +6801,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c991/c991_00",
       "characterName": "角色 c991（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c991.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "cdacd8127065468424587ffcf7de52788031f0355718ec41c9e78da37493906e",
+      "previewAnimation": "idle"
     },
     {
       "id": "c992",
@@ -5626,7 +6814,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c992/c992_00",
       "characterName": "角色 c992（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c992.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "93d580f334ab18c3352ab9969f2b551b0f71c08adf55f9679033af5d1ddb8a6d",
+      "previewAnimation": "idle"
     },
     {
       "id": "c993",
@@ -5635,7 +6827,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c993/c993_00",
       "characterName": "角色 c993（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c993.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "ef0a21dc6f5ae7d9fc190411721db2dff75b6d1abf00b90f13d1c2c55f051e24",
+      "previewAnimation": "idle"
     },
     {
       "id": "c994",
@@ -5644,7 +6840,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c994/c994_00",
       "characterName": "角色 c994（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c994.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "a4ca6ed287e9a2cce8954ed89506b8f143453d7d745056bbd0784c28ff31cb1c",
+      "previewAnimation": "idle"
     },
     {
       "id": "c996",
@@ -5653,7 +6853,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c996/c996_00",
       "characterName": "角色 c996（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c996.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "3b14075d095571cb60b24f6f446769a98d206d96bc7a6569735187bb249d6a17",
+      "previewAnimation": "idle"
     },
     {
       "id": "c997",
@@ -5662,7 +6866,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c997/c997_00",
       "characterName": "角色 c997（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c997.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "74d72d98746dbc3ad1d8a6e2486d7b661ae0b8ca600207225212c9759fbd28cf",
+      "previewAnimation": "idle"
     },
     {
       "id": "c998",
@@ -5671,7 +6879,11 @@
       "spineVersion": "4.0",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c998/c998_00",
       "characterName": "角色 c998（待核对）",
-      "versionUnverified": true
+      "versionUnverified": true,
+      "preview": "./assets/animation-previews/nikke-c998.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "previewSha256": "e82bd978dceb8fe53fb2a37d89f922215f6bac751b1b96b21a1f2c3017349acb",
+      "previewAnimation": "idle"
     },
     {
       "id": "ba-ch0058_home",

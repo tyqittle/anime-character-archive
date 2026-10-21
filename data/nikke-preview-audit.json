@@ -1,0 +1,14 @@
+{
+  "summary": {
+    "total": 545,
+    "renderAttempted": 303,
+    "renderSucceeded": 303,
+    "renderFailed": 0,
+    "byGame": {
+      "nikke": 514,
+      "bluearchive": 31
+    },
+    "warning": "Index presence does not prove playback. Only real matching animation frames have previews."
+  },
+  "failures": []
+}
