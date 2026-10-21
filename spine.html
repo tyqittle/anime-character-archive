@@ -25,7 +25,7 @@ hr{border:0;border-top:1px solid #ffffff23;margin:21px 0}
 #fileList{font-size:12px;color:#b7cce0;overflow-wrap:anywhere}
 footer{padding:24px;text-align:center;color:#92a8bb;font-size:12px}
 @media(max-width:850px){.wrap{grid-template-columns:1fr;padding:12px}.side{order:2}.stage{order:1}#player{height:65vh;min-height:340px}}
-.character-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-height:440px;overflow:auto;margin:12px 0;padding-right:4px}.character-card{display:flex;flex-direction:column;align-items:center;gap:5px;background:#18283e;border:1px solid #40516b;border-radius:12px;padding:7px;cursor:pointer;color:#fff;text-align:center;min-width:0}.character-card:hover,.character-card.active{border-color:#88c9ff;background:#244263}.character-card img{width:100%;height:130px;object-fit:contain;background:#101927;border-radius:7px}.character-card .nm{font-size:12px;overflow-wrap:anywhere}.character-card small{font-size:10px;color:#b4c5d6}.character-card .fallback{display:grid;place-items:center;height:130px;width:100%;font-size:12px;color:#aabacf}.character-card[aria-pressed="true"]{outline:2px solid #8dcfff;outline-offset:1px}</style><style id="archive-refresh">body{background:radial-gradient(ellipse 65% 45% at 70% 0,#292852 0,transparent 80%),#090d19}.sitebar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 22px}.sitebrand{font-size:19px;font-weight:800;color:#e9e5ff;text-decoration:none}.sitebar nav{display:flex;gap:10px}.sitebar nav a{color:#bdc9ec;text-decoration:none;padding:9px 15px;border:1px solid #ffffff24;border-radius:12px}.sitebar nav a.selected{background:#665ac044;border-color:#9690ff;color:#fff}header{background:#10182a9e;border-bottom:1px solid #8a7de52d}.side,.stage{background:#11192c;border-color:#8a85c82c;border-radius:21px}button.primary{background:linear-gradient(110deg,#5d54ad,#3d649c);border-color:#8e8cf5}button:hover{border-color:#aaa0ff}#player{background:radial-gradient(circle,#343558,#0b1020 75%)}</style><link rel="stylesheet" href="./assets/spine-theater-layout.css?v=20261021-player-ux2"></head><body>
+.character-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-height:440px;overflow:auto;margin:12px 0;padding-right:4px}.character-card{display:flex;flex-direction:column;align-items:center;gap:5px;background:#18283e;border:1px solid #40516b;border-radius:12px;padding:7px;cursor:pointer;color:#fff;text-align:center;min-width:0}.character-card:hover,.character-card.active{border-color:#88c9ff;background:#244263}.character-card img{width:100%;height:130px;object-fit:contain;background:#101927;border-radius:7px}.character-card .nm{font-size:12px;overflow-wrap:anywhere}.character-card small{font-size:10px;color:#b4c5d6}.character-card .fallback{display:grid;place-items:center;height:130px;width:100%;font-size:12px;color:#aabacf}.character-card[aria-pressed="true"]{outline:2px solid #8dcfff;outline-offset:1px}</style><style id="archive-refresh">body{background:radial-gradient(ellipse 65% 45% at 70% 0,#292852 0,transparent 80%),#090d19}.sitebar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 22px}.sitebrand{font-size:19px;font-weight:800;color:#e9e5ff;text-decoration:none}.sitebar nav{display:flex;gap:10px}.sitebar nav a{color:#bdc9ec;text-decoration:none;padding:9px 15px;border:1px solid #ffffff24;border-radius:12px}.sitebar nav a.selected{background:#665ac044;border-color:#9690ff;color:#fff}header{background:#10182a9e;border-bottom:1px solid #8a7de52d}.side,.stage{background:#11192c;border-color:#8a85c82c;border-radius:21px}button.primary{background:linear-gradient(110deg,#5d54ad,#3d649c);border-color:#8e8cf5}button:hover{border-color:#aaa0ff}#player{background:radial-gradient(circle,#343558,#0b1020 75%)}</style><link rel="stylesheet" href="./assets/spine-theater-layout.css?v=20261021-theater-v3"></head><body>
 <header><div class="sitebar"><a class="sitebrand" href="./characters.html">✦ 次元角色档案馆</a><nav><a href="./characters.html">角色图鉴</a><a class="selected" href="./spine.html">▶ 动态立绘</a></nav></div><h1>动态立绘剧场</h1><p>选择角色，欣赏 Spine 骨骼动画。可以切换动作、暂停和全屏。</p></header>
 <div class="wrap">
 <section class="side">
@@ -45,8 +45,20 @@ footer{padding:24px;text-align:center;color:#92a8bb;font-size:12px}
 <p class="note">动态角色使用独立的 Spine 文件与浏览器渲染。部分资源从外部加载，无法获取时会显示错误。</p>
 </div></details><a href="./characters.html">← 返回角色图鉴</a>
 </section>
-<section class="stage"><div class="head"><strong id="title">动画预览</strong><small>官方 Spine Web Player · 本站直接渲染</small></div>
+<section class="stage" id="stage"><div class="head"><strong id="title">动画预览</strong><small id="stageContext">Spine · 原生骨骼渲染</small></div>
+<div class="stage-toolbar" id="stageToolbar" aria-label="动画观赏工具栏">
+ <div class="toolbar-main"><label class="tool-label" for="animationPicker">动作</label>
+ <select id="animationPicker" class="animation-picker" aria-label="切换角色动作" disabled><option value="">选择角色后可切换动作</option></select></div>
+ <div class="toolbar-view" aria-label="画面调整">
+  <button class="tool-btn" type="button" id="zoomOut" title="缩小" aria-label="缩小人物" disabled>−</button>
+  <output id="zoomValue" class="zoom-value" aria-label="当前画面缩放">100%</output>
+  <button class="tool-btn" type="button" id="zoomIn" title="放大" aria-label="放大人物" disabled>+</button>
+  <button class="tool-btn fit-btn" type="button" id="resetView" title="人物自动适应舞台" disabled>适应画面</button>
+  <button class="tool-btn" type="button" id="fullscreenStage" title="切换全屏模式" aria-label="全屏观看">⛶</button>
+ </div>
+</div>
 <div id="player"><div id="placeholder">请在左侧选择角色开始播放。<br>本站直接渲染角色动画，不是静态图片。</div></div><div id="loadNotice" hidden aria-hidden="true"><span class="load-spinner"></span><span id="loadNoticeText">正在加载动画…</span></div>
+<p class="stage-hint">拖动画面移动 · Ctrl / ⌘ + 滚轮缩放 · 双击还原 · 手机双指缩放</p>
 <div id="status" role="status" aria-live="polite">就绪。请先测试官方示例。</div></section>
 </div>
 <footer>Spine 运行时 © Esoteric Software · 游戏角色及其素材版权归各自权利人。仅用于个人研究和获授权的资源播放。</footer>
@@ -56,6 +68,65 @@ const $=id=>document.getElementById(id);
 const runtimeRoot='https://unpkg.com/@esotericsoftware/spine-player@';
 const params=new URLSearchParams(location.search);
 let loadedVersion='', loadPromise=null, player=null, allCharacters=[], chosenFileList=[], currentAttempt=0, watchdog=null;
+let viewZoom=1,viewOffsetX=0,viewOffsetY=0;
+const clampViewZoom=value=>Math.min(3.5,Math.max(.5,value));
+function setViewerToolsEnabled(ready){
+ for(const id of ['zoomOut','zoomIn','resetView'])$(id).disabled=!ready;
+ if(!ready){$('animationPicker').disabled=true;$('animationPicker').replaceChildren(new Option('选择角色后可切换动作',''))}
+}
+function syncViewTransform(){
+ const canvas=player?.canvas;
+ if(canvas){canvas.style.transformOrigin='center center';canvas.style.transform='translate('+viewOffsetX+'px,'+viewOffsetY+'px) scale('+viewZoom+')'}
+ $('zoomValue').textContent=Math.round(viewZoom*100)+'%';
+}
+function resetViewerTransform(){viewZoom=1;viewOffsetX=0;viewOffsetY=0;syncViewTransform()}
+function adjustViewerZoom(factor){if(!player?.canvas)return;viewZoom=clampViewZoom(viewZoom*factor);syncViewTransform()}
+function connectCanvasGestures(activePlayer){
+ const canvas=activePlayer.canvas;if(!canvas)return;
+ canvas.classList.add('portrait-canvas');canvas.style.touchAction='none';
+ const pointers=new Map();let pinchOrigin=0,pinchZoom=1;
+ const distance=()=>{const [a,b]=[...pointers.values()];return Math.hypot(a.x-b.x,a.y-b.y)};
+ canvas.addEventListener('pointerdown',e=>{
+  if(e.pointerType==='mouse'&&e.button!==0||activePlayer!==player)return;
+  pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
+  try{canvas.setPointerCapture(e.pointerId)}catch(_){}
+  if(pointers.size===2){pinchOrigin=distance();pinchZoom=viewZoom}
+ });
+ canvas.addEventListener('pointermove',e=>{
+  if(activePlayer!==player||!pointers.has(e.pointerId))return;
+  const previous=pointers.get(e.pointerId);
+  pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
+  if(pointers.size===1){viewOffsetX+=e.clientX-previous.x;viewOffsetY+=e.clientY-previous.y}
+  else if(pointers.size===2&&pinchOrigin>0)viewZoom=clampViewZoom(pinchZoom*distance()/pinchOrigin);
+  syncViewTransform();
+ });
+ const finish=e=>{pointers.delete(e.pointerId);if(pointers.size<2)pinchOrigin=0};
+ canvas.addEventListener('pointerup',finish);
+ canvas.addEventListener('pointercancel',finish);
+ canvas.addEventListener('wheel',e=>{
+  if(!(e.ctrlKey||e.metaKey)||activePlayer!==player)return;
+  e.preventDefault();adjustViewerZoom(e.deltaY<0?1.12:1/1.12);
+ },{passive:false});
+ canvas.addEventListener('dblclick',()=>{if(activePlayer===player)resetViewerTransform()});
+ syncViewTransform();
+}
+$('zoomIn').addEventListener('click',()=>adjustViewerZoom(1.2));
+$('zoomOut').addEventListener('click',()=>adjustViewerZoom(1/1.2));
+$('resetView').addEventListener('click',resetViewerTransform);
+$('animationPicker').addEventListener('change',e=>{
+ if(!player||!e.target.value)return;
+ try{player.setAnimation(e.target.value,true);player.play();resetViewerTransform();status('正在播放：'+$('title').textContent+' · '+e.target.value)}
+ catch(err){status('动作切换失败：'+err.message,true)}
+});
+$('fullscreenStage').addEventListener('click',async()=>{
+ try{if(document.fullscreenElement)await document.exitFullscreen();else await $('stage').requestFullscreen()}
+ catch(err){status('无法切换全屏：'+err.message,true)}
+});
+document.addEventListener('fullscreenchange',()=>{
+ $('fullscreenStage').textContent=document.fullscreenElement?'⤢':'⛶';
+ $('fullscreenStage').setAttribute('aria-label',document.fullscreenElement?'退出全屏':'全屏观看');
+});
+
 const manifestUrl='./data/spine-characters.json?v=20261020-frame133';
 const bd2PilotUrl='./data/spine-bd2-pilot.json?v=20261021-pilot1';
 const embeddedCharacters=[{"id":"c010","name":"Rapi","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010/c010_00"},{"id":"c011","name":"Neon","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c011/c011_00"},{"id":"c012","name":"Anis","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c012/c012_00"},{"id":"c013","name":"Marian","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c013/c013_00"},{"id":"c015","name":"Anis: Sparkling Summer","spineVersion":"4.1","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c015/c015_00"},{"id":"c040","name":"D","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c040/c040_00"},{"id":"c060","name":"Belorta","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c060/c060_00"},{"id":"c070","name":"Brid","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070/c070_00"},{"id":"c072","name":"Diesel","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c072/c072_00"},{"id":"c080","name":"Centi","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c080/c080_00"},{"id":"c090","name":"Emma","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090/c090_00"},{"id":"c101","name":"Drake","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c101/c101_00"},{"id":"c110","name":"Crow","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c110/c110_00"},{"id":"c112","name":"Viper","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c112/c112_00"},{"id":"c170","name":"Privaty","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c170/c170_00"},{"id":"c180","name":"Guillotine","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c180/c180_00"},{"id":"c181","name":"Maiden","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c181/c181_00"},{"id":"c191","name":"Alice","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c191/c191_00"},{"id":"c200","name":"Rupee","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c200/c200_00"},{"id":"c203","name":"Rupee: Winter Shopper","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c203/c203_00"},{"id":"c222","name":"Scarlet","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c222/c222_00"},{"id":"c230","name":"Harran","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c230/c230_00"},{"id":"c233","name":"Dorothy","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c233/c233_00"},{"id":"c260","name":"Modernia","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c260/c260_00"},{"id":"c270","name":"Blanc","spineVersion":"4.1","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c270/c270_00"},{"id":"c280","name":"Rosanna","spineVersion":"4.1","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c280/c280_00"},{"id":"c282","name":"Sakura","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c282/c282_00"},{"id":"c352","name":"Helm","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c352/c352_00"},{"id":"c353","name":"Helm: Aquamarine","spineVersion":"4.1","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c353/c353_00"},{"id":"c400","name":"Guilty","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c400/c400_00"}];
@@ -238,6 +309,9 @@ function ensureRuntime(version){
 function clearPlayer(){
  try{player?.dispose?.()}catch(e){console.warn(e)}
  player=null;
+ viewZoom=1;viewOffsetX=0;viewOffsetY=0;
+ $('zoomValue').textContent='100%';
+ setViewerToolsEnabled(false);
  const ph=document.createElement('div');ph.id='placeholder';ph.textContent='正在准备动画画布…';
  $('player').replaceChildren(ph);
  return ph;
@@ -254,10 +328,13 @@ async function show(options,title,onError){
   const atlasPath=options.atlas||options.atlasUrl;
   const normalized={...options,atlasUrl:atlasPath};
   if(skeletonPath){if(/\.json(?:[?#]|$)/i.test(skeletonPath))normalized.jsonUrl=skeletonPath;else if($('version').value==='3.8')normalized.skelUrl=skeletonPath;else normalized.binaryUrl=skeletonPath;}
-  const config={...normalized,showControls:true,premultipliedAlpha:options.premultipliedAlpha??true,alpha:false,backgroundColor:'#142238ff',
+  const config={...normalized,showControls:true,controlBones:false,premultipliedAlpha:options.premultipliedAlpha??true,alpha:false,backgroundColor:'#142238ff',
    success:(p)=>{
     if(attempt!==currentAttempt)return;
     stopWatchdog();player=p;
+     setViewerToolsEnabled(true);
+     resetViewerTransform();
+     connectCanvasGestures(p);
     // Some exports put the complete character under a numbered skin ("00",
     // "01") while the initial "default" skin contains only stray attachments.
     // Such models render empty and trigger "Animation bounds are invalid".
@@ -281,12 +358,15 @@ async function show(options,title,onError){
      }
     }
     const names=(p.skeleton?.data?.animations||[]).map(a=>a.name).filter(Boolean);
+    $('animationPicker').replaceChildren(...names.map(name=>new Option(name,name)));
+    $('animationPicker').disabled=!names.length;
     if(!names.length){status('骨骼已显示，但没有找到可播放的动作。',true);return}
     const preferred=names.find(n=>/^(idle|idle_0?1|stand|breath|loop|wait|default)$/i.test(n))
       ||names.find(n=>/idle|stand|breath|wait/i.test(n))
       ||names[0];
     try{
       p.setAnimation(preferred,true);
+      $('animationPicker').value=preferred;
       p.play();
       status('正在播放：'+title+' · '+preferred+'（共 '+names.length+' 个动作，可用底部控制栏切换）');
     }catch(e){status('骨骼已加载，但自动播放动作失败：'+e.message,true)}
@@ -382,6 +462,7 @@ async function playCharacter(c){
  const current=sequence,controller=new AbortController();
  activeCharacterAbort=controller;
  $('title').textContent=(c.zh?c.zh+' · ':'')+c.name;
+ $('stageContext').textContent=c.gameId==='browndust2'?'棕色尘埃2 · 全身角色':c.gameId==='bluearchive'?'蔚蓝档案 · 回忆大厅':'胜利女神：妮姬 · Spine';
  // Do not leave the previously selected character playing while downloading
  // a different skeleton; the stage now shows a dedicated loading notice.
  clearPlayer();
