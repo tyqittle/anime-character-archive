@@ -25,7 +25,7 @@ hr{border:0;border-top:1px solid #ffffff23;margin:21px 0}
 #fileList{font-size:12px;color:#b7cce0;overflow-wrap:anywhere}
 footer{padding:24px;text-align:center;color:#92a8bb;font-size:12px}
 @media(max-width:850px){.wrap{grid-template-columns:1fr;padding:12px}.side{order:2}.stage{order:1}#player{height:65vh;min-height:340px}}
-.character-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-height:440px;overflow:auto;margin:12px 0;padding-right:4px}.character-card{display:flex;flex-direction:column;align-items:center;gap:5px;background:#18283e;border:1px solid #40516b;border-radius:12px;padding:7px;cursor:pointer;color:#fff;text-align:center;min-width:0}.character-card:hover,.character-card.active{border-color:#88c9ff;background:#244263}.character-card img{width:100%;height:130px;object-fit:contain;background:#101927;border-radius:7px}.character-card .nm{font-size:12px;overflow-wrap:anywhere}.character-card small{font-size:10px;color:#b4c5d6}.character-card .fallback{display:grid;place-items:center;height:130px;width:100%;font-size:12px;color:#aabacf}.character-card[aria-pressed="true"]{outline:2px solid #8dcfff;outline-offset:1px}</style><style id="archive-refresh">body{background:radial-gradient(ellipse 65% 45% at 70% 0,#292852 0,transparent 80%),#090d19}.sitebar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 22px}.sitebrand{font-size:19px;font-weight:800;color:#e9e5ff;text-decoration:none}.sitebar nav{display:flex;gap:10px}.sitebar nav a{color:#bdc9ec;text-decoration:none;padding:9px 15px;border:1px solid #ffffff24;border-radius:12px}.sitebar nav a.selected{background:#665ac044;border-color:#9690ff;color:#fff}header{background:#10182a9e;border-bottom:1px solid #8a7de52d}.side,.stage{background:#11192c;border-color:#8a85c82c;border-radius:21px}button.primary{background:linear-gradient(110deg,#5d54ad,#3d649c);border-color:#8e8cf5}button:hover{border-color:#aaa0ff}#player{background:radial-gradient(circle,#343558,#0b1020 75%)}</style><link rel="stylesheet" href="./assets/spine-theater-layout.css?v=20261021-previewfit-v4"><link rel="stylesheet" href="./assets/archive-shell.css?v=unified-shell-20261021-v2"></head><body>
+.character-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;max-height:440px;overflow:auto;margin:12px 0;padding-right:4px}.character-card{display:flex;flex-direction:column;align-items:center;gap:5px;background:#18283e;border:1px solid #40516b;border-radius:12px;padding:7px;cursor:pointer;color:#fff;text-align:center;min-width:0}.character-card:hover,.character-card.active{border-color:#88c9ff;background:#244263}.character-card img{width:100%;height:130px;object-fit:contain;background:#101927;border-radius:7px}.character-card .nm{font-size:12px;overflow-wrap:anywhere}.character-card small{font-size:10px;color:#b4c5d6}.character-card .fallback{display:grid;place-items:center;height:130px;width:100%;font-size:12px;color:#aabacf}.character-card[aria-pressed="true"]{outline:2px solid #8dcfff;outline-offset:1px}</style><style id="archive-refresh">body{background:radial-gradient(ellipse 65% 45% at 70% 0,#292852 0,transparent 80%),#090d19}.sitebar{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 22px}.sitebrand{font-size:19px;font-weight:800;color:#e9e5ff;text-decoration:none}.sitebar nav{display:flex;gap:10px}.sitebar nav a{color:#bdc9ec;text-decoration:none;padding:9px 15px;border:1px solid #ffffff24;border-radius:12px}.sitebar nav a.selected{background:#665ac044;border-color:#9690ff;color:#fff}header{background:#10182a9e;border-bottom:1px solid #8a7de52d}.side,.stage{background:#11192c;border-color:#8a85c82c;border-radius:21px}button.primary{background:linear-gradient(110deg,#5d54ad,#3d649c);border-color:#8e8cf5}button:hover{border-color:#aaa0ff}#player{background:radial-gradient(circle,#343558,#0b1020 75%)}</style><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://unpkg.com" crossorigin><link rel="dns-prefetch" href="//raw.githubusercontent.com"><link rel="stylesheet" href="./assets/spine-theater-layout.css?v=20261021-previewfit-v4"><link rel="stylesheet" href="./assets/archive-shell.css?v=unified-shell-20261021-v2"></head><body>
 <div class="wrap">
 <section class="side" aria-label="动态立绘角色浏览">
 <div class="side-sitebar">
@@ -78,7 +78,7 @@ let loadedVersion='', runtimeQueue=Promise.resolve(), player=null, allCharacters
 const runtimeCache=new Map();
 let runtimeCss=null;
 let viewZoom=1,viewOffsetX=0,viewOffsetY=0;
-let azurlaneFrame=null,azurlaneReady=false,azurlanePending=null;
+let azurlaneFrame=null,azurlaneReady=false,azurlanePending=null,azurlanePlayingId='';
 const L2D_CHANNEL='anime-archive-azurlane-v1';
 const clampViewZoom=value=>Math.min(3.5,Math.max(.5,value));
 function setViewerToolsEnabled(ready){
@@ -363,7 +363,7 @@ function clearPlayer(){
  viewZoom=1;viewOffsetX=0;viewOffsetY=0;
  $('zoomValue').textContent='100%';
  setViewerToolsEnabled(false);
- if(azurlaneFrame){azurlaneFrame.remove();azurlaneFrame=null;azurlaneReady=false;azurlanePending=null}
+ if(azurlaneFrame){azurlaneFrame.remove();azurlaneFrame=null;azurlaneReady=false;azurlanePending=null;azurlanePlayingId=''}
  const ph=document.createElement('div');ph.id='placeholder';ph.textContent='正在准备动画画布…';
  $('player').replaceChildren(ph);
  return ph;
@@ -474,10 +474,32 @@ async function detectSpineVersion(blob){
  return {hash:found.hash,version,majorMinor:version.split('.').slice(0,2).join('.')};
 }
 async function downloadPack(c,mirror,signal,isCurrent=()=>true){
- // Detect the actual export version for NIKKE and Blue Archive before selecting a runtime.
  const paths=urls(c,mirror),stem=c.base.split('/').pop();
- const [skelBlob,atlasBlob]=await Promise.all([downloadBlob(paths.skeleton,45000,signal),downloadBlob(paths.atlas,24000,signal)]);
- if(skelBlob.size<100||atlasBlob.size<20)throw Error('骨骼或图集文件大小异常');
+ // Start textures after the small atlas arrives, while the skeleton continues downloading.
+ const skeletonResult=downloadBlob(paths.skeleton,60000,signal).then(blob=>({blob}),error=>({error}));
+ const atlasBlob=await downloadBlob(paths.atlas,30000,signal);
+ if(atlasBlob.size<20)throw Error('图集文件大小异常');
+ const atlasText=(await atlasBlob.text()).replace(/^\uFEFF/,'');
+ const pages=imagePages(atlasText);
+ if(!pages.length)throw Error('图集中没有图片文件名');
+ const data={};
+ data[stem+'.atlas']='data:text/plain,'+atlasText;
+ let nextPage=0,completedPages=0;
+ async function fetchTexturePages(){
+  while(nextPage<pages.length){
+   const page=pages[nextPage++],url=paths.base.slice(0,paths.base.lastIndexOf('/')+1)+page;
+   const blob=await downloadBlob(url,60000,signal);
+   if(blob.size<100)throw Error('贴图为空：'+page);
+   data[page]=await blobToUri(blob);
+   completedPages++;
+   if(isCurrent())status('正在并行加载骨骼与贴图 '+completedPages+'/'+pages.length);
+  }
+ }
+ const texturesPromise=Promise.all(Array.from({length:Math.min(3,pages.length)},()=>fetchTexturePages())).then(()=>({ok:true}),error=>({error}));
+ const skeleton=await skeletonResult;
+ if(skeleton.error)throw skeleton.error;
+ const skelBlob=skeleton.blob;
+ if(skelBlob.size<100)throw Error('骨骼文件大小异常');
  const isJSON=paths.format==='json';
  let detected,jsonText='';
  if(isJSON){
@@ -487,28 +509,11 @@ async function downloadPack(c,mirror,signal,isCurrent=()=>true){
   detected={version,majorMinor:version.split('.').slice(0,2).join('.')};
  }else detected=await detectSpineVersion(skelBlob);
  if(!['3.8','4.0','4.1','4.2'].includes(detected.majorMinor))throw Error('不支持的骨骼版本 '+detected.version);
- if(isCurrent())status('检测到 '+c.name+' 的 Spine 版本：'+detected.version);
- const atlasText=(await atlasBlob.text()).replace(/^\uFEFF/,'');
- const pages=imagePages(atlasText);
- if(!pages.length)throw Error('图集中没有图片文件名');
- const data={};
+ if(isCurrent())status('骨骼版本 '+detected.version+' 已确认，正在完成贴图加载…');
  const skeletonName=stem+(isJSON?'.json':'.skel');
  data[skeletonName]=isJSON?'data:application/json,'+jsonText:await blobToUri(skelBlob);
- data[stem+'.atlas']='data:text/plain,'+atlasText;
- // Bounded parallelism prevents multi-page textures from waiting on one
- // another, without overwhelming a mobile browser with concurrent downloads.
- let nextPage=0,completedPages=0;
- async function fetchTexturePages(){
-  while(nextPage<pages.length){
-   const page=pages[nextPage++],url=paths.base.slice(0,paths.base.lastIndexOf('/')+1)+page;
-   const blob=await downloadBlob(url,60000,signal);
-   if(blob.size<100)throw Error('贴图为空：'+page);
-   data[page]=await blobToUri(blob);
-   completedPages++;
-   if(isCurrent())status('已读取骨骼与图集，正在下载贴图 '+completedPages+'/'+pages.length);
-  }
- }
- await Promise.all(Array.from({length:Math.min(3,pages.length)},()=>fetchTexturePages()));
+ const textures=await texturesPromise;
+ if(textures.error)throw textures.error;
  if(signal?.aborted)throw Error('下载已取消');
  return {id:(c.gameId||'nikke')+'-'+c.id,version:detected.majorMinor,exportVersion:detected.version,headerChecked:true,skeleton:skeletonName,atlas:stem+'.atlas',rawDataURIs:data};
 }
@@ -524,8 +529,9 @@ function cancelCharacterDownload(){
 // Isolate Cubism from Spine. The iframe belongs to this same Pages origin,
 // runs the source-pinned Cubism runtime and never navigates the outer page.
 function playAzurLane(c){
+ if(azurlaneFrame&&azurlanePlayingId===c.id&&azurlanePending?.id===c.id)return;
  cancelCharacterDownload();
- azurlanePending=c;
+ azurlanePending=c;azurlanePlayingId='';
  if(!azurlaneFrame){
   clearPlayer();
   azurlanePending=c;
@@ -561,13 +567,14 @@ window.addEventListener('message',event=>{
  }
  if(data.id!==azurlanePending?.id)return;
  if(data.kind==='playing'){
+  azurlanePlayingId=data.id;
   setViewerToolsEnabled(true);
   const actions=Array.isArray(data.motions)?data.motions.filter(x=>typeof x==='string'):[];
   $('animationPicker').replaceChildren(...actions.map(x=>new Option(x,x)));
   $('animationPicker').disabled=!actions.length;
   if(data.selectedMotion)$('animationPicker').value=data.selectedMotion;
   viewZoom=1;$('zoomValue').textContent='100%';
-  status('正在播放：'+azurlanePending.name+' · Live2D'+(data.selectedMotion?' · '+data.selectedMotion:'')+'（'+actions.length+' 组动作）');
+  status('正在播放：'+azurlanePending.name+' · Live2D'+(data.selectedMotion?' · '+data.selectedMotion:'')+'（'+actions.length+' 组动作）'+(Number.isFinite(data.loadMs)&&data.loadMs>0?' · 加载 '+(data.loadMs/1000).toFixed(1)+' 秒':''));
  }
  if(data.kind==='zoom'&&Number.isFinite(data.zoom)){
   viewZoom=clampViewZoom(data.zoom);
@@ -609,9 +616,13 @@ async function playCharacter(c){
     status('正在从 '+(mirror==='github'?'原始素材目录':'备用镜像')+'读取 '+c.name+' 的完整动画文件…');
     pack=await downloadPack(c,mirror,controller.signal,()=>current===sequence);
     if(current!==sequence)return;
-    try{await dbAction('readwrite',s=>s.put(pack));refreshSaved()}catch(e){status('已下载动画，但浏览器空间不足，无法缓存：'+e.message)}
-    if(current!==sequence)return;
+    // Display immediately, rather than serializing a large base64 pack to disk first.
     await playPack(pack);
+    if(current!==sequence)return;
+    const saveForRepeat=()=>dbAction('readwrite',s=>s.put(pack)).then(()=>refreshSaved())
+      .catch(e=>console.warn('缓存写入失败（不会影响当前播放）',e));
+    if('requestIdleCallback' in window)requestIdleCallback(saveForRepeat,{timeout:6000});
+    else setTimeout(saveForRepeat,1800);
     return;
    }catch(e){failure+=mirror+'：'+(e.message||e)+'；';}
   }

@@ -35,6 +35,9 @@ try{
   }));
   if(hasPixi.width<300||hasPixi.height<240||!hasPixi.hasContext)
     throw Error('No actual WebGL Live2D canvas: '+id+' '+JSON.stringify(hasPixi));
+  const performanceSettings=await frame.locator('#live2dCanvas').evaluate(()=>({fpsCap:app?.ticker?.maxFPS}));
+  if(!Number.isFinite(performanceSettings.fpsCap)||performanceSettings.fpsCap>45||performanceSettings.fpsCap<20)
+    throw Error('Live2D FPS limiter missing: '+JSON.stringify(performanceSettings));
   const actions=await page.locator('#animationPicker option').count();
   if(actions<2)throw Error('Cubism motions were not registered: '+id);
   await page.locator('#animationPicker').selectOption({index:Math.min(1,actions-1)});
