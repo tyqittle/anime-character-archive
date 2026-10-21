@@ -6,8 +6,8 @@
   "sourceIndex": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/js/json/l2d.json",
   "sourceRepository": "https://github.com/Nikke-db/Nikke-db.github.io",
   "counts": {
-    "total": 541,
-    "full": 541
+    "total": 540,
+    "full": 540
   },
   "characters": [
     {
@@ -10120,22 +10120,6 @@
       "thumb": "./assets/thumbs/wutheringwaves-shorekeeper.webp",
       "imageWidth": 1040,
       "imageHeight": 1675
-    },
-    {
-      "id": "wutheringwaves-jiyan",
-      "name": "忌炎",
-      "zh": "忌炎",
-      "nameEn": "Jiyan",
-      "gameId": "wutheringwaves",
-      "game": "鸣潮",
-      "characterKey": "忌炎",
-      "groupId": "",
-      "kind": "full",
-      "image": "./assets/portraits/wutheringwaves-jiyan.webp",
-      "source": "https://github.com/TomyJan/WutheringWaves-UIResources/tree/3.7/UIResources/UiLuckdraw/Image",
-      "originalImage": "https://raw.githubusercontent.com/TomyJan/WutheringWaves-UIResources/3.7/UIResources/UiLuckdraw/Image/T_RoleImgjiyan_UI.png",
-      "variant": false,
-      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权"
     },
     {
       "id": "wutheringwaves-zhezhi",
