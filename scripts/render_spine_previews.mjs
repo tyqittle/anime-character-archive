@@ -9,7 +9,7 @@ import {chromium} from 'playwright-core';
 const root=new URL('../',import.meta.url);
 const allCatalog=JSON.parse(fs.readFileSync(new URL('data/spine-characters.json',root),'utf8')).characters;
 const incremental=process.env.SPINE_PREVIEW_INCREMENTAL==='1';
-const catalog=incremental?allCatalog.filter(c=>c.gameId==='nikke'&&!(c.previewSource==='matching-spine-animation-frame'&&c.preview==='./assets/animation-previews/nikke-'+c.id+'.webp'&&c.previewSha256)):allCatalog;
+const catalog=incremental?allCatalog.filter(c=>['bluearchive','konosuba'].includes(c.gameId)&&!(c.previewSource==='matching-spine-animation-frame'&&c.preview==='./assets/animation-previews/'+c.gameId+'-'+c.id+'.webp'&&c.previewSha256)):allCatalog;
 const shard=Number(process.argv[2]??0);
 const count=Number(process.argv[3]??10);
 if(!Number.isInteger(shard)||!Number.isInteger(count)||shard<0||count<1||shard>=count)throw Error('Invalid shard/count');
@@ -52,7 +52,7 @@ try{
   const entry={id,name:c.name,gameId:c.gameId};
   const started=Date.now();
   try{
-   if(!/^[a-zA-Z0-9_-]+$/.test(id)||!['nikke','bluearchive'].includes(c.gameId))throw Error('Invalid catalog ID or game');
+   if(!/^[a-zA-Z0-9_-]+$/.test(id)||!['nikke','bluearchive','konosuba'].includes(c.gameId))throw Error('Invalid catalog ID or game');
    await page.goto('http://127.0.0.1:8765/spine.html?id='+encodeURIComponent(id),{waitUntil:'domcontentloaded',timeout:30000});
    const deadline=Date.now()+80000;
    let status='';
