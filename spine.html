@@ -31,16 +31,16 @@ footer{padding:24px;text-align:center;color:#92a8bb;font-size:12px}
 <section class="side">
 <h2>角色动画</h2><label for="gameFilter">选择游戏</label><select id="gameFilter"><option value="all">全部游戏</option><option value="nikke">胜利女神：妮姬</option><option value="bluearchive">蔚蓝档案（回忆大厅）</option><option value="browndust2">棕色尘埃2（全身模型试播）</option></select><label for="characterSearch">搜索角色（中文、英文或编号）</label><input id="characterSearch" type="search" placeholder="例如：安妮丝 / Rapi / c012"><label for="characters">当前选中的角色</label><select id="characters"><option value="">请选择角色…</option></select><div id="characterCards" class="character-cards" aria-label="角色图片选择列表"></div><p class="note" id="selectionNote">点击卡片或从下拉框选中角色，即可自动播放。</p><p class="note">点击角色即可播放；骨骼和贴图按需读取，首次加载可能稍慢。遇到错误可展开高级工具检查资源。</p><details class="advanced-tools"><summary>高级工具 · 资源检测、版本和本地导入</summary><div class="advanced-body"><button id="testUrls" type="button">检测选中角色的资源连通性</button><hr><h2>播放测试</h2>
 <label for="version">骨骼版本</label><select id="version"><option value="3.8">Spine 3.8（兼容性待验证）</option><option value="4.0">Spine 4.0</option><option value="4.1">Spine 4.1</option><option value="4.2">Spine 4.2</option></select>
-<button id="demo" class="primary">▶ 播放官方示例动画</button>
+<button id="demo" class="primary">运行官方渲染自检</button>
 <p class="note">演示资源由 Spine 官方提供，用于核对播放器是否能真正渲染动作；<strong>不是 NIKKE 人物</strong>。</p>
 <hr>
 <h2>加载你自己的角色素材</h2>
 <label for="files">选择整套 Spine 资源</label>
 <input type="file" id="files" multiple accept=".skel,.json,.atlas,.png,.webp,.jpg,.jpeg,.atlas.txt,.skel.bytes">
-<p class="note">一次选中相同角色的 <code>.skel</code>（或 <code>.json</code>）、<code>.atlas</code>，以及图集中引用的全部贴图。文件只在你的浏览器内读取，不上传。</p>
+<p class="note">一次选中相同角色的 <code>.skel</code>（或 <code>.json</code>）、<code>.atlas</code>，以及图集中引用的全部贴图。选齐文件后自动播放，素材只在你的浏览器内读取，不上传。</p>
 <div id="fileList">尚未选择文件。</div>
-<button id="local" class="primary" disabled>▶ 播放已选择文件</button><button id="saveLocal" type="button" disabled style="width:100%;margin-top:8px">保存已选择素材到本机浏览器</button><label for="savedPacks">已保存的本地动画包</label><select id="savedPacks"><option value="">暂无本地动画包</option></select><button id="playSaved" type="button" style="width:100%;margin-top:8px" disabled>▶ 播放已保存动画</button><button id="deleteSaved" type="button" style="width:100%;margin-top:8px" disabled>删除选中的本地动画包</button>
-<div class="guide"><strong>使用说明</strong><p class="note">1. 先点“播放官方示例动画”，确认运行时可加载。<br>2. 有角色 Spine 三件套后，一次性选择全部文件。<br>3. 选择对应的骨骼版本，点击播放。<br>4. 成功后可以使用播放器自带的动作控制。</p></div>
+<button id="saveLocal" type="button" disabled style="width:100%;margin-top:8px">保存已选择素材到本机浏览器</button><label for="savedPacks">已保存的本地动画包</label><select id="savedPacks"><option value="">暂无本地动画包</option></select><button id="deleteSaved" type="button" style="width:100%;margin-top:8px" disabled>删除选中的本地动画包</button>
+<div class="guide"><strong>使用说明</strong><p class="note">选择角色即自动播放，不需要播放按钮。导入完整的 Spine 骨骼、图集和贴图后也会自动播放；可通过舞台上方动作菜单切换动画。官方示例只用于调试渲染环境。</p></div>
 <hr>
 <p class="note">动态角色使用独立的 Spine 文件与浏览器渲染。部分资源从外部加载，无法获取时会显示错误。</p>
 </div></details><a href="./characters.html">← 返回角色图鉴</a>
@@ -59,7 +59,7 @@ footer{padding:24px;text-align:center;color:#92a8bb;font-size:12px}
 </div>
 <div id="player"><div id="placeholder">请点击角色卡片或从下拉框选中角色。<br>选中后将自动播放动态立绘。</div></div><div id="loadNotice" hidden aria-hidden="true"><span class="load-spinner"></span><span id="loadNoticeText">正在加载动画…</span></div>
 <p class="stage-hint">拖动画面移动 · Ctrl / ⌘ + 滚轮缩放 · 双击还原 · 手机双指缩放</p>
-<div id="status" role="status" aria-live="polite">就绪。请先测试官方示例。</div></section>
+<div id="status" role="status" aria-live="polite">选择角色即可自动播放。</div></section>
 </div>
 <footer>Spine 运行时 © Esoteric Software · 游戏角色及其素材版权归各自权利人。仅用于个人研究和获授权的资源播放。</footer>
 <script>
@@ -141,7 +141,6 @@ async function refreshSaved(){try{
  select.replaceChildren(new Option(keys.length?'选择已保存素材…':'暂无本地动画包',''),
   ...keys.map(id=>new Option(String(id),String(id))));
  if(keys.includes(previous))select.value=previous;
- $('playSaved').disabled=!select.value;
  $('deleteSaved').disabled=!select.value;
 }catch(e){status('浏览器缓存不可用：'+e.message,true)}}
 function stopWatchdog(){if(watchdog){clearTimeout(watchdog);watchdog=null}}
@@ -327,7 +326,7 @@ async function show(options,title,onError){
   const atlasPath=options.atlas||options.atlasUrl;
   const normalized={...options,atlasUrl:atlasPath};
   if(skeletonPath){if(/\.json(?:[?#]|$)/i.test(skeletonPath))normalized.jsonUrl=skeletonPath;else if($('version').value==='3.8')normalized.skelUrl=skeletonPath;else normalized.binaryUrl=skeletonPath;}
-  const config={...normalized,showControls:true,controlBones:false,premultipliedAlpha:options.premultipliedAlpha??true,alpha:false,backgroundColor:'#142238ff',
+  const config={...normalized,showControls:false,controlBones:false,premultipliedAlpha:options.premultipliedAlpha??true,alpha:false,backgroundColor:'#142238ff',
    success:(p)=>{
     if(attempt!==currentAttempt)return;
     stopWatchdog();player=p;
@@ -367,7 +366,7 @@ async function show(options,title,onError){
       p.setAnimation(preferred,true);
       $('animationPicker').value=preferred;
       p.play();
-      status('正在播放：'+title+' · '+preferred+'（共 '+names.length+' 个动作，可用底部控制栏切换）');
+      status('正在播放：'+title+' · '+preferred+'（共 '+names.length+' 个动作，可用上方动作菜单切换）');
     }catch(e){status('骨骼已加载，但自动播放动作失败：'+e.message,true)}
    },
    error:(_p,reason)=>{if(attempt!==currentAttempt)return;stopWatchdog();
@@ -548,10 +547,15 @@ $('demo').onclick=()=>{
  const base='https://esotericsoftware.com/files/examples/'+version+'/spineboy/export/';
  show({skeleton:base+'spineboy-pro.skel',atlas:base+'spineboy-pma.atlas',animation:'walk'},'Spineboy 官方示例');
 };
-$('files').onchange=e=>{
+$('files').onchange=async e=>{
  chosenFileList=Array.from(e.target.files||[]);
  $('fileList').textContent=chosenFileList.length?chosenFileList.map(f=>f.name).join(' · '):'尚未选择文件。';
- $('local').disabled=!chosenFileList.some(f=>/\.(skel|json)$/i.test(f.name))||!chosenFileList.some(f=>/\.atlas$/i.test(f.name));$('saveLocal').disabled=$('local').disabled;
+ const complete=chosenFileList.some(f=>/\.(skel|json)$/i.test(f.name))&&chosenFileList.some(f=>/\.atlas$/i.test(f.name));
+ $('saveLocal').disabled=!complete;
+ if(!complete)return;
+ cancelCharacterDownload();
+ try{status('正在读取本地动画素材…');await playPack(await preparePack(chosenFileList))}
+ catch(err){status('本地动画无法播放：'+(err.message||String(err)),true)}
 };
 function toDataUri(file){return new Promise((resolve,reject)=>{const r=new FileReader;r.onload=()=>resolve(r.result);r.onerror=()=>reject(r.error);r.readAsDataURL(file)})}
 function basename(s){return s.replace(/\\/g,'/').split('/').pop()}
@@ -583,10 +587,15 @@ function playPack(pack){
  return show({skeleton:pack.skeleton,atlas:pack.atlas,rawDataURIs:pack.rawDataURIs,premultipliedAlpha:!String(pack.id||'').startsWith('bluearchive-')},'动态角色 · '+pack.id)
 }
 $('saveLocal').onclick=async()=>{try{status('正在保存到浏览器本地缓存…');const pack=await preparePack(chosenFileList);await dbAction('readwrite',s=>s.put(pack));await refreshSaved();status('已保存 '+pack.id+'。以后可直接从“已保存的本地动画包”加载，无须重新选择素材文件。')}catch(e){status('保存失败：'+e.message,true)}};
-$('savedPacks').onchange=()=>{$('playSaved').disabled=!$('savedPacks').value;$('deleteSaved').disabled=!$('savedPacks').value};
-$('playSaved').onclick=async()=>{cancelCharacterDownload();try{const pack=await dbAction('readonly',s=>s.get($('savedPacks').value));if(!pack)throw Error('素材包不存在');playPack(pack)}catch(e){status('本地素材播放失败：'+e.message,true)}};
+$('savedPacks').onchange=async()=>{
+ const id=$('savedPacks').value;
+ $('deleteSaved').disabled=!id;
+ if(!id)return;
+ cancelCharacterDownload();
+ try{status('正在读取已保存动画包…');const pack=await dbAction('readonly',s=>s.get(id));if(!pack)throw Error('素材包不存在');await playPack(pack)}
+ catch(err){status('本地素材播放失败：'+(err.message||String(err)),true)}
+};
 $('deleteSaved').onclick=async()=>{const id=$('savedPacks').value;if(!id)return;if(!confirm('删除本机保存的动画素材包：'+id+'？'))return;try{await dbAction('readwrite',s=>s.delete(id));await refreshSaved();status('已删除本机动画素材包 '+id)}catch(e){status('删除失败：'+e.message,true)}};
-$('local').onclick=async()=>{cancelCharacterDownload();try{status('正在读取本地动画文件…');const pack=await preparePack(chosenFileList);await playPack(pack)}catch(e){status('本地动画无法播放：'+(e.message||String(e)),true)}};
 $('version').onchange=()=>{
  if(loadedVersion&&loadedVersion!==$('version').value){
   cancelCharacterDownload();

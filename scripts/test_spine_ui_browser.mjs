@@ -15,6 +15,7 @@ try{
   if(await page.locator('.advanced-tools').evaluate(el=>el.open))throw Error('Advanced tools are expanded by default');
   await page.selectOption('#gameFilter','browndust2');
   if(await page.locator('#nikke').count())throw Error('Main play button must not exist');
+  if(await page.locator('#playSaved, #local').count())throw Error('Advanced play buttons still exist');
   await page.selectOption('#characters','bd2-char000201');
   const selected=await page.evaluate(()=>({
    url:new URL(location.href).searchParams.get('id'),

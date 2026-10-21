@@ -28,6 +28,7 @@ try{
    const status=await page.locator('#status').textContent();
    result.playerStatus=status;
    if(!status.startsWith('正在播放：'))throw Error(status);
+   if(await page.locator('#player button').count())throw Error('Embedded Spine player still contains a play button');
    const canvas=page.locator('#player canvas').first();
    await canvas.waitFor({timeout:15000});
    const rect=await canvas.evaluate(c=>({width:c.width,height:c.height}));
