@@ -53,6 +53,22 @@ try{
   if((await pilotCard.locator('small').textContent()).includes('bd2-char'))throw Error('Raw model ID is cluttering the character card');
   const cards=page.locator('#characterCards .character-card');
   if(await cards.count()!==209)throw Error('Expected all 209 BD2 costumes, got '+await cards.count());
+  // Catch the CSS-grid regression where 240+ buttons shrink to 16px
+  // inside a flex-column sidebar, hiding all thumbnails and text.
+  const tileMetrics=await cards.first().evaluate(card=>{
+   const img=card.querySelector('img, .fallback');
+   const name=card.querySelector('.nm');
+   const cardBox=card.getBoundingClientRect();
+   const imageBox=img?.getBoundingClientRect();
+   const labelBox=name?.getBoundingClientRect();
+   const grid=card.parentElement;
+   return {height:cardBox.height,imageHeight:imageBox?.height,labelHeight:labelBox?.height,
+    labelVisible:!!labelBox&&labelBox.top>=cardBox.top-1&&labelBox.bottom<=cardBox.bottom+1,
+    autoRows:getComputedStyle(grid).gridAutoRows,scrollHeight:grid.scrollHeight,clientHeight:grid.clientHeight};
+  });
+  if(tileMetrics.height<145||tileMetrics.imageHeight<85||!tileMetrics.labelVisible||!tileMetrics.autoRows.includes('max-content'))
+   throw Error('Character cards collapsed, clipped or lost their thumbnails: '+JSON.stringify(tileMetrics));
+
   if(viewport.width>=851){
    const scroller=await page.locator('#characterCards').evaluate(el=>({
     height:el.clientHeight,total:el.scrollHeight,overflow:getComputedStyle(el).overflowY
