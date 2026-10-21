@@ -21,7 +21,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "data" / "spine-characters.json"
 REPORT = ROOT / "data" / "spine-audit.json"
 SUPPORTED = {"3.8", "4.0", "4.1", "4.2"}
-HEADERS = {"User-Agent": "WinterCG-Spine-BatchAudit/1.0", "Accept": "*/*"}
+HEADERS = {"User-Agent": "AnimeCharacterArchive-Spine-BatchAudit/1.0", "Accept": "*/*"}
 VERSION_PATTERN = re.compile(r"^\d+\.\d+(?:\.\d+)?(?:[-a-zA-Z0-9.]*)?$")
 PAGE_PATTERN = re.compile(r"\.(?:png|webp|jpe?g)$", re.I)
 
