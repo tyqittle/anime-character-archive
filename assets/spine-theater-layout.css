@@ -125,3 +125,6 @@
 .stage:fullscreen .stage-hint{display:none}
 .stage:fullscreen .stage-toolbar,.stage:fullscreen .head,.stage:fullscreen #status{flex:none}
 @media(prefers-reduced-motion:reduce){.load-spinner{animation:none}#player canvas.portrait-canvas{will-change:auto}}
+
+/* Isolated Cubism stage uses exactly the same canvas footprint as Spine. */
+#player .azurlane-live2d-frame{display:block;position:absolute;inset:0;width:100%;height:100%;border:0;background:#142238}
