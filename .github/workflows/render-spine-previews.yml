@@ -61,7 +61,7 @@ jobs:
           merge-multiple: true
       - name: Update local branch before replacing the exact catalog
         run: git pull --ff-only origin main
-      - name: Validate and publish every successful matching NIKKE frame
+      - name: Validate and publish actual matching Blue Archive/KonoSuba frames
         run: python3 scripts/apply_spine_previews.py /tmp/spine-previews --incremental
       - name: Commit locally stored preview frames and references
         run: |
