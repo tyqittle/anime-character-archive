@@ -3,7 +3,7 @@
   "gameId": "browndust2",
   "pinnedSourceCommit": "94a3ac97b8fab7ee054e0826de7d912de0a233ef",
   "source": "https://github.com/Zormolo/Brown-Dust-2-Assets",
-  "note": "全身角色Spine试播候选。已核对同名skel、atlas、png及图集单页贴图引用；真实浏览器播放仍需验证。禁止使用未配对预览图。",
+  "note": "All five portrait previews were rendered in Chromium directly from the listed matching full-character skeleton, atlas and textures; each animation was played before capture.",
   "characters": [
     {
       "id": "bd2-char000201",
@@ -14,10 +14,10 @@
       "costume": "Knight_of_Blood",
       "base": "https://raw.githubusercontent.com/Zormolo/Brown-Dust-2-Assets/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Justia/Knight_of_Blood/char000201",
       "spineVersion": "4.1",
-      "versionUnverified": true,
-      "preview": "",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback"
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/browndust2-bd2-char000201.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "status": "verified-playback"
     },
     {
       "id": "bd2-char000701",
@@ -28,10 +28,10 @@
       "costume": "Dimension_Witch",
       "base": "https://raw.githubusercontent.com/Zormolo/Brown-Dust-2-Assets/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eclipse/Dimension_Witch/char000701",
       "spineVersion": "4.1",
-      "versionUnverified": true,
-      "preview": "",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback"
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/browndust2-bd2-char000701.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "status": "verified-playback"
     },
     {
       "id": "bd2-char061302",
@@ -42,10 +42,10 @@
       "costume": "Bright_Moon",
       "base": "https://raw.githubusercontent.com/Zormolo/Brown-Dust-2-Assets/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Dalvi/Bright_Moon/char061302",
       "spineVersion": "4.1",
-      "versionUnverified": true,
-      "preview": "",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback"
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/browndust2-bd2-char061302.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "status": "verified-playback"
     },
     {
       "id": "bd2-char002401",
@@ -56,10 +56,10 @@
       "costume": "Adventurer_of_the_Unknown",
       "base": "https://raw.githubusercontent.com/Zormolo/Brown-Dust-2-Assets/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Diana/Adventurer_of_the_Unknown/char002401",
       "spineVersion": "4.1",
-      "versionUnverified": true,
-      "preview": "",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback"
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/browndust2-bd2-char002401.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "status": "verified-playback"
     },
     {
       "id": "bd2-char066401",
@@ -70,10 +70,11 @@
       "costume": "The_Fallen",
       "base": "https://raw.githubusercontent.com/Zormolo/Brown-Dust-2-Assets/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Angelica/The_Fallen/char066401",
       "spineVersion": "4.1",
-      "versionUnverified": true,
-      "preview": "",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback"
+      "versionUnverified": false,
+      "preview": "./assets/animation-previews/browndust2-bd2-char066401.webp",
+      "previewSource": "matching-spine-animation-frame",
+      "status": "verified-playback"
     }
-  ]
+  ],
+  "previewGeneratedAt": "2026-10-21"
 }
