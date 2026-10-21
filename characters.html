@@ -224,7 +224,7 @@ document.addEventListener('keydown',function(e){if(!$('viewer').open)return;if(e
 var searchDelay=null;
 ['query','rarityFilter','kindFilter','sort'].forEach(function(id){$(id).addEventListener(id==='query'?'input':'change',function(){page=1;if(id==='query'){clearTimeout(searchDelay);searchDelay=setTimeout(function(){render()},140)}else{clearTimeout(searchDelay);render()}})});
 $('gameFilter').addEventListener('change',function(){selectedGroup=this.value==='all'?'all':'game:'+this.value;page=1;render();updateGroupNav()});
-fetch('./data/characters.json?v=fast-thumbs-20261020',{cache:'default'}).then(function(r){if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(function(db){
+fetch('./data/characters.json?v=wuwa-fullbody-20261021',{cache:'default'}).then(function(r){if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(function(db){
  if(!Array.isArray(db.characters))throw Error('索引数据格式错误');
  items=db.characters.filter(function(c){return c&&c.id&&c.gameId&&c.characterKey&&c.kind==='full'&&/^\.\/assets\/portraits\/[a-zA-Z0-9_-]+\.(?:png|webp)$/.test(c.image)});
  $('totalStat').textContent=items.length;
