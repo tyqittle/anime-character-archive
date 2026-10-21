@@ -12,6 +12,37 @@ try{
   page.on('pageerror',e=>errors.push(e.message));
   await page.goto('http://127.0.0.1:8765/spine.html',{waitUntil:'domcontentloaded',timeout:30000});
   await page.waitForFunction(()=>typeof allCharacters!=='undefined'&&allCharacters.some(x=>x.id==='bd2-char000201'),null,{timeout:20000});
+  // The desktop layout is a fixed one-screen workspace, never a page scroller.
+  // The card grid remains independently scrollable even with hundreds of skins.
+  const layout=await page.evaluate(()=>{
+   const box=id=>{const r=document.querySelector(id).getBoundingClientRect();return {top:r.top,bottom:r.bottom,height:r.height,width:r.width}};
+   const list=document.querySelector('#characterCards');
+   const sidebar=document.querySelector('.side');
+   const nav=document.querySelector('.side-sitebar');
+   return {
+    viewportH:innerHeight,viewportW:innerWidth,
+    documentH:document.documentElement.scrollHeight,
+    bodyH:document.body.scrollHeight,
+    scrollY:window.scrollY,
+    navInSidebar:sidebar.contains(nav),
+    side:box('.side'),stage:box('.stage'),player:box('#player'),
+    listClientH:list.clientHeight,listScrollH:list.scrollHeight,
+    bodyOverflowY:getComputedStyle(document.body).overflowY
+   };
+  });
+  if(!layout.navInSidebar)throw Error('Top navigation did not move into the left sidebar');
+  if(viewport.width>=851){
+   if(layout.documentH>layout.viewportH+2||layout.bodyH>layout.viewportH+2)
+    throw Error('Desktop still has document scrolling: '+JSON.stringify(layout));
+   if(layout.side.bottom>layout.viewportH+1||layout.stage.bottom>layout.viewportH+1)
+    throw Error('Desktop sidebar or stage escaped the viewport: '+JSON.stringify(layout));
+   if(layout.player.height<220)
+    throw Error('Desktop stage player has insufficient remaining height: '+JSON.stringify(layout));
+   if(layout.bodyOverflowY!=='hidden')
+    throw Error('Desktop document scrolling was not locked: '+JSON.stringify(layout));
+  }else if(layout.player.height<290){
+   throw Error('Mobile animation stage was collapsed: '+JSON.stringify(layout));
+  }
   if(await page.locator('.advanced-tools').evaluate(el=>el.open))throw Error('Advanced tools are expanded by default');
   await page.selectOption('#gameFilter','browndust2');
   if(await page.locator('#nikke').count())throw Error('Main play button must not exist');
@@ -22,6 +53,14 @@ try{
   if((await pilotCard.locator('small').textContent()).includes('bd2-char'))throw Error('Raw model ID is cluttering the character card');
   const cards=page.locator('#characterCards .character-card');
   if(await cards.count()!==209)throw Error('Expected all 209 BD2 costumes, got '+await cards.count());
+  if(viewport.width>=851){
+   const scroller=await page.locator('#characterCards').evaluate(el=>({
+    height:el.clientHeight,total:el.scrollHeight,overflow:getComputedStyle(el).overflowY
+   }));
+   if(scroller.total<=scroller.height+30||!['auto','scroll'].includes(scroller.overflow))
+    throw Error('Character gallery does not have its own scroll region: '+JSON.stringify(scroller));
+  }
+
   const imgs=page.locator('#characterCards img');
   if(await imgs.count()!==209)throw Error('All 209 costumes must show exact-model thumbnails, not placeholders');
   for(const index of [0,1,2,3,4,50,104,153,201,208]){
