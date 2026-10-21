@@ -8,15 +8,15 @@
     },
     "girlsfrontline": {
       "indexed": 297,
-      "captured": 212
+      "captured": 246
     },
     "konosuba": {
       "indexed": 61,
-      "captured": 51
+      "captured": 56
     }
   },
-  "newCapturesInThisRun": 600,
-  "previousCapturesRetained": 0,
+  "newCapturesInThisRun": 638,
+  "previousCapturesRetained": 1,
   "status": "only actual nonblank browser frames linked to the same model id",
   "unverifiedNotice": "No preview is assigned to models that did not pass capture; index presence is not universal playback proof."
 }
