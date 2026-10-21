@@ -3,7 +3,7 @@
 - 项目：**Anime Character Archive（次元角色档案馆）**
 - 页面：[`spine.html`](./spine.html)
 - 动画索引：[`data/spine-characters.json`](./data/spine-characters.json)
-- 当前索引：**545 条**（NIKKE **514** 条、蔚蓝档案 **31** 条；其中 NIKKE 新增 412 条模型目录记录，播放与预览需要逐条验证）。
+- 当前动态索引 **819 条**：NIKKE **514**、蔚蓝档案回忆大厅 **179**、《为美好的世界献上祝福！Fantastic Days》**126**；另《棕色尘埃2》209 条独立索引，总计 **1028** 条。目录导入不代表全部通过播放验证。
 - 客户端运行时：Esoteric Software Spine Web Player，按骨骼版本选择兼容的运行环境。
 - 资源流程：读取索引 → 从第三方下载骨骼、Atlas、贴图 → 浏览器中渲染；部分下载结果可以进入浏览器 IndexedDB 缓存。
 - 兼容性：播放器使用 `binaryUrl` / `jsonUrl` 与 `atlasUrl`，不要误改回不兼容的初始化参数。
@@ -30,3 +30,10 @@
 - CI 使用 40 个分片增量生成，并在发布后写入 `data/nikke-preview-audit.json`；仅成功的动画帧才进入 `assets/animation-previews/`。
 - 未核对真实名称的角色/皮肤以编号表示，不宣称已经完成命名；数据仍依赖第三方源站的骨骼/贴图，尚未本地镜像。
 - 扫描及排除记录详见 `data/nikke-import-audit.json`。
+
+## 其他游戏 Spine 动态资源扩充（2026-10-21）
+
+- **蔚蓝档案**：交叉核对 Schale-Archive 的 Spine_Lobbies/Spr 文件树，新增148套骨骼、Atlas及纹理齐全的回忆大厅模型，保留原有31套，共179套；尚未完成新增模型的逐一播放验收。
+- **为美好的世界献上祝福！Fantastic Days**：导入126套 Spine 3.8.95 JSON 骨骼战斗动画，覆盖67个角色名称；资源来自 HaiKonofanDesu/konofan-assets-jp-sortet 固定提交 869daaf357ba3622b4a792350b258499cdb78468，索引另有完整图集路径。这是**战斗小人动画**，不是全身原画立绘。
+- 播放器新增 3.8 JSON 骨骼加载分支（源文件扩展名 txt），并保留原本 3.8/4.x 骨骼版本自动识别。
+- 新索引与真实预览是两项独立验证。自动渲染只为当前模型生成专属 WebP 和 SHA-256 记录，失败项不能用其他角色/皮肤图片代替；原始文件仍从外部源站下载。
