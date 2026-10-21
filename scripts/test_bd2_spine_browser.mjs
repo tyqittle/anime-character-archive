@@ -40,6 +40,14 @@ try{
    await page.locator('#resetView').click();
    const reset=await canvas.evaluate(c=>c.style.transform);
    if(!reset.includes('scale(1)'))throw Error('Reset-view button failed: '+reset);
+   await canvas.evaluate(c=>{
+    c.dispatchEvent(new PointerEvent('pointerdown',{pointerId:71,pointerType:'mouse',button:0,clientX:100,clientY:100,bubbles:true}));
+    c.dispatchEvent(new PointerEvent('pointermove',{pointerId:71,pointerType:'mouse',button:0,clientX:136,clientY:121,bubbles:true}));
+    c.dispatchEvent(new PointerEvent('pointerup',{pointerId:71,pointerType:'mouse',button:0,clientX:136,clientY:121,bubbles:true}));
+   });
+   const panned=await canvas.evaluate(c=>c.style.transform);
+   if(!panned.includes('translate(36px,21px)'))throw Error('Dragging did not pan the character: '+panned);
+   await page.locator('#resetView').click();
    if(rect.width<200||rect.height<200)throw Error('Canvas is too small: '+JSON.stringify(rect));
    await page.waitForTimeout(500);
    const a=PNG.sync.read(await page.locator('#player').screenshot());
