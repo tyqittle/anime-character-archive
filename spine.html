@@ -36,7 +36,7 @@ footer{padding:24px;text-align:center;color:#92a8bb;font-size:12px}
  </nav>
  <div class="side-pageintro"><h1>动态立绘剧场</h1><p>选择角色 · 自动播放 · 自由缩放</p></div>
 </div>
-<h2 class="side-section-title">角色动画</h2><label for="gameFilter">选择游戏</label><select id="gameFilter"><option value="all">全部游戏</option><option value="nikke">胜利女神：妮姬</option><option value="bluearchive">蔚蓝档案（回忆大厅）</option><option value="browndust2">棕色尘埃2（全身动态立绘）</option></select><div id="bd2Group" hidden><label for="bd2CharacterFilter">按角色查看服装</label><select id="bd2CharacterFilter"><option value="">全部角色</option></select></div><label for="characterSearch">搜索角色（中文、英文或编号）</label><input id="characterSearch" type="search" placeholder="例如：安妮丝 / Rapi / c012"><label for="characters">当前选中的角色</label><select id="characters"><option value="">请选择角色…</option></select><div id="characterCards" class="character-cards" aria-label="角色图片选择列表" tabindex="0"></div><p class="note" id="selectionNote">点击卡片或从下拉框选中角色，即可自动播放。</p><p class="note">点击角色即可播放；骨骼和贴图按需读取，首次加载可能稍慢。遇到错误可展开高级工具检查资源。</p><details class="advanced-tools"><summary>高级工具 · 资源检测、版本和本地导入</summary><div class="advanced-body"><button id="testUrls" type="button">检测选中角色的资源连通性</button><hr><h2>播放测试</h2>
+<h2 class="side-section-title">角色动画</h2><label for="gameFilter">选择游戏</label><select id="gameFilter"><option value="all">全部游戏</option><option value="nikke">胜利女神：妮姬</option><option value="bluearchive">蔚蓝档案（回忆大厅）</option><option value="browndust2">棕色尘埃2（全身动态立绘）</option><option value="konosuba">为美好的世界献上祝福！（战斗动画）</option></select><div id="bd2Group" hidden><label for="bd2CharacterFilter">按角色查看服装</label><select id="bd2CharacterFilter"><option value="">全部角色</option></select></div><label for="characterSearch">搜索角色（中文、英文或编号）</label><input id="characterSearch" type="search" placeholder="例如：安妮丝 / Rapi / c012"><label for="characters">当前选中的角色</label><select id="characters"><option value="">请选择角色…</option></select><div id="characterCards" class="character-cards" aria-label="角色图片选择列表" tabindex="0"></div><p class="note" id="selectionNote">点击卡片或从下拉框选中角色，即可自动播放。</p><p class="note">点击角色即可播放；骨骼和贴图按需读取，首次加载可能稍慢。遇到错误可展开高级工具检查资源。</p><details class="advanced-tools"><summary>高级工具 · 资源检测、版本和本地导入</summary><div class="advanced-body"><button id="testUrls" type="button">检测选中角色的资源连通性</button><hr><h2>播放测试</h2>
 <label for="version">骨骼版本</label><select id="version"><option value="3.8">Spine 3.8（兼容性待验证）</option><option value="4.0">Spine 4.0</option><option value="4.1">Spine 4.1</option><option value="4.2">Spine 4.2</option></select>
 <button id="demo" class="primary">运行官方渲染自检</button>
 <p class="note">演示资源由 Spine 官方提供，用于核对播放器是否能真正渲染动作；<strong>不是 NIKKE 人物</strong>。</p>
@@ -152,7 +152,7 @@ document.addEventListener('fullscreenchange',()=>{
  $('fullscreenStage').setAttribute('aria-label',document.fullscreenElement?'退出全屏':'全屏观看');
 });
 
-const manifestUrl='./data/spine-characters.json?v=20261021-nikke514';
+const manifestUrl='./data/spine-characters.json?v=20261021-newgames-v1';
 const bd2CatalogUrl='./data/spine-bd2-characters.json?v=20261021-bulk209';
 const embeddedCharacters=[{"id":"c010","name":"Rapi","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010/c010_00"},{"id":"c011","name":"Neon","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c011/c011_00"},{"id":"c012","name":"Anis","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c012/c012_00"},{"id":"c013","name":"Marian","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c013/c013_00"},{"id":"c015","name":"Anis: Sparkling Summer","spineVersion":"4.1","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c015/c015_00"},{"id":"c040","name":"D","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c040/c040_00"},{"id":"c060","name":"Belorta","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c060/c060_00"},{"id":"c070","name":"Brid","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070/c070_00"},{"id":"c072","name":"Diesel","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c072/c072_00"},{"id":"c080","name":"Centi","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c080/c080_00"},{"id":"c090","name":"Emma","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090/c090_00"},{"id":"c101","name":"Drake","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c101/c101_00"},{"id":"c110","name":"Crow","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c110/c110_00"},{"id":"c112","name":"Viper","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c112/c112_00"},{"id":"c170","name":"Privaty","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c170/c170_00"},{"id":"c180","name":"Guillotine","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c180/c180_00"},{"id":"c181","name":"Maiden","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c181/c181_00"},{"id":"c191","name":"Alice","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c191/c191_00"},{"id":"c200","name":"Rupee","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c200/c200_00"},{"id":"c203","name":"Rupee: Winter Shopper","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c203/c203_00"},{"id":"c222","name":"Scarlet","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c222/c222_00"},{"id":"c230","name":"Harran","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c230/c230_00"},{"id":"c233","name":"Dorothy","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c233/c233_00"},{"id":"c260","name":"Modernia","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c260/c260_00"},{"id":"c270","name":"Blanc","spineVersion":"4.1","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c270/c270_00"},{"id":"c280","name":"Rosanna","spineVersion":"4.1","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c280/c280_00"},{"id":"c282","name":"Sakura","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c282/c282_00"},{"id":"c352","name":"Helm","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c352/c352_00"},{"id":"c353","name":"Helm: Aquamarine","spineVersion":"4.1","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c353/c353_00"},{"id":"c400","name":"Guilty","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c400/c400_00"}];
 // Keep this legacy IndexedDB name intentionally: renaming it would hide previously downloaded Spine packs in users' browsers.
@@ -426,9 +426,12 @@ async function show(options,title,onError){
  }catch(e){stopWatchdog();if(attempt===currentAttempt)status('播放器初始化失败：'+(e.message||String(e)),true)}
 }
 function urls(c,mirror){
- if(c.gameId==='bluearchive'||c.gameId==='browndust2')return {skeleton:c.base+'.skel',atlas:c.base+'.atlas',base:c.base};
+ // Explicit JSON skeleton URL enables Spine 3.8 game exports stored as .txt.
+ if(c.skeletonFormat==='json'&&c.skeletonUrl&&c.atlasUrl)
+  return {skeleton:c.skeletonUrl,atlas:c.atlasUrl,base:c.base,format:'json'};
+ if(c.gameId==='bluearchive'||c.gameId==='browndust2')return {skeleton:c.base+'.skel',atlas:c.base+'.atlas',base:c.base,format:'skel'};
  const base=mirror==='legacy'?'https://nikke-db-legacy.pages.dev/l2d/'+c.id+'/'+c.id+'_00':c.base;
- return {skeleton:base+'.skel',atlas:base+'.atlas',base};
+ return {skeleton:base+'.skel',atlas:base+'.atlas',base,format:'skel'};
 }
 async function downloadBlob(url,timeout=24000,externalSignal){
  const controller=new AbortController(),onAbort=()=>controller.abort();
@@ -467,16 +470,24 @@ async function detectSpineVersion(blob){
 async function downloadPack(c,mirror,signal,isCurrent=()=>true){
  // Detect the actual export version for NIKKE and Blue Archive before selecting a runtime.
  const paths=urls(c,mirror),stem=c.base.split('/').pop();
- const [skelBlob,atlasBlob]=await Promise.all([downloadBlob(paths.skeleton,24000,signal),downloadBlob(paths.atlas,24000,signal)]);
+ const [skelBlob,atlasBlob]=await Promise.all([downloadBlob(paths.skeleton,45000,signal),downloadBlob(paths.atlas,24000,signal)]);
  if(skelBlob.size<100||atlasBlob.size<20)throw Error('骨骼或图集文件大小异常');
- const detected=await detectSpineVersion(skelBlob);
+ const isJSON=paths.format==='json';
+ let detected,jsonText='';
+ if(isJSON){
+  jsonText=await skelBlob.text();
+  const parsed=JSON.parse(jsonText),version=String(parsed.skeleton?.spine||'');
+  if(!/^\d+\.\d+/.test(version))throw Error('JSON 骨骼缺少有效的 Spine 版本');
+  detected={version,majorMinor:version.split('.').slice(0,2).join('.')};
+ }else detected=await detectSpineVersion(skelBlob);
  if(!['3.8','4.0','4.1','4.2'].includes(detected.majorMinor))throw Error('不支持的骨骼版本 '+detected.version);
  if(isCurrent())status('检测到 '+c.name+' 的 Spine 版本：'+detected.version);
  const atlasText=(await atlasBlob.text()).replace(/^\uFEFF/,'');
  const pages=imagePages(atlasText);
  if(!pages.length)throw Error('图集中没有图片文件名');
  const data={};
- data[stem+'.skel']=await blobToUri(skelBlob);
+ const skeletonName=stem+(isJSON?'.json':'.skel');
+ data[skeletonName]=isJSON?'data:application/json,'+jsonText:await blobToUri(skelBlob);
  data[stem+'.atlas']='data:text/plain,'+atlasText;
  // Bounded parallelism prevents multi-page textures from waiting on one
  // another, without overwhelming a mobile browser with concurrent downloads.
@@ -493,7 +504,7 @@ async function downloadPack(c,mirror,signal,isCurrent=()=>true){
  }
  await Promise.all(Array.from({length:Math.min(3,pages.length)},()=>fetchTexturePages()));
  if(signal?.aborted)throw Error('下载已取消');
- return {id:(c.gameId||'nikke')+'-'+c.id,version:detected.majorMinor,exportVersion:detected.version,headerChecked:true,skeleton:stem+'.skel',atlas:stem+'.atlas',rawDataURIs:data};
+ return {id:(c.gameId||'nikke')+'-'+c.id,version:detected.majorMinor,exportVersion:detected.version,headerChecked:true,skeleton:skeletonName,atlas:stem+'.atlas',rawDataURIs:data};
 }
 function blobToUri(blob){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(reader.error);reader.readAsDataURL(blob)})}
 let sequence=0,activeCharacterAbort=null;
@@ -508,7 +519,7 @@ async function playCharacter(c){
  const current=sequence,controller=new AbortController();
  activeCharacterAbort=controller;
  $('title').textContent=(c.zh?c.zh+' · ':'')+c.name;
- $('stageContext').textContent=c.gameId==='browndust2'?'棕色尘埃2 · 全身角色':c.gameId==='bluearchive'?'蔚蓝档案 · 回忆大厅':'胜利女神：妮姬 · Spine';
+ $('stageContext').textContent=c.gameId==='browndust2'?'棕色尘埃2 · 全身角色':c.gameId==='bluearchive'?'蔚蓝档案 · 回忆大厅':c.gameId==='konosuba'?'为美好的世界献上祝福！· 战斗动画':'胜利女神：妮姬 · Spine';
  // Do not leave the previously selected character playing while downloading
  // a different skeleton; the stage now shows a dedicated loading notice.
  clearPlayer();
