@@ -6,8 +6,8 @@
   "sourceIndex": "https://github.com/Nikke-db/Nikke-db.github.io/blob/main/js/json/l2d.json",
   "sourceRepository": "https://github.com/Nikke-db/Nikke-db.github.io",
   "counts": {
-    "total": 468,
-    "full": 468
+    "total": 466,
+    "full": 466
   },
   "characters": [
     {
@@ -8723,23 +8723,6 @@
       "thumb": "./assets/thumbs/wutheringwaves-jinhsi.webp"
     },
     {
-      "id": "wutheringwaves-yinlin",
-      "name": "吟霖",
-      "zh": "吟霖",
-      "nameEn": "Yinlin",
-      "gameId": "wutheringwaves",
-      "game": "鸣潮",
-      "characterKey": "吟霖",
-      "groupId": "",
-      "kind": "full",
-      "image": "./assets/portraits/wutheringwaves-yinlin.webp",
-      "source": "https://github.com/TomyJan/WutheringWaves-UIResources/tree/main/UIResources/UiLuckdraw/Image",
-      "originalImage": "https://raw.githubusercontent.com/TomyJan/WutheringWaves-UIResources/3.7/UIResources/UiLuckdraw/Image/T_RoleImgyinlin_UI.png",
-      "variant": false,
-      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/wutheringwaves-yinlin.webp"
-    },
-    {
       "id": "wutheringwaves-shorekeeper",
       "name": "守岸人",
       "zh": "守岸人",
@@ -8755,23 +8738,6 @@
       "variant": false,
       "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
       "thumb": "./assets/thumbs/wutheringwaves-shorekeeper.webp"
-    },
-    {
-      "id": "wutheringwaves-jiyan",
-      "name": "忌炎",
-      "zh": "忌炎",
-      "nameEn": "Jiyan",
-      "gameId": "wutheringwaves",
-      "game": "鸣潮",
-      "characterKey": "忌炎",
-      "groupId": "",
-      "kind": "full",
-      "image": "./assets/portraits/wutheringwaves-jiyan.webp",
-      "source": "https://github.com/TomyJan/WutheringWaves-UIResources/tree/3.7/UIResources/UiLuckdraw/Image",
-      "originalImage": "https://raw.githubusercontent.com/TomyJan/WutheringWaves-UIResources/3.7/UIResources/UiLuckdraw/Image/T_RoleImgjiyan_UI.png",
-      "variant": false,
-      "license": "游戏角色美术版权归原权利人；来源可访问不意味着获得再分发授权",
-      "thumb": "./assets/thumbs/wutheringwaves-jiyan.webp"
     },
     {
       "id": "wutheringwaves-camellya",
