@@ -15,7 +15,7 @@
 | `characters.html` | 多游戏静态立绘图鉴：按游戏与角色分类、搜索、筛选、收藏、大图浏览 |
 | `spine.html` | Spine 动态角色浏览与播放 |
 | `data/characters.json` | 静态立绘记录、游戏分类、原图尺寸和素材来源 |
-| `data/spine-characters.json` | 原有 NIKKE / 蔚蓝档案 Spine 索引 |
+| `data/spine-characters.json` | NIKKE、蔚蓝档案及《为美好的世界献上祝福！》Spine 索引 |
 | `data/spine-bd2-characters.json` | 棕色尘埃2共 87 位角色、209 套全身动态服装 |
 | `data/spine-bd2-pilot.json` | 历史首批五套试播记录 |
 | `assets/portraits/` | 已收录的本地高清立绘（PNG / WebP） |
@@ -57,7 +57,7 @@
 
 ## 动态立绘
 
-`data/spine-characters.json` 当前包含 **545 条 Spine 索引**：NIKKE 514 条模型目录、蔚蓝档案 31 条。它们是待播放的动画资源索引，**不能据此推断全部动画已通过实际播放验证**。Spine 骨骼、Atlas 和贴图可能需要访问第三方来源；部分下载数据会缓存到浏览器 IndexedDB，本站并未全面镜像这些第三方动画文件。 为避免重新下载已缓存的动画包，播放器内部保留历史 IndexedDB 数据库名称作为兼容标识；它不是旧仓库网址，不应随仓库更名直接清除。
+`data/spine-characters.json` 当前包含 **819 条 Spine 索引**：NIKKE 514 条、蔚蓝档案回忆大厅 179 条、《为美好的世界献上祝福！Fantastic Days》战斗动画 126 条。它们是待播放的动画资源索引，**不能据此推断全部动画已通过实际播放验证**。Spine 骨骼、Atlas 和贴图可能需要访问第三方来源；部分下载数据会缓存到浏览器 IndexedDB，本站并未全面镜像这些第三方动画文件。 为避免重新下载已缓存的动画包，播放器内部保留历史 IndexedDB 数据库名称作为兼容标识；它不是旧仓库网址，不应随仓库更名直接清除。
 
 ### 动态立绘播放器：观赏模式（2026-10-21）
 
@@ -75,9 +75,16 @@
 
 已使用 GitHub Actions 的 12 个并行 Chromium 分片逐套载入骨骼动画，**209/209 套成功渲染对应人物预览**，并生成 **209 张一一对应的 WebP 缩略图**保存至 `assets/animation-previews/`（约 1.1 MB）。失败清单和核验数记录在 `data/bd2-preview-audit.json`。预览生成器为 `scripts/generate_bd2_bulk_previews.mjs`，发布验证脚本为 `scripts/merge_bd2_bulk_previews.mjs`。这属于批量自动渲染验证，并不代表对每一个动作和贴图细节都逐张人工审美审核。
 
-《棕色尘埃2》使用已经校正的 Straight Alpha 贴图混合模式，避免脸、手和腿部的白色边缘伪影。**原始模型骨骼/Atlas/贴图仍从来源 GitHub 按需加载**，本仓库存放完整索引及实际模型截图，而不是将数百 MB 的第三方版权素材整包转存。当前 209 条与 NIKKE 514 条、蔚蓝档案 31 条合计为 **754 条动态索引**，其中蔚蓝档案主要为回忆大厅动画而非全身角色立绘。
+《棕色尘埃2》使用已经校正的 Straight Alpha 贴图混合模式，避免脸、手和腿部的白色边缘伪影。**原始模型骨骼/Atlas/贴图仍从来源 GitHub 按需加载**，本仓库存放完整索引及实际模型截图，而不是将数百 MB 的第三方版权素材整包转存。当前 209 条与 NIKKE 514 条、蔚蓝档案 179 条、KonoSuba 126 条合计为 **1028 条动态索引**，其中蔚蓝档案主要为回忆大厅动画而非全身角色立绘。
 
 [更多说明：SPINE_STATUS.md](./SPINE_STATUS.md)
+
+### 其他游戏 Spine 扩容（2026-10-21）
+
+- **蔚蓝档案**：经 Schale-Archive 原始 Spine_Lobbies/Spr 目录逐个核对骨骼、Atlas 与贴图，新增 148 条回忆大厅模型，合计 **179 条**。旧 31 条的真实专属动画预览继续保留，新条目需要自动渲染验收。
+- **为美好的世界献上祝福！Fantastic Days**：从 [HaiKonofanDesu 的素材仓库](https://github.com/HaiKonofanDesu/konofan-assets-jp-sortet) 固定版本接入 67 个有名角色的 **126 套 Spine 3.8.95 战斗动作**（如阿库娅、惠惠及联动角色）。这是游戏战斗小人动画，**不是全身高清动态原画**，故独立分类标注，不与 NIKKE 等大型人物立绘混淆。源 JSON 骨骼实际存储为 .txt，播放器现可检测 JSON 骨骼版本并加载其相同目录的 Atlas/PNG。
+- 详见 `data/other-games-import-audit.json`。**目录和格式检查不代表所有模型已播放成功。** Chromium 自动截图只会将真正播放成功的对应模型帧存入 `assets/animation-previews/`，失败或未检查模型不借用其他角色预览图。
+- Spine 原始文件仍通过所列第三方 GitHub 来源按需读取；动画预览是本站本地托管的裁切 WebP。
 
 ### NIKKE：514 套角色及皮肤 Spine 源目录（2026-10-21）
 
