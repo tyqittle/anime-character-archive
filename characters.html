@@ -41,28 +41,38 @@ body{background:radial-gradient(ellipse 56% 32% at 85% -5%,#322d62 0,transparent
 .top{background:#0b1120a8;backdrop-filter:blur(15px)}
 .btn{transition:transform .2s,border-color .2s,background .2s}
 .btn:hover{transform:translateY(-2px);border-color:#a4a0f5}
-</style><link rel="preload" as="fetch" crossorigin="anonymous" href="./data/characters.json?v=zzz-reverse1999-ready-20261021"><link rel="stylesheet" href="./assets/gallery-redesign.css?v=adaptive-modal-20261021">
+</style><link rel="preload" as="fetch" crossorigin="anonymous" href="./data/characters.json?v=zzz-reverse1999-ready-20261021"><link rel="stylesheet" href="./assets/gallery-redesign.css?v=adaptive-modal-20261021"><link rel="stylesheet" href="./assets/archive-shell.css?v=unified-shell-20261021-v1">
 </head>
 <body>
 <div class="shell">
-<aside class="sidebar">
-  <div class="identity"><div class="snow">✦</div><div><div class="brand">次元角色档案馆</div><div class="over">ANIME CHARACTER ARCHIVE</div></div></div>
-  <div class="side-caption">浏览</div>
-  <a class="side-link active" href="./characters.html">✦ <span>角色图鉴</span></a>
-  <a class="side-link" href="./spine.html">▶ <span>动态立绘</span></a>
-  <div class="side-caption">游戏与角色</div>
+<aside class="sidebar archive-sidebar" aria-label="角色图鉴导航">
+  <div class="side-sitebar">
+    <a class="sitebrand" href="./characters.html">✦ 次元角色档案馆</a>
+    <nav class="side-nav" aria-label="站点导航">
+      <a class="selected" href="./characters.html" aria-current="page">角色图鉴</a>
+      <a href="./spine.html">动态立绘</a>
+    </nav>
+    <div class="side-pageintro"><h1>静态立绘图鉴</h1><p>高清立绘 · 分类浏览 · 收藏</p></div>
+  </div>
+  <div class="side-caption archive-rail-title">游戏与角色</div>
   <nav id="sideGroups" aria-label="游戏与角色分类"></nav>
-
 </aside>
-<main class="main">
-  <header class="top"><div class="crumb">CHARACTER ARCHIVE <span class="top-divider">/</span> 角色图鉴</div><div class="top-actions"><a href="#explore" class="btn btn-ghost sm">浏览角色 ↓</a><a href="./spine.html" class="btn btn-ghost sm">动态立绘 ↗</a></div></header>
-  <section class="hero">
-   <div class="hero-content"><div class="over">THE CHARACTER COLLECTION · ALL GAMES</div><h1>角色，跃然眼前。</h1><p>探索不同游戏的角色立绘，发现你喜欢的角色。</p><div class="hero-stat"><span><strong id="totalStat">—</strong>角色立绘</span></div></div>
+<main class="main archive-gallery-main">
+  <header class="top archive-panel-head">
+  <div class="archive-heading"><strong>静态立绘图鉴</strong><small><span id="totalStat">—</span> 张高清角色立绘 · 点击查看原始图片</small></div>
+  <div class="top-actions"><a href="./spine.html" class="btn sm">动态立绘 ↗</a></div>
+</header>
+<details class="archive-extras"><summary>精选角色与素材说明 <span aria-hidden="true">⌄</span></summary>
+<div class="archive-extras-body">
+<section class="hero">
+   <div class="hero-content"><div class="over">THE CHARACTER COLLECTION · ALL GAMES</div><h1>角色，跃然眼前。</h1><p>探索不同游戏的角色立绘，发现你喜欢的角色。</p><div class="hero-stat"><span>跨游戏角色收藏与视觉资料</span></div></div>
    <div class="hero-art" id="heroArt" aria-hidden="true"></div>
   </section>
   <div class="disclaimer">⚑ <strong>素材使用边界：</strong>角色图片来自不同游戏和社区档案，版权归原权利人。静态立绘文件由本站保存并展示，原始资料来源见每张图片详情；公开展示与再使用请遵守原权利人的许可条款。</div>
   <section aria-labelledby="featuredTitle"><div class="section-head"><div><h2 id="featuredTitle">精选角色</h2><p>快速浏览站内精选角色。</p></div><button class="btn sm" data-action="reset">查看全部 ↗</button></div><div id="featured" class="featured"></div></section>
-  <section id="explore" aria-labelledby="browseTitle">
+  
+</div></details>
+<section id="explore" aria-labelledby="browseTitle">
     <div class="section-head"><div><h2 id="browseTitle">探索角色图库</h2><p id="resultInfo">正在载入图片索引…</p></div><span id="favCount" class="mini"></span></div>
     <div class="toolbar"><label class="search">⌕ <input id="query" type="search" placeholder="搜索角色、中文名、英文名、服装、阵营…" autocomplete="off"></label><select id="gameFilter" class="select" aria-label="游戏分类"><option value="all">全部游戏</option></select><select id="kindFilter" class="select" aria-label="图像类别"><option value="all">全身立绘</option></select><select id="rarityFilter" class="select" aria-label="稀有度"><option value="all">全部稀有度</option><option value="SSR">SSR</option><option value="SR">SR</option><option value="R">R</option><option value="unknown">未标记</option></select><select id="sort" class="select" aria-label="排序方式"><option value="featured">重点角色优先</option><option value="name">名称 A—Z</option><option value="nameDesc">名称 Z—A</option></select></div>
     <div class="segments" role="group" aria-label="内容筛选"><button class="chip active" data-action="mode" data-value="all">全部资料</button><button class="chip" data-action="mode" data-value="full">高清立绘</button><button class="chip" id="favFilter" data-action="favorites">☆ 我的收藏</button><button class="chip" data-action="random">⤨ 随机看一位</button></div>
