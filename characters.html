@@ -72,7 +72,7 @@ body{background:radial-gradient(ellipse 56% 32% at 85% -5%,#322d62 0,transparent
   <footer class="footer">次元角色档案馆 · 多游戏角色图鉴。资料来源：<a href="https://github.com/Nikke-db/Nikke-db.github.io" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">Nikke-db 社区档案</a>。本站保存静态立绘，Spine 动态资源仍由外部站点提供；收藏只保存在当前浏览器。人物版权及使用许可需要另行核实。</footer>
 </main>
 </div>
-<dialog id="viewer" aria-label="角色大图浏览"><div class="view-head"><h2 id="viewTitle">查看角色</h2><button class="btn sm" data-action="close">✕ 关闭</button></div><div class="view-body"><div class="view-picture" id="viewPicture"><img id="viewImg" alt=""><div class="error-note">图片无法加载，请通过「来源文件」访问原页面。</div></div><div class="view-meta" id="viewMeta"></div></div></dialog>
+<dialog id="viewer" aria-label="角色大图浏览"><div class="view-head"><h2 id="viewTitle">查看角色</h2><button class="btn sm" data-action="close">✕ 关闭</button></div><div class="view-body"><div class="view-picture" id="viewPicture"><img id="viewImg" alt=""><div class="view-loading" id="viewLoading" role="status" aria-live="polite"><span class="view-spinner" aria-hidden="true"></span><span>正在加载完整立绘…</span></div><div class="error-note">图片无法加载，请通过「来源文件」访问原页面。</div></div><div class="view-meta" id="viewMeta"></div></div></dialog>
 <script>
 'use strict';
 var ROOT='https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/';
@@ -180,24 +180,40 @@ function render(append){
  $('more').textContent='加载更多角色（'+shown.length+' / '+active.length+'） ↓';
 }
 function startGroup(id){selectedGroup=id;page=1;mode='all';onlyFav=false;$('kindFilter').value='all';render();updateGroupNav();$('explore').scrollIntoView({behavior:'smooth',block:'start'})}
+var viewerLoadToken=0;
 function showOne(id){
  var c=items.find(function(x){return x.id===id});if(!c)return;
- activeId=id;$('viewTitle').textContent=(c.zh?c.zh+' · ':'')+c.name;
  var view=$('viewer'),pic=$('viewPicture'),img=$('viewImg');
- pic.classList.remove('error');
+ var sameImage=activeId===id&&img.getAttribute('src')===c.image&&img.complete&&img.naturalWidth>0&&!pic.classList.contains('is-loading');
+ activeId=id;$('viewTitle').textContent=(c.zh?c.zh+' · ':'')+c.name;
  img.dataset.fallback='';img.dataset.avatar=c.avatar;img.alt=c.name+' '+(c.kind==='full'?'全身立绘':'头像');
- // Show the tiny local preview immediately; load high-resolution artwork only on demand.
- var thumb=previewFor(c),requestedId=c.id;
- img.src=thumb;
- if(thumb!==c.image){
-  var fullImage=new Image();fullImage.decoding='async';
-  fullImage.onload=function(){if(activeId===requestedId&&view.open){img.src=c.image;pic.classList.remove('error')}};
-  fullImage.onerror=function(){if(activeId===requestedId&&view.open)pic.classList.add('error')};
-  fullImage.src=c.image;
- }
  var tags=[c.kind==='full'?'全身立绘':'头像 / 造型资料',c.rarity,c.manufacturer,c.class,c.squad,c.id,gameNames[c.gameId]||c.game||''];
- $('viewMeta').innerHTML='<div class="over">'+safe(gameNames[c.gameId]||c.game||'游戏角色')+'</div><h3>'+safe(c.zh||c.name)+'</h3><p>'+safe(c.name)+'</p><div class="taglist">'+tags.filter(Boolean).map(function(t){return '<span>'+safe(t)+'</span>'}).join('')+'</div><p>'+(c.kind==='full'?'此条目有来源档案中的独立全身角色图片。':'此条目仅有角色头像/造型缩略图，不应视作已收录高清全身立绘。')+'</p><p style="font-size:12px">原始资料来源：Nikke-db 社区项目。图片由游戏版权方持有，商业和公开使用前请核实许可。</p><div class="view-controls"><a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="'+safe(c.source)+'">↗ 来源文件</a><a class="btn" target="_blank" rel="noopener noreferrer" href="'+safe(c.image)+'">查看原图</a><button class="btn" data-action="fav" data-id="'+safe(c.id)+'">'+(favorites.has(c.id)?'★ 已收藏':'☆ 收藏')+'</button></div><div class="view-controls"><button class="btn" data-action="step" data-step="-1">← 上一张</button><button class="btn" data-action="step" data-step="1">下一张 →</button></div>';
+ $('viewMeta').innerHTML='<div class="over">'+safe(gameNames[c.gameId]||c.game||'游戏角色')+'</div><h3>'+safe(c.zh||c.name)+'</h3><p>'+safe(c.name)+'</p><div class="taglist">'+tags.filter(Boolean).map(function(t){return '<span>'+safe(t)+'</span>'}).join('')+'</div><p>'+(c.kind==='full'?'此条目有来源档案中的独立全身角色图片。':'此条目仅有角色头像/造型缩略图，不应视为已收录高清全身立绘。')+'</p><p style="font-size:12px">游戏美术版权归原权利人，使用前请核实授权及来源。</p><div class="view-controls"><a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="'+safe(c.source)+'">↗ 来源文件</a><a class="btn" target="_blank" rel="noopener noreferrer" href="'+safe(c.image)+'">查看原图</a><button class="btn" data-action="fav" data-id="'+safe(c.id)+'">'+(favorites.has(c.id)?'★ 已收藏':'☆ 收藏')+'</button></div><div class="view-controls"><button class="btn" data-action="step" data-step="-1">← 上一张</button><button class="btn" data-action="step" data-step="1">下一张 →</button></div>';
  if(!view.open)view.showModal();
+ if(sameImage)return;
+ // Catalog previews are deliberately cropped for cards. Never display
+ // them in the full-art viewer: they caused the small-then-big image jump.
+ var token=++viewerLoadToken;
+ pic.classList.remove('error');
+ pic.classList.add('is-loading');
+ img.onload=null;img.onerror=null;
+ img.removeAttribute('src');
+ var valid=function(){return token===viewerLoadToken&&activeId===id&&view.open};
+ var finish=function(ok){
+  if(!valid())return;
+  pic.classList.remove('is-loading');
+  pic.classList.toggle('error',!ok);
+ };
+ // The viewport stays the same size while the ORIGINAL file downloads.
+ // Keep it hidden until the full-resolution bitmap has actually decoded.
+ img.src=c.image;
+ if(typeof img.decode==='function'){
+  img.decode().then(function(){finish(img.naturalWidth>0)},function(){finish(false)});
+ }else{
+  img.onload=function(){finish(true)};
+  img.onerror=function(){finish(false)};
+  if(img.complete&&img.naturalWidth>0)finish(true);
+ }
 }
 function navigate(step){var i=active.findIndex(function(x){return x.id===activeId});if(i>=0&&active.length)showOne(active[(i+step+active.length)%active.length].id)}
 function remember(){try{localStorage.setItem('winter-characters-favorites-v1',JSON.stringify(Array.from(favorites)))}catch(e){}}
@@ -209,7 +225,7 @@ document.addEventListener('click',function(e){
  else if(action==='mode'){mode=value;$('kindFilter').value='all';page=1;render()}
  else if(action==='favorites'){onlyFav=!onlyFav;page=1;render()}
  else if(action==='view')showOne(id);
- else if(action==='close')$('viewer').close();
+ else if(action==='close'){viewerLoadToken++;$('viewer').close()}
  else if(action==='fav'){if(favorites.has(id))favorites.delete(id);else favorites.add(id);remember();render();if($('viewer').open&&activeId===id)showOne(id)}
  else if(action==='more'){page++;render(true)}
  else if(action==='step')navigate(Number(target.dataset.step));
@@ -217,9 +233,10 @@ document.addEventListener('click',function(e){
 });
 document.addEventListener('error',function(e){
  var img=e.target;if(!(img instanceof HTMLImageElement))return;
- if(img.id==='viewImg'){$('viewPicture').classList.add('error');return}
+ if(img.id==='viewImg'){if(!$('viewPicture').classList.contains('is-loading'))$('viewPicture').classList.add('error');return}
  if(img.closest('.card-img')){img.closest('.card-img').classList.add('error')}
 },true);
+$('viewer').addEventListener('close',function(){viewerLoadToken++});
 document.addEventListener('keydown',function(e){if(!$('viewer').open)return;if(e.key==='ArrowLeft')navigate(-1);if(e.key==='ArrowRight')navigate(1)});
 var searchDelay=null;
 ['query','rarityFilter','kindFilter','sort'].forEach(function(id){$(id).addEventListener(id==='query'?'input':'change',function(){page=1;if(id==='query'){clearTimeout(searchDelay);searchDelay=setTimeout(function(){render()},140)}else{clearTimeout(searchDelay);render()}})});
