@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-22",
+  "scope": "new dynamic game batch",
+  "counts": {
+    "arknights": {
+      "indexed": 359,
+      "captured": 337
+    },
+    "girlsfrontline": {
+      "indexed": 297,
+      "captured": 212
+    },
+    "konosuba": {
+      "indexed": 61,
+      "captured": 51
+    }
+  },
+  "newCapturesInThisRun": 600,
+  "previousCapturesRetained": 0,
+  "status": "only actual nonblank browser frames linked to the same model id",
+  "unverifiedNotice": "No preview is assigned to models that did not pass capture; index presence is not universal playback proof."
+}
