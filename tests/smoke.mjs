@@ -66,7 +66,7 @@ assert.ok(page.includes(brandName)&&player.includes(brandName),'Both gallery and
 // intentional exception: users need it for a lossless localStorage migration.
 const identityExtensions=new Set(['.html','.md','.mjs','.js','.json','.yml','.yaml','.py','.css','.bat','.txt']);
 const ignoredIdentityDirs=new Set(['.git','vendor','portraits','thumbs','animation-previews']);
-const outdatedIdentity=/(?:winter[-_]cg[-_]archive|WinterCG|WinterCharacterArchive|tyqittle\\.github\\.io\\/winter[-_]cg[-_]archive)/i;
+const outdatedIdentity=/(?:winter[-_]cg[-_]archive|winter[-_]characters|WinterCG|WinterCharacterArchive)/i;
 function inspectIdentity(relative=''){
  for(const entry of fs.readdirSync(path.join(root,relative),{withFileTypes:true})){
   const p=path.join(relative,entry.name);
