@@ -40,7 +40,7 @@ def get(url,limit=18_000_000):
   data=resp.read(limit+1)
   if len(data)>limit:raise ValueError('oversized file')
   return data
-def sources(zh,slug):
+def sources(zh,slug,en):
  # Community wiki older and newer file naming conventions.
  for name in [f'角色_{zh}_立绘.png',f'Mc wiki role {slug} x1500.png']:
   yield WIKI+'Special:FilePath/'+urllib.parse.quote(name,safe=''),name
@@ -51,6 +51,18 @@ def sources(zh,slug):
     for info in page.get('imageinfo',[]):
      if info.get('url'):yield info['url'],name
   except Exception as exc:print('WIKI_API_SKIP',zh,str(exc)[:95],flush=True)
+ # Fandom mirrors retain full splash images when BWIKI's file service returns 567.
+ fandom='https://wutheringwaves.fandom.com/'
+ english=en.replace(' ','_')
+ for filename in (english+'_Splash_Art.png',english+'_Convene_Splash_Art.png'):
+  yield fandom+'wiki/Special:FilePath/'+urllib.parse.quote(filename,safe=''),filename
+  try:
+   params=urllib.parse.urlencode({'action':'query','format':'json','prop':'imageinfo','iiprop':'url','titles':'File:'+filename})
+   db=json.loads(get(fandom+'api.php?'+params,3000000))
+   for page in db.get('query',{}).get('pages',{}).values():
+    for info in page.get('imageinfo',[]):
+     if info.get('url'):yield info['url'],filename
+  except Exception as exc:print('FANDOM_API_SKIP',zh,str(exc)[:95],flush=True)
 def convert(data):
  if not(data.startswith(b'\x89PNG\r\n\x1a\n') or data.startswith(b'RIFF') or data.startswith(b'\xff\xd8\xff')):
   raise ValueError('not PNG/WebP/JPEG')
@@ -68,7 +80,7 @@ def convert(data):
   return out.getvalue(),(w,h)
 def fetch_one(item):
  key,zh,en,slug=item
- for url,filename in sources(zh,slug):
+ for url,filename in sources(zh,slug,en):
   try:
    raw=get(url);payload,dimension=convert(raw)
    return item,url,filename,payload,dimension
