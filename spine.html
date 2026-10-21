@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0a1221"><title>动态立绘 · 次元角色档案馆 | Anime Character Archive</title>
-<link rel="stylesheet" href="./assets/spine-base.css?v=20261021-modules-v1"><link rel="stylesheet" href="./assets/spine-theme.css?v=20261021-modules-v1"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://unpkg.com" crossorigin><link rel="dns-prefetch" href="//raw.githubusercontent.com"><link rel="stylesheet" href="./assets/spine-theater-layout.css?v=20261021-loading-speed-v5"><link rel="stylesheet" href="./assets/archive-shell.css?v=unified-shell-20261021-v2"></head><body>
+<link rel="stylesheet" href="./assets/spine-base.css?v=20261022-selection-fix-v1"><link rel="stylesheet" href="./assets/spine-theme.css?v=20261022-selection-fix-v1"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://unpkg.com" crossorigin><link rel="dns-prefetch" href="//raw.githubusercontent.com"><link rel="stylesheet" href="./assets/spine-theater-layout.css?v=20261021-loading-speed-v5"><link rel="stylesheet" href="./assets/archive-shell.css?v=unified-shell-20261021-v2"></head><body>
 <div class="wrap">
 <section class="side" aria-label="动态立绘角色浏览">
 <div class="side-sitebar">
@@ -12,7 +12,7 @@
  </nav>
  <div class="side-pageintro"><h1>动态立绘剧场</h1><p>选择角色 · 自动播放 · 自由缩放</p></div>
 </div>
-<h2 class="side-section-title">角色动画</h2><label for="gameFilter">选择游戏</label><select id="gameFilter"><option value="all">全部游戏</option><option value="nikke">胜利女神：妮姬</option><option value="bluearchive">蔚蓝档案（回忆大厅）</option><option value="browndust2">棕色尘埃2（全身动态立绘）</option><option value="konosuba">为美好的世界献上祝福！（Spine／Live2D）</option><option value="arknights">明日方舟（Spine 战斗小人）</option><option value="girlsfrontline">少女前线（Live2D 动态立绘）</option><option value="azurlane">碧蓝航线（Live2D 动态皮肤）</option></select><div id="bd2Group" hidden><label for="bd2CharacterFilter">按角色查看服装</label><select id="bd2CharacterFilter"><option value="">全部角色</option></select></div><label for="characterSearch">搜索角色（中文、英文或编号）</label><input id="characterSearch" type="search" placeholder="例如：安妮丝 / Rapi / c012"><label for="characters">当前选中的角色</label><select id="characters"><option value="">请选择角色…</option></select><div id="characterCards" class="character-cards" aria-label="角色图片选择列表" tabindex="0"></div><p class="note" id="selectionNote">点击卡片或从下拉框选中角色，即可自动播放。</p><p class="note">点击角色即可播放；骨骼和贴图按需读取，首次加载可能稍慢。遇到错误可展开高级工具检查资源。</p><details class="advanced-tools"><summary>高级工具 · 资源检测、版本和本地导入</summary><div class="advanced-body"><button id="testUrls" type="button">检测选中角色的资源连通性</button><hr><h2>播放测试</h2>
+<h2 class="side-section-title">角色动画</h2><label for="gameFilter">选择游戏</label><select id="gameFilter"><option value="all">全部游戏</option><option value="nikke">胜利女神：妮姬</option><option value="bluearchive">蔚蓝档案（回忆大厅）</option><option value="browndust2">棕色尘埃2（全身动态立绘）</option><option value="konosuba">为美好的世界献上祝福！（Spine／Live2D）</option><option value="arknights">明日方舟（Spine 战斗小人）</option><option value="girlsfrontline">少女前线（Live2D 动态立绘）</option><option value="azurlane">碧蓝航线（Live2D 动态皮肤）</option></select><div id="bd2Group" hidden><label for="bd2CharacterFilter">按角色查看服装</label><select id="bd2CharacterFilter"><option value="">全部角色</option></select></div><label for="characterSearch">搜索角色（中文、英文或编号）</label><input id="characterSearch" type="search" placeholder="例如：安妮丝 / Rapi / c012"><label for="selectedCharacterDisplay">当前选中的角色</label><div id="selectedCharacterDisplay" class="selected-character-display" role="status" aria-live="polite">尚未选择角色 · 可搜索或点击下方卡片</div><select id="characters" aria-label="角色选择（辅助控件）"><option value="">请选择角色…</option></select><div id="characterCards" class="character-cards" aria-label="角色图片选择列表" tabindex="0"></div><p class="note" id="selectionNote">点击卡片或从下拉框选中角色，即可自动播放。</p><p class="note">点击角色即可播放；骨骼和贴图按需读取，首次加载可能稍慢。遇到错误可展开高级工具检查资源。</p><details class="advanced-tools"><summary>高级工具 · 资源检测、版本和本地导入</summary><div class="advanced-body"><button id="testUrls" type="button">检测选中角色的资源连通性</button><hr><h2>播放测试</h2>
 <label for="version">骨骼版本</label><select id="version"><option value="3.8">Spine 3.8（兼容性待验证）</option><option value="4.0">Spine 4.0</option><option value="4.1">Spine 4.1</option><option value="4.2">Spine 4.2</option></select>
 <button id="demo" class="primary">运行官方渲染自检</button>
 <p class="note">演示资源由 Spine 官方提供，用于核对播放器是否能真正渲染动作；<strong>不是 NIKKE 人物</strong>。</p>
@@ -45,12 +45,12 @@
 <div id="status" role="status" aria-live="polite">选择角色即可自动播放。</div></section>
 </div>
 <footer>Spine 运行时 © Esoteric Software · 游戏角色及其素材版权归各自权利人。仅用于个人研究和获授权的资源播放。</footer>
-<script defer src="./assets/js/spine/state.js?v=20261021-modules-v1"></script>
-<script defer src="./assets/js/spine/viewer-controls.js?v=20261021-modules-v1"></script>
-<script defer src="./assets/js/spine/catalog.js?v=20261021-modules-v1"></script>
-<script defer src="./assets/js/spine/spine-runtime.js?v=20261021-modules-v1"></script>
-<script defer src="./assets/js/spine/spine-assets.js?v=20261021-modules-v1"></script>
-<script defer src="./assets/js/spine/live2d-bridge.js?v=20261021-modules-v1"></script>
-<script defer src="./assets/js/spine/playback.js?v=20261021-modules-v1"></script>
-<script defer src="./assets/js/spine/local-tools.js?v=20261021-modules-v1"></script>
-<script defer src="./assets/js/spine/bootstrap.js?v=20261021-modules-v1"></script></body></html>
+<script defer src="./assets/js/spine/state.js?v=20261022-selection-fix-v1"></script>
+<script defer src="./assets/js/spine/viewer-controls.js?v=20261022-selection-fix-v1"></script>
+<script defer src="./assets/js/spine/catalog.js?v=20261022-selection-fix-v1"></script>
+<script defer src="./assets/js/spine/spine-runtime.js?v=20261022-selection-fix-v1"></script>
+<script defer src="./assets/js/spine/spine-assets.js?v=20261022-selection-fix-v1"></script>
+<script defer src="./assets/js/spine/live2d-bridge.js?v=20261022-selection-fix-v1"></script>
+<script defer src="./assets/js/spine/playback.js?v=20261022-selection-fix-v1"></script>
+<script defer src="./assets/js/spine/local-tools.js?v=20261022-selection-fix-v1"></script>
+<script defer src="./assets/js/spine/bootstrap.js?v=20261022-selection-fix-v1"></script></body></html>
