@@ -1,0 +1,74 @@
+name: Batch render full Brown Dust 2 character gallery
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/generate_bd2_bulk_previews.mjs'
+      - 'scripts/merge_bd2_bulk_previews.mjs'
+      - '.github/workflows/bd2-bulk-previews.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium renderer and WebP tooling
+        run: npm install --no-save --no-package-lock playwright-core@1.56.1 pngjs@7.0.0 sharp@0.34.4
+      - name: Start local gallery server
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/bd2-bulk-site.log 2>&1 &
+          sleep 2
+      - name: Render original Spine models from assigned shard
+        env:
+          BD2_SHARD: ${{ matrix.shard }}
+          BD2_SHARDS: "12"
+        run: node scripts/generate_bd2_bulk_previews.mjs
+      - name: Upload real previews and failure report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bd2-shard-${{ matrix.shard }}
+          path: build/bd2-bulk-shard-${{ matrix.shard }}/
+          if-no-files-found: warn
+          retention-days: 14
+  publish:
+    needs: render
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Download all twelve render result shards
+        uses: actions/download-artifact@v4
+        with:
+          pattern: bd2-shard-*
+          path: build/bd2-results/
+          merge-multiple: false
+      - name: Verify exact-character previews and update manifest
+        run: node scripts/merge_bd2_bulk_previews.mjs
+      - name: Validate final catalog and source-aligned preview files
+        run: node tests/smoke.mjs
+      - name: Commit successful portraits only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/spine-bd2-characters.json data/bd2-preview-audit.json assets/animation-previews/browndust2-bd2-char*.webp
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish verified Brown Dust 2 character previews from twelve Chrome shards"
+            git push origin HEAD:main
+          fi
