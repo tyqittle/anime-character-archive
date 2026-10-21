@@ -208,7 +208,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-aijier_4.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-ailunsamuna_2",
@@ -500,7 +502,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-banerwei_3.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-banrenma_2",
@@ -654,7 +658,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-bisimai_4.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-bola_2",
@@ -765,7 +771,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-buleisite_3.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-chaijun_3",
@@ -826,7 +834,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-chaijun_5.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-chicheng_5",
@@ -1169,7 +1179,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-feiteliedadi_3.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-feiteliedadi_4",
@@ -1230,7 +1242,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-fulici_2.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-gaoxiong_7",
@@ -1323,7 +1337,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-guanghui_7.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-guangrong_3",
@@ -1528,7 +1544,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-jian_3.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-jianwu_2",
@@ -1730,7 +1748,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-junzhu_5.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-kalangshitade_2",
@@ -2259,7 +2279,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-meiyinci_3.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-mingshi",
@@ -2321,7 +2343,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-nabulesi_2.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-naximofu_2",
@@ -2508,7 +2532,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-pizibao_2.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-qianjian_2",
@@ -2586,7 +2612,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-qisheng_2.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-qiye_10",
@@ -2709,9 +2737,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/shengluyisi_2.png",
-      "previewSource": "upstream-ship-thumbnail"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-shengluyisi_2.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-shengluyisi_2_hx",
@@ -2835,7 +2863,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-sitelasibao_2.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-siwanshi_3",
@@ -2943,7 +2973,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-tiancheng_cv_2.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-tianlangxing_3",
@@ -2974,7 +3006,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-tianlangxing_5.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-tierbici_2",
@@ -3099,7 +3133,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-weizhang_3.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-wuerlixi_2",
@@ -3177,7 +3213,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-wuzang_3.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-xiafei_4",
@@ -3192,7 +3230,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-xiafei_4.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-xianghe_2",
@@ -3300,7 +3340,9 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "preview": "./assets/animation-previews/azurlane-al-xinnong_5.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-xinnong_6",
