@@ -7,7 +7,9 @@ import sharp from 'sharp';
 import {chromium} from 'playwright-core';
 
 const root=new URL('../',import.meta.url);
-const catalog=JSON.parse(fs.readFileSync(new URL('data/spine-characters.json',root),'utf8')).characters;
+const allCatalog=JSON.parse(fs.readFileSync(new URL('data/spine-characters.json',root),'utf8')).characters;
+const incremental=process.env.SPINE_PREVIEW_INCREMENTAL==='1';
+const catalog=incremental?allCatalog.filter(c=>c.gameId==='nikke'&&!(c.previewSource==='matching-spine-animation-frame'&&c.preview==='./assets/animation-previews/nikke-'+c.id+'.webp'&&c.previewSha256)):allCatalog;
 const shard=Number(process.argv[2]??0);
 const count=Number(process.argv[3]??10);
 if(!Number.isInteger(shard)||!Number.isInteger(count)||shard<0||count<1||shard>=count)throw Error('Invalid shard/count');
@@ -84,4 +86,4 @@ try{
  await browser.close();
 }
 console.log('SPINE_PREVIEW_SHARD '+JSON.stringify({shard,total:list.length,failed:failures}));
-if(failures)process.exitCode=1;
+if(failures&&!incremental)process.exitCode=1;
