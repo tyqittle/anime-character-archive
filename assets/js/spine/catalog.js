@@ -35,8 +35,28 @@ function charInfo(c){
  // Never substitute the base character's portrait for a different costume.
  const exact=['matching-spine-animation-frame','matching-live2d-animation-frame'].includes(c.previewSource)
   &&c.preview==='./assets/animation-previews/'+(c.gameId||'nikke')+'-'+c.id+'.webp';
- const image=exact?c.preview:(c.gameId==='azurlane'&&c.previewSource==='upstream-ship-thumbnail'?c.preview:'');
+ const image=(exact||c.previewSource==='upstream-ship-thumbnail')?c.preview:'';
  return {image,zh:c.zh||nikkePortraits[c.id]?.name||'',name:c.name||c.id};
+}
+function uniqueAnimationEntries(entries){
+ const ids=new Set(),assets=new Set(),result=[];
+ for(const c of entries){
+  if(!c||!c.id)continue;
+  const game=c.gameId||'nikke',id=game+'|'+c.id;
+  const url=c.modelUrl||c.base||'';
+  // Keep genuine costume variants: only collapse identical model paths or IDs.
+  const asset=url?game+'|'+url.replace(/[?#].*$/,'').replace(/\/$/,''):'';
+  if(ids.has(id)||(asset&&assets.has(asset)))continue;
+  ids.add(id);if(asset)assets.add(asset);result.push(c);
+ }
+ return result;
+}
+function syncSelectedCharacterDisplay(){
+ const selected=chosen(),output=$('selectedCharacterDisplay');
+ if(!output)return;
+ if(!selected){output.textContent='尚未选择角色 · 可搜索或点击下方卡片';return}
+ const info=charInfo(selected);
+ output.textContent=(info.zh&&info.zh!==info.name?info.zh+' · ':'')+info.name+(selected.costumeName?' · '+selected.costumeName:'');
 }
 function refreshCharacters(){
  const game=$('gameFilter').value,query=$('characterSearch').value.toLowerCase().trim();
@@ -58,6 +78,7 @@ function refreshCharacters(){
   return new Option(display,c.id)
  }));
  if(filtered.some(c=>c.id===previously))$('characters').value=previously;
+ syncSelectedCharacterDisplay();
  const area=$('characterCards'),visibleCards=[];
  for(const c of filtered.slice(0,visibleCardLimit)){
   let card=characterCardCache.get(c.id);
@@ -76,7 +97,7 @@ function refreshCharacters(){
    const code=document.createElement('small');
    code.textContent=c.gameId==='browndust2'?(c.costume||'').replace(/_/g,' '):c.id;
    code.title=c.id;card.append(code);
-   card.onclick=()=>{$('characters').value=c.id;$('selectionNote').textContent='已选：'+label.textContent+' · 正在自动播放';refreshCardSelection();rememberSelectedCharacter();playCharacter(c);if(matchMedia('(max-width:850px)').matches)$('player').scrollIntoView({behavior:'smooth',block:'center'});};
+   card.onclick=()=>{$('characters').value=c.id;syncSelectedCharacterDisplay();$('selectionNote').textContent='已选：'+label.textContent+' · 正在自动播放';refreshCardSelection();rememberSelectedCharacter();playCharacter(c);if(matchMedia('(max-width:850px)').matches)$('player').scrollIntoView({behavior:'smooth',block:'center'});};
    characterCardCache.set(c.id,card);
   }
   card.setAttribute('aria-pressed',String(c.id===$('characters').value));
@@ -92,7 +113,7 @@ function refreshCharacters(){
  area.replaceChildren(...visibleCards);
  $('selectionNote').textContent=filtered.length?(game==='browndust2'?'当前 '+filtered.length+' 套服装 · 点击直接播放':'共 '+filtered.length+' 套动画 · 点击直接播放'):'当前筛选没有匹配的角色。';
 }
-function refreshCardSelection(){const cards=$('characterCards').querySelectorAll('button.character-card');const ids=allCharacters.filter(c=>{const game=$('gameFilter').value,q=$('characterSearch').value.toLowerCase().trim(),info=charInfo(c);return (game==='all'||(c.gameId||'nikke')===game)&&(!($('gameFilter').value==='browndust2'&&$('bd2CharacterFilter').value)||c.characterName===$('bd2CharacterFilter').value)&&(!q||[c.id,c.name,info.zh,c.gameId,c.costumeName||'',c.characterName||''].join(' ').toLowerCase().includes(q))}).slice(0,visibleCardLimit);cards.forEach((b,i)=>b.setAttribute('aria-pressed',String(ids[i]?.id===$('characters').value)))}
+function refreshCardSelection(){syncSelectedCharacterDisplay();const cards=$('characterCards').querySelectorAll('button.character-card');const ids=allCharacters.filter(c=>{const game=$('gameFilter').value,q=$('characterSearch').value.toLowerCase().trim(),info=charInfo(c);return (game==='all'||(c.gameId||'nikke')===game)&&(!($('gameFilter').value==='browndust2'&&$('bd2CharacterFilter').value)||c.characterName===$('bd2CharacterFilter').value)&&(!q||[c.id,c.name,info.zh,c.gameId,c.costumeName||'',c.characterName||''].join(' ').toLowerCase().includes(q))}).slice(0,visibleCardLimit);cards.forEach((b,i)=>b.setAttribute('aria-pressed',String(ids[i]?.id===$('characters').value)))}
 // Keep a refreshable deep link without re-rendering the gallery or navigating.
 function rememberSelectedCharacter(){
  const url=new URL(location.href);
