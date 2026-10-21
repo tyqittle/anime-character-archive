@@ -49,6 +49,17 @@ const script=page.match(/<script>([\s\S]*?)<\/script>/)?.[1];
 assert.ok(script,'Missing gallery script');
 new Function(script);
 assert.ok(page.includes('function drawGroups()')&&page.includes('game-section')&&page.includes('characterKey'),'Missing dynamic game and character classification');
+assert.ok(page.includes('id="viewLoading"')&&page.includes('class="view-loading"'),'Missing stable modal loading state');
+const showOne=page.slice(page.indexOf('function showOne(id){'),page.indexOf('function navigate(step){'));
+assert.ok(showOne.includes("img.src=c.image"),'Detail viewer must show the original full artwork');
+assert.ok(showOne.includes("img.decode().then"),'Detail viewer must wait for full artwork decoding');
+assert.ok(showOne.includes("pic.classList.add('is-loading')"),'Detail viewer must mask the artwork until fully loaded');
+assert.ok(!showOne.includes('img.src=thumb')&&!showOne.includes('previewFor(c)'),'Detail viewer must not flash a cropped card thumbnail');
+assert.ok(page.includes('viewerLoadToken'),'Rapid navigation must cancel stale image completion');
+const viewerCSS=read('assets/gallery-redesign.css');
+assert.ok(viewerCSS.includes('#viewer .view-picture.is-loading #viewImg{visibility:hidden}'),'Modal must hide in-flight image rendering');
+assert.ok(viewerCSS.includes('object-position:center center'),'Modal image should remain centered');
+
 assert.ok(player.includes('new spine.SpinePlayer'),'Spine renderer missing');
 assert.ok(player.includes('binaryUrl')&&player.includes('atlasUrl'),'Spine runtime URL fix missing');
 assert.ok(player.includes('indexedDB.open(cacheDB'),'Spine cache missing');
