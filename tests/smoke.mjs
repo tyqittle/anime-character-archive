@@ -10,6 +10,22 @@ const read=p=>fs.readFileSync(path.join(root,p),'utf8');
 const chars=JSON.parse(read('data/characters.json'));
 const spine=JSON.parse(read('data/spine-characters.json'));
 const bd2=JSON.parse(read('data/spine-bd2-pilot.json'));
+const bd2Full=JSON.parse(read('data/spine-bd2-characters.json'));
+assert.equal(bd2Full.characters.length,209,'Brown Dust 2 must index all 209 models');
+assert.equal(new Set(bd2Full.characters.map(c=>c.id)).size,209,'Duplicate BD2 IDs');
+assert.equal(new Set(bd2Full.characters.map(c=>c.characterName)).size,87,'Expected 87 source BD2 characters');
+for(const c of bd2Full.characters){
+ assert.equal(c.gameId,'browndust2');
+ assert.equal(c.assetType,'character-full-spine');
+ assert.ok(c.base.includes(bd2Full.pinnedSourceCommit));
+ assert.match(c.base,/\/assets\/spine\/character\/[^/]+\/[^/]+\/char\d{6}$/);
+ if(c.preview){
+  assert.equal(c.preview,'./assets/animation-previews/browndust2-'+c.id+'.webp');
+  assert.equal(c.previewSource,'matching-spine-animation-frame');
+  assert.equal(c.status,'verified-playback');
+  assert.ok(fs.existsSync(path.join(root,c.preview)),'Model preview file missing: '+c.id);
+ }else assert.equal(c.status,'unverified-playback');
+}
 assert.equal(bd2.characters.length,5,'Expected exactly five BD2 full-body pilot models');
 assert.equal(new Set(bd2.characters.map(c=>c.id)).size,5,'BD2 model ids must be unique');
 for(const c of bd2.characters){
@@ -188,7 +204,8 @@ assert.ok(player.includes('refreshCardSelection();'),'Character list must sync h
 assert.ok(player.includes('id="loadNotice"')&&player.includes("'loadNotice').hidden=!loading"),'Dynamic stage needs a loading indicator');
 assert.ok(player.includes('class="advanced-tools"'),'Advanced tools must be optional');
 
-assert.ok(player.includes('bd2PilotUrl')&&player.includes('value="browndust2"'),'Missing BD2 pilot loader or game selection');
+assert.ok(player.includes('bd2CatalogUrl')&&player.includes('value="browndust2"'),'Missing complete BD2 loader and game selection');
+assert.ok(player.includes('id="bd2CharacterFilter"'),'BD2 character-to-costume filter is missing');
 assert.ok(player.includes("c.gameId==='bluearchive'||c.gameId==='browndust2'"),'BD2 must not use NIKKE legacy mirror');
 
 assert.ok(player.includes('binaryUrl')&&player.includes('atlasUrl'),'Spine runtime URL fix missing');
