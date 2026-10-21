@@ -1,5 +1,5 @@
 // Browser checks for the gallery player UX: selection, deep links, overlays,
-// advanced controls, and version-boundary navigation without losing the model.
+// advanced controls, and seamless version switches without reloading the document.
 import fs from 'node:fs';
 import {chromium} from 'playwright-core';
 const executablePath=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'].find(fs.existsSync);
@@ -62,16 +62,34 @@ try{
   if(!(await page.locator('#loadNotice').evaluate(el=>el.hidden)))throw Error('Loading notice remained after playback');
   await page.locator('.advanced-tools summary').click();
   if(!(await page.locator('.advanced-tools').evaluate(el=>el.open)))throw Error('Cannot open advanced tools');
-  // Force a simulated runtime mismatch. Real 3.8/4.x runtime globals
-  // cannot coexist safely, so a page navigation is expected, but the
-  // selected model must be restored after it.
-  await page.evaluate(()=>{
-   loadedVersion='3.8';
-   document.querySelector('#version').value='3.8';
-   setVersion('4.1','browndust2-bd2-char000201');
+  // Never navigate on a Spine runtime boundary. This synthetic cache test
+  // proves the same DOM, filters, advanced tools and selected role survive.
+  // Real asset playback is separately covered by test_spine_browser.mjs.
+  let navigations=0;
+  page.on('framenavigated',frame=>{if(frame===page.mainFrame())navigations++});
+  const switchResult=await page.evaluate(async()=>{
+   const root=document.body,stage=document.querySelector('#stage');
+   const previous={SpinePlayer:class Mock38{}},next={SpinePlayer:class Mock41{}};
+   runtimeCache.set('3.8',{namespace:previous,stylesheet:'./vendor/spine38/spine-player.css'});
+   runtimeCache.set('4.1',{namespace:next,stylesheet:'./vendor/spine38/spine-player.css'});
+   loadedVersion='3.8';window.spine=previous;
+   const beforeScroll=window.scrollY;
+   setVersion('4.1');
+   await ensureRuntime('4.1');
+   const to41=loadedVersion==='4.1'&&window.spine===next;
+   setVersion('3.8');
+   await ensureRuntime('3.8');
+   return {
+    to41, back38:loadedVersion==='3.8'&&window.spine===previous,
+    sameDOM:document.body===root&&document.querySelector('#stage')===stage,
+    sameSelection:document.querySelector('#characters').value==='bd2-char000201',
+    sameGame:document.querySelector('#gameFilter').value==='browndust2',
+    advancedOpen:document.querySelector('.advanced-tools').open,
+    scrollStable:Math.abs(window.scrollY-beforeScroll)<=1
+   };
   });
-  await page.waitForURL(url=>url.searchParams.get('v')==='4.1'&&url.searchParams.get('id')==='bd2-char000201',{timeout:30000});
-  await page.waitForFunction(()=>document.querySelector('#characters').value==='bd2-char000201'&&document.querySelector('#gameFilter').value==='browndust2',null,{timeout:25000});
+  if(navigations||Object.values(switchResult).some(x=>x!==true))
+   throw Error('Runtime switch reloaded or lost UI state: '+JSON.stringify({navigations,switchResult}));
   if(errors.length)throw Error('Browser JavaScript errors: '+errors.join('; '));
   console.log('PASS Spine UI continuity',viewport.width+'x'+viewport.height,'selected',selected.selected);
   await page.close();
