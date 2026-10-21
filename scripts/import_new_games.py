@@ -98,12 +98,14 @@ def clean_fullbody(blob):
 
 def main():
     db = json.loads(INDEX.read_text(encoding="utf-8"))
+    old_total = len(db.get("characters", []))
     db["characters"] = [
         c for c in db.get("characters", [])
         if not (c.get("gameId") == "wutheringwaves"
                 and ("T_RoleImgjiyan_UI" in c.get("originalImage", "")
                      or "T_RoleImgyinlin_UI" in c.get("originalImage", "")))
     ]
+    removed_bad = old_total - len(db["characters"])
     existing = {c["id"] for c in db.get("characters", [])}
     DEST.mkdir(parents=True,exist_ok=True)
     added = []
@@ -136,7 +138,7 @@ def main():
             failed.append((game,zh,str(exc)))
             print("SKIP",game,zh,str(exc)[:250],flush=True)
         time.sleep(0.22)
-    if added:
+    if added or removed_bad:
         for game,(zh,en) in GAMES.items():
             if any(c.get("gameId")==game for c in db["characters"]) and not any(g.get("id")==game for g in db.get("games",[])):
                 db.setdefault("games",[]).append({"id":game,"name":zh,"en":en})
