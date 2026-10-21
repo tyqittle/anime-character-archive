@@ -1,0 +1,47 @@
+name: Render accurate BD2 character thumbnail previews
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/generate_bd2_spine_previews.mjs'
+      - '.github/workflows/generate-bd2-previews.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install thumbnail capture and WebP dependencies
+        run: npm install --no-save --no-package-lock playwright-core@1.56.1 pngjs@7.0.0 sharp@0.34.4
+      - name: Start local archive
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/site.log 2>&1 &
+          sleep 2
+      - name: Generate all five previews directly from rendered Spine animation
+        run: node scripts/generate_bd2_spine_previews.mjs
+      - name: Preserve preview diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bd2-animation-preview-build
+          path: |
+            assets/animation-previews/browndust2-bd2-char*.webp
+            /tmp/bd2-preview-results.json
+          if-no-files-found: warn
+      - name: Commit genuine preview thumbnails to gallery
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/spine-bd2-pilot.json assets/animation-previews/browndust2-bd2-char*.webp
+          if ! git diff --cached --quiet; then
+            git commit -m "Archive five verified in-render BD2 character previews"
+            git push origin HEAD:main
+          fi
