@@ -32,6 +32,14 @@ try{
    await canvas.waitFor({timeout:15000});
    const rect=await canvas.evaluate(c=>({width:c.width,height:c.height}));
    result.canvas=rect;
+   if(!await page.locator('#zoomIn').isEnabled())throw Error('Zoom controls were not enabled after rendering');
+   if(!await page.locator('#animationPicker').isEnabled())throw Error('Animation picker is still disabled');
+   await page.locator('#zoomIn').click();
+   const zoomed=await canvas.evaluate(c=>({transform:c.style.transform,origin:c.style.transformOrigin}));
+   if(!zoomed.transform.includes('scale(1.2)'))throw Error('Zoom controls did not transform the actual canvas: '+JSON.stringify(zoomed));
+   await page.locator('#resetView').click();
+   const reset=await canvas.evaluate(c=>c.style.transform);
+   if(!reset.includes('scale(1)'))throw Error('Reset-view button failed: '+reset);
    if(rect.width<200||rect.height<200)throw Error('Canvas is too small: '+JSON.stringify(rect));
    await page.waitForTimeout(500);
    const a=PNG.sync.read(await page.locator('#player').screenshot());
