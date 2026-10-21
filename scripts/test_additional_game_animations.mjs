@@ -2,6 +2,7 @@
 // CI: python3 -m http.server 8765 & node scripts/test_additional_game_animations.mjs
 import fs from 'node:fs';
 import {chromium} from 'playwright-core';
+import {PNG} from 'pngjs';
 const browserPath=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'].find(fs.existsSync);
 if(!browserPath)throw Error('Chrome or Chromium missing');
 const manifest=JSON.parse(fs.readFileSync('data/spine-newgames.json','utf8'));
@@ -38,6 +39,24 @@ try{
   console.log('NEW_GAME_RESULT',JSON.stringify(results.at(-1)));
   if(!data.status.startsWith('正在播放：')||data.game!==test.game||!data.enabled||!data.animations)
    throw Error('New model not playable: '+JSON.stringify(results.at(-1))+' page errors: '+errors.join('; '));
+  const canvas=test.type==='cubism'
+   ?page.frameLocator('iframe.azurlane-live2d-frame').locator('#live2dCanvas')
+   :page.locator('#player canvas').first();
+  await canvas.waitFor({state:'visible',timeout:12000});
+  await page.waitForTimeout(900);
+  const filename='/tmp/newgames-'+test.game+'.png';
+  await canvas.screenshot({path:filename,timeout:18000});
+  const png=PNG.sync.read(fs.readFileSync(filename));
+  const dataBytes=png.data,stride=Math.max(1,Math.floor(png.width*png.height/1500));
+  let n=0,sum=0,sum2=0;
+  for(let i=0;i<png.width*png.height;i+=stride){
+   const pos=i*4;
+   const luminance=.2126*dataBytes[pos]+.7152*dataBytes[pos+1]+.0722*dataBytes[pos+2];
+   sum+=luminance;sum2+=luminance*luminance;n++;
+  }
+  const deviation=Math.sqrt(Math.max(0,sum2/n-(sum/n)**2));
+  console.log('NEW_GAME_RENDER_FRAME',test.game,png.width,png.height,'deviation',deviation.toFixed(2));
+  if(deviation<8)throw Error('No discernible animated character pixels for '+test.game+' (stddev '+deviation.toFixed(2)+')');
   if(test.type==='cubism'){
    if(!data.frame)throw Error('Missing Cubism stage: '+test.character.id);
    if(data.animations<1)throw Error('Unnamed motion group was ignored');

@@ -23,7 +23,7 @@ jobs:
         with:
           node-version: '22'
       - name: Install Playwright driver
-        run: npm install --no-save --no-package-lock playwright-core@1.56.1
+        run: npm install --no-save --no-package-lock playwright-core@1.56.1 pngjs@7.0.0
       - name: Serve local site
         run: |
           python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/newgames-server.log 2>&1 &
@@ -37,5 +37,6 @@ jobs:
           name: newgames-browser-report
           path: |
             /tmp/newgames-animation-results.json
+            /tmp/newgames-*.png
             /tmp/newgames-server.log
           if-no-files-found: ignore

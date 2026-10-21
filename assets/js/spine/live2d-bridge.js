@@ -69,11 +69,14 @@ window.addEventListener('message',event=>{
   $('animationPicker').disabled=!actions.length;
   if(data.selectedMotion)$('animationPicker').value=data.selectedMotion;
   viewZoom=1;$('zoomValue').textContent='100%';
-  status('正在播放：'+azurlanePending.name+' · Live2D'+(data.selectedMotion?' · '+data.selectedMotion:'')+'（'+actions.length+' 组动作）'+(Number.isFinite(data.loadMs)&&data.loadMs>0?' · 加载 '+(data.loadMs/1000).toFixed(1)+' 秒':''));
+  status('正在播放：'+azurlanePending.name+' · Live2D'+(data.selectedMotion?' · '+(data.motionLabels?.[data.selectedMotion]||data.selectedMotion):'')+'（'+actions.length+' 组动作）'+(Number.isFinite(data.loadMs)&&data.loadMs>0?' · 加载 '+(data.loadMs/1000).toFixed(1)+' 秒':''));
  }
  if(data.kind==='zoom'&&Number.isFinite(data.zoom)){
   viewZoom=clampViewZoom(data.zoom);
   $('zoomValue').textContent=Math.round(viewZoom*100)+'%';
  }
- if(data.kind==='motion')status('正在播放：'+azurlanePending.name+' · Live2D · '+data.name);
+ if(data.kind==='motion'){
+  const option=[...$('animationPicker').options].find(x=>x.value===data.name);
+  status('正在播放：'+azurlanePending.name+' · Live2D · '+(option?.text||data.name));
+ }
 });
