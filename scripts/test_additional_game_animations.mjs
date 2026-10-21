@@ -1,0 +1,51 @@
+// Browser smoke tests for additional game formats, not proof that every model works.
+// CI: python3 -m http.server 8765 & node scripts/test_additional_game_animations.mjs
+import fs from 'node:fs';
+import {chromium} from 'playwright-core';
+const browserPath=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'].find(fs.existsSync);
+if(!browserPath)throw Error('Chrome or Chromium missing');
+const manifest=JSON.parse(fs.readFileSync('data/spine-newgames.json','utf8'));
+const pick=(game,path)=>manifest.characters.find(c=>c.gameId===game&&c.sourcePath===path);
+const cases=[
+ {type:'cubism',game:'girlsfrontline',character:pick('girlsfrontline','少女前线 girls Frontline/live2dnew/79type_1402/normal/normal.model3.json')},
+ {type:'cubism',game:'konosuba',character:pick('konosuba','为美好的世界献上祝福！Fantastic Days/1003104/1003104.model3.json')},
+ {type:'spine',game:'arknights',character:manifest.characters.find(c=>c.gameId==='arknights'&&c.resourceStem==='char_002_amiya')}
+];
+if(cases.some(c=>!c.character))throw Error('Known verified source-directory cases missing from new catalog');
+const browser=await chromium.launch({headless:true,executablePath:browserPath,args:['--no-sandbox','--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const results=[];
+try{
+ const page=await browser.newPage({viewport:{width:1366,height:850},deviceScaleFactor:1});
+ const errors=[];
+ page.on('pageerror',e=>errors.push(e.message));
+ for(const test of cases){
+  const start=Date.now();
+  await page.goto('http://127.0.0.1:8765/spine.html?id='+encodeURIComponent(test.character.id),{waitUntil:'domcontentloaded',timeout:30000});
+  await page.waitForFunction(id=>document.querySelector('#characters')?.value===id,test.character.id,{timeout:35000});
+  await page.waitForFunction(()=>{
+   const text=document.querySelector('#status')?.textContent||'';
+   return text.startsWith('正在播放：')||text.includes('失败')||text.includes('超时')||text.includes('未通过来源校验');
+  },null,{timeout:120000});
+  const data=await page.evaluate(()=>({
+   status:document.querySelector('#status')?.textContent||'',
+   game:document.querySelector('#gameFilter')?.value,
+   enabled:!document.querySelector('#animationPicker')?.disabled,
+   animations:document.querySelector('#animationPicker')?.options.length,
+   frame:!!document.querySelector('iframe.azurlane-live2d-frame'),
+   canvas:!!document.querySelector('#player canvas')
+  }));
+  results.push({game:test.game,id:test.character.id,elapsedMs:Date.now()-start,...data});
+  console.log('NEW_GAME_RESULT',JSON.stringify(results.at(-1)));
+  if(!data.status.startsWith('正在播放：')||data.game!==test.game||!data.enabled||!data.animations)
+   throw Error('New model not playable: '+JSON.stringify(results.at(-1))+' page errors: '+errors.join('; '));
+  if(test.type==='cubism'){
+   if(!data.frame)throw Error('Missing Cubism stage: '+test.character.id);
+   if(data.animations<1)throw Error('Unnamed motion group was ignored');
+   await page.locator('#animationPicker').selectOption({index:Math.min(1,data.animations-1)});
+  }else if(!data.canvas)throw Error('Spine model missing actual canvas: '+test.character.id);
+ }
+ if(errors.length)throw Error('Browser JS errors: '+errors.join('; '));
+}finally{
+ fs.writeFileSync('/tmp/newgames-animation-results.json',JSON.stringify(results,null,2));
+ await browser.close();
+}
