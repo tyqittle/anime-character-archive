@@ -4,11 +4,12 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/mirror-static.yml'
+      - 'scripts/mirror_static_portraits.py'
   workflow_dispatch:
 permissions:
   contents: write
 concurrency:
-  group: static-portrait-mirror
+  group: art-import-main
   cancel-in-progress: false
 jobs:
   mirror:
@@ -30,5 +31,6 @@ jobs:
           git add data/characters.json assets/portraits/
           if ! git diff --cached --quiet; then
             git commit -m "Mirror static full-body portraits locally"
+            git pull --rebase origin main
             git push origin HEAD:main
           fi
