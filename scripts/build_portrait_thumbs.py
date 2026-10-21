@@ -128,6 +128,23 @@ def main():
         name=source.stem+".webp"
         out=OUTPUT/name
         original_bytes+=source.stat().st_size
+        # Use intrinsic source dimensions, NOT the uniformly cropped 420x560
+        # thumbnails, to size the fullscreen modal BEFORE the image loads.
+        try:
+            with Image.open(source) as original:
+                art_w,art_h=original.size
+                if original.getexif().get(274,1) in (5,6,7,8):
+                    art_w,art_h=art_h,art_w
+            if not (art_w>0 and art_h>0):
+                raise ValueError("invalid artwork dimensions")
+            character["imageWidth"]=art_w
+            character["imageHeight"]=art_h
+        except Exception as exc:
+            failed.append((character.get("id"),"source image geometry: "+str(exc)))
+            print("ART_DIMENSION_FAILED",character.get("id"),str(exc),flush=True)
+            character.pop("imageWidth",None)
+            character.pop("imageHeight",None)
+            continue
         # Hash source bytes so an updated full-resolution portrait invalidates
         # the preview even if its filename stays unchanged.
         digest=hashlib.sha256(source.read_bytes()).hexdigest()[:20]
