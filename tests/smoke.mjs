@@ -207,7 +207,8 @@ assert.ok(viewerCSS.includes('height:var(--viewer-art-height'),'Detail dialog sh
 const theaterCSS=read('assets/spine-theater-layout.css');
 assert.ok(player.includes('class="side-sitebar"')&&player.includes('class="side-nav"'),'Spine site navigation must live inside the sidebar');
 assert.ok(!player.includes('<header>'),'Spine theater must not waste vertical space on a full-width header');
-assert.ok(player.includes('v=20261021-one-screen-v1'),'Layout stylesheet version must avoid stale cached CSS');
+assert.ok(player.includes('v=20261021-card-height-fix-v2'),'Layout stylesheet version must invalidate prior broken card-grid CSS');
+assert.ok(theaterCSS.includes('grid-auto-rows:max-content')&&theaterCSS.includes('min-height:164px'),'Grid rows and cards must have non-collapsing heights');
 assert.ok(theaterCSS.includes('height:100dvh')&&theaterCSS.includes('grid-template-columns:clamp('),'Desktop stage must fit the viewport');
 assert.ok(theaterCSS.includes('.character-cards{flex:1 1 auto')&&theaterCSS.includes('overflow-y:auto'),'Only the card grid should scroll internally');
 assert.ok(theaterCSS.includes('.stage:fullscreen')&&theaterCSS.includes('@media(max-width:850px)'),'Mobile and fullscreen layouts must be preserved');
