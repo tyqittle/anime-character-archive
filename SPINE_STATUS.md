@@ -3,7 +3,7 @@
 - 项目：**Anime Character Archive（次元角色档案馆）**
 - 页面：[`spine.html`](./spine.html)
 - 动画索引：[`data/spine-characters.json`](./data/spine-characters.json)
-- 当前索引：**133 条**（NIKKE **102** 条、蔚蓝档案 **31** 条；不代表全部通过播放验证）。
+- 当前索引：**545 条**（NIKKE **514** 条、蔚蓝档案 **31** 条；其中 NIKKE 新增 412 条模型目录记录，播放与预览需要逐条验证）。
 - 客户端运行时：Esoteric Software Spine Web Player，按骨骼版本选择兼容的运行环境。
 - 资源流程：读取索引 → 从第三方下载骨骼、Atlas、贴图 → 浏览器中渲染；部分下载结果可以进入浏览器 IndexedDB 缓存。
 - 兼容性：播放器使用 `binaryUrl` / `jsonUrl` 与 `atlasUrl`，不要误改回不兼容的初始化参数。
@@ -21,3 +21,12 @@
 - 209/209 套已使用 Chromium 逐套运行并生成专属 WebP 缩略图，素材地址在 `assets/animation-previews/`；详见 `data/bd2-preview-audit.json`。
 - 自动化成功只证明模型可被加载并渲染，不等同于所有动作和皮肤都通过人工精细检查。
 - 游戏原始骨骼和贴图仍由第三方 GitHub 源站按需加载，并未打包进本站。
+
+## NIKKE 批量模型导入（2026-10-21）
+
+- 上游 `l2d.json` 是不完整手工目录；扫描上游 Git 树而不是依赖其索引，发现 514 套角色编号模型，均有骨骼、Atlas 与至少一张 PNG，同步对应资源基址到 `data/spine-characters.json`。
+- 原先 NIKKE 102 条，首轮补 109 条，递归树扫描额外再补 303 条，合计 **514 条**。
+- 新条目 412 条尚未全部通过 Chromium 逐条动画帧预览验证；任何失败都不能用别的角色/皮肤贴图代替。
+- CI 使用 40 个分片增量生成，并在发布后写入 `data/nikke-preview-audit.json`；仅成功的动画帧才进入 `assets/animation-previews/`。
+- 未核对真实名称的角色/皮肤以编号表示，不宣称已经完成命名；数据仍依赖第三方源站的骨骼/贴图，尚未本地镜像。
+- 扫描及排除记录详见 `data/nikke-import-audit.json`。
