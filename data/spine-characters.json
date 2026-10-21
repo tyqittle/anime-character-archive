@@ -1,7 +1,7 @@
 {
   "version": 1,
   "source": "https://github.com/Nikke-db/Nikke-db.github.io",
-  "note": "NIKKE 514 verified source folders containing matching Spine skeleton, atlas and PNG files (not necessarily playable); unknown names explicitly marked as unverified. Real preview frames are assigned only after renderer success. Blue Archive lobby entries preserved.",
+  "note": "NIKKE 514 verified source folders containing matching Spine skeleton, atlas and PNG files (not necessarily playable); unknown names explicitly marked as unverified. Real preview frames are assigned only after renderer success. Blue Archive lobby entries preserved. Blue Archive expanded from source-confirmed Spine lobby directories; newly indexed models require actual browser render verification.",
   "characters": [
     {
       "id": "c010",
@@ -7566,6 +7566,2374 @@
       "previewSource": "matching-spine-animation-frame",
       "previewSha256": "63e8186ba2cacb170cd367521ffe7a4e02a225b6d19ed23ce77b58e754a0c66d",
       "previewAnimation": "Idle_01"
+    },
+    {
+      "id": "ba-airi_home",
+      "name": "Airi",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Airi_home/Airi_home",
+      "assetType": "lobby",
+      "characterName": "Airi",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Airi_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-akane_home",
+      "name": "Akane",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Akane_home/Akane_home",
+      "assetType": "lobby",
+      "characterName": "Akane",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Akane_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ako_home",
+      "name": "Ako",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Ako_home/Ako_home",
+      "assetType": "lobby",
+      "characterName": "Ako",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Ako_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ako_home_teen",
+      "name": "ako home Teen",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/ako_home_Teen/ako_home_Teen",
+      "assetType": "lobby",
+      "characterName": "ako home Teen",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/ako_home_Teen",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-aris_home",
+      "name": "Aris",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Aris_home/Aris_home",
+      "assetType": "lobby",
+      "characterName": "Aris",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Aris_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-aru_newyear_home",
+      "name": "Aru newyear",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Aru_newyear_home/Aru_newyear_home",
+      "assetType": "lobby",
+      "characterName": "Aru newyear",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Aru_newyear_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-asuna_home",
+      "name": "Asuna",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Asuna_home/Asuna_home",
+      "assetType": "lobby",
+      "characterName": "Asuna",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Asuna_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-atsuko_home",
+      "name": "Atsuko",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Atsuko_home/Atsuko_home",
+      "assetType": "lobby",
+      "characterName": "Atsuko",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Atsuko_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ayane_home",
+      "name": "Ayane",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Ayane_home/Ayane_home",
+      "assetType": "lobby",
+      "characterName": "Ayane",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Ayane_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-azusa_home",
+      "name": "Azusa",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Azusa_home/Azusa_home",
+      "assetType": "lobby",
+      "characterName": "Azusa",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Azusa_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-azusa_swimsuit_home",
+      "name": "Azusa swimsuit",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Azusa_swimsuit_home/Azusa_swimsuit_home",
+      "assetType": "lobby",
+      "characterName": "Azusa swimsuit",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Azusa_swimsuit_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0081_home",
+      "name": "CH81",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0081_home/CH0081_home",
+      "assetType": "lobby",
+      "characterName": "CH81",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0081_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0113_home",
+      "name": "CH113",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0113_home/CH0113_home",
+      "assetType": "lobby",
+      "characterName": "CH113",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0113_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0156_home",
+      "name": "CH156",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0156_home/CH0156_home",
+      "assetType": "lobby",
+      "characterName": "CH156",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0156_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0159_home",
+      "name": "CH159",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0159_home/CH0159_home",
+      "assetType": "lobby",
+      "characterName": "CH159",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0159_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0160_home",
+      "name": "CH160",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0160_home/CH0160_home",
+      "assetType": "lobby",
+      "characterName": "CH160",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0160_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0161_home",
+      "name": "CH161",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0161_home/CH0161_home",
+      "assetType": "lobby",
+      "characterName": "CH161",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0161_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0163_home",
+      "name": "CH163",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0163_home/CH0163_home",
+      "assetType": "lobby",
+      "characterName": "CH163",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0163_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0164_home",
+      "name": "CH164",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0164_home/CH0164_home",
+      "assetType": "lobby",
+      "characterName": "CH164",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0164_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0165_home",
+      "name": "CH165",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0165_home/CH0165_home",
+      "assetType": "lobby",
+      "characterName": "CH165",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0165_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0167_home",
+      "name": "CH167",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0167_home/CH0167_home",
+      "assetType": "lobby",
+      "characterName": "CH167",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0167_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0169_home",
+      "name": "CH169",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0169_home/CH0169_home",
+      "assetType": "lobby",
+      "characterName": "CH169",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0169_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0170_home",
+      "name": "CH170",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0170_home/CH0170_home",
+      "assetType": "lobby",
+      "characterName": "CH170",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0170_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0175_home",
+      "name": "CH175",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0175_home/CH0175_home",
+      "assetType": "lobby",
+      "characterName": "CH175",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0175_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0176_home",
+      "name": "CH176",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0176_home/CH0176_home",
+      "assetType": "lobby",
+      "characterName": "CH176",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0176_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0177_home",
+      "name": "CH177",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0177_home/CH0177_home",
+      "assetType": "lobby",
+      "characterName": "CH177",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0177_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0178_home",
+      "name": "CH178",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0178_home/CH0178_home",
+      "assetType": "lobby",
+      "characterName": "CH178",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0178_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0179_home",
+      "name": "CH179",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0179_home/CH0179_home",
+      "assetType": "lobby",
+      "characterName": "CH179",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0179_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0180_home",
+      "name": "CH180",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0180_home/CH0180_home",
+      "assetType": "lobby",
+      "characterName": "CH180",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0180_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0181_home",
+      "name": "CH181",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0181_home/CH0181_home",
+      "assetType": "lobby",
+      "characterName": "CH181",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0181_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0182_home",
+      "name": "CH182",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0182_home/CH0182_home",
+      "assetType": "lobby",
+      "characterName": "CH182",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0182_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0183_home",
+      "name": "CH183",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0183_home/CH0183_home",
+      "assetType": "lobby",
+      "characterName": "CH183",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0183_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0184_home",
+      "name": "CH184",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0184_home/CH0184_home",
+      "assetType": "lobby",
+      "characterName": "CH184",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0184_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0185_home",
+      "name": "CH185",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0185_home/CH0185_home",
+      "assetType": "lobby",
+      "characterName": "CH185",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0185_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0186_home",
+      "name": "CH186",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0186_home/CH0186_home",
+      "assetType": "lobby",
+      "characterName": "CH186",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0186_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0187_home",
+      "name": "CH187",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0187_home/CH0187_home",
+      "assetType": "lobby",
+      "characterName": "CH187",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0187_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0188_home",
+      "name": "CH188",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0188_home/CH0188_home",
+      "assetType": "lobby",
+      "characterName": "CH188",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0188_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0189_home",
+      "name": "CH189",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0189_home/CH0189_home",
+      "assetType": "lobby",
+      "characterName": "CH189",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0189_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0190_home",
+      "name": "CH190",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0190_home/CH0190_home",
+      "assetType": "lobby",
+      "characterName": "CH190",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0190_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0191_home",
+      "name": "CH191",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0191_home/CH0191_home",
+      "assetType": "lobby",
+      "characterName": "CH191",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0191_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0192_home",
+      "name": "CH192",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0192_home/CH0192_home",
+      "assetType": "lobby",
+      "characterName": "CH192",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0192_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0193_home",
+      "name": "CH193",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0193_home/CH0193_home",
+      "assetType": "lobby",
+      "characterName": "CH193",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0193_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0194_home",
+      "name": "CH194",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0194_home/CH0194_home",
+      "assetType": "lobby",
+      "characterName": "CH194",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0194_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0195_home",
+      "name": "CH195",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0195_home/CH0195_home",
+      "assetType": "lobby",
+      "characterName": "CH195",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0195_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0196_home",
+      "name": "CH196",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0196_home/CH0196_home",
+      "assetType": "lobby",
+      "characterName": "CH196",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0196_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0198_home",
+      "name": "CH198",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0198_home/CH0198_home",
+      "assetType": "lobby",
+      "characterName": "CH198",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0198_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0200_home",
+      "name": "CH200",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0200_home/CH0200_home",
+      "assetType": "lobby",
+      "characterName": "CH200",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0200_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0201_home",
+      "name": "CH201",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0201_home/CH0201_home",
+      "assetType": "lobby",
+      "characterName": "CH201",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0201_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0202_home",
+      "name": "CH202",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0202_home/CH0202_home",
+      "assetType": "lobby",
+      "characterName": "CH202",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0202_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0203_home",
+      "name": "CH203",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0203_home/CH0203_home",
+      "assetType": "lobby",
+      "characterName": "CH203",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0203_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0204_home",
+      "name": "CH204",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0204_home/CH0204_home",
+      "assetType": "lobby",
+      "characterName": "CH204",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0204_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0205_home",
+      "name": "CH205",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0205_home/CH0205_home",
+      "assetType": "lobby",
+      "characterName": "CH205",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0205_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0209_home",
+      "name": "CH209",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0209_home/CH0209_home",
+      "assetType": "lobby",
+      "characterName": "CH209",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0209_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0210_home",
+      "name": "CH210",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0210_home/CH0210_home",
+      "assetType": "lobby",
+      "characterName": "CH210",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0210_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0211_home",
+      "name": "CH211",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0211_home/CH0211_home",
+      "assetType": "lobby",
+      "characterName": "CH211",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0211_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0214_home",
+      "name": "CH214",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0214_home/CH0214_home",
+      "assetType": "lobby",
+      "characterName": "CH214",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0214_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0215_home",
+      "name": "CH215",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0215_home/CH0215_home",
+      "assetType": "lobby",
+      "characterName": "CH215",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0215_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0216_home",
+      "name": "CH216",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0216_home/CH0216_home",
+      "assetType": "lobby",
+      "characterName": "CH216",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0216_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0217_home",
+      "name": "CH217",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0217_home/CH0217_home",
+      "assetType": "lobby",
+      "characterName": "CH217",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0217_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0218_home",
+      "name": "CH218",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0218_home/CH0218_home",
+      "assetType": "lobby",
+      "characterName": "CH218",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0218_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0219_home",
+      "name": "CH219",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0219_home/CH0219_home",
+      "assetType": "lobby",
+      "characterName": "CH219",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0219_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0220_home",
+      "name": "CH220",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0220_home/CH0220_home",
+      "assetType": "lobby",
+      "characterName": "CH220",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0220_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0224_home",
+      "name": "CH224",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0224_home/CH0224_home",
+      "assetType": "lobby",
+      "characterName": "CH224",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0224_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0225_home",
+      "name": "CH225",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0225_home/CH0225_home",
+      "assetType": "lobby",
+      "characterName": "CH225",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0225_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0230_home",
+      "name": "CH230",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0230_home/CH0230_home",
+      "assetType": "lobby",
+      "characterName": "CH230",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0230_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0231_home",
+      "name": "CH231",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0231_home/CH0231_home",
+      "assetType": "lobby",
+      "characterName": "CH231",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0231_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0232_home",
+      "name": "CH232",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0232_home/CH0232_home",
+      "assetType": "lobby",
+      "characterName": "CH232",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0232_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0233_home",
+      "name": "CH233",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0233_home/CH0233_home",
+      "assetType": "lobby",
+      "characterName": "CH233",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0233_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0239_home",
+      "name": "CH239",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0239_home/CH0239_home",
+      "assetType": "lobby",
+      "characterName": "CH239",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0239_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0240_home",
+      "name": "CH240",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0240_home/CH0240_home",
+      "assetType": "lobby",
+      "characterName": "CH240",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0240_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0250_home",
+      "name": "CH250",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0250_home/CH0250_home",
+      "assetType": "lobby",
+      "characterName": "CH250",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0250_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0251_home",
+      "name": "CH251",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0251_home/CH0251_home",
+      "assetType": "lobby",
+      "characterName": "CH251",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0251_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0255_home",
+      "name": "CH255",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0255_home/CH0255_home",
+      "assetType": "lobby",
+      "characterName": "CH255",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0255_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0260_home",
+      "name": "CH260",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0260_home/CH0260_home",
+      "assetType": "lobby",
+      "characterName": "CH260",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0260_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0261_home",
+      "name": "CH261",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0261_home/CH0261_home",
+      "assetType": "lobby",
+      "characterName": "CH261",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0261_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch0262_home",
+      "name": "CH262",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH0262_home/CH0262_home",
+      "assetType": "lobby",
+      "characterName": "CH262",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH0262_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch9997_home",
+      "name": "CH9997",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH9997_home/CH9997_home",
+      "assetType": "lobby",
+      "characterName": "CH9997",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH9997_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch9998_home",
+      "name": "CH9998",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH9998_home/CH9998_home",
+      "assetType": "lobby",
+      "characterName": "CH9998",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH9998_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ch9999_home",
+      "name": "CH9999",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/CH9999_home/CH9999_home",
+      "assetType": "lobby",
+      "characterName": "CH9999",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/CH9999_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-cherino_home",
+      "name": "Cherino",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Cherino_home/Cherino_home",
+      "assetType": "lobby",
+      "characterName": "Cherino",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Cherino_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-chinatsu_home",
+      "name": "Chinatsu",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Chinatsu_home/Chinatsu_home",
+      "assetType": "lobby",
+      "characterName": "Chinatsu",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Chinatsu_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-chise_home",
+      "name": "Chise",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Chise_home/Chise_home",
+      "assetType": "lobby",
+      "characterName": "Chise",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Chise_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-eimi_home",
+      "name": "Eimi",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Eimi_home/Eimi_home",
+      "assetType": "lobby",
+      "characterName": "Eimi",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Eimi_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-hanae_home",
+      "name": "Hanae",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Hanae_home/Hanae_home",
+      "assetType": "lobby",
+      "characterName": "Hanae",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Hanae_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-hanako_home",
+      "name": "Hanako",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Hanako_home/Hanako_home",
+      "assetType": "lobby",
+      "characterName": "Hanako",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Hanako_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-hare_home",
+      "name": "Hare",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Hare_home/Hare_home",
+      "assetType": "lobby",
+      "characterName": "Hare",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Hare_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-haruka_home",
+      "name": "Haruka",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Haruka_home/Haruka_home",
+      "assetType": "lobby",
+      "characterName": "Haruka",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Haruka_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-haruna_home",
+      "name": "Haruna",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Haruna_home/Haruna_home",
+      "assetType": "lobby",
+      "characterName": "Haruna",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Haruna_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-hasumi_home",
+      "name": "Hasumi",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Hasumi_home/Hasumi_home",
+      "assetType": "lobby",
+      "characterName": "Hasumi",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Hasumi_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-hibiki_home",
+      "name": "Hibiki",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Hibiki_home/Hibiki_home",
+      "assetType": "lobby",
+      "characterName": "Hibiki",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Hibiki_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-hihumi_home",
+      "name": "Hihumi",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Hihumi_home/Hihumi_home",
+      "assetType": "lobby",
+      "characterName": "Hihumi",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Hihumi_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-hina_home",
+      "name": "Hina",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Hina_home/Hina_home",
+      "assetType": "lobby",
+      "characterName": "Hina",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Hina_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-hinata_home",
+      "name": "Hinata",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Hinata_home/Hinata_home",
+      "assetType": "lobby",
+      "characterName": "Hinata",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Hinata_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-hiyori_home",
+      "name": "Hiyori",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Hiyori_home/Hiyori_home",
+      "assetType": "lobby",
+      "characterName": "Hiyori",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Hiyori_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-hoshino_swimsuit_home",
+      "name": "Hoshino swimsuit",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Hoshino_swimsuit_home/Hoshino_swimsuit_home",
+      "assetType": "lobby",
+      "characterName": "Hoshino swimsuit",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Hoshino_swimsuit_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-ibuki_home",
+      "name": "Ibuki",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Ibuki_home/Ibuki_home",
+      "assetType": "lobby",
+      "characterName": "Ibuki",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Ibuki_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-iori_home",
+      "name": "Iori",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Iori_home/Iori_home",
+      "assetType": "lobby",
+      "characterName": "Iori",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Iori_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-izumi_home",
+      "name": "Izumi",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Izumi_home/Izumi_home",
+      "assetType": "lobby",
+      "characterName": "Izumi",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Izumi_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-izumi_swimsuit_home",
+      "name": "Izumi swimsuit",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Izumi_swimsuit_home/Izumi_swimsuit_home",
+      "assetType": "lobby",
+      "characterName": "Izumi swimsuit",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Izumi_swimsuit_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-izumi_swimsuit_home_teen",
+      "name": "Izumi swimsuit home Teen",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Izumi_swimsuit_home_Teen/Izumi_swimsuit_home_Teen",
+      "assetType": "lobby",
+      "characterName": "Izumi swimsuit home Teen",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Izumi_swimsuit_home_Teen",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-izuna_home",
+      "name": "Izuna",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Izuna_home/Izuna_home",
+      "assetType": "lobby",
+      "characterName": "Izuna",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Izuna_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-kaede_home",
+      "name": "Kaede",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Kaede_home/Kaede_home",
+      "assetType": "lobby",
+      "characterName": "Kaede",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Kaede_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-karin_home",
+      "name": "Karin",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Karin_home/Karin_home",
+      "assetType": "lobby",
+      "characterName": "Karin",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Karin_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-kayoko_home",
+      "name": "Kayoko",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Kayoko_home/Kayoko_home",
+      "assetType": "lobby",
+      "characterName": "Kayoko",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Kayoko_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-kirara_home",
+      "name": "Kirara",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Kirara_home/Kirara_home",
+      "assetType": "lobby",
+      "characterName": "Kirara",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Kirara_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-koharu_home",
+      "name": "Koharu",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Koharu_home/Koharu_home",
+      "assetType": "lobby",
+      "characterName": "Koharu",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Koharu_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-kotama_home",
+      "name": "Kotama",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Kotama_home/Kotama_home",
+      "assetType": "lobby",
+      "characterName": "Kotama",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Kotama_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-kotori_home",
+      "name": "Kotori",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Kotori_home/Kotori_home",
+      "assetType": "lobby",
+      "characterName": "Kotori",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Kotori_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-lobbyayane_multi",
+      "name": "LobbyAyane multi",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/LobbyAyane_multi/LobbyAyane_multi",
+      "assetType": "lobby",
+      "characterName": "LobbyAyane multi",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/LobbyAyane_multi",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-lobbyhoshino_multi",
+      "name": "LobbyHoshino multi",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/LobbyHoshino_multi/LobbyHoshino_multi",
+      "assetType": "lobby",
+      "characterName": "LobbyHoshino multi",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/LobbyHoshino_multi",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-lobbynonomi_multi",
+      "name": "LobbyNonomi multi",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/LobbyNonomi_multi/LobbyNonomi_multi",
+      "assetType": "lobby",
+      "characterName": "LobbyNonomi multi",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/LobbyNonomi_multi",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-lobbyserika_multi",
+      "name": "LobbySerika multi",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/LobbySerika_multi/LobbySerika_multi",
+      "assetType": "lobby",
+      "characterName": "LobbySerika multi",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/LobbySerika_multi",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-lobbyshiroko_multi",
+      "name": "LobbyShiroko multi",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/LobbyShiroko_multi/LobbyShiroko_multi",
+      "assetType": "lobby",
+      "characterName": "LobbyShiroko multi",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/LobbyShiroko_multi",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-maki_home",
+      "name": "Maki",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Maki_home/Maki_home",
+      "assetType": "lobby",
+      "characterName": "Maki",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Maki_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-marina_home",
+      "name": "Marina",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Marina_home/Marina_home",
+      "assetType": "lobby",
+      "characterName": "Marina",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Marina_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-mashiro_home",
+      "name": "Mashiro",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Mashiro_home/Mashiro_home",
+      "assetType": "lobby",
+      "characterName": "Mashiro",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Mashiro_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-mashiro_swimsuit_home",
+      "name": "Mashiro swimsuit",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Mashiro_swimsuit_home/Mashiro_swimsuit_home",
+      "assetType": "lobby",
+      "characterName": "Mashiro swimsuit",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Mashiro_swimsuit_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-midori_home",
+      "name": "Midori",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Midori_home/Midori_home",
+      "assetType": "lobby",
+      "characterName": "Midori",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Midori_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-mimori_home",
+      "name": "Mimori",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Mimori_home/Mimori_home",
+      "assetType": "lobby",
+      "characterName": "Mimori",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Mimori_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-misaki_home",
+      "name": "Misaki",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Misaki_home/Misaki_home",
+      "assetType": "lobby",
+      "characterName": "Misaki",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Misaki_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-miyako_home",
+      "name": "Miyako",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Miyako_home/Miyako_home",
+      "assetType": "lobby",
+      "characterName": "Miyako",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Miyako_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-moe_home",
+      "name": "Moe",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Moe_home/Moe_home",
+      "assetType": "lobby",
+      "characterName": "Moe",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Moe_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-mutsuki_home",
+      "name": "Mutsuki",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Mutsuki_home/Mutsuki_home",
+      "assetType": "lobby",
+      "characterName": "Mutsuki",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Mutsuki_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-nagisa_home",
+      "name": "Nagisa",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Nagisa_home/Nagisa_home",
+      "assetType": "lobby",
+      "characterName": "Nagisa",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Nagisa_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-neru_home",
+      "name": "Neru",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Neru_home/Neru_home",
+      "assetType": "lobby",
+      "characterName": "Neru",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Neru_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-nodoka_home",
+      "name": "Nodoka",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Nodoka_home/Nodoka_home",
+      "assetType": "lobby",
+      "characterName": "Nodoka",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Nodoka_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-nonomi_home",
+      "name": "Nonomi",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Nonomi_home/Nonomi_home",
+      "assetType": "lobby",
+      "characterName": "Nonomi",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Nonomi_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-pina_home",
+      "name": "Pina",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Pina_home/Pina_home",
+      "assetType": "lobby",
+      "characterName": "Pina",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Pina_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-sakurako_home",
+      "name": "Sakurako",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Sakurako_home/Sakurako_home",
+      "assetType": "lobby",
+      "characterName": "Sakurako",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Sakurako_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-saori_home",
+      "name": "Saori",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Saori_home/Saori_home",
+      "assetType": "lobby",
+      "characterName": "Saori",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Saori_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-saya_casual_home",
+      "name": "Saya casual",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Saya_casual_home/Saya_casual_home",
+      "assetType": "lobby",
+      "characterName": "Saya casual",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Saya_casual_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-saya_home",
+      "name": "Saya",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Saya_home/Saya_home",
+      "assetType": "lobby",
+      "characterName": "Saya",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Saya_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-serika_home",
+      "name": "Serika",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Serika_home/Serika_home",
+      "assetType": "lobby",
+      "characterName": "Serika",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Serika_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-shigure_home",
+      "name": "Shigure",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Shigure_home/Shigure_home",
+      "assetType": "lobby",
+      "characterName": "Shigure",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Shigure_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-shimiko_home",
+      "name": "Shimiko",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Shimiko_home/Shimiko_home",
+      "assetType": "lobby",
+      "characterName": "Shimiko",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Shimiko_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-shiroko_home",
+      "name": "Shiroko",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Shiroko_home/Shiroko_home",
+      "assetType": "lobby",
+      "characterName": "Shiroko",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Shiroko_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-shiroko_ridingsuit_home",
+      "name": "Shiroko ridingsuit",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Shiroko_ridingsuit_home/Shiroko_ridingsuit_home",
+      "assetType": "lobby",
+      "characterName": "Shiroko ridingsuit",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Shiroko_ridingsuit_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-shizuko_home",
+      "name": "Shizuko",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Shizuko_home/Shizuko_home",
+      "assetType": "lobby",
+      "characterName": "Shizuko",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Shizuko_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-shun_home",
+      "name": "Shun",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Shun_home/Shun_home",
+      "assetType": "lobby",
+      "characterName": "Shun",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Shun_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-sumire_home",
+      "name": "Sumire",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Sumire_home/Sumire_home",
+      "assetType": "lobby",
+      "characterName": "Sumire",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Sumire_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-suzumi_home",
+      "name": "Suzumi",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Suzumi_home/Suzumi_home",
+      "assetType": "lobby",
+      "characterName": "Suzumi",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Suzumi_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-tomoe_home",
+      "name": "Tomoe",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Tomoe_home/Tomoe_home",
+      "assetType": "lobby",
+      "characterName": "Tomoe",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Tomoe_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-tsubaki_home",
+      "name": "Tsubaki",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Tsubaki_home/Tsubaki_home",
+      "assetType": "lobby",
+      "characterName": "Tsubaki",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Tsubaki_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-tsurugi_home",
+      "name": "Tsurugi",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Tsurugi_home/Tsurugi_home",
+      "assetType": "lobby",
+      "characterName": "Tsurugi",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Tsurugi_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-utaha_home",
+      "name": "Utaha",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Utaha_home/Utaha_home",
+      "assetType": "lobby",
+      "characterName": "Utaha",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Utaha_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-yoshimi_home",
+      "name": "Yoshimi",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Yoshimi_home/Yoshimi_home",
+      "assetType": "lobby",
+      "characterName": "Yoshimi",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Yoshimi_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-yuuka_home",
+      "name": "Yuuka",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Yuuka_home/Yuuka_home",
+      "assetType": "lobby",
+      "characterName": "Yuuka",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Yuuka_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
+    },
+    {
+      "id": "ba-zunko_home",
+      "name": "Zunko",
+      "gameId": "bluearchive",
+      "spineVersion": "3.8",
+      "base": "https://raw.githubusercontent.com/kiraio-moe/Schale-Archive/main/Spine_Lobbies/Spr/Zunko_home/Zunko_home",
+      "assetType": "lobby",
+      "characterName": "Zunko",
+      "versionUnverified": true,
+      "source": "https://github.com/kiraio-moe/Schale-Archive/tree/main/Spine_Lobbies/Spr/Zunko_home",
+      "verifiedFiles": [
+        "skel",
+        "atlas",
+        "png"
+      ]
     }
   ],
   "sources": [
