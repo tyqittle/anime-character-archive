@@ -277,8 +277,14 @@ for(const c of azure.characters){
   }
 }
 const live2dFrame=read('azurlane-stage.html');
-new Function(live2dFrame.match(/<script>\s*([\s\S]*?)<\/script>/)?.[1]||'');
-assert.ok(live2dFrame.includes('PIXI.live2d.Live2DModel.fromSync'),'Azur Lane needs a real Cubism renderer, not an image swap');
+const cubismModules=["assets/js/live2d/state-and-viewport.js","assets/js/live2d/model-loader.js","assets/js/live2d/bootstrap.js"];
+const cubismSource=cubismModules.map(read).join('\n');
+for(const file of cubismModules){
+ assert.ok(live2dFrame.includes('./'+file+'?v=20261021-modules-v1'),'Cubism page missing module: '+file);
+ new Function(read(file));
+}
+assert.ok(live2dFrame.includes('./assets/live2d-stage.css?v=20261021-modules-v1'),'Cubism style must be an external module');
+assert.ok(cubismSource.includes('PIXI.live2d.Live2DModel.fromSync'),'Azur Lane needs a real Cubism renderer, not an image swap');
 assert.ok(live2dFrame.includes('88cb6e56a0ad472fe7e546509f096545d2bbc5b9'),'Cubism runtime must be pinned');
 assert.ok(player.includes('value="azurlane"')&&player.includes("c.gameId==='azurlane'"),'Azur Lane must be a regular selection in the dynamic theater');
 assert.ok(player.includes('azurlaneFrame')&&player.includes('azurlane-stage.html')&&player.includes('sendAzurLane('),'Live2D must open inside the same player panel and support controls');
@@ -317,3 +323,5 @@ for(const item of ['assets/gallery-base.css','assets/gallery-theme.css','assets/
  assert.ok(fs.existsSync(path.join(root,item)),'Extracted CSS is missing: '+item);
  assert.ok(read(item).length>100,'Extracted CSS is empty: '+item);
 }
+
+assert.ok(!/<script>\s*['\"]use strict/.test(read('azurlane-stage.html')),'Cubism page must not contain application code');

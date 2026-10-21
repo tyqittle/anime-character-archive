@@ -7,7 +7,7 @@ function ensureAzurLaneFrame(){
  azurlaneFrame=document.createElement('iframe');
  azurlaneFrame.className='azurlane-live2d-frame';
  azurlaneFrame.title='碧蓝航线 · Live2D 模型画布';
- azurlaneFrame.src='./azurlane-stage.html?v=20261021-loading-speed-v5';
+ azurlaneFrame.src='./azurlane-stage.html?v=20261021-live2d-modules-v1';
  azurlaneFrame.loading='eager';
  azurlaneFrame.setAttribute('allow','autoplay');
  $('player').replaceChildren(azurlaneFrame);

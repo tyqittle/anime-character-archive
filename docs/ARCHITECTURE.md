@@ -7,7 +7,7 @@
 ```text
 characters.html                    # 静态图鉴 HTML（无业务 JS）
 spine.html                         # 动态剧场 HTML（无业务 JS）
-azurlane-stage.html                # 同源隔离的 Cubism / Pixi iframe
+azurlane-stage.html                # 同源隔离的 Cubism / Pixi iframe（纯页面）
 assets/
   archive-shell.css                # 共享设计系统
   gallery-base.css                 # 图鉴基础 CSS
@@ -16,12 +16,17 @@ assets/
   spine-base.css                   # 剧场基础 CSS
   spine-theme.css                  # 剧场主题 CSS
   spine-theater-layout.css         # 单屏剧场响应式布局
+  live2d-stage.css                 # Cubism 子窗口样式
   js/gallery/
     state.js                       # 页面状态、收藏及旧 key 迁移
     catalog.js                     # 筛选、分类、角色列表
     viewer.js                      # 完整原图弹窗、收藏 UI
     events.js                      # 事件代理、触屏/键盘、预热
     bootstrap.js                   # 目录加载、初始化、深链接
+  js/live2d/
+    state-and-viewport.js          # 画布坐标、尺寸适应、帧率状态
+    model-loader.js                # 动作按需加载、旧模型取消、播放
+    bootstrap.js                   # 消息/手势监听、Pixi 初始化
   js/spine/
     state.js                       # 播放状态
     viewer-controls.js             # 缩放、拖动、动作/全屏工具栏

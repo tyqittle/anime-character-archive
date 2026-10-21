@@ -1,129 +1,14 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer"><title>碧蓝航线 Cubism Live2D 播放画布</title>
-<style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#142238;color:#dbe6ff;font:13px system-ui,-apple-system,"Microsoft YaHei",sans-serif}*{box-sizing:border-box}canvas{display:block;width:100%;height:100%;touch-action:none}#warning{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:20px;color:#aebdd0;pointer-events:none}#warning[hidden]{display:none}</style>
+<link rel="stylesheet" href="./assets/live2d-stage.css?v=20261021-modules-v1">
 <script src="https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/js/lib/live2dcubismcore.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/js/lib/live2d.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/js/lib/pixi.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/js/lib/extra.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/js/lib/index.min.js"></script>
 </head><body><div id="warning">正在初始化 Cubism Live2D 画布…</div><canvas id="live2dCanvas"></canvas>
-<script>
-'use strict';
-// Same-origin child frame isolates PIXI / Cubism global APIs from the Spine engine.
-const CHANNEL='anime-archive-azurlane-v1';
-const SOURCE='https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9';
-const MILKY_SOURCE='https://cdn.jsdelivr.net/gh/MilkyLan/AzurLane-Live2d@1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3';
-// Model URLs are accepted only from the two pinned, known archive snapshots.
-function modelUrlFor(name,candidate){
- const suffix='/live2d/'+name+'/'+name+'.model3.json';
- const allowed=[SOURCE+suffix,MILKY_SOURCE+suffix];
- return allowed.includes(candidate)?candidate:SOURCE+suffix;
-}
-const SAME_ORIGIN=location.origin;
-const warn=document.getElementById('warning');
-let app=null,model=null,currentId='',currentGeneration=0,baseScale=1,zoom=1,offsetX=0,offsetY=0,initError='';
-let queuedLoad=null,readyId='',loadStartedAt=0;
-const lowPower=(navigator.hardwareConcurrency||8)<=4||(navigator.deviceMemory||8)<=4;
-const targetFPS=lowPower?30:45;
-// Keep only the final click in a burst. Never display an older asynchronous result.
-function requestLoad(name,id,url){
- if(queuedLoad)clearTimeout(queuedLoad);
- ++currentGeneration;
- queuedLoad=setTimeout(()=>{queuedLoad=null;load(name,id,url)},110);
-}
-
-function notify(kind,detail={}){window.parent.postMessage({channel:CHANNEL,kind,id:currentId,...detail},SAME_ORIGIN)}
-function message(s){warn.textContent=s;warn.hidden=false}
-function verifyName(name){return typeof name==='string'&&/^[a-zA-Z0-9_]{2,100}$/.test(name)}
-function fit(){
- if(!app||!model)return;
- // Live2D models have nonzero local-bound origins. Subtracting bounds.x/y
- // is essential: centering by model.width alone can cut off half the skin.
- const w=app.renderer.width,h=app.renderer.height;
- model.scale.set(1);
- let bounds=model.getLocalBounds();
- if(!bounds||!Number.isFinite(bounds.width)||!Number.isFinite(bounds.height)||bounds.width<=0||bounds.height<=0)
-  bounds={x:0,y:0,width:Math.max(1,model.width),height:Math.max(1,model.height)};
- baseScale=Math.min(w*.88/Math.max(1,bounds.width),h*.84/Math.max(1,bounds.height),3);
- const factor=baseScale*zoom;
- model.scale.set(factor);
- model.position.set(
-  w/2-(bounds.x+bounds.width/2)*factor+offsetX,
-  h/2-(bounds.y+bounds.height/2)*factor+offsetY
- );
-}
-function setZoom(value){zoom=Math.max(.35,Math.min(3.5,value));fit();notify('zoom',{zoom})}
-function motion(name){
- if(!model||typeof name!=='string'||!name)return;
- try{model.motion(name,0,PIXI.live2d.MotionPriority.NORMAL);notify('motion',{name})}
- catch(e){notify('error',{error:'无法播放动作 '+name+'：'+e.message})}
-}
-async function load(name,id,modelUrl){
- if(!verifyName(name)||!/^al-[a-z0-9_]+$/.test(id)||id!=='al-'+name.toLowerCase()){notify('error',{error:'无效的碧蓝航线模型编号'});return}
- const generation=++currentGeneration;
- currentId=id;readyId='';loadStartedAt=performance.now();
- zoom=1;offsetX=0;offsetY=0;
- if(model){try{app.stage.removeChild(model);model.destroy()}catch(e){}model=null}
- if(!app){notify('error',{error:initError||'Live2D 渲染库尚未加载'});return}
- message('正在加载 '+name+' 的 Cubism 模型与动作…');
- if(app?.ticker)app.ticker.stop();
- const url=modelUrlFor(name,modelUrl);
- let next;
- try{
-  // Many skins define dozens of idle motions. Preloading all of them floods
-  // the network and delays textures. Fetch motions only when actually selected.
-  next=PIXI.live2d.Live2DModel.fromSync(url,{motionPreload:'NONE'});
-  if(!next||!next.once)throw Error('Live2D 模型加载器未初始化');
-  await new Promise((resolve,reject)=>{
-   const timer=setTimeout(()=>reject(Error('模型加载超时（90 秒）')),90000);
-   next.once('load',()=>{clearTimeout(timer);resolve()});
-   next.once('error',e=>{clearTimeout(timer);reject(e instanceof Error?e:Error(String(e)))});
-  });
-  if(generation!==currentGeneration){next.destroy();return}
-  model=next;readyId=id;app.stage.addChild(model);
-  model.interactive=true;
-  fit();
-  const defs=model.internalModel?.motionManager?.definitions||{};
-  const actions=Object.keys(defs).filter(x=>Array.isArray(defs[x])&&defs[x].length);
-  const initial=['idle','home','login','main_1'].find(x=>actions.includes(x))||actions[0]||'';
-  if(model.internalModel?.motionManager)model.internalModel.motionManager.groups.idle='idle';
-  if(initial)model.motion(initial,0,PIXI.live2d.MotionPriority.FORCE);
-  model.on('hit',areas=>{if(Array.isArray(areas)&&areas.length){const a=areas[0];if(actions.includes(a))motion(a)}});
-  const p=(evt)=>{if(!model)return;const pt=evt?.data?.global;if(!pt)return;model.dragging=true;model.dragX=pt.x-model.x;model.dragY=pt.y-model.y};
-  model.on('pointerdown',p);
-  model.on('pointermove',evt=>{if(model?.dragging&&evt?.data?.global){model.x=evt.data.global.x-model.dragX;model.y=evt.data.global.y-model.dragY}});
-  for(const ev of ['pointerup','pointerupoutside'])model.on(ev,()=>{if(model)model.dragging=false});
-  warn.hidden=true;
-  if(!document.hidden&&app?.ticker)app.ticker.start();
-  notify('playing',{motions:actions,selectedMotion:initial,zoom,loadMs:Math.round(performance.now()-loadStartedAt),fpsCap:targetFPS});
- }catch(e){try{next?.destroy()}catch(_){}if(generation!==currentGeneration)return;model=null;readyId='';message('模型加载失败：'+(e?.message||String(e)));notify('error',{error:'模型加载失败：'+(e?.message||String(e))})}
-}
-window.addEventListener('message',event=>{
- if(event.origin!==SAME_ORIGIN||event.source!==window.parent)return;
- const d=event.data;
- if(d?.channel!==CHANNEL)return;
- if(d.kind==='load')requestLoad(d.skinCode,d.id,d.modelUrl);
- else if(d.kind==='motion')motion(d.motion);
- else if(d.kind==='zoom')setZoom(Number(d.zoom)||1);
- else if(d.kind==='reset'){zoom=1;offsetX=0;offsetY=0;fit();notify('zoom',{zoom})}
-});
-window.addEventListener('resize',()=>{if(model)fit()});
-let drag=false,last={x:0,y:0};
-document.getElementById('live2dCanvas').addEventListener('wheel',e=>{if(!model)return;e.preventDefault();setZoom(zoom*Math.exp(-e.deltaY*.0015))},{passive:false});
-document.getElementById('live2dCanvas').addEventListener('pointerdown',e=>{if(e.button===1){drag=true;last={x:e.clientX,y:e.clientY}}});
-document.addEventListener('pointermove',e=>{if(drag&&model){offsetX+=e.clientX-last.x;offsetY+=e.clientY-last.y;last={x:e.clientX,y:e.clientY};model.x+=e.movementX;model.y+=e.movementY}});
-document.addEventListener('pointerup',()=>drag=false);
-try{
- if(!window.PIXI?.Application||!PIXI.live2d?.Live2DModel)throw Error('第三方 PixiJS/Cubism 播放库未能初始化，请检查网络或扩展拦截');
- app=new PIXI.Application({view:document.getElementById('live2dCanvas'),autoStart:true,resizeTo:window,backgroundAlpha:0,antialias:false,resolution:1});
- // Reduce WebGL fill-rate and avoid struggling to hit 60 fps on large models.
- if(app.ticker){app.ticker.maxFPS=targetFPS;app.ticker.stop()}
- if(PIXI.Ticker?.shared)PIXI.Ticker.shared.maxFPS=targetFPS;
- document.addEventListener('visibilitychange',()=>{if(!app?.ticker)return;if(document.hidden)app.ticker.stop();else app.ticker.start()});
-
- message('Live2D 播放器已准备，正在等待选择角色…');
- notify('ready');
-}catch(e){initError=e.message;message('Live2D 初始化失败：'+initError);notify('error',{error:initError})}
-</script>
+<script defer src="./assets/js/live2d/state-and-viewport.js?v=20261021-modules-v1"></script>
+<script defer src="./assets/js/live2d/model-loader.js?v=20261021-modules-v1"></script>
+<script defer src="./assets/js/live2d/bootstrap.js?v=20261021-modules-v1"></script>
 </body></html>
