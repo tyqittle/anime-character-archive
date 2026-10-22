@@ -65,24 +65,30 @@ public sealed partial class App
             string language = "JP";
             int index = _brownDust2VoiceClipIndex++ % 3 + 1;
             int sequence = ++_brownDust2VoiceSequence;
-            string basename = "Char" + code + "_BattleReady_" + index + ".webm";
+            string basename = "Char" + code + "_BattleReady_" + index + ".wav";
             string localDir = Path.Combine(
                 AppPaths.LocalDataDirectory, "bd2-voice-cache", code, language);
             string cached = Path.Combine(localDir, basename);
             if (!File.Exists(cached))
             {
-                string url = BrownDust2VoiceRoot + code + "/" + language + "/" + basename;
+                string url = BrownDust2VoiceRoot + code + "/" + language + "/" +
+                    "Char" + code + "_BattleReady_" + index + ".webm";
                 byte[] audio = await ArchiveHttp.GetByteArrayAsync(url);
                 if (audio.Length is < 200 or > 3_000_000 ||
                     audio[0] != 0x1A || audio[1] != 0x45 ||
                     audio[2] != 0xDF || audio[3] != 0xA3)
                     throw new InvalidDataException(
                         "Brown Dust 2 voice is missing or not a WebM audio file");
+                // Opus-in-WebM is not uniformly supported by Windows WPF media
+                // decoders. Convert locally with the managed pinned codec,
+                // then feed guaranteed PCM WAV to the system player.
+                byte[] wave = await Task.Run(() =>
+                    NativeBrownDust2WebMDecoder.DecodeToWave(audio));
                 Directory.CreateDirectory(localDir);
                 string temp = cached + "." + Guid.NewGuid().ToString("N") + ".tmp";
                 try
                 {
-                    await File.WriteAllBytesAsync(temp, audio);
+                    await File.WriteAllBytesAsync(temp, wave);
                     File.Move(temp, cached, overwrite: true);
                 }
                 finally { if (File.Exists(temp)) File.Delete(temp); }
@@ -97,9 +103,9 @@ public sealed partial class App
                     _brownDust2VoicePlayer?.Play();
                 _brownDust2VoicePlayer.MediaFailed += (_, args) =>
                     AppLogger.Write(nameof(App),
-                        "bd2-voice-codec-unavailable: " +
+                        "bd2-voice-wav-playback-failed: " +
                         args.ErrorException?.Message +
-                        " (Windows must have a compatible WebM/Opus decoder)");
+                        " (system audio device unavailable)");
             }
             _brownDust2VoicePlayer.Close();
             _brownDust2VoicePlayer.Volume = 0.8;
