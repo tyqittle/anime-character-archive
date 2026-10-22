@@ -29,7 +29,8 @@ function harness(argv=['electron','.']){
   isVisible(){return this.visible}isDestroyed(){return false}
   getBounds(){return this.bounds}
   setIgnoreMouseEvents(ignore){this.ignored=ignore}
-  setAlwaysOnTop(value){this.top=value}\n  setPosition(x,y){this.bounds.x=x;this.bounds.y=y}
+  setAlwaysOnTop(value){this.top=value}
+  setPosition(x,y){this.bounds.x=x;this.bounds.y=y}
   reload(){}
  }
  class FakeTray{setToolTip(value){this.tip=value}setContextMenu(value){this.menu=value}on(){}}
