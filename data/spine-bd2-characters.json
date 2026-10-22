@@ -26,7 +26,11 @@
       "status": "verified-playback",
       "textureBytes": 1504635,
       "skeletonBytes": 311526,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Angelica/The_Fallen"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Angelica/The_Fallen",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1f068dc1856c2afbb2cd8b54359947ba748e0b3bd6e00bbb438d20d93c5a4e9f",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char061302",
@@ -45,7 +49,11 @@
       "status": "verified-playback",
       "textureBytes": 2277759,
       "skeletonBytes": 1508086,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Dalvi/Bright_Moon"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Dalvi/Bright_Moon",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "fd329e3215e7108ebf1cb1ca281e005c1f3369e928aee605579d365fd7d3640f",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char002401",
@@ -64,7 +72,11 @@
       "status": "verified-playback",
       "textureBytes": 741001,
       "skeletonBytes": 415349,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Diana/Adventurer_of_the_Unknown"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Diana/Adventurer_of_the_Unknown",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "089d4c82c9b7fcf80cce95fd25e33a4afe6ed8f9025510049b5b8b3f8565a36d",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000701",
@@ -83,7 +95,11 @@
       "status": "verified-playback",
       "textureBytes": 1650695,
       "skeletonBytes": 244798,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eclipse/Dimension_Witch"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eclipse/Dimension_Witch",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a71de15e613559fdfdaa7d1002f0440d96ce55c2d61e0cb7d0c626a45103da6e",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000201",
@@ -102,7 +118,11 @@
       "status": "verified-playback",
       "textureBytes": 1457971,
       "skeletonBytes": 323454,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Justia/Knight_of_Blood"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Justia/Knight_of_Blood",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d2ded82da20b5a9b06bd43c759b9be339ba2a43e1be811648438eebded7a49ed",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char060302",
@@ -121,7 +141,11 @@
       "status": "verified-playback",
       "textureBytes": 2102629,
       "skeletonBytes": 181814,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Alec/Sword_Breaker"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Alec/Sword_Breaker",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b05fd9ef9eef97db45ee2c5d2c8244feecc429bacc6d798e13a9c07f7956ba51",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char060301",
@@ -140,7 +164,11 @@
       "status": "verified-playback",
       "textureBytes": 2214090,
       "skeletonBytes": 144280,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Alec/The_Destruction"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Alec/The_Destruction",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9bbe6075fd3fc892c80178e03c29240b557e6bb6a84cd2a0a10eadd7547b6782",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char060502",
@@ -159,7 +187,11 @@
       "status": "verified-playback",
       "textureBytes": 2330323,
       "skeletonBytes": 341608,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Anastasia/Fire_Graffiti"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Anastasia/Fire_Graffiti",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4948a69014cfe9eb36ffb1c6df59273e8cbd9b55df68c2637efdf3b445fb9ea7",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char060501",
@@ -178,7 +210,11 @@
       "status": "verified-playback",
       "textureBytes": 2219936,
       "skeletonBytes": 206431,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Anastasia/Gentle_Maid"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Anastasia/Gentle_Maid",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "eb9c09e569d1105c3cc30f3698fc5bc2ceb863f907c3627b0e7e84584e57d07a",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char062001",
@@ -197,7 +233,11 @@
       "status": "verified-playback",
       "textureBytes": 1301207,
       "skeletonBytes": 219372,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Andrew/Loyal_Butler"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Andrew/Loyal_Butler",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bdaa22f878388b01b679295efa8e30928c98e692dab91c784d91121411410376",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char062002",
@@ -216,7 +256,11 @@
       "status": "verified-playback",
       "textureBytes": 676343,
       "skeletonBytes": 118636,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Andrew/Specialist"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Andrew/Specialist",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1770e0e6e7225dfeca516429ccdaf59edda4b0022386baac69d8c00743ea3060",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char066403",
@@ -235,7 +279,11 @@
       "status": "verified-playback",
       "textureBytes": 2286229,
       "skeletonBytes": 963268,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Angelica/Neon_Savior"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Angelica/Neon_Savior",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a938ab27f01d179dbb896576f776255749c647b41c7e7ab770c657dd20c22c1a",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char066402",
@@ -254,7 +302,11 @@
       "status": "verified-playback",
       "textureBytes": 2116363,
       "skeletonBytes": 590054,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Angelica/Pool_Party"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Angelica/Pool_Party",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e23550f361ba34e4807f7bd6f4e8a42a5fc5ca5df36babc01adcacc38dc0a3d1",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067901",
@@ -273,7 +325,11 @@
       "status": "verified-playback",
       "textureBytes": 2788251,
       "skeletonBytes": 904524,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Aquila/Savage_Warrior"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Aquila/Savage_Warrior",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "438bf4cf5a5b568d82caebf85bd9442913263530c85e314d1465563cd90b69e4",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067902",
@@ -292,7 +348,11 @@
       "status": "verified-playback",
       "textureBytes": 1953435,
       "skeletonBytes": 653964,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Aquila/Sealed_Desires"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Aquila/Sealed_Desires",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a5914aa370f1caf452c51d295ea50bfc319deb9f9bb8b6f26e238209ba498cd0",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char103701",
@@ -311,7 +371,11 @@
       "status": "verified-playback",
       "textureBytes": 819102,
       "skeletonBytes": 277986,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Arines/Priest_of_Vitality"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Arines/Priest_of_Vitality",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d4fdab99dcaa2221aaeb39ab0ed604b9f8022050a506c77b4ab5449ec97402af",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char103501",
@@ -330,7 +394,11 @@
       "status": "verified-playback",
       "textureBytes": 953753,
       "skeletonBytes": 150286,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Beatrice/The_Mighty_Warrior_of_the_Tribe"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Beatrice/The_Mighty_Warrior_of_the_Tribe",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "63643036ebc2434df19b8441b5e38213c5ee24e9fdb373fdd1a741e50f57ac0d",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char100801",
@@ -349,7 +417,11 @@
       "status": "verified-playback",
       "textureBytes": 627085,
       "skeletonBytes": 223301,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Bernie/Righteous_Raider_Girl"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Bernie/Righteous_Raider_Girl",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ed4cbbd30b57f52e2851f2d466304cb2bf9b592fb293c9dea030875c1d0522a0",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003701",
@@ -368,7 +440,11 @@
       "status": "verified-playback",
       "textureBytes": 1062654,
       "skeletonBytes": 846416,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Blade/Apostle"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Blade/Apostle",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ad1a70a48cf42c3a14bbf5b07e53abf48a8504ec9396cca3e2a531de0c08a93d",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003702",
@@ -387,7 +463,11 @@
       "status": "verified-playback",
       "textureBytes": 1158192,
       "skeletonBytes": 522413,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Blade/Onsen_Swordfighter"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Blade/Onsen_Swordfighter",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a9147998256143367cfdfdebc144d97df7dec28c07e0bf6a63cb092f6280b784",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003793",
@@ -406,7 +486,11 @@
       "status": "verified-playback",
       "textureBytes": 1425171,
       "skeletonBytes": 484519,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Blade/Tender_Dream"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Blade/Tender_Dream",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "2684fda04814325e6b09d83f0f15f95cb3ea21358aa8628c11365747bcce7724",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003703",
@@ -425,7 +509,11 @@
       "status": "verified-playback",
       "textureBytes": 1206045,
       "skeletonBytes": 1081418,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Blade/Young_Lady"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Blade/Young_Lady",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d11094adbf055b2e77fb687b4392ec37855190e7aef73f2067435b1990752e96",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char103201",
@@ -444,7 +532,11 @@
       "status": "verified-playback",
       "textureBytes": 1367860,
       "skeletonBytes": 113446,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Carlson/The_Mercenary_Knight"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Carlson/The_Mercenary_Knight",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e787008c605c6176fc107d3ee77d0cdbff61c1e6e43a82229dd949f22234722c",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char060402",
@@ -463,7 +555,11 @@
       "status": "verified-playback",
       "textureBytes": 1482978,
       "skeletonBytes": 298462,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Celia/Descendant_of_the_Great_Witch"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Celia/Descendant_of_the_Great_Witch",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "2f516568c22d0510095b377b4c89dcb0175b59a6316b5be2914de31719131f1c",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char060403",
@@ -482,7 +578,11 @@
       "status": "verified-playback",
       "textureBytes": 1525140,
       "skeletonBytes": 917116,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Celia/Masquerade_Bunny"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Celia/Masquerade_Bunny",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f34ed2430a3a6cc04afa4fa543448de5ad8d34eff5411aefd125ed4bae5003fe",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char060401",
@@ -501,7 +601,11 @@
       "status": "verified-playback",
       "textureBytes": 1347703,
       "skeletonBytes": 271561,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Celia/The_Curse"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Celia/The_Curse",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9fa8a0cc15b39047a4630f8a5c2479702228d2475c87db340bd4e398d9cde066",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char063301",
@@ -520,7 +624,11 @@
       "status": "verified-playback",
       "textureBytes": 1508039,
       "skeletonBytes": 292948,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Cynthia/Warmth_within_the_Severe_Cold"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Cynthia/Warmth_within_the_Severe_Cold",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4753e7b6ea1455179a9cf11edcca26559bb64694dbf1438baaf73cb3678a1193",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char061392",
@@ -539,7 +647,11 @@
       "status": "verified-playback",
       "textureBytes": 3280507,
       "skeletonBytes": 939738,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Dalvi/Butterfly_Dream"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Dalvi/Butterfly_Dream",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ced9e9c29e9326a4e959207f88974b42ddc7ebf893e2a6d389a6204cbcb4f179",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char061305",
@@ -558,7 +670,11 @@
       "status": "verified-playback",
       "textureBytes": 1024509,
       "skeletonBytes": 731949,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Dalvi/Summer_Vacation"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Dalvi/Summer_Vacation",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5bbecb908c067d67f3578c30fc11cb85fe262d9d5c6831894215f3e2df6028f0",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char061306",
@@ -577,7 +693,11 @@
       "status": "verified-playback",
       "textureBytes": 1690200,
       "skeletonBytes": 867943,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Dalvi/Tricky_Lover"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Dalvi/Tricky_Lover",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b63b0518d884990690aa0d5cbe2377368fb97e6592b86b0fc9bd74b982045fc5",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char004002",
@@ -596,7 +716,11 @@
       "status": "verified-playback",
       "textureBytes": 1558124,
       "skeletonBytes": 671736,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Darian/Bittersweet_Bunny"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Darian/Bittersweet_Bunny",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "96ff82fcd7ce7f32975bb8bf600ba74a6159f1ca516e383b8d948aed9868d2b6",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char004091",
@@ -615,7 +739,11 @@
       "status": "verified-playback",
       "textureBytes": 1804212,
       "skeletonBytes": 716844,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Darian/Herald_of_Enlightenment"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Darian/Herald_of_Enlightenment",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f7723c9b53a5f8529b48f9d570bb36115cd7617d672483a6de6cac5b6d6eca3a",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char004001",
@@ -634,7 +762,11 @@
       "status": "verified-playback",
       "textureBytes": 1512747,
       "skeletonBytes": 2208296,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Darian/Prophetic_Dream"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Darian/Prophetic_Dream",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "647a99d3774ec91437fa199db3d5a41446fcf96fbf1645d0fbbda21bb84b480c",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char002406",
@@ -653,7 +785,11 @@
       "status": "verified-playback",
       "textureBytes": 1970007,
       "skeletonBytes": 855731,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Diana/Anti-Dystopia"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Diana/Anti-Dystopia",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "66616bcfb5c355cbcd376c1ce4450509361d75031240ec6da41e6ca41f949581",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char002403",
@@ -672,7 +808,11 @@
       "status": "verified-playback",
       "textureBytes": 1888923,
       "skeletonBytes": 446370,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Diana/Magical_Innovator"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Diana/Magical_Innovator",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "866726e021f08922270b38756c5305f8db3d9c17673bdb2dae5ff1909f9324b6",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000707",
@@ -691,7 +831,11 @@
       "status": "verified-playback",
       "textureBytes": 1098873,
       "skeletonBytes": 268459,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eclipse/Beach_Vacation"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eclipse/Beach_Vacation",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "35c0266ad038a29dc603f86e3eb5adfc41afdc5d428c926dea09285cdb3e19c0",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000708",
@@ -710,7 +854,11 @@
       "status": "verified-playback",
       "textureBytes": 1939014,
       "skeletonBytes": 486088,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eclipse/Dream_Bride"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eclipse/Dream_Bride",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "86d7e6f2e9bb4f39097181020d179508ee078d13f7307780f4eb7341a41acbe8",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000706",
@@ -729,7 +877,11 @@
       "status": "verified-playback",
       "textureBytes": 2214867,
       "skeletonBytes": 812282,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eclipse/Nightmare_Bunny"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eclipse/Nightmare_Bunny",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e1bba52ca15cc348e549b1ae27bc695827624ba4778004d9d52bd6ea18ddd7f9",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char061102",
@@ -748,7 +900,11 @@
       "status": "verified-playback",
       "textureBytes": 1009012,
       "skeletonBytes": 262275,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eleaneer/B-Rank_Idol"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eleaneer/B-Rank_Idol",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1ca2e0cc9afb7d60ed535ce972237fc12174fd990bd115ff95ed2246efb3c764",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char061101",
@@ -767,7 +923,11 @@
       "status": "verified-playback",
       "textureBytes": 2235209,
       "skeletonBytes": 249532,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eleaneer/Piercing_Magic_Bow"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eleaneer/Piercing_Magic_Bow",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9d8d521d15d747ce23c11933bebf48a38913097b8575ca03a5cd1d856686c4a4",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char061103",
@@ -786,7 +946,11 @@
       "status": "verified-playback",
       "textureBytes": 1303957,
       "skeletonBytes": 595134,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eleaneer/Shadow_Bunny"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eleaneer/Shadow_Bunny",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "aab072dc393f9b03ed2b2289cd945ce053b3bed8d21d6fa3db597b9f46fbc224",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char060802",
@@ -805,7 +969,11 @@
       "status": "verified-playback",
       "textureBytes": 2205104,
       "skeletonBytes": 797807,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Elise/Code_Name_O"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Elise/Code_Name_O",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "fe3509e69bd1cb5e9bc861fcbb1dc07b7f658d8b032d537c16ba70e29f047a63",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char060801",
@@ -824,7 +992,11 @@
       "status": "verified-playback",
       "textureBytes": 1352777,
       "skeletonBytes": 198388,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Elise/Lovely_Lady"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Elise/Lovely_Lady",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a385820c5b74f6c98bfaad937ea4a11363963f0c065145627dbc09e092f3e429",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char060804",
@@ -843,7 +1015,11 @@
       "status": "verified-playback",
       "textureBytes": 1273643,
       "skeletonBytes": 635012,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Elise/Naive_Lady"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Elise/Naive_Lady",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3a4f232590161e2cf21284cb8f929c6728dfaff969cfad869d090f1de32c54ad",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003101",
@@ -862,7 +1038,11 @@
       "status": "verified-playback",
       "textureBytes": 874991,
       "skeletonBytes": 450624,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Elpis/Hand_of_Salvation"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Elpis/Hand_of_Salvation",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4dad3415a52dd4051579acd3ce6c647d286d9605a98178ccc43282c80c7c5f1c",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char101301",
@@ -881,7 +1061,11 @@
       "status": "verified-playback",
       "textureBytes": 1246548,
       "skeletonBytes": 199790,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Emma/Haggard_Delinquent"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Emma/Haggard_Delinquent",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3a1c6ca794f67722dfbd59023cf56c41ceff584ca3bca3df2c2308a5119e1fd5",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char101302",
@@ -900,7 +1084,11 @@
       "status": "verified-playback",
       "textureBytes": 1332033,
       "skeletonBytes": 183685,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Emma/School_Queen"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Emma/School_Queen",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8945b8e79b166aa81287d8032edbaa1e0729fb17accf0342d02a9da90702ff83",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char020001",
@@ -919,7 +1107,11 @@
       "status": "verified-playback",
       "textureBytes": 1199979,
       "skeletonBytes": 471776,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eris/Esteemed_Adventurer"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eris/Esteemed_Adventurer",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "6403acca94f8ab38e33f21d3219076d774087b33e9a1b222532b739addafcab0",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char020002",
@@ -938,7 +1130,11 @@
       "status": "verified-playback",
       "textureBytes": 848098,
       "skeletonBytes": 477086,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eris/Your_Very_Own_Cat"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Eris/Your_Very_Own_Cat",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "03259078f1cf5c7e616b989a25ee2518ee0fe9c251f37cf14ebbe1e87fdaf16b",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char100201",
@@ -957,7 +1153,11 @@
       "status": "verified-playback",
       "textureBytes": 1282173,
       "skeletonBytes": 152341,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Fred/Lugo_Defense_Force"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Fred/Lugo_Defense_Force",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7e6ed523dbd25326036771b02434733297dae168649ec7d3ce8106b7b9328b52",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char066902",
@@ -976,7 +1176,11 @@
       "status": "verified-playback",
       "textureBytes": 2902445,
       "skeletonBytes": 755240,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Glacia/Alice"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Glacia/Alice",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "dd13b630da1cc662af54dd64110eb5ca4e8e464c56e59b0aa0dcdf5adcc2abdb",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char066906",
@@ -995,7 +1199,11 @@
       "status": "verified-playback",
       "textureBytes": 1104074,
       "skeletonBytes": 527695,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Glacia/Disciplinary_Committee"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Glacia/Disciplinary_Committee",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "775642570b7991d66cf28c19a290d82a4e3f11005862f4b68fa8e4c65c4313d8",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char066907",
@@ -1014,7 +1222,11 @@
       "status": "verified-playback",
       "textureBytes": 1825548,
       "skeletonBytes": 955846,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Glacia/Heavenly_Guardian_Successor"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Glacia/Heavenly_Guardian_Successor",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e9ac877c679f928cc510d6d5fe15b267fa84ae3c1dd5fb1977f3b44fe35a64e1",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char020601",
@@ -1033,7 +1245,11 @@
       "status": "verified-playback",
       "textureBytes": 1039227,
       "skeletonBytes": 697802,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Goblin_Slayer/Orcbolg"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Goblin_Slayer/Orcbolg",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4a533bf71d7198b3173787e3de5e4bf6e98a8da88fbb1529f900cb8d63a94a25",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067702",
@@ -1052,7 +1268,11 @@
       "status": "verified-playback",
       "textureBytes": 1204216,
       "skeletonBytes": 696692,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Granadair/Queen_of_Gluttis"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Granadair/Queen_of_Gluttis",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "53560a399ba0849029b301fd0297478358bb4b9946b76e314df2d28b388dfadc",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067701",
@@ -1071,7 +1291,11 @@
       "status": "verified-playback",
       "textureBytes": 1263055,
       "skeletonBytes": 562938,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Granadair/Shrine_Maiden_of_Purification"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Granadair/Shrine_Maiden_of_Purification",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8d233fa935cb62e55a4116abab93688aeaf1c36058a6d7b4176877c755ddc22f",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067103",
@@ -1090,7 +1314,11 @@
       "status": "verified-playback",
       "textureBytes": 1723540,
       "skeletonBytes": 654682,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Granhildr/Boo_Ghost"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Granhildr/Boo_Ghost",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f687f6490428674994e17fb8b0de3dee1ee26e874fefcf9996670792e9d52710",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067104",
@@ -1109,7 +1337,11 @@
       "status": "verified-playback",
       "textureBytes": 1378433,
       "skeletonBytes": 922075,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Granhildr/Combat_Medic"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Granhildr/Combat_Medic",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d8e1afcc3bca94d7fdce54c13b2879d8a86dd1796c96f5accd4e1118fd9d1b4a",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067102",
@@ -1128,7 +1360,11 @@
       "status": "verified-playback",
       "textureBytes": 1353823,
       "skeletonBytes": 530892,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Granhildr/Comeback_Idol"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Granhildr/Comeback_Idol",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ff6c8d2542fb1604a5bea5a5ff59ad92c70a5a00df202fcbbe81a370a7f42a71",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067101",
@@ -1147,7 +1383,11 @@
       "status": "verified-playback",
       "textureBytes": 4361578,
       "skeletonBytes": 1225154,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Granhildr/The_Void"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Granhildr/The_Void",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "52be00a9f6a004fb68558b3c7a9d343f8e049f935b509f19951f8e6c7a7d627a",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000402",
@@ -1166,7 +1406,11 @@
       "status": "verified-playback",
       "textureBytes": 903000,
       "skeletonBytes": 168311,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Gray/B-Rank_Manager"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Gray/B-Rank_Manager",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e1b593ea4bdb97faf5955c1eb51a8cd6f13047d88091011b3b87cdaf59f5b17b",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000406",
@@ -1185,7 +1429,11 @@
       "status": "verified-playback",
       "textureBytes": 1323987,
       "skeletonBytes": 159032,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Gray/Pool_Party"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Gray/Pool_Party",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3e38d56dc752011c9bc837ebbdc77fa937a6b2306f886a43ae586d429a89ba25",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000401",
@@ -1204,7 +1452,11 @@
       "status": "verified-playback",
       "textureBytes": 2339256,
       "skeletonBytes": 425237,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Gray/The_Sharpshooter_of_the_Mist"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Gray/The_Sharpshooter_of_the_Mist",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c2a09661fe5074ea30f847e4f131334ead609486f72574ff63265701bafa1398",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000403",
@@ -1223,7 +1475,11 @@
       "status": "verified-playback",
       "textureBytes": 3114248,
       "skeletonBytes": 317026,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Gray/Vanguard"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Gray/Vanguard",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3582d71179bd5fe7fbfc639076ad075fe41566788090ddc600c79de3f0991246",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char100101",
@@ -1242,7 +1498,11 @@
       "status": "verified-playback",
       "textureBytes": 1159333,
       "skeletonBytes": 154132,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Gynt/Lugo_Hunter"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Gynt/Lugo_Hunter",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8ca73e96045d0fdd9b3a6fc9192d88016567ad1e5836327e0aecf80ad76fe330",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char061002",
@@ -1261,7 +1521,11 @@
       "status": "verified-playback",
       "textureBytes": 1127771,
       "skeletonBytes": 314508,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Helena/B-Rank_Idol"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Helena/B-Rank_Idol",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7b97bcbabcf633ba9917742c117b88322e0686ae1d41d719ab0860c4ccfbdeba",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char061092",
@@ -1280,7 +1544,11 @@
       "status": "verified-playback",
       "textureBytes": 955235,
       "skeletonBytes": 412986,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Helena/Rising_Star"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Helena/Rising_Star",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a7c0af09d87e7f5b268a7b069d129f0431f42f5aca7b5c77fdf87629a8a511e6",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char061003",
@@ -1299,7 +1567,11 @@
       "status": "verified-playback",
       "textureBytes": 1696481,
       "skeletonBytes": 1111346,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Helena/Sunny_Inn_Hand"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Helena/Sunny_Inn_Hand",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8d13334e4f39cc346354aaaed104adbd52e3b9ffc717808c3f1375067998367f",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char061001",
@@ -1318,7 +1590,11 @@
       "status": "verified-playback",
       "textureBytes": 1166527,
       "skeletonBytes": 303601,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Helena/Top_Idol"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Helena/Top_Idol",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "960fa6dcec98007517d6e0f93eae77ce60b25ce6a81fe66ff2c585adcd8b626c",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char020801",
@@ -1337,7 +1613,11 @@
       "status": "verified-playback",
       "textureBytes": 1535188,
       "skeletonBytes": 334942,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/High_Elf_Archer/Daughter_of_Starwind"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/High_Elf_Archer/Daughter_of_Starwind",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "fda6ab8d839dde172fe62981ff3175e10b2223d21ed250fca09d7334566354e7",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char020501",
@@ -1356,7 +1636,11 @@
       "status": "verified-playback",
       "textureBytes": 732204,
       "skeletonBytes": 322941,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Hikage/Kind_Ruthlessness"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Hikage/Kind_Ruthlessness",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f0cd5531e0e76b24dd8b6e3c851037bbfbf6ce1dc5fc6634859cb7f96e4fcf0f",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char021001",
@@ -1375,7 +1659,11 @@
       "status": "verified-playback",
       "textureBytes": 1004361,
       "skeletonBytes": 277454,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Ikaruga/Noble_Flame"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Ikaruga/Noble_Flame",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "57ea85aece0f3faac069ac8c580a322d6d0ce61f25acd244a559cd66baa85e72",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char063001",
@@ -1394,7 +1682,11 @@
       "status": "verified-playback",
       "textureBytes": 1053977,
       "skeletonBytes": 277241,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Ingrid/Kardis'_Bullet"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Ingrid/Kardis'_Bullet",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a4af05f551f0cd63e9a01905850140ce035ee4e1a5fc0170b350767869a88571",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char101201",
@@ -1413,7 +1705,11 @@
       "status": "verified-playback",
       "textureBytes": 1776059,
       "skeletonBytes": 162752,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Jayden/Beautiful_Girl_Devotee"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Jayden/Beautiful_Girl_Devotee",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3ad3580b70f090e4fdff2465dff5940136495a04f77061702e0ebde83ed98ea3",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char101202",
@@ -1432,7 +1728,11 @@
       "status": "verified-playback",
       "textureBytes": 1567933,
       "skeletonBytes": 150741,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Jayden/Manga_Research_Club"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Jayden/Manga_Research_Club",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1278b6a37ecb0e9ede89cbd6fc104eb97be0d75d2bb3b0544b0895169f9f8609",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char063401",
@@ -1451,7 +1751,11 @@
       "status": "verified-playback",
       "textureBytes": 824595,
       "skeletonBytes": 193217,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Julie/Healer"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Julie/Healer",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0c7ed36391516931b9947b0cc05fe2305a5cc8fcead436182cb693e75e781b33",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000203",
@@ -1470,7 +1774,11 @@
       "status": "verified-playback",
       "textureBytes": 1253692,
       "skeletonBytes": 347698,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Justia/Blood_Glutton"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Justia/Blood_Glutton",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d359eba74380c506cc39f72bbee233cc0ee812e1c034f16a130465227f605a4e",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000296",
@@ -1489,7 +1797,11 @@
       "status": "verified-playback",
       "textureBytes": 1926063,
       "skeletonBytes": 857436,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Justia/Hot_Summer_Dream"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Justia/Hot_Summer_Dream",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "06aedc6b0b1cb498e1e28fb3d3505fbdc2692d0ed5352f6a97533e47de2fee31",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000204",
@@ -1508,7 +1820,11 @@
       "status": "verified-playback",
       "textureBytes": 2269627,
       "skeletonBytes": 420451,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Justia/Kendo_Club"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Justia/Kendo_Club",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "fcea1bbfe4c5b4fa5de483eb42afcc92f6515a992185431e41ee8c1a348ea3b1",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000206",
@@ -1527,7 +1843,11 @@
       "status": "verified-playback",
       "textureBytes": 1851646,
       "skeletonBytes": 586972,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Justia/Pool_Party"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Justia/Pool_Party",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "92714c11233ab761ea15692846026b792197d805ce636e5304a86777fe5ddaf9",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000202",
@@ -1546,7 +1866,11 @@
       "status": "verified-playback",
       "textureBytes": 2069435,
       "skeletonBytes": 318275,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Justia/White_Reaper"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Justia/White_Reaper",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bb825320e5ea37d9a2c6312a6234609b099fafb7c640480a39c74e04fe57af02",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char101501",
@@ -1565,7 +1889,11 @@
       "status": "verified-playback",
       "textureBytes": 1192243,
       "skeletonBytes": 164824,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Kry/Liberated_Marauder"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Kry/Liberated_Marauder",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "881e9ae2aea63f7e68ef32434fa88047e9e1b2eb9f3fdc486bae93b329cad65f",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char101502",
@@ -1584,7 +1912,11 @@
       "status": "verified-playback",
       "textureBytes": 1323092,
       "skeletonBytes": 146570,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Kry/Violent_Student"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Kry/Violent_Student",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8dbc077c0cefaa130b45a8b3e8a88ee95fb0d6260679ae1cfaa58fcad783cfde",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char021101",
@@ -1603,7 +1935,11 @@
       "status": "verified-playback",
       "textureBytes": 1562261,
       "skeletonBytes": 417240,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Kyouka_Uzen/Eternal_Chains"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Kyouka_Uzen/Eternal_Chains",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "37c4d9c58f01553a9c5efadf77cb374ec435e9aed3ddb88e530ecf8970ded31d",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000104",
@@ -1622,7 +1958,11 @@
       "status": "verified-playback",
       "textureBytes": 2646139,
       "skeletonBytes": 638799,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lathel/Dark_Knight"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lathel/Dark_Knight",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "038f474b373a03c951200a3eb04a97d42ea1e154359e0b97b750fd3bcb97751f",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000101",
@@ -1641,7 +1981,11 @@
       "status": "verified-playback",
       "textureBytes": 1343846,
       "skeletonBytes": 225014,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lathel/Herb_Tracker"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lathel/Herb_Tracker",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "da961d014e4e01f21d4d10bf35e377b41df164b13e2bc4023c22520056000058",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000103",
@@ -1660,7 +2004,11 @@
       "status": "verified-playback",
       "textureBytes": 1231801,
       "skeletonBytes": 154937,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lathel/Homunculus"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lathel/Homunculus",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "553f3bfb14da382121f075662f808fb023f47bafb66ecf99bba0ecd5ac068cc7",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000102",
@@ -1679,7 +2027,11 @@
       "status": "verified-playback",
       "textureBytes": 1186511,
       "skeletonBytes": 160997,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lathel/Lonely_Survivor"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lathel/Lonely_Survivor",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "855f9b4ec24a362755dde29184691e29956b05b694eda61dfb4c62bbb3aca2ad",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000106",
@@ -1698,7 +2050,11 @@
       "status": "verified-playback",
       "textureBytes": 840022,
       "skeletonBytes": 127651,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lathel/Pool_Party"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lathel/Pool_Party",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "df418c4eba90b21af84f1b6703744fd30c91c3d7f37fd29442e8216c2bdf1899",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000105",
@@ -1717,7 +2073,11 @@
       "status": "verified-playback",
       "textureBytes": 2427374,
       "skeletonBytes": 263249,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lathel/Promise_of_Vengeance"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lathel/Promise_of_Vengeance",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "31321bfc96b761bd7a9b59eaa7156b8e0f1bebbdc1f1423d61c18b4c2f8cf626",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003001",
@@ -1736,7 +2096,11 @@
       "status": "verified-playback",
       "textureBytes": 1550688,
       "skeletonBytes": 665822,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Layla/Anvil_of_Creation"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Layla/Anvil_of_Creation",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4837226c88085caeb84d0eff1cfdbc1b2e7f46e6b04b46077213edca0e96caad",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char060602",
@@ -1755,7 +2119,11 @@
       "status": "verified-playback",
       "textureBytes": 5096375,
       "skeletonBytes": 1458476,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lecliss/Android_Queen"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lecliss/Android_Queen",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8e5d9139e9ff59bfbc9dc463539dd0d5094870d3681d5d9641861aaffcad481c",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char060601",
@@ -1774,7 +2142,11 @@
       "status": "verified-playback",
       "textureBytes": 2597139,
       "skeletonBytes": 290145,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lecliss/Killer_Doll"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lecliss/Killer_Doll",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1a2b0f969b183a3d22978b7ff25b6e67eb403f2a7c674df08d14306e6858b019",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067302",
@@ -1793,7 +2165,11 @@
       "status": "verified-playback",
       "textureBytes": 4549107,
       "skeletonBytes": 793870,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Levia/Night_of_Jealousy"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Levia/Night_of_Jealousy",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "637e65f2d533069dd3af290894f28dd696a3a121541adcd4368a42192b8db636",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067303",
@@ -1812,7 +2188,11 @@
       "status": "verified-playback",
       "textureBytes": 1568558,
       "skeletonBytes": 904926,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Levia/Overheat"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Levia/Overheat",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a480c547a906a4cc1181aa8347d5081ea6043a498be78d563ffb2ad94140878d",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067301",
@@ -1831,7 +2211,11 @@
       "status": "verified-playback",
       "textureBytes": 1010611,
       "skeletonBytes": 237003,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Levia/Track_and_Field_Captain"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Levia/Track_and_Field_Captain",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e4f543e18531dbbbd83f611ae1f4e3d3e874b5cf2c04377ad2fa7a208b5cb72b",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char001207",
@@ -1850,7 +2234,11 @@
       "status": "verified-playback",
       "textureBytes": 1035211,
       "skeletonBytes": 427067,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Liatris/Maid_Name_R"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Liatris/Maid_Name_R",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "54e52c1c8939ea5dbd04750b437362fec03b16b061c1d3dec0161e0f787710a6",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char001206",
@@ -1869,7 +2257,11 @@
       "status": "verified-playback",
       "textureBytes": 995000,
       "skeletonBytes": 282959,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Liatris/Neon_Stalker"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Liatris/Neon_Stalker",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "34419f07b16f095812454e9cb965b07fa876f8e0bc8724bb9123c203a10b1a56",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char001201",
@@ -1888,7 +2280,11 @@
       "status": "verified-playback",
       "textureBytes": 1622327,
       "skeletonBytes": 328529,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Liatris/Rodev's_Star"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Liatris/Rodev's_Star",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bb7d4b5e2a05cc44ba39fa78be33cbc09260618042ac7da773b92621a58b20d0",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003801",
@@ -1907,7 +2303,11 @@
       "status": "verified-playback",
       "textureBytes": 1412574,
       "skeletonBytes": 1295955,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Liberta/Dark_Saintess"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Liberta/Dark_Saintess",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5483e4f43f896d93c04f2ced1eb9a81f2e742fcfa453a717853a672b50ec9762",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003892",
@@ -1926,7 +2326,11 @@
       "status": "verified-playback",
       "textureBytes": 1327111,
       "skeletonBytes": 590045,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Liberta/Hedonist"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Liberta/Hedonist",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d0648bb33827a480cdc8b285472f29270b922cc70403169a643b3a0b8420d297",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003803",
@@ -1945,7 +2349,11 @@
       "status": "verified-playback",
       "textureBytes": 3113570,
       "skeletonBytes": 1407513,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Liberta/Miracle_Rose"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Liberta/Miracle_Rose",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9bc32741d631cd80482b3dd5b1df857e6fa171db8f43895d00e571cb201d9a2b",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003802",
@@ -1964,7 +2372,11 @@
       "status": "verified-playback",
       "textureBytes": 1030136,
       "skeletonBytes": 572263,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Liberta/Onsen_Manager"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Liberta/Onsen_Manager",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "89a7763e7aae0f86d5ea4f9508461b48e6d8d771ea9062d2a53e3e3a9030af8f",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char100301",
@@ -1983,7 +2395,11 @@
       "status": "verified-playback",
       "textureBytes": 1287097,
       "skeletonBytes": 363442,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lisianne/Wandering_Priest"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lisianne/Wandering_Priest",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c2eb03e2c9f8d3288abc734cdccaf494d42628699c26f4c10059a74cc0753808",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003203",
@@ -2002,7 +2418,11 @@
       "status": "verified-playback",
       "textureBytes": 1678920,
       "skeletonBytes": 609473,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Loen/Celebrity_Bunny"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Loen/Celebrity_Bunny",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e03c16c7ae261f2549ff39ef2638ebc5efcc393f602f3e2969b271539e268168",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003201",
@@ -2021,7 +2441,11 @@
       "status": "verified-playback",
       "textureBytes": 1075763,
       "skeletonBytes": 660434,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Loen/Last_Hope"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Loen/Last_Hope",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "00a1f673faffd4d4584c194cfb6888b123a027b4e41912d5a1a7e55c4ee33d4f",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003202",
@@ -2040,7 +2464,11 @@
       "status": "verified-playback",
       "textureBytes": 998975,
       "skeletonBytes": 620727,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Loen/Track_and_Field_Team"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Loen/Track_and_Field_Team",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8038622d471e0697e88fe674e1d05b7e3d2777369faec00137f276afd8da07fd",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char100601",
@@ -2059,7 +2487,11 @@
       "status": "verified-playback",
       "textureBytes": 1332188,
       "skeletonBytes": 177146,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lucrezia/Seductive_Wings"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lucrezia/Seductive_Wings",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "364bf194cbd9a56eb72bef4de920135ab7c65c232907d14cb27ab035addc956d",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067502",
@@ -2078,7 +2510,11 @@
       "status": "verified-playback",
       "textureBytes": 1818646,
       "skeletonBytes": 241330,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Luvencia/Deal_Snatcher"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Luvencia/Deal_Snatcher",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1b366eec99f782e3557c3043c0a77640bf7ffc5f915fb9cce38edec5dfdecc0d",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067504",
@@ -2097,7 +2533,11 @@
       "status": "verified-playback",
       "textureBytes": 1716773,
       "skeletonBytes": 499141,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Luvencia/Ocean_Vanguard"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Luvencia/Ocean_Vanguard",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "354161251ab3fff561a8c13085c1ec7d20630f88a68c3fdc294ac2f30075218f",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067503",
@@ -2116,7 +2556,11 @@
       "status": "verified-playback",
       "textureBytes": 2072208,
       "skeletonBytes": 950242,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Luvencia/Wild_Dog"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Luvencia/Wild_Dog",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b2d8e843cff071cb4e217f02f5d447e17c352a637805e02daf7ad6967c806ab3",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char103301",
@@ -2135,7 +2579,11 @@
       "status": "verified-playback",
       "textureBytes": 864294,
       "skeletonBytes": 121934,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lydia/Apprentice_Spearman"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Lydia/Apprentice_Spearman",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1807680d14db0e9329ec0d607c7fca56a77631806fed9097b8a3411db3ee2a33",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067803",
@@ -2154,7 +2602,11 @@
       "status": "verified-playback",
       "textureBytes": 3677783,
       "skeletonBytes": 1522282,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Mamonir/Miracle_Marine"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Mamonir/Miracle_Marine",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1acd0fd5cabac115c455c27f391c18a24cee5f2363eca2bf0b49a839725725eb",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067801",
@@ -2173,7 +2625,11 @@
       "status": "verified-playback",
       "textureBytes": 3100906,
       "skeletonBytes": 1270473,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Mamonir/Night_of_Death"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Mamonir/Night_of_Death",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "96c6bb5c5fcd72319bc30b95031e077b55969934a2021211e28cc987377fe632",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char103601",
@@ -2192,7 +2648,11 @@
       "status": "verified-playback",
       "textureBytes": 1282646,
       "skeletonBytes": 329407,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Maria/Archmage"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Maria/Archmage",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d7e2f79dcf309cb296a204920e55a86aff545187d634ffe870ae599e2a2fddb8",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067403",
@@ -2211,7 +2671,11 @@
       "status": "verified-playback",
       "textureBytes": 1497471,
       "skeletonBytes": 584706,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Michaela/Acting_Archbishop"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Michaela/Acting_Archbishop",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8d0430736c9f81d1ed5a37b1644d5e53cadbbe0a4a0e3ddf55e327814cab6687",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067401",
@@ -2230,7 +2694,11 @@
       "status": "verified-playback",
       "textureBytes": 2321278,
       "skeletonBytes": 629234,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Michaela/Beachside_Justice"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Michaela/Beachside_Justice",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "934585e1194eb5f4d602bcb35d43a62f1e156f3acb6a0de91bfc5d3b4e74169c",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067402",
@@ -2249,7 +2717,11 @@
       "status": "verified-playback",
       "textureBytes": 1412950,
       "skeletonBytes": 459716,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Michaela/Queen_of_Signatures"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Michaela/Queen_of_Signatures",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1659ff0f6a46e98e40e139d8094f8bf5ee68e85cb5e83f592e1b5c32ecf3e93f",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067491",
@@ -2268,7 +2740,11 @@
       "status": "verified-playback",
       "textureBytes": 1723683,
       "skeletonBytes": 511261,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Michaela/True_Liberation"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Michaela/True_Liberation",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7a069235a2c5ae602c53e25acd1b1a06a8acefc799304db8f16c0d0ba1281651",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003403",
@@ -2287,7 +2763,11 @@
       "status": "verified-playback",
       "textureBytes": 1219962,
       "skeletonBytes": 2039886,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Morpeah/Apostle"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Morpeah/Apostle",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "10d675a417810b346dad6a612fb79907b279fa500e73b36aafa01ca62650a69e",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003401",
@@ -2306,7 +2786,11 @@
       "status": "verified-playback",
       "textureBytes": 1112245,
       "skeletonBytes": 277514,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Morpeah/Beach_Vacation"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Morpeah/Beach_Vacation",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "74062833870cba666c417b42d0e3f59c858c5d9856fa88c98935aaf51d6ae717",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003402",
@@ -2325,7 +2809,11 @@
       "status": "verified-playback",
       "textureBytes": 1919257,
       "skeletonBytes": 2877348,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Morpeah/Daydream_Bunny"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Morpeah/Daydream_Bunny",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "37c4fa214164431e0dfd03ef1c6674a0afc773e9ed7787ebada68f829f4e557e",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char065802",
@@ -2344,7 +2832,11 @@
       "status": "verified-playback",
       "textureBytes": 1525825,
       "skeletonBytes": 537914,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Nartas/Anonymous_Sage"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Nartas/Anonymous_Sage",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bcb3b9895c3056916c7be984dadd36796e610b038bff58865dbfaaa551805567",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003301",
@@ -2363,7 +2855,11 @@
       "status": "verified-playback",
       "textureBytes": 848326,
       "skeletonBytes": 258471,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Nebris/Labyrinth_Gatekeeper"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Nebris/Labyrinth_Gatekeeper",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "93ade8ac030c43bd5ec1ef256c99c9ea929ca1ddf850a3504c3a93f76a5d2729",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003302",
@@ -2382,7 +2878,11 @@
       "status": "verified-playback",
       "textureBytes": 1091417,
       "skeletonBytes": 893490,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Nebris/Laid-back_Lifeguard"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Nebris/Laid-back_Lifeguard",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "286673eceb18edc1c54a6c5c41400ddc972ac0fff3da406b3b3267cc482525be",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003392",
@@ -2401,7 +2901,11 @@
       "status": "verified-playback",
       "textureBytes": 2183901,
       "skeletonBytes": 675323,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Nebris/Lucky_Bikini"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Nebris/Lucky_Bikini",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "cbf5f5b344de63f4e90870427c444b8f5a9559de86def92924a12a88f27eded7",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003303",
@@ -2420,7 +2924,11 @@
       "status": "verified-playback",
       "textureBytes": 1126774,
       "skeletonBytes": 901222,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Nebris/New_Hire"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Nebris/New_Hire",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "37290f399b27eef8b25f4085aab424373949229c6251979f5fca9846633fea2b",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char004301",
@@ -2439,7 +2947,11 @@
       "status": "verified-playback",
       "textureBytes": 1055174,
       "skeletonBytes": 857597,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Nekyndalia/Deadeye"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Nekyndalia/Deadeye",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "dce35c0b1c1cc2bb18e1635f6d2fe79e96fb6c1580e5e303b7867595680366ba",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char004302",
@@ -2458,7 +2970,11 @@
       "status": "verified-playback",
       "textureBytes": 1739727,
       "skeletonBytes": 737010,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Nekyndalia/Unraveling_Mummy"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Nekyndalia/Unraveling_Mummy",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "236459099bf887528057f3d8d2caa82034837ff5cbc6b5f07bff2da0e44857bc",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003602",
@@ -2477,7 +2993,11 @@
       "status": "verified-playback",
       "textureBytes": 1142590,
       "skeletonBytes": 701001,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Olivier/Apostle"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Olivier/Apostle",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "286d3b2d037303cedf263a708fe580272b1926162a8af765b2bcb1ccd49fb65e",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003601",
@@ -2496,7 +3016,11 @@
       "status": "verified-playback",
       "textureBytes": 3402857,
       "skeletonBytes": 1072634,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Olivier/Faithful_Wings"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Olivier/Faithful_Wings",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e13847e79bb2fa9579ab86ededc3ae29194647ee1c6a69266762874e5c66262f",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003603",
@@ -2515,7 +3039,11 @@
       "status": "verified-playback",
       "textureBytes": 1540841,
       "skeletonBytes": 542988,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Olivier/Fallen_Wings"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Olivier/Fallen_Wings",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0f377136f649578d871a31825c3d49474834304c1786febe60a3040b81c8a2f7",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003604",
@@ -2534,7 +3062,11 @@
       "status": "verified-playback",
       "textureBytes": 1710499,
       "skeletonBytes": 1420284,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Olivier/Retired_Legend"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Olivier/Retired_Legend",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f92802ea8e191d96c535c65d031afdb480e775e8eb1ca3ed870b5b7f83261fcc",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000604",
@@ -2553,7 +3085,11 @@
       "status": "verified-playback",
       "textureBytes": 1957397,
       "skeletonBytes": 311927,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Olstein/Sage_of_Blue_Clouds"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Olstein/Sage_of_Blue_Clouds",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f62cde0c160cbbea8a392f95c47796e25f33882fd54fcf261963a35bbca10a51",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000601",
@@ -2572,7 +3108,11 @@
       "status": "verified-playback",
       "textureBytes": 2050953,
       "skeletonBytes": 203090,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Olstein/The_Fiend_Scholar"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Olstein/The_Fiend_Scholar",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "173d04600af096ba7e4849a2bac430f50f40f0ff7511e67fcc75c65da2be4db2",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char004202",
@@ -2591,7 +3131,11 @@
       "status": "verified-playback",
       "textureBytes": 3211101,
       "skeletonBytes": 2338035,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Palette/Miracle_Violet"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Palette/Miracle_Violet",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0613fd007723f244bd5f6b848c7474d2c03141fb9f2956312e7eb237d0c820c9",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char004201",
@@ -2610,7 +3154,11 @@
       "status": "verified-playback",
       "textureBytes": 3813643,
       "skeletonBytes": 993729,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Palette/Shattered_Dream"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Palette/Shattered_Dream",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9b235750abe1e187b3347ee973ff3398036ed924d71bc10308ea8c4092adb2cc",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char020701",
@@ -2629,7 +3177,11 @@
       "status": "verified-playback",
       "textureBytes": 1506183,
       "skeletonBytes": 466252,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Priestess/Earth_Mother_Believer"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Priestess/Earth_Mother_Believer",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "74dcf3fc6228688aac3feacccf1050102d897e966c45a63a0353066afeb00a86",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char060702",
@@ -2648,7 +3200,11 @@
       "status": "verified-playback",
       "textureBytes": 2189004,
       "skeletonBytes": 265653,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rafina/Code_Name_A"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rafina/Code_Name_A",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7c4234e004786ea27ea6622121ffd648cee9440137ee6b912b4c306815f12ffa",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char060706",
@@ -2667,7 +3223,11 @@
       "status": "verified-playback",
       "textureBytes": 1042892,
       "skeletonBytes": 582846,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rafina/Game_Club"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rafina/Game_Club",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ac0288cd6b769f0fdc58791db5d92b8361a485c7c96df63cd495d5a49d2aeaa3",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char060701",
@@ -2686,7 +3246,11 @@
       "status": "verified-playback",
       "textureBytes": 2280298,
       "skeletonBytes": 205619,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rafina/Steel_Engine"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rafina/Steel_Engine",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e460de1329cca40b56f6fee996be870a34cb609d0435d2fb6618a86e34e9cb63",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char066803",
@@ -2705,7 +3269,11 @@
       "status": "verified-playback",
       "textureBytes": 1502928,
       "skeletonBytes": 512163,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Refithea/Poolside_Fairy"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Refithea/Poolside_Fairy",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "be7ab70e6cf66b85c2006dda81ac49e6f25771520dc1d6e7beaa8387abd769eb",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char066802",
@@ -2724,7 +3292,11 @@
       "status": "verified-playback",
       "textureBytes": 1716606,
       "skeletonBytes": 592335,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Refithea/Pure_White_Blessing"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Refithea/Pure_White_Blessing",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b5679d157a0119738c31d0b218427d3a8a5019d4a0d7cd9853ffe55c993884c6",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char066802_c",
@@ -2743,7 +3315,11 @@
       "status": "verified-playback",
       "textureBytes": 2088872,
       "skeletonBytes": 553275,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Refithea/Pure_White_Blessing"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Refithea/Pure_White_Blessing",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bdc4bbcdadd61b2bfc4caaaba96a2265595c6cddbf379e887949f22cb6c33b16",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char066801",
@@ -2762,7 +3338,11 @@
       "status": "verified-playback",
       "textureBytes": 1063145,
       "skeletonBytes": 1092751,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Refithea/The_Gluttonous"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Refithea/The_Gluttonous",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "32310d45ec3547fcd7bf39c55ad361971f80e45b39d2cbe747cc05ed18c4fdb4",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char100401",
@@ -2781,7 +3361,11 @@
       "status": "verified-playback",
       "textureBytes": 1399872,
       "skeletonBytes": 212045,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Remnunt/Combat_Doctor"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Remnunt/Combat_Doctor",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3e1311c346f7cbb44bf438b061c23615d987b3733ca246e5c232ca368597b96c",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char021301",
@@ -2800,7 +3384,11 @@
       "status": "verified-playback",
       "textureBytes": 1202060,
       "skeletonBytes": 639769,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Ren_Yamashiro/Lord_of_the_Cosmos"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Ren_Yamashiro/Lord_of_the_Cosmos",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5e4d9f35c53ba8804018961f64a384f8cd17382eb1c2822ec9478d7a3af7f47e",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char021391",
@@ -2819,7 +3407,11 @@
       "status": "verified-playback",
       "textureBytes": 1881080,
       "skeletonBytes": 537630,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Ren_Yamashiro/Role_Reversal"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Ren_Yamashiro/Role_Reversal",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d56c8e3327f7fcd1149810f8b349096aa7c71c1f2d2c080e45cd559a1d296702",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char103401",
@@ -2838,7 +3430,11 @@
       "status": "verified-playback",
       "textureBytes": 683272,
       "skeletonBytes": 136818,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rigenette/Little_Hunter"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rigenette/Little_Hunter",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "40627789a538f8ff76a8fa80c0c01a85240bf1316e8016c25a007faae71b0e18",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000504",
@@ -2857,7 +3453,11 @@
       "status": "verified-playback",
       "textureBytes": 2546362,
       "skeletonBytes": 700581,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rou/Nature's_Claw"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rou/Nature's_Claw",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "145fe91450d45fbf23616aa9dde48bbad13048281d6bb3f2c153c23b91210d5f",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000502",
@@ -2876,7 +3476,11 @@
       "status": "verified-playback",
       "textureBytes": 1529671,
       "skeletonBytes": 507279,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rou/Red_Riding_Hood"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rou/Red_Riding_Hood",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "eed9202537bf5ec03fbea02559d5e800d0b8466b8f7d521dac434a54c42ec45c",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000502_c",
@@ -2895,7 +3499,11 @@
       "status": "verified-playback",
       "textureBytes": 1554333,
       "skeletonBytes": 479387,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rou/Red_Riding_Hood"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rou/Red_Riding_Hood",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "752d969c5d7bdf524d5065e38d84ba483e771b3e1caeb8462bdf43ce8ad467e7",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000506",
@@ -2914,7 +3522,11 @@
       "status": "verified-playback",
       "textureBytes": 3665900,
       "skeletonBytes": 1137817,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rou/Stray_Cat"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rou/Stray_Cat",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f9f2740ccbe84a744c5257d7d75ec4e77ed68ccc7b008c1dacd45d152fb1c651",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000501",
@@ -2933,7 +3545,11 @@
       "status": "verified-playback",
       "textureBytes": 1229395,
       "skeletonBytes": 359322,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rou/White_Cat"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rou/White_Cat",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d17215fd2dbb3e19140b74ab99c54a4b0e6147e6db50c96fbd394eb382a613eb",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char020102",
@@ -2952,7 +3568,11 @@
       "status": "verified-playback",
       "textureBytes": 669131,
       "skeletonBytes": 354662,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Roxy/Emerging_Desire"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Roxy/Emerging_Desire",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "dd8951ef5f068f0f3af098e0bd940a5ef3f6dffb3264fd06abadc640ea1796ef",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char020101",
@@ -2971,7 +3591,11 @@
       "status": "verified-playback",
       "textureBytes": 1051239,
       "skeletonBytes": 429517,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Roxy/Respected_Master"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Roxy/Respected_Master",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7feeec93babbef9992517e4c21f89f556669e605e1b8bdcf8149a21a9f23bbbe",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000807",
@@ -2990,7 +3614,11 @@
       "status": "verified-playback",
       "textureBytes": 1020534,
       "skeletonBytes": 488473,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rubia/Maid_Bikini"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rubia/Maid_Bikini",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ec4d1698735ece216ff43d0dbca352c1267b8a04641086bcb160f19866665dd4",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000806",
@@ -3009,7 +3637,11 @@
       "status": "verified-playback",
       "textureBytes": 1127644,
       "skeletonBytes": 474301,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rubia/Maid_Name_C"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rubia/Maid_Name_C",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "64c6bf5d25952e4d8843746022116135e045fe52ee5951c45efa44fd7c31691e",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000804",
@@ -3028,7 +3660,11 @@
       "status": "verified-playback",
       "textureBytes": 1890556,
       "skeletonBytes": 311496,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rubia/The_Empress_of_the_Ocean"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rubia/The_Empress_of_the_Ocean",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a51f7b68a0c71f78a985646923eb3cf48fb8492ea2c9184d185758ce5b95155c",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000801",
@@ -3047,7 +3683,11 @@
       "status": "verified-playback",
       "textureBytes": 2476669,
       "skeletonBytes": 395165,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rubia/Thorn_of_the_Desert"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Rubia/Thorn_of_the_Desert",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "af704bebeea799444b9ef4e901cba1623840194f5f59d0b2b9c67a7513ac1083",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003501",
@@ -3066,7 +3706,11 @@
       "status": "verified-playback",
       "textureBytes": 2090407,
       "skeletonBytes": 1885912,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Sacred_Justia/Reclaimed_Destiny"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Sacred_Justia/Reclaimed_Destiny",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b7e24581cc58960aecc168e63c6cd39ce4f0445434ae2bf810497a4e336633e8",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char101401",
@@ -3085,7 +3729,11 @@
       "status": "verified-playback",
       "textureBytes": 1617880,
       "skeletonBytes": 284851,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Samay/Kind_Liberator"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Samay/Kind_Liberator",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "371734184b4366ba8b7c39612da5a98adc2054879a7d682db34cfb99e51687e7",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char101402",
@@ -3104,7 +3752,11 @@
       "status": "verified-playback",
       "textureBytes": 1272554,
       "skeletonBytes": 192788,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Samay/Kind_Student"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Samay/Kind_Student",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1c57ed0715ff777a5da31cf7380de6cd3cb473c008d1e5b2ae2a8479c342ed7d",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000304",
@@ -3123,7 +3775,11 @@
       "status": "verified-playback",
       "textureBytes": 1703534,
       "skeletonBytes": 295747,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Scheherazade/Code_Name_S"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Scheherazade/Code_Name_S",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4e224d8497b1a01ae6b94baaf99ce967154241ef13c1abefbe0e9b5342fe323b",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000396",
@@ -3142,7 +3798,11 @@
       "status": "verified-playback",
       "textureBytes": 1198032,
       "skeletonBytes": 646609,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Scheherazade/Deliberate_Ace"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Scheherazade/Deliberate_Ace",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "32c61533e83a6ab6ed6b5d2315e2d77723f2ca2a1f419a7f258811c805d5ef3e",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000306",
@@ -3161,7 +3821,11 @@
       "status": "verified-playback",
       "textureBytes": 2103109,
       "skeletonBytes": 656360,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Scheherazade/Pool_Party"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Scheherazade/Pool_Party",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3ac30dbfea102e62a48ff4dd16d23debe4d4785dfa842c8ac6096e00fb6223ec",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000301",
@@ -3180,7 +3844,11 @@
       "status": "verified-playback",
       "textureBytes": 1116296,
       "skeletonBytes": 298643,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Scheherazade/The_Lapis_Witch"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Scheherazade/The_Lapis_Witch",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "01bec0454e43a86cc5f352cc8988d676b6f9e50711619ab06617491be1f2fb0d",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char000303",
@@ -3199,7 +3867,11 @@
       "status": "verified-playback",
       "textureBytes": 2180720,
       "skeletonBytes": 437011,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Scheherazade/The_Magic_School_Professor"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Scheherazade/The_Magic_School_Professor",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1df0f373707b981dd2bf4c314e9aeb9a461467b8b71cb86f4df72687e863da01",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char101102",
@@ -3218,7 +3890,11 @@
       "status": "verified-playback",
       "textureBytes": 1126701,
       "skeletonBytes": 409927,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Seir/B-Rank_Idol"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Seir/B-Rank_Idol",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a916631ee5fa68d0f8c0ab75ce19aecb9dacffdcc1a0cf1e69a9fa3c4351ce03",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char101102_c",
@@ -3237,7 +3913,11 @@
       "status": "verified-playback",
       "textureBytes": 1146520,
       "skeletonBytes": 445887,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Seir/B-Rank_Idol"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Seir/B-Rank_Idol",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "dded0674587a892b30f5cba7b6f9af3f98f9c85bf942c48aea68fb0835e25110",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char101101",
@@ -3256,7 +3936,11 @@
       "status": "verified-playback",
       "textureBytes": 1639311,
       "skeletonBytes": 331806,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Seir/Demon's_Daughter"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Seir/Demon's_Daughter",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "6502f22e1cfa963e29b62167ee48a2e13649b1a55ee4e4489e4016fbec7c8202",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char101101_c",
@@ -3275,7 +3959,11 @@
       "status": "verified-playback",
       "textureBytes": 1211065,
       "skeletonBytes": 378262,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Seir/Demon's_Daughter"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Seir/Demon's_Daughter",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d8cfe3d61210112e2297434ba19508fdec81eb84e01098c63826a97f6ad9ce5f",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char101103",
@@ -3294,7 +3982,11 @@
       "status": "verified-playback",
       "textureBytes": 819402,
       "skeletonBytes": 816768,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Seir/New_Hire"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Seir/New_Hire",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "01e84f6f0333f9d6dadc2aa12e9361aa5216a7f556d83d243c0a9d10bcab0620",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003902",
@@ -3313,7 +4005,11 @@
       "status": "verified-playback",
       "textureBytes": 878081,
       "skeletonBytes": 592567,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Sonya/Little_Pumpkin_Girl"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Sonya/Little_Pumpkin_Girl",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "246b40da9db87dd7383a213b1be20c8635ee9f28387e9f3fbd16a26f88e12874",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char003901",
@@ -3332,7 +4028,11 @@
       "status": "verified-playback",
       "textureBytes": 1976155,
       "skeletonBytes": 1451137,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Sonya/Shadowed_Dream"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Sonya/Shadowed_Dream",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8391f8039c481e71650d7bf616050f21a69a1e8c975deb61f31dfdb02608c349",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char020901",
@@ -3351,7 +4051,11 @@
       "status": "verified-playback",
       "textureBytes": 1824321,
       "skeletonBytes": 873473,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Sword_Maiden/Supreme_God_Archbishop"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Sword_Maiden/Supreme_God_Archbishop",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "919a278bf8539b5a4f1f354cd452b7cfe50e705edf22b03d6153df5bcc305ad8",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char001004",
@@ -3370,7 +4074,11 @@
       "status": "verified-playback",
       "textureBytes": 1980602,
       "skeletonBytes": 452294,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Sylvia/Admiral"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Sylvia/Admiral",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7e001bd92ad204e53783834b108ab1ff2bfafa749dfedcbcba967ea8f2dfd1cb",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char001006",
@@ -3389,7 +4097,11 @@
       "status": "verified-playback",
       "textureBytes": 1218315,
       "skeletonBytes": 816683,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Sylvia/Bikini_Agent"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Sylvia/Bikini_Agent",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ab716cc1a6358eee6067273b9b065bb74e7973bf17cccb8da5af63851586b4b1",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char001092",
@@ -3408,7 +4120,11 @@
       "status": "verified-playback",
       "textureBytes": 1568303,
       "skeletonBytes": 909233,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Sylvia/Crimson_Lotus"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Sylvia/Crimson_Lotus",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d3d2dd74de55ffcf7e5d9086990741e5b33fde79fb976d11bf5735ff51487c80",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char001001",
@@ -3427,7 +4143,11 @@
       "status": "verified-playback",
       "textureBytes": 3130282,
       "skeletonBytes": 432381,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Sylvia/Desert_Flower"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Sylvia/Desert_Flower",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ac90d084ae3667df9034cbb2bcf506cb8bfdbe379157197a1a91cb48d0bff4f1",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char001002",
@@ -3446,7 +4166,11 @@
       "status": "verified-playback",
       "textureBytes": 2082604,
       "skeletonBytes": 892569,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Sylvia/The_Sword_Queen"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Sylvia/The_Sword_Queen",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bde1cf626dc1ca9cc4347c60115df79c83d13486c654f9faf01e11ea34661b37",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char021201",
@@ -3465,7 +4189,11 @@
       "status": "verified-playback",
       "textureBytes": 2653303,
       "skeletonBytes": 549476,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Tenka_Izumo/Ame-no-Mitori"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Tenka_Izumo/Ame-no-Mitori",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ed9f98d25e9048639e6ab4ae372e2fd1ecda0f97009e6ef5e9659674678a609a",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char021291",
@@ -3484,7 +4212,11 @@
       "status": "verified-playback",
       "textureBytes": 1381952,
       "skeletonBytes": 437017,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Tenka_Izumo/Special_Date"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Tenka_Izumo/Special_Date",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "60c93fcd70e339ca175eff1f9c12993287675f3bfd6e0a6ee53fdf40c406d61c",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char001101",
@@ -3503,7 +4235,11 @@
       "status": "verified-playback",
       "textureBytes": 1293429,
       "skeletonBytes": 370989,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Teresse/Angel_of_Destruction"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Teresse/Angel_of_Destruction",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1a239977d1ea07aa638f95502606717f606098ddf046b0b44ca8ae1227fa6834",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char001107",
@@ -3522,7 +4258,11 @@
       "status": "verified-playback",
       "textureBytes": 752112,
       "skeletonBytes": 512096,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Teresse/Beachside_Angel"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Teresse/Beachside_Angel",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a9103e8adfe38712d1e69d832ba7fe4a2d8d4cb42981d304ce187a8a51cdadc2",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char001106",
@@ -3541,7 +4281,11 @@
       "status": "verified-playback",
       "textureBytes": 1067240,
       "skeletonBytes": 1108731,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Teresse/Medical_Club"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Teresse/Medical_Club",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "49ca0c261c505ab5d8ec90441980f9110731848992a5aee440460d5b01234ba1",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char001197",
@@ -3560,7 +4304,11 @@
       "status": "verified-playback",
       "textureBytes": 836330,
       "skeletonBytes": 384308,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Teresse/Milky_Bikini"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Teresse/Milky_Bikini",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7ded8f8ddc16840d94a989e1c30254d301a161e61bbf07e5e66dc8e725307b99",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char004192",
@@ -3579,7 +4327,11 @@
       "status": "verified-playback",
       "textureBytes": 1277783,
       "skeletonBytes": 1152818,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Tyr/Clumsy_Wuff"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Tyr/Clumsy_Wuff",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ecd1869efbe48d41b8beec4082214bc71a4cb25c20ef482f357816a50e99c254",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char004102",
@@ -3598,7 +4350,11 @@
       "status": "verified-playback",
       "textureBytes": 1145947,
       "skeletonBytes": 1006285,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Tyr/Innocent_Bunny"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Tyr/Innocent_Bunny",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "fc8b635566ce1eee075e20ddd02985f04c5e6c4f9894600797fa2276e8e25fae",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char004101",
@@ -3617,7 +4373,11 @@
       "status": "verified-playback",
       "textureBytes": 1163342,
       "skeletonBytes": 1013982,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Tyr/Starlight_Guardian"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Tyr/Starlight_Guardian",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "27ac5965800c9b543503d6469ee59da3d9d429653f8564cf3e554f1729e602f5",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067201",
@@ -3636,7 +4396,11 @@
       "status": "verified-playback",
       "textureBytes": 1589650,
       "skeletonBytes": 525822,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Venaka/DJ"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Venaka/DJ",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a2676e08e3152a1e6b47a1c2fb1d866ec3c14604325516ce9f407c5957642fad",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067202",
@@ -3655,7 +4419,11 @@
       "status": "verified-playback",
       "textureBytes": 1778732,
       "skeletonBytes": 650699,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Venaka/Wind_Dancer"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Venaka/Wind_Dancer",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "2a03b989a9e31d79ab44e027278d5301301e0e3e4e056e7cee0bbaf973b02ffe",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067003",
@@ -3674,7 +4442,11 @@
       "status": "verified-playback",
       "textureBytes": 1430831,
       "skeletonBytes": 317495,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Ventana/Comeback_Idol"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Ventana/Comeback_Idol",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "82cd85d87578ca5575b66543c2944d5e6a63c834c05a4a006479a3a589fe3fa6",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067004",
@@ -3693,7 +4465,11 @@
       "status": "verified-playback",
       "textureBytes": 1204710,
       "skeletonBytes": 1473507,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Ventana/Onsen_Practitioner"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Ventana/Onsen_Practitioner",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1104a9382f01522c2936364652e0b56ebac1ef0cd95aa65abf4d3bcdb65d49a6",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067002",
@@ -3712,7 +4488,11 @@
       "status": "verified-playback",
       "textureBytes": 1706853,
       "skeletonBytes": 684515,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Ventana/Snow_White"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Ventana/Snow_White",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "fd6c93d614d05319e65c31353c875bfe1a5d0cbe6a9a8ba92509f587bf9bbf35",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char100501",
@@ -3731,7 +4511,11 @@
       "status": "verified-playback",
       "textureBytes": 1292053,
       "skeletonBytes": 86674,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Wiggle/Bomb_Fanatic"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Wiggle/Bomb_Fanatic",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ecd2769553342844903b9dad062ef793b39ea5167269ca5612a6ac800ca47ad3",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char100502",
@@ -3750,7 +4534,11 @@
       "status": "verified-playback",
       "textureBytes": 1901524,
       "skeletonBytes": 135806,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Wiggle/Bomb_in_the_Hoodie"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Wiggle/Bomb_in_the_Hoodie",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b58298dd78f0f3d0ae29c131b119aaf0e00c9ed3a7a4390b6386ff83c8fe3ed8",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067604",
@@ -3769,7 +4557,11 @@
       "status": "verified-playback",
       "textureBytes": 1999140,
       "skeletonBytes": 554609,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Wilhelmina/Frozen_Queen"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Wilhelmina/Frozen_Queen",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e89e0d40f111aa518bd6c14bf2f18174246655eedb9f0df511c7d1493b9d152c",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067601",
@@ -3788,7 +4580,11 @@
       "status": "verified-playback",
       "textureBytes": 1286359,
       "skeletonBytes": 478446,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Wilhelmina/Iron_Monarch"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Wilhelmina/Iron_Monarch",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8d4426a8d777649ec19aa09810c6cce0feda4fa2b4c221e6774d2d3c84698987",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char067603",
@@ -3807,7 +4603,11 @@
       "status": "verified-playback",
       "textureBytes": 1674157,
       "skeletonBytes": 689142,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Wilhelmina/Water_Park_Queen"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Wilhelmina/Water_Park_Queen",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a83003975ef13098af8aa48fcbba2ac10d89bb5049d81f661e90a8c773803cbb",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char020201",
@@ -3826,7 +4626,11 @@
       "status": "verified-playback",
       "textureBytes": 990026,
       "skeletonBytes": 363328,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Yomi/Gentle_Destroyer"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Yomi/Gentle_Destroyer",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1c2546efc1f80420fc973c5c2701b8ebb037d757d54b110ab9c205254a55b3aa",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char020301",
@@ -3845,7 +4649,11 @@
       "status": "verified-playback",
       "textureBytes": 1842616,
       "skeletonBytes": 222762,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Yozakura/Fist_of_Conviction"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Yozakura/Fist_of_Conviction",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5cf695a509171f4c23a15696295a7751ddf043495f83d54a2b7051c60e89f92d",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char020401",
@@ -3864,7 +4672,11 @@
       "status": "verified-playback",
       "textureBytes": 756649,
       "skeletonBytes": 314989,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Yumi/Dancing_Snowflake"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Yumi/Dancing_Snowflake",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e2a8d0f69e92ed678de51ad9598883304c3bb10d4c0d6769344345094137009c",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char065103",
@@ -3883,7 +4695,11 @@
       "status": "verified-playback",
       "textureBytes": 1152558,
       "skeletonBytes": 459497,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Yuri/Comeback_Idol"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Yuri/Comeback_Idol",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e0d3c66320d8af070a05413fbf5e58e58dd0e29ab93b8d1bf0e073f6e4fbc212",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char065193",
@@ -3902,7 +4718,11 @@
       "status": "verified-playback",
       "textureBytes": 3004861,
       "skeletonBytes": 838594,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Yuri/Forever_Mascot"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Yuri/Forever_Mascot",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9c509ae07e077c2814101ef33516e2b5055deb2a99a8eef1c30f802bdaeb7236",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char065102",
@@ -3921,7 +4741,11 @@
       "status": "verified-playback",
       "textureBytes": 1381302,
       "skeletonBytes": 628224,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Yuri/Whitebolt"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Yuri/Whitebolt",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "37de507de76cefaffd3e05e5ae051a7f9e36f2693cd39149f0db96b54475ea4c",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char061404",
@@ -3940,7 +4764,11 @@
       "status": "verified-playback",
       "textureBytes": 1130717,
       "skeletonBytes": 620847,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Zenith/Poolside_Guardian"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Zenith/Poolside_Guardian",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ebf27e68bc1ab4c18ed72bc4073273fd37e5803ccc829e7d509f827a21b815e4",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char061402",
@@ -3959,7 +4787,11 @@
       "status": "verified-playback",
       "textureBytes": 1121541,
       "skeletonBytes": 431936,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Zenith/Robin_Hood"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Zenith/Robin_Hood",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0438be74cd7faf1c7fda7f255214306397578c5d1ed1c507a080353139834324",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "bd2-char061492",
@@ -3978,7 +4810,11 @@
       "status": "verified-playback",
       "textureBytes": 1368388,
       "skeletonBytes": 579348,
-      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Zenith/Stranger_Bunny"
+      "source": "https://github.com/Zormolo/Brown-Dust-2-Assets/tree/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/Zenith/Stranger_Bunny",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8f275c8cef5e97b9647026cb1873a5f80f1d7cb2bcc3f2e8777c49984a222177",
+      "playbackStatus": "browser-preview-captured"
     }
   ]
 }
