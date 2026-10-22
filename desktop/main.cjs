@@ -8,7 +8,7 @@ const SITE='https://tyqittle.github.io/anime-character-archive/';
 const SAFE_ID=/^[a-zA-Z0-9_-]{1,120}$/;
 let win,tray,clickThrough=false,alwaysOnTop=true,characterId='c012';
 let savedBounds=null,voiceEnabled=true,nativeIgnoring=null;
-let compatibilityMode=false;
+let compatibilityMode=false,compatibilityChecked=false;
 
 const configFile=()=>path.join(app.getPath('userData'),'desktop-settings.json');
 function defaultCompatibilityMode(){
@@ -118,6 +118,19 @@ function createWindow(){
  win.webContents.on('context-menu',()=>Menu.buildFromTemplate(desktopMenu()).popup({window:win}));
  win.webContents.on('did-finish-load',()=>{
   win.webContents.insertCSS(desktopCSS,{cssOrigin:'user'}).catch(console.error);
+  if(compatibilityMode&&!compatibilityChecked){
+   compatibilityChecked=true;
+   win.webContents.executeJavaScript(`(()=>{
+    try{const c=document.createElement('canvas');return Boolean(
+     c.getContext('webgl2')||c.getContext('webgl')||c.getContext('experimental-webgl'));
+    }catch{return false}
+   })()`).then(supported=>{
+    if(!supported&&win&&!win.isDestroyed()){
+     console.warn('Software compatibility renderer lacks WebGL; restoring hardware mode');
+     changeCompatibility(false);
+    }
+   }).catch(error=>console.warn('WebGL compatibility probe failed',error));
+  }
 
   if(!voiceEnabled)win.webContents.executeJavaScript('(()=>{voiceEnabled=false;updateVoiceUI();syncFrameVoice();silenceCharacterVoice()})()').catch(console.error);
   win.webContents.executeJavaScript("(()=>{if(!document.getElementById('desktopDrag')){let el=document.createElement('div');el.id='desktopDrag';el.title='拖动这里移动桌面立绘';document.body.append(el)}document.body.style.background='transparent';if(!document.getElementById('desktopError')){let e=document.createElement('div');e.id='desktopError';e.style.cssText='position:fixed;bottom:26px;left:15px;right:15px;z-index:999999;color:white;background:#792626dd;padding:9px;border-radius:9px;font:12px system-ui;display:none;pointer-events:none';document.body.append(e);let status=document.getElementById('status');if(status){let update=()=>{let error=status.classList.contains('error');e.textContent=error?status.textContent:'';e.style.display=error?'block':'none'};new MutationObserver(update).observe(status,{subtree:true,childList:true,attributes:true});update()}}})()").catch(console.error);
