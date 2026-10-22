@@ -5,6 +5,9 @@ on:
     paths:
       - 'azurlane-stage.html'
       - 'spine.html'
+      - 'assets/js/spine/live2d-bridge.js'
+      - 'assets/js/live2d/model-loader.js'
+      - 'assets/js/live2d/bootstrap.js'
       - 'data/live2d-azurlane.json'
       - 'scripts/test_azurlane_live2d_browser.mjs'
       - '.github/workflows/azurlane-live2d-check.yml'
