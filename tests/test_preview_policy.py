@@ -61,6 +61,7 @@ class PreviewPolicyTest(unittest.TestCase):
         try:
             p.ROOT = self.path
             self.character['preview'] = p.relative_path(self.character)
+            self.character['previewWidth'], self.character['previewHeight'] = (360, 420)
             self.character['previewSha256'] = hashlib.sha256(self.file.read_bytes()).hexdigest()
             self.assertFalse(p.needs_capture(self.character))
             self.file.unlink()
