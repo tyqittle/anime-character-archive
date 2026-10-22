@@ -42,8 +42,7 @@ try{
     throw Error('Expected 359 separate BattleFront sprites');
   await page.selectOption('#gameFilter','all');
   // A non-first-page deep-link must still be selectable with a limited dropdown.
-  const deepLinkModel=await page.evaluate(()=>allCharacters.find(c=>c.gameId==='nikke'&&
-    allCharacters.indexOf(c)>maxCharacterSelectOptions)?.id);
+  const deepLinkModel=await page.evaluate(()=>allCharacters.find((c,i)=>i>maxCharacterSelectOptions+20)?.id);
   if(deepLinkModel){
     await page.evaluate(id=>{
       const c=allCharacters.find(x=>x.id===id);
