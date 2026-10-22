@@ -4,8 +4,11 @@ async function playCharacter(c){
  cancelCharacterDownload();
  const current=sequence,controller=new AbortController();
  activeCharacterAbort=controller;
- let timedOut=false;
- const deadline=setTimeout(()=>{timedOut=true;controller.abort()},55000);
+ const deadline=setTimeout(()=>{
+  if(current!==sequence)return;
+  cancelCharacterDownload();clearPlayer();
+  status('加载超过 55 秒，请点击“重试”或稍后再试。',true);
+ },55000);
  $('title').textContent=(c.zh?c.zh+' · ':'')+c.name;
  $('stageContext').textContent=c.gameId==='browndust2'?'棕色尘埃2 · 全身角色':c.gameId==='bluearchive'?'蔚蓝档案 · 回忆大厅':c.gameId==='konosuba'?'为美好的世界献上祝福！· 战斗动画':c.gameId==='arknights'?'明日方舟 · '+(c.assetType==='battle-spine'?'战斗小人':'干员动态立绘'):'胜利女神：妮姬 · Spine';
  // Do not leave the previously selected character playing while downloading
@@ -18,8 +21,8 @@ async function playCharacter(c){
  try{
   let pack=recentSpinePack(packId);
   if(!pack)pack=await dbAction('readonly',s=>s.get(packId)).catch(()=>null);
-  if(pack&&!pack.headerChecked){
-   // The old cache trusted a guessed version; refresh it from the source.
+  if(pack&&!isCachedPackFor(c,pack)){
+   // Source revisions and pack schema changes must invalidate old disk/RAM data.
    await dbAction('readwrite',store=>store.delete(packId)).catch(()=>{});
    pack=null;
   }
@@ -54,7 +57,7 @@ async function playCharacter(c){
     return;
    }catch(e){forgetSpinePack(packId);failure+=mirror+'：'+(e.message||e)+'；';if(controller.signal.aborted)break;}
   }
-  if(current===sequence)status('角色资源下载失败。'+failure+'可选择本地导入已获得的动画文件。',true);
+  if(current===sequence)status('角色资源下载失败。'+failure+'可点击“重试”或选择本地导入已获得的动画文件。',true);
  }catch(e){if(current===sequence)status('播放失败：'+(e.message||String(e)),true)}
  finally{clearTimeout(deadline);if(activeCharacterAbort===controller)activeCharacterAbort=null}
 }

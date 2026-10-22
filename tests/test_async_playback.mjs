@@ -194,3 +194,26 @@ test('asset failover preserves exact repository revision and path',async()=>{
  assert.deepEqual(calls,['https://raw.githubusercontent.com/owner/repo/abc123/models/a.skel','https://cdn.jsdelivr.net/gh/owner/repo@abc123/models/a.skel']);
  assert.equal(ctx.timers.size,0);
 });
+
+test('download cache is invalidated when the source revision changes',()=>{
+ const ctx=context();run(ctx,'assets/js/spine/spine-assets.js');
+ const character={base:'https://example.test/ref1/model',skeletonFormat:'skel'};
+ const pack={headerChecked:true,sourceFingerprint:ctx.sourceFingerprint(character)};
+ assert.equal(ctx.isCachedPackFor(character,pack),true);
+ assert.equal(ctx.isCachedPackFor({...character,base:'https://example.test/ref2/model'},pack),false);
+ assert.equal(ctx.isCachedPackFor(character,{headerChecked:true}),false);
+});
+test('model deadline clears a stalled stage and discards a late cache read',async()=>{
+ const read=deferred(),messages=[],elements=new Map();let cleared=0,played=0;
+ const ctx=context({pendingRenderCancel:null,currentAttempt:0,stopWatchdog(){},clearPlayer(){cleared++},
+  $:id=>{if(!elements.has(id))elements.set(id,{});return elements.get(id)},
+  status:(message)=>messages.push(message),recentSpinePack:()=>null,dbAction:()=>read.promise,
+  playPack:()=>{played++}});
+ run(ctx,'assets/js/spine/spine-assets.js');run(ctx,'assets/js/spine/playback.js');
+ const request=ctx.playCharacter({id:'demo',name:'Demo',gameId:'nikke',base:'https://example.test/model'});
+ assert.equal(ctx.timers.size,1);
+ [...ctx.timers.values()][0]();
+ assert.ok(messages.at(-1).includes('55'));
+ read.resolve({headerChecked:true});await request;
+ assert.equal(played,0);assert.equal(cleared,2);assert.equal(ctx.timers.size,0);
+});

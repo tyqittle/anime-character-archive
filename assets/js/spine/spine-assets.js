@@ -39,6 +39,10 @@ async function detectSpineVersion(blob){
  if(!/^\d+\.\d+(?:\.\d+)?/.test(version||''))throw Error('无法解析骨骼导出版本（文件头不支持或文件损坏）');
  return {hash:found.hash,version,majorMinor:version.split('.').slice(0,2).join('.')};
 }
+function sourceFingerprint(c){
+ return JSON.stringify([2,c.base,c.skeletonUrl||'',c.atlasUrl||'',c.skeletonFormat||'skel']);
+}
+function isCachedPackFor(c,pack){return !!pack?.headerChecked&&pack.sourceFingerprint===sourceFingerprint(c)}
 async function downloadPack(c,mirror,externalSignal,isCurrent=()=>true){
  const request=new AbortController(),forward=()=>request.abort();
  if(externalSignal?.aborted)request.abort();else externalSignal?.addEventListener('abort',forward,{once:true});
@@ -85,7 +89,7 @@ async function downloadPack(c,mirror,externalSignal,isCurrent=()=>true){
  const textures=await texturesPromise;
  if(textures.error)throw textures.error;
  if(signal?.aborted)throw Error('下载已取消');
- return {id:(c.gameId||'nikke')+'-'+c.id,version:detected.majorMinor,exportVersion:detected.version,headerChecked:true,skeleton:skeletonName,atlas:stem+'.atlas',rawDataURIs:data};
+ return {id:(c.gameId||'nikke')+'-'+c.id,version:detected.majorMinor,exportVersion:detected.version,headerChecked:true,sourceFingerprint:sourceFingerprint(c),skeleton:skeletonName,atlas:stem+'.atlas',rawDataURIs:data};
  }finally{request.abort();externalSignal?.removeEventListener('abort',forward)}
 }
 function blobToUri(blob){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(reader.error);reader.readAsDataURL(blob)})}
