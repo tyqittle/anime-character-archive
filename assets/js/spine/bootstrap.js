@@ -9,12 +9,24 @@ function isPlayableAnimationEntry(c){
  return typeof c.base==='string'&&/^https:\/\//.test(c.base)&&
    (c.skeletonFormat!=='json'||(typeof c.skeletonUrl==='string'&&typeof c.atlasUrl==='string'));
 }
+// Versioned manifest URLs are immutable between releases. Let the browser use
+// its HTTP cache instead of forcing network revalidation on every page visit.
+// A stalled manifest must never block the other games indefinitely.
 async function fetchAnimationManifest(url){
- const response=await fetch(url,{cache:'no-cache'});
- if(!response.ok)throw Error('HTTP '+response.status);
- const payload=await response.json();
- if(!Array.isArray(payload.characters))throw Error('目录结构不完整');
- return payload.characters;
+ const controller=new AbortController();
+ const timeout=setTimeout(()=>controller.abort(),12000);
+ try{
+  const response=await fetch(url,{cache:'default',signal:controller.signal});
+  if(!response.ok)throw Error('HTTP '+response.status);
+  const payload=await response.json();
+  if(!Array.isArray(payload.characters))throw Error('目录结构不完整');
+  return payload.characters;
+ }catch(error){
+  if(error?.name==='AbortError')throw Error('目录加载超过 12 秒');
+  throw error;
+ }finally{
+  clearTimeout(timeout);
+ }
 }
 (async()=>{
  try{
