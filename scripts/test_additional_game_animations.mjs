@@ -37,7 +37,8 @@ try{
   }));
   results.push({game:test.game,id:test.character.id,elapsedMs:Date.now()-start,...data});
   console.log('NEW_GAME_RESULT',JSON.stringify(results.at(-1)));
-  if(!data.status.startsWith('正在播放：')||data.game!==test.game||!data.enabled||!data.animations)
+  const collection=test.character.collectionId||test.character.gameId;
+  if(!data.status.startsWith('正在播放：')||data.game!==collection||!data.enabled||!data.animations)
    throw Error('New model not playable: '+JSON.stringify(results.at(-1))+' page errors: '+errors.join('; '));
   const canvas=test.type==='cubism'
    ?page.frameLocator('iframe.azurlane-live2d-frame').locator('#live2dCanvas')
