@@ -23,7 +23,7 @@ function harness(argv=['electron','.']){
    executeJavaScript:async()=>{},
    insertCSS:async()=>{}
   };windows.push(this)}
-  setMenu(){} on(event,fn){this.events[event]=fn}
+  setMenu(){} setShape(rects){this.shape=rects} setOpacity(value){this.opacity=value} on(event,fn){this.events[event]=fn}
   loadURL(url){this.url=url;return Promise.resolve()}
   show(){this.visible=true}hide(){this.visible=false}
   isVisible(){return this.visible}isDestroyed(){return false}
@@ -79,9 +79,12 @@ test('transparent region passes through; only matching page can re-enable pointe
  handler({sender:{}},true);
  assert.equal(w.ignored,true);
  handler({sender:w.webContents},true);
- assert.equal(w.ignored,false);
+ // Hit testing stays disabled until the silhouette has been generated.
+ assert.equal(w.ignored,true);
  handler({sender:w.webContents},false);
  assert.equal(w.ignored,true);
+ assert.equal(w.opacity,0);
+ assert.deepEqual(JSON.parse(JSON.stringify(w.shape)),[{x:0,y:0,width:1,height:1}]);
 });
 
 test('desktop mode resets document root before stylesheets and keeps transparent WebGL buffers',()=>{
@@ -92,4 +95,13 @@ test('desktop mode resets document root before stylesheets and keeps transparent
  assert.ok(runtime.includes("alpha:transparentDesktop,backgroundColor:transparentDesktop?'#00000000'"));
  assert.ok(runtime.includes("preserveDrawingBuffer:transparentDesktop"));
  assert.ok(runtime.includes("fullScreenBackgroundColor:transparentDesktop?'#00000000'"));
+});
+
+test('desktop keeps white fallback invisible before first verified native silhouette',async()=>{
+ const h=harness();await new Promise(resolve=>setImmediate(resolve));
+ const w=h.windows[0];
+ assert.equal(w.options.opacity,0);
+ assert.equal(w.opacity,0);
+ assert.equal(w.shape.length,1);
+ assert.ok(w.options.webPreferences.preload.endsWith('preload.cjs'));
 });
