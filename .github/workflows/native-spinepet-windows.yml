@@ -6,6 +6,22 @@ on:
       - 'native-desktop/**'
       - '.github/workflows/native-spinepet-windows.yml'
 jobs:
+  # A green binary build is not enough: validate the site-to-desktop
+  # integration contract before an audited package may be published.
+  validate-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate desktop integration and repository smoke tests
+        run: |
+          node tests/smoke.mjs
+          node --test tests/test_async_playback.mjs tests/test_animation_frames.mjs tests/test_spine_utf8.mjs
   build-native:
     runs-on: windows-latest
     permissions:
@@ -360,7 +376,7 @@ jobs:
 
   publish-updates:
     # Only audited successful packages may enter the public auto-update feed.
-    needs: [build-native, security-audit]
+    needs: [build-native, security-audit, validate-release]
     if: github.ref == 'refs/heads/main'
     runs-on: windows-latest
     permissions:
