@@ -1,37 +1,43 @@
-# Windows 桌面动态立绘（首版）
+# 次元桌面立绘（Windows）
 
-此模块使用现有网站的 Spine / Cubism 播放器，不复制素材及渲染逻辑。
+这是网站的 Electron 桌面客户端，直接复用在线 Spine / Cubism 播放器；**并非离线版**。
 
-## 启动
+## 安装和使用
 
-需安装 Node.js 20+。在仓库根目录执行：
+在仓库的 [Desktop Windows build](https://github.com/tyqittle/anime-character-archive/actions/workflows/desktop-windows.yml) 中找到成功的构建记录，展开 **Artifacts**，获取 `anime-character-desktop-windows` 并解压。包含 Windows 安装器和便携版（只有构建成功时才存在）。
+
+建议使用 **安装器**，因为 Windows 的 `animecharacter://` 协议需要注册。装好后，打开 [动态立绘网站](https://tyqittle.github.io/anime-character-archive/spine.html)，选择角色，按「放到桌面 ↗」。第一次可能需要允许浏览器启动外部应用。
+
+桌面窗口上沿小把手可以拖动；右键角色可打开菜单。托盘菜单可以切换角色、启用鼠标穿透、切换置顶、关闭点击语音、隐藏或退出。开启鼠标穿透后无法右键角色，但仍可从系统托盘恢复交互。窗口位置、尺寸、角色及偏好会自动保存。
+
+如果在 Windows 电脑上自行运行源码：
 
 ```powershell
-cd desktop
+git clone https://github.com/tyqittle/anime-character-archive.git
+cd anime-character-archive/desktop
 npm install
+npm test
 npm start
 ```
 
-安装版会注册 `animecharacter://open?id=角色ID` 协议。打开在线动态立绘页面，选中角色并点击「放到桌面 ↗」，Windows 会提示是否打开桌面客户端。需要先安装客户端；便携版的协议注册取决于系统权限和 Electron 注册结果。\n\n默认打开 `c012`。也可运行 `npm start -- --character=c010`（从动态立绘页面的 `?id=` 复制角色 ID）。
-
-在 Windows 托盘图标上右键，可以切换角色 ID、启用鼠标穿透、始终置顶、显示/隐藏或退出。
-窗口顶部中央有一条可拖动的把手。通过窗口边缘调整大小。
-
-## 打包
+构建：
 
 ```powershell
 npm run dist
 ```
 
-安装包与便携版在 `desktop/dist/` 下生成。需要 Windows 构建环境。
-本仓库不附带已签名安装程序。安装依赖和打包均须在本机执行。
+输出位于 `desktop/dist/`。安装包未签名，部分系统可能显示发布者未知。
 
-## 首版已知限制
+## 已知限制
 
-- 目前依赖 GitHub Pages 及动态立绘已有的网络资源，**不是离线版**。
-- 桌面透明度要求 Chromium 页面背景及骨骼画布都使用透明通道；旧版 Spine 和部分 Cubism 模型有可能仍出现不透明矩形。这种情况需要继续处理各渲染引擎的 alpha 输出。
-- 桌面互动沿用已有网页播放器能力；并非所有角色都有点击语音与触摸动作。
-- 鼠标穿透目前作用于整个窗口，而不是自动识别人物轮廓；关闭穿透后可点击交互。
-- 这是初版源码，尚未在真实 Windows 图形桌面上验证，不能将工作流配置等同于安装包已构建成功。
+1. 需要在线访问 GitHub Pages、Spine / Cubism 运行时、游戏模型及其源站。网络故障或原站失效可能导致模型加载失败。
+2. 已提供 Spine 透明渲染参数及 Live2D iframe 背景透明，但某些旧版渲染器或模型仍可能显示背景，需要实机确认。
+3. 点击语音仅支持已经找到有效音频映射的角色；不能保证所有模型都有声音，角色动作与音效均受源素材限制。
+4. 鼠标穿透针对整个矩形窗口，不是人物像素轮廓级别。
+5. 工作流配置和 JavaScript 语法检查不等于 Windows 实机验收；需要成功的构建日志和实际运行测试后才能将其视为完全验证。
 
-原网站保留不变。资源著作权归各游戏及原始权利人。
+## 自动化质量检查
+
+Windows 构建工作流依次运行 JavaScript 语法检查、桌面客户端单元测试、配置验证以及 Electron Builder 打包。构建产物保留 14 天。
+
+游戏素材版权归原权利方，请仅在拥有合法授权的范围内使用。
