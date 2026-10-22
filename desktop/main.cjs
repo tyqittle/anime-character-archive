@@ -69,10 +69,13 @@ ipcMain.on('desktop:set-interactive',(event,active)=>{
 });
 function createWindow(){
  const area=screen.getPrimaryDisplay().bounds;
- // Overscanned transparent stage: a small safety margin outside the monitor,
- // without allocating an unlimited WebGL framebuffer.
- const pad=Math.round(Math.min(area.width,area.height)*0.08);
- const bounds={x:area.x-pad,y:area.y-pad,width:area.width+pad*2,height:area.height+pad*2};
+ // Keep the transparent layer strictly inside the monitor. Windows 10 / Electron
+ // can render the ENTIRE transparent window opaque white if any portion extends
+ // beyond the display bounds (Electron issue #48592).
+ // Inset by a pixel so this window is not treated as an exclusive fullscreen.
+ const inset=1;
+ const bounds={x:area.x+inset,y:area.y+inset,
+  width:Math.max(220,area.width-2*inset),height:Math.max(260,area.height-2*inset)};
  win=new BrowserWindow({...bounds,transparent:true,frame:false,resizable:false,hasShadow:false,backgroundColor:'#00000000',alwaysOnTop,skipTaskbar:true,autoHideMenuBar:true,webPreferences:{nodeIntegration:false,contextIsolation:true,sandbox:true,backgroundThrottling:false,preload:path.join(__dirname,'preload.cjs')}});
  win.setMenu(null);
  // Chromium's default webContents backing surface can otherwise be white,
