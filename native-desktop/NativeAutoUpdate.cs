@@ -7,6 +7,7 @@ using Velopack;
 using Velopack.Sources;
 using Velopack.Exceptions;
 using SpinePet.Infrastructure;
+using System.Windows.Threading;
 
 namespace SpinePet;
 
@@ -15,6 +16,28 @@ public sealed partial class App
     private const string ArchiveUpdateRepository =
         "https://github.com/tyqittle/anime-character-archive";
     private int _archiveUpdateStarted;
+    private DispatcherTimer? _archiveUpdateTimer;
+
+    private void StartArchiveUpdateLoop()
+    {
+        if (_archiveUpdateTimer != null) return;
+        _archiveUpdateTimer = new DispatcherTimer(
+            DispatcherPriority.Background, Dispatcher)
+        {
+            Interval = TimeSpan.FromHours(8)
+        };
+        _archiveUpdateTimer.Tick += (_, _) =>
+        {
+            if (IsShutdownRequested)
+            {
+                _archiveUpdateTimer?.Stop();
+                return;
+            }
+            _ = CheckArchiveUpdatesAsync();
+        };
+        _archiveUpdateTimer.Start();
+        _ = CheckArchiveUpdatesAsync();
+    }
 
     private async Task CheckArchiveUpdatesAsync()
     {
@@ -66,6 +89,10 @@ public sealed partial class App
         {
             AppLogger.Write(nameof(App),
                 $"archive-auto-update-failed {ex.GetType().Name}: {ex.Message}");
+        }
+        finally
+        {
+            Volatile.Write(ref _archiveUpdateStarted, 0);
         }
     }
 }
