@@ -6,7 +6,7 @@ const path=require('node:path');
 const vm=require('node:vm');
 const source=fs.readFileSync(path.join(__dirname,'main.cjs'),'utf8');
 function harness(argv=['electron','.']){
- const callbacks=new Map(),windows=[],menus=[];
+ const callbacks=new Map(),ipcHandlers=new Map(),windows=[],menus=[];
  const app={
   isPackaged:true,
   on:(event,fn)=>callbacks.set(event,fn),
@@ -35,10 +35,10 @@ function harness(argv=['electron','.']){
  }
  class FakeTray{setToolTip(value){this.tip=value}setContextMenu(value){this.menu=value}on(){}}
  const fakeFs={...fs,readFileSync:()=>{throw Error('no prior settings')},mkdirSync:()=>{},writeFileSync:()=>{}};
- const fakeElectron={app,ipcMain:{on:()=>{}},BrowserWindow:FakeBrowserWindow,Menu:{buildFromTemplate:items=>{menus.push(items);return items}},Tray:FakeTray,nativeImage:{createFromBuffer:()=>({resize:()=>({})})},shell:{openExternal:()=>{}},screen:{getPrimaryDisplay:()=>({workArea:{x:0,y:0,width:1920,height:1080}}),getAllDisplays:()=>[{bounds:{x:0,y:0,width:1920,height:1080}}]},dialog:{showErrorBox:()=>{},showMessageBox:async()=>({response:1})}};
+ const fakeElectron={app,ipcMain:{on:(name,fn)=>ipcHandlers.set(name,fn)},BrowserWindow:FakeBrowserWindow,Menu:{buildFromTemplate:items=>{menus.push(items);return items}},Tray:FakeTray,nativeImage:{createFromBuffer:()=>({resize:()=>({})})},shell:{openExternal:()=>{}},screen:{getPrimaryDisplay:()=>({workArea:{x:0,y:0,width:1920,height:1080}}),getAllDisplays:()=>[{bounds:{x:0,y:0,width:1920,height:1080}}]},dialog:{showErrorBox:()=>{},showMessageBox:async()=>({response:1})}};
  const context={require:id=>id==='electron'?fakeElectron:id==='node:fs'?fakeFs:require(id),module:{},process:{argv,platform:'win32'},console,Buffer,URL,setTimeout,clearTimeout};
  vm.runInNewContext(source,context,{filename:'desktop/main.cjs',timeout:1500});
- return {windows,callbacks,menus};
+ return {windows,callbacks,menus,ipcHandlers};
 }
 test('desktop app starts in a transparent sandboxed window',async()=>{
  const h=harness();await Promise.resolve();await Promise.resolve();
@@ -60,4 +60,24 @@ test('external navigation is rejected',async()=>{
  const w=h.windows[0];let blocked=false;
  w.events['wc:will-navigate']({preventDefault(){blocked=true}},'https://tyqittle.github.io/anime-character-archive.evil/spine.html');
  assert.equal(blocked,true);
+});
+
+test('stage extends past monitor edges and keeps transparency',async()=>{
+ const h=harness();await Promise.resolve();await Promise.resolve();
+ const w=h.windows[0];
+ assert.ok(w.options.width>1920&&w.options.height>1080);
+ assert.ok(w.options.x<0&&w.options.y<0);
+ assert.equal(w.options.resizable,false);
+ assert.equal(w.ignored,true);
+});
+test('transparent region passes through; only matching page can re-enable pointer hits',async()=>{
+ const h=harness();await Promise.resolve();await Promise.resolve();
+ const w=h.windows[0],handler=h.ipcHandlers.get('desktop:set-interactive');
+ assert.equal(typeof handler,'function');
+ handler({sender:{}},true);
+ assert.equal(w.ignored,true);
+ handler({sender:w.webContents},true);
+ assert.equal(w.ignored,false);
+ handler({sender:w.webContents},false);
+ assert.equal(w.ignored,true);
 });
