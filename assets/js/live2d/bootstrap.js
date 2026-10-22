@@ -11,26 +11,22 @@ window.addEventListener('message',event=>{
 });
 window.addEventListener('resize',()=>{if(model)fit()});
 const desktopMode=new URLSearchParams(location.search).has('desktop');
-let nativeDrag=null;
 if(desktopMode){
  const canvas=document.getElementById('live2dCanvas');
- canvas.addEventListener('pointerdown',e=>{
-  if(e.button===0&&e.isPrimary)nativeDrag={id:e.pointerId,x:e.screenX,y:e.screenY,active:false};
+ let previousHit=null;
+ const report=hit=>{
+  if(previousHit===hit)return;
+  previousHit=hit;
+  window.parent.postMessage({channel:'anime-archive-desktop-hover',hit},location.origin);
+ };
+ canvas.addEventListener('mousemove',event=>{
+  if(!model||!readyId){report(false);return}
+  const bounds=model.getBounds();
+  report(Number.isFinite(bounds.x)&&event.clientX>=bounds.x&&event.clientX<=bounds.x+bounds.width
+   &&event.clientY>=bounds.y&&event.clientY<=bounds.y+bounds.height);
  },true);
- canvas.addEventListener('pointermove',e=>{
-  if(!nativeDrag||e.pointerId!==nativeDrag.id)return;
-  const dx=e.screenX-nativeDrag.x,dy=e.screenY-nativeDrag.y;
-  if(!nativeDrag.active&&Math.hypot(dx,dy)<5)return;
-  nativeDrag.active=true;nativeDrag.x=e.screenX;nativeDrag.y=e.screenY;
-  if(Math.abs(dx)<=150&&Math.abs(dy)<=150)window.parent.postMessage({channel:'anime-archive-desktop-drag',dx,dy},location.origin);
-  e.stopImmediatePropagation();e.preventDefault();
- },true);
- for(const type of ['pointerup','pointercancel'])canvas.addEventListener(type,e=>{
-  if(nativeDrag?.id===e.pointerId){
-   if(nativeDrag.active){e.stopImmediatePropagation();e.preventDefault()}
-   nativeDrag=null;
-  }
- },true);
+ canvas.addEventListener('mouseleave',()=>report(false));
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)report(false)});
 }
 let drag=false,last={x:0,y:0};
 document.getElementById('live2dCanvas').addEventListener('wheel',e=>{if(!model)return;e.preventDefault();setZoom(zoom*Math.exp(-e.deltaY*.0015))},{passive:false});
