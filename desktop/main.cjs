@@ -121,7 +121,7 @@ if(singleInstance)app.whenReady().then(()=>{
  if(app.isPackaged&&process.platform==='win32')app.setAsDefaultProtocolClient('animecharacter');
  createWindow();
  // Tray icon generated from a tiny PNG embedded here; no extra assets required.
- const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=','base64');
+ const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABDElEQVR4nGNgGOmAkZCC4Lx7/ymxYO0kJbx24JSk1GJiHcJED8vxmYnhAFpYjs9sJkIKaO0IrFFATwBPGKT6flG3IoZYXOl9ovXDEiULKZbishhdjhSHEO0AfBZT4hCi0gAplpOqb8ATIUEHkOt7YvUP7hDA5Xo94zC8hqLL4wsFkkMAZjguRxCSp9gB1AYkO+DS2VUoNKnyFDuAGMOJtZygA7CVZHrGYUQlQmQ1+EpEsqOAUCIkNhSIqg2xZSN8oYBsOS7fw2pDsnMBoURILEBpKJIaCoQAId8zMJBQHcMMI8YhpLQHMJrKxLaMyG0RoTfPsbbVadU4xdY3wJoICfVmqGU5A8Mg6JqNAgDV5HmjGYGRKgAAAABJRU5ErkJggg==','base64');
  tray=new Tray(nativeImage.createFromBuffer(png).resize({width:16,height:16}));
  tray.on('double-click',()=>win?.isVisible()?win.hide():win?.show());
  updateTray();
