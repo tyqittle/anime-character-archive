@@ -28,34 +28,45 @@ public sealed partial class App
 
     private readonly SemaphoreSlim _archiveShowGate = new(1, 1);
     private CharacterResourceDiscoveryService? _archiveDiscovery;
-    private sealed record ArchiveShowRequest(string ResourceName);
+    private sealed record ArchiveShowRequest(string ResourceName, string GameId = "nikke");
+    private sealed record ArchiveCharacterRef(string GameId, string ResourceName);
 
     private static string ArchiveRequestPath =>
         Path.Combine(AppPaths.LocalDataDirectory, ArchiveRequestName);
 
     // The browser invokes "SpinePet.exe animecharacter://open?id=c015".
     // This is a strict identifier, NEVER a user-supplied path or download URL.
-    private static string? ParseArchiveUrl(string? arg)
+    private static ArchiveCharacterRef? ParseArchiveUrl(string? arg)
     {
-        if (arg == null) return null;
-        Match m = Regex.Match(arg,
+        if (string.IsNullOrWhiteSpace(arg) || arg.Length > 180) return null;
+        // Strict protocol routing: no arbitrary paths, sources or query params.
+        Match nikke = Regex.Match(arg,
             @"^animecharacter://open/?\?id=(c[0-9]{3,6}(?:_[0-9]{2})?)$",
             RegexOptions.CultureInvariant | RegexOptions.IgnoreCase);
-        return m.Success ? m.Groups[1].Value.ToLowerInvariant() : null;
+        if (nikke.Success)
+            return new ArchiveCharacterRef("nikke",
+                nikke.Groups[1].Value.ToLowerInvariant());
+        Match bd2 = Regex.Match(arg,
+            @"^animecharacter://open/?\?game=browndust2&id=(bd2-char[0-9]{6}(?:_c)?)$",
+            RegexOptions.CultureInvariant | RegexOptions.IgnoreCase);
+        return bd2.Success
+            ? new ArchiveCharacterRef("browndust2",
+                bd2.Groups[1].Value.ToLowerInvariant())
+            : null;
     }
 
     private void AcceptArchiveStartupArgs(string[] args)
     {
         if (args.Length != 1) return;
-        string? id = ParseArchiveUrl(args[0]);
-        if (id == null) return;
-        SaveArchiveRequest(id);
+        ArchiveCharacterRef? selection = ParseArchiveUrl(args[0]);
+        if (selection == null) return;
+        SaveArchiveRequest(selection);
     }
 
-    private static void SaveArchiveRequest(string resourceId)
+    private static void SaveArchiveRequest(ArchiveCharacterRef selection)
     {
         Directory.CreateDirectory(AppPaths.LocalDataDirectory);
-        var request = new ArchiveShowRequest(resourceId);
+        var request = new ArchiveShowRequest(selection.ResourceName, selection.GameId);
         string temp = ArchiveRequestPath + "." + Guid.NewGuid().ToString("N") + ".tmp";
         try
         {
@@ -93,7 +104,7 @@ public sealed partial class App
                   "若拒绝，网站可能继续调用旧版程序并错误地拒绝 c113_01。\n";
             var answer = System.Windows.MessageBox.Show(
                 prompt +
-                "启用后，浏览器可以请求此程序下载经过来源验证的妮姬 Spine 4.1 模型并在桌面显示。\n" +
+                "启用后，浏览器可以请求此程序下载经过来源验证的妮姬和棕色尘埃2 Spine 4.1 模型。\n" +
                 "此设置仅影响当前 Windows 用户，可随时在系统的默认应用设置中更改。",
                 "次元立绘 · 网站一键导入", MessageBoxButton.YesNo,
                 MessageBoxImage.Question);
@@ -137,21 +148,29 @@ public sealed partial class App
             var request = JsonSerializer.Deserialize<ArchiveShowRequest>(
                 await File.ReadAllTextAsync(ArchiveRequestPath));
             string id = request?.ResourceName ?? "";
-            if (!Regex.IsMatch(id, @"^c[0-9]{3,6}(?:_[0-9]{2})?$",
-                    RegexOptions.CultureInvariant))
+            string game = request?.GameId ?? "nikke";
+            bool supportedNikke = game == "nikke" &&
+                Regex.IsMatch(id, @"^c[0-9]{3,6}(?:_[0-9]{2})?$",
+                    RegexOptions.CultureInvariant);
+            bool supportedBd2 = game == "browndust2" &&
+                Regex.IsMatch(id, @"^bd2-char[0-9]{6}(?:_c)?$",
+                    RegexOptions.CultureInvariant);
+            if (!supportedNikke && !supportedBd2)
             {
-                AppLogger.Write(nameof(App), "archive-invalid-character-id");
+                AppLogger.Write(nameof(App), "archive-invalid-game-or-character-id");
                 File.Delete(ArchiveRequestPath);
                 return;
             }
 
-            string stem = await EnsureArchiveModelDownloadedAsync(id);
+            string stem = supportedNikke
+                ? await EnsureArchiveModelDownloadedAsync(id)
+                : await EnsureBrownDust2DownloadedAsync(id);
             SynchronizeDiscoveredResources(_archiveDiscovery);
             var character = _characterManager.Characters.FirstOrDefault(c =>
                 string.Equals(Path.GetFileNameWithoutExtension(c.SkeletonPath),
                     stem, StringComparison.OrdinalIgnoreCase));
             if (character == null)
-                throw new InvalidDataException("The native Spine 4.1 parser rejected this model.");
+                throw new InvalidDataException("The native Spine 4.1 parser could not discover this model.");
 
             // Use upstream My_SpinePet's built-in animation rendering and state.
             await _characterManager.ShowCharacterAsync(character);
