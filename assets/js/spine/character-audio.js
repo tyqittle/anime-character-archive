@@ -62,6 +62,9 @@ window.addEventListener('DOMContentLoaded',()=>{
  document.getElementById('characterCards').addEventListener('click',selectedVoiceChanged);
  document.getElementById('gameFilter').addEventListener('change',selectedVoiceChanged);
  document.getElementById('voiceTest').addEventListener('click',()=>{voiceEnabled=true;updateVoiceUI();syncFrameVoice();playCharacterVoice(chosen())});
+ // Desktop has no visible toolbar. Enable voice on real user clicks, not autoplay.
+ if(new URLSearchParams(location.search).has('desktop'))voiceEnabled=true;
  updateVoiceUI();
+ if(voiceEnabled)syncFrameVoice();
 });
 
