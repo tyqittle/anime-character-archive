@@ -8,6 +8,8 @@
     }
   },
   "missing": [],
-  "newCapturesInThisRun": 92,
+  "newCapturesInThisRun": 0,
+  "failedCaptures": [],
+  "failureSummary": {},
   "status": "shared exact-model WebP verification policy"
 }
