@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/azurlane-preview-images.yml'
+      - 'data/live2d-azurlane.json'
+      - 'scripts/preview_policy.py'
       - 'scripts/render_azurlane_previews.mjs'
       - 'scripts/convert_azurlane_previews.py'
       - 'scripts/merge_azurlane_previews.py'
