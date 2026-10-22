@@ -5,6 +5,7 @@ using System.IO;
 using System.Windows;
 using Velopack;
 using Velopack.Sources;
+using Velopack.Exceptions;
 using SpinePet.Infrastructure;
 
 namespace SpinePet;
@@ -46,13 +47,13 @@ public sealed partial class App
             // user consent. Do not silently run downloaded executables.
             await manager.DownloadUpdatesAsync(newer);
             if (IsShutdownRequested) return;
-            var choice = MessageBox.Show(
+            var choice = System.Windows.MessageBox.Show(
                 "新版本的次元桌面立绘已经自动下载并通过更新包校验。\n" +
                 "是否保存当前人物状态，安装更新并重启？\n" +
                 "选择“否”会保留已下载的更新包。",
                 "次元桌面立绘 · 自动更新",
-                MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if (choice != MessageBoxResult.Yes) return;
+                System.Windows.MessageBoxButton.YesNo, System.Windows.MessageBoxImage.Question);
+            if (choice != System.Windows.MessageBoxResult.Yes) return;
             _characterManager?.SaveAllState();
             manager.ApplyUpdatesAndRestart(newer);
         }
