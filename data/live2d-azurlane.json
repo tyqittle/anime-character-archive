@@ -22,7 +22,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ff1bb8d3bf7117b6943a1024a27ca84615653b36b3faae668f2afa628765ea5c"
     },
     {
       "id": "al-abeikelongbi_3_hx",
@@ -39,7 +42,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-abeikelongbi_3_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "53622ed192a0f5e4c64481affb7b4010d1e34e09ec7d8a15ecd1e31ddd0901c0"
     },
     {
       "id": "al-adaerbote_2",
@@ -56,7 +62,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "fe6d50b03b370f9c841ee3dec94026d9580bd5c07c340d057de4768fa1a7ff46"
     },
     {
       "id": "al-adaerbote_3",
@@ -74,7 +83,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-adaerbote_3.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c28b847b244c1037103d429e61512b90def2e9964a0d578cc3398190e69a092f"
     },
     {
       "id": "al-aerbien_3",
@@ -91,7 +103,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "372c9471fdb59f902ed962fd583c3d0de18d7c72f26b9b6d11bf7cc08a6afed2"
     },
     {
       "id": "al-aersasi_2",
@@ -108,7 +123,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c2738c6d31504c2391b90cf396951aa920a8bddbe4c41344ecdcecc07397fa36"
     },
     {
       "id": "al-aersasi_3",
@@ -140,7 +158,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7befd74bcea5a0207f6b1e7844ecba896eeb47a5d7f01508e2d71140b3c7f434"
     },
     {
       "id": "al-aierdeliqi_4",
@@ -157,7 +178,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "03ca65993433ed5554a540c11322f4c5c9def1912366db6c2af2686fb705f685"
     },
     {
       "id": "al-aierdeliqi_5",
@@ -174,7 +198,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d5c2b9c652ae732083680032c470582d8d143d9687fb34c38b0640acbf93f8d4"
     },
     {
       "id": "al-aijier_2",
@@ -191,7 +218,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7c64f3a638a1d9ce5772024fd4b5892bb9f4a0cfa118388452602cf7b5c3ea6b"
     },
     {
       "id": "al-aijier_3",
@@ -208,7 +238,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c2a98a947394eaa84fd093082ddbedbd695b5cfa60deef742dd646493ecbbae3"
     },
     {
       "id": "al-aijier_4",
@@ -242,7 +275,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8db7719f683f9f86c2c5c974643f7521e345e442889208d71b9205027937c6c7"
     },
     {
       "id": "al-ailunsamuna_2_hx",
@@ -259,7 +295,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-ailunsamuna_2_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d51e0fac6e9a0ae80b9e7d2f574fa285603f84f2a3be4fec3618866a47291172"
     },
     {
       "id": "al-ailunsamuna_3",
@@ -276,7 +315,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "29d7a2a1a23ff654d7f52d553a42a78aa5e2eb6a642a6551789a75127603dbad"
     },
     {
       "id": "al-aimierbeierding_2",
@@ -293,7 +335,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9aab271d21bcb5fa98e4948ab4645b3a690664367dd7d025a659151b32d67a7d"
     },
     {
       "id": "al-aimierbeierding_3",
@@ -310,7 +355,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c454419a28999fff10948020b9e82c574a7998e0cf8bdf1b2da72181c5668cb4"
     },
     {
       "id": "al-aimierbeierding_3_hx",
@@ -327,7 +375,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-aimierbeierding_3_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "dfd5d976cb8e2f6b7ae802854619b5f234c3a1d8cfdf759f06d7157e45576384"
     },
     {
       "id": "al-aimudeng_2",
@@ -344,7 +395,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "70098db68e668b293cbd12ebf31258605ebd08a1d1e41c38d6f007b850a8888f"
     },
     {
       "id": "al-aimudeng_2_hx",
@@ -361,7 +415,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-aimudeng_2_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "2c3321d8a89e460cf61c762c1a2b566e166fbe827db8d0b371be245cddf8301a"
     },
     {
       "id": "al-aisaikesi_4",
@@ -378,7 +435,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3ad304acbd5ea2c3cfc8b54ad2d6f4175bb21bba85f52828b76f9ad9e5226274"
     },
     {
       "id": "al-ankeleiqi_2",
@@ -395,7 +455,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bb363d50fbefd8836ec07ee119eb1425565504f818a98cf4233969f64ebd15e7"
     },
     {
       "id": "al-ankeleiqi_2_hx",
@@ -412,7 +475,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-ankeleiqi_2_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "65c6de860e70bbb8ee20e54d7053451ba6119bb52b5225256e3085c3a07cd36a"
     },
     {
       "id": "al-ankeleiqi_3",
@@ -429,7 +495,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1664e49325a6a225a06f8ceee5584eff6797a4d1cb88379f2ce614d59d6f7bbd"
     },
     {
       "id": "al-ankeleiqi_4",
@@ -476,7 +545,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a27641e3b1bc57c0133a65b090eca865cf758a779013ba161d5c9247291ce44e"
     },
     {
       "id": "al-baerdimo_6",
@@ -493,7 +565,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c5eaf1155d537ec9f2646e6066d800a988cb08759f9a2c38e8b8b5b1d92d2d19"
     },
     {
       "id": "al-baifeng_2",
@@ -525,7 +600,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "437e8d7f25d609e29cdee6b2f962de85609bad78045414d67cb11bd3afcc7db9"
     },
     {
       "id": "al-banerwei_3",
@@ -559,7 +637,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d0c3ad71eade5be6ca1ee8cd758c1453ccc013a31eb37074e1ba0a4370d889e5"
     },
     {
       "id": "al-beianpudunii_2",
@@ -576,7 +657,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-beianpudunii_2.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "85e74c2db5b58ebd8e13ec836a4659a844d26faa384319b562e7eaa2fcdc468f"
     },
     {
       "id": "al-beierfasite_2",
@@ -593,7 +677,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0542f7b43f9c3631760945bb16048d73b9608c5e8a080f51301f561dbc76be3d"
     },
     {
       "id": "al-beikaluolaina_2",
@@ -610,7 +697,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c3e6e2390f1af17531822b7b3d2f219bb393e8539fe6e9f5fdfd52ef25c121f1"
     },
     {
       "id": "al-beikaluolaina_2_hx",
@@ -627,7 +717,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-beikaluolaina_2_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7da72bce00604d30beb932006127edf896c1156affb2d37cf262a71df87cdadb"
     },
     {
       "id": "al-beilaosenlin_2",
@@ -659,7 +752,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e87e1a54f01bc4019f879cbe0b46e69ccd688afeba01b58d184d4cac6d87d59b"
     },
     {
       "id": "al-biaoqiang_3",
@@ -676,7 +772,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7ba310cf2c53c7c6c7f6315f5a7664a52ad26dcba6271a4a920af7af3aac4678"
     },
     {
       "id": "al-bisimai_2",
@@ -693,7 +792,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d388a14ecb19da5b01776f19b01c604da8b494641cd79782e8b36b73a40cac86"
     },
     {
       "id": "al-bisimai_4",
@@ -727,7 +829,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "42908682a5ae1b2d20166646674a3ef10f24da99b4e9877a1e14aca68ed6aa84"
     },
     {
       "id": "al-boyixi_2",
@@ -744,7 +849,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d5c4feeead0223a4c3ed49c4f9d0b85a8c227ad4b807832adbca7773e0fd51fb"
     },
     {
       "id": "al-bulaimodun_2",
@@ -761,7 +869,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c4a6e048e745ff59ad53ee7f6c7bb499e8cacd8fca6834f2e5dedb9120b85a11"
     },
     {
       "id": "al-bulaimodun_4",
@@ -778,7 +889,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "05788e8234da6be7da16b19e8160f8ba6642a2c9fb7d14b7acd6bb58876e3619"
     },
     {
       "id": "al-bulaimodun_5",
@@ -795,7 +909,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "cb0f6c3da0a24f8de382165601c5146ae0d2b03143a93d3e3b7e45552d2cebad"
     },
     {
       "id": "al-buleisite_2",
@@ -812,7 +929,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ffb39b83089b3179797a03ca7390f1246d8264a2d792f31e03afc4763874938c"
     },
     {
       "id": "al-buleisite_3",
@@ -846,7 +966,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "55632f9a0d4cb9376d18c23c64b610b4a2fef76aa7f60c4ca444f8711169692c"
     },
     {
       "id": "al-chaijun_4",
@@ -863,7 +986,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "cc604e60bce2df6710e24644806e60655581f30d493d43ea654742cbf3e6d41b"
     },
     {
       "id": "al-chaijun_4_hx",
@@ -880,7 +1006,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-chaijun_4_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0db65e385d61b42f5ad0bce9d01dcaf66ac5e3be94f6d0b704a8d36918376021"
     },
     {
       "id": "al-chaijun_5",
@@ -914,7 +1043,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "371bdb8f832e1b0b1f67e22c614f5aac8f1075caf8ba41f8589fd290ae369b95"
     },
     {
       "id": "al-chuixue_3",
@@ -931,7 +1063,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "de294f580c1a188eb381182c9121c13d0fcec98c85f7089688651cfa5b91461c"
     },
     {
       "id": "al-chuyue_2",
@@ -948,7 +1083,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "814a57895f82f9cb33e07eb3ef64db8c68de25e73501d4252bb51476673008b8"
     },
     {
       "id": "al-dafeng_2",
@@ -965,7 +1103,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "2ce3b0a1216231672cedf26a083e2b3da0647a1e715fd69b6cad76f1c3810609"
     },
     {
       "id": "al-dafeng_2_hx",
@@ -982,7 +1123,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-dafeng_2_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8fceba89e643e5b4d52743afb0790a57e7a5cdc04445e8e3523d1721ee08d453"
     },
     {
       "id": "al-dafeng_3",
@@ -999,7 +1143,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bbf07da153b68c8e2dc1775825baba882d7a9278eab0ce60f91a19344a082116"
     },
     {
       "id": "al-dafeng_4",
@@ -1016,7 +1163,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e386986da9eb434faadbf7bc3c7b47d1ae31d9e91d90fbbd34f24ffd7c6b33ca"
     },
     {
       "id": "al-dafeng_6",
@@ -1033,7 +1183,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "afa2c1e4d5e8148d0b19c0254f8984b866e4d52da81d7da2d7cdb08d809aab45"
     },
     {
       "id": "al-dafeng_7",
@@ -1065,7 +1218,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "2c6da8e24fb64223d76357e10210e0a492a6a179dc39c39785da9f7084c46722"
     },
     {
       "id": "al-daofeng_5",
@@ -1082,7 +1238,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1068ba019662ea176af5fad6dc8db201300f5127931ad7943565186c4fbbc1fc"
     },
     {
       "id": "al-daofeng_5_hx",
@@ -1099,7 +1258,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-daofeng_5_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "804c2344a9227e17d39834d4bd5bc0b6ac9f04ca44cf89dd8a25df47088e8250"
     },
     {
       "id": "al-dewenjun_2",
@@ -1116,7 +1278,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "095a956b1b250d426b20bb0e75edd1683299ec5e90497ef5d201f6cff113f58f"
     },
     {
       "id": "al-deyizhi_3",
@@ -1133,7 +1298,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bf1b32871fb2c0c9decc3036caf7620e5bf5bfca73c4b9302f1c54e7f7a07a8c"
     },
     {
       "id": "al-dujiaoshou_4",
@@ -1150,7 +1318,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "145cc71fc80c6ebde6e902f462ace6178736d115bd1fb916c0022637f404639d"
     },
     {
       "id": "al-dujiaoshou_6",
@@ -1167,7 +1338,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9d3cf28292e31715f72940a56472711b00456a0fb248ca888e3647531da57cf3"
     },
     {
       "id": "al-dulianglai_2",
@@ -1185,7 +1359,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-dulianglai_2.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "aee05ed516d4ff2d413214157782f97327d72c0ce7e489f1c07a8b78ffc04733"
     },
     {
       "id": "al-dunkeerke_2",
@@ -1202,7 +1379,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7f49d632122aa8d87c90ee66761a6d0fa9b2d200d1f01efa879aa16dc4338eeb"
     },
     {
       "id": "al-edu_3",
@@ -1219,7 +1399,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0616fbecac1f03faca1337c507b187d732976ea5d1896ee8ef7b7be99f96aa05"
     },
     {
       "id": "al-edu_3_hx",
@@ -1236,7 +1419,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-edu_3_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c3ff53595f98d8c45657ceeb5aa0482069cebb7fb6826efb7b13605d4c6419fc"
     },
     {
       "id": "al-edu_4",
@@ -1253,7 +1439,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9e2502c73e3762362c2c1178db853dc31dbbef9ecc8c4bebecc5228407c1cdc3"
     },
     {
       "id": "al-feiteliedadi_3",
@@ -1317,7 +1506,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a0789df88cecd81979296c71a6ab320cda15d51a09304c91ef8ef0acef0f7702"
     },
     {
       "id": "al-fulici_2",
@@ -1366,7 +1558,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7bb66cadde78ef7ffcd1b333c14bc99bba268e709895ee76fba59b683e24fbe8"
     },
     {
       "id": "al-genaisennao_2",
@@ -1383,7 +1578,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "02c6d02b65c82bd3a7206a4be23f45258aa5445eadf3ff2923e23d445302da5b"
     },
     {
       "id": "al-guandao_2",
@@ -1400,7 +1598,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "6d5078ef5afeda5e281d3629956305b694fedc374fb6d8cc58709e9f90bbf361"
     },
     {
       "id": "al-guandao_3",
@@ -1449,7 +1650,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "69c92fc5801555ca1cb77acc3ef15325f8e9f0e4d49a4170cb47fbfc3bb2cfa0"
     },
     {
       "id": "al-hailunna_4",
@@ -1466,7 +1670,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "283e13ee33cbd471cb3331f8e8b7d7b47e43b13b209ecdf2ab1026302db1390f"
     },
     {
       "id": "al-haiyinlixi_2",
@@ -1483,7 +1690,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "13b0c5e76854a960a284d23a8104396aab0f13554154bafade894009213d8fd3"
     },
     {
       "id": "al-heitaizi_2",
@@ -1500,7 +1710,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "789848a6b63863f6b2b48b881423c92543c377544ac512f1a2841554d4b4411d"
     },
     {
       "id": "al-hemin_2",
@@ -1517,7 +1730,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3d083abe128e0b65ab59a7cdbee87fdf09f3895c043f379d596746ae64194afb"
     },
     {
       "id": "al-hemin_3",
@@ -1534,7 +1750,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "56e570ce502186ef8c217bb7a90f51bdc981da7e13e5d262f699387fe9003482"
     },
     {
       "id": "al-huangjiafangzhou_3",
@@ -1551,7 +1770,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4421cebcec0bef7c1bd054927b91ea724157933d24d03ee3c2bf267832b3cc21"
     },
     {
       "id": "al-huonululu_3",
@@ -1568,7 +1790,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "98c53f276944d125c3f0c8cecc5b63ddb34f1ea44aa38f0ae7b99760e04bd914"
     },
     {
       "id": "al-huonululu_5",
@@ -1585,7 +1810,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "865bb21bfd752a464d9a014d402a069ba01317e8716e7614ea896c7d12384a47"
     },
     {
       "id": "al-jialisuoniye_3",
@@ -1602,7 +1830,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bf9f5f8f2f4f694228255bcb944bdac20c65a6f3749450946a3f0bfa638b8783"
     },
     {
       "id": "al-jialisuoniye_3_hx",
@@ -1619,7 +1850,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-jialisuoniye_3_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3e6fb6c868eafeb8fcdcee3fe0be8ed6514d5921877e0779857871fd256048f8"
     },
     {
       "id": "al-jialisuoniye_4",
@@ -1636,7 +1870,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5ee9df0768774fa820cbaaef089ad5891e1c6dbe1b99d9ed897889e6bada245d"
     },
     {
       "id": "al-jian_3",
@@ -1671,7 +1908,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-jianwu_2.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "21c5143076b8d0760a3e23657104778ad7bad8cfde2fd840c18ef04a78fb7fb5"
     },
     {
       "id": "al-jianye_2",
@@ -1688,7 +1928,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "6c4ef02019b44989d16e90f87cfeaa67761f717420c352e51b78e8a243873e12"
     },
     {
       "id": "al-jianye_2_hx",
@@ -1705,7 +1948,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-jianye_2_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a3ee1aeef37266ef3ebee6ce74de93f3944bbba96d257bf3e0d4ed0ba2336e6d"
     },
     {
       "id": "al-jianye_3",
@@ -1722,7 +1968,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ee73e61312dc2197f552430bba54a0ad3ae203a627ec2a3f1660d06aac14a942"
     },
     {
       "id": "al-jianye_4",
@@ -1739,7 +1988,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "6bbaa7b77f5fe167c499e74bb4b69dc9818eae85b7461c1d2e83128da8ed0b84"
     },
     {
       "id": "al-jiluofu_3",
@@ -1756,7 +2008,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3c3dfaccfd04827844aa74748ccbcd8633dab4156165b5a37bf4d2bc0017c921"
     },
     {
       "id": "al-jinjiang_2",
@@ -1788,7 +2043,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "99d4987dfeedbddc498e388c84ae6f8263708c26594eef1b33d99cb1d2063b2c"
     },
     {
       "id": "al-jinshi_2",
@@ -1820,7 +2078,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "96da79b1162dcb0f78729223d00655c301578bffe01f8769fade2d0225ff5a99"
     },
     {
       "id": "al-junhe_4",
@@ -1837,7 +2098,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ee5bd9003202bd9cc48496cfb2a749d79b414e9a7aee0cfd9f8d500e6ddb4d36"
     },
     {
       "id": "al-junhe_5",
@@ -1854,7 +2118,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0119ebf2aa6d37d5b30af397315c93b29bbb3035a855d6b1de6d603907de18f3"
     },
     {
       "id": "al-junzhu_5",
@@ -1888,7 +2155,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9a1912012ac54a08d0b85dc821fde77169ded1eaecfc13b720942f5fadbf4738"
     },
     {
       "id": "al-kalvbudisi_2",
@@ -1905,7 +2175,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "31a2a2819092845b3d0de9a560e187b449aaf0ed86c8caca7c2909e57548047c"
     },
     {
       "id": "al-kebensi_2",
@@ -1937,7 +2210,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8cded21145525ea616e09af9bfb6f4f8c09809ba7ed97272121d26ab14706b93"
     },
     {
       "id": "al-kelifulan_3",
@@ -1954,7 +2230,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8301cb261d1c2390d737a0a1628f9e72f460cf3b4f33585880cd71e0595fae98"
     },
     {
       "id": "al-kelifulan_8",
@@ -1971,7 +2250,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4c37abb5d61589c275e819d6ed665347a537dbd746f7ef01d181708fb76f70d0"
     },
     {
       "id": "al-kewei_4",
@@ -1988,7 +2270,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c42cfefc48c1039511dd99c773eff75ac47045870f53b2ced4a847ac76e9b6f9"
     },
     {
       "id": "al-kewei_6",
@@ -2020,7 +2305,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "07c41703cf51a8419986155dd41898479f4c2e877d9da0df783d0aa24f8a7750"
     },
     {
       "id": "al-kuersike_2",
@@ -2037,7 +2325,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7637b578309ae3bab273b51356c9684f257f7ab3c50d41bb67df9ec0cadf7a46"
     },
     {
       "id": "al-lafei",
@@ -2054,7 +2345,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d9e69f4cb70a9b4f5e54a01acb28a2178590e297eddc9601dff9e1f872c8280f"
     },
     {
       "id": "al-lafei_4",
@@ -2071,7 +2365,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b45ec6caabb3d4ec1cfcad7f2ce851f85cc979aaea2dc58e9e2c9ef57b7bf929"
     },
     {
       "id": "al-lafeier_2",
@@ -2089,7 +2386,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-lafeier_2.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4f13b385762de75ed879fff6b1f59c99c8a72abc0d955aad4166c4c4ae7a136a"
     },
     {
       "id": "al-lafeiii_3",
@@ -2106,7 +2406,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-lafeiii_3.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "2193cd50fc33f0c0b13b8299826c256d94f9d6881acdbbc9e350503ce69250d2"
     },
     {
       "id": "al-leigensibao_2",
@@ -2123,7 +2426,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e45e13f69e425d07b6ce71d8f8747d9f46d59d0a16b647057eb398d41e684a5e"
     },
     {
       "id": "al-liekexingdunii_2",
@@ -2155,7 +2461,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "73ccdfd2c8b6818e1e2a2e26a5edae827dc758119dc62f69aaed0a656319e6d3"
     },
     {
       "id": "al-lingbo_10",
@@ -2172,7 +2481,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f7849f2b1a1b8ad42629d95076d16884cd3cb99691b00acfa77fe0ce48f23be5"
     },
     {
       "id": "al-linuo_3",
@@ -2189,7 +2501,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e6a432919e6ed929aff3df506303b797636b57075de79d995ceae5a1a3d8dcbe"
     },
     {
       "id": "al-linuo_3_hx",
@@ -2206,7 +2521,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-linuo_3_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ea37f5a8fc1382a0335900351ca20449080a1702197eec851e3e11a87b9d5955"
     },
     {
       "id": "al-lisailiu_2",
@@ -2223,7 +2541,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b41205c0597acadfd1538159f67c7f9425f75dac6d1c4e26aea034562eaca389"
     },
     {
       "id": "al-lisailiu_3",
@@ -2240,7 +2561,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "aab5752a124cf344bd26788c8bbc0ff4c37ae5bc8d5dcb0f81b17aaee2edea48"
     },
     {
       "id": "al-longfeng_2",
@@ -2257,7 +2581,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a145f22a2800cec7b23b5e0e57b662daa2920c50c95ae163f11d7ccd78d84d62"
     },
     {
       "id": "al-longfeng_2_hx",
@@ -2274,7 +2601,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-longfeng_2_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bf961e03d95a857a199f6d938d4111f55a2a08f1ef28f39b2f540a83133be2ae"
     },
     {
       "id": "al-longwu_2",
@@ -2291,7 +2621,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "36919f56ded08727f4b2e3d94a0f7ef330c2066168ab4dba1581ad730eac967f"
     },
     {
       "id": "al-luoen_4",
@@ -2308,7 +2641,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c49c6d3fe013568130be823c669ca1b51b26805d1d0f7201143ab339226bf640"
     },
     {
       "id": "al-luoma_2",
@@ -2325,7 +2661,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1e973bd186d319f2fba180744c980447fcea084d335a74d7de9a37d7fd46cc66"
     },
     {
       "id": "al-lupuleixite_2",
@@ -2342,7 +2681,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a3dbec6a3660cf2e38177f17b61f24d48c8d04045e63d8135cf9846ba50f5904"
     },
     {
       "id": "al-luyijiushi_2",
@@ -2359,7 +2701,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f18f4dcd5ce2131c15fa583eb4b087a707dba07063ec85c1f7f77e24a9eefadf"
     },
     {
       "id": "al-lvzuofu_2",
@@ -2376,7 +2721,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d883748457205cf47ed707ba207c4cc551b0d5437e9a8eb4c1dad7c137fbe19e"
     },
     {
       "id": "al-maliluosi_3_doa",
@@ -2393,7 +2741,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-maliluosi_3_doa.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8c69d8b7f94daec02a991351a381ab6abda77e50a6873befb107f369aca504a6"
     },
     {
       "id": "al-masaina_2",
@@ -2457,7 +2808,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d3ead5dd2023876a3c544aab6465620b089c31424ff7d164f47f39fae2fb7e7c"
     },
     {
       "id": "al-mojiaduoer_2",
@@ -2474,7 +2828,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5c88710a63a98b5daf45983007324012d1793e113b92bc7bd4acaec5f0cbb77a"
     },
     {
       "id": "al-mojiaduoer_3",
@@ -2492,7 +2849,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-mojiaduoer_3.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b3bc664649ca9c489073116a19f00d2f7c8144291bf0cd7650885b929a03d48c"
     },
     {
       "id": "al-nabulesi_2",
@@ -2527,7 +2887,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-naximofu_2.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d3700bf72168076a0296772f59f7c855c22109299823a77a63a5096f09e7175c"
     },
     {
       "id": "al-nengdai_2",
@@ -2544,7 +2907,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9d49e542c0bbd3840dc21767b7850e462f40ab082c78f14717f25cb892ce6fad"
     },
     {
       "id": "al-nengdai_3",
@@ -2561,7 +2927,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "dd3f50ec64866a75e3a136db21245fda0b9b1e5c9e32bb0ef84fea8754485682"
     },
     {
       "id": "al-ninghai_4",
@@ -2578,7 +2947,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "39122aa4e0b5689665862cc43ed912574ca8ca668d7fab01363a6ddf6ae2abbd"
     },
     {
       "id": "al-ougen_5",
@@ -2595,7 +2967,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "25eb5403c799dc9b189536426e428a51ea48059fadcd8711dc4d21c2a0d9b520"
     },
     {
       "id": "al-ougen_6",
@@ -2612,7 +2987,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "6c3ad6d2d28ce7eec1bc3fd4a4d23c2940bae97d309c3eb475e1c091245bf6eb"
     },
     {
       "id": "al-ougen_6_hx",
@@ -2629,7 +3007,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-ougen_6_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e530ae31d5286602f4b84d90a800c5f29e2ba6eb18cf0b7766d8917aa630a255"
     },
     {
       "id": "al-ougen_8",
@@ -2661,7 +3042,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "be6c2a17892e53e384508602862ca6046c0b316246816a0fd6d44d9800baa8ee"
     },
     {
       "id": "al-pinghai_4",
@@ -2678,7 +3062,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7ed66bcc2f10e81a23804b57f6a1753d433d7cd3ffe3147cbdae6366a25f0aaf"
     },
     {
       "id": "al-pinghai_6",
@@ -2695,7 +3082,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "476c2709f794ac2eeed3beff82e50b0a95cfb953f5e8a2483c62ebc83f5490db"
     },
     {
       "id": "al-pizibao_2",
@@ -2744,7 +3134,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b357e8a0c4b222b3b35e122162c15f04f70f94996554c7dae913a2cdd40a9d4f"
     },
     {
       "id": "al-qibolin_2",
@@ -2761,7 +3154,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "82314c12d7244b143162711b64fc926a6d2c07cf2ded4251abc2daed46ddbbf3"
     },
     {
       "id": "al-qiershazhi_2",
@@ -2778,7 +3174,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "6bf3812784afe575b495ed46047f11ae5ccb88f2a064db05fb8a6091be7710e9"
     },
     {
       "id": "al-qisheng_2",
@@ -2827,7 +3226,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ec5bc4666879e4b4fe6318253a169e7d5033f5e0bf1d687ee0df5aa16b64e23a"
     },
     {
       "id": "al-qiye_7_hx",
@@ -2844,7 +3246,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-qiye_7_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5c435f4012103f22df6d7da1366f91092c13d9f0e03b19f5edd2c1473e5c4750"
     },
     {
       "id": "al-qiye_9",
@@ -2861,7 +3266,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b53ba8e16e0ce3e9348b4e58d07e1490a5f9a4775812e2d2dac1f2e861c99519"
     },
     {
       "id": "al-rangbaer_3",
@@ -2878,7 +3286,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8e173324a1bf402dab9c0878d81a72b9cb818d0622bcd417fc968c2d273e066d"
     },
     {
       "id": "al-rangbaer_4",
@@ -2895,7 +3306,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f016b4580150f9ba8420b786424d0cab471198e33e069b43d11d8eccc8b69fe2"
     },
     {
       "id": "al-rangbaer_5",
@@ -2913,7 +3327,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-rangbaer_5.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "cf54c9ee7e1c79cdbdf533dfe5345c422b11bf9b21696288c11291dd43738387"
     },
     {
       "id": "al-shengluyisi_2",
@@ -2947,7 +3364,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-shengluyisi_2_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "195ce4902e9408a1c5149c888610d2d2d9558a5f7b65984e9532cf457d269f94"
     },
     {
       "id": "al-shengluyisi_3",
@@ -2980,7 +3400,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "365ef4a4a7f8ac50cb6e4216ac800c19688fbedb33a88087d2d59c461cdb9374"
     },
     {
       "id": "al-shengluyisi_5",
@@ -2997,7 +3420,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8483ae8bfdd415161746539b9838c69579d3eaf54dd09ee1a3c8d8da0c048aa6"
     },
     {
       "id": "al-shi_2",
@@ -3029,7 +3455,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "52a35441a5dc5d6454ac04d2bf69161d2ab1ced86861c7a4a3824a2bcd4216cf"
     },
     {
       "id": "al-sipeibojue_5",
@@ -3046,7 +3475,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "543f316c4963c4508e2b4ff26e4be2d0f625eb959f3f5e68ffb3c96743afc64b"
     },
     {
       "id": "al-sitelasibao_2",
@@ -3095,7 +3527,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "74eac1f4c79b42f784bacc95e0ef733cdc65cd24329b2d5f7081e830f6def232"
     },
     {
       "id": "al-suweiaitongmeng_3",
@@ -3127,7 +3562,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "663579a2f48577554a93ea17cfa438ed911b7f9da59c4dfe1d1e1b882d4c38e1"
     },
     {
       "id": "al-telafaerjia_2",
@@ -3159,7 +3597,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0cfc6d1386d7c81c1528dd297aae97c307082e767e6787e142624d4a5f1c781f"
     },
     {
       "id": "al-tiancheng_cv_2",
@@ -3193,7 +3634,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "61e83dd70a12828346f10bf38dbd895ac289ecf1f0129803c0374d4740634618"
     },
     {
       "id": "al-tianlangxing_5",
@@ -3227,7 +3671,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5f3a8aa65d95727750719a4ab8d70780d816dbda6dd1ae4eaf93c6dbe98d9a4b"
     },
     {
       "id": "al-weineituo_2",
@@ -3244,7 +3691,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3d62c6f63baff608cbf4515c7f37216149fc888382ee6fe3ada7b9481c653883"
     },
     {
       "id": "al-weixi_2",
@@ -3261,7 +3711,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c8620f65a0a1f3b31545523a21aaa85f8bff3bb26ec6ef2be8c662ed722260ee"
     },
     {
       "id": "al-weiyan_2",
@@ -3278,7 +3731,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "743b09cb38ad98d1bf71cd792acc965327037df09297d856432875b1cc22c001"
     },
     {
       "id": "al-weiyan_4",
@@ -3295,7 +3751,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "961352f3cdd7406d3d31de95609c2549ab6620ac117ccdff5deb93d0d021dcc3"
     },
     {
       "id": "al-weiyan_4_hx",
@@ -3312,7 +3771,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-weiyan_4_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "58259c4109de1287818a0bdd846abdc2595f1cc5edab165e70c2e191c46317b3"
     },
     {
       "id": "al-weiyan_6",
@@ -3329,7 +3791,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ff8fdac1f0ea05e465338bcd1fbb6c0dcd3146fd8cfad292e97e30c8ad04affc"
     },
     {
       "id": "al-weizhang_3",
@@ -3363,7 +3828,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "78236bb169b651795f1483e00ee0eef679d34b2e59bae966059c14af6ab71edc"
     },
     {
       "id": "al-wuerlixi_3",
@@ -3380,7 +3848,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0bb2f7707eafa3e21a808a2ad4641c9ad2e3ecca5b1342fdbbe68cc8ddec03ff"
     },
     {
       "id": "al-wuqi_2",
@@ -3397,7 +3868,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ba3eb8efe5a2c80ccaca541d237164e2d78c29f1297146c8756d6a9d7410b44e"
     },
     {
       "id": "al-wuqi_3",
@@ -3463,7 +3937,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f139cea8fa9e52eb7fe0fefeb24ff94df7a6d6303effa385f21ecb52414658e3"
     },
     {
       "id": "al-xingdengbao_2",
@@ -3480,7 +3957,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c49cc11fbaa6ebbfcbba535ee94208b8c0d222981398aff490b729e5640be800"
     },
     {
       "id": "al-xingdengbao_3",
@@ -3512,7 +3992,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "251523b8a2ee6757e246b6f9224661fb32d799eb40dc2ff5420f2b01286beea3"
     },
     {
       "id": "al-xinnong_3_hx",
@@ -3529,7 +4012,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-xinnong_3_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e52ecb6680f7d208e4eebe9b73ab4b2de7c99ed27782c42d4358a020a83fdd98"
     },
     {
       "id": "al-xinnong_4",
@@ -3546,7 +4032,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f9de16225c770390a9ff9211d6c38f1a84f623d864de8e5f8f5546847168ff4a"
     },
     {
       "id": "al-xinnong_5",
@@ -3595,7 +4084,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "21a03db171a951cc3ca2831f881beca7d81267f38aeb875b4a27e646e97fc963"
     },
     {
       "id": "al-xinzexi_5",
@@ -3627,7 +4119,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "aeba492409d56799e9bdee18e924c64c2477adf3f37e8bf46fb4be7d326dc3b8"
     },
     {
       "id": "al-xuefeng",
@@ -3644,7 +4139,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7abf39c98e453d4129403eb8d606032e6de501771c452c4a088bae9babed8198"
     },
     {
       "id": "al-xuefeng_3",
@@ -3661,7 +4159,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7b1991041d627a6e4cfcf267357ddb9a881a9fdc63f5270718d55819313a112e"
     },
     {
       "id": "al-xukufu_2",
@@ -3678,7 +4179,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7697cd628c8b8cabdf1002a4bab9dbe1f2460a77fe99fea4e202f220e20b7a63"
     },
     {
       "id": "al-xukufu_3",
@@ -3695,7 +4199,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "65dce1e9621a5f693fec441e0354d22028408d3bbf31f39943637c2bf87fe605"
     },
     {
       "id": "al-xukufu_3_hx",
@@ -3712,7 +4219,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-xukufu_3_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "73c5294ab0a8f0183246402fa2d89fdec062a7e6c86dfad70fd45d95756adfbc"
     },
     {
       "id": "al-yanusi_3",
@@ -3729,7 +4239,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "503d8f88b921f2a0a1f23616551f816f44aa5df919716d20c0c837a88b2495a3"
     },
     {
       "id": "al-yibei_3",
@@ -3746,7 +4259,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "6d4106d7f6eeccef6fc3cb9ef726a47d65c8d94f140aef9682fd3a096a3d280b"
     },
     {
       "id": "al-yichui_2",
@@ -3763,7 +4279,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b3b4ecc0e689de2e3532e63ea0eae4c4fbf122336c9039d3c9091f2673a42045"
     },
     {
       "id": "al-yilishabai_6",
@@ -3780,7 +4299,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "cffcceffb4a4e718f8476404c02001a20366e1b33911ee9a306e7aefaf855fe9"
     },
     {
       "id": "al-yingrui_3",
@@ -3797,7 +4319,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9a9f66885d6a5be82d4c05fc2dffa1081823bc4dc3faae50e25393905e631124"
     },
     {
       "id": "al-yingxianzuo_3",
@@ -3814,7 +4339,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b1a6e0b7ed2fbc2546ad88172ed6d346d746371c04c3753bd999d1fe676da5d6"
     },
     {
       "id": "al-yuanchou_3",
@@ -3861,7 +4389,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e8dd40e6ac80e641c09b3170fb1f9295a25e939f6f4d99fce5636f281eff1e69"
     },
     {
       "id": "al-yunxian_3",
@@ -3908,7 +4439,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4d916e0b1f72de74b5fd40d8ae3fc68d4ca4e42e1a8739b98a9c4676fe3266a7"
     },
     {
       "id": "al-z23_hx",
@@ -3925,7 +4459,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-z23_hx.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ec8e41086f79904aaf4111e8ab392ee5c86d7b557e2eb7d740d028d0cf62718a"
     },
     {
       "id": "al-z46_2",
@@ -3942,7 +4479,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7507a3a1a739d66c922c8efb504b41ab7cbfab3eebbe0fe909079c757917070a"
     },
     {
       "id": "al-z46_3",
@@ -3959,7 +4499,10 @@
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-z46_3.webp",
       "previewSource": "matching-live2d-animation-frame",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d9cb198c4a47df6f64dfdbda686bd0cd3978f726766f3994ab2ad6014aa7a0a2"
     },
     {
       "id": "al-z46_4",
@@ -3976,7 +4519,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b72fb3d910e29c3120c557c191990e67682d85a43adc9d264d9a89afc90ce8eb"
     },
     {
       "id": "al-zengkehaijunshangjiang_2",
@@ -4008,7 +4554,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d2f27672dcb5f52c186717cd479b805ad668e99746b75eb5297f2f593f941fad"
     },
     {
       "id": "al-zhangwu_2",
@@ -4040,7 +4589,10 @@
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
-      "status": "browser-preview-captured"
+      "status": "browser-preview-captured",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "11001f679b8f566abf28c10ed12089d3dbf9b3e50c3b6df1c021203f3755f105"
     },
     {
       "id": "al-zhenzhuhao_2",
