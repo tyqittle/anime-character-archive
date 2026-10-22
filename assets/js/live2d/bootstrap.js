@@ -4,6 +4,7 @@ window.addEventListener('message',event=>{
  const d=event.data;
  if(d?.channel!==CHANNEL)return;
  if(d.kind==='load')requestLoad(d.skinCode,d.id,d.modelUrl);
+ else if(d.kind==='voice-config')setFrameVoice(d.voice);
  else if(d.kind==='motion')motion(d.motion);
  else if(d.kind==='zoom')setZoom(Number(d.zoom)||1);
  else if(d.kind==='reset'){zoom=1;offsetX=0;offsetY=0;fit();notify('zoom',{zoom})}
