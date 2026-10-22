@@ -211,6 +211,32 @@ jobs:
           if (-not (Test-Path ./safe-release/velopack/AnimeCharacterSpinePet-ChooseFolders-Setup.exe)) {
             throw 'Compiled folder-selectable EXE was not created'
           }
+      - name: Exercise the real inner Velopack installer on Windows (non-default drive path)
+        shell: pwsh
+        run: |
+          # Compile success alone missed a real installer exit-1 failure.
+          # Run the same setup binary the graphical wizard embeds.
+          $setup = @(Get-ChildItem ./safe-release/velopack/*-win-Setup.exe)
+          if ($setup.Count -ne 1) { throw 'Expected exact packaged inner Setup.exe' }
+          $root = Join-Path $env:RUNNER_TEMP 'AnimeCharacterInstallerSmoke'
+          $target = Join-Path $root '程序 安装'
+          $log = Join-Path $env:RUNNER_TEMP 'velopack-custom-install.log'
+          if (Test-Path $target) { Remove-Item $target -Force -Recurse }
+          & $setup[0].FullName --silent --verbose --log "$log" --installto "$target"
+          $code = $LASTEXITCODE
+          if (Test-Path $log) {
+            Get-Content $log -Tail 150 | ForEach-Object { Write-Host $_ }
+          }
+          if ($code -ne 0) { throw "REAL INSTALL SMOKE FAILED: Velopack exit $code" }
+          $launcher = Join-Path $target 'SpinePet.exe'
+          if (-not (Test-Path $launcher)) {
+            Get-ChildItem $root -Recurse -Depth 4 | Select-Object FullName | Format-Table
+            throw "Setup returned success but the expected launcher does not exist: $launcher"
+          }
+          if (-not (Test-Path (Join-Path $target 'current/sq.version'))) {
+            throw 'Installer did not create its update-managed current/sq.version layout'
+          }
+          Write-Host 'REAL INSTALL SUCCESS: chosen directory contains SpinePet launcher and Velopack update structure.'
       - name: Generate SHA-256 manifest and run security checks where supported
         shell: pwsh
         run: |
