@@ -150,7 +150,7 @@
       "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c014/c014_00",
       "characterName": "Neon: Blue Ocean",
-      "versionUnverified": true,
+      "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c014.webp",
       "previewSource": "matching-spine-animation-frame",
       "previewSha256": "cd3a6cebebe04f9ea363d4f9598839b31724831c9941755986efd154bbfc2cd9",
@@ -158,7 +158,9 @@
       "previewWidth": 480,
       "previewHeight": 360,
       "status": "browser-preview-captured",
-      "playbackStatus": "browser-preview-captured"
+      "playbackStatus": "browser-preview-captured",
+      "binarySpineVersion": "4.1.20",
+      "versionEvidence": "skel-binary-header"
     },
     {
       "id": "c015",
@@ -181,10 +183,10 @@
       "id": "c016",
       "name": "角色 c016（待核对）",
       "gameId": "nikke",
-      "spineVersion": "4.0",
+      "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c016/c016_00",
       "characterName": "角色 c016（待核对）",
-      "versionUnverified": true,
+      "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c016.webp",
       "previewSource": "matching-spine-animation-frame",
       "previewSha256": "6279f3ae2c7a0d20dd700fa074b29bdc2b6407bd23991a03a68f3e534beb0bbe",
@@ -192,7 +194,9 @@
       "previewWidth": 480,
       "previewHeight": 360,
       "status": "browser-preview-captured",
-      "playbackStatus": "browser-preview-captured"
+      "playbackStatus": "browser-preview-captured",
+      "binarySpineVersion": "4.1.20",
+      "versionEvidence": "skel-binary-header"
     },
     {
       "id": "c016_01",
@@ -374,10 +378,10 @@
       "id": "c023",
       "name": "角色 c023（待核对）",
       "gameId": "nikke",
-      "spineVersion": "4.0",
+      "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c023/c023_00",
       "characterName": "角色 c023（待核对）",
-      "versionUnverified": true,
+      "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c023.webp",
       "previewSource": "matching-spine-animation-frame",
       "previewSha256": "3c5f5a44333654250cb5e0027e6c75f1ca37d95e8aa7fba4471087360b14d453",
@@ -385,7 +389,9 @@
       "previewWidth": 480,
       "previewHeight": 360,
       "status": "browser-preview-captured",
-      "playbackStatus": "browser-preview-captured"
+      "playbackStatus": "browser-preview-captured",
+      "binarySpineVersion": "4.1.20",
+      "versionEvidence": "skel-binary-header"
     },
     {
       "id": "c030",
@@ -1510,10 +1516,10 @@
       "id": "c113",
       "name": "角色 c113（待核对）",
       "gameId": "nikke",
-      "spineVersion": "4.0",
+      "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c113/c113_00",
       "characterName": "角色 c113（待核对）",
-      "versionUnverified": true,
+      "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c113.webp",
       "previewSource": "matching-spine-animation-frame",
       "previewSha256": "302c5b8745e4846a7a6abd813888f2f95206e84e0ffbb1b0586aee71afe53f95",
@@ -1521,17 +1527,19 @@
       "previewWidth": 480,
       "previewHeight": 360,
       "status": "browser-preview-captured",
-      "playbackStatus": "browser-preview-captured"
+      "playbackStatus": "browser-preview-captured",
+      "binarySpineVersion": "4.1.20",
+      "versionEvidence": "skel-binary-header"
     },
     {
       "id": "c113_01",
       "name": "角色 c113（待核对） · 01号服装（待核对）",
       "gameId": "nikke",
-      "spineVersion": "4.0",
+      "spineVersion": "4.1",
       "base": "https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c113_01/c113_01_00",
       "characterName": "角色 c113（待核对）",
       "costumeName": "01号服装（待核对）",
-      "versionUnverified": true,
+      "versionUnverified": false,
       "preview": "./assets/animation-previews/nikke-c113_01.webp",
       "previewSource": "matching-spine-animation-frame",
       "previewSha256": "ec674986a26f015fd59e44808849ef0442a4ca5dec5bbc2213ddc7f367a25ace",
@@ -1539,7 +1547,9 @@
       "previewWidth": 480,
       "previewHeight": 360,
       "status": "browser-preview-captured",
-      "playbackStatus": "browser-preview-captured"
+      "playbackStatus": "browser-preview-captured",
+      "binarySpineVersion": "4.1.20",
+      "versionEvidence": "skel-binary-header"
     },
     {
       "id": "c120",
