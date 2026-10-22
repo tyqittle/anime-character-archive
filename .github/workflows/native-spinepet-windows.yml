@@ -311,9 +311,12 @@ jobs:
         shell: pwsh
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           dotnet tool install --global vpk --version 1.2.161
           if ($LASTEXITCODE -ne 0) { throw 'Missing pinned updater tool' }
           $version = "0.1.${{ github.run_number }}"
           vpk upload github --repoUrl "https://github.com/${{ github.repository }}" --token "$env:GITHUB_TOKEN" --publish --releaseName "SpinePet Desktop $version" --tag "desktop-v$version" --outputDir ./release-files
           if ($LASTEXITCODE -ne 0) { throw 'GitHub release upload failed; no update was published' }
+          gh release edit "desktop-v$version" --repo "${{ github.repository }}" --latest
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to mark latest audited release for desktop auto-update' }
