@@ -30,12 +30,28 @@ try{
   if((inventory.byEngine['konosuba/cubism']||0)<61||
      (inventory.byEngine['konosuba/spine']||0)<126)
    throw Error('Both animations engines must be indexed for Konosuba: '+JSON.stringify(inventory));
+  // The all-games auxiliary select is hidden; it must never allocate every
+  // option on a gallery with 2,000+ dynamic models.
+  const allOptions=await page.locator('#characters option').count();
+  if(allOptions>641)throw Error('All-games selector allocated too many options: '+allOptions);
   await page.selectOption('#gameFilter','arknights');
   if((await page.locator('#characters option').count())!==93)
     throw Error('Expected 92 animated Arknights illustrations; battle rigs leaked into main list');
   await page.selectOption('#gameFilter','arknights-battle');
   if((await page.locator('#characters option').count())!==360)
     throw Error('Expected 359 separate BattleFront sprites');
+  await page.selectOption('#gameFilter','all');
+  // A non-first-page deep-link must still be selectable with a limited dropdown.
+  const deepLinkModel=await page.evaluate(()=>allCharacters.find(c=>c.gameId==='nikke'&&
+    allCharacters.indexOf(c)>maxCharacterSelectOptions)?.id);
+  if(deepLinkModel){
+    await page.evaluate(id=>{
+      const c=allCharacters.find(x=>x.id===id);
+      selectCharacter(c);refreshCardSelection();
+    },deepLinkModel);
+    if(await page.locator('#characters').inputValue()!==deepLinkModel)
+      throw Error('Selected model was lost after hidden select windowing');
+  }
   await page.selectOption('#gameFilter','all');
   // The desktop layout is a fixed one-screen workspace, never a page scroller.
   // The card grid remains independently scrollable even with hundreds of skins.

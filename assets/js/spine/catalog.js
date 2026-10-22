@@ -29,8 +29,40 @@ function status(message,error=false){
 function chosen(){return allCharacters.find(c=>c.id===$('characters').value)}
 const nikkePortraits={"wiki-2b":{"image":"./assets/portraits/wiki-2b.webp","name":"2B"},"wiki-9s":{"image":"./assets/portraits/wiki-9s.webp","name":"9S"},"wiki-a2":{"image":"./assets/portraits/wiki-a2.webp","name":"A2"},"wiki-ade":{"image":"./assets/portraits/wiki-ade.webp","name":"Ade"},"wiki-ade-agent-bunny":{"image":"./assets/portraits/wiki-ade-agent-bunny.webp","name":"Ade Agent Bunny"},"c172":{"image":"./assets/portraits/c172.png","name":"Admi"},"c191":{"image":"./assets/portraits/c191.png","name":"Alice"},"wiki-alice-wonderland-bunny":{"image":"./assets/portraits/wiki-alice-wonderland-bunny.webp","name":"Alice Wonderland Bunny"},"c351":{"image":"./assets/portraits/c351.png","name":"Anchor"},"c012":{"image":"./assets/portraits/c012.png","name":"安妮丝"},"c015":{"image":"./assets/portraits/c015.png","name":"安妮丝"},"wiki-anis-star":{"image":"./assets/portraits/wiki-anis-star.webp","name":"Anis Star"},"c121":{"image":"./assets/portraits/c121.png","name":"Anne: Miracle Fairy"},"wiki-arcana":{"image":"./assets/portraits/wiki-arcana.webp","name":"Arcana"},"c432":{"image":"./assets/portraits/c432.png","name":"Aria"},"wiki-bay":{"image":"./assets/portraits/wiki-bay.webp","name":"Bay"},"c060":{"image":"./assets/portraits/c060.png","name":"Belorta"},"c381":{"image":"./assets/portraits/c381.png","name":"Biscuit"},"c270":{"image":"./assets/portraits/c270.png","name":"Blanc"},"c070":{"image":"./assets/portraits/c070.png","name":"Brid"},"c080":{"image":"./assets/portraits/c080.png","name":"Centi"},"wiki-chime":{"image":"./assets/portraits/wiki-chime.webp","name":"Chime"},"wiki-cinderella":{"image":"./assets/portraits/wiki-cinderella.webp","name":"Cinderella"},"wiki-clay":{"image":"./assets/portraits/wiki-clay.webp","name":"Clay"},"c311":{"image":"./assets/portraits/c311.png","name":"Cocoa"},"c110":{"image":"./assets/portraits/c110.png","name":"Crow"},"wiki-crown":{"image":"./assets/portraits/wiki-crown.webp","name":"Crown"},"c040":{"image":"./assets/portraits/c040.png","name":"D"},"c020":{"image":"./assets/portraits/c020.png","name":"Delta"},"c072":{"image":"./assets/portraits/c072.png","name":"Diesel"},"c202":{"image":"./assets/portraits/c202.png","name":"Dolla"},"c233":{"image":"./assets/portraits/c233.png","name":"桃乐丝"},"c101":{"image":"./assets/portraits/c101.png","name":"Drake"},"wiki-ein":{"image":"./assets/portraits/wiki-ein.webp","name":"Ein"},"wiki-elegg":{"image":"./assets/portraits/wiki-elegg.webp","name":"Elegg"},"c090":{"image":"./assets/portraits/c090.png","name":"Emma"},"c241":{"image":"./assets/portraits/c241.png","name":"Epinel"},"c291":{"image":"./assets/portraits/c291.png","name":"Ether"},"c092":{"image":"./assets/portraits/c092.png","name":"Eunhwa"},"c210":{"image":"./assets/portraits/c210.png","name":"Exia"},"wiki-flora":{"image":"./assets/portraits/wiki-flora.webp","name":"Flora"},"c242":{"image":"./assets/portraits/c242.png","name":"Folkwang"},"c142":{"image":"./assets/portraits/c142.png","name":"Frima"},"wiki-grave":{"image":"./assets/portraits/wiki-grave.webp","name":"Grave"},"c180":{"image":"./assets/portraits/c180.png","name":"Guillotine"},"c400":{"image":"./assets/portraits/c400.png","name":"Guilty"},"c230":{"image":"./assets/portraits/c230.png","name":"Harran"},"c352":{"image":"./assets/portraits/c352.png","name":"海伦"},"c353":{"image":"./assets/portraits/c353.png","name":"海伦"},"c802":{"image":"./assets/portraits/c802.png","name":"Himeno"},"wiki-indivilia":{"image":"./assets/portraits/wiki-indivilia.webp","name":"Indivilia"},"c231":{"image":"./assets/portraits/c231.png","name":"Isabel"},"c111":{"image":"./assets/portraits/c111.png","name":"Jackal"},"c150":{"image":"./assets/portraits/c150.png","name":"Julia"},"wiki-k":{"image":"./assets/portraits/wiki-k.webp","name":"K"},"c100":{"image":"./assets/portraits/c100.png","name":"Laplace"},"wiki-leona":{"image":"./assets/portraits/wiki-leona.webp","name":"Leona"},"c082":{"image":"./assets/portraits/c082.png","name":"Liter"},"c190":{"image":"./assets/portraits/c190.png","name":"Ludmilla"},"c181":{"image":"./assets/portraits/c181.png","name":"梅登"},"c800":{"image":"./assets/portraits/c800.png","name":"Makima"},"wiki-mana":{"image":"./assets/portraits/wiki-mana.webp","name":"Mana"},"wiki-marciana":{"image":"./assets/portraits/wiki-marciana.webp","name":"Marciana"},"c013":{"image":"./assets/portraits/c013.png","name":"Marian"},"c130":{"image":"./assets/portraits/c130.png","name":"Mary"},"c132":{"image":"./assets/portraits/c132.png","name":"Mary: Bay Goddess"},"c254":{"image":"./assets/portraits/c254.png","name":"Mass Produced Purple"},"c350":{"image":"./assets/portraits/c350.png","name":"Mast"},"c102":{"image":"./assets/portraits/c102.png","name":"Maxwell"},"c061":{"image":"./assets/portraits/c061.png","name":"Mica"},"c161":{"image":"./assets/portraits/c161.png","name":"Mihara"},"c141":{"image":"./assets/portraits/c141.png","name":"Milk"},"c032":{"image":"./assets/portraits/c032.png","name":"Miranda"},"c260":{"image":"./assets/portraits/c260.png","name":"神罚"},"wiki-moran":{"image":"./assets/portraits/wiki-moran.webp","name":"Moran"},"c120":{"image":"./assets/portraits/c120.png","name":"N102"},"wiki-naga":{"image":"./assets/portraits/wiki-naga.webp","name":"Naga"},"c011":{"image":"./assets/portraits/c011.png","name":"Neon"},"c014":{"image":"./assets/portraits/c014.png","name":"Neon: Blue Ocean"},"c380":{"image":"./assets/portraits/c380.png","name":"Nero"},"c193":{"image":"./assets/portraits/c193.png","name":"Neve"},"c261":{"image":"./assets/portraits/c261.png","name":"Nihilister"},"c232":{"image":"./assets/portraits/c232.png","name":"Noah"},"c271":{"image":"./assets/portraits/c271.png","name":"Noir"},"c430":{"image":"./assets/portraits/c430.png","name":"Noise"},"c212":{"image":"./assets/portraits/c212.png","name":"Novel"},"c131":{"image":"./assets/portraits/c131.png","name":"Pepper"},"wiki-phantom":{"image":"./assets/portraits/wiki-phantom.webp","name":"Phantom"},"c030":{"image":"./assets/portraits/c030.png","name":"Poli"},"c801":{"image":"./assets/portraits/c801.png","name":"Power"},"c170":{"image":"./assets/portraits/c170.png","name":"普丽瓦蒂"},"c302":{"image":"./assets/portraits/c302.png","name":"Product 08"},"c303":{"image":"./assets/portraits/c303.png","name":"Product 12"},"c307":{"image":"./assets/portraits/c307.png","name":"Product 23"},"c402":{"image":"./assets/portraits/c402.png","name":"Quency"},"wiki-quiry":{"image":"./assets/portraits/wiki-quiry.webp","name":"Quiry"},"c010":{"image":"./assets/portraits/c010.png","name":"拉毗"},"c221":{"image":"./assets/portraits/c221.png","name":"Rapunzel"},"wiki-red-hood":{"image":"./assets/portraits/wiki-red-hood.webp","name":"Red Hood"},"c392":{"image":"./assets/portraits/c392.png","name":"Rei"},"c280":{"image":"./assets/portraits/c280.png","name":"罗珊娜"},"wiki-rouge":{"image":"./assets/portraits/wiki-rouge.webp","name":"Rouge"},"c240":{"image":"./assets/portraits/c240.png","name":"Rumani"},"c200":{"image":"./assets/portraits/c200.png","name":"露菲"},"c203":{"image":"./assets/portraits/c203.png","name":"露菲"},"c282":{"image":"./assets/portraits/c282.png","name":"樱花"},"c222":{"image":"./assets/portraits/c222.png","name":"红莲"},"c022":{"image":"./assets/portraits/c022.png","name":"Signal"},"c401":{"image":"./assets/portraits/c401.png","name":"Sin"},"c220":{"image":"./assets/portraits/c220.png","name":"Snow White"},"c312":{"image":"./assets/portraits/c312.png","name":"Soda"},"c300":{"image":"./assets/portraits/c300.png","name":"Soldier EG"},"c301":{"image":"./assets/portraits/c301.png","name":"Soldier FA"},"c306":{"image":"./assets/portraits/c306.png","name":"Soldier OW"},"c071":{"image":"./assets/portraits/c071.png","name":"Soline"},"c140":{"image":"./assets/portraits/c140.png","name":"Sugar"},"wiki-tia":{"image":"./assets/portraits/wiki-tia.webp","name":"Tia"},"wiki-tove":{"image":"./assets/portraits/wiki-tove.webp","name":"Tove"},"wiki-trony":{"image":"./assets/portraits/wiki-trony.webp","name":"Trony"},"c091":{"image":"./assets/portraits/c091.png","name":"Vesti"},"c112":{"image":"./assets/portraits/c112.png","name":"毒蛇"},"c431":{"image":"./assets/portraits/c431.png","name":"Volume"},"c201":{"image":"./assets/portraits/c201.png","name":"Yan"},"c171":{"image":"./assets/portraits/c171.png","name":"Yulha"},"c160":{"image":"./assets/portraits/c160.png","name":"Yuni"},"wiki-zwei":{"image":"./assets/portraits/wiki-zwei.webp","name":"Zwei"},"c304":{"image":"./assets/portraits/c304.png","name":"iDoll Flower"},"c305":{"image":"./assets/portraits/c305.png","name":"iDoll Ocean"},"c308":{"image":"./assets/portraits/c308.png","name":"iDoll Sun"}};
 let searchTimer=null,visibleCardLimit=240,lastCardQuery='';
-// Preserve lazy-loaded character preview nodes across searches and game filters.
+// Limit retained detached DOM/img nodes; each preview is still owned by its model.
 const characterCardCache=new Map();
+const maxCachedCharacterCards=420;
+// This auxiliary selector is visually hidden. Never build thousands of options
+// for the unfiltered "all games" view; search/cards remain complete.
+const maxCharacterSelectOptions=640;
+const characterSearchIndex=new WeakMap();
+function indexedCharacterSearch(c){
+ let value=characterSearchIndex.get(c);
+ if(value===undefined){
+  const info=charInfo(c);
+  value=[c.id,c.name,info.zh,c.gameId,c.costumeName||'',c.characterName||''].join(' ').toLowerCase();
+  characterSearchIndex.set(c,value);
+ }
+ return value;
+}
+function characterOption(c){
+ const info=charInfo(c);
+ const display=c.gameId==='browndust2'?(info.zh||c.name)+' · '+(c.costume||'').replace(/_/g,' ')
+  :(info.zh&&info.zh!==c.name?info.zh+' · ':'')+c.name;
+ return new Option(display,c.id);
+}
+function selectCharacter(c){
+ const element=$('characters');
+ if(!Array.from(element.options).some(opt=>opt.value===c.id))element.add(characterOption(c));
+ element.value=c.id;
+}
+function touchCharacterCard(c,card){
+ characterCardCache.delete(c.id);
+ characterCardCache.set(c.id,card);
+ while(characterCardCache.size>maxCachedCharacterCards){
+  characterCardCache.delete(characterCardCache.keys().next().value);
+ }
+}
 function animationCollection(c){return c.collectionId||c.gameId||'nikke'}
 function matchesAnimationCollection(c,group){return group==='all'||animationCollection(c)===group}
 function charInfo(c){
@@ -69,18 +101,17 @@ function refreshCharacters(){
   const info=charInfo(c);
   return matchesAnimationCollection(c,game)
    &&(!role||c.characterName===role)
-   &&(!query||[c.id,c.name,info.zh,c.gameId,c.costumeName||'',c.characterName||''].join(' ').toLowerCase().includes(query));
+   &&(!query||indexedCharacterSearch(c).includes(query));
  });
  const newKey=game+'|'+query+'|'+role;
  if(newKey!==lastCardQuery){visibleCardLimit=240;lastCardQuery=newKey}
  const previously=$('characters').value;
- $('characters').replaceChildren(new Option('请选择角色…',''),...filtered.map(c=>{
-  const info=charInfo(c);
-  const display=c.gameId==='browndust2'?(info.zh||c.name)+' · '+(c.costume||'').replace(/_/g,' ')
-    :(info.zh&&info.zh!==c.name?info.zh+' · ':'')+c.name;
-  return new Option(display,c.id)
- }));
- if(filtered.some(c=>c.id===previously))$('characters').value=previously;
+ // One hidden select must not materialize 2,000+ options on every search.
+ const optionCharacters=filtered.length>maxCharacterSelectOptions
+  ?filtered.slice(0,maxCharacterSelectOptions):filtered;
+ $('characters').replaceChildren(new Option('请选择角色…',''),...optionCharacters.map(characterOption));
+ const previousRecord=previously&&filtered.find(c=>c.id===previously);
+ if(previousRecord)selectCharacter(previousRecord);
  syncSelectedCharacterDisplay();
  const area=$('characterCards'),visibleCards=[];
  for(const c of filtered.slice(0,visibleCardLimit)){
@@ -88,6 +119,7 @@ function refreshCharacters(){
   if(!card){
    const info=charInfo(c);
    card=document.createElement('button');card.type='button';card.className='character-card';
+   card.dataset.characterId=c.id;
    if(info.image){
     const img=document.createElement('img');img.loading='lazy';img.decoding='async';img.width=150;img.height=130;
     img.src=info.image;img.alt=info.zh||info.name;
@@ -100,9 +132,9 @@ function refreshCharacters(){
    const code=document.createElement('small');
    code.textContent=c.gameId==='browndust2'?(c.costume||'').replace(/_/g,' '):c.id;
    code.title=c.id;card.append(code);
-   card.onclick=()=>{$('characters').value=c.id;syncSelectedCharacterDisplay();$('selectionNote').textContent='已选：'+label.textContent+' · 正在自动播放';refreshCardSelection();rememberSelectedCharacter();playCharacter(c);if(matchMedia('(max-width:850px)').matches)$('player').scrollIntoView({behavior:'smooth',block:'center'});};
-   characterCardCache.set(c.id,card);
+   card.onclick=()=>{selectCharacter(c);syncSelectedCharacterDisplay();$('selectionNote').textContent='已选：'+label.textContent+' · 正在自动播放';refreshCardSelection();rememberSelectedCharacter();playCharacter(c);if(matchMedia('(max-width:850px)').matches)$('player').scrollIntoView({behavior:'smooth',block:'center'});};
   }
+  touchCharacterCard(c,card);
   card.setAttribute('aria-pressed',String(c.id===$('characters').value));
   visibleCards.push(card);
  }
@@ -116,7 +148,13 @@ function refreshCharacters(){
  area.replaceChildren(...visibleCards);
  $('selectionNote').textContent=filtered.length?(game==='browndust2'?'当前 '+filtered.length+' 套服装 · 点击直接播放':'共 '+filtered.length+' 套动画 · 点击直接播放'):'当前筛选没有匹配的角色。';
 }
-function refreshCardSelection(){syncSelectedCharacterDisplay();const cards=$('characterCards').querySelectorAll('button.character-card');const ids=allCharacters.filter(c=>{const game=$('gameFilter').value,q=$('characterSearch').value.toLowerCase().trim(),info=charInfo(c);return matchesAnimationCollection(c,game)&&(!($('gameFilter').value==='browndust2'&&$('bd2CharacterFilter').value)||c.characterName===$('bd2CharacterFilter').value)&&(!q||[c.id,c.name,info.zh,c.gameId,c.costumeName||'',c.characterName||''].join(' ').toLowerCase().includes(q))}).slice(0,visibleCardLimit);cards.forEach((b,i)=>b.setAttribute('aria-pressed',String(ids[i]?.id===$('characters').value)))}
+function refreshCardSelection(){
+ syncSelectedCharacterDisplay();
+ const selectedId=$('characters').value;
+ $('characterCards').querySelectorAll('button.character-card').forEach(card=>{
+  card.setAttribute('aria-pressed',String(card.dataset.characterId===selectedId));
+ });
+}
 // Keep a refreshable deep link without re-rendering the gallery or navigating.
 function rememberSelectedCharacter(){
  const url=new URL(location.href);

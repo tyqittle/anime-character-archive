@@ -55,7 +55,7 @@ async function fetchAnimationManifest(url){
   if(hit){
    $('gameFilter').value=animationCollection(hit);
    refreshCharacters();
-   $('characters').value=requested;
+   selectCharacter(hit);
    refreshCardSelection();
   }
   status('已载入 '+allCharacters.length+' 条动画索引，覆盖 '+Object.keys(accepted).length+

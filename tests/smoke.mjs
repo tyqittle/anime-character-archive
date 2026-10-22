@@ -421,3 +421,15 @@ assert.ok(illustCatalog.characters.every(c=>c.gameId==='arknights'&&c.collection
 assert.ok(spineHTML.includes('value="arknights-battle"')&&spineHTML.includes('value="arknights"'));
 assert.ok(read('assets/js/spine/catalog.js').includes('function animationCollection(c)'));
 assert.ok(read('assets/js/spine/bootstrap.js').includes('arknightsIllustCatalogUrl'));
+
+
+// Selecting a preview may only update visible cards, not rescan all model records.
+const animationListModule=read('assets/js/spine/catalog.js');
+assert.ok(animationListModule.includes('const maxCachedCharacterCards=420')&&
+ animationListModule.includes('const maxCharacterSelectOptions=640'),
+ 'Animation card cache/hidden select must have explicit resource budgets');
+assert.ok(animationListModule.includes('card.dataset.characterId===selectedId')&&
+ !animationListModule.slice(animationListModule.indexOf('function refreshCardSelection(){'),
+  animationListModule.indexOf('// Keep a refreshable deep link')).includes('allCharacters.filter'),
+ 'Selection highlights should not rescan all games');
+assert.ok(animationListModule.includes('indexedCharacterSearch(c)'),'Search tokens must be cached per model');
