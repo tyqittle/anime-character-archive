@@ -29,12 +29,12 @@ jobs:
         with:
           node-version: '22'
       - name: Install browser testing dependency
-        run: npm install --no-save --no-package-lock playwright-core@1.56.1
+        run: npm install --no-save --no-package-lock playwright-core@1.56.1 pngjs@7.0.0
       - name: Start local archive
         run: |
           python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/azurlane-server.log 2>&1 &
           sleep 2
-      - name: Verify three real models, native interaction audio and mute
+      - name: Verify six old/new Cubism models animate, and native interaction audio and mute
         run: node scripts/test_azurlane_live2d_browser.mjs
       - name: Upload results for investigation
         if: always()

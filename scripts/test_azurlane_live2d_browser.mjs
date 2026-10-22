@@ -3,10 +3,13 @@
 import {chromium} from 'playwright-core';
 import {createRequire} from 'node:module';
 import fs from 'node:fs';
+import {PNG} from 'pngjs';
+import {compareRenderedFrames} from './animation_frame_check.mjs';
 
 const browserPath=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'].find(fs.existsSync);
 if(!browserPath)throw Error('Chromium is not installed');
-const cases=['al-bulaimodun_2','al-aierdeliqi_4','al-banerwei_3'];
+const audioCases=['al-bulaimodun_2','al-aierdeliqi_4','al-banerwei_3'];
+const cases=[...audioCases,'al-z13_2','al-beilaosenlin_2','al-aersasi_3'];
 const browser=await chromium.launch({headless:true,executablePath:browserPath,args:['--no-sandbox','--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const results=[];
 try{
@@ -48,6 +51,15 @@ try{
   const performanceSettings=await frame.locator('#live2dCanvas').evaluate(()=>({fpsCap:app?.ticker?.maxFPS}));
   if(![30,60].includes(performanceSettings.fpsCap))
     throw Error('Live2D FPS limiter missing: '+JSON.stringify(performanceSettings));
+  const nativeCore=await frame.locator('#live2dCanvas').evaluate(()=>Live2DCubismCore.Version.csmGetLatestMocVersion());
+  if(nativeCore<5)throw Error('Cubism core cannot decode version 5 MOC files');
+  const first=PNG.sync.read(await frame.locator('#live2dCanvas').screenshot());
+  await page.waitForTimeout(1400);
+  const second=PNG.sync.read(await frame.locator('#live2dCanvas').screenshot());
+  const pixels=compareRenderedFrames(first,second);
+  if(pixels.visible<300||pixels.moving<60)throw Error('Model is blank or not animated: '+id+' '+JSON.stringify(pixels));
+  console.log('PASS_CUBISM5_ANIMATION',JSON.stringify({id,...pixels}));
+  if(audioCases.includes(id)){
   // Regression: enabling via the test button must also enable iframe interaction.
   await page.locator('#voiceTest').waitFor({state:'visible'});
   await page.waitForFunction(()=>!document.querySelector('#voiceTest')?.disabled,null,{timeout:20000});
@@ -67,6 +79,7 @@ try{
   await frame.locator('#live2dCanvas').click({position:{x:25,y:25}});
   await page.waitForTimeout(150);
   if(await child.evaluate(()=>window.__voiceStarted.length)!==stopped)throw Error('Muted interaction played audio: '+id);
+  }
   const actions=await page.locator('#animationPicker option').count();
   if(actions<2)throw Error('Cubism motions were not registered: '+id);
   await page.locator('#animationPicker').selectOption({index:Math.min(1,actions-1)});
