@@ -60,12 +60,39 @@
   const bytes=new Uint8Array(await response.arrayBuffer());
   return decodeBinaryVersion(bytes);
  }
- button.title='妮姬／棕色尘埃2：检查真实 Spine 4.1 骨骼并一键放到原生桌面';
+ // Catalog and visible character selection share a single source of truth.
+ // Do not infer the game from the hidden <select> alone: cards may inject
+ // an option for a role beyond the selector's first 640 entries.
+ function currentSelection(){
+  if(typeof chosen==='function'){
+   const model=chosen();
+   if(model)return model;
+  }
+  const value=document.getElementById('characters')?.value||'';
+  if(value&&typeof allCharacters!=='undefined')
+   return allCharacters.find(model=>model.id===value)||null;
+  const active=document.querySelector('#characterCards .character-card[aria-pressed="true"]');
+  const cardId=active?.dataset?.characterId||'';
+  if(cardId&&typeof allCharacters!=='undefined')
+   return allCharacters.find(model=>model.id===cardId)||null;
+  return null;
+ }
+ button.title='原生桌面客户端支持妮姬和棕色尘埃2的 Spine 4.1 模型';
  button.addEventListener('click',async()=>{
   if(pending)return;
-  const id=document.getElementById('characters')?.value||'';
-  const game=nikkeId.test(id)?'nikke':bd2Id.test(id)?'browndust2':'';
-  if(!game){alert('原生桌面一键导入目前支持妮姬和棕色尘埃2的 Spine 4.1 角色，其他游戏运行时仍在接入。');return}
+  const selected=currentSelection();
+  if(!selected){
+   alert('请先从当前游戏的角色列表选择一个动态立绘，再点击“放到桌面”。');
+   return;
+  }
+  const {id,gameId:game}=selected;
+  if(!((game==='nikke'&&nikkeId.test(id))||
+       (game==='browndust2'&&bd2Id.test(id)))){
+   alert('当前选择：'+(selected.name||id)+'。\\n'+
+     '桌面原生渲染器目前只支持妮姬和棕色尘埃2的 Spine 4.1 资源。'+
+     '这个游戏的原生运行时尚未接入，不能直接将网页画面当作桌面角色。');
+   return;
+  }
   pending=true;button.disabled=true;
   const text=button.textContent;button.textContent='校验模型中…';
   try{
