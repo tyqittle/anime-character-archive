@@ -84,7 +84,7 @@ test('transparent region passes through; only matching page can re-enable pointe
  handler({sender:w.webContents},false);
  assert.equal(w.ignored,true);
  assert.equal(w.opacity,0);
- assert.deepEqual(JSON.parse(JSON.stringify(w.shape)),[{x:0,y:0,width:1,height:1}]);
+ assert.deepEqual(JSON.parse(JSON.stringify(w.shape)),[]);
 });
 
 test('desktop mode resets document root before stylesheets and keeps transparent WebGL buffers',()=>{
@@ -102,6 +102,6 @@ test('desktop keeps white fallback invisible before first verified native silhou
  const w=h.windows[0];
  assert.equal(w.options.opacity,0);
  assert.equal(w.opacity,0);
- assert.equal(w.shape.length,1);
+ assert.equal(w.shape.length,0);
  assert.ok(w.options.webPreferences.preload.endsWith('preload.cjs'));
 });
