@@ -44,7 +44,7 @@
     <div id="gallery" class="gallery" aria-live="polite"><div class="blank">正在载入角色索引…</div></div>
     <div class="more-row"><button id="more" class="btn" data-action="more" hidden>加载更多角色 ↓</button></div>
   </section>
-  <footer class="footer">次元角色档案馆 · Anime Character Archive · 多游戏角色图鉴。完整项目见 <a href="https://github.com/tyqittle/anime-character-archive" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">GitHub 仓库</a>。各角色的原始素材来源请查看对应条目；本站保存静态立绘与缩略图，部分 Spine 动态资源依赖第三方来源。收藏仅保存在本浏览器。人物美术版权及使用许可需另行核实。</footer>
+  <footer class="footer"><nav class="archive-friendlinks" data-friend-links aria-label="游戏动态立绘友情链接"></nav>次元角色档案馆 · Anime Character Archive · 多游戏角色图鉴。完整项目见 <a href="https://github.com/tyqittle/anime-character-archive" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">GitHub 仓库</a>。各角色的原始素材来源请查看对应条目；本站保存静态立绘与缩略图，部分 Spine 动态资源依赖第三方来源。收藏仅保存在本浏览器。人物美术版权及使用许可需另行核实。</footer>
 </main>
 </div>
 <dialog id="viewer" aria-label="角色大图浏览"><div class="view-head"><h2 id="viewTitle">查看角色</h2><button class="btn sm" data-action="close">✕ 关闭</button></div><div class="view-body"><div class="view-picture" id="viewPicture"><img id="viewImg" alt=""><div class="view-loading" id="viewLoading" role="status" aria-live="polite"><span class="view-spinner" aria-hidden="true"></span><span>正在加载完整立绘…</span></div><div class="error-note" role="alert"><span>完整立绘加载失败，请检查网络或查看来源。</span><button type="button" class="btn sm" data-action="retry-view">重新加载原图</button></div></div><div class="view-meta" id="viewMeta"></div></div></dialog>
@@ -53,4 +53,5 @@
 <script defer src="./assets/js/gallery/viewer.js?v=20261021-modules-v1"></script>
 <script defer src="./assets/js/gallery/events.js?v=20261021-modules-v1"></script>
 <script defer src="./assets/js/gallery/bootstrap.js?v=20261021-modules-v1"></script>
+<script defer src="./assets/js/shared/friend-links.js?v=20261022-v1"></script>
 </body></html>
