@@ -56,7 +56,7 @@ async function load(name,id,modelUrl){
    if(initial.startsWith('@motion:'))model.motion('',Number(initial.slice(8)),PIXI.live2d.MotionPriority.FORCE);
    else model.motion(initial,0,PIXI.live2d.MotionPriority.FORCE);
   }
-  model.on('hit',areas=>{if(Array.isArray(areas)&&areas.length){const a=areas[0];if(actions.includes(a))motion(a)}});
+  model.on('hit',areas=>{if(Array.isArray(areas)&&areas.length){const a=areas[0];notify('interaction',{area:a});if(actions.includes(a))motion(a)}});
   const p=(evt)=>{if(!model)return;const pt=evt?.data?.global;if(!pt)return;model.dragging=true;model.dragX=pt.x-model.x;model.dragY=pt.y-model.y};
   model.on('pointerdown',p);
   model.on('pointermove',evt=>{if(model?.dragging&&evt?.data?.global){model.x=evt.data.global.x-model.dragX;model.y=evt.data.global.y-model.dragY}});
