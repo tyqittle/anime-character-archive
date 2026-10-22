@@ -15,17 +15,27 @@ document.getElementById('live2dCanvas').addEventListener('pointerdown',e=>{if(e.
 document.addEventListener('pointermove',e=>{if(drag&&model){offsetX+=e.clientX-last.x;offsetY+=e.clientY-last.y;last={x:e.clientX,y:e.clientY};model.x+=e.movementX;model.y+=e.movementY}});
 document.addEventListener('pointerup',()=>drag=false);
 function graphicsReport(){
+ const canvas=document.getElementById('live2dCanvas'),box=canvas.getBoundingClientRect();
+ const quality={backingWidth:canvas.width,backingHeight:canvas.height,
+  displayWidth:Math.round(box.width),displayHeight:Math.round(box.height),
+  pixelRatio:box.width?Number((canvas.width/box.width).toFixed(2)):1,
+  deviceRatio:Number(window.devicePixelRatio)||1};
  const gl=app?.renderer?.gl;
- if(!gl)return {backend:'WebGL 状态未知',renderer:'',software:false};
+ if(!gl)return {backend:'WebGL 状态未知',renderer:'',software:false,quality};
  try{
   const info=gl.getExtension('WEBGL_debug_renderer_info');
   const renderer=String(gl.getParameter(info?.UNMASKED_RENDERER_WEBGL||gl.RENDERER)||'').slice(0,180);
-  return {backend:'WebGL',renderer,software:/swiftshader|llvmpipe|softpipe|software raster|microsoft basic render/i.test(renderer)};
- }catch(e){return {backend:'WebGL',renderer:'',software:false}}
+  return {backend:'WebGL',renderer,software:/swiftshader|llvmpipe|softpipe|software raster|microsoft basic render/i.test(renderer),quality};
+ }catch(e){return {backend:'WebGL',renderer:'',software:false,quality}}
 }
 try{
  if(!window.PIXI?.Application||!PIXI.live2d?.Live2DModel)throw Error('第三方 PixiJS/Cubism 播放库未能初始化，请检查网络或扩展拦截');
- app=new PIXI.Application({view:document.getElementById('live2dCanvas'),autoStart:true,resizeTo:window,backgroundAlpha:0,antialias:false,resolution:1,powerPreference:'high-performance'});
+ // Real pixels, not a 1x bitmap stretched across a HiDPI panel.
+// Cap at 2x to avoid overly expensive drawing buffers on ultra-high-DPI screens.
+const renderResolution=Math.min(2,Math.max(1,Number(window.devicePixelRatio)||1));
+app=new PIXI.Application({view:document.getElementById('live2dCanvas'),autoStart:true,
+ resizeTo:window,backgroundAlpha:0,antialias:false,autoDensity:true,
+ resolution:renderResolution,powerPreference:'high-performance'});
  // Reduce WebGL fill-rate and avoid struggling to hit 60 fps on large models.
  if(app.ticker){app.ticker.maxFPS=targetFPS;app.ticker.stop()}
  if(PIXI.Ticker?.shared)PIXI.Ticker.shared.maxFPS=targetFPS;

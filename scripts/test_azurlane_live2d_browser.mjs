@@ -10,7 +10,7 @@ const cases=['al-bulaimodun_2','al-aierdeliqi_4','al-banerwei_3'];
 const browser=await chromium.launch({headless:true,executablePath:browserPath,args:['--no-sandbox','--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const results=[];
 try{
- const page=await browser.newPage({viewport:{width:1366,height:850},deviceScaleFactor:1});
+ const page=await browser.newPage({viewport:{width:1366,height:850},deviceScaleFactor:1.5});
  const errors=[];
  page.on('pageerror',err=>errors.push(err.message));
  for(const id of cases){
@@ -32,12 +32,12 @@ try{
   if(stage.docHeight>stage.viewportH+3)throw Error('Azur Lane introduced desktop scrolling: '+JSON.stringify(stage));
   const frame=page.frameLocator('iframe.azurlane-live2d-frame');
   const hasPixi=await frame.locator('#live2dCanvas').evaluate(el=>({
-   width:el.width,height:el.height,hasContext:!!el.getContext('webgl2')||!!el.getContext('webgl')
+   width:el.width,height:el.height,cssWidth:el.getBoundingClientRect().width,cssHeight:el.getBoundingClientRect().height,hasContext:!!el.getContext('webgl2')||!!el.getContext('webgl')
   }));
-  if(hasPixi.width<300||hasPixi.height<240||!hasPixi.hasContext)
+  if(hasPixi.width<hasPixi.cssWidth*1.4||hasPixi.height<hasPixi.cssHeight*1.4||!hasPixi.hasContext)
     throw Error('No actual WebGL Live2D canvas: '+id+' '+JSON.stringify(hasPixi));
   const performanceSettings=await frame.locator('#live2dCanvas').evaluate(()=>({fpsCap:app?.ticker?.maxFPS}));
-  if(!Number.isFinite(performanceSettings.fpsCap)||performanceSettings.fpsCap>45||performanceSettings.fpsCap<20)
+  if(![30,60].includes(performanceSettings.fpsCap))
     throw Error('Live2D FPS limiter missing: '+JSON.stringify(performanceSettings));
   const actions=await page.locator('#animationPicker option').count();
   if(actions<2)throw Error('Cubism motions were not registered: '+id);

@@ -11,10 +11,19 @@ function rendererFromGL(gl){
   return {backend:'WebGL',renderer,software:/swiftshader|llvmpipe|softpipe|software raster|microsoft basic render/i.test(renderer)};
  }catch(e){return {backend:'WebGL',renderer:'浏览器限制了显卡名称读取',software:false}}
 }
+function canvasRenderQuality(canvas){
+ if(!canvas)return null;
+ const rect=canvas.getBoundingClientRect();
+ const shownWidth=rect.width||canvas.clientWidth||1,shownHeight=rect.height||canvas.clientHeight||1;
+ return {backingWidth:canvas.width,backingHeight:canvas.height,
+  displayWidth:Math.round(shownWidth),displayHeight:Math.round(shownHeight),
+  pixelRatio:Number((canvas.width/shownWidth).toFixed(2)),
+  deviceRatio:Number(window.devicePixelRatio)||1};
+}
 function spineGraphicsStatus(p){
  let gl=p?.context?.gl||p?.context?.context||p?.sceneRenderer?.context?.gl;
  if(!gl&&p?.canvas){try{gl=p.canvas.getContext('webgl2')||p.canvas.getContext('webgl')}catch(e){}}
- return rendererFromGL(gl);
+ return {...rendererFromGL(gl),quality:canvasRenderQuality(p?.canvas)};
 }
 function updateGPUStatus(info, fps){
  if(info)rendererStatus=info;
@@ -25,7 +34,11 @@ function updateGPUStatus(info, fps){
  el.textContent=(software?'软件渲染 · 请检查显卡加速':rendererStatus.backend)+suffix;
  el.classList.toggle('gpu-software',software);
  const note='是否真正调用 GPU，请以 Chrome 地址栏 chrome://gpu 中 WebGL / WebGL2 的 Hardware accelerated 为准。';
- if(details)details.textContent=(rendererStatus.renderer?rendererStatus.renderer+'。':'')+note;
+ const q=(player?.canvas?canvasRenderQuality(player.canvas):rendererStatus.quality)||null;
+ const display=q&&q.backingWidth>0
+  ?'画布 '+q.backingWidth+'×'+q.backingHeight+' 渲染像素，显示约 '+q.displayWidth+'×'+q.displayHeight+' CSS 像素（有效像素比 '+q.pixelRatio+'，屏幕 DPR '+q.deviceRatio+'）。'
+  :'尚未获得画布分辨率。';
+ if(details)details.textContent=(rendererStatus.renderer?rendererStatus.renderer+'。':'')+display+note;
  el.title=(rendererStatus.renderer||'未能从浏览器读取 GPU 名称')+' · '+note;
 }
 function recordSpineFrame(instance){

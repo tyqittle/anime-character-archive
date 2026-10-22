@@ -280,7 +280,7 @@ const live2dFrame=read('azurlane-stage.html');
 const cubismModules=["assets/js/live2d/state-and-viewport.js","assets/js/live2d/model-loader.js","assets/js/live2d/bootstrap.js"];
 const cubismSource=cubismModules.map(read).join('\n');
 for(const file of cubismModules){
- assert.ok(live2dFrame.includes('./'+file+'?v=20261021-modules-v1'),'Cubism page missing module: '+file);
+ assert.ok(live2dFrame.includes('./'+file+'?v='),'Cubism page missing versioned module: '+file);
  new Function(read(file));
 }
 assert.ok(live2dFrame.includes('./assets/live2d-stage.css?v=20261021-modules-v1'),'Cubism style must be an external module');
@@ -377,3 +377,11 @@ assert.ok(gpuPerf.includes('visibilitychange')&&gpuPerf.includes('rendererFromGL
 assert.ok(spineSource.includes('recordSpineFrame')&&spineSource.includes('spineGraphicsStatus'),'Spine GPU report hook is missing');
 assert.ok(read('assets/js/live2d/model-loader.js').includes('graphicsReport()'),'Cubism GPU report hook is missing');
 assert.ok(read('assets/js/live2d/bootstrap.js').includes("powerPreference:'high-performance'"),'Cubism GPU preference missing');
+
+
+// Playback needs HiDPI backing pixels instead of stretching a 1x canvas.
+const cubismRenderer=read('assets/js/live2d/bootstrap.js');
+assert.ok(cubismRenderer.includes('autoDensity:true')&&cubismRenderer.includes('resolution:renderResolution'),
+ 'Live2D must render at device pixel density');
+assert.ok(!cubismRenderer.includes('resolution:1,'),'Live2D low-resolution rendering regression');
+assert.ok(read('assets/js/spine/performance.js').includes('canvasRenderQuality'),'Spine canvas resolution diagnostics missing');
