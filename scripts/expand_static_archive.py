@@ -116,15 +116,11 @@ def import_one(entry):
             if attempt==0: time.sleep(.2)
     return entry,None,None,error
 
-def main():
-    catalog_path=ROOT/'data/characters.json'
-    catalog=json.loads(catalog_path.read_text('utf-8'))
-    plan=json.loads((ROOT/'data/static-source-plan.json').read_text('utf-8'))['entries']
-    wiki,discovery_errors=discover_wiki()
-    plan.extend(wiki)
+def select_pending(catalog,plan):
     by_id={row['id']:row for row in catalog['characters']}
     by_source={canonical(row.get('originalImage','')):row for row in catalog['characters']}
     by_name={(row['gameId'],row.get('zh') or row.get('characterKey')) for row in catalog['characters']}
+    known_keys={(row['gameId'],row['characterKey'].casefold()):row['characterKey'] for row in catalog['characters']}
     pending,seen_ids,seen_sources=[],set(),set()
     for entry in plan:
         entry=dict(entry)
@@ -136,12 +132,25 @@ def main():
         key=canonical(url)
         if entry['id'] in seen_ids or key in seen_sources: continue
         seen_ids.add(entry['id']);seen_sources.add(key);pending.append(entry)
+    return pending
+
+def main():
+    catalog_path=ROOT/'data/characters.json'
+    catalog=json.loads(catalog_path.read_text('utf-8'))
+    plan=json.loads((ROOT/'data/static-source-plan.json').read_text('utf-8'))['entries']
+    wiki,discovery_errors=discover_wiki()
+    plan.extend(wiki)
+    pending=select_pending(catalog,plan)
+    by_id={row['id']:row for row in catalog['characters']}
     # Process small source catalogs first so one large game does not consume the budget.
     totals={g:sum(e['gameId']==g for e in pending) for g in GAMES}
     pending.sort(key=lambda e:(totals[e['gameId']],e['id']))
     output=ROOT/'assets/portraits'
     output.mkdir(parents=True,exist_ok=True)
     max_bytes=int(os.environ.get('STATIC_IMPORT_BYTE_BUDGET','314572800'))
+    assets_used=sum(p.stat().st_size for p in (ROOT/'assets').rglob('*') if p.is_file())
+    archive_limit=int(os.environ.get('STATIC_ARCHIVE_BYTE_LIMIT',str(920*1024*1024)))
+    thumbnail_reserve=0
     imported,failed,deferred=[],[],[]
     written=0
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
@@ -152,7 +161,7 @@ def main():
                 failed.append({'id':entry['id'],'gameId':entry['gameId'],'error':error})
                 print('STATIC_SKIP',entry['id'],error[:180],flush=True)
                 continue
-            if written+len(payload)>max_bytes:
+            if written+len(payload)>max_bytes or assets_used+written+thumbnail_reserve+len(payload)+90000>archive_limit:
                 deferred.append(entry['id']);continue
             target=output/(entry['id']+'.webp')
             target.write_bytes(payload)
@@ -165,14 +174,14 @@ def main():
                     'imageWidth':size[0],'imageHeight':size[1],
                     'license':'游戏美术版权归原权利人；原始来源已保留'}
             catalog['characters'].append(record);by_id[record['id']]=record
-            written+=len(payload);imported.append(record['id'])
+            written+=len(payload);thumbnail_reserve+=90000;imported.append(record['id'])
             print('STATIC_ADDED',record['gameId'],record['id'],len(payload),flush=True)
     catalog['characters'].sort(key=lambda c:(c['gameId'],c['characterKey'],c['id']))
     catalog['counts']={'total':len(catalog['characters']),'full':len(catalog['characters'])}
     catalog_path.write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n','utf-8')
     coverage={'scope':'Recorded source snapshots, not complete released game rosters',
               'sourcesPlanned':len(plan),'added':len(imported),'writtenBytes':written,
-              'failed':failed,'deferred':deferred,'discoveryErrors':discovery_errors,'games':{}}
+              'archiveByteLimit':archive_limit,'failed':failed,'deferred':deferred,'discoveryErrors':discovery_errors,'games':{}}
     for game in GAMES:
         coverage['games'][game]={'registered':sum(c['gameId']==game for c in catalog['characters']),
                                 'availableInSelectedSources':sum(e['gameId']==game for e in plan),

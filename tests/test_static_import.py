@@ -1,5 +1,7 @@
 """Source discovery must normalize wiki filenames without importing UI icons."""
 import io
+import json
+import tempfile
 import sys
 import unittest
 from pathlib import Path
@@ -37,6 +39,26 @@ class StaticImportTest(unittest.TestCase):
         with Image.open(io.BytesIO(data)) as converted:
             self.assertEqual(size,(448,1048))
             self.assertEqual(converted.getchannel('A').getbbox(),(24,24,424,1024))
+    def test_pending_source_dedup_preserves_existing_character_group(self):
+        catalog={'characters':[{'id':'old','gameId':'arknights','characterKey':'Amiya','originalImage':'https://raw.githubusercontent.com/a/b/main/old.png'}]}
+        entry={'id':'new','gameId':'arknights','characterKey':'amiya','name':'amiya','repo':'a/b','ref':'commit','path':'new.png'}
+        duplicate={**entry,'id':'different-id'}
+        pending=archive.select_pending(catalog,[entry,duplicate,{**entry,'id':'other','path':'old.png'}])
+        self.assertEqual(len(pending),1)
+        self.assertEqual(pending[0]['characterKey'],'Amiya')
+    def test_main_writes_only_successfully_imported_art(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);(root/'data').mkdir()
+            (root/'data/characters.json').write_text(json.dumps({'characters':[]}))
+            entry={'id':'genshin-demo','gameId':'genshin','characterKey':'Demo','name':'Demo','repo':'a/b','ref':'abc','path':'art.png'}
+            (root/'data/static-source-plan.json').write_text(json.dumps({'entries':[entry]}))
+            payload=b'verified-payload'
+            with patch.object(archive,'ROOT',root),patch.object(archive,'discover_wiki',return_value=([],[])),patch.object(archive,'import_one',side_effect=lambda e:(e,payload,(800,1200),None)):
+                archive.main()
+            catalog=json.loads((root/'data/characters.json').read_text('utf-8'))
+            self.assertEqual(catalog['counts']['total'],1)
+            self.assertEqual((root/'assets/portraits/genshin-demo.webp').read_bytes(),payload)
+            self.assertEqual(json.loads((root/'data/static-coverage.json').read_text('utf-8'))['added'],1)
     def test_reject_small_portrait(self):
         raw=io.BytesIO();Image.new('RGB',(128,128)).save(raw,'PNG')
         with self.assertRaises(ValueError):archive.convert(raw.getvalue())
