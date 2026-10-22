@@ -38,7 +38,7 @@ public sealed partial class App
     {
         if (arg == null) return null;
         Match m = Regex.Match(arg,
-            @"^animecharacter://open/?\?id=(c[0-9]{3,6})$",
+            @"^animecharacter://open/?\?id=(c[0-9]{3,6}(?:_[0-9]{2})?)$",
             RegexOptions.CultureInvariant | RegexOptions.IgnoreCase);
         return m.Success ? m.Groups[1].Value.ToLowerInvariant() : null;
     }
@@ -123,7 +123,7 @@ public sealed partial class App
             var request = JsonSerializer.Deserialize<ArchiveShowRequest>(
                 await File.ReadAllTextAsync(ArchiveRequestPath));
             string id = request?.ResourceName ?? "";
-            if (!Regex.IsMatch(id, @"^c[0-9]{3,6}$",
+            if (!Regex.IsMatch(id, @"^c[0-9]{3,6}(?:_[0-9]{2})?$",
                     RegexOptions.CultureInvariant))
             {
                 AppLogger.Write(nameof(App), "archive-invalid-character-id");
@@ -181,7 +181,7 @@ public sealed partial class App
 
         string modelUrl = found.GetProperty("base").GetString() ?? "";
         if (!modelUrl.StartsWith(TrustedNikke + id + "/", StringComparison.Ordinal) ||
-            !Regex.IsMatch(modelUrl, @"/c[0-9]{3,6}_[0-9]{2}$",
+            !Regex.IsMatch(modelUrl, @"/c[0-9]{3,6}(?:_[0-9]{2})?_[0-9]{2}$",
                 RegexOptions.CultureInvariant))
             throw new InvalidDataException("Asset URL is not a trusted Nikke-db resource");
 
@@ -189,6 +189,8 @@ public sealed partial class App
         if (!stem.StartsWith(id + "_", StringComparison.Ordinal))
             throw new InvalidDataException("ID mismatch in asset URL");
         string skin = stem[(id.Length + 1)..];
+        if (!Regex.IsMatch(skin, @"^[0-9]{2}$", RegexOptions.CultureInvariant))
+            throw new InvalidDataException("Skin identifier is not a supported numeric code");
 
         string name = found.GetProperty("name").GetString() ?? id;
         var invalid = Path.GetInvalidFileNameChars();
