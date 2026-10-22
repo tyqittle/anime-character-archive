@@ -316,7 +316,7 @@ assert.ok(!versionRegexp.test('unrecognized'),'Spine version regex accepted inva
 const galleryHTML=read('characters.html'),spineHTML=read('spine.html');
 for(const [html,modules] of [[galleryHTML,galleryModules],[spineHTML,spineModules]]){
  const loaded=[...html.matchAll(/<script defer src="\.\/([^"?]+)\?v=[^"]+"><\/script>/g)].map(x=>x[1]);
- assert.deepEqual(loaded,[...modules,'assets/js/shared/friend-links.js'],'Browser modules and common friend links must preserve loading order');
+ assert.deepEqual(loaded,[...modules.slice(0,3),...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/performance.js']:[]),...modules.slice(3),'assets/js/shared/friend-links.js'],'Browser modules and common friend links must preserve loading order');
  assert.ok(!/<script>\s*['"]use strict/.test(html),'Page-level application logic must live in feature modules');
 }
 for(const item of ['assets/gallery-base.css','assets/gallery-theme.css','assets/spine-base.css','assets/spine-theme.css']){
@@ -367,3 +367,13 @@ for(const html of [galleryHTML,spineHTML]){
  assert.ok(html.includes('assets/js/shared/friend-links.js?v='),'Shared friend-link renderer is not loaded');
 }
 assert.ok(archiveShellCSS.includes('.archive-friendlinks--stage'),'Theater friends footer is not styled');
+
+
+// WebGL GPU diagnostics and background-work throttling must be available to both engines.
+assert.ok(spineHTML.includes('id="gpuStatus"')&&spineHTML.includes('assets/js/spine/performance.js?v='),'GPU status panel missing');
+const gpuPerf=read('assets/js/spine/performance.js');
+new Function(gpuPerf);
+assert.ok(gpuPerf.includes('visibilitychange')&&gpuPerf.includes('rendererFromGL'),'GPU and background-state diagnostics missing');
+assert.ok(spineSource.includes('recordSpineFrame')&&spineSource.includes('spineGraphicsStatus'),'Spine GPU report hook is missing');
+assert.ok(read('assets/js/live2d/model-loader.js').includes('graphicsReport()'),'Cubism GPU report hook is missing');
+assert.ok(read('assets/js/live2d/bootstrap.js').includes("powerPreference:'high-performance'"),'Cubism GPU preference missing');

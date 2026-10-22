@@ -3,10 +3,21 @@ function setViewerToolsEnabled(ready){
  for(const id of ['zoomOut','zoomIn','resetView'])$(id).disabled=!ready;
  if(!ready){$('animationPicker').disabled=true;$('animationPicker').replaceChildren(new Option('选择角色后可切换动作',''))}
 }
+let transformUpdateQueued=false;
 function syncViewTransform(){
- const canvas=player?.canvas;
- if(canvas){canvas.style.transformOrigin='center center';canvas.style.transform='translate('+viewOffsetX+'px,'+viewOffsetY+'px) scale('+viewZoom+')'}
- $('zoomValue').textContent=Math.round(viewZoom*100)+'%';
+ // Coalesce high-frequency pointer and wheel events into one style update/frame.
+ if(transformUpdateQueued)return;
+ transformUpdateQueued=true;
+ requestAnimationFrame(()=>{
+  transformUpdateQueued=false;
+  const canvas=player?.canvas;
+  if(canvas){
+   canvas.style.transformOrigin='center center';
+   canvas.style.transform=(viewZoom===1&&viewOffsetX===0&&viewOffsetY===0)
+    ? 'none' : 'translate('+viewOffsetX+'px,'+viewOffsetY+'px) scale('+viewZoom+')';
+  }
+  $('zoomValue').textContent=Math.round(viewZoom*100)+'%';
+ });
 }
 function sendAzurLane(kind,extra={}){if(azurlaneFrame?.contentWindow&&azurlaneReady)azurlaneFrame.contentWindow.postMessage({channel:L2D_CHANNEL,kind,...extra},location.origin)}
 function resetViewerTransform(){viewZoom=1;viewOffsetX=0;viewOffsetY=0;if(azurlaneFrame)sendAzurLane('reset');syncViewTransform()}

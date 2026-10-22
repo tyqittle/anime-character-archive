@@ -63,6 +63,7 @@ window.addEventListener('message',event=>{
  if(data.kind==='playing'){
   $('player').querySelector('.azurlane-loading-cover')?.remove();
   azurlanePlayingId=data.id;
+  updateGPUStatus(data.graphics||{backend:'WebGL 状态未知',renderer:'',software:false});
   setViewerToolsEnabled(true);
   const actions=Array.isArray(data.motions)?data.motions.filter(x=>typeof x==='string'):[];
   $('animationPicker').replaceChildren(...actions.map(x=>new Option(data.motionLabels?.[x]||x,x)));
@@ -71,6 +72,7 @@ window.addEventListener('message',event=>{
   viewZoom=1;$('zoomValue').textContent='100%';
   status('正在播放：'+azurlanePending.name+' · Live2D'+(data.selectedMotion?' · '+(data.motionLabels?.[data.selectedMotion]||data.selectedMotion):'')+'（'+actions.length+' 组动作）'+(Number.isFinite(data.loadMs)&&data.loadMs>0?' · 加载 '+(data.loadMs/1000).toFixed(1)+' 秒':''));
  }
+ if(data.kind==='performance'&&Number.isFinite(data.fps))updateGPUStatus(null,data.fps);
  if(data.kind==='zoom'&&Number.isFinite(data.zoom)){
   viewZoom=clampViewZoom(data.zoom);
   $('zoomValue').textContent=Math.round(viewZoom*100)+'%';

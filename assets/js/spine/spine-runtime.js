@@ -102,6 +102,8 @@ function ensureRuntime(version){
 function clearPlayer(){
  try{player?.dispose?.()}catch(e){console.warn(e)}
  player=null;
+ pausedInBackground=null;
+ rendererFrameStats.at=0;rendererFrameStats.count=0;
  viewZoom=1;viewOffsetX=0;viewOffsetY=0;
  $('zoomValue').textContent='100%';
  setViewerToolsEnabled(false);
@@ -122,10 +124,12 @@ async function show(options,title,onError){
   const atlasPath=options.atlas||options.atlasUrl;
   const normalized={...options,atlasUrl:atlasPath};
   if(skeletonPath){if(/\.json(?:[?#]|$)/i.test(skeletonPath))normalized.jsonUrl=skeletonPath;else if($('version').value==='3.8')normalized.skelUrl=skeletonPath;else normalized.binaryUrl=skeletonPath;}
-  const config={...normalized,showControls:false,controlBones:false,premultipliedAlpha:options.premultipliedAlpha??true,alpha:false,backgroundColor:'#142238ff',
+  const config={...normalized,showControls:false,controlBones:false,frame:(p)=>recordSpineFrame(p),premultipliedAlpha:options.premultipliedAlpha??true,alpha:false,backgroundColor:'#142238ff',
    success:(p)=>{
     if(attempt!==currentAttempt)return;
     stopWatchdog();player=p;
+    rendererFrameStats.at=0;rendererFrameStats.count=0;
+    updateGPUStatus(spineGraphicsStatus(p));
      setViewerToolsEnabled(true);
      resetViewerTransform();
      connectCanvasGestures(p);
@@ -162,6 +166,7 @@ async function show(options,title,onError){
       p.setAnimation(preferred,true);
       $('animationPicker').value=preferred;
       p.play();
+      if(document.hidden){pausedInBackground=p;p.pause()}
       status('正在播放：'+title+' · '+preferred+'（共 '+names.length+' 个动作，可用上方动作菜单切换）');
     }catch(e){status('骨骼已加载，但自动播放动作失败：'+e.message,true)}
    },

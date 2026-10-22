@@ -45,7 +45,7 @@
 .stage-toolbar .tool-btn:disabled{opacity:.35}
 .stage-toolbar .zoom-value{min-width:42px;text-align:center;color:#c1cbe0;font-size:12px;user-select:none;font-variant-numeric:tabular-nums}
 #player{position:relative;background:#142238;overflow:hidden}
-#player canvas.portrait-canvas{cursor:grab;will-change:transform;max-width:none}
+#player canvas.portrait-canvas{cursor:grab;will-change:auto;max-width:none}
 #player canvas.portrait-canvas:active{cursor:grabbing}
 .stage-hint{flex:none;font-size:10.5px;line-height:1.35;margin:0;padding:6px 13px;color:#8393ac;border-top:1px solid #ffffff10;background:#101729}
 #status{flex:none;font-size:12px;line-height:1.45;padding:9px 13px;color:#bcd3e7;border-top:1px solid #ffffff20;white-space:pre-wrap;overflow-wrap:anywhere;scrollbar-width:thin}
@@ -144,3 +144,10 @@
 /* Large catalog: card/search picker replaces the enormous native dropdown. */
 #characters{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:0!important;opacity:0!important;pointer-events:none!important;overflow:hidden!important}
 .selected-character-display{min-height:38px;padding:10px 12px;border:1px solid #586887;border-radius:10px;background:#1c2e45;color:#eff1ff;font-size:12px;line-height:1.5;overflow-wrap:anywhere}
+
+/* Lightweight backend/FPS diagnostics: no permanent GPU composited layer. */
+.stage-head-meta{display:flex;align-items:center;justify-content:flex-end;gap:8px;min-width:0}
+.stage-head-meta small{display:block;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#gpuStatus{flex:0 0 auto;font-size:10.5px;color:#b3dcc6;border:1px solid #48856b55;border-radius:6px;padding:3px 6px;background:#18372a65}
+#gpuStatus.gpu-software{color:#ffe1ae;border-color:#ad784860;background:#69442135}
+@media(max-width:700px){#gpuStatus{font-size:10px}.stage-head-meta #stageContext{display:none}}

@@ -63,6 +63,6 @@ async function load(name,id,modelUrl){
   for(const ev of ['pointerup','pointerupoutside'])model.on(ev,()=>{if(model)model.dragging=false});
   warn.hidden=true;
   if(!document.hidden&&app?.ticker)app.ticker.start();
-  notify('playing',{motions:actions,motionLabels,selectedMotion:initial,zoom,loadMs:Math.round(performance.now()-loadStartedAt),fpsCap:targetFPS});
+  notify('playing',{motions:actions,motionLabels,selectedMotion:initial,zoom,loadMs:Math.round(performance.now()-loadStartedAt),fpsCap:targetFPS,graphics:graphicsReport()});
  }catch(e){try{next?.destroy()}catch(_){}if(generation!==currentGeneration)return;model=null;readyId='';message('模型加载失败：'+(e?.message||String(e)));notify('error',{error:'模型加载失败：'+(e?.message||String(e))})}
 }
