@@ -118,4 +118,24 @@ if ([regex]::Matches($rasterText,[regex]::Escape($oldRaster)).Count -ne 1) {
 }
 $rasterText = $rasterText.Replace($oldRaster,$newRaster)
 [System.IO.File]::WriteAllText($raster,$rasterText,[System.Text.UTF8Encoding]::new($false))
-Write-Host 'Native surface geometry, animation envelope and hit-test silhouette corrected together.'
+# Feed genuine body clicks (but not drag motions or desktop clicks) to the
+# independent BD2 voice module while preserving upstream click animations.
+$engine = Join-Path $UpstreamRoot 'SpinePet/src/SpinePet/Rendering/Native/NativeCharacterRenderEngine.cs'
+$engineText = [System.IO.File]::ReadAllText($engine).Replace("`r`n","`n")
+$oldClick = @'
+            NativeAnimationController.PlayClickAnimation,
+'@
+$newClick = @'
+            state =>
+            {
+                NativeAnimationController.PlayClickAnimation(state);
+                global::SpinePet.NativeDesktopVoiceRelay.NotifyClicked(
+                    state.Config.Id);
+            },
+'@
+if ([regex]::Matches($engineText,[regex]::Escape($oldClick)).Count -ne 1) {
+    throw 'Pinned upstream click audio bridge patch anchor mismatch'
+}
+$engineText = $engineText.Replace($oldClick,$newClick)
+[System.IO.File]::WriteAllText($engine,$engineText,[System.Text.UTF8Encoding]::new($false))
+Write-Host 'Native surface, lower-body hit silhouette and click-to-voice callbacks corrected.'
