@@ -81,10 +81,32 @@ $segment = $pathsText.Substring($start, $end-$start)
 $needle = '        string resolvedBaseDirectory = Path.GetFullPath(baseDirectory);'
 if ([regex]::Matches($segment,[regex]::Escape($needle)).Count -ne 1) { throw 'Resource directory anchor missing' }
 $replacement = @'
-        // The installed Velopack current/ directory is replaced on update.
-        // Store asset downloads in durable per-user data, not in app/current.
+        // A separate, optional per-user choice made in the two-folder EXE wizard.
+        // Stored in HKCU so automatic app updates never overwrite the selection.
+        // Portable ZIP installs still use their own adjacent res directory.
         if (File.Exists(Path.Combine(resolvedBaseDirectory, "sq.version")))
         {
+            try
+            {
+                using var key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(
+                    @"Software\AnimeCharacterSpinePet");
+                string? selected = key?.GetValue("ResourceDirectory") as string;
+                if (!string.IsNullOrWhiteSpace(selected) &&
+                    Path.IsPathFullyQualified(selected))
+                {
+                    string chosen = Path.GetFullPath(selected);
+                    Directory.CreateDirectory(chosen);
+                    return chosen;
+                }
+            }
+            catch (Exception ex) when (ex is IOException ||
+                                       ex is UnauthorizedAccessException ||
+                                       ex is ArgumentException ||
+                                       ex is System.Security.SecurityException)
+            {
+                // An unavailable removable drive or denied folder must never
+                // crash the entire desktop renderer during static startup.
+            }
             string durable = Path.Combine(LocalDataDirectory, "ArchiveResources");
             Directory.CreateDirectory(durable);
             return durable;
