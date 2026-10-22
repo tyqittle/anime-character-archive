@@ -17,6 +17,8 @@ jobs:
           node-version: '22'
       - name: Validate archive metadata and entrypoints
         run: node tests/smoke.mjs
+      - name: Test bounded animation memory cache
+        run: node tests/test_spine_session_cache.mjs
       - name: Test shared preview policy
         run: |
           python3 -m pip install --quiet --break-system-packages Pillow

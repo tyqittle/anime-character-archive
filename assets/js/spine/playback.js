@@ -14,7 +14,8 @@ async function playCharacter(c){
  const packId=(c.gameId||'nikke')+'-'+c.id;
  status((c.versionUnverified?'该资源骨骼版本尚未验证，可能无法播放。':'')+'正在查找 '+c.name+' 的本地缓存…');
  try{
-  let pack=await dbAction('readonly',s=>s.get(packId)).catch(()=>null);
+  let pack=recentSpinePack(packId);
+  if(!pack)pack=await dbAction('readonly',s=>s.get(packId)).catch(()=>null);
   if(pack&&!pack.headerChecked){
    // The old cache trusted a guessed version; refresh it from the source.
    await dbAction('readwrite',store=>store.delete(packId)).catch(()=>{});
@@ -23,6 +24,7 @@ async function playCharacter(c){
   if(pack){
    if(current!==sequence)return;
    status('已找到经版本检测的本地缓存：Spine '+pack.exportVersion);
+   rememberSpinePack(pack);
    await playPack(pack);
    return;
   }
@@ -33,7 +35,8 @@ async function playCharacter(c){
     status('正在从 '+(mirror==='github'?'原始素材目录':'备用镜像')+'读取 '+c.name+' 的完整动画文件…');
     pack=await downloadPack(c,mirror,controller.signal,()=>current===sequence);
     if(current!==sequence)return;
-    // Display immediately, rather than serializing a large base64 pack to disk first.
+    // Display immediately, then retain only a bounded in-memory hot pack.
+    rememberSpinePack(pack);
     await playPack(pack);
     if(current!==sequence)return;
     const saveForRepeat=()=>dbAction('readwrite',s=>s.put(pack)).then(()=>refreshSaved())
