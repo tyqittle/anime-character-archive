@@ -75,6 +75,7 @@ function createWindow(){
  win.webContents.on('context-menu',()=>Menu.buildFromTemplate(desktopMenu()).popup({window:win}));
  win.webContents.on('did-finish-load',()=>{
   win.webContents.insertCSS(desktopCSS).catch(console.error);
+  if(!voiceEnabled)win.webContents.executeJavaScript('(()=>{voiceEnabled=false;updateVoiceUI();syncFrameVoice();silenceCharacterVoice()})()').catch(console.error);
   win.webContents.executeJavaScript("(()=>{if(!document.getElementById('desktopDrag')){let el=document.createElement('div');el.id='desktopDrag';el.title='拖动这里移动桌面立绘';document.body.append(el)}document.body.style.background='transparent';if(!document.getElementById('desktopError')){let e=document.createElement('div');e.id='desktopError';e.style.cssText='position:fixed;bottom:26px;left:15px;right:15px;z-index:999999;color:white;background:#792626dd;padding:9px;border-radius:9px;font:12px system-ui;display:none;pointer-events:none';document.body.append(e);let status=document.getElementById('status');if(status){let update=()=>{let error=status.classList.contains('error');e.textContent=error?status.textContent:'';e.style.display=error?'block':'none'};new MutationObserver(update).observe(status,{subtree:true,childList:true,attributes:true});update()}}})()").catch(console.error);
  });
  win.on('move',()=>saveSettings());
@@ -101,6 +102,7 @@ function desktopMenu(){
   {label:'切换角色（当前 '+characterId+'）',click:chooseCharacter},
   {label:'打开网站角色目录',click:()=>shell.openExternal(SITE+'spine.html')},
   {label:'重新加载角色',click:()=>win?.reload()},
+  {label:'点击语音',type:'checkbox',checked:voiceEnabled,click:i=>{voiceEnabled=i.checked;saveSettings();win?.webContents.executeJavaScript('(()=>{voiceEnabled='+String(i.checked)+';updateVoiceUI();syncFrameVoice();if(!voiceEnabled)silenceCharacterVoice()})()').catch(console.error);updateTray()}},
   {type:'separator'},
   {label:'鼠标穿透（从托盘恢复）',type:'checkbox',checked:clickThrough,click:i=>{clickThrough=i.checked;win?.setIgnoreMouseEvents(clickThrough,{forward:true});updateTray()}},
   {label:'窗口始终置顶',type:'checkbox',checked:alwaysOnTop,click:i=>{alwaysOnTop=i.checked;win?.setAlwaysOnTop(alwaysOnTop);saveSettings();updateTray()}},
