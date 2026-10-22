@@ -482,3 +482,11 @@ for(const model of bd2Full.characters){
   relative.endsWith('/'+model.id.slice(4)),
   'BD2 model must match exact immutable source and skeleton stem: '+model.id);
 }
+
+
+assert.ok(nativeBuildWorkflow.includes('--msi --instLocation Either'),
+ 'Windows release must include a graphical folder-selectable MSI installer');
+assert.ok(nativeBuildWorkflow.includes("Missing directory-selectable MSI installer"),
+ 'Native release must fail rather than silently omit the MSI artifact');
+assert.ok(read('native-desktop/README.md').includes('--installto'),
+ 'Document the supported no-rebuild custom installation path for Setup.exe');
