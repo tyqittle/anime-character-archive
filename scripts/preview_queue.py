@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
-"""Emit machine-readable incomplete preview queue across every dynamic catalog."""
+"""Single missing-preview queue for all game capture jobs."""
+import argparse, json
 from pathlib import Path
-import json
-from preview_policy import audit
-catalogs = [
-    'data/spine-characters.json', 'data/spine-newgames.json',
-    'data/spine-bd2-characters.json', 'data/live2d-azurlane.json'
-]
-items=[]
-for name in catalogs:
-    p=Path(name)
-    items.extend(json.loads(p.read_text(encoding='utf-8'))['characters'])
-report=audit(items)
-print(json.dumps(report,ensure_ascii=False,indent=2))
+from preview_policy import audit, needs_capture
+CATALOGS=['data/spine-characters.json','data/spine-newgames.json','data/spine-bd2-characters.json','data/live2d-azurlane.json']
+p=argparse.ArgumentParser()
+p.add_argument('--catalog',choices=CATALOGS,action='append')
+p.add_argument('--write',type=Path)
+args=p.parse_args()
+items=[c for path in (args.catalog or CATALOGS) for c in json.loads(Path(path).read_text(encoding='utf-8'))['characters']]
+pending=[c['id'] for c in items if needs_capture(c)]
+if len(pending)!=len(set(pending)): raise ValueError('Duplicate model ids in preview queue')
+if args.write:
+    args.write.parent.mkdir(parents=True,exist_ok=True)
+    args.write.write_text(json.dumps(pending,ensure_ascii=False)+'\n',encoding='utf-8')
+print(json.dumps(audit(items),ensure_ascii=False,indent=2))

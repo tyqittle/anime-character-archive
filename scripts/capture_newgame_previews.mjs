@@ -5,11 +5,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {chromium} from 'playwright-core';
 import {PNG} from 'pngjs';
+import {selectPending} from './preview_capture_queue.mjs';
 
 const shard=Number(process.argv[2]||0),shards=Number(process.argv[3]||24);
 if(!Number.isInteger(shard)||!Number.isInteger(shards)||shard<0||shard>=shards)throw Error('Invalid shard');
-const manifest=JSON.parse(fs.readFileSync('data/spine-newgames.json','utf8'));
-const characters=manifest.characters.filter((c,i)=>i%shards===shard);
+const characters=selectPending('data/spine-newgames.json',shard,shards);
 const root='tmp/newgame-output';
 fs.mkdirSync(path.join(root,'frames'),{recursive:true});
 fs.mkdirSync(path.join(root,'reports'),{recursive:true});

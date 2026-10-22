@@ -315,7 +315,7 @@ assert.ok(!versionRegexp.test('unrecognized'),'Spine version regex accepted inva
 // Module integration contract: all modules must be present, parse, and execute in order.
 const galleryHTML=read('characters.html'),spineHTML=read('spine.html');
 for(const [html,modules] of [[galleryHTML,galleryModules],[spineHTML,spineModules]]){
- const loaded=[...html.matchAll(/<script defer src="\.\/([^"?]+)\?v=20261021-modules-v1"><\/script>/g)].map(x=>x[1]);
+ const loaded=[...html.matchAll(/<script defer src="\.\/([^"?]+)\?v=[^"]+"><\/script>/g)].map(x=>x[1]);
  assert.deepEqual(loaded,modules,'Browser modules must preserve the documented dependency order');
  assert.ok(!/<script>\s*['"]use strict/.test(html),'Page-level application logic must live in feature modules');
 }

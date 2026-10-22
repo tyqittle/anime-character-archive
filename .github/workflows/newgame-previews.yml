@@ -5,6 +5,8 @@ on:
     paths:
       - 'data/spine-newgames.json'
       - 'scripts/preview_policy.py'
+      - 'scripts/preview_queue.py'
+      - 'scripts/preview_capture_queue.mjs'
       - 'scripts/capture_newgame_previews.mjs'
       - 'scripts/convert_newgame_previews.py'
       - 'scripts/merge_newgame_previews.py'
@@ -34,6 +36,8 @@ jobs:
         run: |
           python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/newgame-preview-server.log 2>&1 &
           sleep 2
+      - name: Select missing model previews
+        run: python3 scripts/preview_queue.py --catalog data/spine-newgames.json --write tmp/preview-pending.json
       - name: Capture real model frames
         run: node scripts/capture_newgame_previews.mjs ${{ matrix.shard }} 24
       - name: Convert nonblank frames to matching WebP cards

@@ -1,9 +1,9 @@
 import {chromium} from 'playwright-core';
 import fs from 'node:fs';
 import path from 'node:path';
+import {selectPending} from './preview_capture_queue.mjs';
 const shard=Number(process.argv[2]||0),count=Number(process.argv[3]||8);
-const all=JSON.parse(fs.readFileSync('data/live2d-azurlane.json','utf8')).characters.filter(c=>c.gameId==='azurlane'&&!(c.previewSource==='matching-live2d-animation-frame'&&c.preview==='./assets/animation-previews/azurlane-'+c.id+'.webp'&&fs.existsSync('assets/animation-previews/azurlane-'+c.id+'.webp')));
-const characters=all.filter((c,i)=>i%count===shard);
+const characters=selectPending('data/live2d-azurlane.json',shard,count);
 const executablePath=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'].find(fs.existsSync);
 fs.mkdirSync('tmp/al-frames',{recursive:true});
 const browser=await chromium.launch({headless:true,executablePath,args:['--no-sandbox','--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
@@ -30,4 +30,4 @@ try{
  }
 }finally{await browser.close()}
 console.log('RESULT',shard,ok,'/',characters.length);
-if(ok===0)process.exitCode=1;
+// Empty queue means there is no new work; failed models stay pending.

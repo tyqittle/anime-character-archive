@@ -6,6 +6,8 @@ on:
       - '.github/workflows/azurlane-preview-images.yml'
       - 'data/live2d-azurlane.json'
       - 'scripts/preview_policy.py'
+      - 'scripts/preview_queue.py'
+      - 'scripts/preview_capture_queue.mjs'
       - 'scripts/render_azurlane_previews.mjs'
       - 'scripts/convert_azurlane_previews.py'
       - 'scripts/merge_azurlane_previews.py'
@@ -33,6 +35,7 @@ jobs:
       - run: |
           python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/al-server.log 2>&1 &
           sleep 2
+      - run: python3 scripts/preview_queue.py --catalog data/live2d-azurlane.json --write tmp/preview-pending.json
       - run: |
           node scripts/render_azurlane_previews.mjs ${{ matrix.shard }} 8
           python3 scripts/convert_azurlane_previews.py

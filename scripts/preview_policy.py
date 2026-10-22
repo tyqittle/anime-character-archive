@@ -1,58 +1,41 @@
 #!/usr/bin/env python3
-"""Common preview policy for every dynamic catalog. Game-specific renderers only capture frames."""
+"""One exact-model preview policy across all game catalogs."""
 from pathlib import Path
 from PIL import Image
-import json
+import hashlib
 
 ROOT = Path('assets/animation-previews')
-PREVIEW_SIZE = (360, 420)
-
-def filename(character):
-    return f"{character['gameId']}-{character['id']}.webp"
-
-def verified_file(character, directory=ROOT):
-    path = directory / filename(character)
-    if not path.is_file() or path.stat().st_size <= 500:
-        return None
+def filename(c): return f"{c['gameId']}-{c['id']}.webp"
+def relative_path(c): return './' + str(ROOT / filename(c))
+def source(c): return 'matching-live2d-animation-frame' if c.get('engine') == 'cubism' else 'matching-spine-animation-frame'
+def verified_file(c, directory=ROOT):
+    p = directory / filename(c)
+    if not p.is_file() or p.stat().st_size < 500: return None
     try:
-        with Image.open(path) as image:
-            image.verify()
-        with Image.open(path) as image:
-            if image.size != PREVIEW_SIZE:
-                return None
-    except (OSError, ValueError):
-        return None
-    return path
-
-def needs_capture(character):
-    """An upstream thumbnail is not equivalent to a rendered same-model preview."""
-    expected = './' + str(ROOT / filename(character))
-    source = character.get('previewSource', '')
-    return not (character.get('preview') == expected
-                and source == ('matching-live2d-animation-frame' if character.get('engine') == 'cubism' else 'matching-spine-animation-frame')
-                and verified_file(character) is not None)
-
-def apply_verified_preview(character):
-    path = verified_file(character)
-    if path is None:
-        return False
-    character['preview'] = './' + str(path)
-    character['previewSource'] = ('matching-live2d-animation-frame'
-                                  if character.get('engine') == 'cubism' else 'matching-spine-animation-frame')
-    character['playbackStatus'] = 'browser-preview-captured'
-    character['status'] = 'browser-preview-captured'
+        raw = p.read_bytes()
+        if raw[:4] != b'RIFF' or raw[8:12] != b'WEBP': return None
+        with Image.open(p) as im: im.verify()
+        with Image.open(p) as im:
+            if im.size != ((480,360) if c.get('previewSha256') else (360,420)): return None
+        if c.get('previewSha256') and hashlib.sha256(raw).hexdigest() != c['previewSha256']: return None
+    except (OSError, ValueError): return None
+    return p
+def needs_capture(c):
+    return not (c.get('preview') == relative_path(c) and c.get('previewSource') == source(c) and verified_file(c) is not None)
+def apply_verified_preview(c):
+    if verified_file(c) is None: return False
+    c['preview'] = relative_path(c)
+    c['previewSource'] = source(c)
+    if c.get('status') != 'verified-playback': c['status'] = 'browser-preview-captured'
+    if c.get('playbackStatus') != 'verified-playback': c['playbackStatus'] = 'browser-preview-captured'
     return True
-
 def audit(characters):
-    counts = {}
-    missing = []
+    counts, missing = {}, []
     for c in characters:
-        game = c['gameId']
-        rec = counts.setdefault(game, {'indexed': 0, 'verifiedPreview': 0, 'missingPreview': 0})
+        rec = counts.setdefault(c['gameId'], {'indexed':0,'verifiedPreview':0,'missingPreview':0})
         rec['indexed'] += 1
-        if not needs_capture(c):
-            rec['verifiedPreview'] += 1
-        else:
+        if needs_capture(c):
             rec['missingPreview'] += 1
-            missing.append({'gameId': game, 'id': c['id']})
-    return {'counts': counts, 'missing': missing}
+            missing.append({'gameId':c['gameId'],'id':c['id']})
+        else: rec['verifiedPreview'] += 1
+    return {'counts':counts,'missing':missing}
