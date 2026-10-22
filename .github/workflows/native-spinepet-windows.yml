@@ -37,6 +37,16 @@ jobs:
         run: |
           & ./native-desktop/Open-ArchiveCharacter.ps1 -CharacterId c015 -ValidateOnly
           if ($LASTEXITCODE -ne 0) { throw 'Archive resource bridge validation failed' }
+      - name: Apply small GPL bridge extension to original SpinePet app
+        shell: pwsh
+        run: |
+          & ./native-desktop/Patch-Upstream.ps1 -UpstreamRoot ./native-upstream
+          if ($LASTEXITCODE -ne 0) { throw 'Upstream bridge patch failed' }
+          $patched = Get-Content ./native-upstream/SpinePet/src/SpinePet/App.xaml.cs -Raw
+          if (-not $patched.Contains('RestoreArchiveCharactersAsync()') -or
+              -not $patched.Contains('AcceptArchiveStartupArgs(e.Args)')) {
+            throw 'Native one-click import integration did not apply'
+          }
       - name: Build actual upstream native Direct3D 11 + DirectComposition renderer
         shell: pwsh
         run: |
@@ -83,9 +93,12 @@ jobs:
           Renderer source: KAIDO-YONAGI/My_SpinePet, GPL-3.0-or-later
           Pinned upstream commit: 6690e986b4da31dc89337794bcef1b45e6531303
           Launch: app/SpinePet.exe
-          The core contains NO archive website protocol registration, CMD or PowerShell launcher.
+          Website one-click import is implemented natively inside SpinePet.exe.
+          Registration is only offered with a visible consent dialog when you launch the app.
+          No scripts, shell launchers or separate ZIPs are required.
           This executable is unsigned and has not been certified malware-free.
-          For model import use the upstream Add/Scan interface with licensed assets.
+          For supported NIKKE Spine 4.1: visit the archive, select a model, and click 放到桌面.
+          The upstream Add/Scan interface remains available for manual licensed asset import.
           GPL corresponding source is provided as another artifact from this SAME build run.
           See https://github.com/tyqittle/anime-character-archive/tree/main/native-desktop
           '@ | Set-Content ./safe-release/core/README.txt -Encoding utf8
@@ -103,7 +116,12 @@ jobs:
           Copy-Item ./native-upstream/LICENSE ./safe-release/source/LICENSE-GPL-3.0.txt
           git -C native-upstream archive --format=zip --output="$env:GITHUB_WORKSPACE/safe-release/source/My_SpinePet-corresponding-source.zip" HEAD
           if ($LASTEXITCODE -ne 0) { throw 'Cannot provide GPL corresponding source' }
-          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1 -Destination ./safe-release/source
+          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/Patch-Upstream.ps1,./native-desktop/NativeArchiveBridge.cs -Destination ./safe-release/source
+          @'
+          The distributed SpinePet.exe builds pinned upstream source plus NativeArchiveBridge.cs.
+          Rebuild by checking out pinned upstream commit, running Patch-Upstream.ps1, then dotnet publish.
+          Archive bridge and corresponding patch source are GPL-3.0-or-later.
+          '@ | Set-Content ./safe-release/source/REBUILD-INSTRUCTIONS.txt -Encoding utf8
       - name: Generate SHA-256 manifest and run security checks where supported
         shell: pwsh
         run: |
