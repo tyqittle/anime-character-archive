@@ -10,7 +10,14 @@ const voiceOptions=['main1','main2','main3','touch','touch2','headtouch','login'
 function voiceMessage(message){const hint=document.getElementById('voiceAvailability');if(hint)hint.textContent=message}
 function silenceCharacterVoice(){voiceAttempt++;voiceLoading=false;if(voiceClip){voiceClip.pause();voiceClip.removeAttribute('src');voiceClip=null}}
 function showVoiceMessage(message){voiceMessageOverride=message;voiceMessage(message)}
-function selectedVoiceChanged(){silenceCharacterVoice();voiceMessageOverride='';updateVoiceUI()}
+function syncFrameVoice(){
+ if(!azurlaneFrame?.contentWindow)return;
+ const c=typeof chosen==='function'?chosen():null;
+ azurlaneFrame.contentWindow.postMessage({channel:L2D_CHANNEL,kind:'voice-config',voice:{
+  skinId:c?.gameId==='azurlane'?azurVoiceIds[c.id]||'':'',enabled:voiceEnabled,volume:voiceVolume
+ }},location.origin);
+}
+function selectedVoiceChanged(){silenceCharacterVoice();voiceMessageOverride='';updateVoiceUI();syncFrameVoice()}
 function updateVoiceUI(){
  const selected=typeof chosen==='function'?chosen():null;
  const supported=!!(selected&&(characterVoiceMap[selected.id]||azurVoiceIds[selected.id]||Array.isArray(selected.audioClips)&&selected.audioClips.length));
@@ -25,7 +32,7 @@ function updateVoiceUI(){
 }
 fetch('./data/azurlane-voice-map.json?v=20261022-audio-map-3')
  .then(r=>{if(!r.ok)throw Error('voice map HTTP '+r.status);return r.json()})
- .then(data=>{azurVoiceIds=data.skinIds||{};updateVoiceUI()})
+ .then(data=>{azurVoiceIds=data.skinIds||{};updateVoiceUI();syncFrameVoice()})
  .catch(err=>console.warn('碧蓝航线语音索引加载失败',err));
 async function getAzurVoiceURLs(skinId){
  // The large upstream voicelink.json is not a prerequisite for playback.
@@ -82,9 +89,9 @@ async function playCharacterVoice(character){
 
 }
 window.addEventListener('DOMContentLoaded',()=>{
- document.getElementById('voiceEnabled').addEventListener('change',e=>{voiceEnabled=e.target.checked;if(!voiceEnabled)selectedVoiceChanged()});
+ document.getElementById('voiceEnabled').addEventListener('change',e=>{voiceEnabled=e.target.checked;if(!voiceEnabled)selectedVoiceChanged();else syncFrameVoice()});
  document.getElementById('voiceLanguage').addEventListener('change',e=>{voiceLanguage=e.target.value;selectedVoiceChanged()});
- document.getElementById('voiceVolume').addEventListener('input',e=>{voiceVolume=Number(e.target.value)/100;if(voiceClip)voiceClip.volume=voiceVolume});
+ document.getElementById('voiceVolume').addEventListener('input',e=>{voiceVolume=Number(e.target.value)/100;if(voiceClip)voiceClip.volume=voiceVolume;syncFrameVoice()});
  document.getElementById('player').addEventListener('pointerup',e=>{if(e.target.closest('canvas'))playCharacterVoice(chosen())});
  document.getElementById('characters').addEventListener('change',selectedVoiceChanged);
  document.getElementById('characterCards').addEventListener('click',selectedVoiceChanged);
