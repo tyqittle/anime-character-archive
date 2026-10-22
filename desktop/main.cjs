@@ -1,5 +1,5 @@
 'use strict';
-const {app,BrowserWindow,Menu,Tray,nativeImage,shell,screen,dialog}=require('electron');
+const {app,BrowserWindow,Menu,Tray,nativeImage,shell,screen,dialog,ipcMain}=require('electron');
 const path=require('node:path');
 const fs=require('node:fs');
 const {URL}=require('node:url');
@@ -48,8 +48,8 @@ html,body{width:100%!important;height:100%!important;margin:0!important;padding:
 #player{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-height:0!important;padding:0!important}
 #player canvas{background:transparent!important}\n#player iframe{border:0!important;background:transparent!important}
 #placeholder{background:transparent!important;color:#eee!important;text-shadow:0 1px 4px #111}
-#desktopDrag{position:fixed;z-index:999999;left:calc(50% - 65px);top:0;width:130px;height:17px;border-radius:0 0 12px 12px;background:rgba(20,20,30,.20);-webkit-app-region:drag;pointer-events:auto}
-#desktopDrag:hover{background:rgba(20,20,30,.55)}
+#desktopDrag{display:none!important}
+
 `;
 function isTrustedPage(input){
  try{
@@ -57,11 +57,17 @@ function isTrustedPage(input){
   return actual.origin===allowed.origin&&actual.pathname===allowed.pathname;
  }catch{return false}
 }
+ipcMain.on('desktop:move',(event,delta)=>{
+ if(!win||win.isDestroyed()||event.sender!==win.webContents||clickThrough)return;
+ if(!delta||!Number.isFinite(delta.x)||!Number.isFinite(delta.y)||Math.abs(delta.x)>150||Math.abs(delta.y)>150)return;
+ const b=win.getBounds();
+ win.setPosition(Math.round(b.x+delta.x),Math.round(b.y+delta.y));
+});
 function createWindow(){
  const area=screen.getPrimaryDisplay().workArea;
  const defaults={width:440,height:650,x:Math.max(area.x,area.x+area.width-470),y:Math.max(area.y,area.y+area.height-680)};
  const bounds=savedBounds&&savedBounds.width>=220&&savedBounds.height>=260&&screen.getAllDisplays().some(d=>{const b=d.bounds;return savedBounds.x<b.x+b.width-60&&savedBounds.x+savedBounds.width>b.x+60&&savedBounds.y<b.y+b.height-60&&savedBounds.y+savedBounds.height>b.y+60})?savedBounds:defaults;
- win=new BrowserWindow({...bounds,transparent:true,frame:false,resizable:true,hasShadow:false,backgroundColor:'#00000000',alwaysOnTop,skipTaskbar:true,autoHideMenuBar:true,webPreferences:{nodeIntegration:false,contextIsolation:true,sandbox:true,backgroundThrottling:false}});
+ win=new BrowserWindow({...bounds,transparent:true,frame:false,resizable:true,hasShadow:false,backgroundColor:'#00000000',alwaysOnTop,skipTaskbar:true,autoHideMenuBar:true,webPreferences:{nodeIntegration:false,contextIsolation:true,sandbox:true,backgroundThrottling:false,preload:path.join(__dirname,'preload.cjs')}});
  win.setMenu(null);
  win.webContents.setWindowOpenHandler(({url})=>{
   try{const parsed=new URL(url);if(parsed.protocol==='https:'||parsed.protocol==='http:')shell.openExternal(parsed.toString())}catch{}
