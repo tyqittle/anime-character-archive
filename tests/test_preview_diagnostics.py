@@ -16,11 +16,13 @@ class PreviewDiagnosticsTest(unittest.TestCase):
         self.assertEqual(failure_category('could not load skeleton .skel'), 'skeleton-error')
     def test_reports_and_labels(self):
         with tempfile.TemporaryDirectory() as tmp:
-            report={'shard':0,'fail':[{'id':'ak-1','game':'arknights','error':'Region not found in atlas: <br> Hair'},
+            report={'shard':0,'fail':[{'id':'ak-1','gameId':'arknights','error':'Region not found in atlas: <br> Hair'},
                                        {'id':'gf-2','game':'girlsfrontline','error':'Timeout 60000ms exceeded'}]}
             Path(tmp,'shard-0.json').write_text(json.dumps(report))
             records=read_capture_failures(tmp)
             self.assertEqual(len(records),2)
             self.assertEqual(records['ak-1']['category'],'atlas-mismatch')
+            self.assertEqual(records['ak-1']['gameId'],'arknights')
+            self.assertEqual(records['gf-2']['gameId'],'girlsfrontline')
             self.assertNotIn('<br>',records['ak-1']['message'])
             self.assertEqual(group_capture_failures(list(records.values())),{'atlas-mismatch':1,'timeout':1})

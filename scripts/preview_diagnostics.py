@@ -49,7 +49,7 @@ def read_capture_failures(directory):
                 message = scrub_failure_message(failure.get('error', ''))
                 results[model_id] = {
                     'id': model_id,
-                    'gameId': str(failure.get('game') or ''),
+                    'gameId': str(failure.get('gameId') or failure.get('game') or ''),
                     'category': failure_category(message),
                     'message': message,
                 }

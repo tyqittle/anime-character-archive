@@ -21,10 +21,16 @@ added = 0
 for character in catalog['characters']:
     source = incoming / filename(character)
     if source.is_file():
-        if verified_file(character, incoming) is None:
+        # A fresh same-model frame has a new digest. Verify its format and size
+        # before replacement, without comparing it to the old cached digest.
+        incoming_character = {k: v for k, v in character.items()
+                              if k not in ('previewSha256', 'previewWidth', 'previewHeight')}
+        if verified_file(incoming_character, incoming) is None:
             print('REJECT_INVALID_PREVIEW', source)
         else:
             shutil.copyfile(source, ROOT / filename(character))
+            for key in ('previewSha256', 'previewWidth', 'previewHeight'):
+                character.pop(key, None)
             added += 1
     if apply_verified_preview(character):
         character.pop('previewFailureType', None)
