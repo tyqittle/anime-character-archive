@@ -392,3 +392,12 @@ assert.ok(read('assets/js/spine/viewer-controls.js').includes('applySharpSpineCa
  'Native-resolution Spine camera zoom missing');
 assert.ok(read('assets/js/spine/spine-runtime.js').includes('update:(p)=>applySharpSpineCamera(p)'),
  'Spine Player is not using native camera draw callback');
+
+
+// Loading one game's manifest must never block unrelated games, and engine
+// compatibility must be shared instead of a game-specific include list.
+const catalogBootstrap=read('assets/js/spine/bootstrap.js');
+assert.ok(catalogBootstrap.includes('Promise.allSettled')&&catalogBootstrap.includes("cache:'no-cache'"),
+ 'Animation catalogs should load in parallel with conditional HTTP cache validation');
+assert.ok(catalogBootstrap.includes('isPlayableAnimationEntry')&&!catalogBootstrap.includes("c.gameId==='arknights'&&c.base"),
+ 'Spine/Cubism catalog validation should not depend on individual game IDs');

@@ -65,9 +65,13 @@ jobs:
           pattern: azurlane-frame-*
           merge-multiple: true
           path: tmp/azurlane-merged
+      - name: Refresh checkout before publishing
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
       - name: Copy only newly rendered frames
         run: |
-          find tmp/azurlane-merged -maxdepth 1 -type f -name 'azurlane-*.webp' -exec cp -t assets/animation-previews/ {} +
+          find tmp/azurlane-merged -maxdepth 1 -type f -name 'azurlane-*.webp' -exec cp -n -t assets/animation-previews/ {} +
       - run: python3 scripts/merge_azurlane_previews.py
       - run: |
           git config user.name 'github-actions[bot]'
@@ -75,5 +79,11 @@ jobs:
           git add assets/animation-previews/azurlane-*.webp data/live2d-azurlane.json data/azurlane-import-audit.json
           if ! git diff --cached --quiet; then
             git commit -m 'Add model-specific Azur Lane Live2D WebP previews'
-            git push origin HEAD:main
+            for attempt in 1 2 3; do
+              if git push origin HEAD:main; then exit 0; fi
+              echo "main advanced during preview publishing; rebasing (attempt $attempt)"
+              git fetch origin main
+              git rebase origin/main || { git rebase --abort; exit 1; }
+            done
+            exit 1
           fi
