@@ -43,10 +43,15 @@ var
 
 function ProperDirectory(const S: String): Boolean;
 begin
+  if Length(S) < 5 then
+  begin
+    Result := False;
+    Exit;
+  end;
   // This per-user installer requires an absolute letter-drive path.
   // A D:relative path, drive root, UNC/remote share or injected quote is not
   // a safe installation location for the self-updating package.
-  Result := (Length(S) >= 5) and (S[2] = ':') and (S[3] = '\') and
+  Result := (S[2] = ':') and (S[3] = '\') and
     (((S[1] >= 'A') and (S[1] <= 'Z')) or
      ((S[1] >= 'a') and (S[1] <= 'z'))) and
     (Pos('"', S) = 0) and (Pos('..\', S) = 0) and
@@ -99,8 +104,8 @@ begin
 
   if IsNestedFolder(P, M) or IsNestedFolder(M, P) then
   begin
-    MsgBox('程序与角色素材必须位于互不包含的独立文件夹。' +
-      #13#10 + '这样软件升级不会覆盖角色素材。', mbError, MB_OK);
+    MsgBox('程序与角色素材必须位于互不包含的独立文件夹。' + #13#10 +
+      '这样软件升级不会覆盖角色素材。', mbError, MB_OK);
     Result := False;
     Exit;
   end;
