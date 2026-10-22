@@ -457,3 +457,28 @@ assert.ok(nativeArchiveBridge.includes('检测到已注册的旧版或其他位�
  'New native app must ask before replacing an old Windows protocol handler');
 assert.ok(nativeBuildWorkflow.includes('-CharacterId c113_01 -ValidateOnly'),
  'Windows CI must validate historically misclassified c113_01 against real skeleton bytes');
+
+
+const nativeBd2Adapter=read('native-desktop/NativeBrownDust2Bridge.cs');
+const desktopLaunch=read('assets/js/spine/desktop-launch.js');
+assert.ok(nativeArchiveBridge.includes('game=browndust2&id=') &&
+ nativeArchiveBridge.includes('EnsureBrownDust2DownloadedAsync(id)'),
+ 'Native protocol must route BD2 to separate pinned import adapter');
+assert.ok(nativeBd2Adapter.includes('SpineSkeletonCompatibility.EnsureSupported(stagedSkeleton)') &&
+ nativeBd2Adapter.includes('TrustedBrownDust2'),
+ 'New game importer must enforce both actual Spine 4.1 parse and pinned source origin');
+assert.ok(desktopLaunch.includes('animecharacter://open?game=browndust2&id=') &&
+ desktopLaunch.includes('spine-bd2-characters.json'),
+ 'Website must send selected BD2 ID to native application');
+assert.ok(spineHTML.includes('desktop-launch.js?v=20261022-bd2-native-v1'),
+ 'Site must bust previously cached single-game launcher');
+const bd2IdPattern=/^bd2-char[0-9]{6}(?:_c)?$/;
+const bd2Origin='https://raw.githubusercontent.com/Zormolo/Brown-Dust-2-Assets/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/';
+for(const model of bd2Full.characters){
+ assert.ok(bd2IdPattern.test(model.id),'Cannot safely route BD2 id: '+model.id);
+ const relative=model.base.slice(bd2Origin.length);
+ assert.ok(model.base.startsWith(bd2Origin) &&
+  /^[A-Za-z0-9_'-]+\/[A-Za-z0-9_'-]+\/char[0-9]{6}(?:_c)?$/.test(relative) &&
+  relative.endsWith('/'+model.id.slice(4)),
+  'BD2 model must match exact immutable source and skeleton stem: '+model.id);
+}
