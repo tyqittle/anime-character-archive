@@ -237,6 +237,26 @@ jobs:
             throw 'Installer did not create its update-managed current/sq.version layout'
           }
           Write-Host 'REAL INSTALL SUCCESS: chosen directory contains SpinePet launcher and Velopack update structure.'
+      - name: Exercise directory-selectable MSI with Windows Installer
+        shell: pwsh
+        run: |
+          $msi = @(Get-ChildItem ./safe-release/velopack/*.msi)
+          if ($msi.Count -ne 1) { throw 'Expected one MSI' }
+          $target = Join-Path $env:RUNNER_TEMP 'AnimeCharacterMSISmoke/程序 安装'
+          $log = Join-Path $env:RUNNER_TEMP 'velopack-msi-custom-install.log'
+          $args = @('/i', ('"' + $msi[0].FullName + '"'), '/qn', '/norestart',
+            'ALLUSERS=2', 'MSIINSTALLPERUSER=1',
+            ('VELOPACK_INSTALLDIR="' + $target + '"'), '/L*v', ('"' + $log + '"'))
+          $run = Start-Process -FilePath msiexec.exe -ArgumentList ($args -join ' ') -Wait -PassThru
+          if (Test-Path $log) {
+            Get-Content $log -Tail 150 | ForEach-Object { Write-Host $_ }
+          }
+          if ($run.ExitCode -ne 0) { throw "REAL MSI INSTALL FAILED: $($run.ExitCode)" }
+          if (-not (Test-Path (Join-Path $target 'SpinePet.exe'))) {
+            throw "MSI custom install did not respect VELOPACK_INSTALLDIR=$target"
+          }
+          Write-Host 'REAL MSI INSTALL SUCCESS in custom location'
+
       - name: Generate SHA-256 manifest and run security checks where supported
         shell: pwsh
         run: |
