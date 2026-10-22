@@ -138,4 +138,15 @@ if ([regex]::Matches($engineText,[regex]::Escape($oldClick)).Count -ne 1) {
 }
 $engineText = $engineText.Replace($oldClick,$newClick)
 [System.IO.File]::WriteAllText($engine,$engineText,[System.Text.UTF8Encoding]::new($false))
-Write-Host 'Native surface, lower-body hit silhouette and click-to-voice callbacks corrected.'
+# Native hit regions were also intersected with Screen.WorkingArea,
+# excluding the taskbar-height strip even for a character drawn there.
+# Restrict to actual physical monitor pixels, not the taskbar's work area.
+$region = Join-Path $UpstreamRoot 'SpinePet/src/SpinePet/Rendering/Native/NativeInputRegionCoordinator.cs'
+$regionText = [System.IO.File]::ReadAllText($region)
+$workAreaAnchor = 'screen.WorkingArea,'
+if ([regex]::Matches($regionText,[regex]::Escape($workAreaAnchor)).Count -ne 1) {
+    throw 'Pinned upstream input working-area clipping patch anchor mismatch'
+}
+$regionText = $regionText.Replace($workAreaAnchor, 'screen.Bounds,')
+[System.IO.File]::WriteAllText($region,$regionText,[System.Text.UTF8Encoding]::new($false))
+Write-Host 'Native surface, full-monitor hit silhouette, and click-to-voice callbacks corrected.'
