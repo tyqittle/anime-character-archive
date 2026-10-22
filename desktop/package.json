@@ -1,14 +1,14 @@
 {
   "name": "anime-character-desktop",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "private": true,
   "description": "Anime Character Archive Windows desktop companion",
   "main": "main.cjs",
   "scripts": {
     "start": "electron .",
-    "check": "node --check main.cjs && node --check preload.cjs && node --check main.test.cjs && node --check ../assets/js/spine/spine-runtime.js && node --check ../assets/js/spine/desktop-drag.js",
+    "check": "node --check main.cjs && node --check preload.cjs && node --check shape-mask.cjs && node --check main.test.cjs && node --check shape-mask.test.cjs && node --check ../assets/js/spine/spine-runtime.js",
     "dist": "electron-builder --win nsis portable",
-    "test": "node --test main.test.cjs"
+    "test": "node --test main.test.cjs shape-mask.test.cjs"
   },
   "devDependencies": {
     "electron": "^38.0.0",
@@ -23,6 +23,7 @@
     "files": [
       "main.cjs",
       "preload.cjs",
+      "shape-mask.cjs",
       "package.json"
     ],
     "win": {
