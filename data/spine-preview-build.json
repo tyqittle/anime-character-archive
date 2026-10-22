@@ -1,8 +1,8 @@
 {
   "total": 819,
-  "renderAttempted": 274,
-  "renderSucceeded": 270,
-  "renderFailed": 4,
+  "renderAttempted": 2,
+  "renderSucceeded": 0,
+  "renderFailed": 2,
   "byGame": {
     "nikke": 514,
     "bluearchive": 179,
