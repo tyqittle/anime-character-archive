@@ -5,6 +5,7 @@ import json
 import shutil
 import argparse
 from preview_policy import ROOT, filename, verified_file, apply_verified_preview, audit
+from preview_diagnostics import read_capture_failures, group_capture_failures
 
 parser=argparse.ArgumentParser()
 parser.add_argument('--catalog',default='data/spine-newgames.json')
@@ -15,6 +16,7 @@ manifest = Path(args.catalog)
 catalog = json.loads(manifest.read_text(encoding='utf-8'))
 incoming = Path(args.incoming)
 ROOT.mkdir(parents=True, exist_ok=True)
+failures = read_capture_failures(incoming.parent / 'reports')
 added = 0
 for character in catalog['characters']:
     source = incoming / filename(character)
@@ -24,19 +26,32 @@ for character in catalog['characters']:
         else:
             shutil.copyfile(source, ROOT / filename(character))
             added += 1
-    if not apply_verified_preview(character):
-        # Never pretend an upstream image is a real rendered model frame.
+    if apply_verified_preview(character):
+        character.pop('previewFailureType', None)
+        character.pop('previewFailureReason', None)
+    else:
+        # Only a matching, verified frame counts. Log specific failure reasons.
         character.pop('preview', None)
         character['previewSource'] = 'not-rendered'
         character['status'] = 'unverified-playback'
+        failure = failures.get(character['id'])
+        if failure:
+            character['previewFailureType'] = failure['category']
+            character['previewFailureReason'] = failure['message']
+        else:
+            character.pop('previewFailureType', None)
+            character.pop('previewFailureReason', None)
 
 summary = audit(catalog['characters'])
+failed_records = [failures[c['id']] for c in summary['missing'] if c['id'] in failures]
 manifest.write_text(json.dumps(catalog, ensure_ascii=False, separators=(',', ':'))+'\n', encoding='utf-8')
 Path(args.audit).write_text(json.dumps({
     'scope': 'new dynamic game batch',
     'counts': summary['counts'],
     'missing': summary['missing'],
     'newCapturesInThisRun': added,
+    'failedCaptures': failed_records,
+    'failureSummary': group_capture_failures(failed_records),
     'status': 'shared exact-model WebP verification policy'
 }, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
 print('NEWGAME_MERGED', added, summary['counts'])

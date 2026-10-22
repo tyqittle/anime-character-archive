@@ -125,7 +125,17 @@ function refreshCharacters(){
     img.src=info.image;img.alt=info.zh||info.name;
     img.onerror=()=>{img.replaceWith(Object.assign(document.createElement('div'),{className:'fallback',textContent:'暂无预览图'}))};
     img.title=c.previewSource==='matching-live2d-animation-frame'?'当前皮肤真实 Live2D 截图':c.gameId==='azurlane'?'上游角色静态缩略图（非动态模型截图）':'从当前角色的 Spine 动画直接截取的预览画面';card.append(img);
-   }else{const placeholder=document.createElement('div');placeholder.className='fallback';placeholder.textContent=c.gameId==='azurlane'?'暂无预览图 · 点击可播放':c.gameId==='browndust2'?'真实模型预览待生成':'暂无预览图';card.append(placeholder)}
+   }else{
+    const placeholder=document.createElement('div');
+    placeholder.className='fallback';
+    const failureLabels={'atlas-mismatch':'图集不匹配','timeout':'加载超时','blank-frame':'画面异常',
+      'source-missing':'源文件缺失','skeleton-error':'骨骼错误','render-error':'渲染失败'};
+    placeholder.textContent=c.previewFailureType?'暂无预览图 · '+(failureLabels[c.previewFailureType]||'待核验')
+      :c.gameId==='azurlane'?'暂无预览图 · 点击可播放'
+      :c.gameId==='browndust2'?'真实模型预览待生成':'暂无预览图';
+    if(c.previewFailureReason)placeholder.title=c.previewFailureReason;
+    card.append(placeholder);
+   }
    const label=document.createElement('span');label.className='nm';
    label.textContent=c.gameId==='browndust2'?(info.zh||c.name):(info.zh&&info.zh!==c.name?info.zh+' / '+c.name:c.name);
    card.append(label);

@@ -70,3 +70,8 @@ tests/smoke.mjs                     # 各模块语法和内容一致性测试
 ## 角色卡片性能预算（2026-10-22）
 
 动态目录可以超过两千条，但左侧每次只渲染分页内的卡片。缩略图卡片缓存为最多 420 个节点的 LRU；历史节点即使被从缓存移除，当前 DOM 仍正常展示，不会影响模型可见性。视觉上隐藏的辅助 `#characters` 下拉框至多渲染 640 条常驻选项，超出范围的具体选中角色可按需追加；页面顶部搜索和卡片仍能访问所有索引。选中高亮通过卡片的 `data-character-id` 更新，不再每次从整个目录重新筛选。这套策略按数据规模生效，对任何游戏一视同仁。
+
+
+## 动态预览失败记录（2026-10-22）
+
+所有游戏的失败截图记录使用 `scripts/preview_diagnostics.py` 的同一套分类：`atlas-mismatch`、`timeout`、`blank-frame`、`source-missing`、`skeleton-error`、`render-error`。截图合并脚本读取分片报告，在目录条目中只为真实失败的模型保存 `previewFailureType` 与 `previewFailureReason`，恢复真实预览后清除旧错误；审计 JSON 输出 `failedCaptures` 和 `failureSummary`。网页卡片只显示简短失败类型，原错误信息置于提示中，避免把所有失败粗暴显示为“没有图”，更不会用其他角色的图片代替。

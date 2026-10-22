@@ -433,3 +433,12 @@ assert.ok(animationListModule.includes('card.dataset.characterId===selectedId')&
   animationListModule.indexOf('// Keep a refreshable deep link')).includes('allCharacters.filter'),
  'Selection highlights should not rescan all games');
 assert.ok(animationListModule.includes('indexedCharacterSearch(c)'),'Search tokens must be cached per model');
+
+
+// Per-model preview failure reasons are independent of game type and must
+// never pass off an upstream thumbnail as a rendered model preview.
+const previewDiag=read('scripts/preview_diagnostics.py');
+assert.ok(previewDiag.includes('def failure_category')&&
+ previewDiag.includes('def read_capture_failures'));
+assert.ok(read('scripts/merge_newgame_previews.py').includes("'failedCaptures': failed_records"));
+assert.ok(read('assets/js/spine/catalog.js').includes('c.previewFailureReason'));
