@@ -60,28 +60,96 @@ jobs:
           dotnet run --project ./native-upstream/SpinePet/tools/skeleton-inspector/SkeletonInspector.csproj -c Release -- $skeleton $atlas
           if ($LASTEXITCODE -ne 0) { throw 'Upstream Spine 4.1 parser could not open the imported model' }
           Remove-Item ./native-integration-test -Recurse -Force
-      - name: Package original licensing, full corresponding source and website bridge
+      - name: Assemble minimal core, optional bridge and corresponding GPL source
         shell: pwsh
         run: |
-          Copy-Item -Path ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/README.md,./native-desktop/启动原生桌面立绘.cmd -Destination ./native-dist
-          New-Item -Path ./native-dist/res -ItemType Directory -Force | Out-Null
-          Copy-Item ./native-upstream/LICENSE ./native-dist/UPSTREAM-LICENSE-GPL-3.0.txt
-          Copy-Item ./native-upstream/NOTICE ./native-dist/UPSTREAM-NOTICE.txt
-          Copy-Item ./native-upstream/THIRD_PARTY_NOTICES.md ./native-dist/UPSTREAM-THIRD-PARTY-NOTICES.md
-          git -C native-upstream archive --format=zip --output="$env:GITHUB_WORKSPACE/native-dist/My_SpinePet-corresponding-source.zip" HEAD
-          if ($LASTEXITCODE -ne 0) { throw 'Cannot include GPL corresponding source' }
+          New-Item -ItemType Directory -Force -Path ./safe-release/core,./safe-release/bridge,./safe-release/source | Out-Null
+          Move-Item -Path ./native-dist/app -Destination ./safe-release/core/app
+          # No game models, custom PowerShell download scripts or protocol changes
+          # in the standalone desktop application download.
+          New-Item -ItemType Directory -Force -Path ./safe-release/core/res | Out-Null
+          # Upstream bundles optional Python and shell import tools. They are not
+          # required for Spine rendering or for manual .skel/.atlas/.png import.
+          foreach ($dir in @('./safe-release/core/app/Tools','./safe-release/core/app/tools')) {
+            if (Test-Path $dir) { Remove-Item $dir -Force -Recurse }
+          }
+          Copy-Item ./native-upstream/LICENSE ./safe-release/core/LICENSE-GPL-3.0.txt
+          Copy-Item ./native-upstream/NOTICE ./safe-release/core/NOTICE.txt
+          Copy-Item ./native-upstream/THIRD_PARTY_NOTICES.md ./safe-release/core/THIRD_PARTY_NOTICES.md
           @'
-          Upstream: KAIDO-YONAGI/My_SpinePet
-          Commit: 6690e986b4da31dc89337794bcef1b45e6531303
-          Source: https://github.com/KAIDO-YONAGI/My_SpinePet/tree/6690e986b4da31dc89337794bcef1b45e6531303
-          Renderer: Spine C# 4.1 / Direct3D 11 / DirectComposition
-          Archive integration: ./Open-ArchiveCharacter.ps1 and ./Register-Bridge.ps1
-          This package does not contain game models. See README.md.
-          '@ | Set-Content -Path ./native-dist/SOURCE-ATTRIBUTION.txt -Encoding utf8
-      - name: Upload native client and bridge
+          Anime Character Archive — native SpinePet core (Windows x64)
+          Renderer source: KAIDO-YONAGI/My_SpinePet, GPL-3.0-or-later
+          Pinned upstream commit: 6690e986b4da31dc89337794bcef1b45e6531303
+          Launch: app/SpinePet.exe
+          The core contains NO archive website protocol registration, CMD or PowerShell launcher.
+          This executable is unsigned and has not been certified malware-free.
+          For model import use the upstream Add/Scan interface with licensed assets.
+          GPL corresponding source is provided as another artifact from this SAME build run.
+          See https://github.com/tyqittle/anime-character-archive/tree/main/native-desktop
+          '@ | Set-Content ./safe-release/core/README.txt -Encoding utf8
+
+          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/README.md -Destination ./safe-release/bridge
+          @'
+          OPTIONAL website bridge: READ ALL SCRIPTS BEFORE EXECUTING.
+          Extract these files into the SAME folder that contains the core's app/ directory.
+          This optional bridge downloads assets from a validated, fixed GitHub source and
+          registers the animecharacter:// URL scheme under HKCU.
+          It is not required to run the native SpinePet desktop renderer.
+          Avoid bypassing Chrome or Windows security warnings.
+          '@ | Set-Content ./safe-release/bridge/SECURITY-NOTES.txt -Encoding utf8
+
+          Copy-Item ./native-upstream/LICENSE ./safe-release/source/LICENSE-GPL-3.0.txt
+          git -C native-upstream archive --format=zip --output="$env:GITHUB_WORKSPACE/safe-release/source/My_SpinePet-corresponding-source.zip" HEAD
+          if ($LASTEXITCODE -ne 0) { throw 'Cannot provide GPL corresponding source' }
+          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1 -Destination ./safe-release/source
+      - name: Generate SHA-256 manifest and run security checks where supported
+        shell: pwsh
+        run: |
+          $core = (Resolve-Path ./safe-release/core).Path
+          $paths = @(Get-ChildItem $core -Recurse -File | Sort-Object FullName)
+          $hashes = @($paths | ForEach-Object {
+            $relative = [System.IO.Path]::GetRelativePath($core, $_.FullName).Replace('\\','/')
+            "$(Get-FileHash $_.FullName -Algorithm SHA256 | Select-Object -ExpandProperty Hash)  $relative"
+          })
+          $hashes | Set-Content ./safe-release/core/SHA256SUMS.txt -Encoding ascii
+          $signature = Get-AuthenticodeSignature ./safe-release/core/app/SpinePet.exe
+          "SpinePet.exe Authenticode: $($signature.Status)" | Tee-Object -FilePath ./safe-release/core/BUILD-SECURITY-REPORT.txt
+          "Source: KAIDO-YONAGI/My_SpinePet at 6690e986b4da31dc89337794bcef1b45e6531303" | Add-Content ./safe-release/core/BUILD-SECURITY-REPORT.txt
+          "Core binary executables:" | Add-Content ./safe-release/core/BUILD-SECURITY-REPORT.txt
+          @(Get-ChildItem $core -Recurse -File -Include *.exe | ForEach-Object {
+            "$([System.IO.Path]::GetRelativePath($core, $_.FullName)) SHA256=$((Get-FileHash $_.FullName -Algorithm SHA256).Hash)"
+          }) | Add-Content ./safe-release/core/BUILD-SECURITY-REPORT.txt
+          try {
+            $status = Get-MpComputerStatus -ErrorAction Stop
+            if ($status.AntivirusEnabled -and $status.RealTimeProtectionEnabled) {
+              Write-Host 'Microsoft Defender enabled; scanning core and optional bridge.'
+              Start-MpScan -ScanType CustomScan -ScanPath (Resolve-Path ./safe-release).Path -ErrorAction Stop
+              'Microsoft Defender custom scan completed. This is not a guarantee of safety.' | Add-Content ./safe-release/core/BUILD-SECURITY-REPORT.txt
+            } else {
+              'Microsoft Defender scanner NOT ACTIVE on build runner; security scan NOT VERIFIED.' | Add-Content ./safe-release/core/BUILD-SECURITY-REPORT.txt
+            }
+          } catch {
+            "Microsoft Defender scanning unavailable: $($_.Exception.Message)" | Add-Content ./safe-release/core/BUILD-SECURITY-REPORT.txt
+          }
+          # Do not claim that a clean CI run overrides a Chrome Safe Browsing block.
+      - name: Upload minimal native renderer
         uses: actions/upload-artifact@v4
         with:
-          name: anime-archive-native-spinepet-win-x64
-          path: native-dist/
+          name: native-spinepet-core-windows-x64
+          path: safe-release/core/
+          if-no-files-found: error
+          retention-days: 14
+      - name: Upload optional website bridge scripts
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-spinepet-optional-website-bridge
+          path: safe-release/bridge/
+          if-no-files-found: error
+          retention-days: 14
+      - name: Upload GPL corresponding source
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-spinepet-corresponding-source-GPL
+          path: safe-release/source/
           if-no-files-found: error
           retention-days: 14
