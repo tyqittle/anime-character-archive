@@ -75,11 +75,12 @@ jobs:
       - name: Assemble minimal core, optional bridge and corresponding GPL source
         shell: pwsh
         run: |
-          New-Item -ItemType Directory -Force -Path ./safe-release/core,./safe-release/bridge,./safe-release/source | Out-Null
+          New-Item -ItemType Directory -Force -Path ./safe-release/core,./safe-release/source | Out-Null
           Move-Item -Path ./native-dist/app -Destination ./safe-release/core/app
           # No game models, custom PowerShell download scripts or protocol changes
           # in the standalone desktop application download.
           New-Item -ItemType Directory -Force -Path ./safe-release/core/res | Out-Null
+          'SpinePet model directory. Place licensed Spine 4.1 models here; this file preserves the resource directory when unzipped.' | Set-Content ./safe-release/core/res/README.txt -Encoding utf8
           # Upstream bundles optional Python and shell import tools. They are not
           # required for Spine rendering or for manual .skel/.atlas/.png import.
           foreach ($dir in @('./safe-release/core/app/Tools','./safe-release/core/app/tools')) {
@@ -104,16 +105,6 @@ jobs:
           GPL corresponding source is provided as another artifact from this SAME build run.
           See https://github.com/tyqittle/anime-character-archive/tree/main/native-desktop
           '@ | Set-Content ./safe-release/core/README.txt -Encoding utf8
-
-          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/README.md -Destination ./safe-release/bridge
-          @'
-          OPTIONAL website bridge: READ ALL SCRIPTS BEFORE EXECUTING.
-          Extract these files into the SAME folder that contains the core's app/ directory.
-          This optional bridge downloads assets from a validated, fixed GitHub source and
-          registers the animecharacter:// URL scheme under HKCU.
-          It is not required to run the native SpinePet desktop renderer.
-          Avoid bypassing Chrome or Windows security warnings.
-          '@ | Set-Content ./safe-release/bridge/SECURITY-NOTES.txt -Encoding utf8
 
           Copy-Item ./native-upstream/LICENSE ./safe-release/source/LICENSE-GPL-3.0.txt
           git -C native-upstream archive --format=zip --output="$env:GITHUB_WORKSPACE/safe-release/source/My_SpinePet-corresponding-source.zip" HEAD
@@ -159,13 +150,6 @@ jobs:
         with:
           name: native-spinepet-core-windows-x64
           path: safe-release/core/
-          if-no-files-found: error
-          retention-days: 14
-      - name: Upload optional website bridge scripts
-        uses: actions/upload-artifact@v4
-        with:
-          name: native-spinepet-optional-website-bridge
-          path: safe-release/bridge/
           if-no-files-found: error
           retention-days: 14
       - name: Upload GPL corresponding source
