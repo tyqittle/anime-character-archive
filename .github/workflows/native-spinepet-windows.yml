@@ -63,9 +63,12 @@ jobs:
         shell: pwsh
         run: |
           & ./native-desktop/Patch-WheelZoom.ps1 -UpstreamRoot ./native-upstream
+          & ./native-desktop/Patch-RenderEnvelope.ps1 -UpstreamRoot ./native-upstream
           $engine = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeCharacterRenderEngine.cs -Raw
           $input = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeInputWindow.cs -Raw
-          if (-not $engine.Contains('private void OnNativeMouseWheel') -or -not $input.Contains('MouseWheelInput')) {
+          if (-not $engine.Contains('private void OnNativeMouseWheel') -or
+              -not $engine.Contains('NativeSpineBounds observed = state.Geometry.Bounds') -or
+              -not $input.Contains('MouseWheelInput')) {
             throw 'Native mouse wheel integration missing'
           }
       - name: Build actual upstream native Direct3D 11 + DirectComposition renderer
@@ -144,12 +147,23 @@ jobs:
           Copy-Item ./native-upstream/LICENSE ./safe-release/source/LICENSE-GPL-3.0.txt
           git -C native-upstream archive --format=zip --output="$env:GITHUB_WORKSPACE/safe-release/source/My_SpinePet-corresponding-source.zip" HEAD
           if ($LASTEXITCODE -ne 0) { throw 'Cannot provide GPL corresponding source' }
-          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/Patch-Upstream.ps1,./native-desktop/Patch-WheelZoom.ps1,./native-desktop/NativeArchiveBridge.cs -Destination ./safe-release/source
+          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/Patch-Upstream.ps1,./native-desktop/Patch-WheelZoom.ps1,./native-desktop/Patch-RenderEnvelope.ps1,./native-desktop/NativeArchiveBridge.cs,./native-desktop/NativeAutoUpdate.cs -Destination ./safe-release/source
           @'
           The distributed SpinePet.exe builds pinned upstream source plus NativeArchiveBridge.cs.
           Rebuild by checking out pinned upstream commit, running Patch-Upstream.ps1, then dotnet publish.
           Archive bridge and corresponding patch source are GPL-3.0-or-later.
           '@ | Set-Content ./safe-release/source/REBUILD-INSTRUCTIONS.txt -Encoding utf8
+      - name: Create Velopack self-updating installer and update packages
+        shell: pwsh
+        run: |
+          dotnet tool install --global vpk --version 1.2.161
+          if ($LASTEXITCODE -ne 0) { throw 'Pinned Velopack CLI installation failed' }
+          $version = "0.1.${{ github.run_number }}"
+          vpk pack --packId AnimeCharacterSpinePet --packVersion $version --packDir ./safe-release/core/app --mainExe SpinePet.exe --outputDir ./safe-release/velopack
+          if ($LASTEXITCODE -ne 0) { throw 'Velopack packaging failed' }
+          if (@(Get-ChildItem ./safe-release/velopack/*-Setup.exe).Count -lt 1) { throw 'Missing auto-update Setup.exe' }
+          if (@(Get-ChildItem ./safe-release/velopack/*-full.nupkg).Count -lt 1) { throw 'Missing full update package' }
+          if (-not (Test-Path ./safe-release/velopack/releases.win.json)) { throw 'Missing update feed' }
       - name: Generate SHA-256 manifest and run security checks where supported
         shell: pwsh
         run: |
@@ -187,6 +201,13 @@ jobs:
           path: safe-release/core/
           if-no-files-found: error
           retention-days: 14
+      - name: Upload verified-package candidates (not released until security audit)
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-spinepet-velopack-windows-x64
+          path: safe-release/velopack/
+          if-no-files-found: error
+          retention-days: 14
       - name: Upload GPL corresponding source
         uses: actions/upload-artifact@v4
         with:
@@ -206,6 +227,11 @@ jobs:
         with:
           name: native-spinepet-core-windows-x64
           path: native-core
+      - name: Download self-updating package for antivirus checks
+        uses: actions/download-artifact@v4
+        with:
+          name: native-spinepet-velopack-windows-x64
+          path: native-update-package
       - name: Verify core SHA-256 manifest
         shell: bash
         run: |
@@ -241,5 +267,34 @@ jobs:
         shell: bash
         run: |
           clamscan --version
-          clamscan --recursive --infected native-core
+          clamscan --recursive --infected native-core native-update-package
           echo 'ClamAV found no matching known signatures. This does not prove software is safe.'
+
+  publish-updates:
+    # Only audited successful packages may enter the public auto-update feed.
+    needs: [build-native, security-audit]
+    if: github.ref == 'refs/heads/main'
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: native-velopack-release
+      cancel-in-progress: false
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: native-spinepet-velopack-windows-x64
+          path: release-files
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 9.0.x
+      - name: Publish release installer plus versioned update feed
+        shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          dotnet tool install --global vpk --version 1.2.161
+          if ($LASTEXITCODE -ne 0) { throw 'Missing pinned updater tool' }
+          $version = "0.1.${{ github.run_number }}"
+          vpk upload github --repoUrl "https://github.com/${{ github.repository }}" --token "$env:GITHUB_TOKEN" --publish --releaseName "SpinePet Desktop $version" --tag "desktop-v$version" --outputDir ./release-files
+          if ($LASTEXITCODE -ne 0) { throw 'GitHub release upload failed; no update was published' }
