@@ -41,6 +41,8 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
   previews:
+    # Importer-only fixes do not need another full browser capture batch.
+    if: github.event_name == 'workflow_dispatch' || contains(toJSON(github.event.commits), 'scripts/repair_missing_previews.mjs') || contains(toJSON(github.event.commits), 'data/static-source-plan.json')
     runs-on: ubuntu-latest
     timeout-minutes: 30
     strategy:
@@ -76,7 +78,7 @@ jobs:
           if-no-files-found: warn
   publish-previews:
     needs: previews
-    if: always()
+    if: always() && needs.previews.result == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 12
     permissions:

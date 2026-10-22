@@ -28,8 +28,10 @@ def main():
         data=json.loads(manifest.read_text('utf-8'))
         for character in data['characters']:
             candidate=incoming/'webps'/filename(character)
-            if candidate.is_file() and verified_file(character,incoming/'webps') is not None:
+            candidate_metadata={k:v for k,v in character.items() if k not in ('previewSha256','previewWidth','previewHeight')}
+            if candidate.is_file() and verified_file(candidate_metadata,incoming/'webps') is not None:
                 shutil.copyfile(candidate,ROOT/filename(character));added+=1
+                for field in ('previewSha256','previewWidth','previewHeight'):character.pop(field,None)
             if apply_verified_preview(character):
                 character.pop('previewFailureType',None);character.pop('previewFailureReason',None)
             elif character['id'] in failures:

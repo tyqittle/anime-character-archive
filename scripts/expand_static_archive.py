@@ -38,15 +38,16 @@ def discover_wiki():
     try:
         base='https://iopwiki.com/api.php'
         result=api(base,list='categorymembers',cmtitle='Category:GFL2 Dolls',cmlimit='max')
-        titles=[p['title'].removeprefix('GFL2:') for p in result.get('query',{}).get('categorymembers',[])]
-        for offset in range(0,len(titles),40):
-            batch=titles[offset:offset+40]
+        titles=[re.sub(r'\s*\(GFL2\)$','',p['title'].removeprefix('GFL2:')) for p in result.get('query',{}).get('categorymembers',[]) if p.get('ns',0)==0]
+        if not titles: raise ValueError('source returned an empty character roster')
+        for offset in range(0,len(titles),20):
+            batch=titles[offset:offset+20]
             found=api(base,prop='imageinfo',iiprop='url|size',
-                      titles='|'.join('File:'+name+'_Whole.png' for name in batch))
+                      titles='|'.join('File:'+name+suffix for name in batch for suffix in ['_Whole.png','_whole.png']))
             for page in found.get('query',{}).get('pages',{}).values():
                 infos=page.get('imageinfo',[])
                 if not infos: continue
-                name=re.sub(r'^File:|_Whole\.png$','',page['title'],flags=re.I)
+                name=re.sub(r'^File:|[ _]Whole\.png$','',page['title'],flags=re.I)
                 ident='gfl2-'+re.sub(r'[^a-z0-9]+','-',name.lower()).strip('-')
                 records.append({'id':ident,'gameId':'gfl2','name':name,'characterKey':name,
                                 'url':infos[0]['url'],'source':infos[0].get('descriptionurl',base)})
@@ -59,7 +60,7 @@ def discover_wiki():
             found=api(base,list='allimages',aiprefix='角色_',ailimit='max',
                       aiprop='url|size',**continuation)
             for image in found.get('query',{}).get('allimages',[]):
-                match=re.fullmatch(r'角色_(.+)_立绘\.png',image['name'])
+                match=re.fullmatch(r'角色[ _](.+)[ _]立绘\.png',image['name'])
                 if not match: continue
                 name=match[1]
                 ident='wutheringwaves-'+hashlib.sha1(name.encode()).hexdigest()[:12]
@@ -67,6 +68,8 @@ def discover_wiki():
                                 'url':image['url'],'source':image.get('descriptionurl',base)})
             continuation=found.get('continue',{})
             if not continuation: break
+        if not any(r['gameId']=='wutheringwaves' for r in records):
+            raise ValueError('source returned no full-art files')
     except Exception as exc:
         errors.append({'gameId':'wutheringwaves','error':str(exc)})
     return records, errors
@@ -124,6 +127,8 @@ def main():
     by_name={(row['gameId'],row.get('zh') or row.get('characterKey')) for row in catalog['characters']}
     pending,seen_ids,seen_sources=[],set(),set()
     for entry in plan:
+        entry=dict(entry)
+        entry['characterKey']=known_keys.get((entry['gameId'],entry['characterKey'].casefold()),entry['characterKey'])
         url=source_url(entry)
         if entry['id'] in by_id or canonical(url) in by_source: continue
         # Wiki aliases are resolved by the source's character name.
