@@ -3,7 +3,7 @@
  if(!new URLSearchParams(location.search).has('desktop'))return;
  const host=window.desktopHost;
  if(!host||typeof host.setInteractive!=='function')return;
- let interactive=null,pressed=false,lastInspection=0,cached=false;
+ let interactive=null,pressed=false;
  const notify=hit=>{
   const next=Boolean(hit||pressed);
   if(interactive===next)return;
@@ -16,30 +16,15 @@
   if(!canvas)return false;
   const rect=canvas.getBoundingClientRect();
   if(!contains(rect,x,y))return false;
-  // A conservative viewport-space hit region prevents a full-screen transparent
-  // window from blocking desktop icons. The WebGL pixel test narrows it further
-  // where reading the presented framebuffer is supported.
+  // Use a bounded, model-relative region for interaction. WebGL readPixels
+  // on the default framebuffer can stall the GPU or return discarded pixels.
   const h=Math.max(1,rect.height);
   const dx=typeof viewOffsetX==='number'?viewOffsetX:0;
   const dy=typeof viewOffsetY==='number'?viewOffsetY:0;
-  const xx=rect.left+rect.width/2+dx,yy=rect.top+rect.height/2+dy;
-  const near=Math.abs(x-xx)<Math.min(300,h*.28)&&Math.abs(y-yy)<Math.min(410,h*.37);
-  if(!near)return false;
-  const now=performance.now();
-  if(now-lastInspection<65)return cached||near;
-  lastInspection=now;
-  try{
-   const gl=canvas.getContext('webgl2')||canvas.getContext('webgl')||canvas.getContext('experimental-webgl');
-   if(!gl)return near;
-   const pixel=new Uint8Array(4);
-   const px=Math.min(canvas.width-1,Math.max(0,Math.floor((x-rect.left)/rect.width*canvas.width)));
-   const py=Math.min(canvas.height-1,Math.max(0,Math.floor((rect.bottom-y)/rect.height*canvas.height)));
-   gl.readPixels(px,py,1,1,gl.RGBA,gl.UNSIGNED_BYTE,pixel);
-   // A zero alpha can also mean the default framebuffer was discarded
-   // after compositing. Keep the model's bounded fallback hit area.
-   cached=pixel[3]>=24;
-   return cached||near;
-  }catch{return near}
+  const z=typeof viewZoom==='number'?viewZoom:1;
+  const cx=rect.left+rect.width/2+dx,cy=rect.top+rect.height/2+dy;
+  return Math.abs(x-cx)<Math.min(330,h*.45*z)
+    &&Math.abs(y-cy)<Math.min(430,h*.60*z);
  }
  // On Windows Electron forwards mousemove even while the whole overlay is
  // click-through (setIgnoreMouseEvents(true,{forward:true})).
