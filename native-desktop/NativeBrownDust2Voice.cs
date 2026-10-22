@@ -71,7 +71,7 @@ public sealed partial class App
             int sequence = ++_brownDust2VoiceSequence;
             string basename = "Char" + clipCode + "_BattleReady_" + index + ".wav";
             string localDir = Path.Combine(
-                AppPaths.LocalDataDirectory, "bd2-voice-cache", code, language);
+                AppPaths.ResourceDirectory, ".bd2-voice-cache", code, language);
             string cached = Path.Combine(localDir, basename);
             if (!File.Exists(cached))
             {
