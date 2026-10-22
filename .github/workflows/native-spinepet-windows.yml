@@ -89,6 +89,14 @@ jobs:
           $skinAtlas = @(Get-ChildItem -Path ./native-integration-test/res -Recurse -Filter 'c010_03_00.atlas')[0].FullName
           dotnet run --project ./native-upstream/SpinePet/tools/skeleton-inspector/SkeletonInspector.csproj -c Release -- $skinSkeleton $skinAtlas
           if ($LASTEXITCODE -ne 0) { throw 'Costume Spine 4.1 parser failed' }
+          # Regression: catalog incorrectly labeled this as 4.0/unverified,
+          # while its real .skel header reports Spine 4.1.20.
+          & ./native-integration-test/Open-ArchiveCharacter.ps1 -CharacterId c113_01 -DownloadOnly
+          if ($LASTEXITCODE -ne 0) { throw 'Misclassified c113_01 costume import failed' }
+          $realSkeleton = @(Get-ChildItem -Path ./native-integration-test/res -Recurse -Filter 'c113_01_00.skel')[0].FullName
+          $realAtlas = @(Get-ChildItem -Path ./native-integration-test/res -Recurse -Filter 'c113_01_00.atlas')[0].FullName
+          dotnet run --project ./native-upstream/SpinePet/tools/skeleton-inspector/SkeletonInspector.csproj -c Release -- $realSkeleton $realAtlas
+          if ($LASTEXITCODE -ne 0) { throw 'Actual c113_01 Spine 4.1.20 parser validation failed' }
           Remove-Item ./native-integration-test -Recurse -Force
       - name: Assemble minimal core, optional bridge and corresponding GPL source
         shell: pwsh
