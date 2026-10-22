@@ -13,7 +13,7 @@ $changes = @(
     @('        base.OnStartup(e);', '        base.OnStartup(e);' + "`n" + '        AcceptArchiveStartupArgs(e.Args);'),
     @('        SynchronizeDiscoveredResources(resourceDiscovery);', '        _archiveDiscovery = resourceDiscovery;' + "`n" + '        SynchronizeDiscoveredResources(resourceDiscovery);'),
     @('        _ = RestoreCharactersAsync();','        _ = RestoreArchiveCharactersAsync();'),
-    @('        _mainWindow.Show();', '        _mainWindow.Show();' + "`n" + '        Dispatcher.BeginInvoke(new Action(OfferArchiveProtocolRegistration));' + "`n" + '        Dispatcher.BeginInvoke(new Action(() => _ = CheckArchiveUpdatesAsync()));'),
+    @('        _mainWindow.Show();', '        _mainWindow.Show();' + "`n" + '        Dispatcher.BeginInvoke(new Action(OfferArchiveProtocolRegistration));' + "`n" + '        Dispatcher.BeginInvoke(new Action(StartArchiveUpdateLoop));'),
     @('                            mainWindow.SwitchToConfigMode();','                            mainWindow.SwitchToConfigMode();' + "`n" + '                            _ = ShowArchiveRequestAsync();')
 )
 foreach ($change in $changes) {
@@ -35,7 +35,7 @@ if (-not $text.Contains('AcceptArchiveStartupArgs(e.Args);')) {
 if (-not $text.Contains('OfferArchiveProtocolRegistration')) {
     $old = '        _mainWindow.Show();'
     if (-not $text.Contains($old)) { throw 'Missing MainWindow.Show hook' }
-    $text = $text.Replace($old, $old + "`r`n" + '        Dispatcher.BeginInvoke(new Action(OfferArchiveProtocolRegistration));' + "`r`n" + '        Dispatcher.BeginInvoke(new Action(() => _ = CheckArchiveUpdatesAsync()));')
+    $text = $text.Replace($old, $old + "`r`n" + '        Dispatcher.BeginInvoke(new Action(OfferArchiveProtocolRegistration));' + "`r`n" + '        Dispatcher.BeginInvoke(new Action(StartArchiveUpdateLoop));')
 }
 if (-not $text.Contains('_ = ShowArchiveRequestAsync();')) {
     $old = '                            mainWindow.SwitchToConfigMode();'
@@ -46,7 +46,7 @@ if (-not ($text.Contains('AcceptArchiveStartupArgs(e.Args);') -and
           $text.Contains('OfferArchiveProtocolRegistration') -and
           $text.Contains('_ = ShowArchiveRequestAsync();') -and
           $text.Contains('RestoreArchiveCharactersAsync()') -and
-          $text.Contains('CheckArchiveUpdatesAsync()'))) {
+          $text.Contains('StartArchiveUpdateLoop'))) {
     throw 'Native website protocol boot hooks could not be applied'
 }
 [System.IO.File]::WriteAllText($source, $text, [System.Text.UTF8Encoding]::new($false))
