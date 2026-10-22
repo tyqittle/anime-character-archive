@@ -9,6 +9,7 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using Microsoft.Win32;
 using SpinePet.Infrastructure;
+using SpinePet.Infrastructure.Import;
 using SpinePet.Services;
 
 namespace SpinePet;
@@ -173,11 +174,11 @@ public sealed partial class App
             matched = true;
         }
         if (!matched) throw new InvalidDataException($"Character {id} not found");
-        if (found.GetProperty("gameId").GetString() != "nikke" ||
-            found.GetProperty("spineVersion").GetString() != "4.1" ||
-            (found.TryGetProperty("versionUnverified", out var unverified) &&
-             unverified.ValueKind == JsonValueKind.True))
-            throw new InvalidDataException("Native renderer currently supports verified NIKKE Spine 4.1 only");
+        // Catalog metadata can be stale: c113_01 was tagged as Spine 4.0
+        // while its real .skel header reports 4.1.20. Never trust catalog
+        // "spineVersion" as proof of binary compatibility.
+        if (found.GetProperty("gameId").GetString() != "nikke")
+            throw new InvalidDataException("The native client currently supports NIKKE Spine models only.");
 
         string modelUrl = found.GetProperty("base").GetString() ?? "";
         if (!modelUrl.StartsWith(TrustedNikke + id + "/", StringComparison.Ordinal) ||
@@ -204,6 +205,9 @@ public sealed partial class App
         string atlas = Path.Combine(standing, stem + ".atlas");
         if (File.Exists(skeleton) && File.Exists(atlas))
         {
+            // Always verify the REAL binary, including previously imported files.
+            // Leave older 4.0 models untouched if a user imported them by hand.
+            SpineSkeletonCompatibility.EnsureSupported(skeleton);
             string[] pages = AtlasImagePages(await File.ReadAllTextAsync(atlas));
             if (pages.All(page => File.Exists(Path.Combine(standing, page))))
                 return stem;
@@ -225,7 +229,22 @@ public sealed partial class App
             byte[] skeletonBytes = await ArchiveHttp.GetByteArrayAsync(modelUrl + ".skel");
             if (skeletonBytes.Length is < 256 or > 30_000_000)
                 throw new InvalidDataException("Unexpected skeleton size");
-            await File.WriteAllBytesAsync(Path.Combine(temporary, stem + ".skel"), skeletonBytes);
+            string skeletonTemp = Path.Combine(temporary, stem + ".skel");
+            await File.WriteAllBytesAsync(skeletonTemp, skeletonBytes);
+            // Version detection uses the official upstream Spine 4.1 parser,
+            // not inaccurate website metadata or spoofed version strings.
+            try
+            {
+                SpineSkeletonCompatibility.EnsureSupported(skeletonTemp);
+            }
+            catch (InvalidDataException exception)
+            {
+                throw new InvalidDataException(
+                    "这个模型的真实 Spine 骨骼版本不受当前原生 4.1 运行时支持。"
+                    + " 该文件没有损坏，网页播放器仍可播放。"
+                    + " 原始诊断：" + exception.Message,
+                    exception);
+            }
             await File.WriteAllBytesAsync(Path.Combine(temporary, stem + ".atlas"), atlasBytes);
             string folderUrl = modelUrl[..(modelUrl.LastIndexOf('/') + 1)];
             foreach (string page in pages)
