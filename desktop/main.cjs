@@ -40,7 +40,7 @@ else{
  app.on('open-url',(event,url)=>{event.preventDefault();const id=idFromProtocol(url);if(id)applyCharacter(id)});
 }
 const desktopCSS=`
-html,body,.wrap,.stage,#player,.spine-player,.spine-player-container{background:transparent!important;background-color:transparent!important;box-shadow:none!important;border:0!important}
+html,body,.wrap,.stage,#player,.spine-player,.spine-player-container,.spine-player-canvas,.spine-player-content{background:none!important;background-image:none!important;background-color:transparent!important;box-shadow:none!important;border:0!important;border-radius:0!important;outline:0!important}\nhtml::before,html::after,body::before,body::after,.stage::before,.stage::after{display:none!important;content:none!important}
 html,body{width:100%!important;height:100%!important;margin:0!important;padding:0!important;overflow:hidden!important}
 .wrap{display:block!important;width:100%!important;height:100%!important;max-width:none!important;min-height:0!important;margin:0!important;padding:0!important}
 .stage{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;margin:0!important;padding:0!important;overflow:hidden!important}
