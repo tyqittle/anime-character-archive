@@ -95,7 +95,7 @@ jobs:
               -not $surface.Contains('right <= PixelWidth - AnchorPixelX') -or
               -not $silhouette.Contains('float halfCell = cellSize * 0.38f / pixelScale') -or
               -not $engine.Contains('NativeDesktopVoiceRelay.NotifyClicked(') -or
-              -not $voice.Contains('Char" + code + "_BattleReady_') -or
+              -not $voice.Contains('Char" + clipCode + "_BattleReady_') -or
               -not $app.Contains('InitializeBrownDust2Voice();') -or
               -not $input.Contains('MouseWheelInput')) {
             throw 'Native mouse hit regions, auto-sizing and BD2 voice integration missing'
