@@ -23,8 +23,12 @@ const SAME_ORIGIN=location.origin;
 const warn=document.getElementById('warning');
 let app=null,model=null,currentId='',currentGeneration=0,baseScale=1,zoom=1,offsetX=0,offsetY=0,initError='';
 let queuedLoad=null,readyId='',loadStartedAt=0;
-const lowPower=(navigator.hardwareConcurrency||8)<=4||(navigator.deviceMemory||8)<=4;
-const targetFPS=lowPower?30:45;
+// Avoid uneven frame pacing on standard 60 Hz displays. 45 FPS looks juddery
+// even with a healthy WebGL renderer. Cap only genuinely constrained devices.
+const lowPower=(Number(navigator.deviceMemory)>0&&navigator.deviceMemory<=2)
+ ||(Number(navigator.hardwareConcurrency)>0&&navigator.hardwareConcurrency<=2)
+ ||navigator.connection?.saveData===true;
+const targetFPS=lowPower?30:60;
 // Keep only the final click in a burst. Never display an older asynchronous result.
 function requestLoad(name,id,url){
  if(queuedLoad)clearTimeout(queuedLoad);
