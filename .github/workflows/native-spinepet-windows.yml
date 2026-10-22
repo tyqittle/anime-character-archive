@@ -55,7 +55,9 @@ jobs:
           # LASTEXITCODE is stale after non-native scripts and must not be checked here.
           $patched = Get-Content ./native-upstream/SpinePet/src/SpinePet/App.xaml.cs -Raw
           $patched.Split([char]10) | Where-Object { $_ -match 'Archive|OnStartup|StartActivation' } | ForEach-Object { Write-Host $_ }
-          if (-not $patched.Contains('RestoreArchiveCharactersAsync()') -or
+          $bd2Bridge = Get-Content ./native-upstream/SpinePet/src/SpinePet/NativeBrownDust2Bridge.cs -Raw
+          if (-not $bd2Bridge.Contains('EnsureBrownDust2DownloadedAsync') -or
+              -not $patched.Contains('RestoreArchiveCharactersAsync()') -or
               -not $patched.Contains('AcceptArchiveStartupArgs(e.Args)')) {
             throw 'Native one-click import integration did not apply'
           }
@@ -94,6 +96,22 @@ jobs:
           $atlas = @(Get-ChildItem -Path ./native-integration-test/res -Recurse -Filter 'c015_00.atlas')[0].FullName
           dotnet run --project ./native-upstream/SpinePet/tools/skeleton-inspector/SkeletonInspector.csproj -c Release -- $skeleton $atlas
           if ($LASTEXITCODE -ne 0) { throw 'Upstream Spine 4.1 parser could not open the imported model' }
+          # Reuse the *actual pinned BD2 assets* with the upstream 4.1 reader.
+          # A catalog label is not proof that its binary or atlas is compatible.
+          $bd2 = (Get-Content ./data/spine-bd2-characters.json -Raw | ConvertFrom-Json).characters |
+            Where-Object { $_.id -eq 'bd2-char000201' } | Select-Object -First 1
+          if (-not $bd2) { throw 'Missing pinned Brown Dust 2 source record' }
+          $bd2Base = [string]$bd2.base
+          if (-not $bd2Base.StartsWith('https://raw.githubusercontent.com/Zormolo/Brown-Dust-2-Assets/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/')) {
+            throw 'Brown Dust 2 test source is not pinned'
+          }
+          New-Item -ItemType Directory -Path ./native-integration-test/bd2 -Force | Out-Null
+          foreach ($suffix in @('.skel','.atlas','.png')) {
+            Invoke-WebRequest -UseBasicParsing -Uri ($bd2Base+$suffix) -OutFile ('./native-integration-test/bd2/char000201'+$suffix)
+            if ($LASTEXITCODE -ne 0) { throw 'Brown Dust 2 sample download failed' }
+          }
+          dotnet run --project ./native-upstream/SpinePet/tools/skeleton-inspector/SkeletonInspector.csproj -c Release -- ./native-integration-test/bd2/char000201.skel ./native-integration-test/bd2/char000201.atlas
+          if ($LASTEXITCODE -ne 0) { throw 'Brown Dust 2 Spine 4.1 reader compatibility test failed' }
           # Second actual 4.1 costume ID: previous code incorrectly accepted
           # only cNNN and rejected cNNN_XX variants altogether.
           & ./native-integration-test/Open-ArchiveCharacter.ps1 -CharacterId c010_03 -DownloadOnly
@@ -148,7 +166,7 @@ jobs:
           Copy-Item ./native-upstream/LICENSE ./safe-release/source/LICENSE-GPL-3.0.txt
           git -C native-upstream archive --format=zip --output="$env:GITHUB_WORKSPACE/safe-release/source/My_SpinePet-corresponding-source.zip" HEAD
           if ($LASTEXITCODE -ne 0) { throw 'Cannot provide GPL corresponding source' }
-          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/Patch-Upstream.ps1,./native-desktop/Patch-WheelZoom.ps1,./native-desktop/Patch-RenderEnvelope.ps1,./native-desktop/NativeArchiveBridge.cs,./native-desktop/NativeAutoUpdate.cs -Destination ./safe-release/source
+          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/Patch-Upstream.ps1,./native-desktop/Patch-WheelZoom.ps1,./native-desktop/Patch-RenderEnvelope.ps1,./native-desktop/NativeArchiveBridge.cs,./native-desktop/NativeBrownDust2Bridge.cs,./native-desktop/NativeAutoUpdate.cs -Destination ./safe-release/source
           @'
           The distributed SpinePet.exe builds pinned upstream source plus NativeArchiveBridge.cs.
           Rebuild by checking out pinned upstream commit, running Patch-Upstream.ps1, then dotnet publish.
