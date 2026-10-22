@@ -140,8 +140,27 @@ var
   Payload, Stub, LogPath, Arguments, UpdateExe, VersionFile: String;
   Code, Attempt: Integer;
   Ready: Boolean;
+  ProgressPage: TOutputProgressWizardPage;
 begin
+  if CurStep = ssInstall then
+  begin
+    // Show an indeterminate activity indicator while extracting the payload.
+    WizardForm.StatusLabel.Caption := '正在准备安装包...';
+    WizardForm.ProgressGauge.Style := npbstMarquee;
+    Exit;
+  end;
   if CurStep <> ssPostInstall then Exit;
+
+  // A nested Velopack bootstrapper is not bound to the lifetime of its first
+  // process. Give users visible progress and pump messages during polling.
+  ProgressPage := CreateOutputProgressPage(
+    '正在安装次元桌面立绘',
+    '程序将安装到您选择的位置，角色素材不会被覆盖。');
+  ProgressPage.ProgressBar.Style := npbstMarquee;
+  ProgressPage.SetText('正在启动安装引擎...', '请勿关闭安装器。');
+  ProgressPage.SetProgress(0, 100);
+  ProgressPage.Show;
+  try
   try
     // Wizard pages are skipped in /VERYSILENT mode. Still read and verify
     // their values so the automated test exercises the same installation.
@@ -169,8 +188,10 @@ begin
       DeleteFile(LogPath);
     Arguments := '--silent --verbose --log "' + LogPath +
       '" --installto "' + ProgramFolder + '"';
+    Log('Native Velopack GUI bootstrap started; program=' + ProgramFolder +
+      '; models=' + ModelFolder);
     if not Exec(Payload, Arguments, '',
-      SW_HIDE, ewWaitUntilTerminated, Code) then
+      SW_HIDE, ewNoWait, Code) then
       RaiseException('原生安装程序无法启动，Windows 错误：' + IntToStr(Code) +
         '；内部日志：' + LogPath);
 
@@ -186,7 +207,9 @@ begin
     UpdateExe := AddBackslash(ProgramFolder) + 'Update.exe';
     VersionFile := AddBackslash(ProgramFolder) + 'current\sq.version';
     Ready := False;
-    for Attempt := 1 to 150 do
+    // Bound the entire inner installation to 300 seconds, checking every
+    // 200ms. Verify the fresh success log AND installed update structure.
+    for Attempt := 0 to 1500 do
     begin
       if FileExists(AddBackslash(ProgramFolder) + 'current\SpinePet.exe') and
          FileExists(UpdateExe) and
@@ -196,13 +219,22 @@ begin
         Ready := True;
         Break;
       end;
-      Sleep(1000);
+      if (Attempt mod 25) = 0 then
+      begin
+        ProgressPage.SetText('正在安装与验证主程序...',
+          '已等待 ' + IntToStr(Attempt div 5) +
+          ' 秒。详细日志：' + LogPath);
+        Log('Native Velopack GUI progress: ' + IntToStr(Attempt div 5) + ' seconds');
+      end;
+      // SetProgress processes window messages. The marquee avoids
+      // inventing a percentage during a variable-length native install.
+      ProgressPage.SetProgress(0, 100);
+      Sleep(200);
     end;
     if not Ready then
-      RaiseException('安装程序未完成或文件不完整。请检查日志：' + LogPath +
-        '（启动器返回码：' + IntToStr(Code) + '）');
-    // Trust the verified final files AND native installer completion log,
-    // not a short-lived launcher that can return a non-zero code.
+      RaiseException('300 秒内未能确认安装完成。请检查日志：' + LogPath +
+        '。不要手动覆盖已有的 current 目录。');
+    Log('Native Velopack GUI installation verified: executable, updater, version, log');
 
     // The app reads this exact HKCU key before initializing its static
     // ResourceDirectory. DO NOT alter/delete this key during auto-update.
@@ -216,10 +248,15 @@ begin
       MsgBox('程序安装成功，但无法自动启动。请在以下目录手动打开 SpinePet.exe：'
         + #13#10 + ProgramFolder, mbInformation, MB_OK);
   except
-    // Scripted MsgBox can stall /VERYSILENT Windows CI indefinitely.
-    // The real errors remain in Inno /LOG and Velopack's log.
+    // Both Inno /LOG and the inner Velopack log remain available on failure.
+    Log('Native Velopack GUI installation failed: ' + GetExceptionMessage);
     if not WizardSilent() then
       MsgBox('安装未完整完成：' + GetExceptionMessage, mbError, MB_OK);
     RaiseException('安装失败：' + GetExceptionMessage);
+  end;
+  finally
+    ProgressPage.Hide;
+    ProgressPage.Free;
+    WizardForm.ProgressGauge.Style := npbstNormal;
   end;
 end;
