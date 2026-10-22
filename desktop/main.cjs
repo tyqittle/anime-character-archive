@@ -46,7 +46,8 @@ html,body{width:100%!important;height:100%!important;margin:0!important;padding:
 .stage{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;margin:0!important;padding:0!important;overflow:hidden!important}
 .side,.head,.stage-toolbar,.stage-hint,#status,#loadNotice,footer,.archive-friendlinks,.advanced-tools{display:none!important}
 #player{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;min-height:0!important;padding:0!important}
-#player canvas{background:transparent!important}\n#player iframe{border:0!important;background:transparent!important}
+#player canvas{background:transparent!important}
+#player iframe{border:0!important;background:transparent!important}
 #placeholder{background:transparent!important;color:#eee!important;text-shadow:0 1px 4px #111}
 #desktopDrag{display:none!important}
 
