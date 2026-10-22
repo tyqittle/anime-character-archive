@@ -15,13 +15,14 @@
       "characterName": "abeikelongbi",
       "skinCode": "abeikelongbi_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/abeikelongbi_3/abeikelongbi_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/abeikelongbi_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-abeikelongbi_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/abeikelongbi_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-abeikelongbi_3_hx",
@@ -37,7 +38,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-abeikelongbi_3_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-adaerbote_2",
@@ -47,13 +49,14 @@
       "characterName": "adaerbote",
       "skinCode": "adaerbote_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/adaerbote_2/adaerbote_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/adaerbote_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-adaerbote_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/adaerbote_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-adaerbote_3",
@@ -70,7 +73,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-adaerbote_3.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-aerbien_3",
@@ -80,13 +84,14 @@
       "characterName": "aerbien",
       "skinCode": "aerbien_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aerbien_3/aerbien_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/aerbien_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-aerbien_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aerbien_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-aersasi_2",
@@ -96,13 +101,14 @@
       "characterName": "aersasi",
       "skinCode": "aersasi_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aersasi_2/aersasi_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/aersasi_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-aersasi_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aersasi_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-aersasi_3",
@@ -127,13 +133,14 @@
       "characterName": "aidang",
       "skinCode": "aidang_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aidang_2/aidang_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/aidang_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-aidang_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aidang_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-aierdeliqi_4",
@@ -143,13 +150,14 @@
       "characterName": "埃尔德里奇",
       "skinCode": "aierdeliqi_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aierdeliqi_4/aierdeliqi_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/aierdeliqi_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-aierdeliqi_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aierdeliqi_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-aierdeliqi_5",
@@ -159,13 +167,14 @@
       "characterName": "埃尔德里奇",
       "skinCode": "aierdeliqi_5",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aierdeliqi_5/aierdeliqi_5.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/aierdeliqi_5.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-aierdeliqi_5.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aierdeliqi_5",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-aijier_2",
@@ -175,13 +184,14 @@
       "characterName": "埃吉尔",
       "skinCode": "aijier_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aijier_2/aijier_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/aijier_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-aijier_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aijier_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-aijier_3",
@@ -191,13 +201,14 @@
       "characterName": "埃吉尔",
       "skinCode": "aijier_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aijier_3/aijier_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/aijier_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-aijier_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aijier_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-aijier_4",
@@ -224,13 +235,14 @@
       "characterName": "ailunsamuna",
       "skinCode": "ailunsamuna_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/ailunsamuna_2/ailunsamuna_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/ailunsamuna_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-ailunsamuna_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/ailunsamuna_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-ailunsamuna_2_hx",
@@ -246,7 +258,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-ailunsamuna_2_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-ailunsamuna_3",
@@ -256,13 +269,14 @@
       "characterName": "ailunsamuna",
       "skinCode": "ailunsamuna_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/ailunsamuna_3/ailunsamuna_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/ailunsamuna_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-ailunsamuna_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/ailunsamuna_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-aimierbeierding_2",
@@ -272,13 +286,14 @@
       "characterName": "aimierbeierding",
       "skinCode": "aimierbeierding_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aimierbeierding_2/aimierbeierding_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/aimierbeierding_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-aimierbeierding_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aimierbeierding_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-aimierbeierding_3",
@@ -288,13 +303,14 @@
       "characterName": "aimierbeierding",
       "skinCode": "aimierbeierding_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aimierbeierding_3/aimierbeierding_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/aimierbeierding_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-aimierbeierding_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aimierbeierding_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-aimierbeierding_3_hx",
@@ -310,7 +326,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-aimierbeierding_3_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-aimudeng_2",
@@ -320,13 +337,14 @@
       "characterName": "aimudeng",
       "skinCode": "aimudeng_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aimudeng_2/aimudeng_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/aimudeng_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-aimudeng_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aimudeng_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-aimudeng_2_hx",
@@ -342,7 +360,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-aimudeng_2_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-aisaikesi_4",
@@ -352,13 +371,14 @@
       "characterName": "aisaikesi",
       "skinCode": "aisaikesi_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aisaikesi_4/aisaikesi_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/aisaikesi_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-aisaikesi_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/aisaikesi_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-ankeleiqi_2",
@@ -368,13 +388,14 @@
       "characterName": "ankeleiqi",
       "skinCode": "ankeleiqi_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/ankeleiqi_2/ankeleiqi_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/ankeleiqi_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-ankeleiqi_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/ankeleiqi_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-ankeleiqi_2_hx",
@@ -390,7 +411,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-ankeleiqi_2_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-ankeleiqi_3",
@@ -400,13 +422,14 @@
       "characterName": "ankeleiqi",
       "skinCode": "ankeleiqi_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/ankeleiqi_3/ankeleiqi_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/ankeleiqi_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-ankeleiqi_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/ankeleiqi_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-ankeleiqi_4",
@@ -446,13 +469,14 @@
       "characterName": "baerdimo",
       "skinCode": "baerdimo_5",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/baerdimo_5/baerdimo_5.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/baerdimo_5.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-baerdimo_5.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/baerdimo_5",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-baerdimo_6",
@@ -462,13 +486,14 @@
       "characterName": "baerdimo",
       "skinCode": "baerdimo_6",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/baerdimo_6/baerdimo_6.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/baerdimo_6.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-baerdimo_6.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/baerdimo_6",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-baifeng_2",
@@ -493,13 +518,14 @@
       "characterName": "bailong",
       "skinCode": "bailong_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/bailong_3/bailong_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/bailong_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-bailong_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/bailong_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-banerwei_3",
@@ -526,13 +552,14 @@
       "characterName": "banrenma",
       "skinCode": "banrenma_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/banrenma_2/banrenma_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/banrenma_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-banrenma_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/banrenma_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-beianpudunii_2",
@@ -548,7 +575,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-beianpudunii_2.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-beierfasite_2",
@@ -558,13 +586,14 @@
       "characterName": "beierfasite",
       "skinCode": "beierfasite_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/beierfasite_2/beierfasite_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/beierfasite_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-beierfasite_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/beierfasite_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-beikaluolaina_2",
@@ -574,13 +603,14 @@
       "characterName": "beikaluolaina",
       "skinCode": "beikaluolaina_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/beikaluolaina_2/beikaluolaina_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/beikaluolaina_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-beikaluolaina_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/beikaluolaina_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-beikaluolaina_2_hx",
@@ -596,7 +626,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-beikaluolaina_2_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-beilaosenlin_2",
@@ -621,13 +652,14 @@
       "characterName": "标枪",
       "skinCode": "biaoqiang",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/biaoqiang/biaoqiang.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/biaoqiang.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-biaoqiang.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/biaoqiang",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-biaoqiang_3",
@@ -637,13 +669,14 @@
       "characterName": "标枪",
       "skinCode": "biaoqiang_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/biaoqiang_3/biaoqiang_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/biaoqiang_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-biaoqiang_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/biaoqiang_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-bisimai_2",
@@ -653,13 +686,14 @@
       "characterName": "bisimai",
       "skinCode": "bisimai_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/bisimai_2/bisimai_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/bisimai_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-bisimai_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/bisimai_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-bisimai_4",
@@ -686,13 +720,14 @@
       "characterName": "bola",
       "skinCode": "bola_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/bola_2/bola_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/bola_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-bola_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/bola_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-boyixi_2",
@@ -702,13 +737,14 @@
       "characterName": "boyixi",
       "skinCode": "boyixi_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/boyixi_2/boyixi_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/boyixi_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-boyixi_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/boyixi_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-bulaimodun_2",
@@ -718,13 +754,14 @@
       "characterName": "布莱默顿",
       "skinCode": "bulaimodun_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/bulaimodun_2/bulaimodun_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/bulaimodun_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-bulaimodun_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/bulaimodun_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-bulaimodun_4",
@@ -734,13 +771,14 @@
       "characterName": "布莱默顿",
       "skinCode": "bulaimodun_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/bulaimodun_4/bulaimodun_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/bulaimodun_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-bulaimodun_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/bulaimodun_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-bulaimodun_5",
@@ -750,13 +788,14 @@
       "characterName": "布莱默顿",
       "skinCode": "bulaimodun_5",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/bulaimodun_5/bulaimodun_5.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/bulaimodun_5.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-bulaimodun_5.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/bulaimodun_5",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-buleisite_2",
@@ -766,13 +805,14 @@
       "characterName": "buleisite",
       "skinCode": "buleisite_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/buleisite_2/buleisite_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/buleisite_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-buleisite_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/buleisite_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-buleisite_3",
@@ -799,13 +839,14 @@
       "characterName": "chaijun",
       "skinCode": "chaijun_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/chaijun_3/chaijun_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/chaijun_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-chaijun_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/chaijun_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-chaijun_4",
@@ -815,13 +856,14 @@
       "characterName": "chaijun",
       "skinCode": "chaijun_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/chaijun_4/chaijun_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/chaijun_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-chaijun_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/chaijun_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-chaijun_4_hx",
@@ -837,7 +879,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-chaijun_4_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-chaijun_5",
@@ -864,13 +907,14 @@
       "characterName": "chicheng",
       "skinCode": "chicheng_5",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/chicheng_5/chicheng_5.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/chicheng_5.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-chicheng_5.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/chicheng_5",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-chuixue_3",
@@ -880,13 +924,14 @@
       "characterName": "chuixue",
       "skinCode": "chuixue_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/chuixue_3/chuixue_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/chuixue_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-chuixue_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/chuixue_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-chuyue_2",
@@ -896,13 +941,14 @@
       "characterName": "chuyue",
       "skinCode": "chuyue_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/chuyue_2/chuyue_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/chuyue_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-chuyue_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/chuyue_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-dafeng_2",
@@ -912,13 +958,14 @@
       "characterName": "dafeng",
       "skinCode": "dafeng_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/dafeng_2/dafeng_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/dafeng_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-dafeng_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/dafeng_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-dafeng_2_hx",
@@ -934,7 +981,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-dafeng_2_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-dafeng_3",
@@ -944,13 +992,14 @@
       "characterName": "dafeng",
       "skinCode": "dafeng_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/dafeng_3/dafeng_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/dafeng_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-dafeng_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/dafeng_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-dafeng_4",
@@ -960,13 +1009,14 @@
       "characterName": "dafeng",
       "skinCode": "dafeng_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/dafeng_4/dafeng_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/dafeng_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-dafeng_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/dafeng_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-dafeng_6",
@@ -976,13 +1026,14 @@
       "characterName": "dafeng",
       "skinCode": "dafeng_6",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/dafeng_6/dafeng_6.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/dafeng_6.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-dafeng_6.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/dafeng_6",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-dafeng_7",
@@ -1007,13 +1058,14 @@
       "characterName": "daofeng",
       "skinCode": "daofeng_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/daofeng_4/daofeng_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/daofeng_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-daofeng_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/daofeng_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-daofeng_5",
@@ -1023,13 +1075,14 @@
       "characterName": "daofeng",
       "skinCode": "daofeng_5",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/daofeng_5/daofeng_5.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/daofeng_5.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-daofeng_5.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/daofeng_5",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-daofeng_5_hx",
@@ -1045,7 +1098,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-daofeng_5_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-dewenjun_2",
@@ -1055,13 +1109,14 @@
       "characterName": "dewenjun",
       "skinCode": "dewenjun_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/dewenjun_2/dewenjun_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/dewenjun_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-dewenjun_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/dewenjun_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-deyizhi_3",
@@ -1071,13 +1126,14 @@
       "characterName": "deyizhi",
       "skinCode": "deyizhi_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/deyizhi_3/deyizhi_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/deyizhi_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-deyizhi_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/deyizhi_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-dujiaoshou_4",
@@ -1087,13 +1143,14 @@
       "characterName": "独角兽",
       "skinCode": "dujiaoshou_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/dujiaoshou_4/dujiaoshou_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/dujiaoshou_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-dujiaoshou_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/dujiaoshou_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-dujiaoshou_6",
@@ -1103,13 +1160,14 @@
       "characterName": "独角兽",
       "skinCode": "dujiaoshou_6",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/dujiaoshou_6/dujiaoshou_6.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/dujiaoshou_6.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-dujiaoshou_6.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/dujiaoshou_6",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-dulianglai_2",
@@ -1126,7 +1184,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-dulianglai_2.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-dunkeerke_2",
@@ -1136,13 +1195,14 @@
       "characterName": "dunkeerke",
       "skinCode": "dunkeerke_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/dunkeerke_2/dunkeerke_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/dunkeerke_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-dunkeerke_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/dunkeerke_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-edu_3",
@@ -1152,13 +1212,14 @@
       "characterName": "edu",
       "skinCode": "edu_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/edu_3/edu_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/edu_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-edu_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/edu_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-edu_3_hx",
@@ -1174,7 +1235,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-edu_3_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-edu_4",
@@ -1184,13 +1246,14 @@
       "characterName": "edu",
       "skinCode": "edu_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/edu_4/edu_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/edu_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-edu_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/edu_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-feiteliedadi_3",
@@ -1247,13 +1310,14 @@
       "characterName": "fengyun",
       "skinCode": "fengyun_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/fengyun_4/fengyun_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/fengyun_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-fengyun_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/fengyun_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-fulici_2",
@@ -1295,13 +1359,14 @@
       "characterName": "geliqiya",
       "skinCode": "geliqiya_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/geliqiya_2/geliqiya_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/geliqiya_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-geliqiya_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/geliqiya_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-genaisennao_2",
@@ -1311,13 +1376,14 @@
       "characterName": "genaisennao",
       "skinCode": "genaisennao_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/genaisennao_2/genaisennao_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/genaisennao_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-genaisennao_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/genaisennao_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-guandao_2",
@@ -1327,13 +1393,14 @@
       "characterName": "guandao",
       "skinCode": "guandao_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/guandao_2/guandao_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/guandao_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-guandao_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/guandao_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-guandao_3",
@@ -1375,13 +1442,14 @@
       "characterName": "guangrong",
       "skinCode": "guangrong_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/guangrong_3/guangrong_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/guangrong_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-guangrong_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/guangrong_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-hailunna_4",
@@ -1391,13 +1459,14 @@
       "characterName": "hailunna",
       "skinCode": "hailunna_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/hailunna_4/hailunna_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/hailunna_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-hailunna_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/hailunna_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-haiyinlixi_2",
@@ -1407,13 +1476,14 @@
       "characterName": "haiyinlixi",
       "skinCode": "haiyinlixi_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/haiyinlixi_2/haiyinlixi_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/haiyinlixi_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-haiyinlixi_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/haiyinlixi_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-heitaizi_2",
@@ -1423,13 +1493,14 @@
       "characterName": "heitaizi",
       "skinCode": "heitaizi_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/heitaizi_2/heitaizi_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/heitaizi_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-heitaizi_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/heitaizi_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-hemin_2",
@@ -1439,13 +1510,14 @@
       "characterName": "hemin",
       "skinCode": "hemin_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/hemin_2/hemin_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/hemin_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-hemin_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/hemin_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-hemin_3",
@@ -1455,13 +1527,14 @@
       "characterName": "hemin",
       "skinCode": "hemin_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/hemin_3/hemin_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/hemin_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-hemin_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/hemin_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-huangjiafangzhou_3",
@@ -1471,13 +1544,14 @@
       "characterName": "huangjiafangzhou",
       "skinCode": "huangjiafangzhou_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/huangjiafangzhou_3/huangjiafangzhou_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/huangjiafangzhou_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-huangjiafangzhou_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/huangjiafangzhou_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-huonululu_3",
@@ -1487,13 +1561,14 @@
       "characterName": "huonululu",
       "skinCode": "huonululu_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/huonululu_3/huonululu_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/huonululu_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-huonululu_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/huonululu_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-huonululu_5",
@@ -1503,13 +1578,14 @@
       "characterName": "huonululu",
       "skinCode": "huonululu_5",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/huonululu_5/huonululu_5.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/huonululu_5.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-huonululu_5.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/huonululu_5",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-jialisuoniye_3",
@@ -1519,13 +1595,14 @@
       "characterName": "jialisuoniye",
       "skinCode": "jialisuoniye_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/jialisuoniye_3/jialisuoniye_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/jialisuoniye_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-jialisuoniye_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/jialisuoniye_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-jialisuoniye_3_hx",
@@ -1541,7 +1618,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-jialisuoniye_3_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-jialisuoniye_4",
@@ -1551,13 +1629,14 @@
       "characterName": "jialisuoniye",
       "skinCode": "jialisuoniye_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/jialisuoniye_4/jialisuoniye_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/jialisuoniye_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-jialisuoniye_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/jialisuoniye_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-jian_3",
@@ -1591,7 +1670,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-jianwu_2.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-jianye_2",
@@ -1601,13 +1681,14 @@
       "characterName": "jianye",
       "skinCode": "jianye_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/jianye_2/jianye_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/jianye_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-jianye_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/jianye_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-jianye_2_hx",
@@ -1623,7 +1704,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-jianye_2_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-jianye_3",
@@ -1633,13 +1715,14 @@
       "characterName": "jianye",
       "skinCode": "jianye_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/jianye_3/jianye_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/jianye_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-jianye_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/jianye_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-jianye_4",
@@ -1649,13 +1732,14 @@
       "characterName": "jianye",
       "skinCode": "jianye_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/jianye_4/jianye_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/jianye_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-jianye_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/jianye_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-jiluofu_3",
@@ -1665,13 +1749,14 @@
       "characterName": "jiluofu",
       "skinCode": "jiluofu_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/jiluofu_3/jiluofu_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/jiluofu_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-jiluofu_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/jiluofu_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-jinjiang_2",
@@ -1696,13 +1781,14 @@
       "characterName": "jinluhao",
       "skinCode": "jinluhao_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/jinluhao_2/jinluhao_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/jinluhao_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-jinluhao_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/jinluhao_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-jinshi_2",
@@ -1727,13 +1813,14 @@
       "characterName": "jiuyun",
       "skinCode": "jiuyun_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/jiuyun_2/jiuyun_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/jiuyun_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-jiuyun_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/jiuyun_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-junhe_4",
@@ -1743,13 +1830,14 @@
       "characterName": "junhe",
       "skinCode": "junhe_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/junhe_4/junhe_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/junhe_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-junhe_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/junhe_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-junhe_5",
@@ -1759,13 +1847,14 @@
       "characterName": "junhe",
       "skinCode": "junhe_5",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/junhe_5/junhe_5.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/junhe_5.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-junhe_5.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/junhe_5",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-junzhu_5",
@@ -1792,13 +1881,14 @@
       "characterName": "kalangshitade",
       "skinCode": "kalangshitade_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/kalangshitade_2/kalangshitade_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/kalangshitade_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-kalangshitade_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/kalangshitade_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-kalvbudisi_2",
@@ -1808,13 +1898,14 @@
       "characterName": "kalvbudisi",
       "skinCode": "kalvbudisi_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/kalvbudisi_2/kalvbudisi_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/kalvbudisi_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-kalvbudisi_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/kalvbudisi_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-kebensi_2",
@@ -1839,13 +1930,14 @@
       "characterName": "kelaimengsuo",
       "skinCode": "kelaimengsuo_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/kelaimengsuo_2/kelaimengsuo_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/kelaimengsuo_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-kelaimengsuo_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/kelaimengsuo_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-kelifulan_3",
@@ -1855,13 +1947,14 @@
       "characterName": "kelifulan",
       "skinCode": "kelifulan_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/kelifulan_3/kelifulan_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/kelifulan_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-kelifulan_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/kelifulan_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-kelifulan_8",
@@ -1871,13 +1964,14 @@
       "characterName": "kelifulan",
       "skinCode": "kelifulan_8",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/kelifulan_8/kelifulan_8.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/kelifulan_8.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-kelifulan_8.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/kelifulan_8",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-kewei_4",
@@ -1887,13 +1981,14 @@
       "characterName": "可畏",
       "skinCode": "kewei_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/kewei_4/kewei_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/kewei_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-kewei_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/kewei_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-kewei_6",
@@ -1918,13 +2013,14 @@
       "characterName": "kubo",
       "skinCode": "kubo_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/kubo_2/kubo_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/kubo_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-kubo_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/kubo_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-kuersike_2",
@@ -1934,13 +2030,14 @@
       "characterName": "kuersike",
       "skinCode": "kuersike_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/kuersike_2/kuersike_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/kuersike_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-kuersike_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/kuersike_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-lafei",
@@ -1950,13 +2047,14 @@
       "characterName": "拉菲",
       "skinCode": "lafei",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/lafei/lafei.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/lafei.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-lafei.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/lafei",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-lafei_4",
@@ -1966,13 +2064,14 @@
       "characterName": "拉菲",
       "skinCode": "lafei_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/lafei_4/lafei_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/lafei_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-lafei_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/lafei_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-lafeier_2",
@@ -1989,7 +2088,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-lafeier_2.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-lafeiii_3",
@@ -2005,7 +2105,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-lafeiii_3.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-leigensibao_2",
@@ -2015,13 +2116,14 @@
       "characterName": "leigensibao",
       "skinCode": "leigensibao_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/leigensibao_2/leigensibao_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/leigensibao_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-leigensibao_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/leigensibao_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-liekexingdunii_2",
@@ -2046,13 +2148,14 @@
       "characterName": "绫波",
       "skinCode": "lingbo",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/lingbo/lingbo.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/lingbo.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-lingbo.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/lingbo",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-lingbo_10",
@@ -2062,13 +2165,14 @@
       "characterName": "绫波",
       "skinCode": "lingbo_10",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/lingbo_10/lingbo_10.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/lingbo_10.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-lingbo_10.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/lingbo_10",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-linuo_3",
@@ -2078,13 +2182,14 @@
       "characterName": "linuo",
       "skinCode": "linuo_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/linuo_3/linuo_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/linuo_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-linuo_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/linuo_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-linuo_3_hx",
@@ -2100,7 +2205,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-linuo_3_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-lisailiu_2",
@@ -2110,13 +2216,14 @@
       "characterName": "lisailiu",
       "skinCode": "lisailiu_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/lisailiu_2/lisailiu_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/lisailiu_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-lisailiu_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/lisailiu_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-lisailiu_3",
@@ -2126,13 +2233,14 @@
       "characterName": "lisailiu",
       "skinCode": "lisailiu_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/lisailiu_3/lisailiu_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/lisailiu_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-lisailiu_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/lisailiu_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-longfeng_2",
@@ -2142,13 +2250,14 @@
       "characterName": "longfeng",
       "skinCode": "longfeng_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/longfeng_2/longfeng_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/longfeng_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-longfeng_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/longfeng_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-longfeng_2_hx",
@@ -2164,7 +2273,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-longfeng_2_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-longwu_2",
@@ -2174,13 +2284,14 @@
       "characterName": "longwu",
       "skinCode": "longwu_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/longwu_2/longwu_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/longwu_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-longwu_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/longwu_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-luoen_4",
@@ -2190,13 +2301,14 @@
       "characterName": "luoen",
       "skinCode": "luoen_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/luoen_4/luoen_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/luoen_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-luoen_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/luoen_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-luoma_2",
@@ -2206,13 +2318,14 @@
       "characterName": "luoma",
       "skinCode": "luoma_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/luoma_2/luoma_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/luoma_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-luoma_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/luoma_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-lupuleixite_2",
@@ -2222,13 +2335,14 @@
       "characterName": "lupuleixite",
       "skinCode": "lupuleixite_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/lupuleixite_2/lupuleixite_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/lupuleixite_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-lupuleixite_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/lupuleixite_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-luyijiushi_2",
@@ -2238,13 +2352,14 @@
       "characterName": "luyijiushi",
       "skinCode": "luyijiushi_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/luyijiushi_2/luyijiushi_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/luyijiushi_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-luyijiushi_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/luyijiushi_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-lvzuofu_2",
@@ -2276,7 +2391,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-maliluosi_3_doa.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-masaina_2",
@@ -2333,13 +2449,14 @@
       "characterName": "明石",
       "skinCode": "mingshi",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/mingshi/mingshi.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/mingshi.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-mingshi.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/mingshi",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-mojiaduoer_2",
@@ -2349,13 +2466,14 @@
       "characterName": "mojiaduoer",
       "skinCode": "mojiaduoer_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/mojiaduoer_2/mojiaduoer_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/mojiaduoer_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-mojiaduoer_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/mojiaduoer_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-mojiaduoer_3",
@@ -2372,7 +2490,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-mojiaduoer_3.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-nabulesi_2",
@@ -2406,7 +2525,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-naximofu_2.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-nengdai_2",
@@ -2416,13 +2536,14 @@
       "characterName": "nengdai",
       "skinCode": "nengdai_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/nengdai_2/nengdai_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/nengdai_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-nengdai_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/nengdai_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-nengdai_3",
@@ -2432,13 +2553,14 @@
       "characterName": "nengdai",
       "skinCode": "nengdai_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/nengdai_3/nengdai_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/nengdai_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-nengdai_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/nengdai_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-ninghai_4",
@@ -2448,13 +2570,14 @@
       "characterName": "ninghai",
       "skinCode": "ninghai_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/ninghai_4/ninghai_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/ninghai_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-ninghai_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/ninghai_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-ougen_5",
@@ -2464,13 +2587,14 @@
       "characterName": "欧根亲王",
       "skinCode": "ougen_5",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/ougen_5/ougen_5.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/ougen_5.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-ougen_5.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/ougen_5",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-ougen_6",
@@ -2480,13 +2604,14 @@
       "characterName": "欧根亲王",
       "skinCode": "ougen_6",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/ougen_6/ougen_6.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/ougen_6.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-ougen_6.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/ougen_6",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-ougen_6_hx",
@@ -2502,7 +2627,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-ougen_6_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-ougen_8",
@@ -2527,13 +2653,14 @@
       "characterName": "ouruola",
       "skinCode": "ouruola_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/ouruola_4/ouruola_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/ouruola_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-ouruola_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/ouruola_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-pinghai_4",
@@ -2543,13 +2670,14 @@
       "characterName": "pinghai",
       "skinCode": "pinghai_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/pinghai_4/pinghai_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/pinghai_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-pinghai_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/pinghai_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-pinghai_6",
@@ -2559,13 +2687,14 @@
       "characterName": "pinghai",
       "skinCode": "pinghai_6",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/pinghai_6/pinghai_6.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/pinghai_6.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-pinghai_6.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/pinghai_6",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-pizibao_2",
@@ -2607,13 +2736,14 @@
       "characterName": "qianwei",
       "skinCode": "qianwei_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/qianwei_2/qianwei_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/qianwei_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-qianwei_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/qianwei_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-qibolin_2",
@@ -2623,13 +2753,14 @@
       "characterName": "qibolin",
       "skinCode": "qibolin_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/qibolin_2/qibolin_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/qibolin_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-qibolin_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/qibolin_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-qiershazhi_2",
@@ -2639,13 +2770,14 @@
       "characterName": "qiershazhi",
       "skinCode": "qiershazhi_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/qiershazhi_2/qiershazhi_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/qiershazhi_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-qiershazhi_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/qiershazhi_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-qisheng_2",
@@ -2687,13 +2819,14 @@
       "characterName": "qiye",
       "skinCode": "qiye_7",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/qiye_7/qiye_7.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/qiye_7.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-qiye_7.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/qiye_7",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-qiye_7_hx",
@@ -2709,7 +2842,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-qiye_7_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-qiye_9",
@@ -2719,13 +2853,14 @@
       "characterName": "qiye",
       "skinCode": "qiye_9",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/qiye_9/qiye_9.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/qiye_9.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-qiye_9.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/qiye_9",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-rangbaer_3",
@@ -2735,13 +2870,14 @@
       "characterName": "rangbaer",
       "skinCode": "rangbaer_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/rangbaer_3/rangbaer_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/rangbaer_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-rangbaer_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/rangbaer_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-rangbaer_4",
@@ -2751,13 +2887,14 @@
       "characterName": "rangbaer",
       "skinCode": "rangbaer_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/rangbaer_4/rangbaer_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/rangbaer_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-rangbaer_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/rangbaer_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-rangbaer_5",
@@ -2774,7 +2911,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-rangbaer_5.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-shengluyisi_2",
@@ -2807,7 +2945,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-shengluyisi_2_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-shengluyisi_3",
@@ -2849,13 +2988,14 @@
       "characterName": "shengluyisi",
       "skinCode": "shengluyisi_5",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/shengluyisi_5/shengluyisi_5.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/shengluyisi_5.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-shengluyisi_5.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/shengluyisi_5",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-shi_2",
@@ -2880,13 +3020,14 @@
       "characterName": "shitelasai",
       "skinCode": "shitelasai_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/shitelasai_2/shitelasai_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/shitelasai_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-shitelasai_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/shitelasai_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-sipeibojue_5",
@@ -2896,13 +3037,14 @@
       "characterName": "sipeibojue",
       "skinCode": "sipeibojue_5",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/sipeibojue_5/sipeibojue_5.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/sipeibojue_5.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-sipeibojue_5.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/sipeibojue_5",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-sitelasibao_2",
@@ -2944,13 +3086,14 @@
       "characterName": "suweiaitongmeng",
       "skinCode": "suweiaitongmeng_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/suweiaitongmeng_2/suweiaitongmeng_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/suweiaitongmeng_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-suweiaitongmeng_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/suweiaitongmeng_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-suweiaitongmeng_3",
@@ -2975,13 +3118,14 @@
       "characterName": "taiyuan",
       "skinCode": "taiyuan_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/taiyuan_2/taiyuan_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/taiyuan_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-taiyuan_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/taiyuan_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-telafaerjia_2",
@@ -3006,13 +3150,14 @@
       "characterName": "tiancheng",
       "skinCode": "tiancheng_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/tiancheng_3/tiancheng_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/tiancheng_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-tiancheng_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/tiancheng_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-tiancheng_cv_2",
@@ -3039,13 +3184,14 @@
       "characterName": "tianlangxing",
       "skinCode": "tianlangxing_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/tianlangxing_3/tianlangxing_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/tianlangxing_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-tianlangxing_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/tianlangxing_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-tianlangxing_5",
@@ -3072,13 +3218,14 @@
       "characterName": "tierbici",
       "skinCode": "tierbici_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/tierbici_2/tierbici_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/tierbici_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-tierbici_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/tierbici_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-weineituo_2",
@@ -3088,13 +3235,14 @@
       "characterName": "weineituo",
       "skinCode": "weineituo_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/weineituo_2/weineituo_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/weineituo_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-weineituo_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/weineituo_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-weixi_2",
@@ -3104,13 +3252,14 @@
       "characterName": "weixi",
       "skinCode": "weixi_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/weixi_2/weixi_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/weixi_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-weixi_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/weixi_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-weiyan_2",
@@ -3120,13 +3269,14 @@
       "characterName": "weiyan",
       "skinCode": "weiyan_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/weiyan_2/weiyan_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/weiyan_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-weiyan_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/weiyan_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-weiyan_4",
@@ -3136,13 +3286,14 @@
       "characterName": "weiyan",
       "skinCode": "weiyan_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/weiyan_4/weiyan_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/weiyan_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-weiyan_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/weiyan_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-weiyan_4_hx",
@@ -3158,7 +3309,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-weiyan_4_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-weiyan_6",
@@ -3168,13 +3320,14 @@
       "characterName": "weiyan",
       "skinCode": "weiyan_6",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/weiyan_6/weiyan_6.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/weiyan_6.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-weiyan_6.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/weiyan_6",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-weizhang_3",
@@ -3201,13 +3354,14 @@
       "characterName": "wuerlixi",
       "skinCode": "wuerlixi_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/wuerlixi_2/wuerlixi_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/wuerlixi_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-wuerlixi_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/wuerlixi_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-wuerlixi_3",
@@ -3217,13 +3371,14 @@
       "characterName": "wuerlixi",
       "skinCode": "wuerlixi_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/wuerlixi_3/wuerlixi_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/wuerlixi_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-wuerlixi_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/wuerlixi_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-wuqi_2",
@@ -3233,13 +3388,14 @@
       "characterName": "wuqi",
       "skinCode": "wuqi_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/wuqi_2/wuqi_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/wuqi_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-wuqi_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/wuqi_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-wuqi_3",
@@ -3298,13 +3454,14 @@
       "characterName": "xianghe",
       "skinCode": "xianghe_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xianghe_2/xianghe_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/xianghe_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-xianghe_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xianghe_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-xingdengbao_2",
@@ -3314,13 +3471,14 @@
       "characterName": "xingdengbao",
       "skinCode": "xingdengbao_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xingdengbao_2/xingdengbao_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/xingdengbao_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-xingdengbao_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xingdengbao_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-xingdengbao_3",
@@ -3345,13 +3503,14 @@
       "characterName": "xinnong",
       "skinCode": "xinnong_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xinnong_3/xinnong_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/xinnong_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-xinnong_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xinnong_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-xinnong_3_hx",
@@ -3367,7 +3526,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-xinnong_3_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-xinnong_4",
@@ -3377,13 +3537,14 @@
       "characterName": "xinnong",
       "skinCode": "xinnong_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xinnong_4/xinnong_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/xinnong_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-xinnong_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xinnong_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-xinnong_5",
@@ -3425,13 +3586,14 @@
       "characterName": "xinzexi",
       "skinCode": "xinzexi_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xinzexi_3/xinzexi_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/xinzexi_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-xinzexi_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xinzexi_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-xinzexi_5",
@@ -3456,13 +3618,14 @@
       "characterName": "xixuegui",
       "skinCode": "xixuegui_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xixuegui_4/xixuegui_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/xixuegui_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-xixuegui_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xixuegui_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-xuefeng",
@@ -3472,13 +3635,14 @@
       "characterName": "xuefeng",
       "skinCode": "xuefeng",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xuefeng/xuefeng.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/xuefeng.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-xuefeng.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xuefeng",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-xuefeng_3",
@@ -3488,13 +3652,14 @@
       "characterName": "xuefeng",
       "skinCode": "xuefeng_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xuefeng_3/xuefeng_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/xuefeng_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-xuefeng_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xuefeng_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-xukufu_2",
@@ -3504,13 +3669,14 @@
       "characterName": "xukufu",
       "skinCode": "xukufu_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xukufu_2/xukufu_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/xukufu_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-xukufu_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xukufu_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-xukufu_3",
@@ -3520,13 +3686,14 @@
       "characterName": "xukufu",
       "skinCode": "xukufu_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xukufu_3/xukufu_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/xukufu_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-xukufu_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/xukufu_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-xukufu_3_hx",
@@ -3542,7 +3709,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-xukufu_3_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-yanusi_3",
@@ -3552,13 +3720,14 @@
       "characterName": "yanusi",
       "skinCode": "yanusi_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/yanusi_3/yanusi_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/yanusi_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-yanusi_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/yanusi_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-yibei_3",
@@ -3568,13 +3737,14 @@
       "characterName": "yibei",
       "skinCode": "yibei_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/yibei_3/yibei_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/yibei_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-yibei_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/yibei_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-yichui_2",
@@ -3584,13 +3754,14 @@
       "characterName": "yichui",
       "skinCode": "yichui_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/yichui_2/yichui_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/yichui_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-yichui_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/yichui_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-yilishabai_6",
@@ -3600,13 +3771,14 @@
       "characterName": "yilishabai",
       "skinCode": "yilishabai_6",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/yilishabai_6/yilishabai_6.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/yilishabai_6.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-yilishabai_6.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/yilishabai_6",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-yingrui_3",
@@ -3616,13 +3788,14 @@
       "characterName": "yingrui",
       "skinCode": "yingrui_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/yingrui_3/yingrui_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/yingrui_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-yingrui_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/yingrui_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-yingxianzuo_3",
@@ -3632,13 +3805,14 @@
       "characterName": "yingxianzuo",
       "skinCode": "yingxianzuo_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/yingxianzuo_3/yingxianzuo_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/yingxianzuo_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-yingxianzuo_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/yingxianzuo_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-yuanchou_3",
@@ -3678,13 +3852,14 @@
       "characterName": "yunxian",
       "skinCode": "yunxian_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/yunxian_2/yunxian_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/yunxian_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-yunxian_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/yunxian_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-yunxian_3",
@@ -3724,13 +3899,14 @@
       "characterName": "Z23",
       "skinCode": "z23",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/z23/z23.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/z23.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-z23.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/z23",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-z23_hx",
@@ -3746,7 +3922,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-z23_hx.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-z46_2",
@@ -3756,13 +3933,14 @@
       "characterName": "Z46",
       "skinCode": "z46_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/z46_2/z46_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/z46_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-z46_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/z46_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-z46_3",
@@ -3778,7 +3956,8 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "browser-preview-captured",
       "preview": "./assets/animation-previews/azurlane-al-z46_3.webp",
-      "previewSource": "matching-live2d-animation-frame"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-z46_4",
@@ -3788,13 +3967,14 @@
       "characterName": "Z46",
       "skinCode": "z46_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/z46_4/z46_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/z46_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-z46_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/z46_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-zengkehaijunshangjiang_2",
@@ -3819,13 +3999,14 @@
       "characterName": "扎拉",
       "skinCode": "zhala_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/zhala_2/zhala_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/zhala_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-zhala_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/zhala_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-zhangwu_2",
@@ -3850,13 +4031,14 @@
       "characterName": "zhaohe",
       "skinCode": "zhaohe_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/zhaohe_3/zhaohe_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/zhaohe_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-zhaohe_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/zhaohe_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-zhenzhuhao_2",
