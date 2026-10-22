@@ -62,11 +62,13 @@ test('external navigation is rejected',async()=>{
  assert.equal(blocked,true);
 });
 
-test('stage extends past monitor edges and keeps transparency',async()=>{
+test('transparent stage stays INSIDE Windows 10 monitor bounds',async()=>{
  const h=harness();await new Promise(resolve=>setImmediate(resolve));
  const w=h.windows[0];
- assert.ok(w.options.width>1920&&w.options.height>1080);
- assert.ok(w.options.x<0&&w.options.y<0);
+ assert.equal(w.options.x,1);
+ assert.equal(w.options.y,1);
+ assert.equal(w.options.width,1918);
+ assert.equal(w.options.height,1078);
  assert.equal(w.options.resizable,false);
  assert.equal(w.ignored,true);
 });
