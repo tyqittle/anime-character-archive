@@ -32,6 +32,14 @@
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true
-    }
+    },
+    "protocols": [
+      {
+        "name": "Anime Character Desktop",
+        "schemes": [
+          "animecharacter"
+        ]
+      }
+    ]
   }
 }
