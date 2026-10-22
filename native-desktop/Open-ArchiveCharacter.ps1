@@ -14,11 +14,11 @@ $trustedPrefix = 'https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/
 
 try {
     if ($Uri.Length -gt 0) {
-        $protocolMatch = [regex]::Match($Uri, '^animecharacter://open\?id=(c[0-9]{3,6})$', 'IgnoreCase')
+        $protocolMatch = [regex]::Match($Uri, '^animecharacter://open\?id=(c[0-9]{3,6}(?:_[0-9]{2})?)$', 'IgnoreCase')
         if (-not $protocolMatch.Success) { throw 'Invalid desktop character link.' }
         $CharacterId = $protocolMatch.Groups[1].Value.ToLowerInvariant()
     }
-    if ($CharacterId -cnotmatch '^c[0-9]{3,6}$') {
+    if ($CharacterId -cnotmatch '^c[0-9]{3,6}(?:_[0-9]{2})?$') {
         throw 'Choose a valid character on the website (example: c015).'
     }
     $manifest = Invoke-RestMethod -Uri $catalogUrl -TimeoutSec 45
