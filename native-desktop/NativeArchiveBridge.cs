@@ -83,8 +83,16 @@ public sealed partial class App
             if (string.Equals(current, desired, StringComparison.OrdinalIgnoreCase))
                 return;
 
+            // Older installations may point animecharacter:// to a legacy
+            // PowerShell helper or an earlier executable that rejects c113_01.
+            // Consent is required before replacing any existing handler.
+            string prompt = string.IsNullOrWhiteSpace(current)
+                ? "启用本站「放到桌面」一键导入吗？\n"
+                : "检测到已注册的旧版或其他位置的桌面立绘启动程序。\n" +
+                  "是否将「放到桌面」链接改为当前新版 SpinePet.exe？\n" +
+                  "若拒绝，网站可能继续调用旧版程序并错误地拒绝 c113_01。\n";
             var answer = System.Windows.MessageBox.Show(
-                "启用本站「放到桌面」一键导入吗？\n" +
+                prompt +
                 "启用后，浏览器可以请求此程序下载经过来源验证的妮姬 Spine 4.1 模型并在桌面显示。\n" +
                 "此设置仅影响当前 Windows 用户，可随时在系统的默认应用设置中更改。",
                 "次元立绘 · 网站一键导入", MessageBoxButton.YesNo,
@@ -99,6 +107,11 @@ public sealed partial class App
                 @"Software\Classes\animecharacter\shell\open\command");
             if (command == null) throw new IOException("Cannot set URL command");
             command.SetValue(null, desired);
+            command.Flush();
+            if (!string.Equals(command.GetValue(null) as string, desired,
+                    StringComparison.OrdinalIgnoreCase))
+                throw new IOException("Could not verify the updated animecharacter protocol");
+            AppLogger.Write(nameof(App), "archive-protocol-registered-current-executable");
         }
         catch (Exception ex)
         {
