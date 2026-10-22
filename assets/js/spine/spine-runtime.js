@@ -141,10 +141,26 @@ async function show(options,title,onError){
    status('加载失败：'+error.message,true);
    reject(error);
   };
-  const config={...normalized,showControls:false,controlBones:false,frame:(p)=>recordSpineFrame(p),update:(p)=>applySharpSpineCamera(p),premultipliedAlpha:options.premultipliedAlpha??true,alpha:new URLSearchParams(location.search).has('desktop'),backgroundColor:new URLSearchParams(location.search).has('desktop')?'#00000000':'#142238ff',
+  const transparentDesktop=new URLSearchParams(location.search).has('desktop');
+  const config={...normalized,showControls:false,controlBones:false,frame:(p)=>recordSpineFrame(p),update:(p)=>applySharpSpineCamera(p),premultipliedAlpha:options.premultipliedAlpha??true,
+   alpha:transparentDesktop,backgroundColor:transparentDesktop?'#00000000':'#142238ff',
+   fullScreenBackgroundColor:transparentDesktop?'#00000000':'#142238ff',
+   preserveDrawingBuffer:transparentDesktop,showLoading:!transparentDesktop,
    success:(p)=>{
     if(attempt!==currentAttempt){try{p.dispose?.()}catch(e){}resolve(false);return}
     stopWatchdog();if(pendingRenderCancel===cancel)pendingRenderCancel=null;player=p;
+    if(transparentDesktop){
+     const gl=p.context?.gl||p.canvas?.getContext('webgl2')||p.canvas?.getContext('webgl');
+     const attributes=gl?.getContextAttributes?.();
+     // Report both player alpha config and the actual GPU surface attributes.
+     // A false WebGL alpha bit cannot be corrected with CSS.
+     window.__desktopRendererDiagnostics={engine:'Spine',requestedAlpha:true,
+      actualAlpha:attributes?.alpha??null,clearColor:p.bg?.a??null,backgroundColor:p.config?.backgroundColor||null};
+     if(p.canvas)p.canvas.style.setProperty('background','transparent','important');
+     if(attributes&&attributes.alpha===false){
+      console.error('Spine WebGL surface is opaque; transparency is unavailable on this renderer',window.__desktopRendererDiagnostics);
+     }
+    }
     // Spine 4.x invokes update() after resetting its camera but before drawing.
     // Legacy bundled Spine 3.8 lacks this hook; leave its compatible CSS zoom.
     p._archiveNativeView=$('version').value!=='3.8'
