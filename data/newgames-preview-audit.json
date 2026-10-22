@@ -3,8 +3,8 @@
   "counts": {
     "arknights": {
       "indexed": 359,
-      "verifiedPreview": 337,
-      "missingPreview": 22
+      "verifiedPreview": 338,
+      "missingPreview": 21
     },
     "girlsfrontline": {
       "indexed": 297,
@@ -45,10 +45,6 @@
     {
       "gameId": "arknights",
       "id": "ak-char_209_ardign_snow_1_0-e0c9a91"
-    },
-    {
-      "gameId": "arknights",
-      "id": "ak-char_343_tknogi_epoque_9-ad1b0f8"
     },
     {
       "gameId": "arknights",
@@ -231,7 +227,7 @@
       "id": "ks-1349100_1349100-20ffd44"
     }
   ],
-  "newCapturesInThisRun": 0,
+  "newCapturesInThisRun": 1,
   "failedCaptures": [
     {
       "id": "ak-char_1026_gvial2_summer_12-3f53e8d",
@@ -274,12 +270,6 @@
       "gameId": "arknights",
       "category": "atlas-mismatch",
       "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: B_Bow (mesh attachment: B_Bow)；可选择本地导入已获得的动画文件。"
-    },
-    {
-      "id": "ak-char_343_tknogi_epoque_9-ad1b0f8",
-      "gameId": "arknights",
-      "category": "atlas-mismatch",
-      "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: C_tape_￢ﾅﾠ_01 (mesh attachment: C_tape_￢ﾅﾠ_01)；可选择本地导入已获得的动画文件。"
     },
     {
       "id": "ak-char_343_tknogi_snow_6-5a95f91",
@@ -549,11 +539,11 @@
       "id": "ks-1349100_1349100-20ffd44",
       "gameId": "konosuba",
       "category": "blank-frame",
-      "message": "Blank/tiny pixel variance 3.53"
+      "message": "Blank/tiny pixel variance 3.54"
     }
   ],
   "failureSummary": {
-    "atlas-mismatch": 20,
+    "atlas-mismatch": 19,
     "blank-frame": 4,
     "timeout": 29
   },
