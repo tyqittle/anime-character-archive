@@ -37,3 +37,15 @@ Windows CI 会编译原生客户端并测试 c015 模型能被上游 Spine 4.1 �
 同时核对并更正了 `c113`、`c014`、`c016`、`c023` 的 4.1.20 标签。**这不代表目录剩余全部角色都完成了二进制核验；新增导入会逐个检查。**
 
 用户升级步骤：完全退出旧版 `SpinePet.exe`，解压最新安全扫描通过的原生构建，双击新版 `app/SpinePet.exe`；网站 Ctrl+F5 刷新以避开旧缓存，选中 `c113_01` 并点击「放到桌面」。如旧安装目录仍被注册为外部协议启动目标，新版首次打开时允许更新链接注册。
+
+## 屏幕上仍提示「Native renderer currently supports verified NIKKE Spine 4.1 only」
+
+这个英文提示来自旧版程序或旧版协议处理器，并非 `c113_01` 骨骼本身不兼容。它的实际二进制版本已经验证为 Spine 4.1.20。仅刷新网站、修改目录标签都不会替换 Windows 上仍在运行的旧 EXE。
+
+1. 先彻底关闭所有 `SpinePet.exe`，包括托盘程序（必要时在任务管理器结束旧实例）。它是单实例程序，旧进程还在时，双击新 EXE 可能只唤醒旧窗口。
+2. 在仓库 [Native SpinePet Windows build](https://github.com/tyqittle/anime-character-archive/actions/workflows/native-spinepet-windows.yml) 中选择最新版**完整成功**的构建，同时确认 `security-audit` 作业通过，下载 `native-spinepet-core-windows-x64`。完整解压到固定目录；保留 `app` 与其他依赖文件。
+3. **手动启动新解压目录的 `app/SpinePet.exe`**。当它检测到现有的旧 `animecharacter://` 链接时会明确询问是否将链接改到此新版程序。确认替换。拒绝就会继续调用旧处理器。
+4. 可以运行 Windows PowerShell 的只读查询 `reg query "HKCU\Software\Classes\animecharacter\shell\open\command" /ve` 检查路径。应该是新目录下的 `SpinePet.exe "%1"`，不应该指向旧目录或 `powershell.exe`。不要用未经核对的注册表修改脚本进行修复。
+5. 回到网站按 `Ctrl+F5` 刷新，选择 `c113_01`，点击「放到桌面」。
+
+本仓库旧 `Open-ArchiveCharacter.ps1` 也已经改为读取实际骨骼版本，防止老式脚本再次凭 `spineVersion`/`versionUnverified` 误判。但新的安全发布包**不会附带 PowerShell 启动脚本**，一键导入首选原生 EXE。若浏览器或安全软件提示危险，不要关闭安全保护绕过，先核对下载来源与构建校验信息。
