@@ -6,7 +6,7 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 $file = Join-Path $UpstreamRoot 'SpinePet/src/SpinePet/Rendering/Native/NativeFrameRenderer.cs'
 if (-not (Test-Path -LiteralPath $file)) { throw 'Missing pinned upstream frame renderer' }
-$text = [System.IO.File]::ReadAllText($file)
+$text = [System.IO.File]::ReadAllText($file).Replace("`r`n", "`n")
 $before = @'
                 NativeFrameRenderPlan plan =
                     state.Geometry.BuildFramePlan(
@@ -34,6 +34,8 @@ $after = @'
                 }
                 float pixelScale =
 '@
+$before = $before.Replace("`r`n", "`n")
+$after = $after.Replace("`r`n", "`n")
 $matches = [regex]::Matches($text, [regex]::Escape($before))
 if ($matches.Count -ne 1) { throw "Native render envelope patch anchor mismatch: $($matches.Count)" }
 $text = $text.Replace($before, $after)
