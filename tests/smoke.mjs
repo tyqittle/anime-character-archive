@@ -210,7 +210,7 @@ const spineScript=spineSource;
 assert.ok(spineScript,'Spine player script is missing');
 new Function(spineScript);
 assert.ok(player.includes('function cancelCharacterDownload()')&&player.includes('activeCharacterAbort.abort()'),'Stale dynamic downloads must be aborted');
-assert.ok(player.includes('externalSignal.addEventListener')&&player.includes('controller.signal'),'Spine download cancellation signal missing');
+assert.ok(read('assets/js/shared/asset-sources.js').includes("signal?.addEventListener('abort'")&&player.includes('controller.signal'),'Spine download cancellation signal missing');
 assert.ok(!player.includes('id="nikke"')&&!player.includes("$('nikke')"),'Main play button must be absent');
 assert.ok(player.includes('showControls:false'),'Spine built-in play controls must be disabled');
 assert.ok(!player.includes('id="playSaved"')&&!player.includes('id="local"'),'Imported animations should autoplay without extra play buttons');
