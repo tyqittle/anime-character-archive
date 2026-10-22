@@ -61,3 +61,19 @@ Windows CI 会编译原生客户端并测试 c015 模型能被上游 Spine 4.1 �
 桌面完整背景修复：原生 [My_SpinePet](https://github.com/KAIDO-YONAGI/My_SpinePet) 使用逐动画取样估算透明 GPU 表面的大小；背景动画或长裙动作超出预估就会裁切。新增 `Patch-RenderEnvelope.ps1` 使用每一帧实际 Spine 顶点更新表面边界，在越界时扩容而不对桌面截图抠图。**如果素材本身就只包含半张场景，无法凭扩容创造原始资源不存在的画面**，需要另行修复该套素材的场景图层。
 
 原便携 ZIP 仍保留用于兼容与调试，但不支持未来自动更新。若要免去每次下载解压，必须使用新发布的 Velopack Setup 安装版。
+
+## 安装时选择 D 盘／其他位置
+
+Velopack 标准的 `AnimeCharacterSpinePet-win-Setup.exe` 是 **一键安装**，默认位于当前用户的 C 盘 LocalAppData，双击后不显示目录选择页面。这是安装器设计，并非软件忽略了你选择的目录。
+
+本项目从新版本起**同时发布带安装位置选择界面的 MSI 安装包**（GitHub Releases 内文件名以 `.msi` 结尾），通过 Velopack 的 `--msi --instLocation Either` 构建。双击 MSI，选择适合的「仅为当前用户安装」，并在安装步骤里选择类似 `D:\Apps\AnimeCharacterSpinePet` 的目录。MSI 与原一键安装包使用同一套 Velopack 应用及更新协议，后续更新仍保持原安装路径；无需把 ZIP 反复解压覆盖。
+
+当前版本也可以**不升级**直接用 Velopack 官方支持的安装选项。打开 PowerShell，在下载文件目录运行（文件名可能因浏览器重命名而不同）：
+
+```powershell
+& "$env:USERPROFILE\Downloads\AnimeCharacterSpinePet-win-Setup.exe" --installto "D:\Apps\AnimeCharacterSpinePet"
+```
+
+注意这是**自定义目录下的新安装**，不等于原来 C 盘程序的自动迁移。如果之前装过默认安装版，先保存现有配置和角色，退出旧应用；不要直接拖动 `current` 子目录、`Update.exe` 或删除 `%LOCALAPPDATA%\SpinePet`。Windows 的「已安装的应用」中可能出现重复安装，确认新路径正常运行后再卸载旧程序，并确认 `animecharacter://` 协议对应的是当前应用。若当前路径无法写入、系统要求提权，建议选择普通用户有写入权的 D 盘文件夹，不要选受保护的系统目录。
+
+**角色文件与软件安装目录不是同一回事。** 当前游戏模型、配置、更新检查记录等持久数据仍可能存放在 `%LOCALAPPDATA%\SpinePet` 下，其中已下载的游戏模型在 `ArchiveResources`。选择 D 盘安装 MSI **不会自动搬走旧素材和数据**；避免误删角色资源。后续可以再独立提供资源库目录迁移功能。
