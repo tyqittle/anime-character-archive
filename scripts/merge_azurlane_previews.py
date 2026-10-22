@@ -1,23 +1,19 @@
+#!/usr/bin/env python3
+"""Publish Azur Lane previews using the identical validation policy as other games."""
 from pathlib import Path
-from PIL import Image
 import json
-cf=Path('data/live2d-azurlane.json'); af=Path('data/azurlane-import-audit.json')
-catalog=json.loads(cf.read_text()); audit=json.loads(af.read_text())
-count=0;missing=[]
-for c in catalog['characters']:
- if c.get('gameId')!='azurlane':continue
- p=Path('assets/animation-previews')/('azurlane-'+c['id']+'.webp')
- if not p.exists():missing.append(c['id']);continue
- try:
-  with Image.open(p) as im:im.verify()
- except Exception:missing.append(c['id']);continue
- c['preview']='./assets/animation-previews/'+p.name
- c['previewSource']='matching-live2d-animation-frame'
- c['playbackStatus']='browser-preview-captured'
- count+=1
-audit['sourceMatchedRenderedPreviews']=count
-audit['sourceMatchedMissingPreviews']=missing
-audit['previewNotice']=f'{count} model-specific WebGL frame thumbnails captured; remaining skins retain exact-source thumbnails or placeholders.'
-cf.write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n')
-af.write_text(json.dumps(audit,ensure_ascii=False,indent=2)+'\n')
-print('LIVE2D_PREVIEWS_PUBLISHED',count,'/242')
+from preview_policy import apply_verified_preview, audit
+
+manifest = Path('data/live2d-azurlane.json')
+audit_path = Path('data/azurlane-import-audit.json')
+catalog = json.loads(manifest.read_text(encoding='utf-8'))
+report = json.loads(audit_path.read_text(encoding='utf-8'))
+for character in catalog['characters']:
+    apply_verified_preview(character)
+summary = audit(catalog['characters'])
+report['sourceMatchedRenderedPreviews'] = sum(v['verifiedPreview'] for v in summary['counts'].values())
+report['sourceMatchedMissingPreviews'] = [c['id'] for c in summary['missing']]
+report['previewNotice'] = 'Same-model screenshots verified using shared preview policy; remaining models need capture.'
+manifest.write_text(json.dumps(catalog, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+audit_path.write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+print('LIVE2D_PREVIEWS_PUBLISHED', report['sourceMatchedRenderedPreviews'], '/', len(catalog['characters']))
