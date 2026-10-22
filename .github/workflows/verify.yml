@@ -20,6 +20,6 @@ jobs:
       - name: Test shared preview policy
         run: |
           python3 -m pip install --quiet --break-system-packages Pillow
-          python3 -m unittest discover -s tests -p 'test_preview_policy.py'
+          python3 -m unittest discover -s tests -p 'test_preview_*.py'
       - name: Syntax-check renamed maintenance scripts
         run: python3 -m py_compile start_site.py scripts/mirror_static_portraits.py

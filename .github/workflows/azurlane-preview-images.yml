@@ -10,6 +10,7 @@ on:
       - 'scripts/preview_capture_queue.mjs'
       - 'scripts/render_azurlane_previews.mjs'
       - 'scripts/convert_azurlane_previews.py'
+      - 'scripts/preview_frame_pipeline.py'
       - 'scripts/merge_azurlane_previews.py'
       - 'azurlane-stage.html'
       - 'assets/spine-theater-layout.css'

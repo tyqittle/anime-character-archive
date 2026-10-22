@@ -57,3 +57,11 @@ tests/smoke.mjs                     # 各模块语法和内容一致性测试
 开发可用 `python -m http.server 8000` 启动静态站。运行 `node tests/smoke.mjs` 验证角色和皮肤目录、预览文件路径、页面 DOM 标识以及各 JS 模块是否可被解析；再运行现有 Playwright 浏览器脚本验证真实 Spine/Live2D 播放、自动切换及静态原图弹窗。
 
 今后添加新游戏时，优先修改对应 `data/` 索引与 `assets/js/spine/catalog.js` 的筛选逻辑；新增动画格式时才动运行时和资源层。本次以**兼容性优先的第一阶段拆分**为界，进一步迁移到带显式 `import/export` 的隔离模块须配套接口回归测试，不在未经验证时大改浏览器存储。
+
+## 动态预览的唯一流水线（2026-10-22）
+
+所有游戏的截图任务共用 `scripts/preview_policy.py` 判定是否已有可用的**同模型**预览；`scripts/preview_queue.py` 为分片生成待处理 ID 列表，`scripts/preview_capture_queue.mjs` 按 ID 选择待渲染模型。渲染器可以不同（Spine、Cubism），但新游戏不能再自行决定什么叫“已有预览”或单独定义遗漏筛选条件。
+
+浏览器采集的 PNG 帧全部通过 `scripts/preview_frame_pipeline.py` 进行主体检测、裁剪、缩放、360×420 WebP 编码。现存的旧版 Spine 480×360 截图保持原样并使用记录的 SHA-256 校验，不强制重渲染。新截图统一执行 360×420 的输出规则。
+
+发布脚本只能通过 `preview_policy.apply_verified_preview` 设置相应的预览状态；失败要保留在待处理队列中，不得把同舰船其他皮肤或其他角色的图拿来代替。新增格式只实现资源加载适配器，不复制这套公共处理流程。

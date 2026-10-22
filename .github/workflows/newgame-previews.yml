@@ -9,6 +9,7 @@ on:
       - 'scripts/preview_capture_queue.mjs'
       - 'scripts/capture_newgame_previews.mjs'
       - 'scripts/convert_newgame_previews.py'
+      - 'scripts/preview_frame_pipeline.py'
       - 'scripts/merge_newgame_previews.py'
       - '.github/workflows/newgame-previews.yml'
   workflow_dispatch:
