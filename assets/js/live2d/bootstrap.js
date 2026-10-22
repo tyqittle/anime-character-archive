@@ -7,7 +7,7 @@ window.addEventListener('message',event=>{
  else if(d.kind==='voice-config')setFrameVoice(d.voice);
  else if(d.kind==='motion')motion(d.motion);
  else if(d.kind==='zoom')setZoom(Number(d.zoom)||1);
- else if(d.kind==='reset'){zoom=1;offsetX=0;offsetY=0;fit();notify('zoom',{zoom})}
+ else if(d.kind==='reset'){zoom=desktopMode?.58:1;offsetX=desktopMode?(app?.screen?.width||window.innerWidth)*.24:0;offsetY=desktopMode?(app?.screen?.height||window.innerHeight)*.07:0;fit();notify('zoom',{zoom})}
 });
 window.addEventListener('resize',()=>{if(model)fit()});
 const desktopMode=new URLSearchParams(location.search).has('desktop');
