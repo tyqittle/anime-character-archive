@@ -14,6 +14,8 @@ function harness(argv=['electron','.']){
   requestSingleInstanceLock:()=>true,
   getPath:()=>'/tmp/anime-character-archive-desktop-test',
   setAsDefaultProtocolClient:()=>true,
+  disableHardwareAcceleration(){this.hwDisabled=true},
+  relaunch(){this.relaunched=true},
   quit:()=>{}
  };
  class FakeBrowserWindow{
@@ -36,9 +38,9 @@ function harness(argv=['electron','.']){
  class FakeTray{setToolTip(value){this.tip=value}setContextMenu(value){this.menu=value}on(){}}
  const fakeFs={...fs,readFileSync:()=>{throw Error('no prior settings')},mkdirSync:()=>{},writeFileSync:()=>{}};
  const fakeElectron={app,ipcMain:{on:(name,fn)=>ipcHandlers.set(name,fn)},BrowserWindow:FakeBrowserWindow,Menu:{buildFromTemplate:items=>{menus.push(items);return items}},Tray:FakeTray,nativeImage:{createFromBuffer:()=>({resize:()=>({})})},shell:{openExternal:()=>{}},screen:{getPrimaryDisplay:()=>({bounds:{x:0,y:0,width:1920,height:1080},workArea:{x:0,y:0,width:1920,height:1080}}),getAllDisplays:()=>[{bounds:{x:0,y:0,width:1920,height:1080}}]},dialog:{showErrorBox:()=>{},showMessageBox:async()=>({response:1})}};
- const context={__dirname:__dirname,require:id=>id==='electron'?fakeElectron:id==='node:fs'?fakeFs:require(id),module:{},process:{argv,platform:'win32'},console,Buffer,URL,setTimeout,clearTimeout};
+ const context={__dirname:__dirname,require:id=>id==='electron'?fakeElectron:id==='node:fs'?fakeFs:id==='node:os'?{release:()=> '10.0.19045'}:require(id),module:{},process:{argv,platform:'win32'},console,Buffer,URL,setTimeout,clearTimeout};
  vm.runInNewContext(source,context,{filename:'desktop/main.cjs',timeout:1500});
- return {windows,callbacks,menus,ipcHandlers};
+ return {windows,callbacks,menus,ipcHandlers,app};
 }
 test('desktop app starts in a transparent sandboxed window',async()=>{
  const h=harness();await new Promise(resolve=>setImmediate(resolve));
@@ -72,19 +74,18 @@ test('transparent stage stays INSIDE Windows 10 monitor bounds',async()=>{
  assert.equal(w.options.resizable,false);
  assert.equal(w.ignored,true);
 });
-test('transparent region passes through; only matching page can re-enable pointer hits',async()=>{
+test('desktop retains region-free native alpha and honors pointer forwarding',async()=>{
  const h=harness();await new Promise(resolve=>setImmediate(resolve));
  const w=h.windows[0],handler=h.ipcHandlers.get('desktop:set-interactive');
  assert.equal(typeof handler,'function');
  handler({sender:{}},true);
  assert.equal(w.ignored,true);
  handler({sender:w.webContents},true);
- // Hit testing stays disabled until the silhouette has been generated.
- assert.equal(w.ignored,true);
+ assert.equal(w.ignored,false);
  handler({sender:w.webContents},false);
  assert.equal(w.ignored,true);
- assert.equal(w.opacity,0);
- assert.deepEqual(JSON.parse(JSON.stringify(w.shape)),[]);
+ assert.equal(w.shape,undefined);
+ assert.equal(w.opacity,undefined);
 });
 
 test('desktop mode resets document root before stylesheets and keeps transparent WebGL buffers',()=>{
@@ -97,11 +98,15 @@ test('desktop mode resets document root before stylesheets and keeps transparent
  assert.ok(runtime.includes("fullScreenBackgroundColor:transparentDesktop?'#00000000'"));
 });
 
-test('desktop keeps white fallback invisible before first verified native silhouette',async()=>{
+test('Win10 selects compositor compatibility without screenshot cutout layer',async()=>{
  const h=harness();await new Promise(resolve=>setImmediate(resolve));
  const w=h.windows[0];
- assert.equal(w.options.opacity,0);
- assert.equal(w.opacity,0);
- assert.equal(w.shape.length,0);
+ assert.equal(h.app.hwDisabled,true);
+ assert.equal(w.options.transparent,true);
+ assert.equal(w.options.opacity,undefined);
+ assert.equal(w.shape,undefined);
  assert.ok(w.options.webPreferences.preload.endsWith('preload.cjs'));
+ assert.ok(!source.includes('setShape('));
+ assert.ok(!source.includes('shapeFromBGRA'));
+ assert.ok(!source.includes('refreshSilhouette'));
 });
