@@ -6,7 +6,9 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference='Stop'
 $native = Join-Path $UpstreamRoot 'SpinePet/src/SpinePet/Rendering/Native'
 function ReplaceOnce([string]$file,[string]$from,[string]$to){
-    $value=[System.IO.File]::ReadAllText($file)
+    $value=[System.IO.File]::ReadAllText($file).Replace("`r`n","`n")
+    $from=$from.Replace("`r`n","`n")
+    $to=$to.Replace("`r`n","`n")
     $matches=[regex]::Matches($value,[regex]::Escape($from))
     if($matches.Count -ne 1){throw "Expected exactly 1 scale hook in $file; got $($matches.Count): $from"}
     $value=$value.Replace($from,$to)
