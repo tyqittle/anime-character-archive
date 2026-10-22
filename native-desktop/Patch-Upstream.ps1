@@ -37,8 +37,14 @@ if (-not $text.Contains('OfferArchiveProtocolRegistration')) {
     if (-not $text.Contains($old)) { throw 'Missing MainWindow.Show hook' }
     $text = $text.Replace($old, $old + "`r`n" + '        Dispatcher.BeginInvoke(new Action(OfferArchiveProtocolRegistration));')
 }
+if (-not $text.Contains('_ = ShowArchiveRequestAsync();')) {
+    $old = '                            mainWindow.SwitchToConfigMode();'
+    if (-not $text.Contains($old)) { throw 'Missing existing-app activation hook' }
+    $text = $text.Replace($old, $old + "`r`n" + '                            _ = ShowArchiveRequestAsync();')
+}
 if (-not ($text.Contains('AcceptArchiveStartupArgs(e.Args);') -and
           $text.Contains('OfferArchiveProtocolRegistration') -and
+          $text.Contains('_ = ShowArchiveRequestAsync();') -and
           $text.Contains('RestoreArchiveCharactersAsync()'))) {
     throw 'Native website protocol boot hooks could not be applied'
 }
