@@ -6,7 +6,7 @@ const {URL}=require('node:url');
 const SITE='https://tyqittle.github.io/anime-character-archive/';
 const SAFE_ID=/^[a-zA-Z0-9_-]{1,120}$/;
 let win,tray,clickThrough=false,alwaysOnTop=true,characterId='c012';
-let savedBounds=null,voiceEnabled=true;
+let savedBounds=null,voiceEnabled=true,nativeIgnoring=null;
 const configFile=()=>path.join(app.getPath('userData'),'desktop-settings.json');
 function readSettings(){
  try{const x=JSON.parse(fs.readFileSync(configFile(),'utf8'));if(SAFE_ID.test(x.id))characterId=x.id;if(typeof x.alwaysOnTop==='boolean')alwaysOnTop=x.alwaysOnTop;if(typeof x.voiceEnabled==='boolean')voiceEnabled=x.voiceEnabled;if(x.bounds&&[x.bounds.x,x.bounds.y,x.bounds.width,x.bounds.height].every(Number.isFinite))savedBounds=x.bounds;}catch{}
@@ -26,7 +26,7 @@ function idFromProtocol(value){
 function applyCharacter(id){
  if(!SAFE_ID.test(id))return;
  characterId=id;saveSettings();
- if(win){win.setIgnoreMouseEvents(false);clickThrough=false;win.show();win.loadURL(urlFor(id)).catch(console.error)}
+ if(win){clickThrough=false;setNativeIgnore(true);win.show();win.loadURL(urlFor(id)).catch(console.error)}
  updateTray();
 }
 const singleInstance=app.requestSingleInstanceLock();
@@ -57,18 +57,25 @@ function isTrustedPage(input){
   return actual.origin===allowed.origin&&actual.pathname===allowed.pathname;
  }catch{return false}
 }
-ipcMain.on('desktop:move',(event,delta)=>{
- if(!win||win.isDestroyed()||event.sender!==win.webContents||clickThrough)return;
- if(!delta||!Number.isFinite(delta.x)||!Number.isFinite(delta.y)||Math.abs(delta.x)>150||Math.abs(delta.y)>150)return;
- const b=win.getBounds();
- win.setPosition(Math.round(b.x+delta.x),Math.round(b.y+delta.y));
+function setNativeIgnore(ignore){
+ if(!win||win.isDestroyed()||nativeIgnoring===ignore)return;
+ nativeIgnoring=ignore;
+ win.setIgnoreMouseEvents(ignore,ignore?{forward:true}:undefined);
+}
+ipcMain.on('desktop:set-interactive',(event,active)=>{
+ if(!win||win.isDestroyed()||event.sender!==win.webContents||typeof active!=='boolean')return;
+ setNativeIgnore(clickThrough||!active);
 });
 function createWindow(){
- const area=screen.getPrimaryDisplay().workArea;
- const defaults={width:440,height:650,x:Math.max(area.x,area.x+area.width-470),y:Math.max(area.y,area.y+area.height-680)};
- const bounds=savedBounds&&savedBounds.width>=220&&savedBounds.height>=260&&screen.getAllDisplays().some(d=>{const b=d.bounds;return savedBounds.x<b.x+b.width-60&&savedBounds.x+savedBounds.width>b.x+60&&savedBounds.y<b.y+b.height-60&&savedBounds.y+savedBounds.height>b.y+60})?savedBounds:defaults;
- win=new BrowserWindow({...bounds,transparent:true,frame:false,resizable:true,hasShadow:false,backgroundColor:'#00000000',alwaysOnTop,skipTaskbar:true,autoHideMenuBar:true,webPreferences:{nodeIntegration:false,contextIsolation:true,sandbox:true,backgroundThrottling:false,preload:path.join(__dirname,'preload.cjs')}});
+ const area=screen.getPrimaryDisplay().bounds;
+ // Overscanned transparent stage: a small safety margin outside the monitor,
+ // without allocating an unlimited WebGL framebuffer.
+ const pad=Math.round(Math.min(area.width,area.height)*0.08);
+ const bounds={x:area.x-pad,y:area.y-pad,width:area.width+pad*2,height:area.height+pad*2};
+ win=new BrowserWindow({...bounds,transparent:true,frame:false,resizable:false,hasShadow:false,backgroundColor:'#00000000',alwaysOnTop,skipTaskbar:true,autoHideMenuBar:true,webPreferences:{nodeIntegration:false,contextIsolation:true,sandbox:true,backgroundThrottling:false,preload:path.join(__dirname,'preload.cjs')}});
  win.setMenu(null);
+ nativeIgnoring=null;
+ setNativeIgnore(true);
  win.webContents.setWindowOpenHandler(({url})=>{
   try{const parsed=new URL(url);if(parsed.protocol==='https:'||parsed.protocol==='http:')shell.openExternal(parsed.toString())}catch{}
   return {action:'deny'};
@@ -84,9 +91,9 @@ function createWindow(){
   if(!voiceEnabled)win.webContents.executeJavaScript('(()=>{voiceEnabled=false;updateVoiceUI();syncFrameVoice();silenceCharacterVoice()})()').catch(console.error);
   win.webContents.executeJavaScript("(()=>{if(!document.getElementById('desktopDrag')){let el=document.createElement('div');el.id='desktopDrag';el.title='拖动这里移动桌面立绘';document.body.append(el)}document.body.style.background='transparent';if(!document.getElementById('desktopError')){let e=document.createElement('div');e.id='desktopError';e.style.cssText='position:fixed;bottom:26px;left:15px;right:15px;z-index:999999;color:white;background:#792626dd;padding:9px;border-radius:9px;font:12px system-ui;display:none;pointer-events:none';document.body.append(e);let status=document.getElementById('status');if(status){let update=()=>{let error=status.classList.contains('error');e.textContent=error?status.textContent:'';e.style.display=error?'block':'none'};new MutationObserver(update).observe(status,{subtree:true,childList:true,attributes:true});update()}}})()").catch(console.error);
  });
- win.on('move',()=>saveSettings());
- win.on('resize',()=>saveSettings());
- win.on('closed',()=>{win=null});
+ // The screen-sized overlay is stationary; model gestures move the artwork,
+ // not the native window. Persisting its bounds would restore the old clipping bug.
+ win.on('closed',()=>{win=null;nativeIgnoring=null});
  win.on('unresponsive',()=>console.warn('Desktop renderer is unresponsive'));
  win.loadURL(urlFor(characterId)).catch(e=>dialog.showErrorBox('动态立绘加载失败',e.message));
 }
@@ -110,7 +117,7 @@ function desktopMenu(){
   {label:'重新加载角色',click:()=>win?.reload()},
   {label:'点击语音',type:'checkbox',checked:voiceEnabled,click:i=>{voiceEnabled=i.checked;saveSettings();win?.webContents.executeJavaScript('(()=>{voiceEnabled='+String(i.checked)+';updateVoiceUI();syncFrameVoice();if(!voiceEnabled)silenceCharacterVoice()})()').catch(console.error);updateTray()}},
   {type:'separator'},
-  {label:'鼠标穿透（从托盘恢复）',type:'checkbox',checked:clickThrough,click:i=>{clickThrough=i.checked;win?.setIgnoreMouseEvents(clickThrough,{forward:true});updateTray()}},
+  {label:'强制鼠标穿透（禁止角色互动）',type:'checkbox',checked:clickThrough,click:i=>{clickThrough=i.checked;setNativeIgnore(true);updateTray()}},
   {label:'窗口始终置顶',type:'checkbox',checked:alwaysOnTop,click:i=>{alwaysOnTop=i.checked;win?.setAlwaysOnTop(alwaysOnTop);saveSettings();updateTray()}},
   {label:'显示 / 隐藏',click:()=>win?.isVisible()?win.hide():win?.show()},
   {type:'separator'},
