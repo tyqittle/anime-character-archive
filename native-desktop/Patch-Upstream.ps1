@@ -51,6 +51,7 @@ if (-not ($text.Contains('AcceptArchiveStartupArgs(e.Args);') -and
 }
 [System.IO.File]::WriteAllText($source, $text, [System.Text.UTF8Encoding]::new($false))
 Copy-Item -LiteralPath $addon -Destination (Join-Path $projectDir 'NativeArchiveBridge.cs') -Force
+Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeBrownDust2Bridge.cs') -Destination (Join-Path $projectDir 'NativeBrownDust2Bridge.cs') -Force
 Write-Host 'Applied audited archive bridge to upstream SpinePet application; renderer unchanged.'
 
 # Add the tested Velopack updater library to the pinned upstream app.
