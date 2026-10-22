@@ -2,7 +2,6 @@
 const {app,BrowserWindow,Menu,Tray,nativeImage,shell,screen,dialog}=require('electron');
 const path=require('node:path');
 const fs=require('node:fs');
-const {pathToFileURL}=require('node:url');
 const SITE='https://tyqittle.github.io/anime-character-archive/';
 const SAFE_ID=/^[a-zA-Z0-9_-]{1,120}$/;
 let win,tray,clickThrough=false,alwaysOnTop=true,characterId='c012';
@@ -14,6 +13,30 @@ function readSettings(){
 }
 function saveSettings(){try{fs.mkdirSync(path.dirname(configFile()),{recursive:true});fs.writeFileSync(configFile(),JSON.stringify({id:characterId,alwaysOnTop},null,2));}catch(e){console.warn(e)}}
 function urlFor(id){return SITE+'spine.html?desktop=1&id='+encodeURIComponent(id)}
+function idFromProtocol(value){
+ try{
+  const url=new URL(value);
+  if(url.protocol!=='animecharacter:'||url.hostname!=='open')return null;
+  const id=url.searchParams.get('id')||'';
+  return SAFE_ID.test(id)?id:null;
+ }catch{return null}
+}
+function applyCharacter(id){
+ if(!SAFE_ID.test(id))return;
+ characterId=id;saveSettings();
+ if(win){win.setIgnoreMouseEvents(false);clickThrough=false;win.show();win.loadURL(urlFor(id)).catch(console.error)}
+ updateTray();
+}
+const singleInstance=app.requestSingleInstanceLock();
+if(!singleInstance)app.quit();
+else{
+ app.on('second-instance',(_event,argv)=>{
+  const id=argv.map(idFromProtocol).find(Boolean);
+  if(id)applyCharacter(id);
+  else if(win)win.show();
+ });
+ app.on('open-url',(event,url)=>{event.preventDefault();const id=idFromProtocol(url);if(id)applyCharacter(id)});
+}
 const desktopCSS=`
 html,body,.wrap,.stage,#player,.spine-player,.spine-player-container{background:transparent!important;background-color:transparent!important;box-shadow:none!important;border:0!important}
 html,body{width:100%!important;height:100%!important;margin:0!important;padding:0!important;overflow:hidden!important}
@@ -67,8 +90,11 @@ function updateTray(){
   {label:'退出',click:()=>app.quit()}
  ]));
 }
-app.whenReady().then(()=>{
+if(singleInstance)app.whenReady().then(()=>{
  readSettings();
+ const external=process.argv.map(idFromProtocol).find(Boolean);
+ if(external)characterId=external;
+ if(app.isPackaged)app.setAsDefaultProtocolClient('animecharacter');
  createWindow();
  // Tray icon generated from a tiny PNG embedded here; no extra assets required.
  const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=','base64');
