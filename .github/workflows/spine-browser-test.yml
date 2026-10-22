@@ -9,6 +9,9 @@ on:
       - 'assets/spine-theater-layout.css'
       - 'scripts/test_bluearchive_atlas_uv.mjs'
       - 'spine.html'
+      - 'assets/js/spine/spine-runtime.js'
+      - 'assets/js/spine/viewer-controls.js'
+      - 'assets/js/spine/performance.js'
       - 'data/spine-characters.json'
       - 'tests/smoke.mjs'
   workflow_dispatch:
