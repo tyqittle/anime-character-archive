@@ -9,6 +9,10 @@ on:
       - 'assets/js/live2d/model-loader.js'
       - 'assets/js/live2d/state-and-viewport.js'
       - 'assets/js/live2d/bootstrap.js'
+      - 'assets/js/live2d/runtime-loader.js'
+      - 'assets/js/shared/asset-sources.js'
+      - 'assets/js/shared/voice-playback.js'
+      - 'assets/js/spine/character-audio.js'
       - 'data/live2d-azurlane.json'
       - 'scripts/test_azurlane_live2d_browser.mjs'
       - '.github/workflows/azurlane-live2d-check.yml'
@@ -18,7 +22,7 @@ permissions:
 jobs:
   test-cubism:
     runs-on: ubuntu-latest
-    timeout-minutes: 9
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -30,7 +34,7 @@ jobs:
         run: |
           python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/azurlane-server.log 2>&1 &
           sleep 2
-      - name: Verify two real Cubism models render, move and switch in same viewer
+      - name: Verify three real models, native interaction audio and mute
         run: node scripts/test_azurlane_live2d_browser.mjs
       - name: Upload results for investigation
         if: always()
@@ -41,3 +45,4 @@ jobs:
             /tmp/azurlane-live2d-test-results.json
             /tmp/azurlane-server.log
           if-no-files-found: ignore
+

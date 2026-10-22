@@ -12,15 +12,9 @@ function urls(c,mirror){
  return {skeleton:base+'.skel',atlas:base+'.atlas',base,format:'skel'};
 }
 async function downloadBlob(url,timeout=24000,externalSignal){
- const controller=new AbortController(),onAbort=()=>controller.abort();
- if(externalSignal){if(externalSignal.aborted)controller.abort();else externalSignal.addEventListener('abort',onAbort,{once:true})}
- const timer=setTimeout(()=>controller.abort(),timeout);
- try{
-  const response=await fetch(url,{signal:controller.signal,cache:'force-cache'});
-  if(!response.ok)throw Error('HTTP '+response.status+' '+url.split('/').pop());
-  return await response.blob();
- }finally{clearTimeout(timer);externalSignal?.removeEventListener('abort',onAbort)}
+ return ArchiveAssets.blob(url,timeout,externalSignal);
 }
+
 function imagePages(atlasText){
  return [...new Set(atlasText.replace(/^\uFEFF/,'').split(/\r?\n/).map(x=>x.trim())
   .filter(x=>/\.(png|webp|jpg|jpeg)$/i.test(x)&&!x.includes(':')))];
@@ -103,3 +97,4 @@ function cancelCharacterDownload(){
  ++currentAttempt;
  stopWatchdog();
 }
+

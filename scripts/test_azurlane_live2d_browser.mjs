@@ -11,6 +11,15 @@ const browser=await chromium.launch({headless:true,executablePath:browserPath,ar
 const results=[];
 try{
  const page=await browser.newPage({viewport:{width:1366,height:850},deviceScaleFactor:1.5});
+ // Record real native playback promises in both parent and iframe.
+ await page.addInitScript(()=>{
+  window.__voiceStarted=[];
+  const play=HTMLMediaElement.prototype.play;
+  HTMLMediaElement.prototype.play=function(...args){
+   const url=this.currentSrc||this.src;
+   return Promise.resolve(play.apply(this,args)).then(result=>{window.__voiceStarted.push(url);return result});
+  };
+ });
  const errors=[];
  page.on('pageerror',err=>errors.push(err.message));
  for(const id of cases){
@@ -39,6 +48,25 @@ try{
   const performanceSettings=await frame.locator('#live2dCanvas').evaluate(()=>({fpsCap:app?.ticker?.maxFPS}));
   if(![30,60].includes(performanceSettings.fpsCap))
     throw Error('Live2D FPS limiter missing: '+JSON.stringify(performanceSettings));
+  // Regression: enabling via the test button must also enable iframe interaction.
+  await page.locator('#voiceTest').waitFor({state:'visible'});
+  await page.waitForFunction(()=>!document.querySelector('#voiceTest')?.disabled,null,{timeout:20000});
+  await page.locator('#voiceTest').click();
+  await page.waitForFunction(()=>window.__voiceStarted.length>0,null,{timeout:45000});
+  const child=page.frames().find(f=>f.url().includes('azurlane-stage.html'));
+  await child.waitForFunction(()=>frameVoiceEnabled&&frameVoiceCharacter===readyId,null,{timeout:10000});
+  const before=await child.evaluate(()=>window.__voiceStarted.length);
+  await frame.locator('#live2dCanvas').click({position:{x:25,y:25}});
+  await child.waitForFunction(n=>window.__voiceStarted.length>n,before,{timeout:45000});
+  const audio=await child.evaluate(()=>window.__voiceStarted.at(-1));
+  console.log('PASS_INTERACTION_AUDIO',JSON.stringify({id,audio}));
+  // Disabling must silence interaction again.
+  await page.locator('#voiceEnabled').uncheck();
+  await child.waitForFunction(()=>!frameVoiceEnabled);
+  const stopped=await child.evaluate(()=>window.__voiceStarted.length);
+  await frame.locator('#live2dCanvas').click({position:{x:25,y:25}});
+  await page.waitForTimeout(150);
+  if(await child.evaluate(()=>window.__voiceStarted.length)!==stopped)throw Error('Muted interaction played audio: '+id);
   const actions=await page.locator('#animationPicker option').count();
   if(actions<2)throw Error('Cubism motions were not registered: '+id);
   await page.locator('#animationPicker').selectOption({index:Math.min(1,actions-1)});
@@ -52,3 +80,4 @@ try{
  fs.writeFileSync('/tmp/azurlane-live2d-test-results.json',JSON.stringify({results,errors},null,2));
  if(errors.length)throw Error('Page errors: '+errors.join('; '));
 }finally{await browser.close();}
+

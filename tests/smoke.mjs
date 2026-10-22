@@ -285,7 +285,7 @@ for(const file of cubismModules){
 }
 assert.ok(live2dFrame.includes('./assets/live2d-stage.css?v=20261021-modules-v1'),'Cubism style must be an external module');
 assert.ok(cubismSource.includes('PIXI.live2d.Live2DModel.fromSync'),'Azur Lane needs a real Cubism renderer, not an image swap');
-assert.ok(live2dFrame.includes('88cb6e56a0ad472fe7e546509f096545d2bbc5b9'),'Cubism runtime must be pinned');
+assert.ok(read('assets/js/live2d/runtime-loader.js').includes('88cb6e56a0ad472fe7e546509f096545d2bbc5b9'),'Cubism runtime must be pinned');
 assert.ok(player.includes('value="azurlane"')&&player.includes("c.gameId==='azurlane'"),'Azur Lane must be a regular selection in the dynamic theater');
 assert.ok(player.includes('azurlaneFrame')&&player.includes('azurlane-stage.html')&&player.includes('sendAzurLane('),'Live2D must open inside the same player panel and support controls');
 assert.ok(read('assets/spine-theater-layout.css').includes('.azurlane-live2d-frame'),'Cubism stage must fit existing responsive player area');
@@ -316,7 +316,7 @@ assert.ok(!versionRegexp.test('unrecognized'),'Spine version regex accepted inva
 const galleryHTML=read('characters.html'),spineHTML=read('spine.html');
 for(const [html,modules] of [[galleryHTML,galleryModules],[spineHTML,spineModules]]){
  const loaded=[...html.matchAll(/<script defer src="\.\/([^"?]+)\?v=[^"]+"><\/script>/g)].map(x=>x[1]);
- assert.deepEqual(loaded,[...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/shared/voice-playback.js']:[]),...modules.slice(0,3),...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/performance.js']:[]),...modules.slice(3),'assets/js/shared/friend-links.js',...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/character-audio.js']:[])],'Browser modules and common friend links must preserve loading order');
+ assert.deepEqual(loaded,[...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/shared/asset-sources.js','assets/js/shared/voice-playback.js']:[]),...modules.slice(0,3),...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/performance.js']:[]),...modules.slice(3),'assets/js/shared/friend-links.js',...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/character-audio.js']:[])],'Browser modules and common friend links must preserve loading order');
  assert.ok(!/<script>\s*['"]use strict/.test(html),'Page-level application logic must live in feature modules');
 }
 for(const item of ['assets/gallery-base.css','assets/gallery-theme.css','assets/spine-base.css','assets/spine-theme.css']){
@@ -397,8 +397,8 @@ assert.ok(read('assets/js/spine/spine-runtime.js').includes('update:(p)=>applySh
 // Loading one game's manifest must never block unrelated games, and engine
 // compatibility must be shared instead of a game-specific include list.
 const catalogBootstrap=read('assets/js/spine/bootstrap.js');
-assert.ok(catalogBootstrap.includes('Promise.allSettled')&&catalogBootstrap.includes("cache:'default'"),
- 'Animation catalogs should load in parallel with versioned HTTP caching');
+assert.ok(catalogBootstrap.includes('Promise.allSettled')&&catalogBootstrap.includes("cache:'no-cache'"),
+ 'Animation catalogs should load in parallel and revalidate mutable manifests');
 assert.ok(catalogBootstrap.includes('isPlayableAnimationEntry')&&!catalogBootstrap.includes("c.gameId==='arknights'&&c.base"),
  'Spine/Cubism catalog validation should not depend on individual game IDs');
 
@@ -442,3 +442,4 @@ assert.ok(previewDiag.includes('def failure_category')&&
  previewDiag.includes('def read_capture_failures'));
 assert.ok(read('scripts/merge_newgame_previews.py').includes("'failedCaptures': failed_records"));
 assert.ok(read('assets/js/spine/catalog.js').includes('c.previewFailureReason'));
+

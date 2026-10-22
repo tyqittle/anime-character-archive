@@ -47,6 +47,15 @@ class PreviewPolicyTest(unittest.TestCase):
         self.assertIsNotNone(p.verified_file(spine,self.path))
         spine['previewSha256'] = '0'*64
         self.assertIsNone(p.verified_file(spine,self.path))
+    def test_new_sha_preview_remains_verified(self):
+        previous=p.ROOT
+        try:
+            p.ROOT=self.path
+            self.assertTrue(p.apply_verified_preview(self.character))
+            self.assertEqual((self.character['previewWidth'],self.character['previewHeight']),(360,420))
+            self.assertFalse(p.needs_capture(self.character))
+            self.assertIsNotNone(p.verified_file(self.character,self.path))
+        finally: p.ROOT=previous
     def test_preserve_verified_status(self):
         local = self.path / 'assets' / 'animation-previews'
         local.mkdir(parents=True)
@@ -61,3 +70,4 @@ class PreviewPolicyTest(unittest.TestCase):
         finally: p.ROOT = previous
 
 if __name__ == '__main__': unittest.main()
+

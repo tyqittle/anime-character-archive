@@ -61,6 +61,7 @@ window.addEventListener('DOMContentLoaded',()=>{
  document.getElementById('characters').addEventListener('change',selectedVoiceChanged);
  document.getElementById('characterCards').addEventListener('click',selectedVoiceChanged);
  document.getElementById('gameFilter').addEventListener('change',selectedVoiceChanged);
- document.getElementById('voiceTest').addEventListener('click',()=>{voiceEnabled=true;updateVoiceUI();playCharacterVoice(chosen())});
+ document.getElementById('voiceTest').addEventListener('click',()=>{voiceEnabled=true;updateVoiceUI();syncFrameVoice();playCharacterVoice(chosen())});
  updateVoiceUI();
 });
+

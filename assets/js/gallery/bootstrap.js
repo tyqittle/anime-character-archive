@@ -2,7 +2,7 @@
 var searchDelay=null;
 ['query','rarityFilter','kindFilter','sort'].forEach(function(id){$(id).addEventListener(id==='query'?'input':'change',function(){page=1;if(id==='query'){clearTimeout(searchDelay);searchDelay=setTimeout(function(){render()},140)}else{clearTimeout(searchDelay);render()}})});
 $('gameFilter').addEventListener('change',function(){selectedGroup=this.value==='all'?'all':'game:'+this.value;page=1;render();updateGroupNav()});
-fetch('./data/characters.json?v=zzz-reverse1999-ready-20261021',{cache:'default'}).then(function(r){if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(function(db){
+fetch('./data/characters.json?v=20261022-repair-v1',{cache:'no-cache'}).then(function(r){if(!r.ok)throw Error('HTTP '+r.status);return r.json()}).then(function(db){
  if(!Array.isArray(db.characters))throw Error('索引数据格式错误');
  items=db.characters.filter(function(c){return c&&c.id&&c.gameId&&c.characterKey&&c.kind==='full'&&/^\.\/assets\/portraits\/[a-zA-Z0-9_-]+\.(?:png|webp)$/.test(c.image)});
  $('totalStat').textContent=items.length;
@@ -47,3 +47,4 @@ fetch('./data/characters.json?v=zzz-reverse1999-ready-20261021',{cache:'default'
  try{hash=decodeURIComponent(location.hash.slice(1))}catch(e){/* Ignore malformed deep links. */}
  if(hash&&items.some(function(x){return x.id===hash}))showOne(hash);
 }).catch(function(e){$('resultInfo').textContent='角色索引加载失败：'+e.message;$('gallery').innerHTML='<div class="blank">图片索引加载失败。请从正式部署的网址访问，并检查 data/characters.json 是否存在。<p>'+safe(e.message)+'</p></div>'});
+

@@ -1,16 +1,20 @@
 'use strict';
 // Isolate Cubism from Spine. The iframe belongs to this same Pages origin,
 // runs the source-pinned Cubism runtime and never navigates the outer page.
+let frameBootstrapTimer=null;
 function ensureAzurLaneFrame(){
  if(azurlaneFrame)return;
  clearPlayer();
  azurlaneFrame=document.createElement('iframe');
  azurlaneFrame.className='azurlane-live2d-frame';
  azurlaneFrame.title='Live2D · Cubism 模型画布';
- azurlaneFrame.src='./azurlane-stage.html?v=20261022-audit-v1';
+ azurlaneFrame.src='./azurlane-stage.html?v=20261022-repair-v1';
  azurlaneFrame.loading='eager';
  azurlaneFrame.setAttribute('allow','autoplay');
  $('player').replaceChildren(azurlaneFrame);
+ clearTimeout(frameBootstrapTimer);
+ const frame=azurlaneFrame;
+ frameBootstrapTimer=setTimeout(()=>{if(azurlaneFrame===frame&&!azurlaneReady)status('Live2D 引擎加载超时，请点击重试加载。',true)},30000);
 }
 function presentAzurLanePreview(c){
  const playerNode=$('player');
@@ -52,7 +56,7 @@ window.addEventListener('message',event=>{
  const data=event.data;
  if(data?.channel!==L2D_CHANNEL)return;
  if(data.kind==='ready'){
-  azurlaneReady=true;
+  clearTimeout(frameBootstrapTimer);azurlaneReady=true;
   if(typeof syncFrameVoice==='function')syncFrameVoice();
   if(azurlanePending)sendAzurLane('load',{id:azurlanePending.id,skinCode:azurlanePending.skinCode,modelUrl:azurlanePending.modelUrl});
   return;
@@ -84,4 +88,11 @@ window.addEventListener('message',event=>{
   const option=[...$('animationPicker').options].find(x=>x.value===data.name);
   status('正在播放：'+azurlanePending.name+' · Live2D · '+(option?.text||data.name));
  }
+});
+
+
+$('retryCharacter').addEventListener('click',()=>{
+ const character=chosen();if(!character)return;
+ if(azurlaneFrame){clearPlayer()}
+ playCharacter(character);
 });

@@ -9,14 +9,14 @@ function isPlayableAnimationEntry(c){
  return typeof c.base==='string'&&/^https:\/\//.test(c.base)&&
    (c.skeletonFormat!=='json'||(typeof c.skeletonUrl==='string'&&typeof c.atlasUrl==='string'));
 }
-// Versioned manifest URLs are immutable between releases. Let the browser use
-// its HTTP cache instead of forcing network revalidation on every page visit.
+// Catalogs can change after background imports. Revalidate their HTTP cache
+// so restored art and previews appear without a manual hard refresh.
 // A stalled manifest must never block the other games indefinitely.
 async function fetchAnimationManifest(url){
  const controller=new AbortController();
  const timeout=setTimeout(()=>controller.abort(),12000);
  try{
-  const response=await fetch(url,{cache:'default',signal:controller.signal});
+  const response=await fetch(url,{cache:'no-cache',signal:controller.signal});
   if(!response.ok)throw Error('HTTP '+response.status);
   const payload=await response.json();
   if(!Array.isArray(payload.characters))throw Error('目录结构不完整');
@@ -90,3 +90,4 @@ refreshSaved().then(async()=>{
   }else status('本地缓存中找不到 '+packId,true);
  }catch(e){if(current===sequence)status('读取本地缓存失败：'+e.message,true)}
 });
+

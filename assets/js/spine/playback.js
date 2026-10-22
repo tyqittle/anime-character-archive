@@ -4,6 +4,8 @@ async function playCharacter(c){
  cancelCharacterDownload();
  const current=sequence,controller=new AbortController();
  activeCharacterAbort=controller;
+ let timedOut=false;
+ const deadline=setTimeout(()=>{timedOut=true;controller.abort()},55000);
  $('title').textContent=(c.zh?c.zh+' · ':'')+c.name;
  $('stageContext').textContent=c.gameId==='browndust2'?'棕色尘埃2 · 全身角色':c.gameId==='bluearchive'?'蔚蓝档案 · 回忆大厅':c.gameId==='konosuba'?'为美好的世界献上祝福！· 战斗动画':c.gameId==='arknights'?'明日方舟 · '+(c.assetType==='battle-spine'?'战斗小人':'干员动态立绘'):'胜利女神：妮姬 · Spine';
  // Do not leave the previously selected character playing while downloading
@@ -50,9 +52,10 @@ async function playCharacter(c){
     if('requestIdleCallback' in window)requestIdleCallback(saveForRepeat,{timeout:6000});
     else setTimeout(saveForRepeat,1800);
     return;
-   }catch(e){forgetSpinePack(packId);failure+=mirror+'：'+(e.message||e)+'；';}
+   }catch(e){forgetSpinePack(packId);failure+=mirror+'：'+(e.message||e)+'；';if(controller.signal.aborted)break;}
   }
   if(current===sequence)status('角色资源下载失败。'+failure+'可选择本地导入已获得的动画文件。',true);
  }catch(e){if(current===sequence)status('播放失败：'+(e.message||String(e)),true)}
- finally{if(activeCharacterAbort===controller)activeCharacterAbort=null}
+ finally{clearTimeout(deadline);if(activeCharacterAbort===controller)activeCharacterAbort=null}
 }
+

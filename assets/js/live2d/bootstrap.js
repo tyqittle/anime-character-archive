@@ -15,6 +15,19 @@ document.getElementById('live2dCanvas').addEventListener('wheel',e=>{if(!model)r
 document.getElementById('live2dCanvas').addEventListener('pointerdown',e=>{if(e.button===1){drag=true;last={x:e.clientX,y:e.clientY}}});
 document.addEventListener('pointermove',e=>{if(drag&&model){const dx=e.clientX-last.x,dy=e.clientY-last.y;offsetX+=dx;offsetY+=dy;last={x:e.clientX,y:e.clientY};model.x+=dx;model.y+=dy}});
 document.addEventListener('pointerup',()=>drag=false);
+// Canvas gestures work for every Cubism model, including skins whose PIXI
+// hit area does not dispatch pointertap. Do not play a voice at the end of a drag.
+let voicePointer=null;
+const voiceCanvas=document.getElementById('live2dCanvas');
+voiceCanvas.addEventListener('pointerdown',e=>{
+ if(e.button===0)voicePointer={id:e.pointerId,x:e.clientX,y:e.clientY};
+});
+voiceCanvas.addEventListener('pointerup',e=>{
+ const start=voicePointer;voicePointer=null;
+ if(!start||start.id!==e.pointerId||Math.hypot(e.clientX-start.x,e.clientY-start.y)>8)return;
+ playFrameVoice();
+});
+voiceCanvas.addEventListener('pointercancel',()=>voicePointer=null);
 function graphicsReport(){
  const canvas=document.getElementById('live2dCanvas'),box=canvas.getBoundingClientRect();
  const quality={backingWidth:canvas.width,backingHeight:canvas.height,
@@ -29,7 +42,8 @@ function graphicsReport(){
   return {backend:'WebGL',renderer,software:/swiftshader|llvmpipe|softpipe|software raster|microsoft basic render/i.test(renderer),quality};
  }catch(e){return {backend:'WebGL',renderer:'',software:false,quality}}
 }
-try{
+(async()=>{try{
+ await window.archiveLive2DReady;
  if(!window.PIXI?.Application||!PIXI.live2d?.Live2DModel)throw Error('第三方 PixiJS/Cubism 播放库未能初始化，请检查网络或扩展拦截');
  // Real pixels, not a 1x bitmap stretched across a HiDPI panel.
 // Cap at 2x to avoid overly expensive drawing buffers on ultra-high-DPI screens.
@@ -57,4 +71,5 @@ app=new PIXI.Application({view:document.getElementById('live2dCanvas'),autoStart
 
  message('Live2D 播放器已准备，正在等待选择角色…');
  notify('ready');
-}catch(e){initError=e.message;message('Live2D 初始化失败：'+initError);notify('error',{error:initError})}
+}catch(e){initError=e.message;message('Live2D 初始化失败：'+initError);notify('error',{error:initError})}})();
+

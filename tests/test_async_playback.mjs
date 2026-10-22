@@ -13,7 +13,7 @@ function context(extra={}){
   clearTimeout(id){timers.delete(id)},...extra});
  ctx.window=ctx;ctx.timers=timers;return ctx;
 }
-const run=(ctx,p)=>vm.runInContext(source(p),ctx,{filename:p});
+const run=(ctx,p)=>{if(p==='assets/js/spine/spine-assets.js')vm.runInContext(source('assets/js/shared/asset-sources.js'),ctx);return vm.runInContext(source(p),ctx,{filename:p})};
 test('download timeout remains active throughout response body and external abort',async()=>{
  const ctx=context();
  ctx.fetch=async(_url,{signal})=>({ok:true,blob:()=>new Promise((_resolve,reject)=>{
@@ -29,7 +29,7 @@ test('download timeout remains active throughout response body and external abor
  const controller=new AbortController();
  const external=ctx.downloadBlob('https://example.test/model',24000,controller.signal);
  await flush();controller.abort();
- await assert.rejects(external,/body aborted/);
+ await assert.rejects(external,{name:'AbortError'});
  assert.equal(ctx.timers.size,0);
 });
 test('IndexedDB writes resolve only after commit and reject late transaction aborts',async()=>{
@@ -183,4 +183,14 @@ test('skin selection counts active bones instead of invisible common attachments
   setSlotsToSetupPose(){},updateWorldTransform(){}};
  instance.skeleton=sk;instance.config={};ctx.config.success(instance);
  assert.equal(await p,true);assert.equal(sk.skin.name,'form');assert.equal(instance.config.skin,'form');
+});
+
+
+test('asset failover preserves exact repository revision and path',async()=>{
+ const calls=[],ctx=context({fetch:async(url)=>{calls.push(url);return {ok:calls.length>1,status:503,blob:async()=>({verified:true})}}});
+ run(ctx,'assets/js/shared/asset-sources.js');
+ const value=await ctx.ArchiveAssets.blob('https://cdn.jsdelivr.net/gh/owner/repo@abc123/models/a.skel');
+ assert.equal(value.verified,true);
+ assert.deepEqual(calls,['https://raw.githubusercontent.com/owner/repo/abc123/models/a.skel','https://cdn.jsdelivr.net/gh/owner/repo@abc123/models/a.skel']);
+ assert.equal(ctx.timers.size,0);
 });

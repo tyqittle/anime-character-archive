@@ -17,7 +17,7 @@ def verified_file(c, directory=None):
         if raw[:4] != b'RIFF' or raw[8:12] != b'WEBP': return None
         with Image.open(p) as im: im.verify()
         with Image.open(p) as im:
-            if im.size != ((480,360) if c.get('previewSha256') else (360,420)): return None
+            if im.size != ((c['previewWidth'],c['previewHeight']) if c.get('previewWidth') and c.get('previewHeight') else ((480,360) if c.get('previewSha256') else (360,420))): return None
         if c.get('previewSha256') and hashlib.sha256(raw).hexdigest() != c['previewSha256']: return None
     except (OSError, ValueError): return None
     return p
@@ -25,6 +25,9 @@ def needs_capture(c):
     return not (c.get('preview') == relative_path(c) and c.get('previewSource') == source(c) and verified_file(c) is not None)
 def apply_verified_preview(c):
     if verified_file(c) is None: return False
+    path = ROOT / filename(c)
+    with Image.open(path) as im: c['previewWidth'], c['previewHeight'] = im.size
+    c['previewSha256'] = hashlib.sha256(path.read_bytes()).hexdigest()
     c['preview'] = relative_path(c)
     c['previewSource'] = source(c)
     if c.get('status') != 'verified-playback': c['status'] = 'browser-preview-captured'
@@ -40,3 +43,4 @@ def audit(characters):
             missing.append({'gameId':c['gameId'],'id':c['id']})
         else: rec['verifiedPreview'] += 1
     return {'counts':counts,'missing':missing}
+

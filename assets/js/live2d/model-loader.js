@@ -15,7 +15,7 @@ function setFrameVoice(voice){
  frameVoicePlayer.setVolume(frameVoiceVolume);
 }
 function playFrameVoice(){
- if(!frameVoiceEnabled||!frameVoiceSkin||!currentId.startsWith('al-')||currentId!==frameVoiceCharacter)return;
+ if(!frameVoiceEnabled||!frameVoiceSkin||currentId!==readyId||currentId!==frameVoiceCharacter)return;
  const urls=ArchiveVoice.skinURLs(frameVoiceSkin),index=frameVoiceIndex++%urls.length;
  return frameVoicePlayer.play([...urls.slice(index),...urls.slice(0,index)],frameVoiceVolume);
 }
@@ -40,19 +40,33 @@ async function load(name,id,modelUrl){
  if(!app){notify('error',{error:initError||'Live2D 渲染库尚未加载'});return}
  message('正在加载 '+name+' 的 Cubism 模型与动作…');
  if(app?.ticker)app.ticker.stop();
- const url=modelUrlFor(name,modelUrl,id);
+ const verifiedUrl=modelUrlFor(name,modelUrl,id);
+ const candidates=verifiedUrl?ArchiveAssets.variants(verifiedUrl):[];
+ const url=candidates[0];
  if(!url){message('模型来源未被收录');notify('error',{error:'模型地址未通过来源校验'});return}
  let next;
  try{
   // Many skins define dozens of idle motions. Preloading all of them floods
   // the network and delays textures. Fetch motions only when actually selected.
-  next=PIXI.live2d.Live2DModel.fromSync(url,{motionPreload:'NONE'});
-  if(!next||!next.once)throw Error('Live2D 模型加载器未初始化');
-  await new Promise((resolve,reject)=>{
-   const timer=setTimeout(()=>reject(Error('模型加载超时（90 秒）')),90000);
-   next.once('load',()=>{clearTimeout(timer);resolve()});
-   next.once('error',e=>{clearTimeout(timer);reject(e instanceof Error?e:Error(String(e)))});
-  });
+  const failures=[];
+  for(const candidate of candidates){
+   if(generation!==currentGeneration)return;
+   try{
+    message('正在从 '+new URL(candidate).hostname+' 加载 '+name+'…');
+    next=PIXI.live2d.Live2DModel.fromSync(candidate,{motionPreload:'NONE'});
+    if(!next||!next.once)throw Error('Live2D 模型加载器未初始化');
+    await new Promise((resolve,reject)=>{
+     const timer=setTimeout(()=>reject(Error('模型加载超时（25秒）')),25000);
+     next.once('load',()=>{clearTimeout(timer);resolve()});
+     next.once('error',e=>{clearTimeout(timer);reject(e instanceof Error?e:Error(String(e)))});
+    });
+    break;
+   }catch(error){
+    try{next?.destroy()}catch(_){}
+    next=null;failures.push(new URL(candidate).hostname+'：'+(error.message||String(error)));
+   }
+  }
+  if(!next)throw Error(failures.join('；'));
   if(generation!==currentGeneration){next.destroy();return}
   model=next;readyId=id;app.stage.addChild(model);
   model.interactive=true;
@@ -80,7 +94,6 @@ async function load(name,id,modelUrl){
   const p=(evt)=>{if(!model)return;const pt=evt?.data?.global;if(!pt)return;model.dragging=true;model.dragX=pt.x;model.dragY=pt.y};
   // Play audio within the SAME pointer gesture and iframe. postMessage to the
   // parent is asynchronous and loses transient user activation in some browsers.
-  model.on('pointertap',()=>{if(typeof playFrameVoice==='function')playFrameVoice()});
   model.on('pointerdown',p);
   model.on('pointermove',evt=>{if(model?.dragging&&evt?.data?.global){const pt=evt.data.global;offsetX+=pt.x-model.dragX;offsetY+=pt.y-model.dragY;model.x+=pt.x-model.dragX;model.y+=pt.y-model.dragY;model.dragX=pt.x;model.dragY=pt.y}});
   for(const ev of ['pointerup','pointerupoutside'])model.on(ev,()=>{if(model)model.dragging=false});
@@ -89,3 +102,4 @@ async function load(name,id,modelUrl){
   notify('playing',{motions:actions,motionLabels,selectedMotion:initial,zoom,loadMs:Math.round(performance.now()-loadStartedAt),fpsCap:targetFPS,graphics:graphicsReport()});
  }catch(e){try{next?.destroy()}catch(_){}if(generation!==currentGeneration)return;model=null;readyId='';message('模型加载失败：'+(e?.message||String(e)));notify('error',{error:'模型加载失败：'+(e?.message||String(e))})}
 }
+
