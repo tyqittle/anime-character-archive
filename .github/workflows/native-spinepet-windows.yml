@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'native-desktop/**'
+      - 'tests/smoke.mjs'
       - '.github/workflows/native-spinepet-windows.yml'
 jobs:
   # A green binary build is not enough: validate the site-to-desktop
