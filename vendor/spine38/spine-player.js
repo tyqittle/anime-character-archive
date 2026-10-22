@@ -4838,7 +4838,7 @@ var spine;
 		function BinaryInput(data, strings, index, buffer) {
 			if (strings === void 0) { strings = new Array(); }
 			if (index === void 0) { index = 0; }
-			if (buffer === void 0) { buffer = new DataView(data.buffer); }
+			if (buffer === void 0) { buffer = new DataView(data.buffer, data.byteOffset, data.byteLength); }
 			this.strings = strings;
 			this.index = index;
 			this.buffer = buffer;
@@ -4890,26 +4890,12 @@ var spine;
 					return "";
 			}
 			byteCount--;
-			var chars = "";
-			var charCount = 0;
-			for (var i = 0; i < byteCount;) {
-				var b = this.readByte();
-				switch (b >> 4) {
-					case 12:
-					case 13:
-						chars += String.fromCharCode(((b & 0x1F) << 6 | this.readByte() & 0x3F));
-						i += 2;
-						break;
-					case 14:
-						chars += String.fromCharCode(((b & 0x0F) << 12 | (this.readByte() & 0x3F) << 6 | this.readByte() & 0x3F));
-						i += 3;
-						break;
-					default:
-						chars += String.fromCharCode(b);
-						i++;
-				}
-			}
-			return chars;
+			// readByte() is signed for Spine bend directions; UTF-8 must decode
+			// unsigned byte sequences, including three/four-byte CJK and emoji.
+			var bytes = new Uint8Array(this.buffer.buffer, this.buffer.byteOffset + this.index, byteCount);
+			this.index += byteCount;
+			if (!BinaryInput.utf8Decoder) BinaryInput.utf8Decoder = new TextDecoder('utf-8', { fatal: true });
+			return BinaryInput.utf8Decoder.decode(bytes);
 		};
 		BinaryInput.prototype.readFloat = function () {
 			var value = this.buffer.getFloat32(this.index);

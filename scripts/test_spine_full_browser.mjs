@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import {chromium} from 'playwright-core';
 import {PNG} from 'pngjs';
+import {compareRenderedFrames} from './animation_frame_check.mjs';
 
 const root=new URL('../',import.meta.url);
 const catalog=JSON.parse(fs.readFileSync(new URL('data/spine-characters.json',root),'utf8')).characters;
@@ -17,19 +18,7 @@ const page=await context.newPage(),results=[];
 const pageErrors=[];
 page.on('pageerror',err=>pageErrors.push(String(err)));
 const FAIL=/加载失败|资源下载失败|播放失败|加载超时|版本.*不支持|无法解析|初始化失败|自动播放动作失败|没有找到可播放的动作|下载失败|加载超时/;
-function compare(a,b){
- const first=PNG.sync.read(a),second=PNG.sync.read(b);
- if(first.width!==second.width||first.height!==second.height)return {visible:0,moving:0};
- const bg=[first.data[0],first.data[1],first.data[2]];
- let visible=0,moving=0;
- for(let i=0;i<first.data.length;i+=4){
-  const dist=Math.abs(first.data[i]-bg[0])+Math.abs(first.data[i+1]-bg[1])+Math.abs(first.data[i+2]-bg[2]);
-  const change=Math.abs(first.data[i]-second.data[i])+Math.abs(first.data[i+1]-second.data[i+1])+Math.abs(first.data[i+2]-second.data[i+2]);
-  if(dist>100)visible++;
-  if(change>45)moving++;
- }
- return {visible,moving};
-}
+function compare(a,b){return compareRenderedFrames(PNG.sync.read(a),PNG.sync.read(b))}
 try {
  for(const c of todo){
   let state='timeout',message='',visible=null,moving=null,canvas=false;
@@ -46,7 +35,14 @@ try {
    }
    canvas=(await page.locator('#player canvas').count())>0;
    if(state==='reported-playing'&&canvas){
-    const first=await page.locator('#player canvas').screenshot({timeout:15000});
+    // success() can precede the first WebGL draw. Wait for visible pixels,
+    // then sample motion; never classify initial painting as a blank model.
+    let first=await page.locator('#player canvas').screenshot({timeout:15000});
+    const firstPaintDeadline=Date.now()+8000;
+    while(compare(first,first).visible<300&&Date.now()<firstPaintDeadline){
+     await page.waitForTimeout(250);
+     first=await page.locator('#player canvas').screenshot({timeout:15000});
+    }
     await page.waitForTimeout(1700);
     const second=await page.locator('#player canvas').screenshot({timeout:15000});
     const pixels=compare(first,second);visible=pixels.visible;moving=pixels.moving;

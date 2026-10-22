@@ -3,6 +3,7 @@
 import { chromium } from 'playwright-core';
 import fs from 'node:fs';
 import { PNG } from 'pngjs';
+import {compareRenderedFrames} from './animation_frame_check.mjs';
 const url='http://127.0.0.1:8765/spine.html';
 const executable=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'].find(fs.existsSync);
 if(!executable)throw new Error('No installed Chrome/Chromium executable');
@@ -29,7 +30,7 @@ try{
  const previewPreserved=await page.evaluate(()=>document.querySelector('#characterCards .character-card')===window.__firstSpineCard);
  if(!previewPreserved)throw Error('Spine filters rebuilt preview cards instead of reusing them: '+preservedId);
  console.log('PASSED_SPINE_PREVIEW_NODE_REUSE',preservedId);
- for(const [game,id] of [['nikke','c010_01'],['nikke','c010'],['nikke','c012'],['nikke','c015'],['bluearchive','ba-ch0058_home'],['bluearchive','ba-ch0060_home'],['bluearchive','ba-ch0063_home'],['bluearchive','ba-ch0069_home'],['bluearchive','ba-ch0107_home']]){
+ for(const [game,id] of [['nikke','c010_01'],['nikke','c010'],['nikke','c012'],['nikke','c015'],['bluearchive','ba-ch0058_home'],['bluearchive','ba-ch0060_home'],['bluearchive','ba-ch0063_home'],['bluearchive','ba-ch0069_home'],['bluearchive','ba-ch0107_home'],['konosuba','kf-1654161-1650161']]){
   await page.selectOption('#gameFilter',game);
   await page.waitForTimeout(300);
   await page.selectOption('#characters',id);
@@ -46,17 +47,16 @@ try{
   const canvas=await page.locator('#player canvas').count().catch(()=>0);
   let visiblePixels=null,changedPixels=null;
   if(state==='playback-success'&&canvas){
-   const first=PNG.sync.read(await page.locator('#player canvas').screenshot());
+   let first=PNG.sync.read(await page.locator('#player canvas').screenshot());
+   const firstPaintDeadline=Date.now()+8000;
+   while(compareRenderedFrames(first,first).visible<300&&Date.now()<firstPaintDeadline){
+    await page.waitForTimeout(250);
+    first=PNG.sync.read(await page.locator('#player canvas').screenshot());
+   }
    await page.waitForTimeout(1700);
    const second=PNG.sync.read(await page.locator('#player canvas').screenshot());
-   visiblePixels=0;changedPixels=0;
-   const bg=[first.data[0],first.data[1],first.data[2]];
-   for(let i=0;i<first.data.length;i+=4){
-    let richness=0,motion=0;
-    for(let q=0;q<3;q++){richness+=Math.abs(first.data[i+q]-bg[q]);motion+=Math.abs(second.data[i+q]-first.data[i+q]);}
-    if(richness>100)visiblePixels++;
-    if(motion>45)changedPixels++;
-   }
+   const pixels=compareRenderedFrames(first,second);
+   visiblePixels=pixels.visible;changedPixels=pixels.moving;
    if(visiblePixels<300)state='playback-blank';
    else if(changedPixels<100)state='playback-static';
    else state='playback-animated';

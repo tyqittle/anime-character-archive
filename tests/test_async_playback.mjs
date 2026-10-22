@@ -173,3 +173,14 @@ test('local JSON packs detect actual version and normalize base64 text for both 
  assert.equal(JSON.parse(shown.rawDataURIs['demo.json'].split(',').slice(1).join(',')).skeleton.spine,'3.8.99');
  assert.ok(shown.rawDataURIs['demo.atlas.txt'].endsWith('texture.png\nsize: 10,10\n'));
 });
+
+test('skin selection counts active bones instead of invisible common attachments',async()=>{
+ const ctx=rendererContext(),p=ctx.show({skeleton:'forms.json'},'forms');await flush();
+ const common={name:'default'},form={name:'form',bones:[{}]},instance=ctx.player;
+ const sk={skin:common,data:{skins:[common,form],animations:[]},
+  slots:Array.from({length:8},()=>({attachment:{},bone:{active:false}})),
+  setSkin(skin){this.skin=skin;for(const slot of this.slots)slot.bone.active=skin===form},
+  setSlotsToSetupPose(){},updateWorldTransform(){}};
+ instance.skeleton=sk;instance.config={};ctx.config.success(instance);
+ assert.equal(await p,true);assert.equal(sk.skin.name,'form');assert.equal(instance.config.skin,'form');
+});

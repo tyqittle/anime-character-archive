@@ -9,7 +9,7 @@ const browser=await chromium.launch({executablePath:executable,headless:true,arg
 const page=await browser.newPage({viewport:{width:1366,height:900}});
 const results=[];
 try{
- for(const id of ['ba-ch0145_home','ba-ch0058_home','ba-ch0069_home']){
+ for(const id of ['ba-ch0145_home','ba-ch0058_home','ba-ch0069_home','ba-ch0218_home']){
   await page.goto('http://127.0.0.1:8765/spine.html?id='+id,{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>/正在播放：|加载失败|播放器初始化失败|资源下载失败/.test(document.querySelector('#status')?.innerText||''),null,{timeout:90000});
   const inspection=await page.evaluate(()=>{
@@ -50,7 +50,7 @@ try{
   if(!inspection.fixed)throw Error('Spine 3.8 rotation patch did not load for '+id);
   if(inspection.premultipliedAlpha!==false)throw Error('Blue Archive should use straight-alpha texture blending: '+id);
   if(!inspection.status?.includes('正在播放：'))throw Error('No animation for '+id+': '+inspection.status);
-  if(!inspection.uvValid||!inspection.counts[270]||!inspection.counts[180])throw Error('Atlas regions still incorrect: '+id+' '+JSON.stringify(inspection));
+  if(!inspection.uvValid||(id!=='ba-ch0218_home'&&(!inspection.counts[270]||!inspection.counts[180])))throw Error('Atlas regions still incorrect: '+id+' '+JSON.stringify(inspection));
   for(const degrees of [0,90,180,270]){
    const actual=inspection.rotations[degrees];
    if(actual?.some((x,i)=>Math.abs(x-expected[degrees][i])>.001))throw Error('Incorrect region UV mapping for '+degrees+' on '+id+': '+actual);

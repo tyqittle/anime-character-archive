@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: '22'
       - name: Test asynchronous playback and shared voice lifecycle
-        run: node --test tests/test_async_playback.mjs
+        run: node --test tests/test_async_playback.mjs tests/test_animation_frames.mjs tests/test_spine_utf8.mjs
       - name: Validate archive metadata and entrypoints
         run: node tests/smoke.mjs
       - name: Test bounded animation memory cache

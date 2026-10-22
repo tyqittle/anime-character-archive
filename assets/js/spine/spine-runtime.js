@@ -78,7 +78,7 @@ function ensureRuntime(version,isCurrent=()=>true){
      const script=document.createElement('script');
      script.dataset.spineRuntime=version;
      const timeout=setTimeout(()=>{script.remove();reject(Error('超时（15秒）'))},15000);
-     script.src=url;
+     script.src=url+(base===local?'?v=20261022-utf8-v1':'');
      script.onload=()=>{
       clearTimeout(timeout);
       if(!window.spine?.SpinePlayer){reject(Error('脚本已加载但未注册 SpinePlayer'));return}
@@ -159,9 +159,10 @@ async function show(options,title,onError){
     // Such models render empty and trigger "Animation bounds are invalid".
     const sk=p.skeleton,skins=sk?.data?.skins||[];
     if(sk&&skins.length>1){
-     const countAttachments=()=>sk.slots.filter(slot=>!!slot.attachment).length;
+     const countAttachments=()=>sk.slots.filter(slot=>!!slot.attachment&&slot.bone?.active!==false).length;
      const initial=countAttachments();
-     if(initial<6){
+     const inactiveSkinBones=skins.some(skin=>skin.bones?.length)&&!sk.skin?.bones?.length;
+     if(initial<6||inactiveSkinBones){
       let bestSkin=sk.skin,bestCount=initial;
       for(const skin of skins){
        try{
