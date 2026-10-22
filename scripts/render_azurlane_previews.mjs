@@ -2,7 +2,7 @@ import {chromium} from 'playwright-core';
 import fs from 'node:fs';
 import path from 'node:path';
 const shard=Number(process.argv[2]||0),count=Number(process.argv[3]||8);
-const all=JSON.parse(fs.readFileSync('data/live2d-azurlane.json','utf8')).characters.filter(c=>c.gameId==='azurlane'&&(!c.preview||c.previewSource==='matching-live2d-animation-frame'));
+const all=JSON.parse(fs.readFileSync('data/live2d-azurlane.json','utf8')).characters.filter(c=>c.gameId==='azurlane'&&!(c.previewSource==='matching-live2d-animation-frame'&&c.preview==='./assets/animation-previews/azurlane-'+c.id+'.webp'&&fs.existsSync('assets/animation-previews/azurlane-'+c.id+'.webp')));
 const characters=all.filter((c,i)=>i%count===shard);
 const executablePath=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'].find(fs.existsSync);
 fs.mkdirSync('tmp/al-frames',{recursive:true});
