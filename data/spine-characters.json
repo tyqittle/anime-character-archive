@@ -13452,7 +13452,7 @@
       "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
       "previewStatus": "render-failed",
       "previewFailureType": "atlas-mismatch",
-      "previewFailureReason": "角色资源下载失败。github：Error: could not load skeleton .json.<br><br>Error: Region not found in atlas: 01_backhair_2_1 (mesh attachment: 01_backhair_2_1)；可选择本地导入已获得的动画文件。"
+      "previewFailureReason": "Error: 角色资源下载失败。github：Error: could not load skeleton .json. Error: Region not found in atlas: 01_backhair_2_1 (mesh attachment: 01_backhair_2_1)；可点击“重试”或选择本地导入已获得的动画文件。"
     },
     {
       "id": "kf-1193207-1190100",
@@ -13472,7 +13472,7 @@
       "sourceCatalog": "https://github.com/cambacodes/spine-catalog/tree/main/catalogs/konosuba-fantastic-days",
       "previewStatus": "render-failed",
       "previewFailureType": "atlas-mismatch",
-      "previewFailureReason": "角色资源下载失败。github：Error: could not load skeleton .json.<br><br>Error: Region not found in atlas: 01_backhair_2_1 (mesh attachment: 01_backhair_2_1)；可选择本地导入已获得的动画文件。"
+      "previewFailureReason": "Error: 角色资源下载失败。github：Error: could not load skeleton .json. Error: Region not found in atlas: 01_backhair_2_1 (mesh attachment: 01_backhair_2_1)；可点击“重试”或选择本地导入已获得的动画文件。"
     },
     {
       "id": "kf-1194113-1190142",
