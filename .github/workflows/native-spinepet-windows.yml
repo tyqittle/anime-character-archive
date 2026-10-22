@@ -160,6 +160,9 @@ jobs:
           dotnet tool install --global vpk --version 1.2.161
           if ($LASTEXITCODE -ne 0) { throw 'Pinned Velopack CLI installation failed' }
           $version = "0.1.${{ github.run_number }}"
+          # Velopack package updates the application folder, so ship upstream
+          # GPL license and notices inside that versioned folder too.
+          Copy-Item ./safe-release/core/LICENSE-GPL-3.0.txt,./safe-release/core/NOTICE.txt,./safe-release/core/THIRD_PARTY_NOTICES.md -Destination ./safe-release/core/app
           vpk pack --packId AnimeCharacterSpinePet --packVersion $version --packDir ./safe-release/core/app --mainExe SpinePet.exe --outputDir ./safe-release/velopack
           if ($LASTEXITCODE -ne 0) { throw 'Velopack packaging failed' }
           if (@(Get-ChildItem ./safe-release/velopack/*-Setup.exe).Count -lt 1) { throw 'Missing auto-update Setup.exe' }
