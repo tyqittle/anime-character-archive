@@ -16,6 +16,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: azurlane-preview-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   capture:
     runs-on: ubuntu-latest
@@ -39,11 +42,13 @@ jobs:
       - run: |
           node scripts/render_azurlane_previews.mjs ${{ matrix.shard }} 8
           python3 scripts/convert_azurlane_previews.py
+          mkdir -p tmp/azurlane-output/webps
+          printf 'shard: %s\n' '${{ matrix.shard }}' > tmp/azurlane-output/webps/shard-${{ matrix.shard }}.txt
       - if: always()
         uses: actions/upload-artifact@v4
         with:
           name: azurlane-frame-${{ matrix.shard }}
-          path: assets/animation-previews/azurlane-*.webp
+          path: tmp/azurlane-output/webps/
           if-no-files-found: ignore
           retention-days: 3
   publish:
@@ -58,7 +63,10 @@ jobs:
         with:
           pattern: azurlane-frame-*
           merge-multiple: true
-          path: assets/animation-previews
+          path: tmp/azurlane-merged
+      - name: Copy only newly rendered frames
+        run: |
+          find tmp/azurlane-merged -maxdepth 1 -type f -name 'azurlane-*.webp' -exec cp -t assets/animation-previews/ {} +
       - run: python3 scripts/merge_azurlane_previews.py
       - run: |
           git config user.name 'github-actions[bot]'
