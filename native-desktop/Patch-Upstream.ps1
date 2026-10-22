@@ -95,7 +95,16 @@ $replacement = @'
                     Path.IsPathFullyQualified(selected))
                 {
                     string chosen = Path.GetFullPath(selected);
-                    Directory.CreateDirectory(chosen);
+                    // Keep the user's selected drive authoritative even if it
+                    // is temporarily disconnected: NEVER redirect writes to C:.
+                    // Resource discovery will see the unavailable directory as
+                    // empty and imports will explain any write failure.
+                    try { Directory.CreateDirectory(chosen); }
+                    catch (Exception ex) when (ex is IOException ||
+                                               ex is UnauthorizedAccessException)
+                    {
+                        // Preserve the preferred folder for the next startup.
+                    }
                     return chosen;
                 }
             }
