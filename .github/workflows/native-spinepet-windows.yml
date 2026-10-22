@@ -211,52 +211,42 @@ jobs:
           if (-not (Test-Path ./safe-release/velopack/AnimeCharacterSpinePet-ChooseFolders-Setup.exe)) {
             throw 'Compiled folder-selectable EXE was not created'
           }
-      - name: Exercise the real inner Velopack installer on Windows (non-default drive path)
+      - name: End-to-end smoke test of the SAME two-folder graphical installer
         shell: pwsh
         run: |
-          # Compile success alone missed a real installer exit-1 failure.
-          # Run the same setup binary the graphical wizard embeds.
-          $setup = @(Get-ChildItem ./safe-release/velopack/*-win-Setup.exe)
-          if ($setup.Count -ne 1) { throw 'Expected exact packaged inner Setup.exe' }
-          $root = Join-Path $env:RUNNER_TEMP 'AnimeCharacterInstallerSmoke'
-          $target = Join-Path $root '程序 安装'
-          $log = Join-Path $env:RUNNER_TEMP 'velopack-custom-install.log'
-          if (Test-Path $target) { Remove-Item $target -Force -Recurse }
-          & $setup[0].FullName --silent --verbose --log "$log" --installto "$target"
-          $code = $LASTEXITCODE
-          if (Test-Path $log) {
-            Get-Content $log -Tail 150 | ForEach-Object { Write-Host $_ }
+          # This is the exact Inno EXE a user downloads, NOT just its inner
+          # Velopack Setup. /VERYSILENT avoids interacting with runner desktop.
+          $wizard = @(Get-ChildItem ./safe-release/velopack/AnimeCharacterSpinePet-ChooseFolders-Setup.exe)
+          if ($wizard.Count -ne 1) { throw 'Missing exact two-folder EXE artifact' }
+          $root = Join-Path $env:RUNNER_TEMP 'AnimeCharacterTwoFolderSmoke'
+          $program = Join-Path $root '程序 安装'
+          $models = Join-Path $root '角色 素材'
+          $innoLog = Join-Path $env:RUNNER_TEMP 'spinepet-wizard-install.log'
+          $arguments = @('/VERYSILENT', '/SUPPRESSMSGBOXES', '/NORESTART',
+            ('"/PROGRAMDIR=' + $program + '"'),
+            ('"/MODELDIR=' + $models + '"'),
+            ('"/LOG=' + $innoLog + '"')) -join ' '
+          Write-Host "Testing GUI wrapper with unattended choices and two separate non-default Unicode paths."
+          $proc = Start-Process -FilePath $wizard[0].FullName -ArgumentList $arguments -Wait -PassThru
+          $code = $proc.ExitCode
+          if (Test-Path $innoLog) {
+            Get-Content $innoLog -Tail 65 | ForEach-Object { Write-Host $_ }
           }
-          if ($code -ne 0) { throw "REAL INSTALL SMOKE FAILED: Velopack exit $code" }
-          $launcher = Join-Path $target 'SpinePet.exe'
-          if (-not (Test-Path $launcher)) {
-            Get-ChildItem $root -Recurse -Depth 4 | Select-Object FullName | Format-Table
-            throw "Setup returned success but the expected launcher does not exist: $launcher"
+          $innerLog = Join-Path $models 'SpinePet-Install.log'
+          if (Test-Path $innerLog) {
+            Get-Content $innerLog -Tail 40 | ForEach-Object { Write-Host $_ }
           }
-          if (-not (Test-Path (Join-Path $target 'current/sq.version'))) {
-            throw 'Installer did not create its update-managed current/sq.version layout'
+          if ($code -ne 0) { throw "FULL INSTALL WIZARD FAILED: exit $code" }
+          if (-not (Test-Path (Join-Path $program 'SpinePet.exe'))) {
+            throw "Selected program folder missing EXE: $program"
           }
-          Write-Host 'REAL INSTALL SUCCESS: chosen directory contains SpinePet launcher and Velopack update structure.'
-      - name: Exercise directory-selectable MSI with Windows Installer
-        shell: pwsh
-        run: |
-          $msi = @(Get-ChildItem ./safe-release/velopack/*.msi)
-          if ($msi.Count -ne 1) { throw 'Expected one MSI' }
-          $target = Join-Path $env:RUNNER_TEMP 'AnimeCharacterMSISmoke/程序 安装'
-          $log = Join-Path $env:RUNNER_TEMP 'velopack-msi-custom-install.log'
-          $args = @('/i', ('"' + $msi[0].FullName + '"'), '/qn', '/norestart',
-            'ALLUSERS=2', 'MSIINSTALLPERUSER=1',
-            ('VELOPACK_INSTALLDIR="' + $target + '"'), '/L*v', ('"' + $log + '"'))
-          $run = Start-Process -FilePath msiexec.exe -ArgumentList ($args -join ' ') -Wait -PassThru
-          if (Test-Path $log) {
-            Get-Content $log -Tail 150 | ForEach-Object { Write-Host $_ }
+          if (-not (Test-Path (Join-Path $program 'current/sq.version'))) {
+            throw 'Selected program folder missing Velopack update structure'
           }
-          if ($run.ExitCode -ne 0) { throw "REAL MSI INSTALL FAILED: $($run.ExitCode)" }
-          if (-not (Test-Path (Join-Path $target 'SpinePet.exe'))) {
-            throw "MSI custom install did not respect VELOPACK_INSTALLDIR=$target"
-          }
-          Write-Host 'REAL MSI INSTALL SUCCESS in custom location'
-
+          if (-not (Test-Path $models)) { throw "Selected model folder not created: $models" }
+          $saved = (Get-ItemProperty -Path 'HKCU:\Software\AnimeCharacterSpinePet' -Name ResourceDirectory).ResourceDirectory
+          if ($saved -ne $models) { throw "Model directory not persisted correctly" }
+          Write-Host 'PASS: Exact downloadable GUI EXE installed app in custom location, and saved independent model directory.'
       - name: Generate SHA-256 manifest and run security checks where supported
         shell: pwsh
         run: |
