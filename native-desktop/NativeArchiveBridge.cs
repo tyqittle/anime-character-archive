@@ -82,7 +82,7 @@ public sealed partial class App
             if (string.Equals(current, desired, StringComparison.OrdinalIgnoreCase))
                 return;
 
-            var answer = MessageBox.Show(
+            var answer = System.Windows.MessageBox.Show(
                 "启用本站「放到桌面」一键导入吗？\n" +
                 "启用后，浏览器可以请求此程序下载经过来源验证的妮姬 Spine 4.1 模型并在桌面显示。\n" +
                 "此设置仅影响当前 Windows 用户，可随时在系统的默认应用设置中更改。",
@@ -148,7 +148,7 @@ public sealed partial class App
         {
             AppLogger.Write(nameof(App),
                 $"archive-one-click-failed {ex.GetType().Name}: {ex.Message}");
-            MessageBox.Show(ex.Message, "一键导入失败",
+            System.Windows.MessageBox.Show(ex.Message, "一键导入失败",
                 MessageBoxButton.OK, MessageBoxImage.Warning);
         }
         finally
