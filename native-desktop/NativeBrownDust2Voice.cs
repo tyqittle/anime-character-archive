@@ -62,17 +62,21 @@ public sealed partial class App
                 StringComparison.OrdinalIgnoreCase)) return;
 
             string code = costumeId.Substring(8); // "bd2-char" is 8 chars
+            // In the pinned voice archive _c costumes have a suffixed
+            // directory (000502_c), but the actual files retain Char000502.
+            string clipCode = code.EndsWith("_c", StringComparison.Ordinal)
+                ? code[..^2] : code;
             string language = "JP";
             int index = _brownDust2VoiceClipIndex++ % 3 + 1;
             int sequence = ++_brownDust2VoiceSequence;
-            string basename = "Char" + code + "_BattleReady_" + index + ".wav";
+            string basename = "Char" + clipCode + "_BattleReady_" + index + ".wav";
             string localDir = Path.Combine(
                 AppPaths.LocalDataDirectory, "bd2-voice-cache", code, language);
             string cached = Path.Combine(localDir, basename);
             if (!File.Exists(cached))
             {
                 string url = BrownDust2VoiceRoot + code + "/" + language + "/" +
-                    "Char" + code + "_BattleReady_" + index + ".webm";
+                    "Char" + clipCode + "_BattleReady_" + index + ".webm";
                 byte[] audio = await ArchiveHttp.GetByteArrayAsync(url);
                 if (audio.Length is < 200 or > 3_000_000 ||
                     audio[0] != 0x1A || audio[1] != 0x45 ||
