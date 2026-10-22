@@ -2,6 +2,7 @@
 const {app,BrowserWindow,Menu,Tray,nativeImage,shell,screen,dialog}=require('electron');
 const path=require('node:path');
 const fs=require('node:fs');
+const {URL}=require('node:url');
 const SITE='https://tyqittle.github.io/anime-character-archive/';
 const SAFE_ID=/^[a-zA-Z0-9_-]{1,120}$/;
 let win,tray,clickThrough=false,alwaysOnTop=true,characterId='c012';
@@ -49,17 +50,31 @@ html,body{width:100%!important;height:100%!important;margin:0!important;padding:
 #desktopDrag{position:fixed;z-index:999999;left:calc(50% - 65px);top:0;width:130px;height:17px;border-radius:0 0 12px 12px;background:rgba(20,20,30,.20);-webkit-app-region:drag;pointer-events:auto}
 #desktopDrag:hover{background:rgba(20,20,30,.55)}
 `;
+function isTrustedPage(input){
+ try{
+  const actual=new URL(input),allowed=new URL(SITE+'spine.html');
+  return actual.origin===allowed.origin&&actual.pathname===allowed.pathname;
+ }catch{return false}
+}
 function createWindow(){
  const area=screen.getPrimaryDisplay().workArea;
  win=new BrowserWindow({width:440,height:650,x:Math.max(area.x,area.x+area.width-470),y:Math.max(area.y,area.y+area.height-680),transparent:true,frame:false,resizable:true,hasShadow:false,backgroundColor:'#00000000',alwaysOnTop,skipTaskbar:true,autoHideMenuBar:true,webPreferences:{nodeIntegration:false,contextIsolation:true,sandbox:true,backgroundThrottling:false}});
  win.setMenu(null);
- win.webContents.setWindowOpenHandler(({url})=>{if(url.startsWith('https://'))shell.openExternal(url);return {action:'deny'}});
- win.webContents.on('will-navigate',(event,url)=>{if(!url.startsWith(SITE+'spine.html'))event.preventDefault()});
+ win.webContents.setWindowOpenHandler(({url})=>{
+  try{const parsed=new URL(url);if(parsed.protocol==='https:'||parsed.protocol==='http:')shell.openExternal(parsed.toString())}catch{}
+  return {action:'deny'};
+ });
+ win.webContents.on('will-navigate',(event,url)=>{if(!isTrustedPage(url))event.preventDefault()});
+ win.webContents.on('did-fail-load',(_event,errorCode,errorDescription,validatedURL,isMainFrame)=>{
+  if(!isMainFrame||errorCode===-3)return;
+  dialog.showMessageBox(win,{type:'warning',title:'角色加载失败',message:'无法打开动态立绘页面。',detail:errorDescription+'\\n'+validatedURL,buttons:['重试','取消']}).then(({response})=>{if(response===0&&win&&!win.isDestroyed())win.reload()});
+ });
  win.webContents.on('did-finish-load',()=>{
   win.webContents.insertCSS(desktopCSS).catch(console.error);
   win.webContents.executeJavaScript("(()=>{if(!document.getElementById('desktopDrag')){let el=document.createElement('div');el.id='desktopDrag';el.title='拖动这里移动桌面立绘';document.body.append(el)}document.body.style.background='transparent'})()").catch(console.error);
  });
  win.on('closed',()=>{win=null});
+ win.on('unresponsive',()=>console.warn('Desktop renderer is unresponsive'));
  win.loadURL(urlFor(characterId)).catch(e=>dialog.showErrorBox('动态立绘加载失败',e.message));
 }
 function chooseCharacter(){
@@ -94,7 +109,7 @@ if(singleInstance)app.whenReady().then(()=>{
  readSettings();
  const external=process.argv.map(idFromProtocol).find(Boolean);
  if(external)characterId=external;
- if(app.isPackaged)app.setAsDefaultProtocolClient('animecharacter');
+ if(app.isPackaged&&process.platform==='win32')app.setAsDefaultProtocolClient('animecharacter');
  createWindow();
  // Tray icon generated from a tiny PNG embedded here; no extra assets required.
  const png=Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+jRZkAAAAASUVORK5CYII=','base64');
