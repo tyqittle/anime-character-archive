@@ -8,7 +8,8 @@ ROOT = Path('assets/animation-previews')
 def filename(c): return f"{c['gameId']}-{c['id']}.webp"
 def relative_path(c): return './' + str(ROOT / filename(c))
 def source(c): return 'matching-live2d-animation-frame' if c.get('engine') == 'cubism' else 'matching-spine-animation-frame'
-def verified_file(c, directory=ROOT):
+def verified_file(c, directory=None):
+    directory = ROOT if directory is None else directory
     p = directory / filename(c)
     if not p.is_file() or p.stat().st_size < 500: return None
     try:
