@@ -1,41 +1,37 @@
-# 原生 Windows 桌面立绘 · 基于 My_SpinePet
+# Windows 原生桌面立绘（基于开源 My_SpinePet）
 
-**这里不是一个新的自研骨骼渲染器。** Windows 程序原样编译 [KAIDO-YONAGI/My_SpinePet](https://github.com/KAIDO-YONAGI/My_SpinePet) 的固定源代码提交（Spine C# 4.1、Direct3D 11、DirectComposition、WPF），由本站维护一个独立的 PowerShell 资源桥接层。原项目已支持桌面透明背景、拖拽、缩放、点击等功能。没有使用 Electron 截图抠图、按像素抽取白底或 `setShape` 剪切动画。
+本工程使用 [KAIDO-YONAGI/My_SpinePet](https://github.com/KAIDO-YONAGI/My_SpinePet) 已有的 Direct3D 11 + DirectComposition 原生 Spine 4.1 渲染器，不使用 Electron 白色透明窗口或截图轮廓抠图。上游固定源码版本：`6690e986b4da31dc89337794bcef1b45e6531303`，代码遵循 GPL-3.0-or-later；Spine 运行时还受独立许可约束。
 
-## 安装
+## Chrome 提示“此文件包含危险内容”
 
-在 [Native SpinePet Windows build](https://github.com/tyqittle/anime-character-archive/actions/workflows/native-spinepet-windows.yml) 中下载成功构建的 `anime-archive-native-spinepet-win-x64` Artifact，解压全部内容到可写目录（推荐个人文件夹，不要直接解压在 Program Files）。
+**不要关闭安全浏览、关闭杀毒软件或强行恢复被拦截的 ZIP。** 该提示无法单凭截图判断是恶意内容还是误报，GitHub Actions 构建成功也不代表文件安全。
 
-首次安装运行 `Register-Bridge.ps1`（右键 **使用 PowerShell 运行**，或通过 PowerShell 执行 `powershell -ExecutionPolicy Bypass -File .\Register-Bridge.ps1`），把 `animecharacter://` 网站链接注册为本地资源导入入口。无需管理员权限。
+最初的发行包混合了自编译 EXE、动态资源下载 PowerShell 脚本、注册 Windows 协议的脚本和一键 CMD。为了减小额外权限和安全面，我们把它拆成三个独立产物，并在 Windows CI 中给基础程序生成文件哈希清单与安全检查报告。最新构建若仍被 Chrome 判危险，应继续定位被拦截的具体文件，而不是改名或绕过 Chrome。
 
-在 [动态立绘网站](https://tyqittle.github.io/anime-character-archive/spine.html) 选择 **已验证的妮姬 Spine 4.1 模型**（例如 `c015`），点「放到桌面」。会从目录记录的固定源站下载对应 `.skel`、`.atlas` 和所有图集贴图，放到 `res/<角色名>/<皮肤码>/standing`，启动官方 `SpinePet.exe`。已有客户端运行时，重新启动会唤醒面板。**首次导入后在面板点击“扫描 / Scan”，选择该角色，再显示它。**
+## 下载和首次运行（最小化基础程序）
 
-可先手动验证桥接脚本：
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\Open-ArchiveCharacter.ps1 -ValidateOnly -CharacterId c015
-powershell -NoProfile -ExecutionPolicy Bypass -File .\Open-ArchiveCharacter.ps1 -CharacterId c015
-```
+打开 [Native SpinePet Windows build](https://github.com/tyqittle/anime-character-archive/actions/workflows/native-spinepet-windows.yml)，找到最新成功的运行记录，在 Artifacts 中：
 
-## 支持范围和边界
+1. `native-spinepet-core-windows-x64`：**基础程序**。只包含原生渲染器及必要运行文件、GPL 署名、SHA-256 清单和安全检查报告；不包含网站协议注册、PowerShell 导入脚本或一键 CMD。解压所有文件，双击 `app/SpinePet.exe`。不需要管理员权限。
+2. `native-spinepet-optional-website-bridge`：可选的网站角色导入及 Windows 协议注册脚本。**不推荐在 Chrome 已标危险、未完成安全排查时运行这些脚本。** 没有它也可以使用原生程序本身。
+3. `native-spinepet-corresponding-source-GPL`：所编译上游代码的完整对应源码、桥接脚本源代码与许可。
 
-- 目前只支持 [网站目录](https://tyqittle.github.io/anime-character-archive/data/spine-characters.json) 中 **`gameId=nikke` 且 `spineVersion=4.1` 并已验证**、素材来源符合可信仓库结构的模型。**4.0/4.2/3.8 模型不会尝试强行加载**；其他游戏与 Cubism 模型还未集成。
-- 桌面端不包含游戏素材。启动时按需从 [Nikke-db](https://github.com/Nikke-db/Nikke-db.github.io) 下载原始骨骼和贴图，需要能访问 GitHub 原始资源，且只应下载拥有合法使用权的内容。
-- 角色默认由上游面板管理；尚未把“网页点击角色后，自动显示指定皮肤”集成到原生 UI。用户需要在面板中扫描并选中显示。
-- 如果 Spine 4.1 的资源内容不满足上游解析器的要求，扫描会跳过，不能靠修改版本标签解决。
-- 本次只承诺真实 **Windows CI 编译构建与桥接脚本验证**；真正的桌面透明画面、GPU 驱动兼容性仍需 Windows 10/11 实机查看。优先验证原生客户端自身，而非旧 Electron 版本。
+首次验证请优先只运行基础程序；确认原生透明显示正常后，再考虑网站自动导入。
 
-## 工程结构
+## 不使用任何脚本也能导入模型
 
-```text
-native-desktop/
-  Open-ArchiveCharacter.ps1   网站角色→验证来源/版本→下载→SpinePet 资源目录
-  Register-Bridge.ps1         仅为当前用户注册 animecharacter://
-  README.md                   使用与授权说明
-.github/workflows/native-spinepet-windows.yml
-```
+My_SpinePet 原生面板支持 `Add` / `Scan` 和手动资源目录，资源按 `res/<角色名>/<皮肤码>/standing` 存放完整的 `.skel`、`.atlas` 和 atlas 引用的全部 PNG。仅使用合法取得并能验证来源的 Spine 4.1 资源。打开面板后扫描并选择角色。
 
-GitHub Actions 使用固定上游提交 `6690e986b4da31dc89337794bcef1b45e6531303`，编译其真正的 .NET 9 Windows 原生程序（并非 Electron），并打包桥接脚本、上游完整许可证和源码 ZIP。更新上游版本时必须重新做许可证与构建检查。
+当前网站桥接先仅支持已验证的妮姬 Spine 4.1，其他版本不能用改文件名的方式兼容。模型不会被打包进发行物。
 
-## 开源与许可
+## 可选网站协议集成
 
-**My_SpinePet** 是 KAIDO-YONAGI 等开发者的开源作品，许可证 **GPL-3.0-or-later**。Spine runtime 的代码与使用另有授权限制，上游文档要求使用者有自己的 Spine Editor 许可。编译出的包必须附带上游 LICENSE / NOTICE / THIRD_PARTY_NOTICES、固定源码版本，不能移除原作者声明。本站的桥接脚本也以 GPL-3.0-or-later 发布；没有修改上游的渲染引擎。本软件与游戏开发商、Spine 或上游网站无官方关系。
+对脚本及发行物完成安全核验后，才把可选 Bridge ZIP 解压到与基础程序 `app/` 同一级目录。桥接目录包含 `Register-Bridge.ps1` 与 `Open-ArchiveCharacter.ps1`，会修改当前用户的 `HKCU\\Software\\Classes\\animecharacter` 注册表协议，并且按网站资源目录从固定来源下载 Spine 模型。可阅读源码后，自行决定是否启用。此功能不要求管理员权限。
+
+## 风险与真实性
+
+- 无商业代码签名，Windows 可能提示未知发布者；若是“危险内容/恶意软件”阻断，则需先排查，不能据此强行绕过。
+- `BUILD-SECURITY-REPORT.txt` 会记录原生 EXE 签名状态、哈希及构建机是否具备可用的 Microsoft Defender 扫描能力；**缺失扫描不会被写成“无病毒”**。
+- `SHA256SUMS.txt` 用于核对下载文件是否与本次 GitHub Actions 打包记录一致，不是独立的安全审计证明。
+- 构建成功不等于 Windows 10/11 透明显示已实机验收。
+- My_SpinePet 原作者、游戏素材权利人、Spine 许可证互相独立。源代码与许可请见本仓库和上游仓库。
