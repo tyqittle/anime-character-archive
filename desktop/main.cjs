@@ -75,6 +75,9 @@ function createWindow(){
  const bounds={x:area.x-pad,y:area.y-pad,width:area.width+pad*2,height:area.height+pad*2};
  win=new BrowserWindow({...bounds,transparent:true,frame:false,resizable:false,hasShadow:false,backgroundColor:'#00000000',alwaysOnTop,skipTaskbar:true,autoHideMenuBar:true,webPreferences:{nodeIntegration:false,contextIsolation:true,sandbox:true,backgroundThrottling:false,preload:path.join(__dirname,'preload.cjs')}});
  win.setMenu(null);
+ // Chromium's default webContents backing surface can otherwise be white,
+ // even with a transparent frameless native window.
+ win.setBackgroundColor?.('rgba(0,0,0,0)');
  nativeIgnoring=null;
  setNativeIgnore(true);
  win.webContents.setWindowOpenHandler(({url})=>{
@@ -88,7 +91,7 @@ function createWindow(){
  });
  win.webContents.on('context-menu',()=>Menu.buildFromTemplate(desktopMenu()).popup({window:win}));
  win.webContents.on('did-finish-load',()=>{
-  win.webContents.insertCSS(desktopCSS).catch(console.error);
+  win.webContents.insertCSS(desktopCSS,{cssOrigin:'user'}).catch(console.error);
   if(!voiceEnabled)win.webContents.executeJavaScript('(()=>{voiceEnabled=false;updateVoiceUI();syncFrameVoice();silenceCharacterVoice()})()').catch(console.error);
   win.webContents.executeJavaScript("(()=>{if(!document.getElementById('desktopDrag')){let el=document.createElement('div');el.id='desktopDrag';el.title='拖动这里移动桌面立绘';document.body.append(el)}document.body.style.background='transparent';if(!document.getElementById('desktopError')){let e=document.createElement('div');e.id='desktopError';e.style.cssText='position:fixed;bottom:26px;left:15px;right:15px;z-index:999999;color:white;background:#792626dd;padding:9px;border-radius:9px;font:12px system-ui;display:none;pointer-events:none';document.body.append(e);let status=document.getElementById('status');if(status){let update=()=>{let error=status.classList.contains('error');e.textContent=error?status.textContent:'';e.style.display=error?'block':'none'};new MutationObserver(update).observe(status,{subtree:true,childList:true,attributes:true});update()}}})()").catch(console.error);
  });
@@ -111,11 +114,35 @@ function chooseCharacter(){
   characterId=id;saveSettings();win.loadURL(urlFor(id));selector.close();updateTray();
  });
 }
+async function inspectTransparency(){
+ if(!win||win.isDestroyed())return;
+ const css=await win.webContents.executeJavaScript(`(()=>{
+  const color=sel=>{const e=document.querySelector(sel);return e?{background:getComputedStyle(e).backgroundColor,image:getComputedStyle(e).backgroundImage}:null};
+  return {html:color('html'),body:color('body'),stage:color('.stage'),player:color('#player'),
+   renderer:window.__desktopRendererDiagnostics||null, canvas:color('#player canvas'),
+   desktopMode:document.documentElement.classList.contains('desktop-mode')};
+ })()`).catch(e=>({error:e.message}));
+ let screenshot=null;
+ try{
+  const img=await win.webContents.capturePage({x:4,y:4,width:2,height:2});
+  const pixels=img.toBitmap();
+  screenshot=pixels.length>=4?{b:pixels[0],g:pixels[1],r:pixels[2],a:pixels[3]}:null;
+ }catch(e){screenshot={error:e.message}}
+ const report={...css,screenshot};
+ console.info('Desktop transparency diagnostics',report);
+ return report;
+}
+async function displayTransparencyDiagnostic(){
+ const report=await inspectTransparency();
+ dialog.showMessageBox(win,{type:'info',title:'透明渲染诊断',message:'已检查透明背景和 WebGL Alpha 通道',
+  detail:JSON.stringify(report,null,2),buttons:['关闭']}).catch(console.warn);
+}
 function desktopMenu(){
  return [
   {label:'切换角色（当前 '+characterId+'）',click:chooseCharacter},
   {label:'打开网站角色目录',click:()=>shell.openExternal(SITE+'spine.html')},
   {label:'重新加载角色',click:()=>win?.reload()},
+  {label:'透明渲染诊断',click:()=>displayTransparencyDiagnostic()},
   {label:'点击语音',type:'checkbox',checked:voiceEnabled,click:i=>{voiceEnabled=i.checked;saveSettings();win?.webContents.executeJavaScript('(()=>{voiceEnabled='+String(i.checked)+';updateVoiceUI();syncFrameVoice();if(!voiceEnabled)silenceCharacterVoice()})()').catch(console.error);updateTray()}},
   {type:'separator'},
   {label:'强制鼠标穿透（禁止角色互动）',type:'checkbox',checked:clickThrough,click:i=>{clickThrough=i.checked;setNativeIgnore(true);updateTray()}},
