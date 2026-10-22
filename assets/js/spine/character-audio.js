@@ -28,22 +28,11 @@ fetch('./data/azurlane-voice-map.json?v=20261022-audio-map-3')
  .then(data=>{azurVoiceIds=data.skinIds||{};updateVoiceUI()})
  .catch(err=>console.warn('碧蓝航线语音索引加载失败',err));
 async function getAzurVoiceURLs(skinId){
- // The upstream index can be very large or unavailable. Use its advertised
- // audio/voiceline directory layout as a fallback, validated per actual clip.
- const fallback=['main1','login','touch','detail','home'].map(name=>
-  'https://raw.githubusercontent.com/Fernando2603/AzurLane/main/audio/voiceline/'+skinId+'/'+name+'.ogg');
- if(!azurVoiceLinks){
-  try{
-   if(!window.azurVoiceLinkPromise)window.azurVoiceLinkPromise=fetch(azurVoiceLinkUrl)
-    .then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()})
-    .catch(()=>null);
-   azurVoiceLinks=await window.azurVoiceLinkPromise;
-  }catch(e){console.warn('语音索引读取失败，改用已核对的语音目录结构',e)}
- }
- const record=azurVoiceLinks?.[String(skinId)];
- const links=record&&typeof record==='object'?voiceOptions.map(key=>record[key]).filter(
-  url=>typeof url==='string'&&/^https:\/\//.test(url)):[];
- return [...new Set([...links,...fallback])];
+ // The large upstream voicelink.json is not a prerequisite for playback.
+ // Use the real per-skin audio directory. Failed clips are skipped by
+ // playCharacterVoice(), and no other skin is ever substituted.
+ const files=['main1','login','touch','detail','home'];
+ return files.map(name=>'https://raw.githubusercontent.com/Fernando2603/AzurLane/main/audio/voiceline/'+encodeURIComponent(skinId)+'/'+name+'.ogg');
 }
 async function playCharacterVoice(character){
  if(!voiceEnabled||!character)return;
