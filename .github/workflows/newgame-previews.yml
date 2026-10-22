@@ -3,6 +3,8 @@ on:
   push:
     branches: [main]
     paths:
+      - 'data/spine-newgames.json'
+      - 'scripts/preview_policy.py'
       - 'scripts/capture_newgame_previews.mjs'
       - 'scripts/convert_newgame_previews.py'
       - 'scripts/merge_newgame_previews.py'
