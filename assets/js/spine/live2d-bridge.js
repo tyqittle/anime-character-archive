@@ -45,7 +45,7 @@ function playAzurLane(c){
  viewZoom=1;viewOffsetX=0;viewOffsetY=0;
  $('zoomValue').textContent='100%';
  status('正在加载 '+c.name+' 的 Live2D 动态皮肤…');
- if(azurlaneReady)sendAzurLane('load',{id:c.id,skinCode:c.skinCode,modelUrl:c.modelUrl});
+ if(azurlaneReady){sendAzurLane('load',{id:c.id,skinCode:c.skinCode,modelUrl:c.modelUrl});if(typeof syncFrameVoice==='function')syncFrameVoice();}
 }
 window.addEventListener('message',event=>{
  if(event.origin!==location.origin||!azurlaneFrame||event.source!==azurlaneFrame.contentWindow)return;
@@ -53,6 +53,7 @@ window.addEventListener('message',event=>{
  if(data?.channel!==L2D_CHANNEL)return;
  if(data.kind==='ready'){
   azurlaneReady=true;
+  if(typeof syncFrameVoice==='function')syncFrameVoice();
   if(azurlanePending)sendAzurLane('load',{id:azurlanePending.id,skinCode:azurlanePending.skinCode,modelUrl:azurlanePending.modelUrl});
   return;
  }
