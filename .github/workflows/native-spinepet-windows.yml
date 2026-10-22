@@ -43,6 +43,19 @@ jobs:
           dotnet publish ./native-upstream/SpinePet/src/SpinePet/SpinePet.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=false -p:DebugSymbols=false -p:DebugType=None -o ./native-dist/app
           if ($LASTEXITCODE -ne 0) { throw 'Native SpinePet publish failed' }
           if (-not (Test-Path ./native-dist/app/SpinePet.exe)) { throw 'Missing native executable' }
+      - name: Smoke-test real c015 resource download and atlas page resolution
+        shell: pwsh
+        run: |
+          New-Item -Path ./native-integration-test/app -ItemType Directory -Force | Out-Null
+          New-Item -Path ./native-integration-test/app/SpinePet.exe -ItemType File -Force | Out-Null
+          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1 ./native-integration-test/Open-ArchiveCharacter.ps1
+          & ./native-integration-test/Open-ArchiveCharacter.ps1 -CharacterId c015 -DownloadOnly
+          if ($LASTEXITCODE -ne 0) { throw 'The website-to-native real resource import failed' }
+          $assets = @(Get-ChildItem -Path ./native-integration-test/res -Recurse -File)
+          if (-not ($assets.Name -contains 'c015_00.skel' -and $assets.Name -contains 'c015_00.atlas' -and $assets.Name -contains 'c015_00.png')) {
+            throw 'Missing required complete Spine standing asset files'
+          }
+          Remove-Item ./native-integration-test -Recurse -Force
       - name: Package original licensing, full corresponding source and website bridge
         shell: pwsh
         run: |
