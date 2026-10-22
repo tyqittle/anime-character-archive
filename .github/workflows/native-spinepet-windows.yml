@@ -153,3 +153,50 @@ jobs:
           path: safe-release/source/
           if-no-files-found: error
           retention-days: 14
+
+  security-audit:
+    needs: build-native
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Download precisely the packaged native renderer
+        uses: actions/download-artifact@v4
+        with:
+          name: native-spinepet-core-windows-x64
+          path: native-core
+      - name: Verify core SHA-256 manifest
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib
+          from pathlib import Path
+          root=Path('native-core')
+          lines=(root/'SHA256SUMS.txt').read_text(encoding='ascii').splitlines()
+          assert len(lines)>10, 'Missing meaningful file digest manifest'
+          for line in lines:
+              digest,name=line.split('  ',1)
+              path=root/name.replace('\\','/')
+              assert path.is_file(), f'Missing: {name}'
+              calculated=hashlib.sha256(path.read_bytes()).hexdigest()
+              assert calculated.lower()==digest.lower(), f'Checksum mismatch: {name}'
+          assert (root/'app'/'SpinePet.exe').exists()
+          assert not list(root.rglob('*.ps1'))
+          assert not list(root.rglob('*.cmd'))
+          print(f'Verified {len(lines)} packaged file checksums.')
+          PY
+      - name: Install independent ClamAV scanner
+        shell: bash
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y clamav clamav-freshclam
+          sudo systemctl stop clamav-freshclam || true
+          sudo freshclam --stdout
+          test -f /var/lib/clamav/main.cvd -o -f /var/lib/clamav/main.cld
+          test -f /var/lib/clamav/daily.cvd -o -f /var/lib/clamav/daily.cld
+      - name: Scan native binaries, DLLs and resources with ClamAV
+        shell: bash
+        run: |
+          clamscan --version
+          clamscan --recursive --infected native-core
+          echo 'ClamAV found no matching known signatures. This does not prove software is safe.'
