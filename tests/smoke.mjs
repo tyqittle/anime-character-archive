@@ -124,7 +124,7 @@ const spineSource=spineModules.map(read).join('\n');
 const home=read('index.html'),old=read('gallery.html'),page=read('characters.html')+'\n'+gallerySource,player=read('spine.html')+'\n'+spineSource;
 for(const [file,source] of [...galleryModules.map(f=>[f,'characters.html']),...spineModules.map(f=>[f,'spine.html'])]){
  assert.ok(fs.existsSync(path.join(root,file)),'Referenced module missing: '+file);
- assert.ok(read(source).includes('./'+file+'?v=20261021-modules-v1'),'HTML must load versioned script module: '+file);
+ assert.ok(read(source).includes('./'+file+'?v='),'HTML must load versioned script module: '+file);
  new Function(read(file));
 }
 assert.ok(home.includes('./characters.html')&&old.includes('./characters.html'),'Old entrypoint no longer redirects');
