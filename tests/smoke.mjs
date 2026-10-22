@@ -470,7 +470,11 @@ assert.ok(nativeBd2Adapter.includes('SpineSkeletonCompatibility.EnsureSupported(
 assert.ok(desktopLaunch.includes('animecharacter://open?game=browndust2&id=') &&
  desktopLaunch.includes('spine-bd2-characters.json'),
  'Website must send selected BD2 ID to native application');
-assert.ok(spineHTML.includes('desktop-launch.js?v=20261022-bd2-native-v1'),
+assert.ok(desktopLaunch.includes('const selected=currentSelection()') &&
+ desktopLaunch.includes('gameId:game') &&
+ desktopLaunch.includes('当前游戏的角色列表'),
+ 'Desktop launch must use the actual selected character and game, not infer NIKKE from a hidden selector');
+assert.ok(spineHTML.includes('desktop-launch.js?v=20261023-selected-game-v2'),
  'Site must bust previously cached single-game launcher');
 const bd2IdPattern=/^bd2-char[0-9]{6}(?:_c)?$/;
 const bd2Origin='https://raw.githubusercontent.com/Zormolo/Brown-Dust-2-Assets/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/';
