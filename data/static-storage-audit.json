@@ -1,0 +1,1490 @@
+{
+  "converted": 247,
+  "savedBytes": 270127485,
+  "policy": "Identical decoded RGBA pixels; original dimensions and source URLs retained",
+  "failed": [],
+  "files": [
+    {
+      "id": "ak-char_009_12fce-1",
+      "image": "./assets/portraits/ak-char_009_12fce-1.webp",
+      "before": 987799,
+      "after": 443500
+    },
+    {
+      "id": "ak-char_1015_aglna2-1",
+      "image": "./assets/portraits/ak-char_1015_aglna2-1.webp",
+      "before": 2389494,
+      "after": 1143438
+    },
+    {
+      "id": "ak-char_002_amiya-1",
+      "image": "./assets/portraits/ak-char_002_amiya-1.webp",
+      "before": 1142858,
+      "after": 544410
+    },
+    {
+      "id": "ak-char_1016_agoat2-1",
+      "image": "./assets/portraits/ak-char_1016_agoat2-1.webp",
+      "before": 3703202,
+      "after": 1591030
+    },
+    {
+      "id": "ak-char_002_amiya_winter-1",
+      "image": "./assets/portraits/ak-char_002_amiya_winter-1.webp",
+      "before": 1745025,
+      "after": 543964
+    },
+    {
+      "id": "ak-char_002_amiya_test-1",
+      "image": "./assets/portraits/ak-char_002_amiya_test-1.webp",
+      "before": 2939942,
+      "after": 1014968
+    },
+    {
+      "id": "ak-char_002_amiya-2",
+      "image": "./assets/portraits/ak-char_002_amiya-2.webp",
+      "before": 4444236,
+      "after": 2485828
+    },
+    {
+      "id": "ak-char_103_angel-1",
+      "image": "./assets/portraits/ak-char_103_angel-1.webp",
+      "before": 1159325,
+      "after": 366546
+    },
+    {
+      "id": "ak-char_103_angel-2",
+      "image": "./assets/portraits/ak-char_103_angel-2.webp",
+      "before": 1974084,
+      "after": 1034746
+    },
+    {
+      "id": "ak-char_1016_agoat2-2",
+      "image": "./assets/portraits/ak-char_1016_agoat2-2.webp",
+      "before": 6806014,
+      "after": 4136486
+    },
+    {
+      "id": "ak-char_1001_amiya2-2",
+      "image": "./assets/portraits/ak-char_1001_amiya2-2.webp",
+      "before": 4463407,
+      "after": 2724334
+    },
+    {
+      "id": "ak-char_1001_amiya2_casc-1",
+      "image": "./assets/portraits/ak-char_1001_amiya2_casc-1.webp",
+      "before": 5290130,
+      "after": 2531640
+    },
+    {
+      "id": "ak-char_103_angel_kfc-1",
+      "image": "./assets/portraits/ak-char_103_angel_kfc-1.webp",
+      "before": 3530087,
+      "after": 1037396
+    },
+    {
+      "id": "ak-char_103_angel_wild-1",
+      "image": "./assets/portraits/ak-char_103_angel_wild-1.webp",
+      "before": 2829825,
+      "after": 876736
+    },
+    {
+      "id": "ak-char_1041_angel2-1",
+      "image": "./assets/portraits/ak-char_1041_angel2-1.webp",
+      "before": 1970286,
+      "after": 898064
+    },
+    {
+      "id": "ak-char_122_beagle-1",
+      "image": "./assets/portraits/ak-char_122_beagle-1.webp",
+      "before": 1230716,
+      "after": 546418
+    },
+    {
+      "id": "ak-char_129_bluep-1",
+      "image": "./assets/portraits/ak-char_129_bluep-1.webp",
+      "before": 590515,
+      "after": 293708
+    },
+    {
+      "id": "ak-char_1040_blaze2-1",
+      "image": "./assets/portraits/ak-char_1040_blaze2-1.webp",
+      "before": 2362329,
+      "after": 1178128
+    },
+    {
+      "id": "ak-char_122_beagle_boc-1",
+      "image": "./assets/portraits/ak-char_122_beagle_boc-1.webp",
+      "before": 3425988,
+      "after": 1010040
+    },
+    {
+      "id": "ak-char_129_bluep-2",
+      "image": "./assets/portraits/ak-char_129_bluep-2.webp",
+      "before": 1647915,
+      "after": 806484
+    },
+    {
+      "id": "ak-char_137_brownb-1",
+      "image": "./assets/portraits/ak-char_137_brownb-1.webp",
+      "before": 798085,
+      "after": 395248
+    },
+    {
+      "id": "ak-char_137_brownb-2",
+      "image": "./assets/portraits/ak-char_137_brownb-2.webp",
+      "before": 1263639,
+      "after": 530196
+    },
+    {
+      "id": "ak-char_010_chen-1",
+      "image": "./assets/portraits/ak-char_010_chen-1.webp",
+      "before": 824187,
+      "after": 410818
+    },
+    {
+      "id": "ak-char_1049_catap2-1",
+      "image": "./assets/portraits/ak-char_1049_catap2-1.webp",
+      "before": 1860947,
+      "after": 908266
+    },
+    {
+      "id": "ak-char_1041_angel2-2",
+      "image": "./assets/portraits/ak-char_1041_angel2-2.webp",
+      "before": 6308372,
+      "after": 3239904
+    },
+    {
+      "id": "ak-char_137_brownb_kitchen-1",
+      "image": "./assets/portraits/ak-char_137_brownb_kitchen-1.webp",
+      "before": 2585163,
+      "after": 845742
+    },
+    {
+      "id": "ak-char_1013_chen2-1",
+      "image": "./assets/portraits/ak-char_1013_chen2-1.webp",
+      "before": 2127146,
+      "after": 603476
+    },
+    {
+      "id": "ak-char_010_chen_nian-2",
+      "image": "./assets/portraits/ak-char_010_chen_nian-2.webp",
+      "before": 3086124,
+      "after": 1101178
+    },
+    {
+      "id": "ak-char_1013_chen2-2",
+      "image": "./assets/portraits/ak-char_1013_chen2-2.webp",
+      "before": 3962472,
+      "after": 1229694
+    },
+    {
+      "id": "ak-char_1050_chen3-1",
+      "image": "./assets/portraits/ak-char_1050_chen3-1.webp",
+      "before": 1888665,
+      "after": 985182
+    },
+    {
+      "id": "ak-char_010_chen-2",
+      "image": "./assets/portraits/ak-char_010_chen-2.webp",
+      "before": 4156491,
+      "after": 2374644
+    },
+    {
+      "id": "ak-char_113_cqbw-1",
+      "image": "./assets/portraits/ak-char_113_cqbw-1.webp",
+      "before": 1392272,
+      "after": 582258
+    },
+    {
+      "id": "ak-char_110_deepcl-1",
+      "image": "./assets/portraits/ak-char_110_deepcl-1.webp",
+      "before": 1010477,
+      "after": 355962
+    },
+    {
+      "id": "ak-char_130_doberm-1",
+      "image": "./assets/portraits/ak-char_130_doberm-1.webp",
+      "before": 574774,
+      "after": 275866
+    },
+    {
+      "id": "ak-char_110_deepcl-2",
+      "image": "./assets/portraits/ak-char_110_deepcl-2.webp",
+      "before": 1547998,
+      "after": 758022
+    },
+    {
+      "id": "ak-char_130_doberm-2",
+      "image": "./assets/portraits/ak-char_130_doberm-2.webp",
+      "before": 1019394,
+      "after": 360154
+    },
+    {
+      "id": "ak-char_127_estell-1",
+      "image": "./assets/portraits/ak-char_127_estell-1.webp",
+      "before": 864593,
+      "after": 493108
+    },
+    {
+      "id": "ak-char_123_fang-1",
+      "image": "./assets/portraits/ak-char_123_fang-1.webp",
+      "before": 1287323,
+      "after": 569144
+    },
+    {
+      "id": "ak-char_127_estell-2",
+      "image": "./assets/portraits/ak-char_127_estell-2.webp",
+      "before": 2098640,
+      "after": 1392982
+    },
+    {
+      "id": "ak-char_113_cqbw-2",
+      "image": "./assets/portraits/ak-char_113_cqbw-2.webp",
+      "before": 5420562,
+      "after": 2255854
+    },
+    {
+      "id": "ak-char_1032_excu2-1",
+      "image": "./assets/portraits/ak-char_1032_excu2-1.webp",
+      "before": 2933183,
+      "after": 906300
+    },
+    {
+      "id": "ak-char_1036_fang2-1",
+      "image": "./assets/portraits/ak-char_1036_fang2-1.webp",
+      "before": 1266844,
+      "after": 560730
+    },
+    {
+      "id": "ak-char_123_fang_winter-1",
+      "image": "./assets/portraits/ak-char_123_fang_winter-1.webp",
+      "before": 2664069,
+      "after": 772702
+    },
+    {
+      "id": "ak-char_1022_flwr2-1",
+      "image": "./assets/portraits/ak-char_1022_flwr2-1.webp",
+      "before": 1821146,
+      "after": 884000
+    },
+    {
+      "id": "ak-char_131_flameb-1",
+      "image": "./assets/portraits/ak-char_131_flameb-1.webp",
+      "before": 1473041,
+      "after": 703778
+    },
+    {
+      "id": "ak-char_109_fmout-1",
+      "image": "./assets/portraits/ak-char_109_fmout-1.webp",
+      "before": 1137298,
+      "after": 538264
+    },
+    {
+      "id": "ak-char_131_flameb-2",
+      "image": "./assets/portraits/ak-char_131_flameb-2.webp",
+      "before": 4387798,
+      "after": 1639424
+    },
+    {
+      "id": "ak-char_109_fmout-2",
+      "image": "./assets/portraits/ak-char_109_fmout-2.webp",
+      "before": 2560833,
+      "after": 1344538
+    },
+    {
+      "id": "ak-char_106_franka-1",
+      "image": "./assets/portraits/ak-char_106_franka-1.webp",
+      "before": 1267187,
+      "after": 472206
+    },
+    {
+      "id": "ak-char_109_fmout_epoque-2",
+      "image": "./assets/portraits/ak-char_109_fmout_epoque-2.webp",
+      "before": 4821383,
+      "after": 1814530
+    },
+    {
+      "id": "ak-char_106_franka-2",
+      "image": "./assets/portraits/ak-char_106_franka-2.webp",
+      "before": 2075856,
+      "after": 814302
+    },
+    {
+      "id": "ak-char_1022_flwr2-2",
+      "image": "./assets/portraits/ak-char_1022_flwr2-2.webp",
+      "before": 6140172,
+      "after": 2888086
+    },
+    {
+      "id": "ak-char_1023_ghost2-1",
+      "image": "./assets/portraits/ak-char_1023_ghost2-1.webp",
+      "before": 3007676,
+      "after": 1137284
+    },
+    {
+      "id": "ak-char_106_franka_ncg-1",
+      "image": "./assets/portraits/ak-char_106_franka_ncg-1.webp",
+      "before": 6871143,
+      "after": 4269332
+    },
+    {
+      "id": "ak-char_1027_greyy2-1",
+      "image": "./assets/portraits/ak-char_1027_greyy2-1.webp",
+      "before": 1282840,
+      "after": 689554
+    },
+    {
+      "id": "ak-char_1023_ghost2-2",
+      "image": "./assets/portraits/ak-char_1023_ghost2-2.webp",
+      "before": 6204973,
+      "after": 3145190
+    },
+    {
+      "id": "ak-char_1026_gvial2-1",
+      "image": "./assets/portraits/ak-char_1026_gvial2-1.webp",
+      "before": 3083136,
+      "after": 813290
+    },
+    {
+      "id": "ak-char_1027_greyy2-2",
+      "image": "./assets/portraits/ak-char_1027_greyy2-2.webp",
+      "before": 3523135,
+      "after": 1099590
+    },
+    {
+      "id": "ak-char_135_halo-1",
+      "image": "./assets/portraits/ak-char_135_halo-1.webp",
+      "before": 1496145,
+      "after": 728952
+    },
+    {
+      "id": "ak-char_1047_halo2-1",
+      "image": "./assets/portraits/ak-char_1047_halo2-1.webp",
+      "before": 2457912,
+      "after": 1343832
+    },
+    {
+      "id": "ak-char_1027_greyy2_breaker-1",
+      "image": "./assets/portraits/ak-char_1027_greyy2_breaker-1.webp",
+      "before": 5457930,
+      "after": 3168394
+    },
+    {
+      "id": "ak-char_1024_hbisc2-1",
+      "image": "./assets/portraits/ak-char_1024_hbisc2-1.webp",
+      "before": 1709114,
+      "after": 488450
+    },
+    {
+      "id": "ak-char_1051_headb2-1",
+      "image": "./assets/portraits/ak-char_1051_headb2-1.webp",
+      "before": 2390827,
+      "after": 1177916
+    },
+    {
+      "id": "ak-char_1026_gvial2-2",
+      "image": "./assets/portraits/ak-char_1026_gvial2-2.webp",
+      "before": 5996922,
+      "after": 3063288
+    },
+    {
+      "id": "ak-char_115_headbr-1",
+      "image": "./assets/portraits/ak-char_115_headbr-1.webp",
+      "before": 915722,
+      "after": 470454
+    },
+    {
+      "id": "ak-char_115_headbr-2",
+      "image": "./assets/portraits/ak-char_115_headbr-2.webp",
+      "before": 2211004,
+      "after": 1128056
+    },
+    {
+      "id": "ak-char_1024_hbisc2_unveiling-2",
+      "image": "./assets/portraits/ak-char_1024_hbisc2_unveiling-2.webp",
+      "before": 6418327,
+      "after": 3334026
+    },
+    {
+      "id": "ak-char_1024_hbisc2-2",
+      "image": "./assets/portraits/ak-char_1024_hbisc2-2.webp",
+      "before": 5641044,
+      "after": 2937218
+    },
+    {
+      "id": "ak-char_115_headbr_it-1",
+      "image": "./assets/portraits/ak-char_115_headbr_it-1.webp",
+      "before": 3684074,
+      "after": 1236314
+    },
+    {
+      "id": "ak-char_120_hibisc-1",
+      "image": "./assets/portraits/ak-char_120_hibisc-1.webp",
+      "before": 978889,
+      "after": 368260
+    },
+    {
+      "id": "ak-char_136_hsguma-1",
+      "image": "./assets/portraits/ak-char_136_hsguma-1.webp",
+      "before": 1427394,
+      "after": 598696
+    },
+    {
+      "id": "ak-char_115_headbr_marthe-2",
+      "image": "./assets/portraits/ak-char_115_headbr_marthe-2.webp",
+      "before": 4387444,
+      "after": 1473786
+    },
+    {
+      "id": "ak-char_120_hibisc_nian-1",
+      "image": "./assets/portraits/ak-char_120_hibisc_nian-1.webp",
+      "before": 3813359,
+      "after": 1298154
+    },
+    {
+      "id": "ak-char_1044_hsgma2-1",
+      "image": "./assets/portraits/ak-char_1044_hsgma2-1.webp",
+      "before": 3310148,
+      "after": 1742380
+    },
+    {
+      "id": "ak-char_017_huang-1",
+      "image": "./assets/portraits/ak-char_017_huang-1.webp",
+      "before": 1957402,
+      "after": 948996
+    },
+    {
+      "id": "ak-char_134_ifrit-1",
+      "image": "./assets/portraits/ak-char_134_ifrit-1.webp",
+      "before": 1664815,
+      "after": 640756
+    },
+    {
+      "id": "ak-char_136_hsguma-2",
+      "image": "./assets/portraits/ak-char_136_hsguma-2.webp",
+      "before": 4120086,
+      "after": 1705396
+    },
+    {
+      "id": "ak-char_017_huang_as-1",
+      "image": "./assets/portraits/ak-char_017_huang_as-1.webp",
+      "before": 3097883,
+      "after": 1224766
+    },
+    {
+      "id": "ak-char_017_huang-2",
+      "image": "./assets/portraits/ak-char_017_huang-2.webp",
+      "before": 4907026,
+      "after": 2826394
+    },
+    {
+      "id": "ak-char_134_ifrit_kfc-1",
+      "image": "./assets/portraits/ak-char_134_ifrit_kfc-1.webp",
+      "before": 3142161,
+      "after": 916092
+    },
+    {
+      "id": "ak-char_134_ifrit-2",
+      "image": "./assets/portraits/ak-char_134_ifrit-2.webp",
+      "before": 4592571,
+      "after": 1627008
+    },
+    {
+      "id": "ak-char_1034_jesca2-1",
+      "image": "./assets/portraits/ak-char_1034_jesca2-1.webp",
+      "before": 3305494,
+      "after": 1131440
+    },
+    {
+      "id": "ak-char_134_ifrit_summer-1",
+      "image": "./assets/portraits/ak-char_134_ifrit_summer-1.webp",
+      "before": 4891643,
+      "after": 1607272
+    },
+    {
+      "id": "ak-char_134_ifrit_rilakkuma-1",
+      "image": "./assets/portraits/ak-char_134_ifrit_rilakkuma-1.webp",
+      "before": 6285118,
+      "after": 3527436
+    },
+    {
+      "id": "ak-char_1034_jesca2-2",
+      "image": "./assets/portraits/ak-char_1034_jesca2-2.webp",
+      "before": 5143758,
+      "after": 2246994
+    },
+    {
+      "id": "ak-char_003_kalts-1",
+      "image": "./assets/portraits/ak-char_003_kalts-1.webp",
+      "before": 1269752,
+      "after": 400202
+    },
+    {
+      "id": "ak-char_1034_jesca2_cfa-1",
+      "image": "./assets/portraits/ak-char_1034_jesca2_cfa-1.webp",
+      "before": 4810144,
+      "after": 2717110
+    },
+    {
+      "id": "ak-char_124_kroos-1",
+      "image": "./assets/portraits/ak-char_124_kroos-1.webp",
+      "before": 1111568,
+      "after": 459462
+    },
+    {
+      "id": "ak-char_003_kalts-2",
+      "image": "./assets/portraits/ak-char_003_kalts-2.webp",
+      "before": 4376006,
+      "after": 2181950
+    },
+    {
+      "id": "ak-char_1021_kroos2-1",
+      "image": "./assets/portraits/ak-char_1021_kroos2-1.webp",
+      "before": 1921069,
+      "after": 597784
+    },
+    {
+      "id": "ak-char_124_kroos_witch-1",
+      "image": "./assets/portraits/ak-char_124_kroos_witch-1.webp",
+      "before": 2682648,
+      "after": 842628
+    },
+    {
+      "id": "ak-char_1052_kalts2-1",
+      "image": "./assets/portraits/ak-char_1052_kalts2-1.webp",
+      "before": 5275608,
+      "after": 2149408
+    },
+    {
+      "id": "ak-char_121_lava-1",
+      "image": "./assets/portraits/ak-char_121_lava-1.webp",
+      "before": 978252,
+      "after": 355466
+    },
+    {
+      "id": "ak-char_1011_lava2-1",
+      "image": "./assets/portraits/ak-char_1011_lava2-1.webp",
+      "before": 1128416,
+      "after": 354160
+    },
+    {
+      "id": "ak-char_1043_leizi2-1",
+      "image": "./assets/portraits/ak-char_1043_leizi2-1.webp",
+      "before": 1817128,
+      "after": 1003134
+    },
+    {
+      "id": "ak-char_107_liskam-1",
+      "image": "./assets/portraits/ak-char_107_liskam-1.webp",
+      "before": 1306517,
+      "after": 620966
+    },
+    {
+      "id": "ak-char_1021_kroos2-2",
+      "image": "./assets/portraits/ak-char_1021_kroos2-2.webp",
+      "before": 5738217,
+      "after": 2599462
+    },
+    {
+      "id": "ak-char_107_liskam-2",
+      "image": "./assets/portraits/ak-char_107_liskam-2.webp",
+      "before": 4552102,
+      "after": 1418252
+    },
+    {
+      "id": "ak-char_1011_lava2-2",
+      "image": "./assets/portraits/ak-char_1011_lava2-2.webp",
+      "before": 5307914,
+      "after": 2641508
+    },
+    {
+      "id": "ak-char_133_mm-2",
+      "image": "./assets/portraits/ak-char_133_mm-2.webp",
+      "before": 678642,
+      "after": 267886
+    },
+    {
+      "id": "ak-char_133_mm-1",
+      "image": "./assets/portraits/ak-char_133_mm-1.webp",
+      "before": 948062,
+      "after": 418376
+    },
+    {
+      "id": "ak-char_107_liskam_nian-2",
+      "image": "./assets/portraits/ak-char_107_liskam_nian-2.webp",
+      "before": 4404906,
+      "after": 1367018
+    },
+    {
+      "id": "ak-char_117_myrrh-1",
+      "image": "./assets/portraits/ak-char_117_myrrh-1.webp",
+      "before": 1104012,
+      "after": 448810
+    },
+    {
+      "id": "ak-char_107_liskam_striker-1",
+      "image": "./assets/portraits/ak-char_107_liskam_striker-1.webp",
+      "before": 3292606,
+      "after": 972756
+    },
+    {
+      "id": "ak-char_117_myrrh-2",
+      "image": "./assets/portraits/ak-char_117_myrrh-2.webp",
+      "before": 2922113,
+      "after": 1699094
+    },
+    {
+      "id": "ak-char_117_myrrh_wild-1",
+      "image": "./assets/portraits/ak-char_117_myrrh_wild-1.webp",
+      "before": 3829060,
+      "after": 1124502
+    },
+    {
+      "id": "ak-char_1014_nearl2-1",
+      "image": "./assets/portraits/ak-char_1014_nearl2-1.webp",
+      "before": 4405449,
+      "after": 1220656
+    },
+    {
+      "id": "ak-char_1030_noirc2-1",
+      "image": "./assets/portraits/ak-char_1030_noirc2-1.webp",
+      "before": 2345531,
+      "after": 722850
+    },
+    {
+      "id": "ak-char_128_plosis-1",
+      "image": "./assets/portraits/ak-char_128_plosis-1.webp",
+      "before": 1245032,
+      "after": 504410
+    },
+    {
+      "id": "ak-char_1048_orchd2-1",
+      "image": "./assets/portraits/ak-char_1048_orchd2-1.webp",
+      "before": 3334490,
+      "after": 1557398
+    },
+    {
+      "id": "ak-char_1042_phatm2-1",
+      "image": "./assets/portraits/ak-char_1042_phatm2-1.webp",
+      "before": 2511636,
+      "after": 1196342
+    },
+    {
+      "id": "ak-char_1030_noirc2-2",
+      "image": "./assets/portraits/ak-char_1030_noirc2-2.webp",
+      "before": 6973934,
+      "after": 3294674
+    },
+    {
+      "id": "ak-char_1046_sbell2-1",
+      "image": "./assets/portraits/ak-char_1046_sbell2-1.webp",
+      "before": 3353410,
+      "after": 1649480
+    },
+    {
+      "id": "ak-char_126_shotst-1",
+      "image": "./assets/portraits/ak-char_126_shotst-1.webp",
+      "before": 735479,
+      "after": 395024
+    },
+    {
+      "id": "ak-char_1020_reed2-1",
+      "image": "./assets/portraits/ak-char_1020_reed2-1.webp",
+      "before": 3643521,
+      "after": 1108826
+    },
+    {
+      "id": "ak-char_128_plosis-2",
+      "image": "./assets/portraits/ak-char_128_plosis-2.webp",
+      "before": 3132455,
+      "after": 1757752
+    },
+    {
+      "id": "ak-char_126_shotst-2",
+      "image": "./assets/portraits/ak-char_126_shotst-2.webp",
+      "before": 2122173,
+      "after": 1087234
+    },
+    {
+      "id": "ak-char_112_siege-1",
+      "image": "./assets/portraits/ak-char_112_siege-1.webp",
+      "before": 1254705,
+      "after": 517590
+    },
+    {
+      "id": "ak-char_112_siege-2",
+      "image": "./assets/portraits/ak-char_112_siege-2.webp",
+      "before": 3077669,
+      "after": 1481068
+    },
+    {
+      "id": "ak-char_112_siege_striker-2",
+      "image": "./assets/portraits/ak-char_112_siege_striker-2.webp",
+      "before": 3783128,
+      "after": 1118692
+    },
+    {
+      "id": "ak-char_1019_siege2-1",
+      "image": "./assets/portraits/ak-char_1019_siege2-1.webp",
+      "before": 2344429,
+      "after": 1170422
+    },
+    {
+      "id": "ak-char_108_silent-1",
+      "image": "./assets/portraits/ak-char_108_silent-1.webp",
+      "before": 1411417,
+      "after": 478086
+    },
+    {
+      "id": "ak-char_112_siege_wild-2",
+      "image": "./assets/portraits/ak-char_112_siege_wild-2.webp",
+      "before": 6190800,
+      "after": 2158526
+    },
+    {
+      "id": "ak-char_108_silent-2",
+      "image": "./assets/portraits/ak-char_108_silent-2.webp",
+      "before": 2653449,
+      "after": 1417488
+    },
+    {
+      "id": "ak-char_108_silent_sweep-1",
+      "image": "./assets/portraits/ak-char_108_silent_sweep-1.webp",
+      "before": 3806630,
+      "after": 1228712
+    },
+    {
+      "id": "ak-char_108_silent_winter-2",
+      "image": "./assets/portraits/ak-char_108_silent_winter-2.webp",
+      "before": 3859577,
+      "after": 1186824
+    },
+    {
+      "id": "ak-char_1012_skadi2-1",
+      "image": "./assets/portraits/ak-char_1012_skadi2-1.webp",
+      "before": 4291054,
+      "after": 1123148
+    },
+    {
+      "id": "ak-char_1019_siege2-2",
+      "image": "./assets/portraits/ak-char_1019_siege2-2.webp",
+      "before": 6971511,
+      "after": 4001640
+    },
+    {
+      "id": "ak-char_101_sora-1",
+      "image": "./assets/portraits/ak-char_101_sora-1.webp",
+      "before": 1276141,
+      "after": 658518
+    },
+    {
+      "id": "ak-char_1031_slent2-1",
+      "image": "./assets/portraits/ak-char_1031_slent2-1.webp",
+      "before": 3324003,
+      "after": 1062092
+    },
+    {
+      "id": "ak-char_101_sora-2",
+      "image": "./assets/portraits/ak-char_101_sora-2.webp",
+      "before": 2211231,
+      "after": 1165618
+    },
+    {
+      "id": "ak-char_101_sora_summer-1",
+      "image": "./assets/portraits/ak-char_101_sora_summer-1.webp",
+      "before": 3356929,
+      "after": 1117212
+    },
+    {
+      "id": "ak-char_1045_svash2-1",
+      "image": "./assets/portraits/ak-char_1045_svash2-1.webp",
+      "before": 3715863,
+      "after": 1762994
+    },
+    {
+      "id": "ak-char_102_texas-1",
+      "image": "./assets/portraits/ak-char_102_texas-1.webp",
+      "before": 1265350,
+      "after": 455218
+    },
+    {
+      "id": "ak-char_1033_swire2-1",
+      "image": "./assets/portraits/ak-char_1033_swire2-1.webp",
+      "before": 3458976,
+      "after": 1451052
+    },
+    {
+      "id": "ak-char_102_texas-2",
+      "image": "./assets/portraits/ak-char_102_texas-2.webp",
+      "before": 2575329,
+      "after": 1499290
+    },
+    {
+      "id": "ak-char_102_texas_winter-1",
+      "image": "./assets/portraits/ak-char_102_texas_winter-1.webp",
+      "before": 3537467,
+      "after": 888582
+    },
+    {
+      "id": "ak-char_1028_texas2-1",
+      "image": "./assets/portraits/ak-char_1028_texas2-1.webp",
+      "before": 3020591,
+      "after": 839510
+    },
+    {
+      "id": "ak-char_1039_thorn2-1",
+      "image": "./assets/portraits/ak-char_1039_thorn2-1.webp",
+      "before": 1968353,
+      "after": 822540
+    },
+    {
+      "id": "ak-char_140_whitew-1",
+      "image": "./assets/portraits/ak-char_140_whitew-1.webp",
+      "before": 1484470,
+      "after": 670228
+    },
+    {
+      "id": "ak-char_1028_texas2-2",
+      "image": "./assets/portraits/ak-char_1028_texas2-2.webp",
+      "before": 4163920,
+      "after": 1258446
+    },
+    {
+      "id": "ak-char_140_whitew-2",
+      "image": "./assets/portraits/ak-char_140_whitew-2.webp",
+      "before": 4100151,
+      "after": 1369364
+    },
+    {
+      "id": "ak-char_1038_whitw2-1",
+      "image": "./assets/portraits/ak-char_1038_whitw2-1.webp",
+      "before": 3434922,
+      "after": 1514112
+    },
+    {
+      "id": "ak-char_1028_texas2_iteration-1",
+      "image": "./assets/portraits/ak-char_1028_texas2_iteration-1.webp",
+      "before": 5813089,
+      "after": 2658198
+    },
+    {
+      "id": "ak-char_118_yuki-1",
+      "image": "./assets/portraits/ak-char_118_yuki-1.webp",
+      "before": 1292867,
+      "after": 361978
+    },
+    {
+      "id": "ak-char_1035_wisdel-1",
+      "image": "./assets/portraits/ak-char_1035_wisdel-1.webp",
+      "before": 2548264,
+      "after": 1054974
+    },
+    {
+      "id": "ak-char_1038_whitw2-2",
+      "image": "./assets/portraits/ak-char_1038_whitw2-2.webp",
+      "before": 4939978,
+      "after": 2213106
+    },
+    {
+      "id": "ak-char_1029_yato2-1",
+      "image": "./assets/portraits/ak-char_1029_yato2-1.webp",
+      "before": 3251832,
+      "after": 1009254
+    },
+    {
+      "id": "c172",
+      "image": "./assets/portraits/c172.webp",
+      "before": 200055,
+      "after": 107508
+    },
+    {
+      "id": "c191",
+      "image": "./assets/portraits/c191.webp",
+      "before": 266194,
+      "after": 146276
+    },
+    {
+      "id": "c351",
+      "image": "./assets/portraits/c351.webp",
+      "before": 773880,
+      "after": 537430
+    },
+    {
+      "id": "c012",
+      "image": "./assets/portraits/c012.webp",
+      "before": 267645,
+      "after": 140938
+    },
+    {
+      "id": "c121",
+      "image": "./assets/portraits/c121.webp",
+      "before": 279848,
+      "after": 185632
+    },
+    {
+      "id": "c015",
+      "image": "./assets/portraits/c015.webp",
+      "before": 509072,
+      "after": 347414
+    },
+    {
+      "id": "ak-char_118_yuki-2",
+      "image": "./assets/portraits/ak-char_118_yuki-2.webp",
+      "before": 2094674,
+      "after": 818104
+    },
+    {
+      "id": "c432",
+      "image": "./assets/portraits/c432.webp",
+      "before": 308742,
+      "after": 207962
+    },
+    {
+      "id": "c060",
+      "image": "./assets/portraits/c060.webp",
+      "before": 195924,
+      "after": 106392
+    },
+    {
+      "id": "ak-char_118_yuki_boc-2",
+      "image": "./assets/portraits/ak-char_118_yuki_boc-2.webp",
+      "before": 2726880,
+      "after": 790926
+    },
+    {
+      "id": "c270",
+      "image": "./assets/portraits/c270.webp",
+      "before": 436459,
+      "after": 278260
+    },
+    {
+      "id": "c381",
+      "image": "./assets/portraits/c381.webp",
+      "before": 414958,
+      "after": 274884
+    },
+    {
+      "id": "c080",
+      "image": "./assets/portraits/c080.webp",
+      "before": 273544,
+      "after": 144678
+    },
+    {
+      "id": "c070",
+      "image": "./assets/portraits/c070.webp",
+      "before": 375611,
+      "after": 210490
+    },
+    {
+      "id": "c311",
+      "image": "./assets/portraits/c311.webp",
+      "before": 347717,
+      "after": 229028
+    },
+    {
+      "id": "c110",
+      "image": "./assets/portraits/c110.webp",
+      "before": 377023,
+      "after": 206750
+    },
+    {
+      "id": "c020",
+      "image": "./assets/portraits/c020.webp",
+      "before": 325107,
+      "after": 174930
+    },
+    {
+      "id": "c040",
+      "image": "./assets/portraits/c040.webp",
+      "before": 379929,
+      "after": 202082
+    },
+    {
+      "id": "c072",
+      "image": "./assets/portraits/c072.webp",
+      "before": 284248,
+      "after": 151150
+    },
+    {
+      "id": "c202",
+      "image": "./assets/portraits/c202.webp",
+      "before": 214001,
+      "after": 120854
+    },
+    {
+      "id": "c101",
+      "image": "./assets/portraits/c101.webp",
+      "before": 280107,
+      "after": 154848
+    },
+    {
+      "id": "c090",
+      "image": "./assets/portraits/c090.webp",
+      "before": 216909,
+      "after": 119424
+    },
+    {
+      "id": "c233",
+      "image": "./assets/portraits/c233.webp",
+      "before": 573232,
+      "after": 374020
+    },
+    {
+      "id": "c241",
+      "image": "./assets/portraits/c241.webp",
+      "before": 285844,
+      "after": 164614
+    },
+    {
+      "id": "c210",
+      "image": "./assets/portraits/c210.webp",
+      "before": 193061,
+      "after": 105388
+    },
+    {
+      "id": "c092",
+      "image": "./assets/portraits/c092.webp",
+      "before": 266105,
+      "after": 155604
+    },
+    {
+      "id": "c242",
+      "image": "./assets/portraits/c242.webp",
+      "before": 277458,
+      "after": 153784
+    },
+    {
+      "id": "c291",
+      "image": "./assets/portraits/c291.webp",
+      "before": 455556,
+      "after": 238720
+    },
+    {
+      "id": "c142",
+      "image": "./assets/portraits/c142.webp",
+      "before": 237204,
+      "after": 131616
+    },
+    {
+      "id": "c180",
+      "image": "./assets/portraits/c180.webp",
+      "before": 276577,
+      "after": 148098
+    },
+    {
+      "id": "c400",
+      "image": "./assets/portraits/c400.webp",
+      "before": 427835,
+      "after": 279418
+    },
+    {
+      "id": "c353",
+      "image": "./assets/portraits/c353.webp",
+      "before": 269558,
+      "after": 181938
+    },
+    {
+      "id": "c352",
+      "image": "./assets/portraits/c352.webp",
+      "before": 608338,
+      "after": 407814
+    },
+    {
+      "id": "c230",
+      "image": "./assets/portraits/c230.webp",
+      "before": 811556,
+      "after": 566158
+    },
+    {
+      "id": "c802",
+      "image": "./assets/portraits/c802.webp",
+      "before": 194501,
+      "after": 124614
+    },
+    {
+      "id": "c111",
+      "image": "./assets/portraits/c111.webp",
+      "before": 398067,
+      "after": 272302
+    },
+    {
+      "id": "c231",
+      "image": "./assets/portraits/c231.webp",
+      "before": 538258,
+      "after": 394402
+    },
+    {
+      "id": "c150",
+      "image": "./assets/portraits/c150.webp",
+      "before": 412703,
+      "after": 218492
+    },
+    {
+      "id": "c100",
+      "image": "./assets/portraits/c100.webp",
+      "before": 361430,
+      "after": 200966
+    },
+    {
+      "id": "c082",
+      "image": "./assets/portraits/c082.webp",
+      "before": 312820,
+      "after": 174330
+    },
+    {
+      "id": "c800",
+      "image": "./assets/portraits/c800.webp",
+      "before": 184544,
+      "after": 120560
+    },
+    {
+      "id": "c190",
+      "image": "./assets/portraits/c190.webp",
+      "before": 347317,
+      "after": 182114
+    },
+    {
+      "id": "c130",
+      "image": "./assets/portraits/c130.webp",
+      "before": 215188,
+      "after": 112982
+    },
+    {
+      "id": "c181",
+      "image": "./assets/portraits/c181.webp",
+      "before": 424823,
+      "after": 272086
+    },
+    {
+      "id": "c254",
+      "image": "./assets/portraits/c254.webp",
+      "before": 166327,
+      "after": 89990
+    },
+    {
+      "id": "c013",
+      "image": "./assets/portraits/c013.webp",
+      "before": 315053,
+      "after": 171252
+    },
+    {
+      "id": "c132",
+      "image": "./assets/portraits/c132.webp",
+      "before": 353059,
+      "after": 237422
+    },
+    {
+      "id": "c061",
+      "image": "./assets/portraits/c061.webp",
+      "before": 243050,
+      "after": 129988
+    },
+    {
+      "id": "c350",
+      "image": "./assets/portraits/c350.webp",
+      "before": 654084,
+      "after": 440504
+    },
+    {
+      "id": "c102",
+      "image": "./assets/portraits/c102.webp",
+      "before": 462639,
+      "after": 258566
+    },
+    {
+      "id": "c161",
+      "image": "./assets/portraits/c161.webp",
+      "before": 381477,
+      "after": 207970
+    },
+    {
+      "id": "c141",
+      "image": "./assets/portraits/c141.webp",
+      "before": 291351,
+      "after": 184056
+    },
+    {
+      "id": "c032",
+      "image": "./assets/portraits/c032.webp",
+      "before": 239707,
+      "after": 123964
+    },
+    {
+      "id": "c120",
+      "image": "./assets/portraits/c120.webp",
+      "before": 129435,
+      "after": 70970
+    },
+    {
+      "id": "c011",
+      "image": "./assets/portraits/c011.webp",
+      "before": 181229,
+      "after": 95514
+    },
+    {
+      "id": "c260",
+      "image": "./assets/portraits/c260.webp",
+      "before": 541266,
+      "after": 284920
+    },
+    {
+      "id": "c014",
+      "image": "./assets/portraits/c014.webp",
+      "before": 599637,
+      "after": 416340
+    },
+    {
+      "id": "c380",
+      "image": "./assets/portraits/c380.webp",
+      "before": 282183,
+      "after": 190296
+    },
+    {
+      "id": "c193",
+      "image": "./assets/portraits/c193.webp",
+      "before": 422176,
+      "after": 266366
+    },
+    {
+      "id": "c232",
+      "image": "./assets/portraits/c232.webp",
+      "before": 362236,
+      "after": 195566
+    },
+    {
+      "id": "c261",
+      "image": "./assets/portraits/c261.webp",
+      "before": 795872,
+      "after": 539202
+    },
+    {
+      "id": "c271",
+      "image": "./assets/portraits/c271.webp",
+      "before": 442833,
+      "after": 283586
+    },
+    {
+      "id": "c131",
+      "image": "./assets/portraits/c131.webp",
+      "before": 171445,
+      "after": 94352
+    },
+    {
+      "id": "c212",
+      "image": "./assets/portraits/c212.webp",
+      "before": 238225,
+      "after": 126126
+    },
+    {
+      "id": "c430",
+      "image": "./assets/portraits/c430.webp",
+      "before": 362914,
+      "after": 237560
+    },
+    {
+      "id": "c030",
+      "image": "./assets/portraits/c030.webp",
+      "before": 229616,
+      "after": 118948
+    },
+    {
+      "id": "c801",
+      "image": "./assets/portraits/c801.webp",
+      "before": 270789,
+      "after": 177316
+    },
+    {
+      "id": "c170",
+      "image": "./assets/portraits/c170.webp",
+      "before": 317575,
+      "after": 166208
+    },
+    {
+      "id": "c302",
+      "image": "./assets/portraits/c302.webp",
+      "before": 236212,
+      "after": 127504
+    },
+    {
+      "id": "c303",
+      "image": "./assets/portraits/c303.webp",
+      "before": 312918,
+      "after": 152764
+    },
+    {
+      "id": "c307",
+      "image": "./assets/portraits/c307.webp",
+      "before": 331881,
+      "after": 171302
+    },
+    {
+      "id": "c402",
+      "image": "./assets/portraits/c402.webp",
+      "before": 393377,
+      "after": 261126
+    },
+    {
+      "id": "c221",
+      "image": "./assets/portraits/c221.webp",
+      "before": 625900,
+      "after": 433358
+    },
+    {
+      "id": "c392",
+      "image": "./assets/portraits/c392.webp",
+      "before": 348408,
+      "after": 232986
+    },
+    {
+      "id": "c280",
+      "image": "./assets/portraits/c280.webp",
+      "before": 410161,
+      "after": 271432
+    },
+    {
+      "id": "c240",
+      "image": "./assets/portraits/c240.webp",
+      "before": 228495,
+      "after": 128224
+    },
+    {
+      "id": "c010",
+      "image": "./assets/portraits/c010.webp",
+      "before": 957761,
+      "after": 619200
+    },
+    {
+      "id": "c200",
+      "image": "./assets/portraits/c200.webp",
+      "before": 371174,
+      "after": 199054
+    },
+    {
+      "id": "c222",
+      "image": "./assets/portraits/c222.webp",
+      "before": 479715,
+      "after": 244690
+    },
+    {
+      "id": "c282",
+      "image": "./assets/portraits/c282.webp",
+      "before": 385745,
+      "after": 246420
+    },
+    {
+      "id": "c022",
+      "image": "./assets/portraits/c022.webp",
+      "before": 193971,
+      "after": 101548
+    },
+    {
+      "id": "c203",
+      "image": "./assets/portraits/c203.webp",
+      "before": 595033,
+      "after": 407572
+    },
+    {
+      "id": "c300",
+      "image": "./assets/portraits/c300.webp",
+      "before": 253326,
+      "after": 130356
+    },
+    {
+      "id": "c401",
+      "image": "./assets/portraits/c401.webp",
+      "before": 353592,
+      "after": 251166
+    },
+    {
+      "id": "c312",
+      "image": "./assets/portraits/c312.webp",
+      "before": 372988,
+      "after": 242310
+    },
+    {
+      "id": "c306",
+      "image": "./assets/portraits/c306.webp",
+      "before": 200696,
+      "after": 102896
+    },
+    {
+      "id": "c301",
+      "image": "./assets/portraits/c301.webp",
+      "before": 302679,
+      "after": 153454
+    },
+    {
+      "id": "c220",
+      "image": "./assets/portraits/c220.webp",
+      "before": 824540,
+      "after": 562406
+    },
+    {
+      "id": "c071",
+      "image": "./assets/portraits/c071.webp",
+      "before": 369919,
+      "after": 206966
+    },
+    {
+      "id": "c091",
+      "image": "./assets/portraits/c091.webp",
+      "before": 180772,
+      "after": 100796
+    },
+    {
+      "id": "c112",
+      "image": "./assets/portraits/c112.webp",
+      "before": 316593,
+      "after": 209776
+    },
+    {
+      "id": "c140",
+      "image": "./assets/portraits/c140.webp",
+      "before": 485673,
+      "after": 259590
+    },
+    {
+      "id": "c431",
+      "image": "./assets/portraits/c431.webp",
+      "before": 419265,
+      "after": 269398
+    },
+    {
+      "id": "c160",
+      "image": "./assets/portraits/c160.webp",
+      "before": 233301,
+      "after": 124892
+    },
+    {
+      "id": "c171",
+      "image": "./assets/portraits/c171.webp",
+      "before": 271222,
+      "after": 146804
+    },
+    {
+      "id": "c201",
+      "image": "./assets/portraits/c201.webp",
+      "before": 424243,
+      "after": 244186
+    },
+    {
+      "id": "c304",
+      "image": "./assets/portraits/c304.webp",
+      "before": 310902,
+      "after": 170632
+    },
+    {
+      "id": "c305",
+      "image": "./assets/portraits/c305.webp",
+      "before": 239597,
+      "after": 130822
+    },
+    {
+      "id": "c308",
+      "image": "./assets/portraits/c308.webp",
+      "before": 362827,
+      "after": 193412
+    }
+  ]
+}
