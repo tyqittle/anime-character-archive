@@ -178,13 +178,18 @@ begin
     // BEFORE the actual installer writes SpinePet.exe or sq.version.
     // GitHub's real Windows test proved that the files arrived seconds later.
     // Never conclude the install succeeded/failed from just its first PID.
+    // Velopack 1.2.x uses current/SpinePet.exe for the actual program.
+    // Some versions also create a root launcher, but it is NOT guaranteed.
     Stub := AddBackslash(ProgramFolder) + 'SpinePet.exe';
+    if not FileExists(Stub) then
+      Stub := AddBackslash(ProgramFolder) + 'current\SpinePet.exe';
     UpdateExe := AddBackslash(ProgramFolder) + 'Update.exe';
     VersionFile := AddBackslash(ProgramFolder) + 'current\sq.version';
     Ready := False;
     for Attempt := 1 to 150 do
     begin
-      if FileExists(Stub) and FileExists(UpdateExe) and
+      if FileExists(AddBackslash(ProgramFolder) + 'current\SpinePet.exe') and
+         FileExists(UpdateExe) and
          FileExists(VersionFile) and
          NativeInstallerReportedSuccess(LogPath) then
       begin
