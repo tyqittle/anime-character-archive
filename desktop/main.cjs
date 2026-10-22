@@ -3,10 +3,12 @@ const {app,BrowserWindow,Menu,Tray,nativeImage,shell,screen,dialog,ipcMain}=requ
 const path=require('node:path');
 const fs=require('node:fs');
 const {URL}=require('node:url');
+const {shapeFromBGRA}=require('./shape-mask.cjs');
 const SITE='https://tyqittle.github.io/anime-character-archive/';
 const SAFE_ID=/^[a-zA-Z0-9_-]{1,120}$/;
 let win,tray,clickThrough=false,alwaysOnTop=true,characterId='c012';
 let savedBounds=null,voiceEnabled=true,nativeIgnoring=null;
+let silhouetteTimer=null,silhouetteActive=false,silhouetteBusy=false,silhouetteStats=null;
 const configFile=()=>path.join(app.getPath('userData'),'desktop-settings.json');
 function readSettings(){
  try{const x=JSON.parse(fs.readFileSync(configFile(),'utf8'));if(SAFE_ID.test(x.id))characterId=x.id;if(typeof x.alwaysOnTop==='boolean')alwaysOnTop=x.alwaysOnTop;if(typeof x.voiceEnabled==='boolean')voiceEnabled=x.voiceEnabled;if(x.bounds&&[x.bounds.x,x.bounds.y,x.bounds.width,x.bounds.height].every(Number.isFinite))savedBounds=x.bounds;}catch{}
@@ -26,7 +28,7 @@ function idFromProtocol(value){
 function applyCharacter(id){
  if(!SAFE_ID.test(id))return;
  characterId=id;saveSettings();
- if(win){clickThrough=false;setNativeIgnore(true);win.show();win.loadURL(urlFor(id)).catch(console.error)}
+ if(win){clickThrough=false;resetSilhouette();win.show();win.loadURL(urlFor(id)).catch(console.error)}
  updateTray();
 }
 const singleInstance=app.requestSingleInstanceLock();
@@ -58,6 +60,41 @@ function isTrustedPage(input){
   return actual.origin===allowed.origin&&actual.pathname===allowed.pathname;
  }catch{return false}
 }
+function resetSilhouette(){
+ silhouetteActive=false;silhouetteStats=null;
+ if(win&&!win.isDestroyed()){
+  win.setOpacity(0);
+  // White opaque windows must NEVER cover the screen before the character
+  // silhouette can be measured from the finished Chromium framebuffer.
+  win.setShape?.([{x:0,y:0,width:1,height:1}]);
+  nativeIgnoring=null;setNativeIgnore(true);
+ }
+}
+async function refreshSilhouette(){
+ const w=win;
+ if(!w||w.isDestroyed()||silhouetteBusy||!w.isVisible())return;
+ silhouetteBusy=true;
+ try{
+  const size=w.getContentBounds();
+  const image=await w.webContents.capturePage();
+  if(w!==win||w.isDestroyed()||image.isEmpty())return;
+  const sampleWidth=Math.min(360,Math.max(160,Math.round(size.width/6)));
+  const sampleHeight=Math.max(40,Math.round(size.height*sampleWidth/size.width));
+  const small=image.resize({width:sampleWidth,height:sampleHeight,quality:'good'});
+  const sample=small.getSize();
+  const mask=shapeFromBGRA(small.toBitmap(),sample.width,sample.height,size.width,size.height);
+  if(!mask)return;
+  // Native window regions clip BOTH rendering and input at OS level. Even if
+  // the GPU compositor paints white instead of transparent, that white cannot
+  // escape the model silhouette region.
+  w.setShape(mask.rects);
+  silhouetteStats={regions:mask.rects.length,pixels:mask.foregroundPixels,
+   coverage:Number(mask.coverage.toFixed(3)),background:mask.background};
+  if(!silhouetteActive){silhouetteActive=true;w.setOpacity(1)}
+  setNativeIgnore(clickThrough);
+ }catch(e){console.warn('Desktop silhouette sampling failed:',e?.message||e)}
+ finally{silhouetteBusy=false}
+}
 function setNativeIgnore(ignore){
  if(!win||win.isDestroyed()||nativeIgnoring===ignore)return;
  nativeIgnoring=ignore;
@@ -65,7 +102,9 @@ function setNativeIgnore(ignore){
 }
 ipcMain.on('desktop:set-interactive',(event,active)=>{
  if(!win||win.isDestroyed()||event.sender!==win.webContents||typeof active!=='boolean')return;
- setNativeIgnore(clickThrough||!active);
+ // Native region shape is authoritative: empty areas always click through.
+ // Do not override its hit testing with a broad rectangular hover guess.
+ if(silhouetteActive)setNativeIgnore(clickThrough);
 });
 function createWindow(){
  const area=screen.getPrimaryDisplay().bounds;
@@ -76,8 +115,9 @@ function createWindow(){
  const inset=1;
  const bounds={x:area.x+inset,y:area.y+inset,
   width:Math.max(220,area.width-2*inset),height:Math.max(260,area.height-2*inset)};
- win=new BrowserWindow({...bounds,transparent:true,frame:false,resizable:false,hasShadow:false,backgroundColor:'#00000000',alwaysOnTop,skipTaskbar:true,autoHideMenuBar:true,webPreferences:{nodeIntegration:false,contextIsolation:true,sandbox:true,backgroundThrottling:false,preload:path.join(__dirname,'preload.cjs')}});
+ win=new BrowserWindow({...bounds,transparent:true,opacity:0,frame:false,resizable:false,hasShadow:false,backgroundColor:'#00000000',alwaysOnTop,skipTaskbar:true,autoHideMenuBar:true,webPreferences:{nodeIntegration:false,contextIsolation:true,sandbox:true,backgroundThrottling:false,preload:path.join(__dirname,'preload.cjs')}});
  win.setMenu(null);
+ resetSilhouette();
  // Chromium's default webContents backing surface can otherwise be white,
  // even with a transparent frameless native window.
  win.setBackgroundColor?.('rgba(0,0,0,0)');
@@ -95,12 +135,15 @@ function createWindow(){
  win.webContents.on('context-menu',()=>Menu.buildFromTemplate(desktopMenu()).popup({window:win}));
  win.webContents.on('did-finish-load',()=>{
   win.webContents.insertCSS(desktopCSS,{cssOrigin:'user'}).catch(console.error);
+  clearInterval(silhouetteTimer);
+  silhouetteTimer=setInterval(()=>{void refreshSilhouette()},430);
+  void refreshSilhouette();
   if(!voiceEnabled)win.webContents.executeJavaScript('(()=>{voiceEnabled=false;updateVoiceUI();syncFrameVoice();silenceCharacterVoice()})()').catch(console.error);
   win.webContents.executeJavaScript("(()=>{if(!document.getElementById('desktopDrag')){let el=document.createElement('div');el.id='desktopDrag';el.title='拖动这里移动桌面立绘';document.body.append(el)}document.body.style.background='transparent';if(!document.getElementById('desktopError')){let e=document.createElement('div');e.id='desktopError';e.style.cssText='position:fixed;bottom:26px;left:15px;right:15px;z-index:999999;color:white;background:#792626dd;padding:9px;border-radius:9px;font:12px system-ui;display:none;pointer-events:none';document.body.append(e);let status=document.getElementById('status');if(status){let update=()=>{let error=status.classList.contains('error');e.textContent=error?status.textContent:'';e.style.display=error?'block':'none'};new MutationObserver(update).observe(status,{subtree:true,childList:true,attributes:true});update()}}})()").catch(console.error);
  });
  // The screen-sized overlay is stationary; model gestures move the artwork,
  // not the native window. Persisting its bounds would restore the old clipping bug.
- win.on('closed',()=>{win=null;nativeIgnoring=null});
+ win.on('closed',()=>{clearInterval(silhouetteTimer);silhouetteTimer=null;win=null;nativeIgnoring=null;silhouetteActive=false});
  win.on('unresponsive',()=>console.warn('Desktop renderer is unresponsive'));
  win.loadURL(urlFor(characterId)).catch(e=>dialog.showErrorBox('动态立绘加载失败',e.message));
 }
@@ -131,7 +174,8 @@ async function inspectTransparency(){
   const pixels=img.toBitmap();
   screenshot=pixels.length>=4?{b:pixels[0],g:pixels[1],r:pixels[2],a:pixels[3]}:null;
  }catch(e){screenshot={error:e.message}}
- const report={...css,screenshot};
+ const report={...css,screenshot,silhouette:silhouetteStats,
+  nativeShapeEnabled:silhouetteActive};
  console.info('Desktop transparency diagnostics',report);
  return report;
 }
@@ -146,6 +190,7 @@ function desktopMenu(){
   {label:'打开网站角色目录',click:()=>shell.openExternal(SITE+'spine.html')},
   {label:'重新加载角色',click:()=>win?.reload()},
   {label:'透明渲染诊断',click:()=>displayTransparencyDiagnostic()},
+  {label:'重新生成角色轮廓',click:()=>{resetSilhouette();void refreshSilhouette()}},
   {label:'点击语音',type:'checkbox',checked:voiceEnabled,click:i=>{voiceEnabled=i.checked;saveSettings();win?.webContents.executeJavaScript('(()=>{voiceEnabled='+String(i.checked)+';updateVoiceUI();syncFrameVoice();if(!voiceEnabled)silenceCharacterVoice()})()').catch(console.error);updateTray()}},
   {type:'separator'},
   {label:'强制鼠标穿透（禁止角色互动）',type:'checkbox',checked:clickThrough,click:i=>{clickThrough=i.checked;setNativeIgnore(true);updateTray()}},
