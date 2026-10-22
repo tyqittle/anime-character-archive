@@ -5,15 +5,18 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import sharp from 'sharp';
 import {chromium} from 'playwright-core';
+import {selectPending} from './preview_capture_queue.mjs';
 
 const root=new URL('../',import.meta.url);
 const allCatalog=JSON.parse(fs.readFileSync(new URL('data/spine-characters.json',root),'utf8')).characters;
 const incremental=process.env.SPINE_PREVIEW_INCREMENTAL==='1';
-const catalog=incremental?allCatalog.filter(c=>['bluearchive','konosuba'].includes(c.gameId)&&!(c.previewSource==='matching-spine-animation-frame'&&c.preview==='./assets/animation-previews/'+c.gameId+'-'+c.id+'.webp'&&c.previewSha256)):allCatalog;
 const shard=Number(process.argv[2]??0);
 const count=Number(process.argv[3]??10);
 if(!Number.isInteger(shard)||!Number.isInteger(count)||shard<0||count<1||shard>=count)throw Error('Invalid shard/count');
-const list=catalog.filter((_,idx)=>idx%count===shard);
+// Same exact-model queue and file validation as every other game's preview workflow.
+const list=incremental
+ ? selectPending(new URL('data/spine-characters.json',root),shard,count,'tmp/spine-preview-pending.json')
+ : allCatalog.filter((_,idx)=>idx%count===shard);
 const out=process.env.SPINE_PREVIEW_OUT||'/tmp/spine-previews';
 const dest=path.join(out,'assets','animation-previews');
 fs.mkdirSync(dest,{recursive:true});

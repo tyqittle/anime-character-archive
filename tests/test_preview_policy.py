@@ -56,6 +56,17 @@ class PreviewPolicyTest(unittest.TestCase):
             self.assertFalse(p.needs_capture(self.character))
             self.assertIsNotNone(p.verified_file(self.character,self.path))
         finally: p.ROOT=previous
+    def test_missing_file_is_queued_even_with_verified_metadata(self):
+        previous = p.ROOT
+        try:
+            p.ROOT = self.path
+            self.character['previewSha256'] = hashlib.sha256(self.file.read_bytes()).hexdigest()
+            self.assertFalse(p.needs_capture(self.character))
+            self.file.unlink()
+            self.assertTrue(p.needs_capture(self.character))
+            self.file.write_bytes(b'corrupt')
+            self.assertTrue(p.needs_capture(self.character))
+        finally: p.ROOT = previous
     def test_preserve_verified_status(self):
         local = self.path / 'assets' / 'animation-previews'
         local.mkdir(parents=True)

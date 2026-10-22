@@ -31,6 +31,10 @@ jobs:
           node-version: '22'
       - name: Install browser and WebP encoder
         run: npm install --no-save --no-package-lock playwright-core@1.56.1 sharp@0.34.4
+      - name: Select missing previews using shared on-disk validator
+        run: |
+          python3 -m pip install --quiet Pillow
+          python3 scripts/preview_queue.py --catalog data/spine-characters.json --write tmp/spine-preview-pending.json
       - name: Serve source pages locally
         run: |
           python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/preview-server.log 2>&1 &
@@ -61,7 +65,9 @@ jobs:
           merge-multiple: true
       - name: Update local branch before replacing the exact catalog
         run: git pull --ff-only origin main
-      - name: Validate and publish actual matching Blue Archive/KonoSuba frames
+      - name: Install shared preview validator
+        run: python3 -m pip install --quiet Pillow
+      - name: Validate and publish exact-model Spine frames
         run: python3 scripts/apply_spine_previews.py /tmp/spine-previews --incremental
       - name: Commit locally stored preview frames and references
         run: |

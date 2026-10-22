@@ -4,6 +4,9 @@ import hashlib
 import json
 import pathlib
 import sys
+from PIL import Image
+from preview_policy import needs_capture, audit
+from preview_diagnostics import failure_category, scrub_failure_message
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DIRECTORY = pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 and not sys.argv[1].startswith('--') else pathlib.Path('/tmp/spine-previews')
@@ -42,14 +45,8 @@ for report in reports:
         good[key] = entry
 
 if INCREMENTAL:
-    expected = {
-        key for key, c in valid.items()
-        if key[0] in ('bluearchive', 'konosuba') and not (
-            c.get('previewSource') == 'matching-spine-animation-frame'
-            and c.get('preview') == './assets/animation-previews/' + key[0] + '-' + c['id'] + '.webp'
-            and c.get('previewSha256')
-        )
-    }
+    # Recheck real file bytes/format/hash, not just stale manifest metadata.
+    expected = {key for key, c in valid.items() if needs_capture(c)}
     if seen != expected:
         raise RuntimeError(f'Incremental coverage mismatch: missing={expected - seen} unexpected={seen - expected}')
 elif seen != set(valid) or bad:
@@ -64,19 +61,41 @@ for key, entry in good.items():
     c['previewSource'] = 'matching-spine-animation-frame'
     c['previewSha256'] = entry['sha256']
     c['previewAnimation'] = entry.get('animation', '')
+    with Image.open(destination) as image:
+        c['previewWidth'], c['previewHeight'] = image.size
     c.pop('previewStatus', None)
+    c.pop('previewFailureType', None)
+    c.pop('previewFailureReason', None)
 for entry in bad:
-    valid[(entry['gameId'], entry['id'])]['previewStatus'] = 'render-failed'
+    c = valid[(entry['gameId'], entry['id'])]
+    c['previewStatus'] = 'render-failed'
+    c['previewFailureType'] = failure_category(entry['error'])
+    c['previewFailureReason'] = scrub_failure_message(entry['error'])
 MANIFEST.write_text(json.dumps(raw, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
+# Cumulative coverage stays stable when a later incremental run only retries failures.
+coverage = audit(characters)
+verified = sum(g['verifiedPreview'] for g in coverage['counts'].values())
+missing = sum(g['missingPreview'] for g in coverage['counts'].values())
+recent = {'renderAttempted': len(seen), 'renderSucceeded': len(good), 'renderFailed': len(bad)}
 summary = {
     'total': len(characters),
-    'renderAttempted': len(seen),
-    'renderSucceeded': len(good),
-    'renderFailed': len(bad),
+    **recent,  # Backwards-compatible latest-run counters; not lifetime totals.
+    'lastRun': recent,
+    'verifiedPreview': verified,
+    'missingPreview': missing,
+    'coverageByGame': coverage['counts'],
     'byGame': {g: sum(c.get('gameId') == g for c in characters) for g in ('nikke', 'bluearchive', 'konosuba')},
-    'warning': 'Index presence does not prove playback. Only real matching animation frames have previews.'
+    'warning': 'renderAttempted/renderSucceeded/renderFailed describe only the latest batch. verifiedPreview/missingPreview are cumulative file-and-SHA-verified catalog coverage; previews do not prove every action plays.'
 }
+unresolved = []
+for entry in coverage['missing']:
+    c = valid[(entry['gameId'], entry['id'])]
+    unresolved.append({
+        **entry,
+        'error': scrub_failure_message(c.get('previewFailureReason') or c.get('previewStatus') or 'Matching preview missing'),
+        'category': c.get('previewFailureType') or 'unverified'
+    })
 (ROOT / 'data/spine-preview-build.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-(ROOT / 'data/nikke-preview-audit.json').write_text(json.dumps({'summary': summary, 'failures': bad}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+(ROOT / 'data/nikke-preview-audit.json').write_text(json.dumps({'summary': summary, 'failures': unresolved, 'lastRunFailures': bad}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 print('SPINE_PREVIEW_RESULT', json.dumps(summary, ensure_ascii=False), flush=True)

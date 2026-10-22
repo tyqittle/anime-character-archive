@@ -4,14 +4,52 @@
     "renderAttempted": 2,
     "renderSucceeded": 0,
     "renderFailed": 2,
+    "lastRun": {
+      "renderAttempted": 2,
+      "renderSucceeded": 0,
+      "renderFailed": 2
+    },
+    "verifiedPreview": 817,
+    "missingPreview": 2,
+    "coverageByGame": {
+      "nikke": {
+        "indexed": 514,
+        "verifiedPreview": 514,
+        "missingPreview": 0
+      },
+      "bluearchive": {
+        "indexed": 179,
+        "verifiedPreview": 179,
+        "missingPreview": 0
+      },
+      "konosuba": {
+        "indexed": 126,
+        "verifiedPreview": 124,
+        "missingPreview": 2
+      }
+    },
     "byGame": {
       "nikke": 514,
       "bluearchive": 179,
       "konosuba": 126
     },
-    "warning": "Index presence does not prove playback. Only real matching animation frames have previews."
+    "warning": "renderAttempted/renderSucceeded/renderFailed describe only the latest batch. verifiedPreview/missingPreview are cumulative file-and-SHA-verified catalog coverage; previews do not prove every action plays."
   },
   "failures": [
+    {
+      "gameId": "konosuba",
+      "id": "kf-1191100-1190100",
+      "error": "Error: 角色资源下载失败。github：Error: could not load skeleton .json. Error: Region not found in atlas: 01_backhair_2_1 (mesh attachment: 01_backhair_2_1)；可点击“重试”或选择本地导入已获得的动画文件。",
+      "category": "atlas-mismatch"
+    },
+    {
+      "gameId": "konosuba",
+      "id": "kf-1193207-1190100",
+      "error": "Error: 角色资源下载失败。github：Error: could not load skeleton .json. Error: Region not found in atlas: 01_backhair_2_1 (mesh attachment: 01_backhair_2_1)；可点击“重试”或选择本地导入已获得的动画文件。",
+      "category": "atlas-mismatch"
+    }
+  ],
+  "lastRunFailures": [
     {
       "gameId": "konosuba",
       "id": "kf-1191100-1190100",
