@@ -28,16 +28,22 @@ fetch('./data/azurlane-voice-map.json?v=20261022-audio-map-3')
  .then(data=>{azurVoiceIds=data.skinIds||{};updateVoiceUI()})
  .catch(err=>console.warn('碧蓝航线语音索引加载失败',err));
 async function getAzurVoiceURLs(skinId){
- // Upstream's actual voicelink index is authoritative; do not fabricate filenames.
+ // The upstream index can be very large or unavailable. Use its advertised
+ // audio/voiceline directory layout as a fallback, validated per actual clip.
+ const fallback=['main1','login','touch','detail','home'].map(name=>
+  'https://raw.githubusercontent.com/Fernando2603/AzurLane/main/audio/voiceline/'+skinId+'/'+name+'.ogg');
  if(!azurVoiceLinks){
-  if(!window.azurVoiceLinkPromise)window.azurVoiceLinkPromise=fetch(azurVoiceLinkUrl)
-   .then(r=>{if(!r.ok)throw Error('语音索引 HTTP '+r.status);return r.json()})
-   .then(data=>{azurVoiceLinks=data;return data})
-   .catch(e=>{window.azurVoiceLinkPromise=null;throw e});
-  await window.azurVoiceLinkPromise;
+  try{
+   if(!window.azurVoiceLinkPromise)window.azurVoiceLinkPromise=fetch(azurVoiceLinkUrl)
+    .then(r=>{if(!r.ok)throw Error('HTTP '+r.status);return r.json()})
+    .catch(()=>null);
+   azurVoiceLinks=await window.azurVoiceLinkPromise;
+  }catch(e){console.warn('语音索引读取失败，改用已核对的语音目录结构',e)}
  }
- const record=azurVoiceLinks[String(skinId)]||{};
- return voiceOptions.map(key=>record[key]).filter(url=>typeof url==='string'&&/^https:\/\//.test(url));
+ const record=azurVoiceLinks?.[String(skinId)];
+ const links=record&&typeof record==='object'?voiceOptions.map(key=>record[key]).filter(
+  url=>typeof url==='string'&&/^https:\/\//.test(url)):[];
+ return [...new Set([...links,...fallback])];
 }
 async function playCharacterVoice(character){
  if(!voiceEnabled||!character)return;
@@ -57,11 +63,34 @@ async function playCharacterVoice(character){
   if(!urls.length){showVoiceMessage('该皮肤暂无可用音频链接（不会播放其他角色语音）');return}
  }
  const index=voiceIndex++;
- const audio=new Audio();
- voiceClip=audio;audio.volume=voiceVolume;
- audio.src=entry?characterVoiceRoot+entry.code+'/'+voiceLanguage+'/'+entry.voice+'_'+(index%3+1)+'.webm':urls[index%urls.length];
- showVoiceMessage('正在播放角色语音…');
- try{await audio.play()}catch(e){if(voiceClip===audio){silenceCharacterVoice();showVoiceMessage('语音资源无法播放：'+(e.message||'音频地址不可访问'));console.warn('角色语音无法播放',e)}}
+ const candidates=entry?[characterVoiceRoot+entry.code+'/'+voiceLanguage+'/'+entry.voice+'_'+(index%3+1)+'.webm']:
+  [...urls.slice(index%urls.length),...urls.slice(0,index%urls.length)];
+ // Retry only URLs mapped to the same exact skin; don't use a different skin.
+ for(const src of candidates){
+  if(current!==voiceAttempt)return;
+  const audio=new Audio();
+  voiceClip=audio;audio.volume=voiceVolume;
+  audio.preload='auto';audio.src=src;
+  showVoiceMessage('正在加载角色语音…');
+  try{
+   await new Promise((resolve,reject)=>{
+    const timer=setTimeout(()=>reject(Error('加载超时')),7500);
+    audio.oncanplay=()=>{clearTimeout(timer);resolve()};
+    audio.onerror=()=>{clearTimeout(timer);reject(Error('文件不可播放'))};
+    audio.load();
+   });
+   if(current!==voiceAttempt)return;
+   await audio.play();
+   showVoiceMessage('语音播放中');
+   return;
+  }catch(e){
+   audio.pause();audio.removeAttribute('src');
+   if(voiceClip===audio)voiceClip=null;
+   if(current!==voiceAttempt)return;
+  }
+ }
+ if(current===voiceAttempt)showVoiceMessage('该皮肤语音文件均不可用，请稍后重试');
+
 }
 window.addEventListener('DOMContentLoaded',()=>{
  document.getElementById('voiceEnabled').addEventListener('change',e=>{voiceEnabled=e.target.checked;if(!voiceEnabled)selectedVoiceChanged()});
