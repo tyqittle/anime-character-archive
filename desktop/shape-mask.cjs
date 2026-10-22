@@ -29,6 +29,24 @@ function shapeFromBGRA(bitmap,width,height,cssWidth,cssHeight){
  // No character or solid filled framebuffer: NEVER reveal an opaque desktop
  // overlay. A real character occupies much less than half the monitor.
  if(pixels<12||pixels>width*height*.48)return null;
+ // Flood-fill the OUTSIDE background, then restore enclosed white regions
+ // such as pale surfboards, clothing, and eyes. A white object surrounded by
+ // colored outlines must not turn into a transparent hole.
+ const outside=new Uint8Array(width*height),queue=new Int32Array(width*height);
+ let head=0,tail=0;
+ const visit=(i)=>{
+  if(!mask[i]&&!outside[i]){outside[i]=1;queue[tail++]=i}
+ };
+ for(let xx=0;xx<width;xx++){visit(xx);visit((height-1)*width+xx)}
+ for(let yy=0;yy<height;yy++){visit(yy*width);visit(yy*width+width-1)}
+ while(head<tail){
+  const pos=queue[head++],xx=pos%width,yy=(pos-xx)/width;
+  if(xx>0)visit(pos-1);
+  if(xx+1<width)visit(pos+1);
+  if(yy>0)visit(pos-width);
+  if(yy+1<height)visit(pos+width);
+ }
+ for(let i=0;i<mask.length;i++)if(!mask[i]&&!outside[i])mask[i]=1;
  const xScale=cssWidth/width,yScale=cssHeight/height;
  const rows=[];
  for(let y=0;y<height;y++){
