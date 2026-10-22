@@ -141,7 +141,7 @@ async function show(options,title,onError){
    status('加载失败：'+error.message,true);
    reject(error);
   };
-  const config={...normalized,showControls:false,controlBones:false,frame:(p)=>recordSpineFrame(p),update:(p)=>applySharpSpineCamera(p),premultipliedAlpha:options.premultipliedAlpha??true,alpha:false,backgroundColor:'#142238ff',
+  const config={...normalized,showControls:false,controlBones:false,frame:(p)=>recordSpineFrame(p),update:(p)=>applySharpSpineCamera(p),premultipliedAlpha:options.premultipliedAlpha??true,alpha:new URLSearchParams(location.search).has('desktop'),backgroundColor:new URLSearchParams(location.search).has('desktop')?'#00000000':'#142238ff',
    success:(p)=>{
     if(attempt!==currentAttempt){try{p.dispose?.()}catch(e){}resolve(false);return}
     stopWatchdog();if(pendingRenderCancel===cancel)pendingRenderCancel=null;player=p;
