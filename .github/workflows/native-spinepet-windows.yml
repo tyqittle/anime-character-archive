@@ -88,12 +88,14 @@ jobs:
           $frame = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeFrameRenderer.cs -Raw
           $surface = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeCompositionSurface.cs -Raw
           $silhouette = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeSilhouetteRasterizer.cs -Raw
+          $hitRegion = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeInputRegionCoordinator.cs -Raw
           $voice = Get-Content ./native-upstream/SpinePet/src/SpinePet/NativeBrownDust2Voice.cs -Raw
           $app = Get-Content ./native-upstream/SpinePet/src/SpinePet/App.xaml.cs -Raw
           if (-not $engine.Contains('private void OnNativeMouseWheel') -or
               -not $frame.Contains('NativeSpineBounds observed = state.Geometry.Bounds') -or
               -not $surface.Contains('right <= PixelWidth - AnchorPixelX') -or
               -not $silhouette.Contains('float halfCell = cellSize * 0.38f / pixelScale') -or
+              -not $hitRegion.Contains('screen.Bounds,') -or
               -not $engine.Contains('NativeDesktopVoiceRelay.NotifyClicked(') -or
               -not $voice.Contains('Char" + clipCode + "_BattleReady_') -or
               -not $app.Contains('InitializeBrownDust2Voice();') -or
