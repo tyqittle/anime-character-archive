@@ -416,7 +416,8 @@ assert.equal(illustCatalog.characters.length,92);
 assert.equal(extra.characters.filter(c=>c.gameId==='arknights'&&c.collectionId==='arknights-battle').length,359);
 assert.ok(illustCatalog.characters.every(c=>c.gameId==='arknights'&&c.collectionId==='arknights'&&
  c.assetType==='dynamic-illustration-spine'&&c.base.includes('/models_illust/')&&
- c.previewSource==='not-rendered'&&!c.preview));
+ (!c.preview||(c.preview==='./assets/animation-previews/arknights-'+c.id+'.webp'&&
+ c.previewSource==='matching-spine-animation-frame'))));
 assert.ok(spineHTML.includes('value="arknights-battle"')&&spineHTML.includes('value="arknights"'));
 assert.ok(read('assets/js/spine/catalog.js').includes('function animationCollection(c)'));
 assert.ok(read('assets/js/spine/bootstrap.js').includes('arknightsIllustCatalogUrl'));

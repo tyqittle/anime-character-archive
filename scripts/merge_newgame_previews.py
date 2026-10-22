@@ -3,11 +3,17 @@
 from pathlib import Path
 import json
 import shutil
+import argparse
 from preview_policy import ROOT, filename, verified_file, apply_verified_preview, audit
 
-manifest = Path('data/spine-newgames.json')
+parser=argparse.ArgumentParser()
+parser.add_argument('--catalog',default='data/spine-newgames.json')
+parser.add_argument('--incoming',default='tmp/newgame-merged/webps')
+parser.add_argument('--audit',default='data/newgames-preview-audit.json')
+args=parser.parse_args()
+manifest = Path(args.catalog)
 catalog = json.loads(manifest.read_text(encoding='utf-8'))
-incoming = Path('tmp/newgame-merged/webps')
+incoming = Path(args.incoming)
 ROOT.mkdir(parents=True, exist_ok=True)
 added = 0
 for character in catalog['characters']:
@@ -26,7 +32,7 @@ for character in catalog['characters']:
 
 summary = audit(catalog['characters'])
 manifest.write_text(json.dumps(catalog, ensure_ascii=False, separators=(',', ':'))+'\n', encoding='utf-8')
-Path('data/newgames-preview-audit.json').write_text(json.dumps({
+Path(args.audit).write_text(json.dumps({
     'scope': 'new dynamic game batch',
     'counts': summary['counts'],
     'missing': summary['missing'],

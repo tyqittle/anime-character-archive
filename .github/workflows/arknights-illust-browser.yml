@@ -1,0 +1,29 @@
+name: Verify Arknights illustration model
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/spine-arknights-illust.json'
+      - 'assets/js/spine/bootstrap.js'
+      - 'assets/js/spine/spine-assets.js'
+      - 'assets/js/spine/catalog.js'
+      - 'assets/js/spine/spine-runtime.js'
+      - 'scripts/test_arknights_illust_browser.mjs'
+      - '.github/workflows/arknights-illust-browser.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 11
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --no-package-lock playwright-core@1.56.1
+      - run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/arknights-illust-site.log 2>&1 &
+          sleep 2
+      - run: node scripts/test_arknights_illust_browser.mjs

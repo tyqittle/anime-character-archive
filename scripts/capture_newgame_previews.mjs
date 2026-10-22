@@ -9,8 +9,10 @@ import {selectPending} from './preview_capture_queue.mjs';
 
 const shard=Number(process.argv[2]||0),shards=Number(process.argv[3]||24);
 if(!Number.isInteger(shard)||!Number.isInteger(shards)||shard<0||shard>=shards)throw Error('Invalid shard');
-const characters=selectPending('data/spine-newgames.json',shard,shards);
-const root='tmp/newgame-output';
+// Catalog and output directory are parameters, not game-specific forks.
+const catalogPath=process.argv[4]||'data/spine-newgames.json';
+const root=process.argv[5]||'tmp/newgame-output';
+const characters=selectPending(catalogPath,shard,shards);
 fs.mkdirSync(path.join(root,'frames'),{recursive:true});
 fs.mkdirSync(path.join(root,'reports'),{recursive:true});
 const bin=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'].find(fs.existsSync);
