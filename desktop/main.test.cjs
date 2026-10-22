@@ -46,7 +46,7 @@ test('desktop app starts in a transparent sandboxed window',async()=>{
  assert.equal(w.options.transparent,true);
  assert.equal(w.options.webPreferences.nodeIntegration,false);
  assert.equal(w.options.webPreferences.sandbox,true);
- assert.match(w.url,/spine\\.html\\?desktop=1&id=c012/);
+ assert.ok(w.url.includes('spine.html?desktop=1&id=c012'));
 });
 test('allowed scheme changes character without creating another window',async()=>{
  const h=harness();await Promise.resolve();await Promise.resolve();
