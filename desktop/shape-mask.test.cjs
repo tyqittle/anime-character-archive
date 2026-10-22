@@ -45,3 +45,14 @@ test('suspiciously filled whole screen fails closed',()=>{
 test('bad dimensions and buffers fail closed',()=>{
  assert.equal(shapeFromBGRA(Buffer.alloc(4),200,100,1920,1080),null);
 });
+
+test('an enclosed white interior of a character remains visible',()=>{
+ const {data,paint}=sample(100,100);
+ // Color outline enclosing a bright white interior.
+ for(let x=20;x<=60;x++){paint(x,20,30,40,100);paint(x,60,30,40,100)}
+ for(let y=20;y<=60;y++){paint(20,y,30,40,100);paint(60,y,30,40,100)}
+ const mask=shapeFromBGRA(data,100,100,1000,1000);
+ assert.ok(mask);
+ assert.equal(contains(mask.rects,400,400),true);
+ assert.equal(contains(mask.rects,850,850),false);
+});
