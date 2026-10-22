@@ -1,0 +1,13 @@
+{
+  "scope": "new dynamic game batch",
+  "counts": {
+    "arknights": {
+      "indexed": 92,
+      "verifiedPreview": 92,
+      "missingPreview": 0
+    }
+  },
+  "missing": [],
+  "newCapturesInThisRun": 92,
+  "status": "shared exact-model WebP verification policy"
+}
