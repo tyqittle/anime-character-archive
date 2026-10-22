@@ -92,8 +92,22 @@ try {
     }
     Write-Output "Imported $display to $destination"
     if ($DownloadOnly) { exit 0 }
+    # Tell the existing upstream application which model to show. When it is
+    # running, spawning SpinePet.exe signals its existing single-instance event;
+    # when not running, it consumes this request during normal startup.
+    $requestFolder = Join-Path $root 'res'
+    New-Item -ItemType Directory -Path $requestFolder -Force | Out-Null
+    $requestFile = Join-Path $requestFolder '.anime-archive-show.json'
+    $tempRequest = Join-Path $requestFolder ('.anime-archive-request-' + [guid]::NewGuid().ToString('N') + '.tmp')
+    try {
+        @{ ResourceName = $stem } | ConvertTo-Json -Compress |
+            Set-Content -Path $tempRequest -Encoding UTF8
+        Move-Item -LiteralPath $tempRequest -Destination $requestFile -Force
+    } finally {
+        Remove-Item -LiteralPath $tempRequest -Force -ErrorAction SilentlyContinue
+    }
     Start-Process -FilePath $executable -WorkingDirectory (Split-Path -Parent $executable)
-    Write-Output 'SpinePet launched. Press Scan in its panel, then select the imported character.'
+    Write-Output "Sent one-click request: show $stem on desktop."
 } catch {
     $message = [string]$_.Exception.Message
     Write-Warning $message
