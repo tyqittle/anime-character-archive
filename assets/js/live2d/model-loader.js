@@ -1,4 +1,22 @@
 'use strict';
+// Iframe-local voice avoids browser restrictions on cross-frame gesture playback.
+let frameVoiceSkin='',frameVoiceEnabled=false,frameVoiceVolume=.8,frameVoiceIndex=0,frameVoiceAudio=null;
+function setFrameVoice(voice){
+ frameVoiceAudio?.pause();frameVoiceAudio=null;
+ frameVoiceSkin=typeof voice?.skinId==='string'&&/^\\d{6}$/.test(voice.skinId)?voice.skinId:'';
+ frameVoiceEnabled=!!voice?.enabled;
+ frameVoiceVolume=Math.max(0,Math.min(1,Number(voice?.volume)??.8));
+}
+function playFrameVoice(){
+ if(!frameVoiceEnabled||!frameVoiceSkin||!currentId.startsWith('al-'))return;
+ frameVoiceAudio?.pause();
+ const index=frameVoiceIndex++;
+ const name=['main1','login','touch','detail','home'][index%5];
+ const audio=new Audio('https://raw.githubusercontent.com/Fernando2603/AzurLane/main/audio/voiceline/'+frameVoiceSkin+'/'+name+'.ogg');
+ audio.volume=frameVoiceVolume;
+ frameVoiceAudio=audio;
+ audio.play().then(()=>notify('voice-playing')).catch(()=>notify('voice-error',{error:'当前皮肤音频不可播放'}));
+}
 function motion(name){
  if(!model||typeof name!=='string')return;
  try{
