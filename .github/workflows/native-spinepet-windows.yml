@@ -181,9 +181,13 @@ jobs:
           # Velopack package updates the application folder, so ship upstream
           # GPL license and notices inside that versioned folder too.
           Copy-Item ./safe-release/core/LICENSE-GPL-3.0.txt,./safe-release/core/NOTICE.txt,./safe-release/core/THIRD_PARTY_NOTICES.md -Destination ./safe-release/core/app
-          vpk pack --packId AnimeCharacterSpinePet --packVersion $version --packDir ./safe-release/core/app --mainExe SpinePet.exe --outputDir ./safe-release/velopack
+          # Retain the one-click installer for existing users; also produce a
+          # standard Windows Installer whose UI supports a selectable folder.
+          # Either allows per-user installation without administrator rights.
+          vpk pack --packId AnimeCharacterSpinePet --packVersion $version --packDir ./safe-release/core/app --mainExe SpinePet.exe --outputDir ./safe-release/velopack --msi --instLocation Either
           if ($LASTEXITCODE -ne 0) { throw 'Velopack packaging failed' }
           if (@(Get-ChildItem ./safe-release/velopack/*-Setup.exe).Count -lt 1) { throw 'Missing auto-update Setup.exe' }
+          if (@(Get-ChildItem ./safe-release/velopack/*.msi).Count -lt 1) { throw 'Missing directory-selectable MSI installer' }
           if (@(Get-ChildItem ./safe-release/velopack/*-full.nupkg).Count -lt 1) { throw 'Missing full update package' }
           if (-not (Test-Path ./safe-release/velopack/releases.win.json)) { throw 'Missing update feed' }
       - name: Generate SHA-256 manifest and run security checks where supported
