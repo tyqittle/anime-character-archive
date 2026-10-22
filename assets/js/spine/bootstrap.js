@@ -22,7 +22,8 @@ async function fetchAnimationManifest(url){
    {name:'主要动画',url:manifestUrl},
    {name:'碧蓝航线',url:azurlaneCatalogUrl},
    {name:'棕色尘埃2',url:bd2CatalogUrl},
-   {name:'扩展游戏',url:newGamesCatalogUrl}
+   {name:'扩展游戏',url:newGamesCatalogUrl},
+   {name:'明日方舟干员动态立绘',url:arknightsIllustCatalogUrl}
   ];
   const results=location.protocol==='file:'?[]:
    await Promise.allSettled(entries.map(entry=>fetchAnimationManifest(entry.url)));
@@ -52,7 +53,7 @@ async function fetchAnimationManifest(url){
   const requested=params.get('id');
   const hit=requested&&allCharacters.find(c=>c.id===requested);
   if(hit){
-   $('gameFilter').value=hit.gameId||'nikke';
+   $('gameFilter').value=animationCollection(hit);
    refreshCharacters();
    $('characters').value=requested;
    refreshCardSelection();

@@ -408,3 +408,15 @@ assert.ok(read('assets/js/spine/playback.js').includes('recentSpinePack(packId)'
  'Repeated selection must consult bounded RAM cache before IndexedDB');
 assert.ok(read('assets/js/spine/session-cache.js').includes('hotPackLimit'),
  'Hot model cache must enforce a fixed memory budget');
+
+
+// Real Arknights illustrated Spine rigs and BattleFront sprites must not mix.
+const illustCatalog=JSON.parse(read('data/spine-arknights-illust.json'));
+assert.equal(illustCatalog.characters.length,92);
+assert.equal(extra.characters.filter(c=>c.gameId==='arknights'&&c.collectionId==='arknights-battle').length,359);
+assert.ok(illustCatalog.characters.every(c=>c.gameId==='arknights'&&c.collectionId==='arknights'&&
+ c.assetType==='dynamic-illustration-spine'&&c.base.includes('/models_illust/')&&
+ c.previewSource==='not-rendered'&&!c.preview));
+assert.ok(spineHTML.includes('value="arknights-battle"')&&spineHTML.includes('value="arknights"'));
+assert.ok(read('assets/js/spine/catalog.js').includes('function animationCollection(c)'));
+assert.ok(read('assets/js/spine/bootstrap.js').includes('arknightsIllustCatalogUrl'));

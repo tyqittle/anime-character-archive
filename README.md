@@ -144,3 +144,9 @@ node tests/smoke.mjs
 角色名称、角色形象及游戏美术归相应权利人所有。部分资源来自第三方社区维护的公开档案；**可访问的图片不等于获得再分发授权**。每条记录尽量保留 `source` 和 `originalImage` 字段供追溯，公开使用前应核实授权。
 
 站内中文品牌名称保留为**次元角色档案馆**，与新仓库英文名 **Anime Character Archive** 对应。
+
+### 明日方舟干员动态立绘（2026-10-22）
+
+已导入来自 [isHarryh/Ark-Models](https://github.com/isHarryh/Ark-Models/tree/main/models_illust) 固定提交 `e65fb9147846b64bcf2df956b8cd8da77a51b9b8` 的 **92 套完整动态原画 Spine 资源索引**，包括一套骨骼、图集文件名不一致但路径明确的模型；索引见 `data/spine-arknights-illust.json`。先前 359 套 `BattleFront` 小人继续保留在独立「明日方舟（战斗小人）」筛选项，默认「明日方舟」只展示干员动态原画。模型按需从原始固定版本读取，不重复打包第三方美术。
+
+**92 套是资源完整索引数量，不代表全部已通过浏览器播放验证。** 预览图也必须是对应模型的真实截图，不能拿战斗小人或同角色静态立绘冒充。

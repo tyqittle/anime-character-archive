@@ -23,13 +23,20 @@ try{
    }
    return {byGame,byEngine};
   });
-  const minimums={nikke:514,bluearchive:179,konosuba:187,arknights:359,
+  const minimums={nikke:514,bluearchive:179,konosuba:187,arknights:451,
    girlsfrontline:297,browndust2:209,azurlane:242};
   for(const [game,count] of Object.entries(minimums))
    if((inventory.byGame[game]||0)<count)throw Error('Incomplete game catalog: '+game+' '+JSON.stringify(inventory));
   if((inventory.byEngine['konosuba/cubism']||0)<61||
      (inventory.byEngine['konosuba/spine']||0)<126)
    throw Error('Both animations engines must be indexed for Konosuba: '+JSON.stringify(inventory));
+  await page.selectOption('#gameFilter','arknights');
+  if((await page.locator('#characters option').count())!==93)
+    throw Error('Expected 92 animated Arknights illustrations; battle rigs leaked into main list');
+  await page.selectOption('#gameFilter','arknights-battle');
+  if((await page.locator('#characters option').count())!==360)
+    throw Error('Expected 359 separate BattleFront sprites');
+  await page.selectOption('#gameFilter','all');
   // The desktop layout is a fixed one-screen workspace, never a page scroller.
   // The card grid remains independently scrollable even with hundreds of skins.
   const layout=await page.evaluate(()=>{

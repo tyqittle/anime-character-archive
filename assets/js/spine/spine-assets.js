@@ -1,5 +1,9 @@
 'use strict';
 function urls(c,mirror){
+ // Both skeleton and atlas can be explicitly supplied regardless of format.
+ // Some upstream full-size illustrations use different stems for these files.
+ if(c.skeletonUrl&&c.atlasUrl&&c.base)
+  return {skeleton:c.skeletonUrl,atlas:c.atlasUrl,base:c.base,format:c.skeletonFormat==='json'?'json':'skel'};
  // Explicit JSON skeleton URL enables Spine 3.8 game exports stored as .txt.
  if(c.skeletonFormat==='json'&&c.skeletonUrl&&c.atlasUrl)
   return {skeleton:c.skeletonUrl,atlas:c.atlasUrl,base:c.base,format:'json'};
