@@ -5,17 +5,20 @@ const characterVoiceMap={"bd2-char066401":{"code":"066401","voice":"Char066401_B
 const characterVoiceRoot='https://raw.githubusercontent.com/Jelosus2/BD2-L2D-Viewer/b899b929df3e3ea883984a05f83c944608a27cb4/src/assets/audios/';
 const azurVoiceLinkUrl='https://raw.githubusercontent.com/Fernando2603/AzurLane/main/voicelink.json';
 let voiceLanguage='JP',voiceEnabled=false,voiceVolume=.8,voiceClip=null,voiceIndex=0;
-let azurVoiceIds={},azurVoiceLinks=null,voiceLoading=false,voiceAttempt=0;
+let azurVoiceIds={},azurVoiceLinks=null,voiceLoading=false,voiceAttempt=0,voiceMessageOverride='';
 const voiceOptions=['main1','main2','main3','touch','touch2','headtouch','login','detail','home','mail','mission'];
 function voiceMessage(message){const hint=document.getElementById('voiceAvailability');if(hint)hint.textContent=message}
-function silenceCharacterVoice(){voiceAttempt++;if(voiceClip){voiceClip.pause();voiceClip.removeAttribute('src');voiceClip=null}}
+function silenceCharacterVoice(){voiceAttempt++;voiceLoading=false;if(voiceClip){voiceClip.pause();voiceClip.removeAttribute('src');voiceClip=null}}
+function showVoiceMessage(message){voiceMessageOverride=message;voiceMessage(message)}
+function selectedVoiceChanged(){silenceCharacterVoice();voiceMessageOverride='';updateVoiceUI()}
 function updateVoiceUI(){
  const selected=typeof chosen==='function'?chosen():null;
  const supported=!!(selected&&(characterVoiceMap[selected.id]||azurVoiceIds[selected.id]||Array.isArray(selected.audioClips)&&selected.audioClips.length));
  const ctl=document.getElementById('characterVoiceControls');if(!ctl)return;
  ctl.hidden=false;
  const test=document.getElementById('voiceTest');if(test)test.disabled=!supported||voiceLoading;
- voiceMessage(azurVoiceIds[selected?.id]?'已匹配皮肤，点击试听获取原站语音':supported?'已匹配角色语音 · 点击人物试听':selected?'当前角色暂无已匹配语音':'请选择角色以查看可用语音');
+ voiceMessage(voiceMessageOverride||(azurVoiceIds[selected?.id]?'已匹配皮肤编号（音频待确认），点击试听':supported?'已匹配角色语音 · 点击人物试听':selected?'当前角色暂无已匹配语音':'请选择角色以查看可用语音'));
+ document.getElementById('voiceLanguage').disabled=!!azurVoiceIds[selected?.id];
  document.getElementById('voiceEnabled').checked=voiceEnabled;
  document.getElementById('voiceLanguage').value=voiceLanguage;
  document.getElementById('voiceVolume').value=String(Math.round(voiceVolume*100));
@@ -42,32 +45,32 @@ async function playCharacterVoice(character){
  const external=Array.isArray(character.audioClips)?character.audioClips.filter(url=>typeof url==='string'&&/^https:\/\//.test(url)):[];
  const azurSkin=azurVoiceIds[character.id];
  if(!entry&&!external.length&&!azurSkin)return;
- silenceCharacterVoice();
+ silenceCharacterVoice();voiceMessageOverride='';
  const current=voiceAttempt;
  let urls=external;
  if(azurSkin){
-  voiceLoading=true;updateVoiceUI();voiceMessage('正在读取原站语音索引…');
+  voiceLoading=true;updateVoiceUI();showVoiceMessage('正在读取原站语音索引…');
   try{urls=await getAzurVoiceURLs(azurSkin)}
-  catch(e){if(current===voiceAttempt)voiceMessage('语音索引加载失败：'+e.message);voiceLoading=false;updateVoiceUI();return}
+  catch(e){if(current===voiceAttempt){voiceLoading=false;updateVoiceUI();showVoiceMessage('语音索引加载失败：'+e.message)}return}
   voiceLoading=false;updateVoiceUI();
   if(current!==voiceAttempt)return;
-  if(!urls.length){voiceMessage('该皮肤暂无可用音频链接（不会播放其他角色语音）');return}
+  if(!urls.length){showVoiceMessage('该皮肤暂无可用音频链接（不会播放其他角色语音）');return}
  }
  const index=voiceIndex++;
  const audio=new Audio();
  voiceClip=audio;audio.volume=voiceVolume;
  audio.src=entry?characterVoiceRoot+entry.code+'/'+voiceLanguage+'/'+entry.voice+'_'+(index%3+1)+'.webm':urls[index%urls.length];
- voiceMessage('正在播放角色语音…');
- try{await audio.play()}catch(e){if(voiceClip===audio){silenceCharacterVoice();voiceMessage('语音资源无法播放：'+(e.message||'音频地址不可访问'));console.warn('角色语音无法播放',e)}}
+ showVoiceMessage('正在播放角色语音…');
+ try{await audio.play()}catch(e){if(voiceClip===audio){silenceCharacterVoice();showVoiceMessage('语音资源无法播放：'+(e.message||'音频地址不可访问'));console.warn('角色语音无法播放',e)}}
 }
 window.addEventListener('DOMContentLoaded',()=>{
- document.getElementById('voiceEnabled').addEventListener('change',e=>{voiceEnabled=e.target.checked;if(!voiceEnabled)silenceCharacterVoice()});
- document.getElementById('voiceLanguage').addEventListener('change',e=>{voiceLanguage=e.target.value;silenceCharacterVoice()});
+ document.getElementById('voiceEnabled').addEventListener('change',e=>{voiceEnabled=e.target.checked;if(!voiceEnabled)selectedVoiceChanged()});
+ document.getElementById('voiceLanguage').addEventListener('change',e=>{voiceLanguage=e.target.value;selectedVoiceChanged()});
  document.getElementById('voiceVolume').addEventListener('input',e=>{voiceVolume=Number(e.target.value)/100;if(voiceClip)voiceClip.volume=voiceVolume});
  document.getElementById('player').addEventListener('pointerup',e=>{if(e.target.closest('canvas'))playCharacterVoice(chosen())});
- document.getElementById('characters').addEventListener('change',()=>{silenceCharacterVoice();updateVoiceUI()});
- document.getElementById('characterCards').addEventListener('click',()=>{silenceCharacterVoice();updateVoiceUI()});
- document.getElementById('gameFilter').addEventListener('change',()=>{silenceCharacterVoice();updateVoiceUI()});
+ document.getElementById('characters').addEventListener('change',selectedVoiceChanged);
+ document.getElementById('characterCards').addEventListener('click',selectedVoiceChanged);
+ document.getElementById('gameFilter').addEventListener('change',selectedVoiceChanged);
  document.getElementById('voiceTest').addEventListener('click',()=>{voiceEnabled=true;updateVoiceUI();playCharacterVoice(chosen())});
  updateVoiceUI();
 });
