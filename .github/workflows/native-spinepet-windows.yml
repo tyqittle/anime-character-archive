@@ -36,6 +36,7 @@ jobs:
         shell: pwsh
         run: |
           & ./native-desktop/Open-ArchiveCharacter.ps1 -CharacterId c015 -ValidateOnly
+          & ./native-desktop/Open-ArchiveCharacter.ps1 -CharacterId c010_03 -ValidateOnly
           if ($LASTEXITCODE -ne 0) { throw 'Archive resource bridge validation failed' }
       - name: Apply small GPL bridge extension to original SpinePet app
         shell: pwsh
@@ -80,6 +81,14 @@ jobs:
           $atlas = @(Get-ChildItem -Path ./native-integration-test/res -Recurse -Filter 'c015_00.atlas')[0].FullName
           dotnet run --project ./native-upstream/SpinePet/tools/skeleton-inspector/SkeletonInspector.csproj -c Release -- $skeleton $atlas
           if ($LASTEXITCODE -ne 0) { throw 'Upstream Spine 4.1 parser could not open the imported model' }
+          # Second actual 4.1 costume ID: previous code incorrectly accepted
+          # only cNNN and rejected cNNN_XX variants altogether.
+          & ./native-integration-test/Open-ArchiveCharacter.ps1 -CharacterId c010_03 -DownloadOnly
+          if ($LASTEXITCODE -ne 0) { throw 'Costume Spine 4.1 model download failed' }
+          $skinSkeleton = @(Get-ChildItem -Path ./native-integration-test/res -Recurse -Filter 'c010_03_00.skel')[0].FullName
+          $skinAtlas = @(Get-ChildItem -Path ./native-integration-test/res -Recurse -Filter 'c010_03_00.atlas')[0].FullName
+          dotnet run --project ./native-upstream/SpinePet/tools/skeleton-inspector/SkeletonInspector.csproj -c Release -- $skinSkeleton $skinAtlas
+          if ($LASTEXITCODE -ne 0) { throw 'Costume Spine 4.1 parser failed' }
           Remove-Item ./native-integration-test -Recurse -Force
       - name: Assemble minimal core, optional bridge and corresponding GPL source
         shell: pwsh
