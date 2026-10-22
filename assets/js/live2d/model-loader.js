@@ -53,12 +53,17 @@ async function load(name,id,modelUrl){
    if(generation!==currentGeneration)return;
    try{
     message('正在从 '+new URL(candidate).hostname+' 加载 '+name+'…');
-    next=PIXI.live2d.Live2DModel.fromSync(candidate,{motionPreload:'NONE'});
-    if(!next||!next.once)throw Error('Live2D 模型加载器未初始化');
     await new Promise((resolve,reject)=>{
-     const timer=setTimeout(()=>reject(Error('模型加载超时（25秒）')),25000);
-     next.once('load',()=>{clearTimeout(timer);resolve()});
-     next.once('error',e=>{clearTimeout(timer);reject(e instanceof Error?e:Error(String(e)))});
+     const fail=error=>{clearTimeout(timer);reject(error instanceof Error?error:Error(String(error)))};
+     const timer=setTimeout(()=>fail(Error('模型加载超时（25秒）')),25000);
+     try{
+      // fromSync reports setup failures through onError, not an "error" event.
+      // Consume the actual rejection so invalid MOC/texture files fail promptly.
+      next=PIXI.live2d.Live2DModel.fromSync(candidate,{
+       motionPreload:'NONE',onLoad:()=>{clearTimeout(timer);resolve()},onError:fail
+      });
+      if(!next||!next.once)fail(Error('Live2D 模型加载器未初始化'));
+     }catch(error){fail(error)}
     });
     break;
    }catch(error){

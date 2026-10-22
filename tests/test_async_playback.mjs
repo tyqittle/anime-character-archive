@@ -218,3 +218,27 @@ test('model deadline clears a stalled stage and discards a late cache read',asyn
  read.resolve({headerChecked:true});await request;
  assert.equal(played,0);assert.equal(cleared,2);assert.equal(ctx.timers.size,0);
 });
+
+test('Cubism setup errors use onError and immediately retry the same model provider',async()=>{
+ const calls=[],destroyed=[],events=[];
+ const ctx=context({desktopMode:false,currentGeneration:0,currentId:'',readyId:'',loadStartedAt:0,
+  zoom:1,offsetX:0,offsetY:0,model:null,performance:{now:()=>0},warn:{hidden:false},queueMicrotask,
+  document:{hidden:false},message(){},fit(){},verifyName:()=>true,modelUrlFor:()=> 'raw',
+  graphicsReport:()=>({}),notify:(kind,data)=>events.push({kind,data}),
+  app:{screen:{width:800,height:600},stage:{addChild(){}},ticker:{stop(){},start(){}}},
+  ArchiveAssets:{variants:()=>['https://raw.example/model','https://cdn.example/model']},
+  ArchiveVoice:{create:()=>({stop(){},setVolume(){}})},
+  PIXI:{live2d:{MotionPriority:{},Live2DModel:{fromSync(url,options){
+   calls.push(url);
+   const result={once(){},on(){},destroy(){destroyed.push(url)},internalModel:{motionManager:{definitions:{}}}};
+   queueMicrotask(()=>calls.length===1?options.onError(Error('unsupported MOC version')):options.onLoad());
+   return result;
+  }}}}
+ });
+ run(ctx,'assets/js/live2d/model-loader.js');
+ await ctx.load('demo','al-demo','raw');
+ assert.equal(calls.length,2);
+ assert.deepEqual(destroyed,['https://raw.example/model']);
+ assert.ok(events.some(e=>e.kind==='playing'));
+ assert.equal(ctx.timers.size,0);
+});
