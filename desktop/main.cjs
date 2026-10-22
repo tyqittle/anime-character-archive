@@ -64,9 +64,10 @@ function resetSilhouette(){
  silhouetteActive=false;silhouetteStats=null;
  if(win&&!win.isDestroyed()){
   win.setOpacity(0);
-  // White opaque windows must NEVER cover the screen before the character
-  // silhouette can be measured from the finished Chromium framebuffer.
-  win.setShape?.([{x:0,y:0,width:1,height:1}]);
+  // Leave the drawing surface unrestricted while invisible, so Chromium can
+  // sample the full scene even if the OS clips shaped windows.
+  // A white opaque window must NEVER be revealed before native clipping.
+  win.setShape?.([]);
   nativeIgnoring=null;setNativeIgnore(true);
  }
 }
