@@ -28,7 +28,14 @@ function applySharpSpineCamera(activePlayer){
  camera.position.y+=viewOffsetY*pixelRatio*camera.zoom;
 }
 function sendAzurLane(kind,extra={}){if(azurlaneFrame?.contentWindow&&azurlaneReady)azurlaneFrame.contentWindow.postMessage({channel:L2D_CHANNEL,kind,...extra},location.origin)}
-function resetViewerTransform(){viewZoom=1;viewOffsetX=0;viewOffsetY=0;if(azurlaneFrame)sendAzurLane('reset');syncViewTransform()}
+function resetViewerTransform(){
+ const desktop=new URLSearchParams(location.search).has('desktop');
+ viewZoom=desktop?Math.max(.5,Math.min(.7,650/Math.max(650,$('player').clientHeight))):1;
+ viewOffsetX=desktop?$('player').clientWidth*.24:0;
+ viewOffsetY=desktop?$('player').clientHeight*.07:0;
+ if(azurlaneFrame)sendAzurLane('reset');
+ syncViewTransform();
+}
 function adjustViewerZoom(factor){if(!player?.canvas&&!azurlaneFrame)return;viewZoom=clampViewZoom(viewZoom*factor);if(azurlaneFrame)sendAzurLane('zoom',{zoom:viewZoom});syncViewTransform()}
 function connectCanvasGestures(activePlayer){
  const canvas=activePlayer.canvas;if(!canvas)return;
