@@ -46,7 +46,7 @@ jobs:
       - name: Package original licensing, full corresponding source and website bridge
         shell: pwsh
         run: |
-          Copy-Item -Path ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/README.md -Destination ./native-dist
+          Copy-Item -Path ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/README.md,./native-desktop/启动原生桌面立绘.cmd -Destination ./native-dist
           New-Item -Path ./native-dist/res -ItemType Directory -Force | Out-Null
           Copy-Item ./native-upstream/LICENSE ./native-dist/UPSTREAM-LICENSE-GPL-3.0.txt
           Copy-Item ./native-upstream/NOTICE ./native-dist/UPSTREAM-NOTICE.txt
