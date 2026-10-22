@@ -12,6 +12,24 @@ try{
   page.on('pageerror',e=>errors.push(e.message));
   await page.goto('http://127.0.0.1:8765/spine.html',{waitUntil:'domcontentloaded',timeout:30000});
   await page.waitForFunction(()=>typeof allCharacters!=='undefined'&&allCharacters.some(x=>x.id==='bd2-char000201'),null,{timeout:20000});
+  // Engine-driven merge regression: no game should disappear because its
+  // entries arrived in a different manifest or use Cubism instead of Spine.
+  const inventory=await page.evaluate(()=>{
+   const byGame={},byEngine={};
+   for(const c of allCharacters){
+    byGame[c.gameId||'nikke']=(byGame[c.gameId||'nikke']||0)+1;
+    const key=(c.gameId||'nikke')+'/'+(c.engine==='cubism'?'cubism':'spine');
+    byEngine[key]=(byEngine[key]||0)+1;
+   }
+   return {byGame,byEngine};
+  });
+  const minimums={nikke:514,bluearchive:179,konosuba:187,arknights:359,
+   girlsfrontline:297,browndust2:209,azurlane:242};
+  for(const [game,count] of Object.entries(minimums))
+   if((inventory.byGame[game]||0)<count)throw Error('Incomplete game catalog: '+game+' '+JSON.stringify(inventory));
+  if((inventory.byEngine['konosuba/cubism']||0)<61||
+     (inventory.byEngine['konosuba/spine']||0)<126)
+   throw Error('Both animations engines must be indexed for Konosuba: '+JSON.stringify(inventory));
   // The desktop layout is a fixed one-screen workspace, never a page scroller.
   // The card grid remains independently scrollable even with hundreds of skins.
   const layout=await page.evaluate(()=>{
