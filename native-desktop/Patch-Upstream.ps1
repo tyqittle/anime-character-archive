@@ -49,9 +49,17 @@ if (-not ($text.Contains('AcceptArchiveStartupArgs(e.Args);') -and
           $text.Contains('StartArchiveUpdateLoop'))) {
     throw 'Native website protocol boot hooks could not be applied'
 }
+# Register click-to-voice once per native app process. This is separate from
+# website audio and persists for imported BD2 characters after a restart.
+$voiceHook = '        AcceptArchiveStartupArgs(e.Args);'
+if ([regex]::Matches($text,[regex]::Escape($voiceHook)).Count -ne 1) {
+    throw 'Native Brown Dust 2 voice startup hook missing or duplicated'
+}
+$text = $text.Replace($voiceHook,$voiceHook + "`r`n" + '        InitializeBrownDust2Voice();')
 [System.IO.File]::WriteAllText($source, $text, [System.Text.UTF8Encoding]::new($false))
 Copy-Item -LiteralPath $addon -Destination (Join-Path $projectDir 'NativeArchiveBridge.cs') -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeBrownDust2Bridge.cs') -Destination (Join-Path $projectDir 'NativeBrownDust2Bridge.cs') -Force
+Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeBrownDust2Voice.cs') -Destination (Join-Path $projectDir 'NativeBrownDust2Voice.cs') -Force
 Write-Host 'Applied audited archive bridge to upstream SpinePet application; renderer unchanged.'
 
 # Add the tested Velopack updater library to the pinned upstream app.
