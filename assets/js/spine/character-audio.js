@@ -7,7 +7,7 @@ let voiceLanguage='JP',voiceEnabled=false,voiceVolume=.8,voiceClip=null,voiceInd
 function silenceCharacterVoice(){if(voiceClip){voiceClip.pause();voiceClip.removeAttribute('src');voiceClip=null}}
 function updateVoiceUI(){
  const selected=typeof chosen==='function'?chosen():null;
- const supported=!!(selected&&characterVoiceMap[selected.id]);
+ const supported=!!(selected&&(characterVoiceMap[selected.id]||Array.isArray(selected.audioClips)&&selected.audioClips.length));
  const ctl=document.getElementById('characterVoiceControls');if(!ctl)return;
  ctl.hidden=false;
  const hint=document.getElementById('voiceAvailability');
@@ -19,13 +19,15 @@ function updateVoiceUI(){
 }
 function playCharacterVoice(character){
  if(!voiceEnabled||!character)return;
- const entry=characterVoiceMap[character.id];if(!entry)return;
+ const entry=characterVoiceMap[character.id];
+ const external=Array.isArray(character.audioClips)?character.audioClips.filter(clip=>typeof clip==='string'&&/^https:\/\//.test(clip)):[];
+ if(!entry&&!external.length)return;
  silenceCharacterVoice();
  const audio=new Audio();voiceClip=audio;
  audio.volume=voiceVolume;
  // The upstream viewer cycles three exact voice clips for each costume.
  const index=voiceIndex++%3+1;
- audio.src=characterVoiceRoot+entry.code+'/'+voiceLanguage+'/'+entry.voice+'_'+index+'.webm';
+ audio.src=entry?characterVoiceRoot+entry.code+'/'+voiceLanguage+'/'+entry.voice+'_'+index+'.webm':external[(voiceIndex-1)%external.length];
  audio.play().catch(e=>{if(voiceClip===audio){silenceCharacterVoice();const hint=document.getElementById('voiceAvailability');if(hint)hint.textContent='音频加载失败：源站资源可能不可访问';console.warn('角色语音无法播放',e)}});
 }
 window.addEventListener('DOMContentLoaded',()=>{
