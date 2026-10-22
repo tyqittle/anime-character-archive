@@ -35,7 +35,7 @@ async function load(name,id,modelUrl){
  if(!verifyName(name)||!/^(?:al|gf|ks)-[a-z0-9_-]+$/.test(id)||(id.startsWith('al-')&&id!=='al-'+name.toLowerCase())){notify('error',{error:'无效的 Live2D 模型编号'});return}
  const generation=++currentGeneration;
  currentId=id;readyId='';loadStartedAt=performance.now();
- zoom=1;offsetX=0;offsetY=0;
+ zoom=desktopMode?.58:1;offsetX=desktopMode?(app?.screen?.width||window.innerWidth)*.24:0;offsetY=desktopMode?(app?.screen?.height||window.innerHeight)*.07:0;
  if(model){try{app.stage.removeChild(model);model.destroy()}catch(e){}model=null}
  if(!app){notify('error',{error:initError||'Live2D 渲染库尚未加载'});return}
  message('正在加载 '+name+' 的 Cubism 模型与动作…');
