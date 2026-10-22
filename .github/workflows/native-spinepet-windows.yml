@@ -227,8 +227,13 @@ jobs:
             ('"/MODELDIR=' + $models + '"'),
             ('"/LOG=' + $innoLog + '"')) -join ' '
           Write-Host "Testing GUI wrapper with unattended choices and two separate non-default Unicode paths."
-          $proc = Start-Process -FilePath $wizard[0].FullName -ArgumentList $arguments -Wait -PassThru
-          $code = $proc.ExitCode
+          $proc = Start-Process -FilePath $wizard[0].FullName -ArgumentList $arguments -PassThru
+          # Do not let a hidden child dialog or a GUI descendant hang CI forever.
+          $completed = $proc.WaitForExit(120000)
+          if (-not $completed) {
+            Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
+          }
+          $code = if ($completed) { $proc.ExitCode } else { 1460 }
           if (Test-Path $innoLog) {
             Get-Content $innoLog -Tail 65 | ForEach-Object { Write-Host $_ }
           }
@@ -236,7 +241,7 @@ jobs:
           if (Test-Path $innerLog) {
             Get-Content $innerLog -Tail 40 | ForEach-Object { Write-Host $_ }
           }
-          if ($code -ne 0) { throw "FULL INSTALL WIZARD FAILED: exit $code" }
+          if ($code -ne 0) { throw "FULL INSTALL WIZARD FAILED: exit $code (1460 means timeout)" }
           if (-not (Test-Path (Join-Path $program 'SpinePet.exe'))) {
             throw "Selected program folder missing EXE: $program"
           }
