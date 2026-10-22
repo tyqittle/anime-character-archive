@@ -81,3 +81,13 @@ test('transparent region passes through; only matching page can re-enable pointe
  handler({sender:w.webContents},false);
  assert.equal(w.ignored,true);
 });
+
+test('desktop mode resets document root before stylesheets and keeps transparent WebGL buffers',()=>{
+ const html=fs.readFileSync(path.join(__dirname,'../spine.html'),'utf8');
+ const runtime=fs.readFileSync(path.join(__dirname,'../assets/js/spine/spine-runtime.js'),'utf8');
+ assert.ok(html.includes("document.documentElement.classList.add('desktop-mode')"));
+ assert.ok(html.includes("document.documentElement.style.setProperty('background','transparent','important')"));
+ assert.ok(runtime.includes("alpha:transparentDesktop,backgroundColor:transparentDesktop?'#00000000'"));
+ assert.ok(runtime.includes("preserveDrawingBuffer:transparentDesktop"));
+ assert.ok(runtime.includes("fullScreenBackgroundColor:transparentDesktop?'#00000000'"));
+});
