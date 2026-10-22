@@ -443,3 +443,17 @@ assert.ok(previewDiag.includes('def failure_category')&&
 assert.ok(read('scripts/merge_newgame_previews.py').includes("'failedCaptures': failed_records"));
 assert.ok(read('assets/js/spine/catalog.js').includes('c.previewFailureReason'));
 
+
+
+const legacyNativeImporter=read('native-desktop/Open-ArchiveCharacter.ps1');
+const nativeArchiveBridge=read('native-desktop/NativeArchiveBridge.cs');
+const nativeBuildWorkflow=read('.github/workflows/native-spinepet-windows.yml');
+assert.ok(legacyNativeImporter.includes('function Assert-NativeSpine41'), 'Legacy native importer must inspect actual .skel version');
+assert.ok(!legacyNativeImporter.includes('$entry.spineVersion') && !legacyNativeImporter.includes('$entry.versionUnverified'),
+ 'Legacy native importer must not gate by stale catalog version flags');
+assert.ok(nativeArchiveBridge.includes('SpineSkeletonCompatibility.EnsureSupported(skeletonTemp)'),
+ 'Native bridge must validate actual model with upstream Spine parser');
+assert.ok(nativeArchiveBridge.includes('检测到已注册的旧版或其他位置的桌面立绘启动程序'),
+ 'New native app must ask before replacing an old Windows protocol handler');
+assert.ok(nativeBuildWorkflow.includes('-CharacterId c113_01 -ValidateOnly'),
+ 'Windows CI must validate historically misclassified c113_01 against real skeleton bytes');
