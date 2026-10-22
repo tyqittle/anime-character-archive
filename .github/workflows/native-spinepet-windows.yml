@@ -49,6 +49,15 @@ jobs:
               -not $patched.Contains('AcceptArchiveStartupArgs(e.Args)')) {
             throw 'Native one-click import integration did not apply'
           }
+      - name: Integrate My_SpinePet native character-wheel zoom
+        shell: pwsh
+        run: |
+          & ./native-desktop/Patch-WheelZoom.ps1 -UpstreamRoot ./native-upstream
+          $engine = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeCharacterRenderEngine.cs -Raw
+          $input = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeInputWindow.cs -Raw
+          if (-not $engine.Contains('private void OnNativeMouseWheel') -or -not $input.Contains('MouseWheelInput')) {
+            throw 'Native mouse wheel integration missing'
+          }
       - name: Build actual upstream native Direct3D 11 + DirectComposition renderer
         shell: pwsh
         run: |
@@ -109,7 +118,7 @@ jobs:
           Copy-Item ./native-upstream/LICENSE ./safe-release/source/LICENSE-GPL-3.0.txt
           git -C native-upstream archive --format=zip --output="$env:GITHUB_WORKSPACE/safe-release/source/My_SpinePet-corresponding-source.zip" HEAD
           if ($LASTEXITCODE -ne 0) { throw 'Cannot provide GPL corresponding source' }
-          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/Patch-Upstream.ps1,./native-desktop/NativeArchiveBridge.cs -Destination ./safe-release/source
+          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/Patch-Upstream.ps1,./native-desktop/Patch-WheelZoom.ps1,./native-desktop/NativeArchiveBridge.cs -Destination ./safe-release/source
           @'
           The distributed SpinePet.exe builds pinned upstream source plus NativeArchiveBridge.cs.
           Rebuild by checking out pinned upstream commit, running Patch-Upstream.ps1, then dotnet publish.
