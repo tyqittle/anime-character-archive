@@ -499,7 +499,8 @@ assert.ok(wizardInstaller.includes('CreateInputDirPage') &&
  'EXE installer must show both selectable directories');
 assert.ok(wizardInstaller.includes("RegWriteStringValue(HKCU") &&
  wizardInstaller.includes("'ResourceDirectory', ModelFolder") &&
- wizardInstaller.includes("--silent --installto"),
+ wizardInstaller.includes("Arguments := '--silent") &&
+ /--installto\s+"'\s*\+\s*ProgramFolder/.test(wizardInstaller),
  'EXE must use Velopack to install at requested path and persist model path');
 assert.ok(wizardInstaller.includes('IsNestedFolder(P, M)') &&
  wizardInstaller.includes('IsNestedFolder(M, P)'),
