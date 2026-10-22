@@ -17,7 +17,7 @@ class PreviewPolicyTest(unittest.TestCase):
             'preview':'./assets/animation-previews/azurlane-al-demo.webp',
             'previewSource':'matching-live2d-animation-frame'}
         self.file = self.path / p.filename(self.character)
-        Image.new('RGB',(360,420),(30,100,120)).save(self.file,'WEBP')
+        Image.effect_noise((360,420),20).convert('RGB').save(self.file,'WEBP')
     def test_correct_model_path_and_image(self):
         self.assertIsNotNone(p.verified_file(self.character,self.path))
         previous = p.ROOT
@@ -36,7 +36,7 @@ class PreviewPolicyTest(unittest.TestCase):
     def test_legacy_spine_sha_and_format(self):
         spine = {'gameId':'nikke','id':'c010','previewSource':'matching-spine-animation-frame'}
         legacy = self.path / p.filename(spine)
-        Image.new('RGB',(480,360),(30,60,80)).save(legacy,'WEBP')
+        Image.effect_noise((480,360),20).convert('RGB').save(legacy,'WEBP')
         spine['previewSha256'] = hashlib.sha256(legacy.read_bytes()).hexdigest()
         self.assertIsNotNone(p.verified_file(spine,self.path))
         spine['previewSha256'] = '0'*64
