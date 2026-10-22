@@ -119,10 +119,27 @@ begin
   ModelFolder := M;
 end;
 
+function NativeInstallerReportedSuccess(const LogFile: String): Boolean;
+var
+  Lines: TArrayOfString;
+  I: Integer;
+begin
+  Result := False;
+  if not FileExists(LogFile) then Exit;
+  if not LoadStringsFromFile(LogFile, Lines) then Exit;
+  for I := 0 to GetArrayLength(Lines) - 1 do
+    if Pos('Installation completed successfully!', Lines[I]) > 0 then
+    begin
+      Result := True;
+      Exit;
+    end;
+end;
+
 procedure CurStepChanged(CurStep: TSetupStep);
 var
-  Payload, Stub, LogPath, Arguments: String;
-  Code: Integer;
+  Payload, Stub, LogPath, Arguments, UpdateExe, VersionFile: String;
+  Code, Attempt: Integer;
+  Ready: Boolean;
 begin
   if CurStep <> ssPostInstall then Exit;
   try
@@ -147,19 +164,40 @@ begin
     // Preserve the actual native install log in the selected data folder.
     // Exit code 1 alone is never enough to diagnose a failed install.
     LogPath := AddBackslash(ModelFolder) + 'SpinePet-Install.log';
+    // Do not mistake an older successful run for the current installation.
+    if FileExists(LogPath) then
+      DeleteFile(LogPath);
     Arguments := '--silent --verbose --log "' + LogPath +
       '" --installto "' + ProgramFolder + '"';
     if not Exec(Payload, Arguments, '',
       SW_HIDE, ewWaitUntilTerminated, Code) then
       RaiseException('原生安装程序无法启动，Windows 错误：' + IntToStr(Code) +
         '；内部日志：' + LogPath);
-    if Code <> 0 then
-      RaiseException('原生安装程序退出代码：' + IntToStr(Code) +
-        '；详细安装日志：' + LogPath);
 
+    // Velopack Setup.exe is a bootstrapper. Its first process may exit
+    // BEFORE the actual installer writes SpinePet.exe or sq.version.
+    // GitHub's real Windows test proved that the files arrived seconds later.
+    // Never conclude the install succeeded/failed from just its first PID.
     Stub := AddBackslash(ProgramFolder) + 'SpinePet.exe';
-    if not FileExists(Stub) then
-      RaiseException('未找到新安装的 SpinePet.exe：' + Stub);
+    UpdateExe := AddBackslash(ProgramFolder) + 'Update.exe';
+    VersionFile := AddBackslash(ProgramFolder) + 'current\sq.version';
+    Ready := False;
+    for Attempt := 1 to 150 do
+    begin
+      if FileExists(Stub) and FileExists(UpdateExe) and
+         FileExists(VersionFile) and
+         NativeInstallerReportedSuccess(LogPath) then
+      begin
+        Ready := True;
+        Break;
+      end;
+      Sleep(1000);
+    end;
+    if not Ready then
+      RaiseException('安装程序未完成或文件不完整。请检查日志：' + LogPath +
+        '（启动器返回码：' + IntToStr(Code) + '）');
+    // Trust the verified final files AND native installer completion log,
+    // not a short-lived launcher that can return a non-zero code.
 
     // The app reads this exact HKCU key before initializing its static
     // ResourceDirectory. DO NOT alter/delete this key during auto-update.
@@ -173,7 +211,10 @@ begin
       MsgBox('程序安装成功，但无法自动启动。请在以下目录手动打开 SpinePet.exe：'
         + #13#10 + ProgramFolder, mbInformation, MB_OK);
   except
-    MsgBox('安装未完整完成：' + GetExceptionMessage, mbError, MB_OK);
+    // Scripted MsgBox can stall /VERYSILENT Windows CI indefinitely.
+    // The real errors remain in Inno /LOG and Velopack's log.
+    if not WizardSilent() then
+      MsgBox('安装未完整完成：' + GetExceptionMessage, mbError, MB_OK);
     RaiseException('安装失败：' + GetExceptionMessage);
   end;
 end;
