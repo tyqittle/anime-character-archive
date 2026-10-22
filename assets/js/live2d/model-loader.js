@@ -58,6 +58,9 @@ async function load(name,id,modelUrl){
   }
   model.on('hit',areas=>{if(Array.isArray(areas)&&areas.length){const a=areas[0];notify('interaction',{area:a});if(actions.includes(a))motion(a)}});
   const p=(evt)=>{if(!model)return;const pt=evt?.data?.global;if(!pt)return;model.dragging=true;model.dragX=pt.x-model.x;model.dragY=pt.y-model.y};
+  // Play audio within the SAME pointer gesture and iframe. postMessage to the
+  // parent is asynchronous and loses transient user activation in some browsers.
+  model.on('pointertap',()=>{if(typeof playFrameVoice==='function')playFrameVoice()});
   model.on('pointerdown',p);
   model.on('pointermove',evt=>{if(model?.dragging&&evt?.data?.global){model.x=evt.data.global.x-model.dragX;model.y=evt.data.global.y-model.dragY}});
   for(const ev of ['pointerup','pointerupoutside'])model.on(ev,()=>{if(model)model.dragging=false});
