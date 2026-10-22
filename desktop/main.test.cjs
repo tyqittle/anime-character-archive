@@ -41,7 +41,7 @@ function harness(argv=['electron','.']){
  return {windows,callbacks,menus,ipcHandlers};
 }
 test('desktop app starts in a transparent sandboxed window',async()=>{
- const h=harness();await Promise.resolve();await Promise.resolve();
+ const h=harness();await new Promise(resolve=>setImmediate(resolve));
  const w=h.windows[0];
  assert.ok(w);
  assert.equal(w.options.transparent,true);
@@ -50,20 +50,20 @@ test('desktop app starts in a transparent sandboxed window',async()=>{
  assert.ok(w.url.includes('spine.html?desktop=1&id=c012'));
 });
 test('allowed scheme changes character without creating another window',async()=>{
- const h=harness();await Promise.resolve();await Promise.resolve();
+ const h=harness();await new Promise(resolve=>setImmediate(resolve));
  h.callbacks.get('second-instance')(null,['app.exe','animecharacter://open?id=c010']);
  assert.match(h.windows[0].url,/id=c010$/);
  assert.equal(h.windows.length,1);
 });
 test('external navigation is rejected',async()=>{
- const h=harness();await Promise.resolve();await Promise.resolve();
+ const h=harness();await new Promise(resolve=>setImmediate(resolve));
  const w=h.windows[0];let blocked=false;
  w.events['wc:will-navigate']({preventDefault(){blocked=true}},'https://tyqittle.github.io/anime-character-archive.evil/spine.html');
  assert.equal(blocked,true);
 });
 
 test('stage extends past monitor edges and keeps transparency',async()=>{
- const h=harness();await Promise.resolve();await Promise.resolve();
+ const h=harness();await new Promise(resolve=>setImmediate(resolve));
  const w=h.windows[0];
  assert.ok(w.options.width>1920&&w.options.height>1080);
  assert.ok(w.options.x<0&&w.options.y<0);
@@ -71,7 +71,7 @@ test('stage extends past monitor edges and keeps transparency',async()=>{
  assert.equal(w.ignored,true);
 });
 test('transparent region passes through; only matching page can re-enable pointer hits',async()=>{
- const h=harness();await Promise.resolve();await Promise.resolve();
+ const h=harness();await new Promise(resolve=>setImmediate(resolve));
  const w=h.windows[0],handler=h.ipcHandlers.get('desktop:set-interactive');
  assert.equal(typeof handler,'function');
  handler({sender:{}},true);
