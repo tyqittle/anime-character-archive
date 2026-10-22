@@ -33,7 +33,11 @@ try{
     const data=core._model||core;
     return {bounds:model.getLocalBounds(),x:model.x,y:model.y,scale:model.scale.x,
      canvas:[app.screen.width,app.screen.height],drawableCount:data.drawables?.count,
-     visibleDrawables:Array.from(data.drawables?.opacities||[]).filter(x=>x>.01).length};
+     visibleDrawables:Array.from(data.drawables?.opacities||[]).filter(x=>x>.01).length,
+     textures:model.textures.map(t=>({width:t.baseTexture.realWidth,height:t.baseTexture.realHeight,valid:t.baseTexture.valid})),
+     textureLimit:app.renderer.gl.getParameter(app.renderer.gl.MAX_TEXTURE_SIZE),
+     firstVisible:Array.from(data.drawables?.opacities||[]).map((a,i)=>a>.01?i:-1).filter(i=>i>=0).slice(0,5).map(i=>model.internalModel.getDrawableBounds(i)),
+     matrix:model.internalModel.localTransform};
    });
    for(const action of ['idle','login','home','main_1','touch_body']){
     if(!result.source.motions.includes(action))continue;

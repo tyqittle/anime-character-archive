@@ -1,0 +1,39 @@
+name: Complete static source coverage within archive budget
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/optimize_static_storage.py'
+      - '.github/workflows/optimize-static-content.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: art-import-main
+  cancel-in-progress: false
+jobs:
+  optimize-and-import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --quiet Pillow
+      - name: Preserve every pixel while reducing full-art storage
+        run: python scripts/optimize_static_storage.py
+      - name: Fill remaining commit-pinned full-art source gaps
+        run: python scripts/expand_static_archive.py
+      - uses: ./.github/actions/finalize-static-catalog
+      - name: Publish verified full art and thumbnails
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data/characters.json data/static-coverage.json data/static-storage-audit.json assets/portraits/ assets/thumbs/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Losslessly optimize original art and complete remaining source coverage"
+          git pull --rebase origin main
+          git push origin HEAD:main
