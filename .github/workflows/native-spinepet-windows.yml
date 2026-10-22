@@ -167,6 +167,7 @@ jobs:
           git -C native-upstream archive --format=zip --output="$env:GITHUB_WORKSPACE/safe-release/source/My_SpinePet-corresponding-source.zip" HEAD
           if ($LASTEXITCODE -ne 0) { throw 'Cannot provide GPL corresponding source' }
           Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/Patch-Upstream.ps1,./native-desktop/Patch-WheelZoom.ps1,./native-desktop/Patch-RenderEnvelope.ps1,./native-desktop/NativeArchiveBridge.cs,./native-desktop/NativeBrownDust2Bridge.cs,./native-desktop/NativeAutoUpdate.cs -Destination ./safe-release/source
+          Copy-Item ./native-desktop/ChooseFoldersInstaller.iss -Destination ./safe-release/source
           @'
           The distributed SpinePet.exe builds pinned upstream source plus NativeArchiveBridge.cs.
           Rebuild by checking out pinned upstream commit, running Patch-Upstream.ps1, then dotnet publish.
@@ -190,6 +191,26 @@ jobs:
           if (@(Get-ChildItem ./safe-release/velopack/*.msi).Count -lt 1) { throw 'Missing directory-selectable MSI installer' }
           if (@(Get-ChildItem ./safe-release/velopack/*-full.nupkg).Count -lt 1) { throw 'Missing full update package' }
           if (-not (Test-Path ./safe-release/velopack/releases.win.json)) { throw 'Missing update feed' }
+      - name: Build graphical EXE installer with two folder selectors
+        shell: pwsh
+        run: |
+          # Inno Setup is a real compiler; it builds a self-contained graphical
+          # EXE that wraps the exact Velopack Setup from the same audited run.
+          $iscc = 'C:\Program Files (x86)\Inno Setup 6\ISCC.exe'
+          if (-not (Test-Path $iscc)) {
+            choco install innosetup --yes --no-progress
+            if ($LASTEXITCODE -ne 0) { throw 'Cannot install Inno Setup compiler' }
+          }
+          if (-not (Test-Path $iscc)) { throw 'Inno Setup ISCC.exe not found' }
+          $payload = @(Get-ChildItem ./safe-release/velopack/*-Setup.exe)
+          if ($payload.Count -ne 1) { throw 'Exactly one canonical Velopack Setup.exe required' }
+          $version = "0.1.${{ github.run_number }}"
+          $destination = (Resolve-Path ./safe-release/velopack).Path
+          & $iscc "/DVelopackSetup=$($payload[0].FullName)" "/DAppVersion=$version" "/O$destination" ./native-desktop/ChooseFoldersInstaller.iss
+          if ($LASTEXITCODE -ne 0) { throw 'Two-directory EXE wizard did not compile' }
+          if (-not (Test-Path ./safe-release/velopack/AnimeCharacterSpinePet-ChooseFolders-Setup.exe)) {
+            throw 'Compiled folder-selectable EXE was not created'
+          }
       - name: Generate SHA-256 manifest and run security checks where supported
         shell: pwsh
         run: |
@@ -344,12 +365,17 @@ jobs:
           # independently scanned MSI is actually downloadable from Releases.
           $tag = "desktop-v$version"
           $msi = @(Get-ChildItem ./release-files/*.msi)
-          if ($msi.Count -ne 1) { throw 'Expected one audited directory-selectable MSI release file' }
+          $wizard = @(Get-ChildItem ./release-files/AnimeCharacterSpinePet-ChooseFolders-Setup.exe)
+          if ($msi.Count -ne 1 -or $wizard.Count -ne 1) {
+            throw 'Expected one MSI and one audited dual-folder Windows EXE'
+          }
           $published = gh release view $tag --repo "${{ github.repository }}" --json assets | ConvertFrom-Json
           if ($LASTEXITCODE -ne 0) { throw 'Cannot verify published release assets' }
-          if (-not @($published.assets | Where-Object { $_.name -eq $msi[0].Name }).Count) {
-            gh release upload $tag $msi[0].FullName --repo "${{ github.repository }}"
-            if ($LASTEXITCODE -ne 0) { throw 'Unable to upload audited MSI installer' }
+          foreach ($artifact in @($msi[0], $wizard[0])) {
+            if (-not @($published.assets | Where-Object { $_.name -eq $artifact.Name }).Count) {
+              gh release upload $tag $artifact.FullName --repo "${{ github.repository }}"
+              if ($LASTEXITCODE -ne 0) { throw "Unable to upload audited installer: $($artifact.Name)" }
+            }
           }
           gh release edit "desktop-v$version" --repo "${{ github.repository }}" --latest
           if ($LASTEXITCODE -ne 0) { throw 'Unable to mark latest audited release for desktop auto-update' }
