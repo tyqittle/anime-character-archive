@@ -242,8 +242,8 @@ jobs:
             Get-Content $innerLog -Tail 40 | ForEach-Object { Write-Host $_ }
           }
           if ($code -ne 0) { throw "FULL INSTALL WIZARD FAILED: exit $code (1460 means timeout)" }
-          if (-not (Test-Path (Join-Path $program 'SpinePet.exe'))) {
-            throw "Selected program folder missing EXE: $program"
+          if (-not (Test-Path (Join-Path $program 'current/SpinePet.exe'))) {
+            throw "Selected program folder missing actual current/SpinePet.exe: $program"
           }
           if (-not (Test-Path (Join-Path $program 'current/sq.version'))) {
             throw 'Selected program folder missing Velopack update structure'
