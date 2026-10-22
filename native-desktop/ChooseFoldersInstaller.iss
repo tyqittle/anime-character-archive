@@ -68,6 +68,18 @@ begin
     (Copy(Lowercase(Child), 1, Length(P)) = P);
 end;
 
+// The outer setup EXE must be OUTSIDE the entire application directory.
+// Velopack replaces/renames that directory during installation and may kill
+// any process executing from it. {srcexe} is the ORIGINAL outer installer,
+// not the extracted temporary Velopack bootstrapper.
+function SetupExecutableInsideProgramFolder(const ChosenProgramFolder: String): Boolean;
+var
+  SetupLocation: String;
+begin
+  SetupLocation := ExtractFileDir(ExpandConstant('{srcexe}'));
+  Result := IsNestedFolder(ChosenProgramFolder, SetupLocation);
+end;
+
 procedure InitializeWizard();
 begin
   FoldersPage := CreateInputDirPage(wpWelcome,
@@ -111,6 +123,18 @@ begin
   begin
     MsgBox('程序与角色素材必须位于互不包含的独立文件夹。' + #13#10 +
       '这样软件升级不会覆盖角色素材。', mbError, MB_OK);
+    Result := False;
+    Exit;
+  end;
+
+  if SetupExecutableInsideProgramFolder(P) then
+  begin
+    Log('UNSAFE_PROGRAM_PATH_SETUP_INSIDE: ' + P);
+    MsgBox('程序安装目录不能包含正在运行的安装包。' + #13#10 +
+      '请把安装包移到“下载”文件夹，然后选择独立的软件目录，' +
+      '例如 E:\\Apps\\SpinePet。' + #13#10 +
+      '不要直接安装到存放 Setup.exe 的 E:\\桌宠 文件夹。',
+      mbError, MB_OK);
     Result := False;
     Exit;
   end;
@@ -174,6 +198,15 @@ begin
        IsNestedFolder(ProgramFolder, ModelFolder) or
        IsNestedFolder(ModelFolder, ProgramFolder) then
       RaiseException('安装位置无效或程序与素材文件夹重叠，请重新选择。');
+
+    // /SILENT skips the directory-selection page, so enforce the SAME
+    // protective rule here before extraction or launching Velopack.
+    if SetupExecutableInsideProgramFolder(ProgramFolder) then
+    begin
+      Log('UNSAFE_PROGRAM_PATH_SETUP_INSIDE: ' + ProgramFolder);
+      RaiseException('程序安装目录包含当前安装包，安装时会发生自我关闭或文件占用。' +
+        '请把 Setup.exe 放到目标目录外，并选择专用的应用子文件夹。');
+    end;
 
     if not ForceDirectories(ModelFolder) then
       RaiseException('无法创建素材文件夹：' + ModelFolder);
