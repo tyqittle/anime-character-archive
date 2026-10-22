@@ -1,7 +1,24 @@
 <!doctype html>
 <html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#0a1221"><title>动态立绘 · 次元角色档案馆 | Anime Character Archive</title>
-<style>#characterVoiceControls[hidden]{display:none!important}</style><style id="desktop-transparency">
+<script>
+if(new URLSearchParams(location.search).has('desktop')){
+ document.documentElement.classList.add('desktop-mode');
+ document.documentElement.style.setProperty('background','transparent','important');
+ document.documentElement.style.setProperty('background-color','transparent','important');
+ document.documentElement.style.setProperty('background-image','none','important');
+}
+</script><style id="desktop-window-reset">
+html.desktop-mode,html.desktop-mode body,html.desktop-mode .wrap,html.desktop-mode .stage,html.desktop-mode #player,
+html.desktop-mode #player canvas,html.desktop-mode .spine-player,html.desktop-mode .spine-player-container,
+html.desktop-mode .spine-player-canvas,html.desktop-mode .spine-player-content,
+html.desktop-mode .azurlane-loading-cover,html.desktop-mode .azurlane-live2d-frame{
+background:transparent!important;background-image:none!important;background-color:transparent!important;
+box-shadow:none!important;border:0!important;border-radius:0!important;outline:0!important;
+}
+html.desktop-mode,html.desktop-mode body{margin:0!important;height:100%!important;width:100%!important;overflow:hidden!important}
+html.desktop-mode body::before,html.desktop-mode body::after{display:none!important}
+</style><style>#characterVoiceControls[hidden]{display:none!important}</style><style id="desktop-transparency">
 html:has(body.desktop-mode),body.desktop-mode,body.desktop-mode .wrap,body.desktop-mode .stage,body.desktop-mode #player,body.desktop-mode .spine-player,body.desktop-mode .spine-player-container{background:none!important;background-color:transparent!important;background-image:none!important;border:0!important;border-radius:0!important;box-shadow:none!important}
 body.desktop-mode .side,body.desktop-mode .head,body.desktop-mode .stage-toolbar,body.desktop-mode .stage-hint,body.desktop-mode #status,body.desktop-mode #loadNotice,body.desktop-mode footer,body.desktop-mode .archive-friendlinks{display:none!important}
 body.desktop-mode .wrap{position:fixed!important;inset:0!important;padding:0!important;margin:0!important;display:block!important;width:100%!important;height:100%!important;overflow:hidden!important}
