@@ -141,9 +141,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "63a36ff9f269475178c6c76749873c9081b635458304facc938add90d5d0255e",
+      "preview": "./assets/animation-previews/azurlane-al-aersasi_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-aidang_2",
@@ -519,9 +525,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c9db631ed4086470cdbbca620025530ad2499d51aaccb9840b2e4d55f4bff344",
+      "preview": "./assets/animation-previews/azurlane-al-ankeleiqi_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-anninvwang_2",
@@ -536,9 +548,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5ea965db0035b8ccf7fea837159aea247f226b5557ba6792b3cabf88b000882f",
+      "preview": "./assets/animation-previews/azurlane-al-anninvwang_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-baerdimo_5",
@@ -593,9 +611,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7e966b9e2a9f8bc1364695d46d3d9444318d6776f9656f4710f816dc07daa815",
+      "preview": "./assets/animation-previews/azurlane-al-baifeng_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-bailong_3",
@@ -751,9 +775,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b0bd87ab908a666605c74ee9e0f8ef8aa03c92c9ad41993974035ad3fabbaac7",
+      "preview": "./assets/animation-previews/azurlane-al-beilaosenlin_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-biaoqiang",
@@ -1231,9 +1261,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "086888ab0690ee93603d9a6090312306bb07d4062d620814074d47bfdb10053f",
+      "preview": "./assets/animation-previews/azurlane-al-dafeng_7.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-daofeng_4",
@@ -1510,9 +1546,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c19b3eece13c65dd7556790be5023b8d3eefca331cfc6eda35532f6d1d4da100",
+      "preview": "./assets/animation-previews/azurlane-al-feiteliedadi_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-feiteliekaer_3",
@@ -1527,9 +1569,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9858f7542436c454c4072b1a52b496c577cc59869f802cf91c1bf66374c604c2",
+      "preview": "./assets/animation-previews/azurlane-al-feiteliekaer_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-fengyun_4",
@@ -1585,9 +1633,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "aa0406b4654c758a2fd8956d0c8d6cf2b7df8653a11466366c067c5554cb87e0",
+      "preview": "./assets/animation-previews/azurlane-al-gaoxiong_7.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-geliqiya_2",
@@ -1662,9 +1716,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8bbf5cb38a3f67157d4f670f8cab5c578c8bea03d1c0ab487a2df191841a7baf",
+      "preview": "./assets/animation-previews/azurlane-al-guandao_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-guanghui_7",
@@ -2082,9 +2142,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f43e41a697776dc8406d07712c339f608a3d65eb10b35e8188ee88428d5a0a5f",
+      "preview": "./assets/animation-previews/azurlane-al-jinjiang_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-jinluhao_2",
@@ -2119,9 +2185,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4df370aeec4cd039beb60211a6fb1acab04502d2f315489f59701e1bf26a58a9",
+      "preview": "./assets/animation-previews/azurlane-al-jinshi_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-jiuyun_2",
@@ -2257,9 +2329,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "43f4699efa898abdcdf2fbb38e85ba1e1f28f1339cc7d4a9d16fc46b833e7e1d",
+      "preview": "./assets/animation-previews/azurlane-al-kebensi_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-kelaimengsuo_2",
@@ -2354,9 +2432,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ea24752cffed4d41083f8087aa0ae1b2a981f8106b7d307c78783aec31998c9a",
+      "preview": "./assets/animation-previews/azurlane-al-kewei_6.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-kubo_2",
@@ -2512,9 +2596,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c4128dcd8232256b3a583e828e3c2cfe2ebe0c4518c081a02a00fb95475bbeda",
+      "preview": "./assets/animation-previews/azurlane-al-liekexingdunii_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-lingbo",
@@ -2829,9 +2919,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "dedb59159d3473ced1ad6497b7a6d6db6a4e17b531cfe3c31ca5067526751981",
+      "preview": "./assets/animation-previews/azurlane-al-masaina_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-meikelunbao_2",
@@ -2846,9 +2942,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "2c0cdc89d6287f504d579c7b7414b0faa681bf90e323afdf3cdd40d300eb9e9a",
+      "preview": "./assets/animation-previews/azurlane-al-meikelunbao_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-meiyinci_3",
@@ -3107,9 +3209,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5b02979509df2d6fa09cd629569a7c62e6ab5fa0575f8e85a8ed31e372c4061d",
+      "preview": "./assets/animation-previews/azurlane-al-ougen_8.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-ouruola_4",
@@ -3205,9 +3313,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "110d47daa8b8068d293bc7a6144850a35352500e9d120ac03c7335c8cc582335",
+      "preview": "./assets/animation-previews/azurlane-al-qianjian_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-qianwei_2",
@@ -3303,9 +3417,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "10e4c6773ce452b0b028fe548a14e3907582ee84fbfc8f0123d8008762c98e43",
+      "preview": "./assets/animation-previews/azurlane-al-qiye_10.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-qiye_7",
@@ -3540,9 +3660,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0de9c5db86690e1e17908086625ac7c8b22ebaea63cb5ec2f58f9b58d35417d6",
+      "preview": "./assets/animation-previews/azurlane-al-shi_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-shitelasai_2",
@@ -3618,9 +3744,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e7e0ea006f99c4501ded97c727ea2bc720959c024c1538ed1d4fc83ac2040680",
+      "preview": "./assets/animation-previews/azurlane-al-siwanshi_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-suweiaitongmeng_2",
@@ -3655,9 +3787,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d1819156b7be95c7829f86292a5e577f9b6f359261638361aea4ac04650a5fd9",
+      "preview": "./assets/animation-previews/azurlane-al-suweiaitongmeng_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-taiyuan_2",
@@ -3692,9 +3830,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "68dfeb0b8bbef844d561c12651a0cf60c98a57c8df545ae75f1b090ebe6301e2",
+      "preview": "./assets/animation-previews/azurlane-al-telafaerjia_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-tiancheng_3",
@@ -4111,9 +4255,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5b8b76a5ed5477ef9962bfd296d64757e2a1137d9c6acd18e036ed1f8152ef10",
+      "preview": "./assets/animation-previews/azurlane-al-xingdengbao_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-xinnong_3",
@@ -4209,9 +4359,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "faf8d7f2826c08d3a9ea003f1dc8c23918fdad54fdcfb6f10c6abb3a050f4e3a",
+      "preview": "./assets/animation-previews/azurlane-al-xinnong_6.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-xinzexi_3",
@@ -4246,9 +4402,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9728b4390b3759a680d514073957e65733d24d9d8b708ba9d43e8db1a0f57d48",
+      "preview": "./assets/animation-previews/azurlane-al-xinzexi_5.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-xixuegui_4",
@@ -4503,9 +4665,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3f11f0bee8379e546a0ed485d3c59468dec66487348e1dc3130e3d324868a19d",
+      "preview": "./assets/animation-previews/azurlane-al-yuanchou_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-yuekechengii_3",
@@ -4520,9 +4688,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d8a1f7203bd8a67bf43cf9729e6d0ffd07dc8b880db8fb9440547ebbdde6d5df",
+      "preview": "./assets/animation-previews/azurlane-al-yuekechengii_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-yunxian_2",
@@ -4557,9 +4731,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "32619a0bc9adeb5ea30dcc8e4856835ce82f55039e0d796c6a6b90afb4501fc4",
+      "preview": "./assets/animation-previews/azurlane-al-yunxian_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-z13_2",
@@ -4574,9 +4754,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4915e629624d1e46c8033e8141487d5a3e12938f5c54cd057626699d2d715d0b",
+      "preview": "./assets/animation-previews/azurlane-al-z13_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-z23",
@@ -4691,9 +4877,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d25e076ab44f5cce68a448d76962de990f3407bab45ee5de4806373d82c9f5e9",
+      "preview": "./assets/animation-previews/azurlane-al-zengkehaijunshangjiang_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-zhala_2",
@@ -4728,9 +4920,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5deee58313c2cdb36656397a12c2f670da3b4a6d4542c2c2fb1edeef1bf76bee",
+      "preview": "./assets/animation-previews/azurlane-al-zhangwu_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-zhaohe_3",
@@ -4765,9 +4963,15 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
+      "playbackStatus": "browser-preview-captured",
       "previewFailureType": "timeout",
-      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）"
+      "previewFailureReason": "Live2D：模型加载失败：raw.githubusercontent.com：模型加载超时（25秒）；cdn.jsdelivr.net：模型加载超时（25秒）",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0d400f9e297214d50ab02c73965b74eb1ea22a5141f1dc2c93475983891d42cc",
+      "preview": "./assets/animation-previews/azurlane-al-zhenzhuhao_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured"
     }
   ],
   "additionalUpstreams": [
