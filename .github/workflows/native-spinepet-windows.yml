@@ -37,10 +37,19 @@ jobs:
         run: |
           & ./native-desktop/Open-ArchiveCharacter.ps1 -CharacterId c015 -ValidateOnly
           & ./native-desktop/Open-ArchiveCharacter.ps1 -CharacterId c010_03 -ValidateOnly
+          # Regression: the original c113_01 metadata was wrong; validate
+          # real .skel header, not stale versionUnverified/catalog flags.
+          & ./native-desktop/Open-ArchiveCharacter.ps1 -CharacterId c113_01 -ValidateOnly
           if ($LASTEXITCODE -ne 0) { throw 'Archive resource bridge validation failed' }
       - name: Apply small GPL bridge extension to original SpinePet app
         shell: pwsh
         run: |
+          $legacyImporter = Get-Content ./native-desktop/Open-ArchiveCharacter.ps1 -Raw
+          if (-not $legacyImporter.Contains('Assert-NativeSpine41') -or
+              $legacyImporter.Contains('$entry.spineVersion') -or
+              $legacyImporter.Contains('$entry.versionUnverified')) {
+            throw 'Legacy native importer still blocks characters using catalog metadata'
+          }
           & ./native-desktop/Patch-Upstream.ps1 -UpstreamRoot ./native-upstream
           # Patch-Upstream.ps1 is pure PowerShell and throws on failure;
           # LASTEXITCODE is stale after non-native scripts and must not be checked here.
