@@ -9,7 +9,10 @@ function updateVoiceUI(){
  const selected=typeof chosen==='function'?chosen():null;
  const supported=!!(selected&&characterVoiceMap[selected.id]);
  const ctl=document.getElementById('characterVoiceControls');if(!ctl)return;
- ctl.hidden=!supported;
+ ctl.hidden=false;
+ const hint=document.getElementById('voiceAvailability');
+ if(hint)hint.textContent=supported?'已匹配角色语音 · 点击人物试听':selected?'当前角色暂无已核验语音':'请选择角色以查看可用语音';
+ document.getElementById('voiceTest').disabled=!supported;
  document.getElementById('voiceEnabled').checked=voiceEnabled;
  document.getElementById('voiceLanguage').value=voiceLanguage;
  document.getElementById('voiceVolume').value=String(Math.round(voiceVolume*100));
@@ -23,7 +26,7 @@ function playCharacterVoice(character){
  // The upstream viewer cycles three exact voice clips for each costume.
  const index=voiceIndex++%3+1;
  audio.src=characterVoiceRoot+entry.code+'/'+voiceLanguage+'/'+entry.voice+'_'+index+'.webm';
- audio.play().catch(e=>{if(voiceClip===audio){silenceCharacterVoice();console.warn('角色语音无法播放',e)}});
+ audio.play().catch(e=>{if(voiceClip===audio){silenceCharacterVoice();const hint=document.getElementById('voiceAvailability');if(hint)hint.textContent='音频加载失败：源站资源可能不可访问';console.warn('角色语音无法播放',e)}});
 }
 window.addEventListener('DOMContentLoaded',()=>{
  const control=document.getElementById('characterVoiceControls');if(!control)return;
@@ -34,5 +37,6 @@ window.addEventListener('DOMContentLoaded',()=>{
  document.getElementById('characters').addEventListener('change',()=>{silenceCharacterVoice();updateVoiceUI()});
  document.getElementById('characterCards').addEventListener('click',()=>{silenceCharacterVoice();updateVoiceUI()});
  document.getElementById('gameFilter').addEventListener('change',()=>{silenceCharacterVoice();updateVoiceUI()});
+ document.getElementById('voiceTest').addEventListener('click',()=>{voiceEnabled=true;updateVoiceUI();playCharacterVoice(chosen())});
  updateVoiceUI();
 });
