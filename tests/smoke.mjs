@@ -397,7 +397,7 @@ assert.ok(read('assets/js/spine/spine-runtime.js').includes('update:(p)=>applySh
 // Loading one game's manifest must never block unrelated games, and engine
 // compatibility must be shared instead of a game-specific include list.
 const catalogBootstrap=read('assets/js/spine/bootstrap.js');
-assert.ok(catalogBootstrap.includes('Promise.allSettled')&&catalogBootstrap.includes("cache:'no-cache'"),
+assert.ok(catalogBootstrap.includes('Promise.allSettled')&&catalogBootstrap.includes("cache:'default'"),
  'Animation catalogs should load in parallel with versioned HTTP caching');
 assert.ok(catalogBootstrap.includes('isPlayableAnimationEntry')&&!catalogBootstrap.includes("c.gameId==='arknights'&&c.base"),
  'Spine/Cubism catalog validation should not depend on individual game IDs');
