@@ -40,4 +40,82 @@ $matches = [regex]::Matches($text, [regex]::Escape($before))
 if ($matches.Count -ne 1) { throw "Native render envelope patch anchor mismatch: $($matches.Count)" }
 $text = $text.Replace($before, $after)
 [System.IO.File]::WriteAllText($file, $text, [System.Text.UTF8Encoding]::new($false))
-Write-Host 'Native rendering surface now follows actual animated geometry.'
+
+# The ORIGINAL NativeCompositionSurface.EnsureSize() checks ONLY the scale,
+# ignoring any growth of the animation envelope. A full-body character may
+# suddenly extend below that cached swap chain: its vertices are silently
+# clipped although screen hit testing sees a different geometry.
+$surface = Join-Path $UpstreamRoot 'SpinePet/src/SpinePet/Rendering/Native/NativeCompositionSurface.cs'
+$surfaceText = [System.IO.File]::ReadAllText($surface).Replace("`r`n","`n")
+$oldSurface = @'
+        if (CanContainScale(pixelScale))
+            return;
+
+        RecreateForScale(envelope, pivotX, pivotY, pixelScale);
+'@
+$newSurface = @'
+        if (CanContainScale(pixelScale))
+        {
+            // The allocated swap chain can be wider/taller than before, but
+            // its pivot anchor must also contain the NEW envelope on ALL sides.
+            // Use capacity-scale units, just like RecreateForScale().
+            float left = Math.Max(1f,
+                (pivotX - envelope.Left) * CapacityScale);
+            float right = Math.Max(1f,
+                (envelope.Right - pivotX) * CapacityScale);
+            float top = Math.Max(1f,
+                (pivotY - envelope.Top) * CapacityScale);
+            float bottom = Math.Max(1f,
+                (envelope.Bottom - pivotY) * CapacityScale);
+            const float roundingTolerance = 2f;
+            if (left <= AnchorPixelX + roundingTolerance &&
+                top <= AnchorPixelY + roundingTolerance &&
+                right <= PixelWidth - AnchorPixelX + roundingTolerance &&
+                bottom <= PixelHeight - AnchorPixelY + roundingTolerance)
+            {
+                return;
+            }
+        }
+
+        // A changed animated envelope needs a replacement surface even when
+        // the zoom level has not changed. Otherwise legs and skirts are cut.
+        RecreateForScale(envelope, pivotX, pivotY, pixelScale);
+'@
+$oldSurface = $oldSurface.Replace("`r`n","`n")
+$newSurface = $newSurface.Replace("`r`n","`n")
+if ([regex]::Matches($surfaceText,[regex]::Escape($oldSurface)).Count -ne 1) {
+    throw 'Pinned upstream surface sizing patch anchor mismatch'
+}
+$surfaceText = $surfaceText.Replace($oldSurface,$newSurface)
+[System.IO.File]::WriteAllText($surface,$surfaceText,[System.Text.UTF8Encoding]::new($false))
+
+# An input window region is rasterized from the visible triangles. Sampling
+# only the centre of each 8px cell misses skinny silhouette edges/legs, so the
+# desktop receives clicks despite visible pixels. Sample centre and corners;
+# the existing pixel-accurate HitTester still rejects genuinely transparent
+# pixels inside these coarse input window regions.
+$raster = Join-Path $UpstreamRoot 'SpinePet/src/SpinePet/Rendering/Native/NativeSilhouetteRasterizer.cs'
+$rasterText = [System.IO.File]::ReadAllText($raster).Replace("`r`n","`n")
+$oldRaster = @'
+                    if (IsVisiblePoint(triangle, skeletonX, skeletonY))
+                        scratch.Grid[gridIndex] = true;
+'@
+$newRaster = @'
+                    float halfCell = cellSize * 0.38f / pixelScale;
+                    if (IsVisiblePoint(triangle, skeletonX, skeletonY) ||
+                        IsVisiblePoint(triangle, skeletonX-halfCell, skeletonY-halfCell) ||
+                        IsVisiblePoint(triangle, skeletonX+halfCell, skeletonY-halfCell) ||
+                        IsVisiblePoint(triangle, skeletonX-halfCell, skeletonY+halfCell) ||
+                        IsVisiblePoint(triangle, skeletonX+halfCell, skeletonY+halfCell))
+                    {
+                        scratch.Grid[gridIndex] = true;
+                    }
+'@
+$oldRaster = $oldRaster.Replace("`r`n","`n")
+$newRaster = $newRaster.Replace("`r`n","`n")
+if ([regex]::Matches($rasterText,[regex]::Escape($oldRaster)).Count -ne 1) {
+    throw 'Pinned upstream silhouette rasterization patch anchor mismatch'
+}
+$rasterText = $rasterText.Replace($oldRaster,$newRaster)
+[System.IO.File]::WriteAllText($raster,$rasterText,[System.Text.UTF8Encoding]::new($false))
+Write-Host 'Native surface geometry, animation envelope and hit-test silhouette corrected together.'
