@@ -385,3 +385,10 @@ assert.ok(cubismRenderer.includes('autoDensity:true')&&cubismRenderer.includes('
  'Live2D must render at device pixel density');
 assert.ok(!cubismRenderer.includes('resolution:1,'),'Live2D low-resolution rendering regression');
 assert.ok(read('assets/js/spine/performance.js').includes('canvasRenderQuality'),'Spine canvas resolution diagnostics missing');
+
+
+// Spine 4.x must zoom in 3D camera space rather than enlarge a rasterized canvas.
+assert.ok(read('assets/js/spine/viewer-controls.js').includes('applySharpSpineCamera'),
+ 'Native-resolution Spine camera zoom missing');
+assert.ok(read('assets/js/spine/spine-runtime.js').includes('update:(p)=>applySharpSpineCamera(p)'),
+ 'Spine Player is not using native camera draw callback');

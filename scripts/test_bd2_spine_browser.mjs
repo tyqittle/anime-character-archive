@@ -37,11 +37,18 @@ try{
    result.canvas=rect;
    if(!await page.locator('#zoomIn').isEnabled())throw Error('Zoom controls were not enabled after rendering');
    if(!await page.locator('#animationPicker').isEnabled())throw Error('Animation picker is still disabled');
+   await page.waitForTimeout(400); // settle the animation viewport transition
+   const initialCamera=await page.evaluate(()=>({zoom:player.sceneRenderer.camera.zoom,native:player._archiveNativeView}));
+   if(!initialCamera.native)throw Error('Spine 4.1 should support GPU-native camera zoom');
    await page.locator('#zoomIn').click();
    const zoomed=await canvas.evaluate(c=>({transform:c.style.transform,origin:c.style.transformOrigin}));
-   if(!zoomed.transform.includes('scale(1.2)'))throw Error('Zoom controls did not transform the actual canvas: '+JSON.stringify(zoomed));
+   await page.waitForFunction(base=>viewZoom>1.1&&player.sceneRenderer.camera.zoom<base*.92,initialCamera.zoom,{timeout:5000});
+   const nativeCamera=await page.evaluate(()=>player.sceneRenderer.camera.zoom);
+   if(!zoomed.transform.includes('scale(1)')||nativeCamera>=initialCamera.zoom)
+    throw Error('Zoom should rerender the Spine camera, not upscale CSS canvas: '+JSON.stringify({zoomed,nativeCamera,initialCamera}));
    await page.locator('#resetView').click();
    const reset=await canvas.evaluate(c=>c.style.transform);
+   await page.waitForFunction(base=>viewZoom===1&&player.sceneRenderer.camera.zoom>base*.95,initialCamera.zoom,{timeout:5000});
    if(!reset.includes('scale(1)'))throw Error('Reset-view button failed: '+reset);
    // Real wheel input, no keyboard modifier; it must change the actual art.
    await canvas.hover();
@@ -58,7 +65,10 @@ try{
     c.dispatchEvent(new PointerEvent('pointerup',{pointerId:71,pointerType:'mouse',button:0,clientX:136,clientY:121,bubbles:true}));
    });
    const panned=await canvas.evaluate(c=>c.style.transform);
-   if(!/translate\(36px,\s*21px\)/.test(panned))throw Error('Dragging did not pan the character: '+panned);
+   const nativePan=await page.evaluate(()=>({x:viewOffsetX,y:viewOffsetY,native:player._archiveNativeView}));
+   if(nativePan.native ? !(Math.abs(nativePan.x-36)<1&&Math.abs(nativePan.y-21)<1)
+     : !/translate\\(36px,\\s*21px\\)/.test(panned))
+    throw Error('Dragging did not pan the character: '+JSON.stringify({panned,nativePan}));
    await page.locator('#resetView').click();
    if(rect.width<200||rect.height<200)throw Error('Canvas is too small: '+JSON.stringify(rect));
    await page.waitForTimeout(500);

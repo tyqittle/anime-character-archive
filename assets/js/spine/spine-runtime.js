@@ -124,10 +124,14 @@ async function show(options,title,onError){
   const atlasPath=options.atlas||options.atlasUrl;
   const normalized={...options,atlasUrl:atlasPath};
   if(skeletonPath){if(/\.json(?:[?#]|$)/i.test(skeletonPath))normalized.jsonUrl=skeletonPath;else if($('version').value==='3.8')normalized.skelUrl=skeletonPath;else normalized.binaryUrl=skeletonPath;}
-  const config={...normalized,showControls:false,controlBones:false,frame:(p)=>recordSpineFrame(p),premultipliedAlpha:options.premultipliedAlpha??true,alpha:false,backgroundColor:'#142238ff',
+  const config={...normalized,showControls:false,controlBones:false,frame:(p)=>recordSpineFrame(p),update:(p)=>applySharpSpineCamera(p),premultipliedAlpha:options.premultipliedAlpha??true,alpha:false,backgroundColor:'#142238ff',
    success:(p)=>{
     if(attempt!==currentAttempt)return;
     stopWatchdog();player=p;
+    // Spine 4.x invokes update() after resetting its camera but before drawing.
+    // Legacy bundled Spine 3.8 lacks this hook; leave its compatible CSS zoom.
+    p._archiveNativeView=$('version').value!=='3.8'
+      &&!!p.sceneRenderer?.camera&&typeof p.sceneRenderer.camera.zoom==='number';
     rendererFrameStats.at=0;rendererFrameStats.count=0;
     updateGPUStatus(spineGraphicsStatus(p));
      setViewerToolsEnabled(true);

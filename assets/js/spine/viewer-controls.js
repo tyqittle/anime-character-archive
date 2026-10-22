@@ -8,9 +8,24 @@ function syncViewTransform(){
  const canvas=player?.canvas;
  if(canvas){
   canvas.style.transformOrigin='center center';
-  canvas.style.transform='translate('+viewOffsetX+'px,'+viewOffsetY+'px) scale('+viewZoom+')';
+  // Native camera zoom renders original texture pixels directly; CSS scaling
+  // magnifies the already rasterized bitmap and makes detailed portraits soft.
+  canvas.style.transform=player?._archiveNativeView
+   ?'translate(0px,0px) scale(1)'
+   :'translate('+viewOffsetX+'px,'+viewOffsetY+'px) scale('+viewZoom+')';
  }
  $('zoomValue').textContent=Math.round(viewZoom*100)+'%';
+}
+function applySharpSpineCamera(activePlayer){
+ if(activePlayer!==player||!activePlayer?._archiveNativeView)return;
+ const camera=activePlayer.sceneRenderer?.camera,canvas=activePlayer.canvas;
+ if(!camera||!canvas||!Number.isFinite(camera.zoom)||camera.zoom<=0)return;
+ const pixelRatio=canvas.width/Math.max(1,canvas.clientWidth);
+ const nextZoom=Math.max(.5,viewZoom);
+ camera.zoom/=nextZoom;
+ // Translate CSS-pixel dragging to Spine world coordinates. Camera y points up.
+ camera.position.x-=viewOffsetX*pixelRatio*camera.zoom;
+ camera.position.y+=viewOffsetY*pixelRatio*camera.zoom;
 }
 function sendAzurLane(kind,extra={}){if(azurlaneFrame?.contentWindow&&azurlaneReady)azurlaneFrame.contentWindow.postMessage({channel:L2D_CHANNEL,kind,...extra},location.origin)}
 function resetViewerTransform(){viewZoom=1;viewOffsetX=0;viewOffsetY=0;if(azurlaneFrame)sendAzurLane('reset');syncViewTransform()}
