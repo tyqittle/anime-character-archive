@@ -1,0 +1,30 @@
+name: Diagnose remaining Cubism source models
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/diagnose_live2d_sources.mjs'
+      - '.github/workflows/live2d-source-diagnostics.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --no-package-lock playwright-core@1.56.1 pngjs@7.0.0
+      - run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/live2d-source-server.log 2>&1 &
+          sleep 2
+      - run: node scripts/diagnose_live2d_sources.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: live2d-source-diagnostics
+          path: /tmp/live2d-source-diagnostics/
+          if-no-files-found: warn

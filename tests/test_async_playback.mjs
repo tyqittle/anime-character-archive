@@ -221,7 +221,7 @@ test('model deadline clears a stalled stage and discards a late cache read',asyn
 
 test('Cubism setup errors use onError and immediately retry the same model provider',async()=>{
  const calls=[],destroyed=[],events=[];
- const ctx=context({desktopMode:false,currentGeneration:0,currentId:'',readyId:'',loadStartedAt:0,
+ const ctx=context({desktopMode:false,targetFPS:60,currentGeneration:0,currentId:'',readyId:'',loadStartedAt:0,
   zoom:1,offsetX:0,offsetY:0,model:null,performance:{now:()=>0},warn:{hidden:false},queueMicrotask,
   document:{hidden:false},message(){},fit(){},verifyName:()=>true,modelUrlFor:()=> 'raw',
   graphicsReport:()=>({}),notify:(kind,data)=>events.push({kind,data}),
