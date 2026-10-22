@@ -61,8 +61,16 @@
    }
    // Do not reject models using "spineVersion" or "versionUnverified":
    // these catalog labels were demonstrated wrong for real 4.1 binaries.
-   const actual=await getActualVersion(entry);
-   if(!actual.startsWith('4.1.')){
+   // Browser-side binary checking is advisory; corporate networks may
+   // block raw.githubusercontent.com CORS or HTTP Range requests.
+   // The native application ALWAYS validates the real skeleton itself.
+   let actual=null;
+   try{actual=await getActualVersion(entry)}
+   catch(error){
+    if(String(error?.message||'').includes('来源校验失败'))throw error;
+    console.warn('Browser binary preflight unavailable; native parser will validate',error);
+   }
+   if(actual&&!actual.startsWith('4.1.')){
     alert('检测到 '+entry.name+' 的真实骨骼版本为 Spine '+actual+
       '。当前 My_SpinePet 原生运行时只支持 4.1。'+
       '\n该模型可在网页播放；其他 Spine 版本需要相应原生运行时。');
@@ -70,8 +78,8 @@
    }
    window.location.href='animecharacter://open?id='+encodeURIComponent(id);
   }catch(error){
-   alert('无法校验骨骼文件：'+(error?.message||'网络错误')+
-      '。为避免加载不兼容版本，这次没有启动桌面客户端。');
+   alert('暂时无法执行桌面导入：'+(error?.message||'网络错误')+
+      '。请检查角色来源或网站连接后重试。');
   }finally{pending=false;button.disabled=false;button.textContent=text}
  });
  if(new URLSearchParams(location.search).has('desktop'))button.hidden=true;
