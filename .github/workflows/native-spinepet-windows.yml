@@ -383,12 +383,16 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          $runs = gh api 'repos/${{ github.repository }}/actions/workflows/native-spinepet-windows.yml/runs?branch=main&per_page=10' | ConvertFrom-Json
-          if ($LASTEXITCODE -ne 0) { throw 'Cannot verify current native build ordering' }
-          $latestId = [string]$runs.workflow_runs[0].id
-          $ourId = [string]$env:GITHUB_RUN_ID
-          $publish = if ($latestId -eq $ourId) { 'true' } else { 'false' }
-          Write-Host "Native build run $ourId, newest run $latestId, publish=$publish"
+          # GitHub's workflow-specific runs API can return an empty collection
+          # for valid workflow filenames. Match immutable current branch HEAD
+          # instead of silently treating an empty collection as "stale".
+          $latest = gh api 'repos/${{ github.repository }}/commits/main' --jq '.sha'
+          if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($latest)) {
+            throw 'Cannot verify current main commit SHA; refuse to publish'
+          }
+          $builtSha = '${{ github.sha }}'
+          $publish = if ($latest.Trim() -eq $builtSha) { 'true' } else { 'false' }
+          Write-Host "Build SHA $builtSha, current main SHA $latest, publish=$publish"
           "publish=$publish" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
       - name: Publish release installer plus versioned update feed
         if: steps.latest.outputs.publish == 'true'
