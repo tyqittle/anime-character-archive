@@ -2369,13 +2369,14 @@
       "characterName": "lvzuofu",
       "skinCode": "lvzuofu_2",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/lvzuofu_2/lvzuofu_2.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/lvzuofu_2.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-lvzuofu_2.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/lvzuofu_2",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-maliluosi_3_doa",
@@ -2972,13 +2973,14 @@
       "characterName": "shengluyisi",
       "skinCode": "shengluyisi_4",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/shengluyisi_4/shengluyisi_4.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/shengluyisi_4.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-shengluyisi_4.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/shengluyisi_4",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured"
     },
     {
       "id": "al-shengluyisi_5",
