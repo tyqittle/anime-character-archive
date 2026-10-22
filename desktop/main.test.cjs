@@ -35,7 +35,7 @@ function harness(argv=['electron','.']){
  }
  class FakeTray{setToolTip(value){this.tip=value}setContextMenu(value){this.menu=value}on(){}}
  const fakeFs={...fs,readFileSync:()=>{throw Error('no prior settings')},mkdirSync:()=>{},writeFileSync:()=>{}};
- const fakeElectron={app,ipcMain:{on:(name,fn)=>ipcHandlers.set(name,fn)},BrowserWindow:FakeBrowserWindow,Menu:{buildFromTemplate:items=>{menus.push(items);return items}},Tray:FakeTray,nativeImage:{createFromBuffer:()=>({resize:()=>({})})},shell:{openExternal:()=>{}},screen:{getPrimaryDisplay:()=>({workArea:{x:0,y:0,width:1920,height:1080}}),getAllDisplays:()=>[{bounds:{x:0,y:0,width:1920,height:1080}}]},dialog:{showErrorBox:()=>{},showMessageBox:async()=>({response:1})}};
+ const fakeElectron={app,ipcMain:{on:(name,fn)=>ipcHandlers.set(name,fn)},BrowserWindow:FakeBrowserWindow,Menu:{buildFromTemplate:items=>{menus.push(items);return items}},Tray:FakeTray,nativeImage:{createFromBuffer:()=>({resize:()=>({})})},shell:{openExternal:()=>{}},screen:{getPrimaryDisplay:()=>({bounds:{x:0,y:0,width:1920,height:1080},workArea:{x:0,y:0,width:1920,height:1080}}),getAllDisplays:()=>[{bounds:{x:0,y:0,width:1920,height:1080}}]},dialog:{showErrorBox:()=>{},showMessageBox:async()=>({response:1})}};
  const context={require:id=>id==='electron'?fakeElectron:id==='node:fs'?fakeFs:require(id),module:{},process:{argv,platform:'win32'},console,Buffer,URL,setTimeout,clearTimeout};
  vm.runInNewContext(source,context,{filename:'desktop/main.cjs',timeout:1500});
  return {windows,callbacks,menus,ipcHandlers};
