@@ -6,7 +6,7 @@ import hashlib
 
 ROOT = Path('assets/animation-previews')
 def filename(c): return f"{c['gameId']}-{c['id']}.webp"
-def relative_path(c): return './' + str(ROOT / filename(c))
+def relative_path(c): return './' + (ROOT / filename(c)).as_posix()
 def source(c): return 'matching-live2d-animation-frame' if c.get('engine') == 'cubism' else 'matching-spine-animation-frame'
 def verified_file(c, directory=None):
     directory = ROOT if directory is None else directory

@@ -13,7 +13,7 @@ window.addEventListener('resize',()=>{if(model)fit()});
 let drag=false,last={x:0,y:0};
 document.getElementById('live2dCanvas').addEventListener('wheel',e=>{if(!model)return;e.preventDefault();setZoom(zoom*Math.exp(-e.deltaY*.0015))},{passive:false});
 document.getElementById('live2dCanvas').addEventListener('pointerdown',e=>{if(e.button===1){drag=true;last={x:e.clientX,y:e.clientY}}});
-document.addEventListener('pointermove',e=>{if(drag&&model){offsetX+=e.clientX-last.x;offsetY+=e.clientY-last.y;last={x:e.clientX,y:e.clientY};model.x+=e.movementX;model.y+=e.movementY}});
+document.addEventListener('pointermove',e=>{if(drag&&model){const dx=e.clientX-last.x,dy=e.clientY-last.y;offsetX+=dx;offsetY+=dy;last={x:e.clientX,y:e.clientY};model.x+=dx;model.y+=dy}});
 document.addEventListener('pointerup',()=>drag=false);
 function graphicsReport(){
  const canvas=document.getElementById('live2dCanvas'),box=canvas.getBoundingClientRect();

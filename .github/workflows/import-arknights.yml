@@ -1,10 +1,6 @@
 name: Import Arknights static full art
+# Content imports are explicit jobs; source edits are checked by verify.yml.
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'scripts/import_arknights.py'
-      - '.github/workflows/import-arknights.yml'
   workflow_dispatch:
 permissions:
   contents: write
@@ -24,13 +20,13 @@ jobs:
         env:
           ARKNIGHTS_IMPORT_LIMIT: '60'
         run: python scripts/import_arknights.py
-      - name: Validate index and image paths
-        run: node tests/smoke.mjs
+      - name: Finalize static catalog with shared image pipeline
+        uses: ./.github/actions/finalize-static-catalog
       - name: Commit full-body PNG assets
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/characters.json assets/portraits/
+          git add data/characters.json assets/portraits/ assets/thumbs/
           if ! git diff --cached --quiet; then
             git commit -m "Import Arknights full-body portraits locally"
             git push origin HEAD:main

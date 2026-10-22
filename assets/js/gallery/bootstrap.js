@@ -18,7 +18,7 @@ fetch('./data/characters.json?v=zzz-reverse1999-ready-20261021',{cache:'default'
   new IntersectionObserver(function(entries){heroVisible=entries[0].isIntersecting},{rootMargin:'40px'}).observe(heroNode);
  }
  function paintHero(){
-  if(!heroNode||!heroPool.length)return;
+  if(!heroNode||!heroPool.length||(extras&&!extras.open))return;
   var picked=[];
   for(var i=0;i<Math.min(3,heroPool.length);i++)picked.push(heroPool[(heroOffset+i)%heroPool.length]);
   heroOffset=(heroOffset+3)%heroPool.length;
@@ -43,6 +43,7 @@ fetch('./data/characters.json?v=zzz-reverse1999-ready-20261021',{cache:'default'
  if(!reduceMotion&&!saveData){
   setInterval(function(){if(!document.hidden&&heroVisible)paintHero()},18000);
  }
- var hash=decodeURIComponent(location.hash.slice(1));
+ var hash='';
+ try{hash=decodeURIComponent(location.hash.slice(1))}catch(e){/* Ignore malformed deep links. */}
  if(hash&&items.some(function(x){return x.id===hash}))showOne(hash);
 }).catch(function(e){$('resultInfo').textContent='角色索引加载失败：'+e.message;$('gallery').innerHTML='<div class="blank">图片索引加载失败。请从正式部署的网址访问，并检查 data/characters.json 是否存在。<p>'+safe(e.message)+'</p></div>'});

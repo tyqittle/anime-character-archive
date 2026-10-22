@@ -4,7 +4,7 @@ const runtimeRoot='https://unpkg.com/@esotericsoftware/spine-player@';
 const params=new URLSearchParams(location.search);
 let loadedVersion='', runtimeQueue=Promise.resolve(), player=null, allCharacters=[], chosenFileList=[], currentAttempt=0, watchdog=null;
 const runtimeCache=new Map();
-let runtimeCss=null;
+let runtimeCss=null,pendingRenderCancel=null;
 let viewZoom=1,viewOffsetX=0,viewOffsetY=0;
 let azurlaneFrame=null,azurlaneReady=false,azurlanePending=null,azurlanePlayingId='';
 const L2D_CHANNEL='anime-archive-azurlane-v1';

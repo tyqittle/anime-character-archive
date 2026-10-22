@@ -1,13 +1,12 @@
 name: Import Blue Archive full-body art
+# Content imports are explicit jobs; source edits are checked by verify.yml.
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/import-bluearchive.yml'
-      - 'scripts/import_bluearchive.py'
   workflow_dispatch:
 permissions:
   contents: write
+concurrency:
+  group: art-import-main
+  cancel-in-progress: false
 jobs:
   import:
     runs-on: ubuntu-latest
@@ -21,11 +20,13 @@ jobs:
         env:
           BA_IMPORT_LIMIT: '150'
         run: python scripts/import_bluearchive.py
+      - name: Finalize static catalog with shared image pipeline
+        uses: ./.github/actions/finalize-static-catalog
       - name: Commit student PNG or WebP assets and game index
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/characters.json assets/portraits/
+          git add data/characters.json assets/portraits/ assets/thumbs/
           if ! git diff --cached --quiet; then
             git commit -m "Import Blue Archive static character artwork"
             git push origin HEAD:main

@@ -92,7 +92,10 @@ try{
   if((await pilotCard.locator('.nm').textContent())!=='戴安娜')throw Error('BD2 card shows bulky unformatted bilingual name');
   if((await pilotCard.locator('small').textContent()).includes('bd2-char'))throw Error('Raw model ID is cluttering the character card');
   const cards=page.locator('#characterCards .character-card');
-  if(await cards.count()!==209)throw Error('Expected all 209 BD2 costumes, got '+await cards.count());
+  if(await cards.count()!==96)throw Error('Expected a bounded first page of 96 costumes, got '+await cards.count());
+  while(await page.locator('#characterCards .load-more-characters').count())
+   await page.locator('#characterCards .load-more-characters').click();
+  if(await cards.count()!==209)throw Error('Pagination must expose all 209 BD2 costumes, got '+await cards.count());
   // Catch the CSS-grid regression where 240+ buttons shrink to 16px
   // inside a flex-column sidebar, hiding all thumbnails and text.
   const tileMetrics=await cards.first().evaluate(card=>{

@@ -1,10 +1,6 @@
 name: Mirror static portraits
+# Content imports are explicit jobs; source edits are checked by verify.yml.
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/mirror-static.yml'
-      - 'scripts/mirror_static_portraits.py'
   workflow_dispatch:
 permissions:
   contents: write
@@ -24,11 +20,13 @@ jobs:
           python-version: '3.12'
       - name: Download and validate static portrait PNG files only
         run: python scripts/mirror_static_portraits.py
+      - name: Finalize static catalog with shared image pipeline
+        uses: ./.github/actions/finalize-static-catalog
       - name: Commit mirrored PNGs and manifest
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/characters.json assets/portraits/
+          git add data/characters.json assets/portraits/ assets/thumbs/
           if ! git diff --cached --quiet; then
             git commit -m "Mirror static full-body portraits locally"
             git pull --rebase origin main

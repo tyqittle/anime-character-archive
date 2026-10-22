@@ -1,10 +1,6 @@
 name: Import Genshin Star Rail GFL2 and Wuthering Waves art
+# Content imports are explicit jobs; source edits are checked by verify.yml.
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'scripts/import_new_games.py'
-      - '.github/workflows/import-new-games.yml'
   workflow_dispatch:
 permissions:
   contents: write
@@ -27,6 +23,8 @@ jobs:
         run: python -m pip install --disable-pip-version-check pillow
       - name: Download and verify actual complete illustrations
         run: python scripts/import_new_games.py
+      - name: Finalize static catalog with shared image pipeline
+        uses: ./.github/actions/finalize-static-catalog
       - name: Verify imported images exist and are decodable
         run: |
           python - <<'PY'
@@ -50,7 +48,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/characters.json assets/portraits/
+          git add data/characters.json assets/portraits/ assets/thumbs/
           if ! git diff --cached --quiet; then
             git commit -m "Import verified character illustrations for four more games"
             git pull --rebase origin main

@@ -36,7 +36,7 @@ document.addEventListener('click',function(e){
  else if(action==='favorites'){onlyFav=!onlyFav;page=1;render()}
  else if(action==='view')showOne(id);
  else if(action==='close'){viewerLoadToken++;$('viewer').close()}
- else if(action==='fav'){if(favorites.has(id))favorites.delete(id);else favorites.add(id);remember();if(onlyFav)render();else syncFavoriteButtons(id)}
+ else if(action==='fav'){if(favorites.has(id))favorites.delete(id);else favorites.add(id);remember();syncFavoriteButtons(id);if(onlyFav)render()}
  else if(action==='more'){page++;render(true)}
  else if(action==='step')navigate(Number(target.dataset.step));
  else if(action==='retry-view'&&activeId){viewRetryNonce=Date.now();showOne(activeId)}

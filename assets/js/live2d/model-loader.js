@@ -1,21 +1,23 @@
 'use strict';
 // Iframe-local voice avoids browser restrictions on cross-frame gesture playback.
-let frameVoiceSkin='',frameVoiceEnabled=false,frameVoiceVolume=.8,frameVoiceIndex=0,frameVoiceAudio=null;
+let frameVoiceSkin='',frameVoiceCharacter='',frameVoiceEnabled=false,frameVoiceVolume=.8,frameVoiceIndex=0;
+const frameVoicePlayer=ArchiveVoice.create(state=>{
+ if(state==='playing')notify('voice-playing');
+ if(state==='error'||state==='blocked')notify('voice-error',{error:state==='blocked'?'浏览器阻止播放，请再次点击人物':'当前皮肤音频不可播放'});
+});
 function setFrameVoice(voice){
- frameVoiceAudio?.pause();frameVoiceAudio=null;
- frameVoiceSkin=typeof voice?.skinId==='string'&&/^\d{6}$/.test(voice.skinId)?voice.skinId:'';
- frameVoiceEnabled=!!voice?.enabled;
- frameVoiceVolume=Math.max(0,Math.min(1,Number(voice?.volume)??.8));
+ const skin=typeof voice?.skinId==='string'&&/^\d{6}$/.test(voice.skinId)?voice.skinId:'';
+ const character=typeof voice?.characterId==='string'?voice.characterId:'';
+ if(skin!==frameVoiceSkin||character!==frameVoiceCharacter||!voice?.enabled)frameVoicePlayer.stop();
+ if(skin!==frameVoiceSkin)frameVoiceIndex=0;
+ frameVoiceSkin=skin;frameVoiceCharacter=character;
+ frameVoiceEnabled=!!voice?.enabled;frameVoiceVolume=ArchiveVoice.volume(voice?.volume);
+ frameVoicePlayer.setVolume(frameVoiceVolume);
 }
 function playFrameVoice(){
- if(!frameVoiceEnabled||!frameVoiceSkin||!currentId.startsWith('al-'))return;
- frameVoiceAudio?.pause();
- const index=frameVoiceIndex++;
- const name=['main1','login','touch','detail','home'][index%5];
- const audio=new Audio('https://raw.githubusercontent.com/Fernando2603/AzurLane/main/audio/voiceline/'+frameVoiceSkin+'/'+name+'.ogg');
- audio.volume=frameVoiceVolume;
- frameVoiceAudio=audio;
- audio.play().then(()=>notify('voice-playing')).catch(()=>notify('voice-error',{error:'当前皮肤音频不可播放'}));
+ if(!frameVoiceEnabled||!frameVoiceSkin||!currentId.startsWith('al-')||currentId!==frameVoiceCharacter)return;
+ const urls=ArchiveVoice.skinURLs(frameVoiceSkin),index=frameVoiceIndex++%urls.length;
+ return frameVoicePlayer.play([...urls.slice(index),...urls.slice(0,index)],frameVoiceVolume);
 }
 function motion(name){
  if(!model||typeof name!=='string')return;
@@ -75,12 +77,12 @@ async function load(name,id,modelUrl){
    else model.motion(initial,0,PIXI.live2d.MotionPriority.FORCE);
   }
   model.on('hit',areas=>{if(Array.isArray(areas)&&areas.length){const a=areas[0];notify('interaction',{area:a});if(actions.includes(a))motion(a)}});
-  const p=(evt)=>{if(!model)return;const pt=evt?.data?.global;if(!pt)return;model.dragging=true;model.dragX=pt.x-model.x;model.dragY=pt.y-model.y};
+  const p=(evt)=>{if(!model)return;const pt=evt?.data?.global;if(!pt)return;model.dragging=true;model.dragX=pt.x;model.dragY=pt.y};
   // Play audio within the SAME pointer gesture and iframe. postMessage to the
   // parent is asynchronous and loses transient user activation in some browsers.
   model.on('pointertap',()=>{if(typeof playFrameVoice==='function')playFrameVoice()});
   model.on('pointerdown',p);
-  model.on('pointermove',evt=>{if(model?.dragging&&evt?.data?.global){model.x=evt.data.global.x-model.dragX;model.y=evt.data.global.y-model.dragY}});
+  model.on('pointermove',evt=>{if(model?.dragging&&evt?.data?.global){const pt=evt.data.global;offsetX+=pt.x-model.dragX;offsetY+=pt.y-model.dragY;model.x+=pt.x-model.dragX;model.y+=pt.y-model.dragY;model.dragX=pt.x;model.dragY=pt.y}});
   for(const ev of ['pointerup','pointerupoutside'])model.on(ev,()=>{if(model)model.dragging=false});
   warn.hidden=true;
   if(!document.hidden&&app?.ticker)app.ticker.start();

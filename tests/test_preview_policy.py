@@ -3,7 +3,7 @@ import hashlib
 import sys
 import tempfile
 import unittest
-from pathlib import Path
+from pathlib import Path, PureWindowsPath
 from PIL import Image
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 import preview_policy as p
@@ -18,6 +18,12 @@ class PreviewPolicyTest(unittest.TestCase):
             'previewSource':'matching-live2d-animation-frame'}
         self.file = self.path / p.filename(self.character)
         Image.effect_noise((360,420),20).convert('RGB').save(self.file,'WEBP')
+    def test_web_paths_use_forward_slashes_on_windows(self):
+        previous = p.ROOT
+        try:
+            p.ROOT = PureWindowsPath('assets/animation-previews')
+            self.assertEqual(p.relative_path(self.character), './assets/animation-previews/azurlane-al-demo.webp')
+        finally: p.ROOT = previous
     def test_correct_model_path_and_image(self):
         self.assertIsNotNone(p.verified_file(self.character,self.path))
         previous = p.ROOT

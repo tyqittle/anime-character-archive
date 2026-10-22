@@ -52,9 +52,10 @@ function activateRuntimeStylesheet(href){
  }
  if(runtimeCss.getAttribute('href')!==href)runtimeCss.href=href;
 }
-function ensureRuntime(version){
+function ensureRuntime(version,isCurrent=()=>true){
  // Serialize script registration so rapid selection cannot corrupt globals.
  const request=runtimeQueue.then(async()=>{
+  if(!isCurrent())return;
   if(loadedVersion===version&&window.spine?.SpinePlayer)return;
   if(player)clearPlayer();
   const cached=runtimeCache.get(version);
@@ -100,6 +101,7 @@ function ensureRuntime(version){
  return request;
 }
 function clearPlayer(){
+ if(typeof selectedVoiceChanged==='function')selectedVoiceChanged();
  try{player?.dispose?.()}catch(e){console.warn(e)}
  player=null;
  pausedInBackground=null;
@@ -117,17 +119,32 @@ async function show(options,title,onError){
  stopWatchdog();
  status('正在加载 '+title+' 的骨骼、图集与贴图…');$('title').textContent=title;
  try{
-  await ensureRuntime($('version').value);
+  const version=$('version').value;
+  await ensureRuntime(version,()=>attempt===currentAttempt);
   if(attempt!==currentAttempt)return;
   clearPlayer();
   const skeletonPath=options.skeleton||options.binaryUrl||options.jsonUrl;
   const atlasPath=options.atlas||options.atlasUrl;
   const normalized={...options,atlasUrl:atlasPath};
   if(skeletonPath){if(/\.json(?:[?#]|$)/i.test(skeletonPath))normalized.jsonUrl=skeletonPath;else if($('version').value==='3.8')normalized.skelUrl=skeletonPath;else normalized.binaryUrl=skeletonPath;}
+  return await new Promise((resolve,reject)=>{
+  const cancel=()=>{if(pendingRenderCancel===cancel)pendingRenderCancel=null;resolve(false)};
+  pendingRenderCancel=cancel;
+  const fail=reason=>{
+   if(attempt!==currentAttempt){resolve(false);return}
+   stopWatchdog();
+   if(pendingRenderCancel===cancel)pendingRenderCancel=null;
+   ++currentAttempt;
+   clearPlayer();
+   const error=Error(String(reason||'资源加载失败'));
+   if(onError)onError(error.message);
+   status('加载失败：'+error.message,true);
+   reject(error);
+  };
   const config={...normalized,showControls:false,controlBones:false,frame:(p)=>recordSpineFrame(p),update:(p)=>applySharpSpineCamera(p),premultipliedAlpha:options.premultipliedAlpha??true,alpha:false,backgroundColor:'#142238ff',
    success:(p)=>{
-    if(attempt!==currentAttempt)return;
-    stopWatchdog();player=p;
+    if(attempt!==currentAttempt){try{p.dispose?.()}catch(e){}resolve(false);return}
+    stopWatchdog();if(pendingRenderCancel===cancel)pendingRenderCancel=null;player=p;
     // Spine 4.x invokes update() after resetting its camera but before drawing.
     // Legacy bundled Spine 3.8 lacks this hook; leave its compatible CSS zoom.
     p._archiveNativeView=$('version').value!=='3.8'
@@ -153,12 +170,13 @@ async function show(options,title,onError){
         if(count>bestCount){bestCount=count;bestSkin=skin}
        }catch(e){console.warn('Skin inspect failed: '+skin.name,e)}
       }
-      if(bestSkin&&bestCount>initial){
+      if(bestSkin){
        sk.setSkin(bestSkin);sk.setSlotsToSetupPose();sk.updateWorldTransform();
        p.config.skin=bestSkin.name;
       }
      }
     }
+    resolve(true);
     const names=(p.skeleton?.data?.animations||[]).map(a=>a.name).filter(Boolean);
     $('animationPicker').replaceChildren(...names.map(name=>new Option(name,name)));
     $('animationPicker').disabled=!names.length;
@@ -174,11 +192,11 @@ async function show(options,title,onError){
       status('正在播放：'+title+' · '+preferred+'（共 '+names.length+' 个动作，可用上方动作菜单切换）');
     }catch(e){status('骨骼已加载，但自动播放动作失败：'+e.message,true)}
    },
-   error:(_p,reason)=>{if(attempt!==currentAttempt)return;stopWatchdog();
-    if(onError)onError(String(reason||'资源加载失败'));else status('加载失败：'+String(reason||'请核查 Spine 版本及资源路径'),true)}
+   error:(_p,reason)=>fail(reason)
   };
   $('player').replaceChildren();
-  watchdog=setTimeout(()=>{if(attempt!==currentAttempt)return;stopWatchdog();if(onError)onError('30 秒内未完成加载，可能是源站拒绝访问、图片下载缓慢或 WebGL 初始化失败');else status('加载超时（30 秒）。请检查浏览器网络控制台及源站访问。',true)},30000);
-  player=new spine.SpinePlayer('player',config);
- }catch(e){stopWatchdog();if(attempt===currentAttempt)status('播放器初始化失败：'+(e.message||String(e)),true)}
+  watchdog=setTimeout(()=>fail('30 秒内未完成加载，可能是源站拒绝访问、图片下载缓慢或 WebGL 初始化失败'),30000);
+  try{player=new spine.SpinePlayer('player',config)}catch(e){fail(e.message||String(e))}
+  });
+ }catch(e){if(attempt===currentAttempt){stopWatchdog();status('播放器初始化失败：'+(e.message||String(e)),true)}throw e}
 }

@@ -4,7 +4,13 @@ $('testUrls').onclick=async()=>{
  status('正在检查 '+c.name+' 的骨骼、图集和图集中的贴图…');
  const abort=new AbortController(), timer=setTimeout(()=>abort.abort(),12000);
  try{
-  const roots=[c.base+'.skel',c.base+'.atlas'];
+  if(c.engine==='cubism'){
+  const r=await fetch(c.modelUrl,{signal:abort.signal,cache:'no-store'});
+  if(!r.ok)throw Error('HTTP '+r.status);
+  await r.json();status('Live2D 模型索引可访问：'+c.name);return;
+ }
+ const paths=urls(c,'github');
+ const roots=[paths.skeleton,paths.atlas];
   const results=await Promise.all(roots.map(async url=>{try{
    const r=await fetch(url,{signal:abort.signal,cache:'no-store'});
    if(!r.ok)throw Error('HTTP '+r.status);
@@ -46,43 +52,51 @@ $('demo').onclick=()=>{
  cancelCharacterDownload();
  const version=$('version').value;
  const base='https://esotericsoftware.com/files/examples/'+version+'/spineboy/export/';
- show({skeleton:base+'spineboy-pro.skel',atlas:base+'spineboy-pma.atlas',animation:'walk'},'Spineboy 官方示例');
+ show({skeleton:base+'spineboy-pro.skel',atlas:base+'spineboy-pma.atlas',animation:'walk'},'Spineboy 官方示例').catch(()=>{});
 };
 $('files').onchange=async e=>{
  chosenFileList=Array.from(e.target.files||[]);
  $('fileList').textContent=chosenFileList.length?chosenFileList.map(f=>f.name).join(' · '):'尚未选择文件。';
- const complete=chosenFileList.some(f=>/\.(skel|json)$/i.test(f.name))&&chosenFileList.some(f=>/\.atlas$/i.test(f.name));
+ const complete=chosenFileList.some(f=>isSkeletonFile(f.name))&&chosenFileList.some(f=>isAtlasFile(f.name));
  $('saveLocal').disabled=!complete;
  if(!complete)return;
  cancelCharacterDownload();
- try{status('正在读取本地动画素材…');await playPack(await preparePack(chosenFileList))}
- catch(err){status('本地动画无法播放：'+(err.message||String(err)),true)}
+ const current=sequence;
+ try{status('正在读取本地动画素材…');const pack=await preparePack(chosenFileList);if(current===sequence)await playPack(pack)}
+ catch(err){if(current===sequence)status('本地动画无法播放：'+(err.message||String(err)),true)}
 };
 function toDataUri(file){return new Promise((resolve,reject)=>{const r=new FileReader;r.onload=()=>resolve(r.result);r.onerror=()=>reject(r.error);r.readAsDataURL(file)})}
 function basename(s){return s.replace(/\\/g,'/').split('/').pop()}
-function skeletonAndAtlas(files){const skeleton=files.find(f=>/\.(skel|json)$/i.test(f.name));const atlas=files.find(f=>/\.atlas$/i.test(f.name));if(!skeleton||!atlas)throw Error('请同时选择骨骼和 .atlas 文件');return {skeleton,atlas}}
+function isSkeletonFile(name){return /\.(?:skel(?:\.bytes)?|json)$/i.test(name)}
+function isAtlasFile(name){return /\.atlas(?:\.txt)?$/i.test(name)}
+function skeletonAndAtlas(files){const skeleton=files.find(f=>isSkeletonFile(f.name));const atlas=files.find(f=>isAtlasFile(f.name));if(!skeleton||!atlas)throw Error('请同时选择骨骼和 .atlas 文件');return {skeleton,atlas}}
 async function preparePack(files){const {skeleton,atlas}=skeletonAndAtlas(files);const rawDataURIs={};for(const f of files){rawDataURIs[basename(f.name)]=await toDataUri(f)}const lines=(await atlas.text()).split(/\r?\n/).map(x=>x.trim().replace(/^\uFEFF/,''));const pages=lines.filter(x=>/\.(png|jpg|jpeg|webp)$/i.test(x));const missing=pages.filter(x=>!rawDataURIs[basename(x)]);if(missing.length)throw Error('缺少贴图文件：'+missing.join('、'));const atlasName=basename(atlas.name),skeletonName=basename(skeleton.name);
 // The atlas BOM breaks some Spine parsers; rewrite the in-memory text without changing original files.
 rawDataURIs[atlasName]='data:text/plain,'+(await atlas.text()).replace(/^\uFEFF/,'');
-return {id:skeletonName,version:$('version').value,skeleton:skeletonName,atlas:atlasName,rawDataURIs}}
+const detected=/\.json$/i.test(skeletonName)
+ ?{version:String(JSON.parse(await skeleton.text()).skeleton?.spine||'')} :await detectSpineVersion(skeleton);
+const version=detected.version.split('.').slice(0,2).join('.');
+if(!['3.8','4.0','4.1','4.2'].includes(version))throw Error('不支持的本地骨骼版本：'+detected.version);
+return {id:skeletonName,version,exportVersion:detected.version,headerChecked:true,skeleton:skeletonName,atlas:atlasName,rawDataURIs}}
 function playPack(pack){
- // Spine Downloader.dataUriToString returns the raw part after comma unchanged.
- // So text must be stored as unescaped Unicode: do not base64 or percent-encode.
- const atlasUri=pack.rawDataURIs?.[pack.atlas];
- if(atlasUri){
-  const comma=atlasUri.indexOf(',');
-  let contents=atlasUri.slice(comma+1);
-  if(atlasUri.includes('base64,')){
+ // Spine 3.8 consumes data URIs through XHR; 4.x reads their text literally.
+ // Normalize both atlas and JSON skeleton files, including local FileReader output.
+ const textFiles=[[pack.atlas,'text/plain']];
+ if(/\.json$/i.test(pack.skeleton))textFiles.push([pack.skeleton,'application/json']);
+ for(const [filename,type] of textFiles){
+  const uri=pack.rawDataURIs?.[filename];if(!uri)continue;
+  const comma=uri.indexOf(',');
+  if(comma<0)throw Error('无效的动画文本资源：'+filename);
+  let contents=uri.slice(comma+1);
+  if(uri.slice(0,comma).includes(';base64')){
    const binary=Uint8Array.from(atob(contents),c=>c.charCodeAt(0));
    contents=new TextDecoder('utf-8').decode(binary);
-  }else if(/%0A|%0D|%[89A-F][0-9A-F]/i.test(contents)){
+  }else if(uri.slice(0,comma).includes(';charset=utf-8')||/%0A|%0D|%[89A-F][0-9A-F]/i.test(contents)){
    try{contents=decodeURIComponent(contents)}catch(e){}
   }
-  // 3.8 runs the data URI through XMLHttpRequest, whereas Spine 4.x reads it literally.
   const clean=contents.replace(/^\uFEFF/,'');
-  pack.rawDataURIs[pack.atlas]=pack.version==='3.8'
-    ?'data:text/plain;charset=utf-8,'+encodeURIComponent(clean)
-    :'data:text/plain,'+clean;
+  pack.rawDataURIs[filename]=pack.version==='3.8'
+   ?'data:'+type+';charset=utf-8,'+encodeURIComponent(clean):'data:'+type+','+clean;
  }
  setVersion(pack.version);
  const matching=allCharacters.find(c=>(c.gameId||'nikke')+'-'+c.id===pack.id);
@@ -100,8 +114,9 @@ $('savedPacks').onchange=async()=>{
  $('deleteSaved').disabled=!id;
  if(!id)return;
  cancelCharacterDownload();
- try{status('正在读取已保存动画包…');const pack=await dbAction('readonly',s=>s.get(id));if(!pack)throw Error('素材包不存在');await playPack(pack)}
- catch(err){status('本地素材播放失败：'+(err.message||String(err)),true)}
+ const current=sequence;
+ try{status('正在读取已保存动画包…');const pack=await dbAction('readonly',s=>s.get(id));if(current!==sequence)return;if(!pack)throw Error('素材包不存在');await playPack(pack)}
+ catch(err){if(current===sequence)status('本地素材播放失败：'+(err.message||String(err)),true)}
 };
 $('deleteSaved').onclick=async()=>{const id=$('savedPacks').value;if(!id)return;if(!confirm('删除本机保存的动画素材包：'+id+'？'))return;try{await dbAction('readwrite',s=>s.delete(id));await refreshSaved();status('已删除本机动画素材包 '+id)}catch(e){status('删除失败：'+e.message,true)}};
 $('version').onchange=()=>{

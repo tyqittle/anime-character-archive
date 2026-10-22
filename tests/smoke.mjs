@@ -316,7 +316,7 @@ assert.ok(!versionRegexp.test('unrecognized'),'Spine version regex accepted inva
 const galleryHTML=read('characters.html'),spineHTML=read('spine.html');
 for(const [html,modules] of [[galleryHTML,galleryModules],[spineHTML,spineModules]]){
  const loaded=[...html.matchAll(/<script defer src="\.\/([^"?]+)\?v=[^"]+"><\/script>/g)].map(x=>x[1]);
- assert.deepEqual(loaded,[...modules.slice(0,3),...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/performance.js']:[]),...modules.slice(3),'assets/js/shared/friend-links.js'],'Browser modules and common friend links must preserve loading order');
+ assert.deepEqual(loaded,[...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/shared/voice-playback.js']:[]),...modules.slice(0,3),...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/performance.js']:[]),...modules.slice(3),'assets/js/shared/friend-links.js',...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/character-audio.js']:[])],'Browser modules and common friend links must preserve loading order');
  assert.ok(!/<script>\s*['"]use strict/.test(html),'Page-level application logic must live in feature modules');
 }
 for(const item of ['assets/gallery-base.css','assets/gallery-theme.css','assets/spine-base.css','assets/spine-theme.css']){
@@ -356,7 +356,7 @@ for(const c of extra.characters){
 for(const [game,count] of Object.entries(expectedNew))
  assert.equal(extra.characters.filter(x=>x.gameId===game).length,count,'Unexpected import count for '+game);
 assert.ok(spineHTML.includes('value="girlsfrontline"')&&spineHTML.includes('value="arknights"'),'New game filters not connected');
-assert.ok(spineSource.includes('newGamesCatalogUrl')&&spineSource.includes('visibleCardLimit+=240'),'New game loading/pagination missing');
+assert.ok(spineSource.includes('newGamesCatalogUrl')&&spineSource.includes('visibleCardLimit+=96'),'New game loading/pagination missing');
 
 
 // Same source and placement on the gallery footer and desktop-visible theater stage.
@@ -398,7 +398,7 @@ assert.ok(read('assets/js/spine/spine-runtime.js').includes('update:(p)=>applySh
 // compatibility must be shared instead of a game-specific include list.
 const catalogBootstrap=read('assets/js/spine/bootstrap.js');
 assert.ok(catalogBootstrap.includes('Promise.allSettled')&&catalogBootstrap.includes("cache:'no-cache'"),
- 'Animation catalogs should load in parallel with conditional HTTP cache validation');
+ 'Animation catalogs should load in parallel with versioned HTTP caching');
 assert.ok(catalogBootstrap.includes('isPlayableAnimationEntry')&&!catalogBootstrap.includes("c.gameId==='arknights'&&c.base"),
  'Spine/Cubism catalog validation should not depend on individual game IDs');
 

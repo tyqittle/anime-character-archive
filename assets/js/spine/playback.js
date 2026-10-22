@@ -25,8 +25,13 @@ async function playCharacter(c){
    if(current!==sequence)return;
    status('已找到经版本检测的本地缓存：Spine '+pack.exportVersion);
    rememberSpinePack(pack);
-   await playPack(pack);
-   return;
+   try{await playPack(pack);return}
+   catch(e){
+    if(current!==sequence)return;
+    forgetSpinePack(packId);
+    await dbAction('readwrite',store=>store.delete(packId)).catch(()=>{});
+    pack=null;
+   }
   }
   let failure='';
   for(const mirror of (c.gameId==='nikke'?['github','legacy']:['github'])){
@@ -36,15 +41,16 @@ async function playCharacter(c){
     pack=await downloadPack(c,mirror,controller.signal,()=>current===sequence);
     if(current!==sequence)return;
     // Display immediately, then retain only a bounded in-memory hot pack.
-    rememberSpinePack(pack);
     await playPack(pack);
+    if(current!==sequence)return;
+    rememberSpinePack(pack);
     if(current!==sequence)return;
     const saveForRepeat=()=>dbAction('readwrite',s=>s.put(pack)).then(()=>refreshSaved())
       .catch(e=>console.warn('缓存写入失败（不会影响当前播放）',e));
     if('requestIdleCallback' in window)requestIdleCallback(saveForRepeat,{timeout:6000});
     else setTimeout(saveForRepeat,1800);
     return;
-   }catch(e){failure+=mirror+'：'+(e.message||e)+'；';}
+   }catch(e){forgetSpinePack(packId);failure+=mirror+'：'+(e.message||e)+'；';}
   }
   if(current===sequence)status('角色资源下载失败。'+failure+'可选择本地导入已获得的动画文件。',true);
  }catch(e){if(current===sequence)status('播放失败：'+(e.message||String(e)),true)}

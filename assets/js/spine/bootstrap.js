@@ -79,10 +79,14 @@ async function fetchAnimationManifest(url){
 })();
 if(['3.8','4.0','4.1','4.2'].includes(params.get('v')))$('version').value=params.get('v');
 refreshSaved().then(async()=>{
- const packId=params.get('pack');if(!packId)return;
+ const packId=params.get('pack');if(!packId||params.get('id'))return;
+ const current=sequence;
  try{
   const pack=await dbAction('readonly',s=>s.get(packId));
-  if(pack){$('savedPacks').value=packId;$('savedPacks').onchange();playPack(pack)}
-  else status('本地缓存中找不到 '+packId,true)
- }catch(e){status('读取本地缓存失败：'+e.message,true)}
+  if(current!==sequence)return;
+  if(pack){
+   $('savedPacks').value=packId;
+   await $('savedPacks').onchange();
+  }else status('本地缓存中找不到 '+packId,true);
+ }catch(e){if(current===sequence)status('读取本地缓存失败：'+e.message,true)}
 });

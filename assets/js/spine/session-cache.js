@@ -38,3 +38,10 @@ function recentSpinePack(id){
  hotSpinePacks.set(id,entry);
  return entry.pack;
 }
+
+function forgetSpinePack(id){
+ const entry=hotSpinePacks.get(id);
+ if(!entry)return;
+ hotPackBytes-=entry.bytes;
+ hotSpinePacks.delete(id);
+}

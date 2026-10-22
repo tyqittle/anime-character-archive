@@ -32,6 +32,7 @@ const targetFPS=lowPower?30:60;
 // Keep only the final click in a burst. Never display an older asynchronous result.
 function requestLoad(name,id,url){
  if(queuedLoad)clearTimeout(queuedLoad);
+ if(typeof frameVoicePlayer!=='undefined')frameVoicePlayer.stop();
  ++currentGeneration;
  queuedLoad=setTimeout(()=>{queuedLoad=null;load(name,id,url)},110);
 }
@@ -43,7 +44,7 @@ function fit(){
  if(!app||!model)return;
  // Live2D models have nonzero local-bound origins. Subtracting bounds.x/y
  // is essential: centering by model.width alone can cut off half the skin.
- const w=app.renderer.width,h=app.renderer.height;
+ const w=app.screen.width,h=app.screen.height;
  model.scale.set(1);
  let bounds=model.getLocalBounds();
  if(!bounds||!Number.isFinite(bounds.width)||!Number.isFinite(bounds.height)||bounds.width<=0||bounds.height<=0)
