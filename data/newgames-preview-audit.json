@@ -1,22 +1,336 @@
 {
-  "date": "2026-10-22",
   "scope": "new dynamic game batch",
   "counts": {
     "arknights": {
       "indexed": 359,
-      "captured": 337
+      "verifiedPreview": 337,
+      "missingPreview": 22
     },
     "girlsfrontline": {
       "indexed": 297,
-      "captured": 246
+      "verifiedPreview": 246,
+      "missingPreview": 51
     },
     "konosuba": {
       "indexed": 61,
-      "captured": 56
+      "verifiedPreview": 56,
+      "missingPreview": 5
     }
   },
-  "newCapturesInThisRun": 638,
-  "previousCapturesRetained": 1,
-  "status": "only actual nonblank browser frames linked to the same model id",
-  "unverifiedNotice": "No preview is assigned to models that did not pass capture; index presence is not universal playback proof."
+  "missing": [
+    {
+      "gameId": "arknights",
+      "id": "ak-char_1026_gvial2_summer_12-3f53e8d"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-char_1026_gvial2_summer_12_0-22ce5fd"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-char_1027_greyy2_snow_5-48369fe"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-char_1027_greyy2_snow_5_0-65ebbcc"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-char_130_doberm_epoque_7-ceed0c3"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-char_209_ardign_snow_1-14a2c0b"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-char_209_ardign_snow_1_0-e0c9a91"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-char_343_tknogi_epoque_9-ad1b0f8"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-char_343_tknogi_snow_6-5a95f91"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-char_343_tknogi_snow_6_0-820e1ab"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-char_388_mint_epoque_30-d8296f6"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-char_388_mint_epoque_30_0-d189e95"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-char_431_ashlok_epoque_28-0924673"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-char_431_ashlok_epoque_28_0-2e6bce6"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-char_475_akafyu_epoque_15-6b0b5ab"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-char_479_sleach_epoque_14-29c6bac"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-char_479_sleach_epoque_14_0-3d9c464"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-char_485_pallas_epoque_19-90edf0f"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-char_485_pallas_epoque_19_0-3a94e85"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-token_10027_ironmn_pile3_summer_11-3024f3c"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-token_10027_ironmn_pile3_summer_11_0-42006ca"
+    },
+    {
+      "gameId": "arknights",
+      "id": "ak-token_10027_ironmn_pile3_summer_11_1-985bf58"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_79type_1402_destroy_destroy-d41eb2b"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_98k_4301_destroy_destroy-2162933"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_air_attack_1_1-f60af2c"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_air_attack_2_2-16b35ae"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_air_attack_3_3-23b5c15"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_airborne_1_1-f60af2c"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_airborne_2_2-16b35ae"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_airborne_3_3-23b5c15"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_an94_3303_destroy_destroy-a4aac17"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_an94_3303_normal_normal-7423a2c"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_ar15mod_destroy_destroy-622aaef"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_armor_1_1-f60af2c"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_armor_2_2-16b35ae"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_armor_3_3-23b5c15"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_aug_4802_destroy_destroy-01c8134"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_carcano1938_2202_normal_normal-78e23ad"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_carcano1938_2904_normal_normal-a156397"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_cbjms_2205_destroy_destroy-d41eb2b"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_cbjms_3503_normal_normal-e834d86"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_command_1_1-f60af2c"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_command_2_2-16b35ae"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_command_3_3-23b5c15"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_fighting_1_1-e151d77"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_fighting_2_2-a07e50b"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_fighting_3_3-b6408d7"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_fortress_1_1-f60af2c"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_fortress_2_2-16b35ae"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_fortress_3_3-23b5c15"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_g41_2401_normal_normal-3dbb3ef"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_generalliu_5101_normal_normal-1a08f12"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_golden_1_1-f60af2c"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_golden_2_2-16b35ae"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_golden_3_3-23b5c15"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_kp31_310_destroy_destroy-799530c"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_m1903_5_destroy_destroy-2a0d5a5"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_mg5_4902_destroy_destroy-d41eb2b"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_mlemk1_604_normal_normal-80d654f"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_ro635_4504_normal_normal-e834d86"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_shield_1_1-f60af2c"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_shield_2_2-16b35ae"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_shield_3_3-23b5c15"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_squads_ags_30_ags_30-bafcf0a"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_squads_bgm_71_bgm_71-1a95d57"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_sr3mp_4101_normal_normal-3197af7"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_target_1_1-9e68c50"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_target_2_2-16b35ae"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_target_3_3-23b5c15"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_ump45mod_normal_normal-ddfd2c3"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_zastavam21_4304_destroy_destroy-38d97ac"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_zb26_4703_destroy_destroy-9cc515f"
+    },
+    {
+      "gameId": "girlsfrontline",
+      "id": "gf-live2dnew_zb26_4703_normal_normal-4d919e5"
+    },
+    {
+      "gameId": "konosuba",
+      "id": "ks-1044100_1044100-9dd6260"
+    },
+    {
+      "gameId": "konosuba",
+      "id": "ks-1094100_1094100-fa62e96"
+    },
+    {
+      "gameId": "konosuba",
+      "id": "ks-1209100_1209100-e8cb950"
+    },
+    {
+      "gameId": "konosuba",
+      "id": "ks-1219100_1219100-5128c5f"
+    },
+    {
+      "gameId": "konosuba",
+      "id": "ks-1349100_1349100-20ffd44"
+    }
+  ],
+  "newCapturesInThisRun": 0,
+  "status": "shared exact-model WebP verification policy"
 }
