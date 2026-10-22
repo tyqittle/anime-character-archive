@@ -89,9 +89,10 @@ function uniqueAnimationEntries(entries){
 function syncSelectedCharacterDisplay(){
  const selected=chosen(),output=$('selectedCharacterDisplay');
  if(!output)return;
- if(!selected){output.textContent='尚未选择角色 · 可搜索或点击下方卡片';return}
+ if(!selected){output.textContent='尚未选择角色 · 可搜索或点击下方卡片';if(typeof updateVoiceUI==='function')updateVoiceUI();return}
  const info=charInfo(selected);
  output.textContent=(info.zh&&info.zh!==info.name?info.zh+' · ':'')+info.name+(selected.costumeName?' · '+selected.costumeName:'');
+ if(typeof updateVoiceUI==='function')updateVoiceUI();
 }
 function refreshCharacters(){
  const game=$('gameFilter').value,query=$('characterSearch').value.toLowerCase().trim();
