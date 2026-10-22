@@ -9,6 +9,7 @@ const flush=async()=>{for(let i=0;i<8;i++)await Promise.resolve()};
 function context(extra={}){
  let serial=0;const timers=new Map();
  const ctx=vm.createContext({console,AbortController,URL,URLSearchParams,TextDecoder,Uint8Array,
+  location:{origin:'https://archive.example',search:''},
   setTimeout(fn){const id=++serial;timers.set(id,fn);return id},
   clearTimeout(id){timers.delete(id)},...extra});
  ctx.window=ctx;ctx.timers=timers;return ctx;

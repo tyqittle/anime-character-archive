@@ -13,6 +13,8 @@ on:
       - 'scripts/preview_frame_pipeline.py'
       - 'scripts/merge_azurlane_previews.py'
       - 'azurlane-stage.html'
+      - 'assets/js/live2d/runtime-loader.js'
+      - 'assets/js/shared/asset-sources.js'
       - 'assets/spine-theater-layout.css'
   workflow_dispatch:
 permissions:
