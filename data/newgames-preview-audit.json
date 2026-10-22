@@ -232,5 +232,330 @@
     }
   ],
   "newCapturesInThisRun": 0,
+  "failedCaptures": [
+    {
+      "id": "ak-char_1026_gvial2_summer_12-3f53e8d",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: B_Annex_9 (mesh attachment: B_Annex_9)"
+    },
+    {
+      "id": "ak-char_1026_gvial2_summer_12_0-22ce5fd",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: F_Annex_1a(3) (mesh attachment: F_Annex_1a(3))"
+    },
+    {
+      "id": "ak-char_1027_greyy2_snow_5-48369fe",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: B_Bell_01 (region attachment: B_Bell_01)"
+    },
+    {
+      "id": "ak-char_1027_greyy2_snow_5_0-65ebbcc",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: C_E_Finger_01 (region attachment: C_E_Finger_01)"
+    },
+    {
+      "id": "ak-char_130_doberm_epoque_7-ceed0c3",
+      "gameId": "arknights",
+      "category": "blank-frame",
+      "message": "Blank/tiny pixel variance 6.27"
+    },
+    {
+      "id": "ak-char_209_ardign_snow_1-14a2c0b",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: F_B_Bow (mesh attachment: F_B_Bow)"
+    },
+    {
+      "id": "ak-char_209_ardign_snow_1_0-e0c9a91",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: B_Bow (mesh attachment: B_Bow)"
+    },
+    {
+      "id": "ak-char_343_tknogi_epoque_9-ad1b0f8",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: C_tape_￢ﾅﾠ_01 (mesh attachment: C_tape_￢ﾅﾠ_01)"
+    },
+    {
+      "id": "ak-char_343_tknogi_snow_6-5a95f91",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: B_Annex_A_a (mesh attachment: B_Annex_A_a)"
+    },
+    {
+      "id": "ak-char_343_tknogi_snow_6_0-820e1ab",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: F_Annex_A_a (mesh attachment: F_Annex_A_a)"
+    },
+    {
+      "id": "ak-char_388_mint_epoque_30-d8296f6",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: B_A_Belt (region attachment: B_A_Belt)"
+    },
+    {
+      "id": "ak-char_388_mint_epoque_30_0-d189e95",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: F_A_Bangs (mesh attachment: F_A_Bangs)"
+    },
+    {
+      "id": "ak-char_431_ashlok_epoque_28-0924673",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: F_B_Hair (mesh attachment: F_B_Hair)"
+    },
+    {
+      "id": "ak-char_431_ashlok_epoque_28_0-2e6bce6",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: B_B_Hair_a (mesh attachment: B_B_Hair_a)"
+    },
+    {
+      "id": "ak-char_475_akafyu_epoque_15-6b0b5ab",
+      "gameId": "arknights",
+      "category": "blank-frame",
+      "message": "Blank/tiny pixel variance 0.41"
+    },
+    {
+      "id": "ak-char_479_sleach_epoque_14-29c6bac",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: F_Arm_L (mesh attachment: F_Arm_L)"
+    },
+    {
+      "id": "ak-char_479_sleach_epoque_14_0-3d9c464",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: B_Arm_L (mesh attachment: B_Arm_L)"
+    },
+    {
+      "id": "ak-char_485_pallas_epoque_19-90edf0f",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: C_FX_01 (mesh attachment: C_FX_01)"
+    },
+    {
+      "id": "ak-char_485_pallas_epoque_19_0-3a94e85",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: B_Belt_01 (mesh attachment: B_Belt_01)"
+    },
+    {
+      "id": "ak-token_10027_ironmn_pile3_summer_11-3024f3c",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: C_F_Body_01 (mesh attachment: C_F_Body_01)"
+    },
+    {
+      "id": "ak-token_10027_ironmn_pile3_summer_11_0-42006ca",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: C_B_Body (mesh attachment: C_B_Body)"
+    },
+    {
+      "id": "ak-token_10027_ironmn_pile3_summer_11_1-985bf58",
+      "gameId": "arknights",
+      "category": "atlas-mismatch",
+      "message": "加载失败：Error: could not load skeleton .skel. Error: Region not found in atlas: C_R_Body_01 (mesh attachment: C_R_Body_01)"
+    },
+    {
+      "id": "gf-live2dnew_air_attack_1_1-f60af2c",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_air_attack_2_2-16b35ae",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_air_attack_3_3-23b5c15",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_airborne_1_1-f60af2c",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_airborne_2_2-16b35ae",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_airborne_3_3-23b5c15",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_armor_1_1-f60af2c",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_armor_2_2-16b35ae",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_armor_3_3-23b5c15",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_command_1_1-f60af2c",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_command_2_2-16b35ae",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_command_3_3-23b5c15",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_fighting_1_1-e151d77",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_fighting_2_2-a07e50b",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_fighting_3_3-b6408d7",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_fortress_1_1-f60af2c",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_fortress_2_2-16b35ae",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_fortress_3_3-23b5c15",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_golden_1_1-f60af2c",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_golden_2_2-16b35ae",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_golden_3_3-23b5c15",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_shield_1_1-f60af2c",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_shield_2_2-16b35ae",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_shield_3_3-23b5c15",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_squads_ags_30_ags_30-bafcf0a",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_squads_bgm_71_bgm_71-1a95d57",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_sr3mp_4101_normal_normal-3197af7",
+      "gameId": "girlsfrontline",
+      "category": "blank-frame",
+      "message": "Blank/tiny pixel variance 0.07"
+    },
+    {
+      "id": "gf-live2dnew_target_1_1-9e68c50",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_target_2_2-16b35ae",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "gf-live2dnew_target_3_3-23b5c15",
+      "gameId": "girlsfrontline",
+      "category": "timeout",
+      "message": "page.waitForFunction: Timeout 60000ms exceeded."
+    },
+    {
+      "id": "ks-1349100_1349100-20ffd44",
+      "gameId": "konosuba",
+      "category": "blank-frame",
+      "message": "Blank/tiny pixel variance 5.17"
+    }
+  ],
+  "failureSummary": {
+    "atlas-mismatch": 20,
+    "blank-frame": 4,
+    "timeout": 29
+  },
   "status": "shared exact-model WebP verification policy"
 }
