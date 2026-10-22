@@ -24,6 +24,24 @@ foreach ($change in $changes) {
     if ($count -ne 1) { throw "Expected exactly one match for $before, got $count" }
     if ($before -ne $after) { $text = $text.Replace($before,$after) }
 }
+# Explicitly insert hooks that include a newline. PowerShell's nested @()
+# array expression can coerce those concatenations; never infer success from
+# merely seeing the original anchor in the source.
+if (-not $text.Contains('AcceptArchiveStartupArgs(e.Args);')) {
+    $old = '        base.OnStartup(e);'
+    if (-not $text.Contains($old)) { throw 'Missing OnStartup hook' }
+    $text = $text.Replace($old, $old + "`r`n" + '        AcceptArchiveStartupArgs(e.Args);')
+}
+if (-not $text.Contains('OfferArchiveProtocolRegistration')) {
+    $old = '        _mainWindow.Show();'
+    if (-not $text.Contains($old)) { throw 'Missing MainWindow.Show hook' }
+    $text = $text.Replace($old, $old + "`r`n" + '        Dispatcher.BeginInvoke(new Action(OfferArchiveProtocolRegistration));')
+}
+if (-not ($text.Contains('AcceptArchiveStartupArgs(e.Args);') -and
+          $text.Contains('OfferArchiveProtocolRegistration') -and
+          $text.Contains('RestoreArchiveCharactersAsync()'))) {
+    throw 'Native website protocol boot hooks could not be applied'
+}
 [System.IO.File]::WriteAllText($source, $text, [System.Text.UTF8Encoding]::new($false))
 Copy-Item -LiteralPath $addon -Destination (Join-Path $projectDir 'NativeArchiveBridge.cs') -Force
 Write-Host 'Applied audited archive bridge to upstream SpinePet application; renderer unchanged.'
