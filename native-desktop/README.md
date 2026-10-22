@@ -49,3 +49,15 @@ Windows CI 会编译原生客户端并测试 c015 模型能被上游 Spine 4.1 �
 5. 回到网站按 `Ctrl+F5` 刷新，选择 `c113_01`，点击「放到桌面」。
 
 本仓库旧 `Open-ArchiveCharacter.ps1` 也已经改为读取实际骨骼版本，防止老式脚本再次凭 `spineVersion`/`versionUnverified` 误判。但新的安全发布包**不会附带 PowerShell 启动脚本**，一键导入首选原生 EXE。若浏览器或安全软件提示危险，不要关闭安全保护绕过，先核对下载来源与构建校验信息。
+
+## 自动升级安装版（2026-10-22）
+
+此前的 `native-spinepet-core-windows-x64` 是便携 ZIP，不能安全地自行覆盖正在使用的 EXE。新增基于开源 [Velopack](https://github.com/velopack/velopack) 1.2.161 的 `Setup.exe` 安装包。**旧的便携包需要最后改装一次 Setup；此后自动检查、下载并校验更新包，在用户确认后自动更新、重启。** Windows 安装版使用 `%LOCALAPPDATA%` 的稳定目录，不需要管理员权限。
+
+下载 [GitHub Releases](https://github.com/tyqittle/anime-character-archive/releases) 最新 **SpinePet Desktop** 的 `*-Setup.exe`，安装后程序启动时自动检查更新；若更新可用则在后台下载，Velopack 校验更新包，安装前弹出确认提示。GitHub Actions 只有在独立安全审计通过后才会将更新包发布到 Releases。Windows 安全防护发出警告时不要强行绕过；没有商业代码签名，不宣称不存在安全风险。
+
+重要：安装版的角色文件放在 `%LOCALAPPDATA%\SpinePet\ArchiveResources`，不会因版本切换被删掉。历史便携 ZIP 的 `res` 文件仍在旧目录；首次改用安装版时可能需再导入一次，以后的自动更新会保留文件。不要把下载的 ZIP 中的 `app` 目录直接复制到 Velopack 的 `current` 内，否则可能破坏更新机制。
+
+桌面完整背景修复：原生 [My_SpinePet](https://github.com/KAIDO-YONAGI/My_SpinePet) 使用逐动画取样估算透明 GPU 表面的大小；背景动画或长裙动作超出预估就会裁切。新增 `Patch-RenderEnvelope.ps1` 使用每一帧实际 Spine 顶点更新表面边界，在越界时扩容而不对桌面截图抠图。**如果素材本身就只包含半张场景，无法凭扩容创造原始资源不存在的画面**，需要另行修复该套素材的场景图层。
+
+原便携 ZIP 仍保留用于兼容与调试，但不支持未来自动更新。若要免去每次下载解压，必须使用新发布的 Velopack Setup 安装版。
