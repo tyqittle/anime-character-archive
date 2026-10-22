@@ -77,3 +77,18 @@ Velopack 标准的 `AnimeCharacterSpinePet-win-Setup.exe` 是 **一键安装**�
 注意这是**自定义目录下的新安装**，不等于原来 C 盘程序的自动迁移。如果之前装过默认安装版，先保存现有配置和角色，退出旧应用；不要直接拖动 `current` 子目录、`Update.exe` 或删除 `%LOCALAPPDATA%\SpinePet`。Windows 的「已安装的应用」中可能出现重复安装，确认新路径正常运行后再卸载旧程序，并确认 `animecharacter://` 协议对应的是当前应用。若当前路径无法写入、系统要求提权，建议选择普通用户有写入权的 D 盘文件夹，不要选受保护的系统目录。
 
 **角色文件与软件安装目录不是同一回事。** 当前游戏模型、配置、更新检查记录等持久数据仍可能存放在 `%LOCALAPPDATA%\SpinePet` 下，其中已下载的游戏模型在 `ArchiveResources`。选择 D 盘安装 MSI **不会自动搬走旧素材和数据**；避免误删角色资源。后续可以再独立提供资源库目录迁移功能。
+
+
+## 双目录 EXE 安装程序（选择安装盘和角色素材盘）
+
+如果想要正常的中文可视化安装界面，**不要再使用旧版的 `AnimeCharacterSpinePet-win-Setup.exe`**。请在 [Releases](https://github.com/tyqittle/anime-character-archive/releases) 中选择 **`AnimeCharacterSpinePet-ChooseFolders-Setup.exe`**。这个单独的 EXE 内嵌同一次构建的 Velopack 安装程序，由开源 Inno Setup 6 编译。GitHub Actions 会把完整 EXE 连同原先的安装包一起交给独立 ClamAV 检查，通过后才发布。
+
+双目录选择界面有两项：
+- **程序安装目录**：如 `D:\Apps\AnimeCharacterSpinePet`（Velopack 的可自动更新程序及版本缓存）。安装向导使用官方 `Setup.exe --installto`，而不是直接复制应用文件或修改 Update.exe。
+- **角色素材目录**：如 `E:\AnimeAssets\Characters`，存储动态模型的 `.skel`、`.atlas`、PNG 贴图。软件运行时从当前用户 `HKCU\Software\AnimeCharacterSpinePet\ResourceDirectory` 读取该目录，不依赖安装包路径，也不被 Velopack 更新覆盖。
+
+两目录必须是不同且不相互包含的本机盘符文件夹；不能使用盘符根目录、网络共享或受系统保护而当前用户无法写入的目录。可选同一盘的两个独立文件夹，也可跨 D/E 等磁盘。安装向导在真正调用 Velopack 前确认素材路径，并在安装成功后保存目录设置、启动 SpinePet。它不会删除或移动旧目录里的素材；建议保留卸载之前的模型备份。原先使用 `%LOCALAPPDATA%\SpinePet\ArchiveResources` 的素材可在选择页面沿用该目录，无需重新下载。
+
+**重点：程序仍自动更新**。内层 Velopack Setup 负责安装及今后的更新；外层 Inno Setup 只是首次选择两个路径。每次自动更新只更换应用 `current` 版本目录，不改变选定的游戏素材文件夹，也不要求再次打开这个安装向导。原版 MSI / Velopack Setup.exe / Portable.zip 保留供其他安装方式使用。
+
+如果选择的磁盘暂时不可访问，客户端会回退到原来持久化用户数据目录，避免启动时崩溃。请不要在游戏运行时断开用于放置素材的移动磁盘。首次安装未经商业签名，Windows 如显示安全拦截应先核对 GitHub 发布来源。
