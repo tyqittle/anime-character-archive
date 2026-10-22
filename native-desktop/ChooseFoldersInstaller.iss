@@ -79,9 +79,14 @@ begin
   FoldersPage.Add('程序安装目录');
   FoldersPage.Add('角色素材目录');
 
-  // Old self-updating installs: preserve existing downloaded assets if any.
-  FoldersPage.Values[0] := ExpandConstant('{localappdata}\AnimeCharacterSpinePet');
-  FoldersPage.Values[1] := ExpandConstant('{localappdata}\SpinePet\ArchiveResources');
+  // GUI defaults. PROGRAMDIR/MODELDIR are test-only unattended overrides.
+  // They allow CI to test this *exact* Inno EXE with two real chosen folders.
+  FoldersPage.Values[0] := ExpandConstant('{param:PROGRAMDIR|}');
+  if FoldersPage.Values[0] = '' then
+    FoldersPage.Values[0] := ExpandConstant('{localappdata}\AnimeCharacterSpinePet');
+  FoldersPage.Values[1] := ExpandConstant('{param:MODELDIR|}');
+  if FoldersPage.Values[1] = '' then
+    FoldersPage.Values[1] := ExpandConstant('{localappdata}\SpinePet\ArchiveResources');
 end;
 
 function NextButtonClick(CurPageID: Integer): Boolean;
@@ -116,23 +121,41 @@ end;
 
 procedure CurStepChanged(CurStep: TSetupStep);
 var
-  Payload, Stub: String;
+  Payload, Stub, LogPath, Arguments: String;
   Code: Integer;
 begin
   if CurStep <> ssPostInstall then Exit;
   try
+    // Wizard pages are skipped in /VERYSILENT mode. Still read and verify
+    // their values so the automated test exercises the same installation.
+    if ProgramFolder = '' then
+    begin
+      ProgramFolder := Trim(FoldersPage.Values[0]);
+      ModelFolder := Trim(FoldersPage.Values[1]);
+    end;
+    if (not ProperDirectory(ProgramFolder)) or
+       (not ProperDirectory(ModelFolder)) or
+       IsNestedFolder(ProgramFolder, ModelFolder) or
+       IsNestedFolder(ModelFolder, ProgramFolder) then
+      RaiseException('安装位置无效或程序与素材文件夹重叠，请重新选择。');
+
     if not ForceDirectories(ModelFolder) then
       RaiseException('无法创建素材文件夹：' + ModelFolder);
     ExtractTemporaryFile('AnimeCharacterSpinePet-win-Setup.exe');
     Payload := ExpandConstant('{tmp}\AnimeCharacterSpinePet-win-Setup.exe');
 
-    // Install the genuine Velopack app in the chosen location. Suppress its
-    // second wizard and first-launch action until registry config is written.
-    if not Exec(Payload, '--silent --installto "' + ProgramFolder + '"',
-      '', SW_HIDE, ewWaitUntilTerminated, Code) then
-      RaiseException('启动原生安装程序失败，Windows 错误：' + IntToStr(Code));
+    // Preserve the actual native install log in the selected data folder.
+    // Exit code 1 alone is never enough to diagnose a failed install.
+    LogPath := AddBackslash(ModelFolder) + 'SpinePet-Install.log';
+    Arguments := '--silent --verbose --log "' + LogPath +
+      '" --installto "' + ProgramFolder + '"';
+    if not Exec(Payload, Arguments, '',
+      SW_HIDE, ewWaitUntilTerminated, Code) then
+      RaiseException('原生安装程序无法启动，Windows 错误：' + IntToStr(Code) +
+        '；内部日志：' + LogPath);
     if Code <> 0 then
-      RaiseException('原生安装程序退出代码：' + IntToStr(Code));
+      RaiseException('原生安装程序退出代码：' + IntToStr(Code) +
+        '；详细安装日志：' + LogPath);
 
     Stub := AddBackslash(ProgramFolder) + 'SpinePet.exe';
     if not FileExists(Stub) then
@@ -144,8 +167,9 @@ begin
       'ResourceDirectory', ModelFolder) then
       RaiseException('无法保存素材目录，请检查当前用户注册表写入权限。');
 
-    if not Exec(Stub, '', ProgramFolder, SW_SHOWNORMAL,
-      ewNoWait, Code) then
+    if (not WizardSilent()) and
+       (not Exec(Stub, '', ProgramFolder, SW_SHOWNORMAL,
+       ewNoWait, Code)) then
       MsgBox('程序安装成功，但无法自动启动。请在以下目录手动打开 SpinePet.exe：'
         + #13#10 + ProgramFolder, mbInformation, MB_OK);
   except
