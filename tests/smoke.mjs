@@ -505,6 +505,15 @@ assert.ok(wizardInstaller.includes("RegWriteStringValue(HKCU") &&
 assert.ok(wizardInstaller.includes('IsNestedFolder(P, M)') &&
  wizardInstaller.includes('IsNestedFolder(M, P)'),
  'Model directory must never be inside or contain the replaceable app folder');
+assert.ok(wizardInstaller.includes('CreateOutputProgressPage(') &&
+ wizardInstaller.includes('ProgressPage.SetProgress(0, 100)') &&
+ wizardInstaller.includes('ProgressPage.Hide;') &&
+ wizardInstaller.includes('ProgressPage.Free;') &&
+ wizardInstaller.includes('SW_HIDE, ewNoWait, Code') &&
+ wizardInstaller.includes('for Attempt := 0 to 1500 do') &&
+ nativeBuildWorkflow.includes("'/SILENT'") &&
+ nativeBuildWorkflow.includes('Native Velopack GUI installation verified'),
+ 'Installer GUI must remain responsive while checking the real native installation result');
 assert.ok(patchedNativeResources.includes('Microsoft.Win32.Registry.CurrentUser.OpenSubKey') &&
  patchedNativeResources.includes('GetValue("ResourceDirectory")') &&
  patchedNativeResources.includes('return chosen;'),
