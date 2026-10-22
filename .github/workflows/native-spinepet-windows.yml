@@ -66,10 +66,11 @@ jobs:
           & ./native-desktop/Patch-RenderEnvelope.ps1 -UpstreamRoot ./native-upstream
           $engine = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeCharacterRenderEngine.cs -Raw
           $input = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeInputWindow.cs -Raw
+          $frame = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeFrameRenderer.cs -Raw
           if (-not $engine.Contains('private void OnNativeMouseWheel') -or
-              -not $engine.Contains('NativeSpineBounds observed = state.Geometry.Bounds') -or
+              -not $frame.Contains('NativeSpineBounds observed = state.Geometry.Bounds') -or
               -not $input.Contains('MouseWheelInput')) {
-            throw 'Native mouse wheel integration missing'
+            throw 'Native mouse-wheel or real-frame envelope integration missing'
           }
       - name: Build actual upstream native Direct3D 11 + DirectComposition renderer
         shell: pwsh
