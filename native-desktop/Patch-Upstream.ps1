@@ -10,17 +10,18 @@ if (-not (Test-Path $source) -or -not (Test-Path $addon)) { throw 'Pinned upstre
 $text = [System.IO.File]::ReadAllText($source)
 $changes = @(
     @('public sealed class App : Application','public sealed partial class App : Application'),
-    @('StartActivationListener();', 'StartActivationListener();'),
+    @('        base.OnStartup(e);', '        base.OnStartup(e);' + "`n" + '        AcceptArchiveStartupArgs(e.Args);'),
     @('        SynchronizeDiscoveredResources(resourceDiscovery);', '        _archiveDiscovery = resourceDiscovery;' + "`n" + '        SynchronizeDiscoveredResources(resourceDiscovery);'),
     @('        _ = RestoreCharactersAsync();','        _ = RestoreArchiveCharactersAsync();'),
+    @('        _mainWindow.Show();', '        _mainWindow.Show();' + "`n" + '        Dispatcher.BeginInvoke(new Action(OfferArchiveProtocolRegistration));'),
     @('                            mainWindow.SwitchToConfigMode();','                            mainWindow.SwitchToConfigMode();' + "`n" + '                            _ = ShowArchiveRequestAsync();')
 )
 foreach ($change in $changes) {
     [string]$before = $change[0]
     [string]$after = $change[1]
     if (-not $text.Contains($before)) { throw "Upstream source changed: expected anchor missing: $before" }
-    $count = $text.Split(@($before), [System.StringSplitOptions]::None).Length - 1
-    if ($before -ne 'StartActivationListener();' -and $count -ne 1) { throw "Expected exactly one match for $before, got $count" }
+    $count = [regex]::Matches($text, [regex]::Escape($before)).Count
+    if ($count -ne 1) { throw "Expected exactly one match for $before, got $count" }
     if ($before -ne $after) { $text = $text.Replace($before,$after) }
 }
 [System.IO.File]::WriteAllText($source, $text, [System.Text.UTF8Encoding]::new($false))
