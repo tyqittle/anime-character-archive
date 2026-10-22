@@ -490,3 +490,25 @@ assert.ok(nativeBuildWorkflow.includes("Missing directory-selectable MSI install
  'Native release must fail rather than silently omit the MSI artifact');
 assert.ok(read('native-desktop/README.md').includes('--installto'),
  'Document the supported no-rebuild custom installation path for Setup.exe');
+
+
+const wizardInstaller=read('native-desktop/ChooseFoldersInstaller.iss');
+const patchedNativeResources=read('native-desktop/Patch-Upstream.ps1');
+assert.ok(wizardInstaller.includes('CreateInputDirPage') &&
+ wizardInstaller.includes('程序安装目录') && wizardInstaller.includes('角色素材目录'),
+ 'EXE installer must show both selectable directories');
+assert.ok(wizardInstaller.includes("RegWriteStringValue(HKCU") &&
+ wizardInstaller.includes("'ResourceDirectory', ModelFolder") &&
+ wizardInstaller.includes("--silent --installto"),
+ 'EXE must use Velopack to install at requested path and persist model path');
+assert.ok(wizardInstaller.includes('IsNestedFolder(P, M)') &&
+ wizardInstaller.includes('IsNestedFolder(M, P)'),
+ 'Model directory must never be inside or contain the replaceable app folder');
+assert.ok(patchedNativeResources.includes('Microsoft.Win32.Registry.CurrentUser.OpenSubKey') &&
+ patchedNativeResources.includes('GetValue("ResourceDirectory")') &&
+ patchedNativeResources.includes('return chosen;'),
+ 'Native app must actually read the install-time custom model directory');
+assert.ok(nativeBuildWorkflow.includes('ChooseFoldersInstaller.iss') &&
+ nativeBuildWorkflow.includes('AnimeCharacterSpinePet-ChooseFolders-Setup.exe') &&
+ nativeBuildWorkflow.includes('clamscan --recursive --infected native-core native-update-package'),
+ 'Release pipeline must build and scan the dual-directory EXE');
