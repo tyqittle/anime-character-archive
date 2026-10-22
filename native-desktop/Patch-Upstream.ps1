@@ -60,6 +60,7 @@ $text = $text.Replace($voiceHook,$voiceHook + "`r`n" + '        InitializeBrownD
 Copy-Item -LiteralPath $addon -Destination (Join-Path $projectDir 'NativeArchiveBridge.cs') -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeBrownDust2Bridge.cs') -Destination (Join-Path $projectDir 'NativeBrownDust2Bridge.cs') -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeBrownDust2Voice.cs') -Destination (Join-Path $projectDir 'NativeBrownDust2Voice.cs') -Force
+Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeBrownDust2WebMDecoder.cs') -Destination (Join-Path $projectDir 'NativeBrownDust2WebMDecoder.cs') -Force
 Write-Host 'Applied audited archive bridge to upstream SpinePet application; renderer unchanged.'
 
 # Add the tested Velopack updater library to the pinned upstream app.
@@ -74,7 +75,7 @@ $proj = Join-Path $projectDir 'SpinePet.csproj'
 $projText = [System.IO.File]::ReadAllText($proj)
 $ref = '    <PackageReference Include="Vortice.D3DCompiler"'
 if ([regex]::Matches($projText,[regex]::Escape($ref)).Count -ne 1) { throw 'Upstream NuGet reference anchor missing' }
-$projText = $projText.Replace($ref, '    <PackageReference Include="Velopack" Version="1.2.161" />' + "`r`n" + $ref)
+$projText = $projText.Replace($ref, '    <PackageReference Include="Velopack" Version="1.2.161" />' + "`r`n" + '    <PackageReference Include="Concentus" Version="2.2.2" />' + "`r`n" + $ref)
 [System.IO.File]::WriteAllText($proj,$projText,[System.Text.UTF8Encoding]::new($false))
 
 # Persistent user models must not live inside Velopack's replaceable current/ folder.
