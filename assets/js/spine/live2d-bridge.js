@@ -77,6 +77,9 @@ window.addEventListener('message',event=>{
   viewZoom=clampViewZoom(data.zoom);
   $('zoomValue').textContent=Math.round(viewZoom*100)+'%';
  }
+ if(data.kind==='interaction'){
+  if(typeof playCharacterVoice==='function')playCharacterVoice(azurlanePending);
+ }
  if(data.kind==='motion'){
   const option=[...$('animationPicker').options].find(x=>x.value===data.name);
   status('正在播放：'+azurlanePending.name+' · Live2D · '+(option?.text||data.name));
