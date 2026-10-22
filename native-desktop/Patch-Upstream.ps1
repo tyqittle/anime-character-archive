@@ -58,7 +58,7 @@ $program = Join-Path $projectDir 'Program.cs'
 $programText = [System.IO.File]::ReadAllText($program)
 $entry = '        App app = new();'
 if ([regex]::Matches($programText,[regex]::Escape($entry)).Count -ne 1) { throw 'Upstream Program entrypoint missing' }
-$programText = $programText.Replace($entry,'        Velopack.VelopackApp.Build().Run();' + "`r`n" + $entry)
+$programText = $programText.Replace($entry,'        Velopack.VelopackApp.Build().SetAutoApplyOnStartup(false).Run();' + "`r`n" + $entry)
 [System.IO.File]::WriteAllText($program,$programText,[System.Text.UTF8Encoding]::new($false))
 
 $proj = Join-Path $projectDir 'SpinePet.csproj'
