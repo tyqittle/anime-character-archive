@@ -4,7 +4,8 @@
 param(
     [Parameter(Position=0)][string]$Uri = '',
     [string]$CharacterId = '',
-    [switch]$ValidateOnly
+    [switch]$ValidateOnly,
+    [switch]$DownloadOnly
 )
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
@@ -90,6 +91,7 @@ try {
         }
     }
     Write-Output "Imported $display to $destination"
+    if ($DownloadOnly) { exit 0 }
     Start-Process -FilePath $executable -WorkingDirectory (Split-Path -Parent $executable)
     Write-Output 'SpinePet launched. Press Scan in its panel, then select the imported character.'
 } catch {
