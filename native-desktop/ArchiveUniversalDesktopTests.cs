@@ -29,7 +29,7 @@ public sealed class ArchiveUniversalDesktopTests
             Assert.Equal("Renamed",restored.Find(new("game-a","same"))!.Name);
             var second=restored.Find(new("game-b","same"))!;
             Assert.True(second.Visible);Assert.True(second.Voice);Assert.Equal("idle-2",second.Action);
-            Assert.Single(restored.Characters.Where(x=>x.Visible));
+            Assert.Single(restored.Characters,x=>x.Visible);
             Assert.Empty(Directory.GetFiles(root,"*.tmp"));
         }
         finally {if(Directory.Exists(root))Directory.Delete(root,true);}
@@ -64,8 +64,14 @@ public sealed class ArchiveUniversalDesktopTests
             var library=ArchiveWebLibrary.Load(path,Path.Combine(root,"none"));
             library.Put(new("example","one","One"));
             using(var locked=File.Open(path,FileMode.Open,FileAccess.Read,FileShare.None))
-                Assert.ThrowsAny<IOException>(()=>library.Put(new("example","two","Two")));
+            {
+                var error=Record.Exception(()=>library.Put(new("example","two","Two")));
+                Assert.True(error is IOException or UnauthorizedAccessException,
+                    "A locked library must reject replacement without changing its contents.");
+            }
             Assert.Single(library.Characters);
+            Assert.Single(ArchiveWebLibrary.Load(path,Path.Combine(root,"none")).Characters);
+            Assert.Empty(Directory.GetFiles(root,"*.tmp"));
             File.WriteAllText(path,"broken");
             Assert.Throws<JsonException>(()=>ArchiveWebLibrary.Load(path,Path.Combine(root,"none")));
             Assert.Equal("broken",File.ReadAllText(path));
