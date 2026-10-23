@@ -60,3 +60,10 @@ test('multi-page declarations respect page boundaries, BOM and CRLF',()=>{
  const sizes=parsePageSizes('\uFEFFone.png\r\nsize: 400,300\r\nformat: RGBA8888\r\nregion\r\n size: 5,6\r\n\r\ntwo.png\r\nsize: 100,200');
  assert.deepEqual([...sizes],[['one.png',{width:400,height:300}],['two.png',{width:100,height:200}]]);
 });
+
+test('one-pixel packed edge extrusion is accepted, larger overflow is rejected',()=>{
+ const edge=fixture();edge.atlas.regions[0].y=281;
+ assert.doesNotThrow(()=>applyCoordinateSpace({...edge,mode:'declared'}));
+ const overflow=fixture();overflow.atlas.regions[0].y=282;
+ assert.throws(()=>applyCoordinateSpace({...overflow,mode:'declared'}),/exceeds/);
+});

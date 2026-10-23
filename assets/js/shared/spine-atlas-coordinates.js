@@ -57,6 +57,8 @@
    plans.set(page,size);
    if(size.width!==image.width||size.height!==image.height)changedPages++;
   }
+  // Some source atlases include one trailing pixel of packed edge extrusion.
+  // Preserve that border convention; larger out-of-page regions still fail.
   for(const region of regions){
    const size=plans.get(region.page),degrees=((Number(region.degrees)||0)%360+360)%360;
    if(!size||![0,90,180,270].includes(degrees))throw Error('Unsupported atlas region: '+region.name);
@@ -64,7 +66,7 @@
    const packedHeight=degrees%180?region.width:region.height;
    if(![region.x,region.y,packedWidth,packedHeight].every(Number.isFinite)||
       region.x<0||region.y<0||packedWidth<0||packedHeight<0||
-      region.x+packedWidth>size.width+.001||region.y+packedHeight>size.height+.001)
+      region.x+packedWidth>size.width+1||region.y+packedHeight>size.height+1)
     throw Error('Region exceeds declared atlas page: '+region.name);
   }
   installMeshCoordinates(runtime);

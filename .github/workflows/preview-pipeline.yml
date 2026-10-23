@@ -8,6 +8,7 @@ on:
       - 'data/live2d-*.json'
       - 'assets/js/live2d/**'
       - 'assets/js/spine/**'
+      - 'assets/js/shared/spine-atlas-coordinates.js'
       - 'scripts/catalog_registry.*'
       - 'scripts/preview_*.py'
       - 'scripts/repair_missing_previews.mjs'

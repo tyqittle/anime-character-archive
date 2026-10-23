@@ -5,6 +5,7 @@ on:
     paths:
       - 'data/animation-catalogs.json'
       - 'assets/js/shared/catalog-registry.js'
+      - 'assets/js/shared/spine-atlas-coordinates.js'
       - 'scripts/catalog_registry.mjs'
       - '.github/workflows/spine-browser-test.yml'
       - 'scripts/test_spine_browser.mjs'
