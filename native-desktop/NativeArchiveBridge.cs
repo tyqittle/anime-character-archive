@@ -162,15 +162,20 @@ public sealed partial class App
                 return;
             }
 
-            string stem = supportedNikke
+            // The downloader returns the precise managed skeleton path.
+            // Searching by filename alone could silently load a different,
+            // older import with an identical stem from another directory.
+            string expectedSkeleton = supportedNikke
                 ? await EnsureArchiveModelDownloadedAsync(id)
                 : await EnsureBrownDust2DownloadedAsync(id);
             SynchronizeDiscoveredResources(_archiveDiscovery);
             var character = _characterManager.Characters.FirstOrDefault(c =>
-                string.Equals(Path.GetFileNameWithoutExtension(c.SkeletonPath),
-                    stem, StringComparison.OrdinalIgnoreCase));
+                string.Equals(Path.GetFullPath(c.SkeletonPath),
+                    expectedSkeleton, StringComparison.OrdinalIgnoreCase));
             if (character == null)
-                throw new InvalidDataException("The native Spine 4.1 parser could not discover this model.");
+                throw new InvalidDataException(
+                    "已保存模型未被扫描到（已禁止按同名文件误选其他旧模型）："
+                    + expectedSkeleton);
 
             // Use upstream My_SpinePet's built-in animation rendering and state.
             await _characterManager.ShowCharacterAsync(character);
@@ -242,7 +247,7 @@ public sealed partial class App
             SpineSkeletonCompatibility.EnsureSupported(skeleton);
             string[] pages = AtlasImagePages(await File.ReadAllTextAsync(atlas));
             if (pages.All(page => File.Exists(Path.Combine(standing, page))))
-                return stem;
+                return Path.GetFullPath(skeleton);
         }
         if (Directory.Exists(standing))
             throw new InvalidDataException("Existing model folder is incomplete. Please remove or repair it manually.");
@@ -292,7 +297,7 @@ public sealed partial class App
         {
             if (Directory.Exists(temporary)) Directory.Delete(temporary, recursive: true);
         }
-        return stem;
+        return Path.GetFullPath(skeleton);
     }
 
     private static string[] AtlasImagePages(string atlas)
