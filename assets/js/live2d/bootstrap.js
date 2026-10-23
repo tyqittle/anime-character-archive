@@ -98,3 +98,4 @@ app=new PIXI.Application({view:document.getElementById('live2dCanvas'),autoStart
  notify('ready');
 }catch(e){initError=e.message;message('Live2D 初始化失败：'+initError);notify('error',{error:initError})}})();
 
+

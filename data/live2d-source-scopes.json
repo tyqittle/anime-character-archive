@@ -36,7 +36,8 @@
       "sourceRepo": "Eikanya/Live2d-model",
       "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
       "id": "girlscafegun",
-      "directory": "少女咖啡枪 girls cafe gun"
+      "directory": "少女咖啡枪 girls cafe gun",
+      "sourceTreeSha": "33d5adb25a582402eb28e3619b45712b27d5d814"
     },
     {
       "gameId": "konosuba",
@@ -64,7 +65,15 @@
       "sourceRepo": "Eikanya/Live2d-model",
       "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
       "id": "tokyonecro",
-      "directory": "凍京Nerco/l2d"
+      "directory": "凍京Nerco/l2d",
+      "catalog": "data/live2d-mature.json",
+      "name": "凍京 NECRO（动态立绘图鉴）",
+      "selection": "/l2d[0-9]{5}[a-z]?/[a-z0-9]+[.]model3[.]json$",
+      "import": {
+        "idPrefix": "tn-",
+        "pattern": "^(l2d[0-9]{5}[a-z]?)/\\1[.]model3[.]json$"
+      },
+      "sourceTreeSha": "0dedaacc179a3a735f9bb7080d70f7d9fade4b9a"
     },
     {
       "gameId": "maidslife",
@@ -195,6 +204,132 @@
           "char2d_live2d_001": "Sardiya · 常规服装"
         }
       }
+    },
+    {
+      "gameId": "girlscafegun",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "id": "girlscafegun-flat",
+      "directory": "少女咖啡枪 girls cafe gun",
+      "name": "少女咖啡枪 / 双生视界（动态立绘图鉴）",
+      "catalog": "data/live2d-moregames.json",
+      "selection": "^/([a-z0-9_]+)[.]u/\\1[.]u[.]model3[.]json$",
+      "requireComplete": false,
+      "import": {
+        "idPrefix": "gcf-",
+        "pattern": "^([a-z0-9_]+)[.]u/\\1[.]u[.]model3[.]json$",
+        "modelStemSuffix": ".u"
+      },
+      "sourceTreeSha": "33d5adb25a582402eb28e3619b45712b27d5d814"
+    },
+    {
+      "gameId": "girlscafegun",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "id": "girlscafegun-nested",
+      "directory": "少女咖啡枪 girls cafe gun",
+      "name": "少女咖啡枪 / 双生视界（动态立绘图鉴）",
+      "catalog": "data/live2d-moregames.json",
+      "selection": "^/(girl[0-9]{2,3})/(l2d[0-9]+)[.]u/\\2[.]u[.]model3[.]json$",
+      "requireComplete": false,
+      "import": {
+        "idPrefix": "gc-",
+        "pattern": "^(girl[0-9]{2,3})/(l2d[0-9]+)[.]u/\\2[.]u[.]model3[.]json$",
+        "idGroups": [
+          1,
+          2
+        ],
+        "modelStemGroup": 2,
+        "modelStemSuffix": ".u"
+      },
+      "sourceTreeSha": "33d5adb25a582402eb28e3619b45712b27d5d814"
+    },
+    {
+      "gameId": "girlscafegun",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "id": "girlscafegun-special",
+      "directory": "少女咖啡枪 girls cafe gun",
+      "name": "少女咖啡枪 / 双生视界（动态立绘图鉴）",
+      "catalog": "data/live2d-moregames.json",
+      "requireComplete": false,
+      "import": {
+        "idPrefix": "gcs-",
+        "pattern": "^$",
+        "pathMappings": {
+          "47__l2d_202.u/cosplay.model3.json": {
+            "id": "47__l2d_202",
+            "modelStem": "cosplay"
+          },
+          "girl07/(new)l2d8002.u/l2d8002.u.model3.json": {
+            "id": "girl07-l2d8002-new",
+            "modelStem": "l2d8002.u"
+          },
+          "girl07/l2d21.u/l2d21.model3.json": {
+            "id": "girl07-l2d21",
+            "modelStem": "l2d21"
+          },
+          "girl120/l2d01.u.model3.json": {
+            "id": "girl120-l2d01",
+            "modelStem": "l2d01.u"
+          }
+        }
+      },
+      "sourceTreeSha": "33d5adb25a582402eb28e3619b45712b27d5d814"
+    },
+    {
+      "gameId": "tokyonecro",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "id": "tokyonecro-legacy",
+      "directory": "凍京Nerco/l2d",
+      "catalog": "data/live2d-mature.json",
+      "name": "凍京 NECRO（动态立绘图鉴）",
+      "selection": "/l2d[0-9]{5}[a-z]?/model[.]json$",
+      "import": {
+        "idPrefix": "tn2-",
+        "pattern": "^(l2d[0-9]{5}[a-z]?)/model[.]json$",
+        "format": "cubism2",
+        "allowJSONC": true,
+        "normalizedSettingsDirectory": "assets/model-settings/tokyonecro",
+        "referenceRepairs": {
+          "caseInsensitive": true,
+          "insertDirectories": [
+            "android"
+          ]
+        },
+        "discoverMotionDirectory": "mtn"
+      },
+      "sourceTreeSha": "0dedaacc179a3a735f9bb7080d70f7d9fade4b9a"
+    },
+    {
+      "gameId": "tokyonecro",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "id": "tokyonecro-legacy-nested",
+      "directory": "凍京Nerco/l2d",
+      "catalog": "data/live2d-mature.json",
+      "name": "凍京 NECRO（动态立绘图鉴）",
+      "import": {
+        "idPrefix": "tn2-",
+        "pattern": "^(l2d[0-9]{5}[a-z]?)/model[.]json$",
+        "format": "cubism2",
+        "allowJSONC": true,
+        "normalizedSettingsDirectory": "assets/model-settings/tokyonecro",
+        "referenceRepairs": {
+          "caseInsensitive": true,
+          "insertDirectories": [
+            "android"
+          ]
+        },
+        "pathMappings": {
+          "l2d00136/2048/model.json": {
+            "id": "l2d00136-2048"
+          }
+        },
+        "discoverMotionDirectory": "mtn"
+      },
+      "sourceTreeSha": "0dedaacc179a3a735f9bb7080d70f7d9fade4b9a"
     }
   ]
 }

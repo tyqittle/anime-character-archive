@@ -14,19 +14,19 @@
 | arknights | 92 | 92 | 尚未核对完整来源 |
 | girlsfrontline | 297 | 297 | 297 / 297 |
 | touhoucannonball | 84 | 84 | 84 / 84 |
-| girlscafegun | 64 | 64 | 273 / 64 |
+| girlscafegun | 273 | 67 | 273 / 273 |
 | girldimension | 102 | 102 | 112 / 102 |
 | sinsevendeadlysins | 94 | 94 | 94 / 94 |
 | maidslife | 10 | 10 | 10 / 10 |
-| tokyonecro | 62 | 62 | 397 / 62 |
+| tokyonecro | 397 | 67 | 397 / 397 |
 | lovecube | 6 | 6 | 20 / 6 |
 | foxhimezero | 5 | 5 | 5 / 5 |
 | daibloscore | 127 | 127 | 尚未核对完整来源 |
-| destinychild | 973 | 16 | 979 / 973 |
+| destinychild | 973 | 973 | 979 / 973 |
 | venusscramble | 17 | 17 | 18 / 17 |
 | ironsaga | 4 | 4 | 4 / 4 |
 | mementomori | 49 | 49 | 49 / 49 |
-| echocalypse | 336 | 23 | 344 / 336 |
+| echocalypse | 336 | 334 | 344 / 336 |
 | sacredswordprincesses | 1 | 1 | 16 / 1 |
 | momoiro | 17 | 17 | 23 / 17 |
 | sexysins | 6 | 6 | 7 / 6 |

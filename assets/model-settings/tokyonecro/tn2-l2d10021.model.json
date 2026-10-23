@@ -1,0 +1,23 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d10021/model.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d10021/model.2048/android/texture_00.png"
+  ],
+  "motions": {
+    "source_cutin": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d10021/mtn/cutin.mtn"
+      }
+    ],
+    "source_ease_loop": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d10021/mtn/ease_loop.mtn"
+      }
+    ],
+    "source_loop": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d10021/mtn/loop.mtn"
+      }
+    ]
+  }
+}

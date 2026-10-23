@@ -7,9 +7,9 @@
       "missingPreview": 0
     },
     "tokyonecro": {
-      "indexed": 62,
-      "verifiedPreview": 62,
-      "missingPreview": 0
+      "indexed": 397,
+      "verifiedPreview": 67,
+      "missingPreview": 330
     },
     "lovecube": {
       "indexed": 6,
@@ -22,8 +22,1329 @@
       "missingPreview": 0
     }
   },
-  "missing": [],
-  "newCapturesInThisRun": 0,
+  "missing": [
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d00192"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d00193"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d00226"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d00227"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d00229"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d10005"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d10009"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d62200"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d65400"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d65700"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d66100"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d66101"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d66102"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d66600"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d66800"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d67300"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d67301"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d67302"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d67303"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d67304"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d67305"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d68000"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d68001"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn-l2d68002"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00001"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00001a"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00002"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00003"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00004"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00005"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00006"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00008"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00009"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00011"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00013"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00014"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00015"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00016"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00024"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00029"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00038"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00039"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00040"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00042"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00043"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00057"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00058"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00072"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00073"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00074"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00075"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00076"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00077"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00078"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00080"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00081"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00082"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00083"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00084"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00085"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00086"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00087"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00088"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00090"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00091"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00092"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00093"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00094"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00095"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00096"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00097"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00100"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00103"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00104"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00105"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00107"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00109"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00135"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00165"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00165a"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00166"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00182"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00182a"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00183"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00184"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10001b"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10017"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21500"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21501"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21502"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d40500"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d40502"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d60800"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d60801"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d60802"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d60900"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d64200"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d64300"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d65000"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d65201"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00017"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00018"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00019"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00020"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00021"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00022"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00025"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00027"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00028"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00030"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00031"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00032"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00033"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00034"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00035"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00036"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00037"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00037a"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00041"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00045"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00046"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00046b"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00047"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00048"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00049"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00052"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00053"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00054"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00060"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00063"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00064"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00065"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00066"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00068"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00069"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00070"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00071"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00079"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00089"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00106"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00111"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00111a"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00112"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00113"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00113a"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00114"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00115"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00116"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00121"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00125"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00126"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00127"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00129"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00131"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00132"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00133"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00134"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00138"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00139"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00140"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00141"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00142"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00143"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00143a"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00144"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00145"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00146"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00146a"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00146b"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00147"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00148"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00149"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00150"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00151"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00152"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00155"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00155a"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00156"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00157"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00158"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00159"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00160"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00161"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00162"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00162a"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00163"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00163a"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00164"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00169"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00170"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00170a"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00171"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00172"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00173"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00173a"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00177"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00179"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00180"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d00181"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10001"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10001a"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10002"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10002a"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10002b"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10002c"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10002d"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10002e"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10002f"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10003"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10004"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10006"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10007"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10008"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10008a"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10010a"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10011"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10012"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10012a"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10013"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10021"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10022"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10023"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d10024"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d20100"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d20200"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d20300"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d20400"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d20500"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d20600"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d20603"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d20700"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d20800"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d20801"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d20803"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d20900"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21000"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21100"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21102"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21200"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21202"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21504"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21505"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21506"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21700"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21701"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21800"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21801"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21802"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21803"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21804"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21805"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21900"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d21901"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d22000"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d22001"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d30100"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d30200"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d30300"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d30400"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d40200"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d40300"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d40400"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d40501"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d40600"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d40601"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d50100"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d50101"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d50102"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d50200"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d50201"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d50300"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d50301"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d50400"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d50401"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d50500"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d50501"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d50600"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d50601"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d50700"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d50800"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d50900"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d50901"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d51000"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d51100"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d51101"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d51200"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d51400"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d51500"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d60100"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d60200"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d60201"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d60302"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d60303"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d60400"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d60500"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d60600"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d60603"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d60700"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d60701"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d60702"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d61000"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d61100"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d61101"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d61300"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d61600"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d61700"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d61800"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d62301"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d62302"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d62303"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d62600"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d62601"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d62602"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d62603"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d62700"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d62701"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d62702"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d63100"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d63400"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d63500"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d63600"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d63700"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d63800"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d63801"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d63802"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d64000"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d64100"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d64900"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d65100"
+    },
+    {
+      "gameId": "tokyonecro",
+      "id": "tn2-l2d65200"
+    }
+  ],
+  "newCapturesInThisRun": 5,
   "rejectedCaptures": [],
   "failedCaptures": [],
   "failureSummary": {}

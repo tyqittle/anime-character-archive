@@ -44,6 +44,18 @@ test('empty or accidentally narrowed source scopes never certify completeness',(
  assert.equal(inspectScope(scope,[],[]).scopeComplete,false);
  assert.equal(inspectScope({...scope,selection:'never-match'},tree,[]).scopeComplete,false);
 });
+test('overlapping source adapters only count indexed records inside their selection',()=>{
+ const records=['hero','other'].map(name=>({gameId:'sample',sourceRepo:scope.sourceRepo,sourceCommit:scope.sourceCommit,id:name,sourcePath:'game/'+name+'/'+name+'.model3.json'}));
+ const report=inspectScope({...scope,selection:'/hero/'},tree,records);
+ assert.equal(report.indexedModelSettings,1);assert.equal(report.indexedMissingFromScope.length,0);
+ assert.equal(report.scopeComplete,true);
+});
+test('nested identity captures preserve the old character and costume ID independently of setting stem',()=>{
+ const adapter={...scope,import:{idPrefix:'gc-',pattern:'^(girl[0-9]+)/(l2d[0-9]+)[.]u/\\2[.]u[.]model3[.]json$',idGroups:[1,2],modelStemGroup:2,modelStemSuffix:'.u'}};
+ const files=['girl101/l2d01.u/l2d01.u.model3.json','girl101/l2d01.u/hero.moc3','girl101/l2d01.u/tex.png'].map(path=>({path,type:'blob',size:1000}));
+ const record=sourceRecord(adapter,files[0].path,{Version:3,FileReferences:{Moc:'hero.moc3',Textures:['tex.png']}},files);
+ assert.equal(record.id,'gc-girl101-l2d01');assert.equal(record.skinCode,'l2d01.u');
+});
 
 test('informational incomplete sources retain diagnostics while explicit imports still fail',async()=>{
  const settingsText=JSON.stringify({model:'model.moc',textures:['tex.png']});

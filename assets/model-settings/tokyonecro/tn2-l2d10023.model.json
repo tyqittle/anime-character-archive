@@ -1,0 +1,28 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d10023/model.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d10023/model.2048/android/texture_00.png"
+  ],
+  "motions": {
+    "source_anger_loop": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d10023/mtn/anger_loop.mtn"
+      }
+    ],
+    "source_blues_loop": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d10023/mtn/blues_loop.mtn"
+      }
+    ],
+    "source_joy_loop": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d10023/mtn/joy_loop.mtn"
+      }
+    ],
+    "source_loop": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d10023/mtn/loop.mtn"
+      }
+    ]
+  }
+}

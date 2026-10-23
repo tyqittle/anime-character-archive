@@ -43,6 +43,10 @@ flowchart TD
 
 `data/live2d-source-scopes.json` 声明固定来源范围；`scripts/live2d_sources.mjs` 共同执行来源覆盖、文件引用校验和受控导入。已有模型 ID、素材地址和有效预览保持兼容。见 [本轮共性修复与覆盖记录](LIVE2D_COMMON_REPAIR.md)。
 
+旧版 JSONC 配置通过纯函数 `cubism_source_settings.mjs` 标准化为 `assets/model-settings/` 中的本地设置。所有骨骼、贴图和动作仍指向同一固定上游版本；文件名大小写与导出子目录修正必须由来源配置声明、唯一匹配并保留修正记录。只从当前模型目录补入遗漏动作，不借用其他角色。设置 URL 绑定内容 SHA256，内容变化使旧预览身份失效。浏览器目录验证与具体来源适配共同约束本地设置路径、模型 ID 和摘要。
+
+`dynamic_encyclopedia_coverage.mjs` 读取基础全目录盘点及 `data/*-full-inventory.json` 的更新盘点；相同固定来源目录以更新盘点替换旧盘点，避免多个导入适配重复计数。来源全集覆盖与游戏当前版本的角色、皮肤全集完整性分别报告。
+
 ## 内容上线
 
 预览、静态扩充以及手动兼容流程成功后，通过 `workflow_run` 触发共同的站点发布。机器人 push 本身不会触发 Pages 分支构建，因此不能省略这条依赖。
@@ -85,3 +89,4 @@ Windows 原生 Spine 4.1 宿主的持续维护模块位于 `native-desktop/rende
 ## 通用桌面宿主
 
 网站传递游戏与角色 ID，客户端只导航固定站点；共同注册表继续拥有资源与引擎选择。`native-desktop/web/` 拥有控制器、GPU 合成 visual、输入窗口、取消与持久配置。网页 `desktop-webview-bridge.js` 在完整绘制后报告就绪和有预算的 Alpha 命中区域，复用已有动作/缩放命令；掩模不参与显示。旧 NIKKE/BD2 原生链接与文件目录保留。升级、运行时与实际验证范围见 [通用桌面架构](UNIVERSAL_DESKTOP.md)。
+

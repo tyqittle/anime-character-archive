@@ -4,12 +4,19 @@ import fs from 'node:fs';
 import {createHash} from 'node:crypto';
 import vm from 'node:vm';
 const load=p=>fs.readFileSync(new URL('../'+p,import.meta.url));
-test('All four recently added games own real matching WebP thumbnails',()=>{
+test('Original model previews remain intact and new pending models never claim a captured frame',()=>{
  const sources=['data/live2d-highquality.json','data/live2d-moregames.json'];
  const counts={};
+ const baseline=new Set(JSON.parse(load('tests/fixtures/pre-encyclopedia-models.json')).moregames);
  for(const path of sources){
   const catalog=JSON.parse(load(path));
   for(const c of catalog.characters){
+   if(!c.preview){
+    assert.ok(path.endsWith('live2d-moregames.json')&&!baseline.has(c.id),c.id);
+    assert.equal(c.playbackStatus,'not-verified',c.id);
+    assert.equal(c.previewSource,'not-rendered',c.id);
+    assert.ok(!c.previewSha256,c.id);continue;
+   }
    const expected='./assets/animation-previews/'+c.gameId+'-'+c.id+'.webp';
    assert.equal(c.preview,expected,c.id);
    assert.equal(c.previewSource,'matching-live2d-animation-frame',c.id);
@@ -17,7 +24,7 @@ test('All four recently added games own real matching WebP thumbnails',()=>{
    const bytes=load(expected.slice(2));
    assert.ok(bytes.length>1000&&bytes.toString('ascii',0,4)==='RIFF'&&bytes.toString('ascii',8,12)==='WEBP',c.id);
    assert.equal(createHash('sha256').update(bytes).digest('hex'),c.previewSha256,c.id);
-   counts[c.gameId]=(counts[c.gameId]||0)+1;
+   if(!path.endsWith('live2d-moregames.json')||baseline.has(c.id))counts[c.gameId]=(counts[c.gameId]||0)+1;
   }
  }
  assert.deepEqual(counts,{girldimension:102,sinsevendeadlysins:94,touhoucannonball:84,girlscafegun:64});

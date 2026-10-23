@@ -1,0 +1,61 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00000/model.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00000/model.512/texture_00.png",
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00000/model.512/texture_01.png"
+  ],
+  "motions": {
+    "idle": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00000/mtn/loop.mtn"
+      }
+    ],
+    "": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00000/mtn/blues.mtn"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00000/mtn/cutin.mtn"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00000/mtn/ease.mtn"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00000/mtn/Elapse.mtn"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00000/mtn/Elapse.mtn"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00000/mtn/joy.mtn"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00000/mtn/anger.mtn"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00000/mtn/Tap1.mtn"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00000/mtn/Tap2.mtn"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00000/mtn/tap3.mtn"
+      }
+    ],
+    "source_Elapse": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00000/mtn/Elapse.mtn"
+      }
+    ],
+    "source_Tap1": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00000/mtn/Tap1.mtn"
+      }
+    ],
+    "source_Tap2": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00000/mtn/Tap2.mtn"
+      }
+    ]
+  }
+}

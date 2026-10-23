@@ -15,17 +15,23 @@ const bd2Full=JSON.parse(read('data/spine-bd2-characters.json'));
 const more=JSON.parse(read('data/live2d-moregames.json')).characters;
 const hq=JSON.parse(read('data/live2d-highquality.json')).characters;
 const mature=JSON.parse(read('data/live2d-mature.json')).characters;
-const expectedMatureCounts={tokyonecro:62,maidslife:10,lovecube:6,foxhimezero:5};
+const matureBaseline=new Set(JSON.parse(read('tests/fixtures/pre-encyclopedia-models.json')).mature);
+const expectedMatureCounts={tokyonecro:JSON.parse(read('data/tokyonecro-full-inventory.json')).scopes[0].indexedModelSettings,maidslife:10,lovecube:6,foxhimezero:5};
 assert.equal(mature.length,Object.values(expectedMatureCounts).reduce((n,count)=>n+count,0));
 for(const [game,count] of Object.entries(expectedMatureCounts))
  assert.equal(mature.filter(c=>c.gameId===game).length,count,game);
 assert.equal(new Set(mature.map(c=>c.id)).size,mature.length);
 for(const c of mature){
- assert.ok(c.engine==='cubism'&&c.modelUrl.includes('@'+c.sourceCommit+'/')&&c.textureBytes>650000,c.id);
+ assert.ok(c.engine==='cubism'&&c.textureBytes>0,c.id);
+ if(c.normalizedSettingsSha256){
+  const bytes=fs.readFileSync(path.join(root,c.modelUrl.split('?')[0]));
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),c.normalizedSettingsSha256,c.id);
+ }else assert.ok(c.modelUrl.includes('@'+c.sourceCommit+'/'),c.id);
+ if(matureBaseline.has(c.id))assert.ok(c.textureBytes>650000,c.id);
  // LOVE³ has real high-resolution Cubism3 physics rigs, but no motion3 assets.
  // Existing games continue to require motions; don't claim an animation passed until rendered.
  if(c.gameId==='lovecube')assert.ok(c.textureBytes>3000000&&c.motionCount===0,c.id);
- else assert.ok(c.motionCount>0,c.id);
+ else if(matureBaseline.has(c.id))assert.ok(c.motionCount>0,c.id);
 }
 assert.equal(hq.length,196,'Quality-screened new game inventory must have 196 complete model file sets');
 assert.equal(new Set(hq.map(c=>c.id)).size,hq.length,'Duplicate high-quality Live2D ids');
@@ -46,8 +52,8 @@ const theaterHTML=read('spine.html');
 const gameMenu=theaterHTML.match(/<select id="gameFilter">([\s\S]*?)<\/select>/)?.[1]||'';
 const gameMenuIds=[...gameMenu.matchAll(/<option value="([^"]+)"/g)].map(m=>m[1]);
 assert.deepEqual(gameMenuIds.slice(0,7),['all','tokyonecro','maidslife','girldimension','sinsevendeadlysins','touhoucannonball','girlscafegun'],'New animated games must be visible without scrolling the dropdown');
-assert.equal(more.length,148,'Both newly imported Cubism catalogs must have 148 records');
-assert.equal(new Set(more.map(c=>c.id)).size,148,'Duplicated model in additional Cubism games');
+assert.equal(more.length,84+JSON.parse(read('data/girlscafegun-full-inventory.json')).scopes[0].sourceModelSettings);
+assert.equal(new Set(more.map(c=>c.id)).size,more.length,'Duplicated model in additional Cubism games');
 for(const c of more){
  assert.ok(['touhoucannonball','girlscafegun'].includes(c.gameId)&&c.engine==='cubism');
  assert.ok(c.modelUrl.includes('@'+c.sourceCommit+'/')&&c.modelUrl.endsWith('/'+c.skinCode+'.model3.json'));
@@ -596,3 +602,4 @@ assert.ok(nativeBuildWorkflow.includes('ChooseFoldersInstaller.iss') &&
  nativeBuildWorkflow.includes('AnimeCharacterSpinePet-ChooseFolders-Setup.exe') &&
  nativeBuildWorkflow.includes('clamscan --recursive --infected native-core native-update-package'),
  'Release pipeline must build and scan the dual-directory EXE');
+

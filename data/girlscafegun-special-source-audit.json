@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "scopes": [
+    {
+      "id": "girlscafegun-special",
+      "gameId": "girlscafegun",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "directory": "少女咖啡枪 girls cafe gun",
+      "sourceModelSettings": 4,
+      "indexedModelSettings": 4,
+      "unindexedSourceSettings": [],
+      "indexedMissingFromScope": [],
+      "scopeComplete": true,
+      "requireComplete": false,
+      "failedModels": [],
+      "checkedModels": 4,
+      "wouldAdd": [
+        "gcs-47__l2d_202",
+        "gcs-girl07-l2d8002-new",
+        "gcs-girl07-l2d21",
+        "gcs-girl120-l2d01"
+      ]
+    }
+  ]
+}

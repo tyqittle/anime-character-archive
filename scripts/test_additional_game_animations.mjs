@@ -27,6 +27,9 @@ const cases=[
  {type:'cubism',game:'sinsevendeadlysins',character:high.characters.find(c=>c.id==='sds-xch001_01')},
  {type:'cubism',game:'touhoucannonball',character:more.characters.find(c=>c.id==='tc-reimu')},
  {type:'cubism',game:'girlscafegun',character:more.characters.find(c=>c.id==='gc-girl01-l2d00')},
+ ...['gcf-0113upd__l2d_356','gc-girl119-l2d02','gcs-girl07-l2d21','tn2-l2d00007'].map(id=>{
+  const character=registered.find(c=>c.id===id);return {type:'cubism',game:character?.gameId,character};
+ }),
  {type:'cubism',game:'girlsfrontline',character:pick('girlsfrontline','少女前线 girls Frontline/live2dnew/79type_1402/normal/normal.model3.json')},
  {type:'cubism',game:'konosuba',character:pick('konosuba','为美好的世界献上祝福！Fantastic Days/1003104/1003104.model3.json')},
  {type:'spine',game:'arknights',motion:'Idle',character:manifest.characters.find(c=>c.gameId==='arknights'&&c.resourceStem==='char_002_amiya')},

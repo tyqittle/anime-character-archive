@@ -1,0 +1,63 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d60702/model.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d60702/model.2048/android/texture_00.png"
+  ],
+  "motions": {
+    "source_anger": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d60702/mtn/anger.mtn"
+      }
+    ],
+    "source_anger_loop": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d60702/mtn/anger_loop.mtn"
+      }
+    ],
+    "source_blues": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d60702/mtn/blues.mtn"
+      }
+    ],
+    "source_blues_loop": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d60702/mtn/blues_loop.mtn"
+      }
+    ],
+    "source_ease": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d60702/mtn/ease.mtn"
+      }
+    ],
+    "source_ease_loop": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d60702/mtn/ease_loop.mtn"
+      }
+    ],
+    "source_joy": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d60702/mtn/joy.mtn"
+      }
+    ],
+    "source_joy_loop": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d60702/mtn/joy_loop.mtn"
+      }
+    ],
+    "source_loop": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d60702/mtn/loop.mtn"
+      }
+    ],
+    "source_surprise": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d60702/mtn/surprise.mtn"
+      }
+    ],
+    "source_surprise_loop": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d60702/mtn/surprise_loop.mtn"
+      }
+    ]
+  }
+}

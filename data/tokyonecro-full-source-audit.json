@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "scopes": [
+    {
+      "id": "tokyonecro",
+      "gameId": "tokyonecro",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "directory": "凍京Nerco/l2d",
+      "sourceModelSettings": 87,
+      "indexedModelSettings": 87,
+      "unindexedSourceSettings": [],
+      "indexedMissingFromScope": [],
+      "scopeComplete": true,
+      "requireComplete": false,
+      "failedModels": [],
+      "checkedModels": 87,
+      "wouldAdd": [
+        "tn-l2d00192",
+        "tn-l2d00193",
+        "tn-l2d00226",
+        "tn-l2d00227",
+        "tn-l2d00229",
+        "tn-l2d10005",
+        "tn-l2d10009",
+        "tn-l2d62200",
+        "tn-l2d65400",
+        "tn-l2d65700",
+        "tn-l2d66100",
+        "tn-l2d66101",
+        "tn-l2d66102",
+        "tn-l2d66600",
+        "tn-l2d66800",
+        "tn-l2d67300",
+        "tn-l2d67301",
+        "tn-l2d67302",
+        "tn-l2d67303",
+        "tn-l2d67304",
+        "tn-l2d67305",
+        "tn-l2d68000",
+        "tn-l2d68001",
+        "tn-l2d68002",
+        "tn-l2d69200"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "scopes": [
+    {
+      "id": "tokyonecro-legacy-nested",
+      "gameId": "tokyonecro",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "directory": "凍京Nerco/l2d",
+      "sourceModelSettings": 1,
+      "indexedModelSettings": 1,
+      "unindexedSourceSettings": [],
+      "indexedMissingFromScope": [],
+      "scopeComplete": true,
+      "requireComplete": false,
+      "failedModels": [],
+      "checkedModels": 1,
+      "wouldAdd": []
+    }
+  ]
+}

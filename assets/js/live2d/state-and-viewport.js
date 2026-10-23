@@ -8,6 +8,13 @@ const COMMUNITY_SOURCE='https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cb
 // Source adapters bind the fixed repository, model path, ID and setting stem.
 // The renderer, gestures, motion policy and preview pipeline remain shared.
 const EXPANSION_CUBISM_SOURCES=[
+ {prefix:'tn2-',source:'./assets/model-settings/tokyonecro/',local:true,
+  path:/^(tn2-(l2d\d{5}[a-z]?(?:-2048)?))\.model\.json\?v=[a-f0-9]{64}$/,identityGroup:2,stemGroup:1},
+ {prefix:'gcs-47__l2d_202',id:'gcs-47__l2d_202',source:COMMUNITY_SOURCE,path:/^少女咖啡枪 girls cafe gun\/47__l2d_202\.u\/cosplay\.model3\.json$/,stem:'cosplay'},
+ {prefix:'gcs-girl07-l2d8002-new',id:'gcs-girl07-l2d8002-new',source:COMMUNITY_SOURCE,path:/^少女咖啡枪 girls cafe gun\/girl07\/\(new\)l2d8002\.u\/l2d8002\.u\.model3\.json$/,stem:'l2d8002.u'},
+ {prefix:'gcs-girl07-l2d21',id:'gcs-girl07-l2d21',source:COMMUNITY_SOURCE,path:/^少女咖啡枪 girls cafe gun\/girl07\/l2d21\.u\/l2d21\.model3\.json$/,stem:'l2d21'},
+ {prefix:'gcs-girl120-l2d01',id:'gcs-girl120-l2d01',source:COMMUNITY_SOURCE,path:/^少女咖啡枪 girls cafe gun\/girl120\/l2d01\.u\.model3\.json$/,stem:'l2d01.u'},
+ {prefix:'gcf-',source:COMMUNITY_SOURCE,path:/^少女咖啡枪 girls cafe gun\/([a-z0-9_]+)\.u\/\1\.u\.model3\.json$/,stemSuffix:'.u'},
  {prefix:'mm-',source:'https://cdn.jsdelivr.net/gh/SerenityS/memo_live2d@e4f1d58abe3610d4179c404ecf5de7865baeff62/',
   path:/^model\/(CHR_\d{6})\/\1\.model3\.json$/},
  {prefix:'is-',source:COMMUNITY_SOURCE,path:/^机动战队\/(leila|madierda|siluokayi|xinxiya)\/model\.model\.json$/,stem:'model'},
@@ -22,7 +29,8 @@ function modelUrlFor(name,candidate,id){
   if(!candidate.startsWith(adapter.source))return '';
   try{
    const relative=decodeURIComponent(candidate.slice(adapter.source.length)),match=relative.match(adapter.path);
-   return match&&!relative.includes('..')&&id===adapter.prefix+match[1].toLowerCase()&&name===(adapter.stem||match[1])?candidate:'';
+   const valid=match&&!relative.includes('..')&&id===(adapter.id||adapter.prefix+match[adapter.identityGroup||1].toLowerCase())&&name===(adapter.stem||match[adapter.stemGroup||1]+(adapter.stemSuffix||''));
+   return valid?(adapter.local?new URL(candidate,location.href).href:candidate):'';
   }catch(error){return ''}
  }
  if(id.startsWith('al-')){
@@ -42,7 +50,7 @@ function modelUrlFor(name,candidate,id){
   if(!candidate.startsWith(COMMUNITY_SOURCE))return '';
   try{
    const relative=decodeURIComponent(candidate.slice(COMMUNITY_SOURCE.length));
-   const m=relative.match(/^少女咖啡枪 girls cafe gun\/(girl\d{2})\/(l2d\d+\.u)\/\2\.model3\.json$/);
+   const m=relative.match(/^少女咖啡枪 girls cafe gun\/(girl\d{2,3})\/(l2d\d+\.u)\/\2\.model3\.json$/);
    return m&&id==='gc-'+m[1]+'-'+m[2].slice(0,-2)&&name===m[2]?candidate:'';
   }catch(e){return ''}
  }
@@ -196,3 +204,4 @@ function queueLive2DPortraitFit(){
   fitRenderedLive2D(expected,generation);
  },null,-100);
 }
+

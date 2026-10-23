@@ -5,7 +5,12 @@
 function isPlayableAnimationEntry(c){
  if(!c||typeof c!=='object'||typeof c.id!=='string'||!c.id||
     typeof c.name!=='string'||!c.name||typeof c.gameId!=='string'||!c.gameId)return false;
- if(c.engine==='cubism')return typeof c.modelUrl==='string'&&/^https:\/\//.test(c.modelUrl);
+ if(c.engine==='cubism'){
+  if(typeof c.modelUrl!=='string')return false;
+  if(/^https:\/\//.test(c.modelUrl))return true;
+  const normalized=c.modelUrl.match(/^\.\/assets\/model-settings\/[a-z0-9-]+\/([-a-z0-9_]+)\.model\.json\?v=([a-f0-9]{64})$/);
+  return !!normalized&&normalized[1]===c.id&&normalized[2]===c.normalizedSettingsSha256&&/^[a-f0-9]{40}$/.test(c.sourceCommit||'');
+ }
  return typeof c.base==='string'&&/^https:\/\//.test(c.base)&&
    (c.skeletonFormat!=='json'||(typeof c.skeletonUrl==='string'&&typeof c.atlasUrl==='string'));
 }
@@ -96,4 +101,5 @@ refreshSaved().then(async()=>{
   }else status('本地缓存中找不到 '+packId,true);
  }catch(e){if(current===sequence)status('读取本地缓存失败：'+e.message,true)}
 });
+
 

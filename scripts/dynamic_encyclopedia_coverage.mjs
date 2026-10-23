@@ -23,11 +23,21 @@ export function buildCoverage(records,inventories,spineScopes,spineAudits){
     gameCompleteness:'not-verified',sourceScopes:scopes};
   })};
 }
-export function main(){
+export function main(args=process.argv.slice(2)){
  const read=p=>JSON.parse(fs.readFileSync(p,'utf8'));
  const spine=read('data/spine-source-scopes.json').scopes;
  const audits=Object.fromEntries(spine.map(s=>{const p='data/spine-source-audit-'+s.id+'.json';return [s.id,fs.existsSync(p)?read(p):null]}));
- const report=buildCoverage(readCharacters(),read('data/live2d-full-inventory.json').scopes,spine,audits);
+ const inventoryPaths=['data/live2d-full-inventory.json',...fs.readdirSync('data').filter(name=>name.endsWith('-full-inventory.json')&&name!=='live2d-full-inventory.json').sort().map(name=>'data/'+name)];
+ for(let i=0;i<args.length;i++){
+  if(args[i]!=='--inventory'||!args[i+1])throw Error('Expected --inventory FILE');
+  inventoryPaths.push(args[++i]);
+ }
+ const inventories=new Map();
+ for(const file of inventoryPaths)for(const scope of read(file).scopes){
+  const identity=JSON.stringify([scope.gameId,scope.sourceRepo,scope.sourceCommit,scope.directory]);
+  inventories.set(identity,scope);
+ }
+ const report=buildCoverage(readCharacters(),[...inventories.values()],spine,audits);
  fs.writeFileSync('data/dynamic-encyclopedia-coverage.json',JSON.stringify(report,null,2)+'\n');
  const lines=['# 动态立绘图鉴覆盖与缺项','',
   '用户范围：每款游戏的全部动态角色立绘及全部皮肤，不用静态图片补数，不以精选样本代替完整图鉴。',

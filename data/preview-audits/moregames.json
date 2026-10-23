@@ -7,13 +7,838 @@
       "missingPreview": 0
     },
     "girlscafegun": {
-      "indexed": 64,
-      "verifiedPreview": 64,
-      "missingPreview": 0
+      "indexed": 273,
+      "verifiedPreview": 67,
+      "missingPreview": 206
     }
   },
-  "missing": [],
-  "newCapturesInThisRun": 0,
+  "missing": [
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0113upd__l2d_357"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0113upd__l2d_358"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0113upd__l2d_359"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0202upd__l2d_345"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0202upd__l2d_349"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0202upd__l2d_351"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0202upd__l2d_355"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0202upd__l2d_379"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0202upd__l2d_385"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0629upd__l2d_362"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0629upd__l2d_363"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0828upd__l2d_379"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0828upd__l2d_380"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0828upd__l2d_381"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0828upd__l2d_382"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0828upd__l2d_391"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0911upd__l2d_343"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0911upd__l2d_344"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0911upd__l2d_347"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0911upd__l2d_348"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0925upd__l2d_365"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-0925upd__l2d_367"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-10qpt01__l2d_354"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-10qpt01__l2d_355"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-10qpt01__l2d_356"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-10qpt01__l2d_357"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-1119upd__l2d_368"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-1119upd__l2d_370"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-12qpt02__l2d_375"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-12qpt03__l2d_376"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-12qpt04__l2d_377"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-12qpt05__l2d_378"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-26__l2d_115"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-27__l2d_116"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-28__l2d_117"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-28__l2d_119"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-29__l2d_118"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-29__l2d_120"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-33__l2d_136"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-34__l2d_137"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-35__l2d_138"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-36__l2d_139"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-3__l2d_31"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-47__l2d_200"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-47__l2d_201"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-47__l2d_202"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-47__l2d_203"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-4__l2d_32"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-5__l2d_33"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-6__l2d_34"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-724upd__l2d_383"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-724upd__l2d_384"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-724upd__l2d_385"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-724upd__l2d_386"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-724upd__l2d_387"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-724upd__l2d_388"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-724upd__l2d_389"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-724upd__l2d_390"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-728upd__l2d_392"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-8qpt01__l2d_322"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-8qpt01__l2d_323"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-8qpt01__l2d_324"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-8qpt01__l2d_325"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-9qpt01__l2d_326"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-9qpt01__l2d_327"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-9qpt01__l2d_328"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-l2d1__l2d_75"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-l2d2__l2d_77"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-l2d3__l2d_78"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-l2d4__l2d_182"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-l2d4__l2d_93"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-l2d5__l2d_139"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-l2d5__l2d_183"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-l2d5__l2d_94"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-l2d6__l2d_184"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-l2d6__l2d_95"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-l2d7__l2d_76"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-newg01__l2d_296"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-newg01__l2d_364"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-newg02__l2d_297"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-newg03__l2d_298"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-newg04__l2d_299"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-swg01__l2d_291"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-swg02__l2d_292"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-swg03__l2d_293"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-swg04__l2d_294"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-sy3q__l2d_342"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-tw75__l2d_232"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-tw75__l2d_233"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-tw75__l2d_234"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-xnl2d1__l2d_222"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-xnl2d2__l2d_223"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-xnl2d3__l2d_224"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-xnl2d4__l2d_225"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-ybxd0414__l2d_336"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-ybxd0414__l2d_337"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-ybxd0414__l2d_338"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-ybxd0414__l2d_339"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-yhl2d1__l2d_271"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-zst0518__l2d_360"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcf-zst0518__l2d_361"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl01-l2d26"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl01-l2d29"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl02-l2d17"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl02-l2d19"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl02-l2d22"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl02-l2d27"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl02-l2d5017"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl03-l2d22"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl03-l2d24"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl03-l2d8002"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl04-l2d05"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl04-l2d24"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl04-l2d26"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl04-l2d3008"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl05-l2d101"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl05-l2d22"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl05-l2d25"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl05-l2d27"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl05-l2d3022"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl05-l2d5017"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl05-l2d8001"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl06-l2d07"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl06-l2d08"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl06-l2d17"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl06-l2d18"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl06-l2d19"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl06-l2d25"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl06-l2d5017"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl07-l2d07"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl07-l2d3022"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl07-l2d8002"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl08-l2d12"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl08-l2d17"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl08-l2d21"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl08-l2d22"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl08-l2d29"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl08-l2d5017"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl09-l2d07"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl09-l2d09"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl09-l2d22"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl09-l2d24"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl09-l2d25"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl09-l2d3008"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl09-l2d3009"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl09-l2d8001"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl09-l2d8002"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl10-l2d08"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl10-l2d24"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl10-l2d26"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl10-l2d29"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl10-l2d3008"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl101-l2d01"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl102-l2d01"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl102-l2d02"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl103-l2d01"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl104-l2d01"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl104-l2d02"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl105-l2d01"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl106-l2d01"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl107-l2d01"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl107-l2d02"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl108-l2d01"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl108-l2d02"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl109-l2d01"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl11-l2d07"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl11-l2d12"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl11-l2d17"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl11-l2d19"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl11-l2d25"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl11-l2d29"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl11-l2d3007"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl11-l2d5017"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl110-l2d01"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl111-l2d01"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl112-l2d01"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl113-l2d01"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl115-l2d01"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl116-l2d01"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl117-l2d01"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl118-l2d01"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl119-l2d01"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl12-l2d17"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl12-l2d18"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl12-l2d22"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl12-l2d27"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl12-l2d5017"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl12-l2d8001"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl13-l2d00"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl13-l2d14"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl13-l2d26"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl14-l2d08"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl14-l2d19"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl14-l2d21"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl14-l2d22"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl14-l2d3001"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl15-l2d12"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl15-l2d14"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl15-l2d27"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl15-l2d3001"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl16-l2d00"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl16-l2d14"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gc-girl16-l2d22"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcs-47__l2d_202"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcs-girl07-l2d8002-new"
+    },
+    {
+      "gameId": "girlscafegun",
+      "id": "gcs-girl120-l2d01"
+    }
+  ],
+  "newCapturesInThisRun": 3,
   "rejectedCaptures": [],
   "failedCaptures": [],
   "failureSummary": {}

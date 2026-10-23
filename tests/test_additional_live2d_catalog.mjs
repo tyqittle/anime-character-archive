@@ -14,10 +14,13 @@ const get=(c,name=c.skinCode,url=c.modelUrl)=>{
  ctx.c=c;ctx.n=name;ctx.u=url;
  return vm.runInContext('modelUrlFor(n,u,c.id)',ctx);
 };
-test('exactly 148 source-checked unique models from two new games',()=>{
- assert.equal(data.length,148);
+test('complete Girl Cafe Gun source imports preserve every original model identity',()=>{
+ const baseline=JSON.parse(fs.readFileSync(new URL('./fixtures/pre-encyclopedia-models.json',import.meta.url))).moregames;
+ for(const id of baseline)assert.ok(data.some(c=>c.id===id),id);
+ const inventory=JSON.parse(fs.readFileSync(new URL('../data/girlscafegun-full-inventory.json',import.meta.url))).scopes[0];
+ assert.equal(inventory.scopeComplete,true);
  assert.equal(data.filter(c=>c.gameId==='touhoucannonball').length,84);
- assert.equal(data.filter(c=>c.gameId==='girlscafegun').length,64);
+ assert.equal(data.filter(c=>c.gameId==='girlscafegun').length,inventory.sourceModelSettings);
  assert.equal(new Set(data.map(c=>c.id)).size,data.length);
  assert.equal(new Set(data.map(c=>c.gameId+'|'+c.sourcePath)).size,data.length);
 });
