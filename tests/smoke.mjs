@@ -291,6 +291,17 @@ assert.ok(theaterCSS.includes('grid-auto-rows:max-content')&&theaterCSS.includes
 assert.ok(theaterCSS.includes('height:100dvh')&&theaterCSS.includes('grid-template-columns:clamp('),'Desktop stage must fit the viewport');
 assert.ok(theaterCSS.includes('.character-cards{flex:1 1 auto')&&theaterCSS.includes('overflow-y:auto'),'Only the card grid should scroll internally');
 assert.ok(theaterCSS.includes('.stage:fullscreen')&&theaterCSS.includes('@media(max-width:850px)'),'Mobile and fullscreen layouts must be preserved');
+const threePaneCSS=read('assets/spine-three-pane.css');
+const threePaneJS=read('assets/js/spine/panel-layout.js');
+assert.ok(player.includes('class="wrap theater-three-pane"')&&player.includes('id="characterSidebar"'),'Theater must have a named left catalog pane');
+assert.ok(player.includes('id="theaterInspector"')&&player.includes('id="toggleLeftPanel"')&&player.includes('id="toggleRightPanel"'),'Independent right inspector and accessible pane toggles are required');
+assert.ok(player.includes('assets/spine-three-pane.css?v=')&&player.includes('assets/js/spine/panel-layout.js?v='),'Theater must load its own layout module and style');
+assert.ok(threePaneCSS.includes('grid-template-columns:var(--theater-left-width) minmax(0,1fr) var(--theater-right-width)')&&threePaneCSS.includes('.stage #player'),'Both drawers must share a full-height middle stage');
+assert.ok(threePaneJS.includes('theater-left-collapsed')&&threePaneJS.includes('theater-right-collapsed'),'Both drawer toggles must be functional');
+const stageMarkup=player.slice(player.indexOf('<section class="stage" id="stage">'),player.indexOf('<aside class="theater-inspector"'));
+const inspectorMarkup=player.slice(player.indexOf('<aside class="theater-inspector"'),player.indexOf('id="toggleLeftPanel"'));
+assert.ok(stageMarkup.includes('id="player"')&&!stageMarkup.includes('id="stageToolbar"')&&!stageMarkup.includes('id="status"'),'Stage must contain only its player and loading indicator');
+assert.ok(inspectorMarkup.includes('id="stageToolbar"')&&inspectorMarkup.includes('id="status"')&&inspectorMarkup.includes('data-friend-links'),'All metadata and controls belong in the right drawer');
 assert.ok(player.includes('new spine.SpinePlayer'),'Spine renderer missing');
 assert.ok(player.includes('connectCanvasGestures')&&player.includes("canvas.addEventListener('pointermove'"),'Theater lacks dragging');
 assert.ok(player.includes("$('player').addEventListener('wheel'")&&player.includes('e.preventDefault()'),'Unmodified mouse wheel zoom missing');
