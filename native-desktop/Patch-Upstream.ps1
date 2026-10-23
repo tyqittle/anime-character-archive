@@ -64,7 +64,7 @@ Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeBrownDust2WebMDecoder.cs'
 # Expose a real in-app updater control on the EXISTING selection panel.
 # Directly running Update.exe is not the Velopack check-updates UI.
 $windowXaml = Join-Path $UpstreamRoot 'SpinePet/src/SpinePet/Views/MainWindow.xaml'
-$windowText = [System.IO.File]::ReadAllText($windowXaml)
+$windowText = [System.IO.File]::ReadAllText($windowXaml).Replace("`r`n", "`n")
 $originalExit = @'
                                  <Button Grid.Column="2"
                                          Width="44"
@@ -100,6 +100,8 @@ $withUpdate = @'
                                              AutomationProperties.Name="Exit application" />
                                  </StackPanel>
 '@
+$originalExit = $originalExit.Replace("`r`n", "`n")
+$withUpdate = $withUpdate.Replace("`r`n", "`n")
 if ([regex]::Matches($windowText,[regex]::Escape($originalExit)).Count -ne 1) {
     throw 'Pinned upstream main-window Update button insertion anchor mismatch'
 }
