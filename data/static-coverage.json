@@ -1,8 +1,8 @@
 {
   "scope": "Recorded source snapshots, not complete released game rosters",
   "sourcesPlanned": 1713,
-  "added": 423,
-  "writtenBytes": 205059782,
+  "added": 0,
+  "writtenBytes": 0,
   "archiveByteLimit": 964689920,
   "failed": [],
   "deferred": [],
@@ -21,7 +21,7 @@
     "arknights": {
       "registered": 1030,
       "availableInSelectedSources": 1030,
-      "added": 423
+      "added": 0
     },
     "bluearchive": {
       "registered": 194,
