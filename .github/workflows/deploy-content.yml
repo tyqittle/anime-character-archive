@@ -1,0 +1,55 @@
+name: Publish refreshed archive to Pages
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/deploy-content.yml'
+      - 'scripts/request_pages_build.cjs'
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - 'Shared animation preview pipeline'
+      - 'Refresh static archive sources'
+      - 'Preview compatibility entry (newgames)'
+      - 'Preview compatibility entry (highquality)'
+      - 'Preview compatibility entry (moregames)'
+      - 'Preview compatibility entry (mature)'
+      - 'Preview compatibility entry (azurlane)'
+      - 'Preview compatibility entry (arknights-illust)'
+      - 'Preview compatibility entry (bd2)'
+      - 'Preview compatibility entry (primary)'
+      - 'Preview compatibility entry (bd2 legacy bd2-bulk-publish-recovery)'
+      - 'Preview compatibility entry (bd2 legacy generate-bd2-previews)'
+    types: [completed]
+    branches: [main]
+permissions:
+  contents: read
+  pages: write
+concurrency:
+  group: archive-pages-content-publication
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: >-
+      ${{ github.event_name != 'workflow_run' ||
+          (github.event.workflow_run.conclusion == 'success' &&
+           github.event.workflow_run.head_repository.full_name == github.repository) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const { requestPagesBuild } = require('./scripts/request_pages_build.cjs');
+            const result = await requestPagesBuild({
+              github, ...context.repo, log: message => core.info(message)
+            });
+            await core.summary
+              .addHeading('Published archive content')
+              .addRaw('Requested source: ' + result.expected + '\n\n')
+              .addRaw('Published source: ' + result.commit + '\n\n')
+              .addLink('Open archive', result.url)
+              .write();
