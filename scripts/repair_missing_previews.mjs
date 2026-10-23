@@ -23,7 +23,7 @@ try{
   try{
    await page.goto('http://127.0.0.1:8765/spine.html?id='+encodeURIComponent(c.id),{waitUntil:'domcontentloaded',timeout:30000});
    await page.waitForFunction(id=>document.querySelector('#characters')?.value===id,c.id,{timeout:30000});
-   await page.waitForFunction(()=>{const s=document.querySelector('#status')?.textContent||'';return s.startsWith('正在播放：')||/失败|超时|未通过来源校验/.test(s)},null,{timeout:95000});
+   await page.waitForFunction(()=>{const node=document.querySelector('#status'),s=node?.textContent||'';return s.startsWith('正在播放：')||node?.classList.contains('error')},null,{timeout:95000});
    const status=await page.locator('#status').textContent();
    if(!status.startsWith('正在播放：'))throw Error(status);
    const canvas=c.engine==='cubism'?page.frameLocator('iframe.azurlane-live2d-frame').locator('#live2dCanvas'):page.locator('#player canvas').first();

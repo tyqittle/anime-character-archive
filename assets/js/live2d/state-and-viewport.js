@@ -86,7 +86,7 @@ function requestLoad(name,id,url){
 
 function notify(kind,detail={}){window.parent.postMessage({channel:CHANNEL,kind,id:currentId,...detail},SAME_ORIGIN)}
 function message(s){warn.textContent=s;warn.hidden=false}
-function verifyName(name){return typeof name==='string'&&/^[a-zA-Z0-9_.-]{2,100}$/.test(name)}
+function verifyName(name){return typeof name==='string'&&name!=='.'&&name!=='..'&&/^[a-zA-Z0-9_.-]{1,100}$/.test(name)}
 function fit(){
  if(!app||!model)return;
  // Live2D models have nonzero local-bound origins. Subtracting bounds.x/y

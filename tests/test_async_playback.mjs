@@ -242,3 +242,16 @@ test('Cubism setup errors use onError and immediately retry the same model provi
  assert.ok(events.some(e=>e.kind==='playing'));
  assert.equal(ctx.timers.size,0);
 });
+
+test('Cubism accepts single-character source basenames without weakening source validation',()=>{
+ const ctx=context({document:{getElementById:()=>({})},navigator:{}});
+ run(ctx,'assets/js/live2d/state-and-viewport.js');
+ assert.equal(ctx.verifyName('1'),true);
+ assert.equal(ctx.verifyName(''),false);
+ assert.equal(ctx.verifyName('..'),false);
+ assert.equal(ctx.verifyName('../1'),false);
+ assert.equal(ctx.verifyName('1/other'),false);
+ const url='https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B0%91%E5%A5%B3%E5%89%8D%E7%BA%BF%20girls%20Frontline/live2dnew/air_attack/1/1.model3.json';
+ assert.equal(ctx.modelUrlFor('1',url,'gf-demo'),url);
+ assert.equal(ctx.modelUrlFor('1',url.replace('Eikanya/Live2d-model','other/repository'),'gf-demo'),'');
+});
