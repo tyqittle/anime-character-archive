@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "scopes": [
+    {
+      "id": "sacredswordprincesses",
+      "gameId": "sacredswordprincesses",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "directory": "Sacred Sword princesses",
+      "sourceModelSettings": 1,
+      "indexedModelSettings": 1,
+      "unindexedSourceSettings": [],
+      "indexedMissingFromScope": [],
+      "scopeComplete": true,
+      "requireComplete": true,
+      "failedModels": [],
+      "checkedModels": 1,
+      "wouldAdd": [
+        "ss-char2d_live2d_001"
+      ]
+    }
+  ]
+}

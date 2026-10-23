@@ -1,0 +1,15 @@
+{
+  "scope": "shared preview pipeline",
+  "counts": {
+    "sacredswordprincesses": {
+      "indexed": 1,
+      "verifiedPreview": 1,
+      "missingPreview": 0
+    }
+  },
+  "missing": [],
+  "newCapturesInThisRun": 1,
+  "rejectedCaptures": [],
+  "failedCaptures": [],
+  "failureSummary": {}
+}

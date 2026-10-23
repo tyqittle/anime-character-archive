@@ -1,0 +1,46 @@
+{
+  "checkedAt": "2026-10-24",
+  "scope": "Two new games: representative real rendering and motions, plus Spine motion-frame, action and zoom checks. Per-model capture counts remain separate.",
+  "cases": [
+    {
+      "game": "sacredswordprincesses",
+      "id": "ss-char2d_live2d_001",
+      "elapsedMs": 1303,
+      "status": "正在播放：Sardiya · 常规服装 · Live2D · SardiyaDefaultMtn（8 组动作） · 加载 0.5 秒",
+      "enabled": true,
+      "animations": 8,
+      "frame": true,
+      "canvas": false,
+      "animation": {
+        "visible": 155195,
+        "moving": 159171
+      }
+    },
+    {
+      "game": "echocalypse",
+      "id": "ec-60010003",
+      "elapsedMs": 513,
+      "status": "正在播放：角色 / 服装 60010003 · idle（共 14 个动作，可用上方动作菜单切换）",
+      "enabled": true,
+      "animations": 14,
+      "frame": false,
+      "canvas": true
+    }
+  ],
+  "spineBehavior": [
+    {
+      "game": "echocalypse",
+      "id": "ec-60010003",
+      "elapsedMs": 867,
+      "status": "正在播放：角色 / 服装 60010003 · idle（共 14 个动作，可用上方动作菜单切换）",
+      "enabled": true,
+      "animations": 14,
+      "frame": false,
+      "canvas": true,
+      "animation": {
+        "visible": 152953,
+        "moving": 77313
+      }
+    }
+  ]
+}

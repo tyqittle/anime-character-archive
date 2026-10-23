@@ -88,6 +88,113 @@
       "sourceRepo": "n0099/TouhouCannonBall-Live2d-Models",
       "sourceCommit": "3c043b183be31cade537e299e47e158a2772184f",
       "directory": ""
+    },
+    {
+      "id": "mementomori",
+      "gameId": "mementomori",
+      "name": "MementoMori（动态原画）",
+      "sourceRepo": "SerenityS/memo_live2d",
+      "sourceCommit": "e4f1d58abe3610d4179c404ecf5de7865baeff62",
+      "directory": "model",
+      "import": {
+        "idPrefix": "mm-",
+        "pattern": "^(CHR_\\d{6})/\\1\\.model3\\.json$",
+        "lowercaseId": true
+      },
+      "catalog": "data/live2d-expanded-games.json",
+      "requireComplete": true
+    },
+    {
+      "id": "ironsaga",
+      "gameId": "ironsaga",
+      "name": "机动战队（Live2D 角色立绘）",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "directory": "机动战队",
+      "selection": "/model\\.model\\.json$",
+      "import": {
+        "idPrefix": "is-",
+        "pattern": "^([a-z]+)/model\\.model\\.json$",
+        "modelStem": "model",
+        "format": "cubism2",
+        "names": {
+          "leila": "莱拉 · Leila",
+          "madierda": "玛蒂尔达 · Matilda",
+          "siluokayi": "斯洛卡伊 · Slokai",
+          "xinxiya": "辛西娅 · Cynthia"
+        }
+      },
+      "catalog": "data/live2d-expanded-games.json",
+      "requireComplete": true
+    },
+    {
+      "id": "venusscramble",
+      "gameId": "venusscramble",
+      "name": "Venus Scramble（女神动态立绘）",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "directory": "VenusScramble",
+      "import": {
+        "idPrefix": "vs-",
+        "pattern": "^(?:player|other|summon)units/((?:player|other|summon)_unit_\\d{5})/live2d/model\\.json$",
+        "modelStem": "model",
+        "format": "cubism2"
+      },
+      "catalog": "data/live2d-expanded-games.json",
+      "requireComplete": true
+    },
+    {
+      "id": "destinychild",
+      "gameId": "destinychild",
+      "name": "天命之子（成熟风格 Live2D）",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "directory": "destiny_child_kr 天命之子",
+      "catalog": "data/live2d-expanded-games.json",
+      "requireComplete": true,
+      "selection": "/(?:c001|c002|c294|c296|c324|c365|c393)_0[12]/model\\.json$",
+      "import": {
+        "idPrefix": "dc-",
+        "pattern": "^((?:c001|c002|c294|c296|c324|c365|c393)_0[12])/model\\.json$",
+        "modelStem": "model",
+        "format": "cubism2",
+        "names": {
+          "c001_01": "莫娜 · Mona · 常服",
+          "c001_02": "莫娜 · Mona · Battlesuit",
+          "c002_01": "丽莎 · Lisa · 常服",
+          "c002_02": "丽莎 · Lisa · Battlesuit",
+          "c294_01": "巴托里 · Bathory · Lady",
+          "c294_02": "巴托里 · Bathory · Bloody",
+          "c296_01": "希尔德 · Hildr · Gunslinger",
+          "c296_02": "希尔德 · Hildr · Sniper",
+          "c324_01": "莫娜 · Mona · Newbie",
+          "c324_02": "莫娜 · Mona · Rookie",
+          "c365_01": "丽莎 · Lisa · Dark Buster",
+          "c365_02": "丽莎 · Lisa · Devil Buster",
+          "c393_01": "莫娜 · Mona · Lightbeam",
+          "c393_02": "莫娜 · Mona · Heavenly Ray"
+        }
+      }
+    },
+    {
+      "id": "sacredswordprincesses",
+      "gameId": "sacredswordprincesses",
+      "name": "Sacred Sword Princesses（角色立绘）",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "directory": "Sacred Sword princesses",
+      "catalog": "data/live2d-mature-followup.json",
+      "selection": "/char2d_live2d_\\d+/res/[^/]+\\.model\\.json$",
+      "requireComplete": true,
+      "import": {
+        "idPrefix": "ss-",
+        "pattern": "^(char2d_live2d_001)/res/sardyamodel\\.model\\.json$",
+        "modelStem": "sardyamodel",
+        "format": "cubism2",
+        "names": {
+          "char2d_live2d_001": "Sardiya · 常规服装"
+        }
+      }
     }
   ]
 }

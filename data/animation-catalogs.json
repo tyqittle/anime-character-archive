@@ -45,6 +45,21 @@
       "id": "daibloscore",
       "name": "Daiblos Core · 成熟风格动态立绘",
       "path": "data/spine-daiblos-core.json"
+    },
+    {
+      "id": "expanded-games",
+      "name": "天命之子 / Venus Scramble / 机动战队 / MementoMori",
+      "path": "data/live2d-expanded-games.json"
+    },
+    {
+      "id": "mature-spine-expansion",
+      "name": "绯色回响 · 动态角色立绘",
+      "path": "data/spine-mature-expansion.json"
+    },
+    {
+      "id": "mature-followup",
+      "name": "Sacred Sword Princesses · 常规角色",
+      "path": "data/live2d-mature-followup.json"
     }
   ]
 }

@@ -1,0 +1,186 @@
+{
+  "checkedAt": "2026-10-24",
+  "scope": "Pinned selected model settings and referenced nonempty moc, textures, motions, physics and pose; browser playback is reported separately.",
+  "reports": [
+    {
+      "schemaVersion": 1,
+      "scopes": [
+        {
+          "id": "destinychild",
+          "gameId": "destinychild",
+          "sourceRepo": "Eikanya/Live2d-model",
+          "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+          "directory": "destiny_child_kr 天命之子",
+          "sourceModelSettings": 14,
+          "indexedModelSettings": 14,
+          "unindexedSourceSettings": [],
+          "indexedMissingFromScope": [],
+          "scopeComplete": true,
+          "requireComplete": true,
+          "failedModels": [],
+          "checkedModels": 14,
+          "wouldAdd": [
+            "dc-c001_01",
+            "dc-c001_02",
+            "dc-c002_01",
+            "dc-c002_02",
+            "dc-c294_01",
+            "dc-c294_02",
+            "dc-c296_01",
+            "dc-c296_02",
+            "dc-c324_01",
+            "dc-c324_02",
+            "dc-c365_01",
+            "dc-c365_02",
+            "dc-c393_01",
+            "dc-c393_02"
+          ]
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "scopes": [
+        {
+          "id": "ironsaga",
+          "gameId": "ironsaga",
+          "sourceRepo": "Eikanya/Live2d-model",
+          "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+          "directory": "机动战队",
+          "sourceModelSettings": 4,
+          "indexedModelSettings": 4,
+          "unindexedSourceSettings": [],
+          "indexedMissingFromScope": [],
+          "scopeComplete": true,
+          "requireComplete": true,
+          "checkedModels": 4,
+          "wouldAdd": [
+            "is-leila",
+            "is-madierda",
+            "is-siluokayi",
+            "is-xinxiya"
+          ]
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "scopes": [
+        {
+          "id": "mementomori",
+          "gameId": "mementomori",
+          "sourceRepo": "SerenityS/memo_live2d",
+          "sourceCommit": "e4f1d58abe3610d4179c404ecf5de7865baeff62",
+          "directory": "model",
+          "sourceModelSettings": 49,
+          "indexedModelSettings": 49,
+          "unindexedSourceSettings": [],
+          "indexedMissingFromScope": [],
+          "scopeComplete": true,
+          "requireComplete": true,
+          "checkedModels": 49,
+          "wouldAdd": [
+            "mm-chr_000001",
+            "mm-chr_000002",
+            "mm-chr_000003",
+            "mm-chr_000004",
+            "mm-chr_000005",
+            "mm-chr_000006",
+            "mm-chr_000007",
+            "mm-chr_000008",
+            "mm-chr_000009",
+            "mm-chr_000010",
+            "mm-chr_000011",
+            "mm-chr_000012",
+            "mm-chr_000013",
+            "mm-chr_000014",
+            "mm-chr_000015",
+            "mm-chr_000016",
+            "mm-chr_000017",
+            "mm-chr_000018",
+            "mm-chr_000019",
+            "mm-chr_000020",
+            "mm-chr_000021",
+            "mm-chr_000022",
+            "mm-chr_000023",
+            "mm-chr_000024",
+            "mm-chr_000025",
+            "mm-chr_000026",
+            "mm-chr_000027",
+            "mm-chr_000028",
+            "mm-chr_000029",
+            "mm-chr_000030",
+            "mm-chr_000031",
+            "mm-chr_000032",
+            "mm-chr_000033",
+            "mm-chr_000034",
+            "mm-chr_000035",
+            "mm-chr_000036",
+            "mm-chr_000037",
+            "mm-chr_000038",
+            "mm-chr_000039",
+            "mm-chr_000040",
+            "mm-chr_000041",
+            "mm-chr_000042",
+            "mm-chr_000043",
+            "mm-chr_000044",
+            "mm-chr_000046",
+            "mm-chr_000047",
+            "mm-chr_000048",
+            "mm-chr_000049",
+            "mm-chr_000051"
+          ]
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "scopes": [
+        {
+          "id": "venusscramble",
+          "gameId": "venusscramble",
+          "sourceRepo": "Eikanya/Live2d-model",
+          "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+          "directory": "VenusScramble",
+          "sourceModelSettings": 18,
+          "indexedModelSettings": 17,
+          "unindexedSourceSettings": [
+            {
+              "path": "VenusScramble/playerunits/player_unit_00005/live2d/model.json",
+              "format": "cubism2"
+            }
+          ],
+          "indexedMissingFromScope": [],
+          "scopeComplete": false,
+          "requireComplete": true,
+          "failedModels": [
+            {
+              "path": "VenusScramble/playerunits/player_unit_00005/live2d/model.json",
+              "error": "Missing or empty source file: playerunits/player_unit_00005/live2d/model.2048/texture_00.png"
+            }
+          ],
+          "checkedModels": 17,
+          "wouldAdd": [
+            "vs-other_unit_90001",
+            "vs-other_unit_90002",
+            "vs-other_unit_90007",
+            "vs-other_unit_90009",
+            "vs-other_unit_90010",
+            "vs-player_unit_00001",
+            "vs-player_unit_00002",
+            "vs-player_unit_00003",
+            "vs-player_unit_00004",
+            "vs-player_unit_00008",
+            "vs-player_unit_00051",
+            "vs-summon_unit_80001",
+            "vs-summon_unit_80002",
+            "vs-summon_unit_80003",
+            "vs-summon_unit_80004",
+            "vs-summon_unit_80005",
+            "vs-summon_unit_80006"
+          ]
+        }
+      ]
+    }
+  ]
+}

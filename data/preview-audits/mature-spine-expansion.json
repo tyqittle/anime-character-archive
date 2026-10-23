@@ -1,0 +1,15 @@
+{
+  "scope": "shared preview pipeline",
+  "counts": {
+    "echocalypse": {
+      "indexed": 21,
+      "verifiedPreview": 21,
+      "missingPreview": 0
+    }
+  },
+  "missing": [],
+  "newCapturesInThisRun": 21,
+  "rejectedCaptures": [],
+  "failedCaptures": [],
+  "failureSummary": {}
+}

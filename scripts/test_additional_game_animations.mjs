@@ -1,10 +1,16 @@
 // Browser smoke tests for additional game formats, not proof that every model works.
 // CI: python3 -m http.server 8765 & node scripts/test_additional_game_animations.mjs
 import fs from 'node:fs';
+import path from 'node:path';
 import {chromium} from 'playwright-core';
 import {PNG} from 'pngjs';
-const browserPath=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'].find(fs.existsSync);
+import {readCharacters} from './catalog_registry.mjs';
+import {compareRenderedFrames} from './animation_frame_check.mjs';
+const browserPath=[process.env.CHROME_BIN,'/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium',
+ 'C:/Program Files/Google/Chrome/Application/chrome.exe'].filter(Boolean).find(fs.existsSync);
 if(!browserPath)throw Error('Chrome or Chromium missing');
+const output=process.env.ANIMATION_TEST_OUTPUT||'tmp/animation-check';fs.mkdirSync(output,{recursive:true});
+const registered=readCharacters();
 const manifest=JSON.parse(fs.readFileSync('data/spine-newgames.json','utf8'));
 const pick=(game,path)=>manifest.characters.find(c=>c.gameId===game&&c.sourcePath===path);
 const more=JSON.parse(fs.readFileSync('data/live2d-moregames.json','utf8'));
@@ -23,7 +29,13 @@ const cases=[
  {type:'cubism',game:'girlscafegun',character:more.characters.find(c=>c.id==='gc-girl01-l2d00')},
  {type:'cubism',game:'girlsfrontline',character:pick('girlsfrontline','少女前线 girls Frontline/live2dnew/79type_1402/normal/normal.model3.json')},
  {type:'cubism',game:'konosuba',character:pick('konosuba','为美好的世界献上祝福！Fantastic Days/1003104/1003104.model3.json')},
- {type:'spine',game:'arknights',character:manifest.characters.find(c=>c.gameId==='arknights'&&c.resourceStem==='char_002_amiya')}
+ {type:'spine',game:'arknights',character:manifest.characters.find(c=>c.gameId==='arknights'&&c.resourceStem==='char_002_amiya')},
+ ...['mm-chr_000034','is-xinxiya','vs-summon_unit_80002','dc-c324_01'].map(id=>{
+  const character=registered.find(c=>c.id===id);return {type:'cubism',game:character?.gameId,character};
+ }),
+ ...['ss-char2d_live2d_001','ec-60010003'].map(id=>{
+  const character=registered.find(c=>c.id===id);return {type:character?.engine==='cubism'?'cubism':'spine',game:character?.gameId,character};
+ })
 ];
 if(cases.some(c=>!c.character))throw Error('Known verified source-directory cases missing from new catalog');
 const browser=await chromium.launch({headless:true,executablePath:browserPath,args:['--no-sandbox','--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
@@ -32,7 +44,9 @@ try{
  const page=await browser.newPage({viewport:{width:1366,height:850},deviceScaleFactor:1});
  const errors=[];
  page.on('pageerror',e=>errors.push(e.message));
- for(const test of cases){
+ const selectedIds=new Set((process.env.ANIMATION_TEST_IDS||'').split(',').filter(Boolean));
+ for(const id of selectedIds)if(!cases.some(item=>item.character.id===id))throw Error('Unknown browser regression ID: '+id);
+ for(const test of cases.filter(item=>!selectedIds.size||selectedIds.has(item.character.id))){
   const start=Date.now();
   await page.goto('http://127.0.0.1:8765/spine.html?id='+encodeURIComponent(test.character.id),{waitUntil:'domcontentloaded',timeout:30000});
   await page.waitForFunction(id=>document.querySelector('#characters')?.value===id,test.character.id,{timeout:35000});
@@ -64,7 +78,7 @@ try{
    :page.locator('#player canvas').first();
   await canvas.waitFor({state:'visible',timeout:12000});
   await page.waitForTimeout(900);
-  const filename='/tmp/newgames-'+test.game+'.png';
+  const filename=path.join(output,'newgames-'+test.game+'.png');
   await canvas.screenshot({path:filename,timeout:18000});
   const png=PNG.sync.read(fs.readFileSync(filename));
   const dataBytes=png.data,stride=Math.max(1,Math.floor(png.width*png.height/1500));
@@ -80,13 +94,45 @@ try{
   if(test.type==='cubism'){
    if(!data.frame)throw Error('Missing Cubism stage: '+test.character.id);
    if(!test.allowNoMotions){
+    await page.waitForTimeout(450);
+    const second=PNG.sync.read(await canvas.screenshot({timeout:18000}));
+    const animation=compareRenderedFrames(png,second);
+    if(animation.visible<300||animation.moving<15)throw Error('No actual character motion: '+JSON.stringify(animation));
+    results.at(-1).animation=animation;
+   }
+   await page.locator('#zoomIn').click();
+   await page.waitForFunction(()=>document.querySelector('#zoomValue')?.textContent==='120%',null,{timeout:10000});
+   if(!test.allowNoMotions){
     if(data.animations<1)throw Error('Unnamed motion group was ignored');
     await page.locator('#animationPicker').selectOption({index:Math.min(1,data.animations-1)});
+    await page.waitForTimeout(200);
+    if(await page.locator('#zoomValue').textContent()!=='120%')throw Error('Action switch reset portrait zoom');
+    const expression=await page.locator('#animationPicker option').evaluateAll(options=>options.find(o=>/^Idle_Expression\.anim$/.test(o.textContent))?.value||'');
+    if(expression){
+     await page.locator('#animationPicker').selectOption(expression);
+     await page.waitForTimeout(350);
+     await canvas.screenshot({timeout:10000});
+     results.at(-1).zeroDurationExpressionResponsive=true;
+    }
    }else if(data.animations>0)throw Error('LOVE³ advertised motions absent upstream');
-  }else if(!data.canvas)throw Error('Spine model missing actual canvas: '+test.character.id);
+   await page.locator('#resetView').click();
+   await page.waitForFunction(()=>document.querySelector('#zoomValue')?.textContent==='100%',null,{timeout:10000});
+  }else{
+   if(!data.canvas)throw Error('Spine model missing actual canvas: '+test.character.id);
+   await page.waitForTimeout(450);
+   const animation=compareRenderedFrames(png,PNG.sync.read(await canvas.screenshot({timeout:18000})));
+   if(animation.visible<300||animation.moving<15)throw Error('No actual Spine motion: '+JSON.stringify(animation));
+   results.at(-1).animation=animation;
+   await page.locator('#zoomIn').click();
+   await page.waitForFunction(()=>document.querySelector('#zoomValue')?.textContent==='120%');
+   await page.locator('#animationPicker').selectOption({index:Math.min(1,data.animations-1)});
+   if(await page.locator('#zoomValue').textContent()!=='120%')throw Error('Spine action reset portrait zoom');
+   await page.locator('#resetView').click();
+  }
  }
+ await page.screenshot({path:path.join(output,'site-result.png'),fullPage:true});
  if(errors.length)throw Error('Browser JS errors: '+errors.join('; '));
 }finally{
- fs.writeFileSync('/tmp/newgames-animation-results.json',JSON.stringify(results,null,2));
+ fs.writeFileSync(path.join(output,'newgames-animation-results.json'),JSON.stringify(results,null,2));
  await browser.close();
 }

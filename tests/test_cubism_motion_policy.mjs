@@ -16,6 +16,10 @@ test('real unnamed source ordering picks stand instead of a one-shot emotion',()
  const p=plan({'':[file('Mgirl02_yihuo'),file('Mgirl02_stand_c'),file('Mgirl02_stand')]});
  assert.equal(p.initial.key,'@motion:2');
 });
+test('Unity .anim exports prefer the real standby over empty expression and effect clips',()=>{
+ const p=plan({'':[file('Idle_Expression.anim'),file('EF_Idle.anim'),file('Idle.anim'),file('Idle_Action.anim')]});
+ assert.equal(p.initial.key,'@motion:2');
+});
 function manager(){
  const m=new EventEmitter();
  m.definitions={'':[file('Mgirl02_yihuo'),file('Mgirl02_stand')]};
@@ -36,6 +40,13 @@ test('source loop flags reach the runtime and one-shot clips remain one-shot',as
  c.dispose();c.dispose();
  assert.equal(m.createMotion,original);assert.equal(m.definitions,defs);assert.equal(m.groups.idle,'Idle');
  assert.equal(await c.play('@motion:0'),false);assert.equal(m.listenerCount('motionStart'),0);
+});
+test('zero-duration loop declarations cannot enter the native infinite time-wrap loop',()=>{
+ const m=manager(),c=install({manager:m});
+ assert.equal(m.createMotion({Meta:{Loop:true,Duration:0}},'',{}).loop,false);
+ assert.equal(m.createMotion({Meta:{Loop:true,Duration:1}},'',{}).loop,true);
+ assert.equal(m.createMotion({Meta:{Loop:false,Duration:0}},'',{}).loop,false);
+ c.dispose();
 });
 test('late failures from replaced requests and disposed sessions do not overwrite current playback',async()=>{
  const m=manager(),waiting=[],errors=[];

@@ -1,0 +1,30 @@
+{
+  "scope": "shared preview pipeline",
+  "counts": {
+    "mementomori": {
+      "indexed": 49,
+      "verifiedPreview": 49,
+      "missingPreview": 0
+    },
+    "ironsaga": {
+      "indexed": 4,
+      "verifiedPreview": 4,
+      "missingPreview": 0
+    },
+    "venusscramble": {
+      "indexed": 17,
+      "verifiedPreview": 17,
+      "missingPreview": 0
+    },
+    "destinychild": {
+      "indexed": 14,
+      "verifiedPreview": 14,
+      "missingPreview": 0
+    }
+  },
+  "missing": [],
+  "newCapturesInThisRun": 84,
+  "rejectedCaptures": [],
+  "failedCaptures": [],
+  "failureSummary": {}
+}

@@ -1,3 +1,7 @@
+## 2026-10-24：新增四款动态立绘游戏
+
+新增 **天命之子 14 套、Venus Scramble 17 套、机动战队 4 套、MementoMori 49 套**，合计 **84 套**，复用共同目录与预览流程。天命之子精选成熟风格常规服装，Venus Scramble 一套缺图模型未导入；索引数量与实际截图验证范围分别记录。来源、复现方式及动作兼容修复见 [扩容说明](docs/DYNAMIC_GAMES_EXPANSION_2026-10-24.md)，当前逐模型预览结果见 [共同预览审计](data/preview-audits/expanded-games.json)。
+
 # 持续维护入口
 
 新增游戏、预览更新及构建边界请先遵循 [架构规范](docs/ARCHITECTURE_RULES.md)，并参考 [架构说明](docs/ARCHITECTURE.md) 和 [本次架构评审](docs/ARCHITECTURE_REVIEW_2026-10-23.md)。常规检查：`npm test`、`npm run check`、`npm run test:python`。动态目录统一注册，预览自动更新走同一条流水线。
@@ -160,3 +164,10 @@ node tests/smoke.mjs
 已导入来自 [isHarryh/Ark-Models](https://github.com/isHarryh/Ark-Models/tree/main/models_illust) 固定提交 `e65fb9147846b64bcf2df956b8cd8da77a51b9b8` 的 **92 套完整动态原画 Spine 资源索引**，包括一套骨骼、图集文件名不一致但路径明确的模型；索引见 `data/spine-arknights-illust.json`。先前 359 套 `BattleFront` 小人继续保留在独立「明日方舟（战斗小人）」筛选项，默认「明日方舟」只展示干员动态原画。模型按需从原始固定版本读取，不重复打包第三方美术。
 
 **92 套是资源完整索引数量，不代表全部已通过浏览器播放验证。** 预览图也必须是对应模型的真实截图，不能拿战斗小人或同角色静态立绘冒充。
+
+
+## 第二批：继续扩展成熟风格游戏
+
+新增 **绯色回响 21 套**、**Sacred Sword Princesses 1 套**，两款游戏均完成逐模型真实预览采集；连同第一批四款，合计新增 **6 款游戏、106 套模型**。绯色回响精选范围原有 26 套候选，其中 4 套缺骨骼/图集被拒绝，另 1 套经真实截图查看发现人物过小并作明确质量排除，未以其他人物配图替代。Sacred Sword Princesses 仅选常规角色服装，不导入 CG 场景。
+
+来源固定提交、失败和质量排除见 `data/spine-source-scopes.json`、`data/spine-source-audit-echocalypse.json`、`data/sacredsword-source-audit.json`；共同预览结果见 `data/preview-audits/mature-spine-expansion.json` 与 `data/preview-audits/mature-followup.json`。代表模型的双帧运动、动作和缩放检查保存在 `data/mature-followup-browser-audit.json`。Spine 来源导入复现命令：`python -X utf8 scripts/import_spine_source.py --scope echocalypse`；已知缺失会被明确报告并返回非零退出码。

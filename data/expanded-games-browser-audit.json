@@ -1,0 +1,79 @@
+{
+  "checkedAt": "2026-10-24",
+  "scope": "Representative frame pairs, action changes, zoom retention and reset; zero-duration expression; existing Girls Frontline regression. Full per-model preview capture statistics are separate.",
+  "cases": [
+    {
+      "game": "mementomori",
+      "id": "mm-chr_000034",
+      "elapsedMs": 3484,
+      "status": "正在播放：CHR_000034 · Live2D · Idle.anim（23 组动作） · 加载 2.7 秒",
+      "enabled": true,
+      "animations": 23,
+      "frame": true,
+      "canvas": false,
+      "animation": {
+        "visible": 137879,
+        "moving": 48622
+      },
+      "zeroDurationExpressionResponsive": true
+    },
+    {
+      "game": "ironsaga",
+      "id": "is-xinxiya",
+      "elapsedMs": 3112,
+      "status": "正在播放：辛西娅 · Cynthia · Live2D · idle1（9 组动作） · 加载 2.8 秒",
+      "enabled": true,
+      "animations": 9,
+      "frame": true,
+      "canvas": false,
+      "animation": {
+        "visible": 169638,
+        "moving": 48277
+      }
+    },
+    {
+      "game": "venusscramble",
+      "id": "vs-summon_unit_80002",
+      "elapsedMs": 2074,
+      "status": "正在播放：summon_unit_80002 · Live2D · mtn_00（7 组动作） · 加载 1.8 秒",
+      "enabled": true,
+      "animations": 7,
+      "frame": true,
+      "canvas": false,
+      "animation": {
+        "visible": 83194,
+        "moving": 28401
+      }
+    },
+    {
+      "game": "destinychild",
+      "id": "dc-c324_01",
+      "elapsedMs": 778,
+      "status": "正在播放：莫娜 · Mona · Newbie · Live2D · 00（4 组动作） · 加载 0.5 秒",
+      "enabled": true,
+      "animations": 4,
+      "frame": true,
+      "canvas": false,
+      "animation": {
+        "visible": 87611,
+        "moving": 113807
+      }
+    }
+  ],
+  "legacyCases": [
+    {
+      "game": "girlsfrontline",
+      "id": "gf-live2dnew_79type_1402_normal_normal-e834d86",
+      "elapsedMs": 3699,
+      "status": "正在播放：79type_1402 · 常态 · Live2D · daiji_idle_01（1 组动作） · 加载 2.8 秒",
+      "enabled": true,
+      "animations": 1,
+      "frame": true,
+      "canvas": false,
+      "animation": {
+        "visible": 152984,
+        "moving": 110292
+      }
+    }
+  ]
+}

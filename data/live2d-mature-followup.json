@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-24",
+  "note": "Only regular character rig, not CG or event scenes. Selected source scope, not the complete game.",
+  "characters": [
+    {
+      "id": "ss-char2d_live2d_001",
+      "gameId": "sacredswordprincesses",
+      "engine": "cubism",
+      "name": "Sardiya · 常规服装",
+      "characterName": "char2d",
+      "costumeName": "char2d_live2d_001",
+      "skinCode": "sardyamodel",
+      "game": "Sacred Sword Princesses（角色立绘）",
+      "collectionName": "Sacred Sword Princesses（角色立绘）",
+      "modelUrl": "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_001/res/sardyamodel.model.json",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "Sacred Sword princesses/char2d_live2d_001/res/sardyamodel.model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 2058162,
+      "motionCount": 8,
+      "modelFormat": "cubism2",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_001/res/sardyamodel.model.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9133dcf775bc2690a38cbd8654201ddfee3253392e8a5648740c012ee7295411",
+      "preview": "./assets/animation-previews/sacredswordprincesses-ss-char2d_live2d_001.webp"
+    }
+  ],
+  "sources": []
+}

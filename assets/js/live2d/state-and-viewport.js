@@ -5,8 +5,26 @@ const SOURCE='https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e5
 const MILKY_SOURCE='https://cdn.jsdelivr.net/gh/MilkyLan/AzurLane-Live2d@1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3';
 // Allow only commit-pinned, audited source trees; never arbitrary cross-origin URLs.
 const COMMUNITY_SOURCE='https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/';
+// Source adapters bind the fixed repository, model path, ID and setting stem.
+// The renderer, gestures, motion policy and preview pipeline remain shared.
+const EXPANSION_CUBISM_SOURCES=[
+ {prefix:'mm-',source:'https://cdn.jsdelivr.net/gh/SerenityS/memo_live2d@e4f1d58abe3610d4179c404ecf5de7865baeff62/',
+  path:/^model\/(CHR_\d{6})\/\1\.model3\.json$/},
+ {prefix:'is-',source:COMMUNITY_SOURCE,path:/^机动战队\/(leila|madierda|siluokayi|xinxiya)\/model\.model\.json$/,stem:'model'},
+ {prefix:'vs-',source:COMMUNITY_SOURCE,path:/^VenusScramble\/(?:player|other|summon)units\/((?:player|other|summon)_unit_\d{5})\/live2d\/model\.json$/,stem:'model'},
+ {prefix:'dc-',source:COMMUNITY_SOURCE,path:/^destiny_child_kr 天命之子\/((?:c001|c002|c294|c296|c324|c365|c393)_0[12])\/model\.json$/,stem:'model'},
+ {prefix:'ss-',source:COMMUNITY_SOURCE,path:/^Sacred Sword princesses\/(char2d_live2d_001)\/res\/sardyamodel\.model\.json$/,stem:'sardyamodel'}
+];
 function modelUrlFor(name,candidate,id){
  if(typeof candidate!=='string')return '';
+ const adapter=EXPANSION_CUBISM_SOURCES.find(entry=>id.startsWith(entry.prefix));
+ if(adapter){
+  if(!candidate.startsWith(adapter.source))return '';
+  try{
+   const relative=decodeURIComponent(candidate.slice(adapter.source.length)),match=relative.match(adapter.path);
+   return match&&!relative.includes('..')&&id===adapter.prefix+match[1].toLowerCase()&&name===(adapter.stem||match[1])?candidate:'';
+  }catch(error){return ''}
+ }
  if(id.startsWith('al-')){
   const suffix='/live2d/'+name+'/'+name+'.model3.json';
   return [SOURCE+suffix,MILKY_SOURCE+suffix].includes(candidate)?candidate:'';

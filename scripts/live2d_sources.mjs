@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
 import {pathToFileURL} from 'node:url';
+import {createHash} from 'node:crypto';
 import {readCharacters} from './catalog_registry.mjs';
 const root=new URL('../',import.meta.url);
 const read=p=>JSON.parse(fs.readFileSync(new URL(p,root),'utf8'));
@@ -26,8 +27,11 @@ export function sourceRecord(scope,relative,settings,tree,existing){
  if(!scope.import)throw Error('No identity adapter configured for '+scope.id);
  const match=relative.match(new RegExp(scope.import.pattern));
  if(!match||!match[1])throw Error('Model path is outside the identity rule: '+relative);
- const stem=match[1],refs=settings.FileReferences;
- if(settings.Version!==3||!refs?.Moc||!Array.isArray(refs.Textures)||!refs.Textures.length)throw Error('Incomplete Cubism3 settings: '+relative);
+ const stem=match[1],legacy=scope.import.format==='cubism2';
+ const refs=legacy?{Moc:settings.model,Textures:settings.textures,Physics:settings.physics,Pose:settings.pose,
+  Expressions:(settings.expressions||[]).map(x=>({File:x.file})),
+  Motions:Object.fromEntries(Object.entries(settings.motions||{}).map(([group,items])=>[group,items.map(x=>({File:x.file}))]))}:settings.FileReferences;
+ if((!legacy&&settings.Version!==3)||!refs?.Moc||!Array.isArray(refs.Textures)||!refs.Textures.length)throw Error('Incomplete Cubism settings: '+relative);
  const files=new Map(tree.filter(x=>x.type==='blob').map(x=>[x.path,x]));
  function resolve(ref){
   if(typeof ref!=='string'||!ref||/^[a-z]+:|^[/\\]/i.test(ref))throw Error('Invalid source reference: '+ref);
@@ -42,12 +46,14 @@ export function sourceRecord(scope,relative,settings,tree,existing){
  if(textureBytes<(scope.import.minimumTextureBytes||1))throw Error('Texture size below declared source policy: '+relative);
  const sourcePath=(scope.directory?scope.directory+'/':'')+relative;
  const modelUrl='https://cdn.jsdelivr.net/gh/'+scope.sourceRepo+'@'+scope.sourceCommit+'/'+sourcePath.split('/').map(encodeURIComponent).join('/');
- if(existing&&(existing.id!==scope.import.idPrefix+stem||existing.modelUrl!==modelUrl))throw Error('Existing model identity differs: '+sourcePath);
+ const id=scope.import.idPrefix+(scope.import.lowercaseId?stem.toLowerCase():stem);
+ if(existing&&(existing.id!==id||existing.modelUrl!==modelUrl))throw Error('Existing model identity differs: '+sourcePath);
  const name=scope.import.names?.[stem]||stem;
- return {...(existing||{}),id:existing?.id||scope.import.idPrefix+stem,gameId:scope.gameId,engine:'cubism',
+ return {...(existing||{}),id:existing?.id||id,gameId:scope.gameId,engine:'cubism',
   name:existing?.name||name,characterName:existing?.characterName||stem.split('_')[0],costumeName:existing?.costumeName||stem,
-  skinCode:stem,game:scope.name||scope.gameId,collectionName:scope.name||scope.gameId,modelUrl,
+  skinCode:scope.import.modelStem||stem,game:scope.name||scope.gameId,collectionName:scope.name||scope.gameId,modelUrl,
   sourceRepo:scope.sourceRepo,sourceCommit:scope.sourceCommit,sourcePath,assetType:'live2d-character',textureBytes,motionCount:motions.length,
+  ...(legacy?{modelFormat:'cubism2'}:{}),
   ...(!existing?{status:'indexed-unverified',playbackStatus:'not-verified',previewSource:'not-rendered'}:{})};
 }
 const cache=new Map();
@@ -75,8 +81,14 @@ async function scopedTree(scope){
  return all.tree;
 }
 async function settingsBlob(scope,entry){
- const blob=await api('https://api.github.com/repos/'+scope.sourceRepo+'/git/blobs/'+entry.sha);
- return JSON.parse(Buffer.from(blob.content.replace(/\s/g,''),'base64').toString('utf8').replace(/^\uFEFF/,''));
+ const sourcePath=(scope.directory?scope.directory+'/':'')+entry.path;
+ const url='https://raw.githubusercontent.com/'+scope.sourceRepo+'/'+scope.sourceCommit+'/'+sourcePath.split('/').map(encodeURIComponent).join('/');
+ const response=await fetch(url,{signal:AbortSignal.timeout(30000)});
+ if(!response.ok)throw Error('Model settings HTTP '+response.status+' '+sourcePath);
+ const bytes=Buffer.from(await response.arrayBuffer());
+ const hash=createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex');
+ if(hash!==entry.sha)throw Error('Model settings Git blob mismatch: '+sourcePath);
+ return JSON.parse(bytes.toString('utf8').replace(/^\uFEFF/,''));
 }
 export async function main(args=process.argv.slice(2)){
  const config=read('data/live2d-source-scopes.json'),records=readCharacters(),report=[];
@@ -90,11 +102,14 @@ export async function main(args=process.argv.slice(2)){
    const tree=await scopedTree(scope);Object.assign(entry,inspectScope(scope,tree,records));
    if(scope.import){
     const incoming=[];
+    entry.failedModels=[];
     for(const file of sourceSettings(scope,tree)){
      const sourcePath=(scope.directory?scope.directory+'/':'')+file.path;
      const existing=records.find(c=>c.sourceRepo===scope.sourceRepo&&c.sourceCommit===scope.sourceCommit&&c.sourcePath===sourcePath);
-     const settings=await settingsBlob(scope,file);
-     incoming.push(sourceRecord(scope,file.path,settings,tree,existing));
+     try{
+      const settings=await settingsBlob(scope,file);
+      incoming.push(sourceRecord(scope,file.path,settings,tree,existing));
+     }catch(error){entry.failedModels.push({path:sourcePath,error:error.message});failed=true}
     }
     entry.checkedModels=incoming.length;entry.wouldAdd=incoming.filter(c=>!records.some(x=>x.id===c.id)).map(c=>c.id);
     if(importId===scope.id){

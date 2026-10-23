@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "scopes": [
+    {
+      "id": "echocalypse",
+      "gameId": "echocalypse",
+      "name": "绯色回响（动态角色立绘）",
+      "sourceRepo": "leililei/echocalypse-spine",
+      "sourceCommit": "54649cbe1c63e718810ba1dda605ab4d5c0d745d",
+      "treeSha": "d35ee35f7d61f25c1d8d9d0657884c511ac481b6",
+      "treePrefix": "res/",
+      "directory": "common/knight_spine",
+      "catalog": "data/spine-mature-expansion.json",
+      "idPrefix": "ec-",
+      "modelPattern": "6\\d{5,7}",
+      "spineVersion": "3.8",
+      "models": [
+        "600010",
+        "60001002",
+        "600020",
+        "60002001",
+        "600030",
+        "60003001",
+        "60003002",
+        "600040",
+        "60004001",
+        "600050",
+        "60005001",
+        "600060",
+        "600070",
+        "60007001",
+        "600080",
+        "60008001",
+        "60008002",
+        "600090",
+        "60009001",
+        "600100",
+        "60010003",
+        "600110",
+        "60011001",
+        "600120",
+        "60012001",
+        "600170"
+      ],
+      "qualityExclusions": {
+        "60004001": "Real rendered frame reviewed: oversized stage spotlight with tiny character; excluded from portrait gallery."
+      }
+    }
+  ]
+}

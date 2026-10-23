@@ -12,7 +12,8 @@ const all=readCharacters();
 const todo=all.filter(c=>pending.has(c.id)).filter((_,i)=>i%count===shard);
 const root='tmp/repair-output';
 for(const name of ['frames','reports'])fs.mkdirSync(path.join(root,name),{recursive:true});
-const bin=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'].find(fs.existsSync);
+const bin=[process.env.CHROME_BIN,'/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium',
+ 'C:/Program Files/Google/Chrome/Application/chrome.exe','C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'].filter(Boolean).find(fs.existsSync);
 if(!bin)throw Error('Chromium missing');
 const browser=await chromium.launch({headless:true,executablePath:bin,args:['--no-sandbox','--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const context=await browser.newContext({viewport:{width:1366,height:850}});
@@ -26,6 +27,9 @@ try{
    await page.waitForFunction(()=>{const node=document.querySelector('#status'),s=node?.textContent||'';return s.startsWith('正在播放：')||node?.classList.contains('error')},null,{timeout:95000});
    const status=await page.locator('#status').textContent();
    if(!status.startsWith('正在播放：'))throw Error(status);
+   // Canvas screenshots are composited with overlapping parent-page controls.
+   // Exclude the floating pane handles from every game's portrait preview.
+   await page.addStyleTag({content:'#toggleLeftPanel,#toggleRightPanel{visibility:hidden!important}'});
    const canvas=c.engine==='cubism'?page.frameLocator('iframe.azurlane-live2d-frame').locator('#live2dCanvas'):page.locator('#player canvas').first();
    await canvas.waitFor({state:'visible',timeout:10000});
    let frame;const deadline=Date.now()+9000;

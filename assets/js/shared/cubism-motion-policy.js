@@ -6,10 +6,11 @@
  'use strict';
  function filename(def){return String(def?.File||def?.file||'').split('/').pop().replace(/\.motion3?\.json$|\.mtn$/i,'')}
  function idleScore(group,def){
-  const name=filename(def).toLowerCase(),tokens=(group+' '+name).toLowerCase().split(/[^a-z0-9]+/);
+  const exported=filename(def).toLowerCase(),name=exported.replace(/\.anim$/,''),tokens=(group+' '+name).toLowerCase().split(/[^a-z0-9]+/);
   const ranks={idle:100,daiji:100,stand:90,breath:85,breathe:85,wait:80,default:70,normal:65,home:60,main:50};
   let score=0;for(const token of tokens)score=Math.max(score,ranks[token]||0);
   if(/(?:^|_)(?:idle|stand|breath|wait)$/.test(name))score+=4;
+  if(exported.endsWith('.anim')&&['idle','stand','breath','wait'].includes(name))score+=20;
   return score;
  }
  function plan(definitions={}){
@@ -43,7 +44,10 @@
    // The pinned Cubism renderer parses Meta.Loop but never copies it to
    // CubismMotion._isLoop. Honor the source flag through the public runtime API.
    const loop=data?.Meta?.Loop??motion?._motionData?.loop;
-   if(typeof loop==='boolean'&&typeof motion?.setIsLoop==='function')motion.setIsLoop(loop);
+   const duration=data?.Meta?.Duration??motion?._motionData?.duration;
+   // Empty expression clips can declare Loop=true with Duration=0. Looping
+   // them makes the native Cubism time-wrap loop subtract zero indefinitely.
+   if(typeof loop==='boolean'&&typeof motion?.setIsLoop==='function')motion.setIsLoop(loop&&!(typeof duration==='number'&&duration<=0));
    return motion;
   }
   function create(data,group,definition){return applyLoop(originalCreate.call(this,data,group,definition),data)}
