@@ -23,7 +23,7 @@ function installSpineIllustrationQuality(activePlayer,entry){
       ) * 0.25;
       texColor.rgb = clamp(texColor.rgb + (texColor.rgb - adjacent) * 0.45, 0.0, 1.0);`;
  const updated=fragment.replace('uniform sampler2D u_texture;',
-  'uniform sampler2D u_texture;\\n      uniform vec2 u_archiveTexel;').replace(sample,replacement);
+  'uniform sampler2D u_texture;\n      uniform vec2 u_archiveTexel;').replace(sample,replacement);
  let sharp;
  try{
   sharp=new Shader(renderer.context,vertex,updated);
