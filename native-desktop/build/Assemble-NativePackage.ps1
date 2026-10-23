@@ -1,7 +1,7 @@
 # Extracted from the Windows workflow. Run from the repository root.
 New-Item -ItemType Directory -Force -Path ./safe-release/core,./safe-release/source | Out-Null
 Move-Item -Path ./native-dist/app -Destination ./safe-release/core/app
-# No game models, custom PowerShell download scripts or protocol changes
+# No game models or custom PowerShell download scripts
 # in the standalone desktop application download.
 New-Item -ItemType Directory -Force -Path ./safe-release/core/res | Out-Null
 'SpinePet model directory. Place licensed Spine 4.1 models here; this file preserves the resource directory when unzipped.' | Set-Content ./safe-release/core/res/README.txt -Encoding utf8
@@ -16,6 +16,7 @@ Copy-Item ./native-upstream/LICENSE ./safe-release/core/LICENSE-GPL-3.0.txt
 Copy-Item ./native-upstream/NOTICE ./safe-release/core/NOTICE.txt
 Copy-Item ./native-upstream/THIRD_PARTY_NOTICES.md ./safe-release/core/THIRD_PARTY_NOTICES.md
 Copy-Item ./native-desktop/CONCENTUS-LICENSE.txt ./safe-release/core/CONCENTUS-LICENSE.txt
+Copy-Item ./native-desktop/WEBVIEW2_NOTICE.txt ./safe-release/core/app/WEBVIEW2_NOTICE.txt
 @'
 Anime Character Archive — native SpinePet core (Windows x64)
 Renderer source: KAIDO-YONAGI/My_SpinePet, GPL-3.0-or-later
@@ -25,7 +26,9 @@ Website one-click import is implemented natively inside SpinePet.exe.
 Registration is only offered with a visible consent dialog when you launch the app.
 No scripts, shell launchers or separate ZIPs are required.
 This executable is unsigned and has not been certified malware-free.
-For supported NIKKE Spine 4.1: visit the archive, select a model, and click 放到桌面.
+For the registered website Spine/Cubism models: select a role in the archive and click 放到桌面.
+Microsoft WebView2 Runtime is reused when installed; a verified official bootstrapper is bundled.
+Legacy native Spine 4.1 import remains available.
 The upstream Add/Scan interface remains available for manual licensed asset import.
 GPL corresponding source is provided as another artifact from this SAME build run.
 See https://github.com/tyqittle/anime-character-archive/tree/main/native-desktop

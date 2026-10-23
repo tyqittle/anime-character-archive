@@ -10,7 +10,7 @@
 - **浏览器**：`assets/js/shared/catalog-registry.js` 是无 DOM 的显式服务。剧场 bootstrap 读取注册表，目录 UI 由模型数据补充新分组。Spine/Cubism 仍隔离渲染。
 - **内容处理**：`catalog_registry.py/mjs` 读取同一注册表；`preview_policy.py` 校验同模型路径/尺寸/摘要；`preview_frame_pipeline.py` 只负责图像处理；`preview_repository.py` 只负责校验、状态转换与文件发布。
 - **CI**：`preview-pipeline.yml` 统一规划待处理 ID、分片采集、转码、校验和发布。游戏命名工作流仅保留手动兼容入口。`deploy-content.yml` 在内容发布成功后显式请求 Pages 构建，核验实际部署提交。
-- **桌面**：Electron 在 `desktop/`；原生应用适配在 `native-desktop/`。Windows YAML 编排步骤，构建实现与验证脚本位于 `native-desktop/build/`。
+- **桌面**：历史 Electron 在 `desktop/`；Windows 应用在 `native-desktop/`。`web/` 使用 WebView2 CompositionController 复用网页引擎，`rendering/` 保留原生 4.1 与旧导入兼容。Windows YAML 编排步骤，构建实现与验证脚本位于 `native-desktop/build/`。
 
 ## 预览数据流
 
@@ -81,3 +81,7 @@ python scripts/preview_pipeline.py publish
 ## 原生渲染维护边界
 
 Windows 原生 Spine 4.1 宿主的持续维护模块位于 `native-desktop/rendering/`。输入快照、三角形覆盖与表面容量检查为纯 C# 服务；四个上游渲染/输入模块通过固定摘要清单安装。构建适配先核对全部原始输入，拒绝源变化或新类型冲突，成功后记录实际安装源摘要。剩余兼容钩子仍有唯一锚点检查，不能宣称全部原生适配均已去除补丁。完整重建输入包含在 GPL 源码产物中。性能数据、回归与兼容范围见 [桌宠优化记录](DESKTOP_OPTIMIZATION.md)。
+
+## 通用桌面宿主
+
+网站传递游戏与角色 ID，客户端只导航固定站点；共同注册表继续拥有资源与引擎选择。`native-desktop/web/` 拥有控制器、GPU 合成 visual、输入窗口、取消与持久配置。网页 `desktop-webview-bridge.js` 在完整绘制后报告就绪和有预算的 Alpha 命中区域，复用已有动作/缩放命令；掩模不参与显示。旧 NIKKE/BD2 原生链接与文件目录保留。升级、运行时与实际验证范围见 [通用桌面架构](UNIVERSAL_DESKTOP.md)。

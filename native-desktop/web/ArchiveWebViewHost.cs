@@ -108,7 +108,20 @@ internal sealed class ArchiveWebViewHost : IDisposable
             AppLogger.Write(nameof(ArchiveWebViewHost),
                 $"universal-playing game={_selection.Game} id={_selection.Id} engine={ReadyEngine}");
         }
-        catch { Dispose();throw; }
+        catch
+        {
+            if(publicTestDirectory!=null&&_controller!=null)
+            {
+                try
+                {
+                    string diagnostics=await _controller.CoreWebView2.ExecuteScriptAsync(
+                        "JSON.stringify({url:location.href,status:document.getElementById('status')?.textContent,bridge:window.ArchiveDesktopBridge?.inspect()})");
+                    Console.WriteLine("UNIVERSAL_FAILURE "+diagnostics);
+                }
+                catch(Exception diagnosticError){Console.WriteLine("UNIVERSAL_DIAGNOSTIC "+diagnosticError.Message);}
+            }
+            Dispose();throw;
+        }
     }
 
     private void OnMessage(object? sender,CoreWebView2WebMessageReceivedEventArgs e)

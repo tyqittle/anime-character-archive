@@ -6,9 +6,15 @@ $public = Join-Path $root 'public'
 New-Item -ItemType Directory -Path $public,(Join-Path $root 'fixture') -Force | Out-Null
 # Explicit public inputs only. Never expose a checkout's .git or runner credentials.
 Copy-Item ./spine.html,./azurlane-stage.html -Destination $public
-foreach ($directory in @('assets','data','vendor')) {
-    if(Test-Path -LiteralPath $directory) { Copy-Item -LiteralPath $directory -Destination $public -Recurse }
+New-Item -ItemType Directory -Path (Join-Path $public 'assets') -Force | Out-Null
+Copy-Item ./assets/*.css -Destination (Join-Path $public 'assets')
+foreach ($directory in @('assets/js','data','vendor')) {
+    if(Test-Path -LiteralPath $directory) {
+        $target=if($directory -eq 'assets/js'){Join-Path $public 'assets'}else{$public}
+        Copy-Item -LiteralPath $directory -Destination $target -Recurse
+    }
 }
+# Only the chosen cases' thumbnails are useful; hidden gallery assets are not renderer input.
 @'
 <!doctype html><html><head><style>html,body{margin:0;background:transparent}#pixel{position:absolute;left:20px;top:20px;width:100px;height:100px;background:red}</style></head><body><div id="pixel"></div><script>
 const q=new URLSearchParams(location.search),session=q.get('session');

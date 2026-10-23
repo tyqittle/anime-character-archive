@@ -70,7 +70,14 @@ public sealed class ArchiveUniversalDesktopTests
         Assert.True(host.MaskCount>0);
         Assert.NotEqual(IntPtr.Zero,host.InputHandle);
         // Win32 region, not a full-screen invisible input window.
-        Assert.Equal(new IntPtr(1),SendMessage(host.InputHandle,0x0084,IntPtr.Zero,Coordinates(30,30)));
+        IntPtr region=CreateRectRgn(0,0,0,0);
+        try
+        {
+            Assert.NotEqual(0,GetWindowRgn(host.InputHandle,region));
+            Assert.True(PtInRegion(region,30,30));
+            Assert.False(PtInRegion(region,180,180));
+        }
+        finally {DeleteObject(region);}
         using var stream=new MemoryStream();
         await host.Core!.CapturePreviewAsync(CoreWebView2CapturePreviewImageFormat.Png,stream);
         stream.Position=0;
@@ -154,8 +161,10 @@ public sealed class ArchiveUniversalDesktopTests
         thread.SetApartmentState(ApartmentState.STA);thread.Start();
         await completion.Task.WaitAsync(TimeSpan.FromMinutes(15));
     }
-    private static IntPtr Coordinates(int x,int y)=>new((y<<16)|(x&0xffff));
-    [DllImport("user32.dll")]private static extern IntPtr SendMessage(IntPtr hwnd,uint message,IntPtr w,IntPtr l);
+    [DllImport("gdi32.dll")]private static extern IntPtr CreateRectRgn(int left,int top,int right,int bottom);
+    [DllImport("gdi32.dll")]private static extern bool PtInRegion(IntPtr region,int x,int y);
+    [DllImport("gdi32.dll")]private static extern bool DeleteObject(IntPtr region);
+    [DllImport("user32.dll")]private static extern int GetWindowRgn(IntPtr hwnd,IntPtr region);
     [DllImport("user32.dll")]private static extern IntPtr GetWindow(IntPtr hwnd,uint command);
     [DllImport("user32.dll")]private static extern bool IsWindowVisible(IntPtr hwnd);
 }

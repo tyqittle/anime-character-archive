@@ -1,0 +1,10 @@
+Microsoft WebView2
+The application references Microsoft.Web.WebView2 SDK 1.0.3650.58.
+The bundled MicrosoftEdgeWebview2Setup.exe is Microsoft's unmodified Evergreen
+Runtime bootstrapper downloaded from https://go.microsoft.com/fwlink/p/?LinkId=2124703 .
+Its Authenticode signature is verified at build time. Its SHA-256 receipt is
+verified before execution. The installed runtime is maintained separately by Microsoft.
+SDK/runtime terms and distribution guidance:
+https://learn.microsoft.com/microsoft-edge/webview2/concepts/distribution
+https://www.nuget.org/packages/Microsoft.Web.WebView2/1.0.3650.58
+The WebView2 SDK and runtime are not relicensed under this project's GPL.
