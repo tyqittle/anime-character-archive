@@ -66,6 +66,27 @@ public sealed partial class App
         return Convert.ToHexString(hash);
     }
 
+    // Stamp freshly downloaded atomic packs immediately, avoiding an
+    // unnecessary second network verification at their next import.
+    private static async Task WriteArchiveReceiptForFreshDownloadAsync(
+        string directory, string stem, string sourceUrl)
+    {
+        string atlasName = stem + ".atlas";
+        string skeletonName = stem + ".skel";
+        string[] pages = AtlasImagePages(
+            await File.ReadAllTextAsync(Path.Combine(directory, atlasName)));
+        var hashes = new Dictionary<string, string>(StringComparer.Ordinal);
+        foreach (string filename in pages.Append(skeletonName)
+            .Append(atlasName).Distinct())
+        {
+            hashes[filename] = await ComputeArchiveFileHashAsync(
+                Path.Combine(directory, filename));
+        }
+        await File.WriteAllTextAsync(
+            Path.Combine(directory, ArchiveAssetReceiptFile),
+            JsonSerializer.Serialize(new ArchiveAssetReceipt(sourceUrl, hashes)));
+    }
+
     // Called only for a site-managed *complete* pack whose legacy files
     // were previously trusted based on File.Exists alone. The remote URL has
     // already passed the game's strict allowlist and identifier validation.
