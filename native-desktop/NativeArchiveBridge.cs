@@ -247,7 +247,12 @@ public sealed partial class App
             SpineSkeletonCompatibility.EnsureSupported(skeleton);
             string[] pages = AtlasImagePages(await File.ReadAllTextAsync(atlas));
             if (pages.All(page => File.Exists(Path.Combine(standing, page))))
+            {
+                // Once per legacy pack, compare ALL real files to the trusted
+                // source; afterwards use the stored local SHA-256 receipt.
+                await VerifyOrRepairArchiveModelAsync(standing, stem, modelUrl);
                 return Path.GetFullPath(skeleton);
+            }
         }
         if (Directory.Exists(standing))
             throw new InvalidDataException("Existing model folder is incomplete. Please remove or repair it manually.");
@@ -291,6 +296,8 @@ public sealed partial class App
                     throw new InvalidDataException($"Unexpected texture size: {page}");
                 await File.WriteAllBytesAsync(Path.Combine(temporary, page), image);
             }
+            await WriteArchiveReceiptForFreshDownloadAsync(
+                temporary, stem, modelUrl);
             Directory.Move(temporary, standing);
         }
         finally
