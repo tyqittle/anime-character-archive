@@ -7,6 +7,11 @@ on:
       - 'data/live2d-moregames.json'
       - 'data/live2d-highquality.json'
       - 'data/live2d-mature.json'
+      - 'data/live2d-expanded-games.json'
+      - 'data/live2d-mature-followup.json'
+      - 'data/spine-mature-expansion.json'
+      - 'data/spine-source-scopes.json'
+      - 'scripts/import_spine_source.py'
       - 'data/live2d-source-scopes.json'
       - 'scripts/live2d_sources.mjs'
       - 'tests/test_live2d_sources.mjs'
@@ -44,8 +49,7 @@ jobs:
         with:
           name: newgames-browser-report
           path: |
-            /tmp/newgames-animation-results.json
-            /tmp/newgames-*.png
+            tmp/animation-check/
             /tmp/newgames-server.log
           if-no-files-found: ignore
 

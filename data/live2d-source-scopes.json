@@ -141,7 +141,7 @@
         "format": "cubism2"
       },
       "catalog": "data/live2d-expanded-games.json",
-      "requireComplete": true
+      "requireComplete": false
     },
     {
       "id": "destinychild",

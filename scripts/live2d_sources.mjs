@@ -109,7 +109,12 @@ export async function main(args=process.argv.slice(2)){
      try{
       const settings=await settingsBlob(scope,file);
       incoming.push(sourceRecord(scope,file.path,settings,tree,existing));
-     }catch(error){entry.failedModels.push({path:sourcePath,error:error.message});failed=true}
+     }catch(error){
+      entry.failedModels.push({path:sourcePath,error:error.message});
+      // Informational scopes retain missing-file diagnostics without failing
+      // the complete-source gates. An explicit import still reports failure.
+      if(scope.requireComplete||importId===scope.id)failed=true;
+     }
     }
     entry.checkedModels=incoming.length;entry.wouldAdd=incoming.filter(c=>!records.some(x=>x.id===c.id)).map(c=>c.id);
     if(importId===scope.id){
