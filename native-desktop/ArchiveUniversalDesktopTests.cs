@@ -13,17 +13,12 @@ namespace SpinePet.Tests;
 // Profiles and public-only virtual host roots are unique to this test run.
 public sealed class ArchiveUniversalDesktopTests
 {
-    private static readonly Lazy<bool> LayoutResources=new(()=>{
-        System.Windows.Application.ResourceAssembly=typeof(SpinePet.App).Assembly;
-        return true;
-    });
     [Theory]
     [InlineData(640,560,1)]
     [InlineData(640,560,1.25)]
     [InlineData(800,640,1.5)]
     [InlineData(1020,720,2)]
     public Task GlobalCommandsRemainVisibleAndClickableInBothLibraryTabs(double width,double height,double textScale)=>Sta(async()=>{
-        _=LayoutResources.Value;
         var window=new System.Windows.Window();
         System.Windows.Application.LoadComponent(window,
             new Uri("/SpinePet;component/Views/MainWindow.xaml",UriKind.Relative));

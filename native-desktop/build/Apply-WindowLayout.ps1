@@ -7,6 +7,7 @@ $names='http://schemas.microsoft.com/winfx/2006/xaml'
 $document=[Xml.XmlDocument]::new()
 $document.PreserveWhitespace=$true
 $document.Load((Resolve-Path -LiteralPath $WindowXaml))
+$document.DocumentElement.SetAttribute('Icon','pack://application:,,,/SpinePet;component/Assets/Brand/SpinePet.ico')
 $namespace=[Xml.XmlNamespaceManager]::new($document.NameTable)
 $namespace.AddNamespace('p',$presentation)
 $namespace.AddNamespace('x',$names)
