@@ -42,6 +42,62 @@ function patchSpine38AtlasRotations(){
  };
  proto.__fixedFullRotations=true;
 }
+// Spine 3.8's bundled SceneRenderer.resize() writes canvas.width = clientWidth
+// on EVERY frame, discarding the device pixel ratio. This makes 2K+ illustration
+// textures blurry even when the downloaded atlas is full resolution.
+// Patch the shared renderer, not a specific game's skeleton or preview.
+function patchSpine38HighDPI(){
+ const webgl=window.spine?.webgl,proto=webgl?.SceneRenderer?.prototype;
+ if(!proto||!webgl.ResizeMode)throw Error('Spine 3.8 WebGL renderer missing');
+ if(proto.__archiveHighDPI)return;
+ const originalBegin=proto.begin;
+ proto.resize=function(mode){
+  const canvas=this.canvas,gl=this.context?.gl;
+  if(!canvas||!gl)return;
+  const cssWidth=canvas.clientWidth,cssHeight=canvas.clientHeight;
+  if(!(cssWidth>0&&cssHeight>0))return;
+  if(!this._archiveRenderLimit){
+   const reported=Number(gl.getParameter?.(gl.MAX_RENDERBUFFER_SIZE))||8192;
+   this._archiveRenderLimit=Math.max(1,Math.min(8192,reported));
+  }
+  const requested=Math.max(1,Math.min(2,Number(window.devicePixelRatio)||1));
+  // Cap the backing area to avoid allocating huge framebuffers on laptops;
+  // never upscale above the device's actual pixel density.
+  const ratio=Math.max(0.1,Math.min(requested,
+   this._archiveRenderLimit/Math.max(cssWidth,cssHeight),
+   Math.sqrt(12000000/(cssWidth*cssHeight))));
+  const width=Math.max(1,Math.round(cssWidth*ratio));
+  const height=Math.max(1,Math.round(cssHeight*ratio));
+  if(canvas.width!==width||canvas.height!==height){
+   canvas.width=width;
+   canvas.height=height;
+  }
+  gl.viewport(0,0,canvas.width,canvas.height);
+  if(mode===webgl.ResizeMode.Expand){
+   this.camera.setViewport(canvas.width,canvas.height);
+  }else if(mode===webgl.ResizeMode.Fit){
+   const targetRatio=this.camera.viewportHeight/this.camera.viewportWidth;
+   const sourceRatio=canvas.height/canvas.width;
+   const scale=targetRatio<sourceRatio
+    ?this.camera.viewportWidth/canvas.width
+    :this.camera.viewportHeight/canvas.height;
+   this.camera.viewportWidth=canvas.width*scale;
+   this.camera.viewportHeight=canvas.height*scale;
+  }
+  this.camera.update();
+ };
+ // 3.8 does not expose SpinePlayer's newer update callback. Intercept the
+ // native draw begin after it sets the automatic viewport so drag/wheel zoom
+ // modifies the camera BEFORE drawing rather than CSS-scaling a bitmap.
+ proto.begin=function(...args){
+  if(typeof player!=='undefined'&&player?.sceneRenderer===this
+    &&player._archiveNativeView&&typeof applySharpSpineCamera==='function'){
+   applySharpSpineCamera(player);
+  }
+  return originalBegin.apply(this,args);
+ };
+ proto.__archiveHighDPI=true;
+}
 // Keep incompatible Spine namespace objects isolated and cached by version.
 function activateRuntimeStylesheet(href){
  if(!runtimeCss){
@@ -82,7 +138,7 @@ function ensureRuntime(version,isCurrent=()=>true){
      script.onload=()=>{
       clearTimeout(timeout);
       if(!window.spine?.SpinePlayer){reject(Error('脚本已加载但未注册 SpinePlayer'));return}
-      try{if(legacy)patchSpine38AtlasRotations();resolve()}catch(e){reject(e)}
+      try{if(legacy){patchSpine38AtlasRotations();patchSpine38HighDPI()}resolve()}catch(e){reject(e)}
      };
      script.onerror=()=>{clearTimeout(timeout);script.remove();reject(Error('脚本请求失败（可能为404或网络拦截）'))};
      document.head.append(script);
@@ -161,10 +217,10 @@ async function show(options,title,onError){
       console.error('Spine WebGL surface is opaque; transparency is unavailable on this renderer',window.__desktopRendererDiagnostics);
      }
     }
-    // Spine 4.x invokes update() after resetting its camera but before drawing.
-    // Legacy bundled Spine 3.8 lacks this hook; leave its compatible CSS zoom.
-    p._archiveNativeView=$('version').value!=='3.8'
-      &&!!p.sceneRenderer?.camera&&typeof p.sceneRenderer.camera.zoom==='number';
+    // Spine 4.x uses its update callback; patched 3.8 applies the same
+    // native-camera transform from SceneRenderer.begin().
+    p._archiveNativeView=!!p.sceneRenderer?.camera
+      &&typeof p.sceneRenderer.camera.zoom==='number';
     rendererFrameStats.at=0;rendererFrameStats.count=0;
     updateGPUStatus(spineGraphicsStatus(p));
      setViewerToolsEnabled(true);
