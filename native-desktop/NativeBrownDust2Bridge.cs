@@ -88,7 +88,7 @@ public sealed partial class App
                 await File.ReadAllTextAsync(atlas));
             if (existingPages.All(page =>
                     File.Exists(Path.Combine(standing, page))))
-                return stem;
+                return Path.GetFullPath(skeleton);
         }
         if (Directory.Exists(standing))
             throw new InvalidDataException(
@@ -131,6 +131,6 @@ public sealed partial class App
             if (Directory.Exists(staging))
                 Directory.Delete(staging, recursive: true);
         }
-        return stem;
+        return Path.GetFullPath(skeleton);
     }
 }
