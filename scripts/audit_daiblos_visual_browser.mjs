@@ -77,7 +77,7 @@ async function inspectRuntime(page){
    const comma=uri.indexOf(',');
    if(comma>=0){
     const raw=decodeURIComponent(uri.slice(comma+1));
-    const m=raw.match(/(?:^|\\n)size:\\s*(\\d+)\\s*,\\s*(\\d+)/);
+    const m=raw.match(/size:\s*(\d+)\s*,\s*(\d+)/);
     if(m)declaredAtlasSize=[Number(m[1]),Number(m[2])];
    }
   }catch(e){}
