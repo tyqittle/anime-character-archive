@@ -11,6 +11,18 @@ const chars=JSON.parse(read('data/characters.json'));
 const spine=JSON.parse(read('data/spine-characters.json'));
 const bd2=JSON.parse(read('data/spine-bd2-pilot.json'));
 const bd2Full=JSON.parse(read('data/spine-bd2-characters.json'));
+const more=JSON.parse(read('data/live2d-moregames.json')).characters;
+assert.equal(more.length,148,'Both newly imported Cubism catalogs must have 148 records');
+assert.equal(new Set(more.map(c=>c.id)).size,148,'Duplicated model in additional Cubism games');
+for(const c of more){
+ assert.ok(['touhoucannonball','girlscafegun'].includes(c.gameId)&&c.engine==='cubism');
+ assert.ok(c.modelUrl.includes('@'+c.sourceCommit+'/')&&c.modelUrl.endsWith('/'+c.skinCode+'.model3.json'));
+ if(c.preview){
+  assert.equal(c.preview,'./assets/animation-previews/'+c.gameId+'-'+c.id+'.webp');
+  assert.equal(c.previewSource,'matching-live2d-animation-frame');
+  assert.ok(fs.existsSync(path.join(root,c.preview)));
+ }else assert.equal(c.previewSource,'not-rendered');
+}
 assert.equal(bd2Full.characters.length,209,'Brown Dust 2 must index all 209 models');
 assert.equal(new Set(bd2Full.characters.map(c=>c.id)).size,209,'Duplicate BD2 IDs');
 assert.equal(new Set(bd2Full.characters.map(c=>c.characterName)).size,87,'Expected 87 source BD2 characters');
@@ -401,6 +413,7 @@ assert.ok(catalogBootstrap.includes('Promise.allSettled')&&catalogBootstrap.incl
  'Animation catalogs should load in parallel and revalidate mutable manifests');
 assert.ok(catalogBootstrap.includes('isPlayableAnimationEntry')&&!catalogBootstrap.includes("c.gameId==='arknights'&&c.base"),
  'Spine/Cubism catalog validation should not depend on individual game IDs');
+assert.ok(catalogBootstrap.includes('moreLive2dCatalogUrl'),'Extra Live2D catalog missing from shared loader');
 assert.ok(catalogBootstrap.includes('canonicalAnimationId(requested)'),
  'Old variant deep links must resolve to the retained playable model');
 

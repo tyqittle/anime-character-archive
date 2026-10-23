@@ -25,6 +25,8 @@ jobs:
         run: node tests/smoke.mjs
       - name: Test animation skin deduplication and voice aliases
         run: node --test tests/test_animation_dedup.mjs
+      - name: Test pinned Live2D source URL restrictions
+        run: node --test tests/test_additional_live2d_catalog.mjs
       - name: Test bounded animation memory cache
         run: node tests/test_spine_session_cache.mjs
       - name: Test shared preview policy

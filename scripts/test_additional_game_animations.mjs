@@ -7,7 +7,10 @@ const browserPath=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/us
 if(!browserPath)throw Error('Chrome or Chromium missing');
 const manifest=JSON.parse(fs.readFileSync('data/spine-newgames.json','utf8'));
 const pick=(game,path)=>manifest.characters.find(c=>c.gameId===game&&c.sourcePath===path);
+const more=JSON.parse(fs.readFileSync('data/live2d-moregames.json','utf8'));
 const cases=[
+ {type:'cubism',game:'touhoucannonball',character:more.characters.find(c=>c.id==='tc-reimu')},
+ {type:'cubism',game:'girlscafegun',character:more.characters.find(c=>c.id==='gc-girl01-l2d00')},
  {type:'cubism',game:'girlsfrontline',character:pick('girlsfrontline','少女前线 girls Frontline/live2dnew/79type_1402/normal/normal.model3.json')},
  {type:'cubism',game:'konosuba',character:pick('konosuba','为美好的世界献上祝福！Fantastic Days/1003104/1003104.model3.json')},
  {type:'spine',game:'arknights',character:manifest.characters.find(c=>c.gameId==='arknights'&&c.resourceStem==='char_002_amiya')}

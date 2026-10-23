@@ -1,0 +1,96 @@
+name: Capture Touhou and Girl Cafe Gun genuine Live2D previews
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/live2d-moregames.json'
+      - 'scripts/preview_policy.py'
+      - 'scripts/preview_queue.py'
+      - 'scripts/preview_capture_queue.mjs'
+      - 'scripts/capture_newgame_previews.mjs'
+      - 'scripts/convert_newgame_previews.py'
+      - 'scripts/preview_frame_pipeline.py'
+      - 'scripts/merge_newgame_previews.py'
+      - '.github/workflows/more-live2d-previews.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: more-live2d-preview-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser and image libraries
+        run: |
+          npm install --no-save --no-package-lock playwright-core@1.56.1 pngjs@7.0.0
+          python3 -m pip install --quiet --break-system-packages Pillow
+      - name: Start local static gallery
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 > /tmp/more-live2d-preview-server.log 2>&1 &
+          sleep 2
+      - name: Select missing model previews
+        run: python3 scripts/preview_queue.py --catalog data/live2d-moregames.json --write tmp/preview-pending.json
+      - name: Capture real model frames
+        run: node scripts/capture_newgame_previews.mjs ${{ matrix.shard }} 24 data/live2d-moregames.json tmp/more-live2d-output
+      - name: Convert nonblank frames to matching WebP cards
+        if: always()
+        run: python3 scripts/convert_newgame_previews.py tmp/more-live2d-output
+      - name: Upload preview shard
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: more-live2d-shard-${{ matrix.shard }}
+          path: |
+            tmp/more-live2d-output/webps/
+            tmp/more-live2d-output/reports/
+          if-no-files-found: ignore
+          retention-days: 7
+  publish:
+    needs: capture
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    concurrency:
+      group: dynamic-game-previews-publish
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: more-live2d-shard-*
+          path: tmp/more-live2d-merged
+          merge-multiple: true
+      - name: Install Pillow and publish source-matched WebPs
+        run: |
+          python3 -m pip install --quiet --break-system-packages Pillow
+          python3 scripts/merge_newgame_previews.py --catalog data/live2d-moregames.json --incoming tmp/more-live2d-merged/webps --audit data/more-live2d-preview-audit.json
+      - name: Commit verified previews to Pages source
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/live2d-moregames.json data/more-live2d-preview-audit.json assets/animation-previews/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Capture verified Touhou and Girl Cafe Gun character previews"
+          for i in 1 2 3; do
+            if git push origin HEAD:main; then exit 0; fi
+            git fetch origin main
+            git rebase origin/main
+          done
+          exit 1

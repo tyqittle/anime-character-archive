@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'data/spine-newgames.json'
+      - 'data/live2d-moregames.json'
       - 'assets/js/spine/**'
       - 'assets/js/live2d/**'
       - 'spine.html'
