@@ -2,8 +2,8 @@
   "scope": "shared preview pipeline",
   "counts": {
     "daibloscore": {
-      "indexed": 127,
-      "verifiedPreview": 127,
+      "indexed": 125,
+      "verifiedPreview": 125,
       "missingPreview": 0
     }
   },
