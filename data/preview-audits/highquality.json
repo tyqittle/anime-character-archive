@@ -1,0 +1,20 @@
+{
+  "scope": "shared preview pipeline",
+  "counts": {
+    "girldimension": {
+      "indexed": 102,
+      "verifiedPreview": 102,
+      "missingPreview": 0
+    },
+    "sinsevendeadlysins": {
+      "indexed": 94,
+      "verifiedPreview": 94,
+      "missingPreview": 0
+    }
+  },
+  "missing": [],
+  "newCapturesInThisRun": 0,
+  "rejectedCaptures": [],
+  "failedCaptures": [],
+  "failureSummary": {}
+}

@@ -1,0 +1,39 @@
+{
+  "scope": "shared preview pipeline",
+  "counts": {
+    "azurlane": {
+      "indexed": 242,
+      "verifiedPreview": 240,
+      "missingPreview": 2
+    }
+  },
+  "missing": [
+    {
+      "gameId": "azurlane",
+      "id": "al-shengluyisi_3"
+    },
+    {
+      "gameId": "azurlane",
+      "id": "al-wuqi_3"
+    }
+  ],
+  "newCapturesInThisRun": 0,
+  "rejectedCaptures": [],
+  "failedCaptures": [
+    {
+      "id": "al-shengluyisi_3",
+      "gameId": "azurlane",
+      "category": "render-error",
+      "message": "blank-frame: no rendered character"
+    },
+    {
+      "id": "al-wuqi_3",
+      "gameId": "azurlane",
+      "category": "render-error",
+      "message": "blank-frame: no rendered character"
+    }
+  ],
+  "failureSummary": {
+    "render-error": 2
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "scope": "shared preview pipeline",
+  "counts": {
+    "touhoucannonball": {
+      "indexed": 84,
+      "verifiedPreview": 84,
+      "missingPreview": 0
+    },
+    "girlscafegun": {
+      "indexed": 64,
+      "verifiedPreview": 64,
+      "missingPreview": 0
+    }
+  },
+  "missing": [],
+  "newCapturesInThisRun": 0,
+  "rejectedCaptures": [],
+  "failedCaptures": [],
+  "failureSummary": {}
+}

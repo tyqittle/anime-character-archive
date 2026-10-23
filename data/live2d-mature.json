@@ -36,9 +36,22 @@
       "textureBytes": 9769928,
       "motionCount": 69,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E3%83%A1%E3%82%A4%E3%83%89%E3%81%95%E3%82%93%E3%81%AE%E3%81%84%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97S/ele_a0/model.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "57c8a13a3aad16e0faa91c4e71c9439d878763d86e505695081da45097d6813c",
+      "preview": "./assets/animation-previews/maidslife-ml-ele_a0.webp"
     },
     {
       "id": "ml-ele_a1",
@@ -56,9 +69,22 @@
       "textureBytes": 8735305,
       "motionCount": 69,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E3%83%A1%E3%82%A4%E3%83%89%E3%81%95%E3%82%93%E3%81%AE%E3%81%84%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97S/ele_a1/model.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8b892a1d56b051099970986a2268acd766d6f6a5fbec48578c4bdf1c26e85d3d",
+      "preview": "./assets/animation-previews/maidslife-ml-ele_a1.webp"
     },
     {
       "id": "ml-ele_a2",
@@ -76,9 +102,22 @@
       "textureBytes": 10252752,
       "motionCount": 69,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E3%83%A1%E3%82%A4%E3%83%89%E3%81%95%E3%82%93%E3%81%AE%E3%81%84%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97S/ele_a2/model.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d9957f53177e1749b23efacda248b8a5c2d7f6e7785f7e37c21471de13adfb6d",
+      "preview": "./assets/animation-previews/maidslife-ml-ele_a2.webp"
     },
     {
       "id": "ml-ele_a3",
@@ -96,9 +135,22 @@
       "textureBytes": 8342491,
       "motionCount": 69,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E3%83%A1%E3%82%A4%E3%83%89%E3%81%95%E3%82%93%E3%81%AE%E3%81%84%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97S/ele_a3/model.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "6e4c690035a98e3ea18331fb87f9e95601c683e8ca71d8c3cee9d39590f9f647",
+      "preview": "./assets/animation-previews/maidslife-ml-ele_a3.webp"
     },
     {
       "id": "ml-ele_a4",
@@ -116,9 +168,22 @@
       "textureBytes": 9124683,
       "motionCount": 69,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E3%83%A1%E3%82%A4%E3%83%89%E3%81%95%E3%82%93%E3%81%AE%E3%81%84%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97S/ele_a4/model.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "36829659eaa7bea917be5fd88f65a3d5d51313821cb3a7b4c1f16312d9481c1c",
+      "preview": "./assets/animation-previews/maidslife-ml-ele_a4.webp"
     },
     {
       "id": "ml-ele_b0",
@@ -136,9 +201,22 @@
       "textureBytes": 10048280,
       "motionCount": 69,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E3%83%A1%E3%82%A4%E3%83%89%E3%81%95%E3%82%93%E3%81%AE%E3%81%84%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97S/ele_b0/model.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "35eb661948467b3b83c33c97121b3b10e8133a9d7e6ec8250400ab4704c4313e",
+      "preview": "./assets/animation-previews/maidslife-ml-ele_b0.webp"
     },
     {
       "id": "ml-ele_b1",
@@ -156,9 +234,22 @@
       "textureBytes": 9735381,
       "motionCount": 69,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E3%83%A1%E3%82%A4%E3%83%89%E3%81%95%E3%82%93%E3%81%AE%E3%81%84%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97S/ele_b1/model.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5c8d022ab3cc345f59cc37b385d373bdf4c503bf806b12b834a9ce8d761abbd2",
+      "preview": "./assets/animation-previews/maidslife-ml-ele_b1.webp"
     },
     {
       "id": "ml-ele_b2",
@@ -176,9 +267,22 @@
       "textureBytes": 9260329,
       "motionCount": 69,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E3%83%A1%E3%82%A4%E3%83%89%E3%81%95%E3%82%93%E3%81%AE%E3%81%84%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97S/ele_b2/model.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f8cf4a584906a48149db851ab7310efcc2e8fe1f82994e6a5c138493a726c2b4",
+      "preview": "./assets/animation-previews/maidslife-ml-ele_b2.webp"
     },
     {
       "id": "ml-ele_b3",
@@ -196,9 +300,22 @@
       "textureBytes": 9174453,
       "motionCount": 69,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E3%83%A1%E3%82%A4%E3%83%89%E3%81%95%E3%82%93%E3%81%AE%E3%81%84%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97S/ele_b3/model.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0780011a2683d51f725f7728d4937ba6b24f45b586a7b4048dfb8e027140dd56",
+      "preview": "./assets/animation-previews/maidslife-ml-ele_b3.webp"
     },
     {
       "id": "ml-ele_b4",
@@ -216,9 +333,22 @@
       "textureBytes": 8452988,
       "motionCount": 69,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E3%83%A1%E3%82%A4%E3%83%89%E3%81%95%E3%82%93%E3%81%AE%E3%81%84%E3%82%8B%E6%9A%AE%E3%82%89%E3%81%97S/ele_b4/model.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "511ac18eeb03f026b1d6e5775effe142e48d09646b1219a303fcf601e0270192",
+      "preview": "./assets/animation-previews/maidslife-ml-ele_b4.webp"
     },
     {
       "id": "tn-l2d00055",
@@ -236,9 +366,22 @@
       "textureBytes": 847543,
       "motionCount": 14,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00055/l2d00055.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3229cef460a1b69729d4c21154dba4f137363bb51d1bd48d48656068e8005da9",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00055.webp"
     },
     {
       "id": "tn-l2d00056",
@@ -256,9 +399,22 @@
       "textureBytes": 1519323,
       "motionCount": 14,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00056/l2d00056.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e861ef151c3ad62e7ae32ed4754ab5f5f411e193f16f1da818cbebb4cb9ac19f",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00056.webp"
     },
     {
       "id": "tn-l2d00120",
@@ -276,9 +432,22 @@
       "textureBytes": 1022986,
       "motionCount": 18,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00120/l2d00120.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7da53e5bac54f7de87fe5761159415e91966e0df4b0a9da3b7b33ecfb1c6c434",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00120.webp"
     },
     {
       "id": "tn-l2d00122",
@@ -296,9 +465,22 @@
       "textureBytes": 788748,
       "motionCount": 18,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00122/l2d00122.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b828a5c17729cdb1f32bc9a5f09fcab17fd64aead490d25e0ac5c5e6bf652f0f",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00122.webp"
     },
     {
       "id": "tn-l2d00123",
@@ -316,9 +498,22 @@
       "textureBytes": 1416172,
       "motionCount": 19,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00123/l2d00123.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9a7f96b15a4f78b089b8ae9b335cddfe494d20298982095d6ddf1fbec4c4c086",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00123.webp"
     },
     {
       "id": "tn-l2d00124",
@@ -336,9 +531,22 @@
       "textureBytes": 884077,
       "motionCount": 19,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00124/l2d00124.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "aaff69c8f25851324d40649d8d1d608d86868074813f967d4bccb3107b25f909",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00124.webp"
     },
     {
       "id": "tn-l2d00130",
@@ -356,9 +564,22 @@
       "textureBytes": 1344204,
       "motionCount": 18,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00130/l2d00130.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "07fbbdf4021ab2f2efa0ea47e20bcf900549e676853fd50ef934e42f6ec99a81",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00130.webp"
     },
     {
       "id": "tn-l2d00153",
@@ -376,9 +597,22 @@
       "textureBytes": 1032782,
       "motionCount": 18,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00153/l2d00153.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "383dac28efeb34a63369861d8af1bc034276c8aa9a1a18b7089067c1f9b681a9",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00153.webp"
     },
     {
       "id": "tn-l2d00153a",
@@ -396,9 +630,22 @@
       "textureBytes": 1032782,
       "motionCount": 13,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00153a/l2d00153a.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "37131927227371f308949533224ee10c9fb688fd100a737f2184b6e9f6533fec",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00153a.webp"
     },
     {
       "id": "tn-l2d00167",
@@ -416,9 +663,22 @@
       "textureBytes": 1055738,
       "motionCount": 28,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00167/l2d00167.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c5d21f03d8a15647df5101aa6ea7f4b990d5d576d0eb5f442b1062633ebaf493",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00167.webp"
     },
     {
       "id": "tn-l2d00175",
@@ -436,9 +696,22 @@
       "textureBytes": 1416365,
       "motionCount": 18,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00175/l2d00175.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b366b940e9a3159b87530ef8dd546780daf744155835459778d95dd98c18cedb",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00175.webp"
     },
     {
       "id": "tn-l2d00176",
@@ -456,9 +729,22 @@
       "textureBytes": 902199,
       "motionCount": 20,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00176/l2d00176.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c0456d369a327618285dde417f4210aa99dbaf1631a534d444781ea526e27f26",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00176.webp"
     },
     {
       "id": "tn-l2d00185",
@@ -476,9 +762,22 @@
       "textureBytes": 982589,
       "motionCount": 20,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00185/l2d00185.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "fd7e361dfed786b3c5d475d00fbb66b0ba7dcfb38b2d8da7a5972b3cd98e0b62",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00185.webp"
     },
     {
       "id": "tn-l2d00187",
@@ -496,9 +795,22 @@
       "textureBytes": 911534,
       "motionCount": 18,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00187/l2d00187.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "30217cfd898ad6b78bb7c01aef06974943c41dc8545aface95eb4a838a0ea6b5",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00187.webp"
     },
     {
       "id": "tn-l2d00188",
@@ -516,9 +828,22 @@
       "textureBytes": 760240,
       "motionCount": 20,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00188/l2d00188.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "903475be95a4580a914a4823434473fb83904be2b07e32858959fc778a33e1ad",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00188.webp"
     },
     {
       "id": "tn-l2d00190",
@@ -536,9 +861,22 @@
       "textureBytes": 1184891,
       "motionCount": 18,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00190/l2d00190.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3481fbc4dab939b5e09fc26ed0cbfeef39325469d2d68fb0aa7e3876704eb025",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00190.webp"
     },
     {
       "id": "tn-l2d00190a",
@@ -556,9 +894,22 @@
       "textureBytes": 1035960,
       "motionCount": 17,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00190a/l2d00190a.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "67167ee4b2ea86b1190b75a73618870f3b7065a76c9bd0092e295d1a47a351ab",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00190a.webp"
     },
     {
       "id": "tn-l2d00195",
@@ -576,9 +927,22 @@
       "textureBytes": 712139,
       "motionCount": 19,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00195/l2d00195.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "32ce18294634fbda7eb7ef338d7d9f765b198bca56bd3065435a297de81ca99a",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00195.webp"
     },
     {
       "id": "tn-l2d00196",
@@ -596,9 +960,22 @@
       "textureBytes": 842307,
       "motionCount": 19,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00196/l2d00196.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f7db075012d301696f24c44de1ef52dc787fe803af505b3d74e6e82ccdb46d98",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00196.webp"
     },
     {
       "id": "tn-l2d00197",
@@ -616,9 +993,22 @@
       "textureBytes": 871733,
       "motionCount": 18,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00197/l2d00197.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "030bac63363a565234006e9317c2ba76b3d4a8cf0cb355c4b0939f603114f14a",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00197.webp"
     },
     {
       "id": "tn-l2d00198",
@@ -636,9 +1026,22 @@
       "textureBytes": 796691,
       "motionCount": 19,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00198/l2d00198.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "fbfd4704313f492f72a1e655614946d144e8529e4d70b0f4008bb7411a5badaf",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00198.webp"
     },
     {
       "id": "tn-l2d00199",
@@ -656,9 +1059,22 @@
       "textureBytes": 764881,
       "motionCount": 23,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00199/l2d00199.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "812b90bed360e051dcb715163e1ed644d6d6374b15920599b54d472754774360",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00199.webp"
     },
     {
       "id": "tn-l2d00199a",
@@ -676,9 +1092,22 @@
       "textureBytes": 764881,
       "motionCount": 17,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00199a/l2d00199a.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "82df24f169e8023bf7a845b411acdab63534179a2cb98af1f94bb01b1f45e77f",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00199a.webp"
     },
     {
       "id": "tn-l2d00200",
@@ -696,9 +1125,22 @@
       "textureBytes": 832163,
       "motionCount": 20,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00200/l2d00200.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "301578a264836df3e3c41fb8c0e1e547e6223c4cc6eba5e4327e64d14455cbb1",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00200.webp"
     },
     {
       "id": "tn-l2d00200a",
@@ -716,9 +1158,22 @@
       "textureBytes": 832163,
       "motionCount": 16,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00200a/l2d00200a.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a51a6bdb5ea957b3ef7563fadb8fc635e5d772819cbc304245bc01f8fe1cfb1a",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00200a.webp"
     },
     {
       "id": "tn-l2d00202",
@@ -736,9 +1191,22 @@
       "textureBytes": 1329031,
       "motionCount": 19,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00202/l2d00202.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "dbb466ae5be40c2e12a98702499e0baf67e004b5b8e64bbfaaf6dd8766d2e554",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00202.webp"
     },
     {
       "id": "tn-l2d00203",
@@ -756,9 +1224,22 @@
       "textureBytes": 1325900,
       "motionCount": 19,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00203/l2d00203.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "009a2b294609cf8e7d54d10ae880a51b8b2a0ad518a6cd218b21c9e846f3d39f",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00203.webp"
     },
     {
       "id": "tn-l2d00204",
@@ -776,9 +1257,22 @@
       "textureBytes": 670278,
       "motionCount": 18,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00204/l2d00204.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "2673484afcf364c21506d921ec4262c9d15e233c3d0aa244156f044d9fd1e849",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00204.webp"
     },
     {
       "id": "tn-l2d00205",
@@ -796,9 +1290,22 @@
       "textureBytes": 739504,
       "motionCount": 19,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00205/l2d00205.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bbea87afd33ae44826db444b1bf091a214a2983d4c3f6ff4d403c3cff0cda375",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00205.webp"
     },
     {
       "id": "tn-l2d00206",
@@ -816,9 +1323,22 @@
       "textureBytes": 1450571,
       "motionCount": 19,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00206/l2d00206.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "6704787c2db4f5a3ba16d88bff5bc1e4805ae47169daeb34a4b507636b7909a4",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00206.webp"
     },
     {
       "id": "tn-l2d00208",
@@ -836,9 +1356,22 @@
       "textureBytes": 742141,
       "motionCount": 19,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00208/l2d00208.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "6f702f73011dd08cbb09edd35873776498def88e765f0a43bf069d22e41e1c26",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00208.webp"
     },
     {
       "id": "tn-l2d00210a",
@@ -856,9 +1389,22 @@
       "textureBytes": 1036139,
       "motionCount": 1,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00210a/l2d00210a.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1bab902ebc1066c6c0e9046c7c153bb5beca40e5ba12d89e9d9823d2c16faf22",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00210a.webp"
     },
     {
       "id": "tn-l2d00211",
@@ -876,9 +1422,22 @@
       "textureBytes": 923176,
       "motionCount": 19,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00211/l2d00211.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9e577897b0922038f8edcb084650cb98a97064b61fa0c146436e894af2ddf383",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00211.webp"
     },
     {
       "id": "tn-l2d00212",
@@ -896,9 +1455,22 @@
       "textureBytes": 951171,
       "motionCount": 19,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00212/l2d00212.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "aa37a34dc9ce7cd4b8d0c1922c990eff813cd1c592f2c1ff680183067a2fb850",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00212.webp"
     },
     {
       "id": "tn-l2d00213",
@@ -916,9 +1488,22 @@
       "textureBytes": 808954,
       "motionCount": 22,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00213/l2d00213.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "298371ba16ed389628b425a8ee91c5fa660795a5e4cf982c353aee32ad5c4706",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00213.webp"
     },
     {
       "id": "tn-l2d00214",
@@ -936,9 +1521,22 @@
       "textureBytes": 801636,
       "motionCount": 19,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00214/l2d00214.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7c0b72ced2fe4a5ff2561327be3c6ebb0095addbd238ee09a3b08e536618c2f6",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00214.webp"
     },
     {
       "id": "tn-l2d00214a",
@@ -956,9 +1554,22 @@
       "textureBytes": 692712,
       "motionCount": 4,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00214a/l2d00214a.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5e5e4c057fd42377998cc110972a6f4803523326af36989671195ae047f8487c",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00214a.webp"
     },
     {
       "id": "tn-l2d00215",
@@ -976,9 +1587,22 @@
       "textureBytes": 761699,
       "motionCount": 19,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00215/l2d00215.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "aac0087eb279ed0c5e1b1d4b5fde836a3ad94b777b8be9b4ce9e129896fc3ada",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00215.webp"
     },
     {
       "id": "tn-l2d00215a",
@@ -996,9 +1620,22 @@
       "textureBytes": 721673,
       "motionCount": 13,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00215a/l2d00215a.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "eeee6ab418ff64de35046d1355576cd31842c16f4e7a6ba0dbea62c7e3255ff6",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00215a.webp"
     },
     {
       "id": "tn-l2d00216",
@@ -1016,9 +1653,22 @@
       "textureBytes": 1308084,
       "motionCount": 19,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00216/l2d00216.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "fff5850fb2a80ab210323612b506e93c424bb7220c26ae9538ccea9c2376c84e",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00216.webp"
     },
     {
       "id": "tn-l2d00217",
@@ -1036,9 +1686,22 @@
       "textureBytes": 877948,
       "motionCount": 18,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00217/l2d00217.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "600f9e3f0e42f0473c9f194302a2e4b384d32a3cac389732df4a7c19407c79d6",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00217.webp"
     },
     {
       "id": "tn-l2d00218",
@@ -1056,9 +1719,22 @@
       "textureBytes": 1376089,
       "motionCount": 19,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00218/l2d00218.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "36ffe62ecb4a09ffc5e5410aace19b6e3ecf09cbb78f752b03eb689ec4b8bca4",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00218.webp"
     },
     {
       "id": "tn-l2d00228",
@@ -1076,9 +1752,22 @@
       "textureBytes": 671757,
       "motionCount": 19,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d00228/l2d00228.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a7083a56075bf05cc331cd5f1ed014d79a712539a12e5ca00612905a1887c02e",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d00228.webp"
     },
     {
       "id": "tn-l2d10001c",
@@ -1096,9 +1785,22 @@
       "textureBytes": 664541,
       "motionCount": 6,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d10001c/l2d10001c.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b3c6aec6c932b045a6ada0b1cacadc267fca023aff8713c99b3c4994842e5cf1",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d10001c.webp"
     },
     {
       "id": "tn-l2d10001d",
@@ -1116,9 +1818,22 @@
       "textureBytes": 695146,
       "motionCount": 6,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d10001d/l2d10001d.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c2f090bee6c22ece6d7352370d9d080d49f6b306b68ed01d910a9f6b2e563f27",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d10001d.webp"
     },
     {
       "id": "tn-l2d10002g",
@@ -1136,9 +1851,22 @@
       "textureBytes": 862755,
       "motionCount": 18,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d10002g/l2d10002g.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "42a5dfdd6e54ae5b421b6f3a64426207b9a1f1786aadc68b35c2c88fb629d0b1",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d10002g.webp"
     },
     {
       "id": "tn-l2d10010",
@@ -1156,9 +1884,22 @@
       "textureBytes": 670278,
       "motionCount": 18,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d10010/l2d10010.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "62efc8167e18256483a43c0baf4bcabb3a970c8282781fa17a5e5a2de443a655",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d10010.webp"
     },
     {
       "id": "tn-l2d10025",
@@ -1176,9 +1917,22 @@
       "textureBytes": 656163,
       "motionCount": 4,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d10025/l2d10025.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e098eaa98b95197d6a53b5483d0e05a8070704c5a6e2503b26becc855d75bf1d",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d10025.webp"
     },
     {
       "id": "tn-l2d10026",
@@ -1196,9 +1950,22 @@
       "textureBytes": 1921045,
       "motionCount": 2,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d10026/l2d10026.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c2aa6949024793ac7952a3fcdeb558a7612d853827f7e67a6341520824759a8b",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d10026.webp"
     },
     {
       "id": "tn-l2d61500",
@@ -1216,9 +1983,22 @@
       "textureBytes": 732525,
       "motionCount": 1,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d61500/l2d61500.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a2061581cd7e6ac2655288c4043c420c22371b3f6c3c326f12477612202d4aa4",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d61500.webp"
     },
     {
       "id": "tn-l2d61501",
@@ -1236,9 +2016,22 @@
       "textureBytes": 914791,
       "motionCount": 1,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d61501/l2d61501.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0c69c656781122975bb3023dc040c9051b762394b431464a81b02bc3cbe7bc61",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d61501.webp"
     },
     {
       "id": "tn-l2d61502",
@@ -1256,9 +2049,22 @@
       "textureBytes": 1605088,
       "motionCount": 1,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d61502/l2d61502.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "04e3595012b0db963ee19e2cf959d6c516ed0aa9b173b4446c11adc7340e53ab",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d61502.webp"
     },
     {
       "id": "tn-l2d61503",
@@ -1276,9 +2082,22 @@
       "textureBytes": 1655751,
       "motionCount": 1,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d61503/l2d61503.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1af3fe7538dff3ac40c96438e126eb38b0b8ba16c4527d84281906b16aa213c0",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d61503.webp"
     },
     {
       "id": "tn-l2d63301",
@@ -1296,9 +2115,22 @@
       "textureBytes": 1218122,
       "motionCount": 2,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d63301/l2d63301.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "29caba735c9209df8bf1147cd211307d8516b7220e4d0c0dcd39d4ac177fe634",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d63301.webp"
     },
     {
       "id": "tn-l2d63302",
@@ -1316,9 +2148,22 @@
       "textureBytes": 1189879,
       "motionCount": 1,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d63302/l2d63302.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "21e8a91cc8dfa046743d221111c2d91e84cc8af18c6807a2868b15434b5223f4",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d63302.webp"
     },
     {
       "id": "tn-l2d65300",
@@ -1336,9 +2181,22 @@
       "textureBytes": 1671576,
       "motionCount": 9,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d65300/l2d65300.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c72b880c11ccfb93e865173c80a6a4bdf50a99d30776ce02bc53a4aa76c64069",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d65300.webp"
     },
     {
       "id": "tn-l2d65900",
@@ -1356,9 +2214,22 @@
       "textureBytes": 734835,
       "motionCount": 9,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d65900/l2d65900.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "17827f19ff677dfa6add1cfa99c995af444ce5d61ae4eb8d2f08eb0d28c4d0fc",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d65900.webp"
     },
     {
       "id": "tn-l2d66000",
@@ -1376,9 +2247,22 @@
       "textureBytes": 663867,
       "motionCount": 4,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d66000/l2d66000.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "789029d75daa9a67c7e750fb3135ee36a16c7e9ba8209b1c88bef5c347dbdc33",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d66000.webp"
     },
     {
       "id": "tn-l2d66200",
@@ -1396,9 +2280,22 @@
       "textureBytes": 657449,
       "motionCount": 8,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d66200/l2d66200.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "62e9bdf2fe22706a11f6ec4301a45dd9aba4a9b38c361e61538b4dfb31ed5c84",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d66200.webp"
     },
     {
       "id": "tn-l2d66500",
@@ -1416,9 +2313,22 @@
       "textureBytes": 710852,
       "motionCount": 6,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d66500/l2d66500.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9160fe706c8114a36bfde98a11cb96dda3f21574a3343c676e2b741da8fe76c7",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d66500.webp"
     },
     {
       "id": "tn-l2d66700",
@@ -1436,9 +2346,22 @@
       "textureBytes": 886657,
       "motionCount": 1,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d66700/l2d66700.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "736c3907169de990aaf1d655ae0a5eefbc369633f258cf24c8089af427309011",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d66700.webp"
     },
     {
       "id": "tn-l2d69000",
@@ -1456,9 +2379,22 @@
       "textureBytes": 898753,
       "motionCount": 9,
       "contentStyle": "mature-anime",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "playbackStatus": "unverified-playback"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%87%8D%E4%BA%ACNerco/l2d/l2d69000/l2d69000.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "2f2f8ac50210558957da64743f3130353bbc0e9b2e9867f76aab71c8906da0d2",
+      "preview": "./assets/animation-previews/tokyonecro-tn-l2d69000.webp"
     }
   ]
 }

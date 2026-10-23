@@ -1,0 +1,15 @@
+{
+  "scope": "shared preview pipeline",
+  "counts": {
+    "arknights": {
+      "indexed": 92,
+      "verifiedPreview": 92,
+      "missingPreview": 0
+    }
+  },
+  "missing": [],
+  "newCapturesInThisRun": 0,
+  "rejectedCaptures": [],
+  "failedCaptures": [],
+  "failureSummary": {}
+}

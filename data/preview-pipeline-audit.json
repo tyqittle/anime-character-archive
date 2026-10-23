@@ -1,0 +1,440 @@
+{
+  "primary": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "nikke": {
+        "indexed": 514,
+        "verifiedPreview": 514,
+        "missingPreview": 0
+      },
+      "bluearchive": {
+        "indexed": 179,
+        "verifiedPreview": 179,
+        "missingPreview": 0
+      },
+      "konosuba": {
+        "indexed": 126,
+        "verifiedPreview": 124,
+        "missingPreview": 2
+      }
+    },
+    "missing": [
+      {
+        "gameId": "konosuba",
+        "id": "kf-1191100-1190100"
+      },
+      {
+        "gameId": "konosuba",
+        "id": "kf-1193207-1190100"
+      }
+    ],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [
+      {
+        "id": "kf-1191100-1190100",
+        "gameId": "konosuba",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .json. Error: Region not found in atlas: 01_backhair_2_1 (mesh attachment: 01_backhair_2_1)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "kf-1193207-1190100",
+        "gameId": "konosuba",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .json. Error: Region not found in atlas: 01_backhair_2_1 (mesh attachment: 01_backhair_2_1)；可点击“重试”或选择本地导入已获得的动画文件。"
+      }
+    ],
+    "failureSummary": {
+      "atlas-mismatch": 2
+    }
+  },
+  "azurlane": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "azurlane": {
+        "indexed": 242,
+        "verifiedPreview": 240,
+        "missingPreview": 2
+      }
+    },
+    "missing": [
+      {
+        "gameId": "azurlane",
+        "id": "al-shengluyisi_3"
+      },
+      {
+        "gameId": "azurlane",
+        "id": "al-wuqi_3"
+      }
+    ],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [
+      {
+        "id": "al-shengluyisi_3",
+        "gameId": "azurlane",
+        "category": "render-error",
+        "message": "blank-frame: no rendered character"
+      },
+      {
+        "id": "al-wuqi_3",
+        "gameId": "azurlane",
+        "category": "render-error",
+        "message": "blank-frame: no rendered character"
+      }
+    ],
+    "failureSummary": {
+      "render-error": 2
+    }
+  },
+  "bd2": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "browndust2": {
+        "indexed": 209,
+        "verifiedPreview": 209,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
+  },
+  "newgames": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "arknights": {
+        "indexed": 359,
+        "verifiedPreview": 338,
+        "missingPreview": 21
+      },
+      "girlsfrontline": {
+        "indexed": 297,
+        "verifiedPreview": 296,
+        "missingPreview": 1
+      },
+      "konosuba": {
+        "indexed": 61,
+        "verifiedPreview": 60,
+        "missingPreview": 1
+      }
+    },
+    "missing": [
+      {
+        "gameId": "arknights",
+        "id": "ak-char_1026_gvial2_summer_12-3f53e8d"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_1026_gvial2_summer_12_0-22ce5fd"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_1027_greyy2_snow_5-48369fe"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_1027_greyy2_snow_5_0-65ebbcc"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_130_doberm_epoque_7-ceed0c3"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_209_ardign_snow_1-14a2c0b"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_209_ardign_snow_1_0-e0c9a91"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_343_tknogi_snow_6-5a95f91"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_343_tknogi_snow_6_0-820e1ab"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_388_mint_epoque_30-d8296f6"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_388_mint_epoque_30_0-d189e95"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_431_ashlok_epoque_28-0924673"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_431_ashlok_epoque_28_0-2e6bce6"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_475_akafyu_epoque_15-6b0b5ab"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_479_sleach_epoque_14-29c6bac"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_479_sleach_epoque_14_0-3d9c464"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_485_pallas_epoque_19-90edf0f"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_485_pallas_epoque_19_0-3a94e85"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-token_10027_ironmn_pile3_summer_11-3024f3c"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-token_10027_ironmn_pile3_summer_11_0-42006ca"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-token_10027_ironmn_pile3_summer_11_1-985bf58"
+      },
+      {
+        "gameId": "girlsfrontline",
+        "id": "gf-live2dnew_sr3mp_4101_normal_normal-3197af7"
+      },
+      {
+        "gameId": "konosuba",
+        "id": "ks-1349100_1349100-20ffd44"
+      }
+    ],
+    "newCapturesInThisRun": 27,
+    "rejectedCaptures": [],
+    "failedCaptures": [
+      {
+        "id": "ak-char_1026_gvial2_summer_12-3f53e8d",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: B_Annex_9 (mesh attachment: B_Annex_9)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_1026_gvial2_summer_12_0-22ce5fd",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: F_Annex_1a(3) (mesh attachment: F_Annex_1a(3))；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_1027_greyy2_snow_5-48369fe",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: B_Bell_01 (region attachment: B_Bell_01)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_1027_greyy2_snow_5_0-65ebbcc",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: C_E_Finger_01 (region attachment: C_E_Finger_01)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_130_doberm_epoque_7-ceed0c3",
+        "gameId": "arknights",
+        "category": "render-error",
+        "message": "blank-frame: near blank screenshot"
+      },
+      {
+        "id": "ak-char_209_ardign_snow_1-14a2c0b",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: F_B_Bow (mesh attachment: F_B_Bow)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_209_ardign_snow_1_0-e0c9a91",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: B_Bow (mesh attachment: B_Bow)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_343_tknogi_snow_6-5a95f91",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: B_Annex_A_a (mesh attachment: B_Annex_A_a)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_343_tknogi_snow_6_0-820e1ab",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: F_Annex_A_a (mesh attachment: F_Annex_A_a)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_388_mint_epoque_30-d8296f6",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: B_A_Belt (region attachment: B_A_Belt)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_388_mint_epoque_30_0-d189e95",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: F_A_Bangs (mesh attachment: F_A_Bangs)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_431_ashlok_epoque_28-0924673",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: F_B_Hair (mesh attachment: F_B_Hair)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_431_ashlok_epoque_28_0-2e6bce6",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: B_B_Hair_a (mesh attachment: B_B_Hair_a)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_475_akafyu_epoque_15-6b0b5ab",
+        "gameId": "arknights",
+        "category": "render-error",
+        "message": "blank-frame: no rendered character"
+      },
+      {
+        "id": "ak-char_479_sleach_epoque_14-29c6bac",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: F_Arm_L (mesh attachment: F_Arm_L)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_479_sleach_epoque_14_0-3d9c464",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: B_Arm_L (mesh attachment: B_Arm_L)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_485_pallas_epoque_19-90edf0f",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: C_FX_01 (mesh attachment: C_FX_01)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_485_pallas_epoque_19_0-3a94e85",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: B_Belt_01 (mesh attachment: B_Belt_01)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-token_10027_ironmn_pile3_summer_11-3024f3c",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: C_F_Body_01 (mesh attachment: C_F_Body_01)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-token_10027_ironmn_pile3_summer_11_0-42006ca",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: C_B_Body (mesh attachment: C_B_Body)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-token_10027_ironmn_pile3_summer_11_1-985bf58",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: C_R_Body_01 (mesh attachment: C_R_Body_01)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "gf-live2dnew_sr3mp_4101_normal_normal-3197af7",
+        "gameId": "girlsfrontline",
+        "category": "render-error",
+        "message": "blank-frame: no rendered character"
+      },
+      {
+        "id": "ks-1349100_1349100-20ffd44",
+        "gameId": "konosuba",
+        "category": "render-error",
+        "message": "blank-frame: near blank screenshot"
+      }
+    ],
+    "failureSummary": {
+      "atlas-mismatch": 19,
+      "render-error": 4
+    }
+  },
+  "arknights-illust": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "arknights": {
+        "indexed": 92,
+        "verifiedPreview": 92,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
+  },
+  "moregames": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "touhoucannonball": {
+        "indexed": 84,
+        "verifiedPreview": 84,
+        "missingPreview": 0
+      },
+      "girlscafegun": {
+        "indexed": 64,
+        "verifiedPreview": 64,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
+  },
+  "highquality": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "girldimension": {
+        "indexed": 102,
+        "verifiedPreview": 102,
+        "missingPreview": 0
+      },
+      "sinsevendeadlysins": {
+        "indexed": 94,
+        "verifiedPreview": 94,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
+  },
+  "mature": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "maidslife": {
+        "indexed": 10,
+        "verifiedPreview": 10,
+        "missingPreview": 0
+      },
+      "tokyonecro": {
+        "indexed": 62,
+        "verifiedPreview": 62,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 72,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
+  }
+}

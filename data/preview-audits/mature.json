@@ -1,0 +1,20 @@
+{
+  "scope": "shared preview pipeline",
+  "counts": {
+    "maidslife": {
+      "indexed": 10,
+      "verifiedPreview": 10,
+      "missingPreview": 0
+    },
+    "tokyonecro": {
+      "indexed": 62,
+      "verifiedPreview": 62,
+      "missingPreview": 0
+    }
+  },
+  "missing": [],
+  "newCapturesInThisRun": 72,
+  "rejectedCaptures": [],
+  "failedCaptures": [],
+  "failureSummary": {}
+}

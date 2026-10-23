@@ -1,0 +1,15 @@
+{
+  "scope": "shared preview pipeline",
+  "counts": {
+    "browndust2": {
+      "indexed": 209,
+      "verifiedPreview": 209,
+      "missingPreview": 0
+    }
+  },
+  "missing": [],
+  "newCapturesInThisRun": 0,
+  "rejectedCaptures": [],
+  "failedCaptures": [],
+  "failureSummary": {}
+}
