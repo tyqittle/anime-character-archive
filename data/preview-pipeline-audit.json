@@ -58,7 +58,7 @@
       }
     },
     "missing": [],
-    "newCapturesInThisRun": 1,
+    "newCapturesInThisRun": 0,
     "rejectedCaptures": [],
     "failedCaptures": [],
     "failureSummary": {}
@@ -175,7 +175,7 @@
         "id": "ak-token_10027_ironmn_pile3_summer_11_1-985bf58"
       }
     ],
-    "newCapturesInThisRun": 1,
+    "newCapturesInThisRun": 0,
     "rejectedCaptures": [],
     "failedCaptures": [
       {
@@ -377,7 +377,7 @@
       }
     },
     "missing": [],
-    "newCapturesInThisRun": 4,
+    "newCapturesInThisRun": 0,
     "rejectedCaptures": [],
     "failedCaptures": [],
     "failureSummary": {}
