@@ -81,19 +81,13 @@ public sealed partial class App
         string standing = Path.Combine(parent, "standing");
         string skeleton = Path.Combine(standing, stem + ".skel");
         string atlas = Path.Combine(standing, stem + ".atlas");
-        if (File.Exists(skeleton) && File.Exists(atlas))
-        {
-            SpineSkeletonCompatibility.EnsureSupported(skeleton);
-            string[] existingPages = AtlasImagePages(
-                await File.ReadAllTextAsync(atlas));
-            if (existingPages.All(page =>
-                    File.Exists(Path.Combine(standing, page))))
-                return Path.GetFullPath(skeleton);
-        }
         if (Directory.Exists(standing))
-            throw new InvalidDataException(
-                "Existing Brown Dust 2 model is incomplete. " +
-                "Please repair the saved model before importing again.");
+        {
+            // Reconcile legacy, incomplete and stale game assets against the
+            // exact pinned source, using the same cache policy as NIKKE.
+            await VerifyOrRepairArchiveModelAsync(standing, stem, url);
+            return Path.GetFullPath(skeleton);
+        }
 
         // Preserve current downloaded assets and never publish half a model.
         Directory.CreateDirectory(parent);
@@ -124,6 +118,8 @@ public sealed partial class App
                     throw new InvalidDataException("Unexpected texture size: " + page);
                 await File.WriteAllBytesAsync(Path.Combine(staging, page), texture);
             }
+            await WriteArchiveReceiptForFreshDownloadAsync(
+                staging, stem, url);
             Directory.Move(staging, standing);
         }
         finally
