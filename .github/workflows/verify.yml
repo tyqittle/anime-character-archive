@@ -27,6 +27,8 @@ jobs:
         run: node --test tests/test_animation_dedup.mjs
       - name: Test pinned Live2D source URL restrictions
         run: node --test tests/test_additional_live2d_catalog.mjs
+      - name: Test high-quality Live2D model paths and identity
+        run: node --test tests/test_highquality_live2d_catalog.mjs
       - name: Test bounded animation memory cache
         run: node tests/test_spine_session_cache.mjs
       - name: Test shared preview policy
