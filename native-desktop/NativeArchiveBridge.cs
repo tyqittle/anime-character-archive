@@ -240,22 +240,13 @@ public sealed partial class App
         string standing = Path.Combine(parent, "standing");
         string skeleton = Path.Combine(standing, stem + ".skel");
         string atlas = Path.Combine(standing, stem + ".atlas");
-        if (File.Exists(skeleton) && File.Exists(atlas))
-        {
-            // Always verify the REAL binary, including previously imported files.
-            // Leave older 4.0 models untouched if a user imported them by hand.
-            SpineSkeletonCompatibility.EnsureSupported(skeleton);
-            string[] pages = AtlasImagePages(await File.ReadAllTextAsync(atlas));
-            if (pages.All(page => File.Exists(Path.Combine(standing, page))))
-            {
-                // Once per legacy pack, compare ALL real files to the trusted
-                // source; afterwards use the stored local SHA-256 receipt.
-                await VerifyOrRepairArchiveModelAsync(standing, stem, modelUrl);
-                return Path.GetFullPath(skeleton);
-            }
-        }
         if (Directory.Exists(standing))
-            throw new InvalidDataException("Existing model folder is incomplete. Please remove or repair it manually.");
+        {
+            // Check and recover both incomplete legacy downloads AND complete
+            // but stale resources. Never ask the user to delete saved assets.
+            await VerifyOrRepairArchiveModelAsync(standing, stem, modelUrl);
+            return Path.GetFullPath(skeleton);
+        }
 
         // Download to a staging folder and atomically publish the complete pack.
         // Never unzip arbitrary inputs or trust remote path components.
