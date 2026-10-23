@@ -21,7 +21,7 @@ function installSpineIllustrationQuality(activePlayer,entry){
         texture2D(u_texture, v_texCoords + vec2(0.0,u_archiveTexel.y)).rgb +
         texture2D(u_texture, v_texCoords - vec2(0.0,u_archiveTexel.y)).rgb
       ) * 0.25;
-      texColor.rgb = clamp(texColor.rgb + (texColor.rgb - adjacent) * 0.45, 0.0, 1.0);`;
+      texColor.rgb = clamp(texColor.rgb + (texColor.rgb - adjacent) * (0.45 * texColor.a), 0.0, 1.0);`;
  const updated=fragment.replace('uniform sampler2D u_texture;',
   'uniform sampler2D u_texture;\n      uniform vec2 u_archiveTexel;').replace(sample,replacement);
  let sharp;
@@ -40,7 +40,7 @@ function installSpineIllustrationQuality(activePlayer,entry){
   };
   renderer.batcherShader=sharp;
   renderer._archiveEnhanced=true;
-  renderer._archiveSourceShader=oldShader;
+  try{oldShader.dispose?.()}catch(error){console.warn('旧版 Spine 着色器释放失败',error)}
   renderer._archiveRenderMinRatio=1.5; // supersampling on normal 1x desktop monitors
   activePlayer._archiveIllustrationQuality={
    mode:'atlas-gpu-sharpen',strength:0.45,source:'original PNG',
