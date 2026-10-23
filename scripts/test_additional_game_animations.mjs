@@ -29,7 +29,7 @@ const cases=[
  {type:'cubism',game:'girlscafegun',character:more.characters.find(c=>c.id==='gc-girl01-l2d00')},
  {type:'cubism',game:'girlsfrontline',character:pick('girlsfrontline','少女前线 girls Frontline/live2dnew/79type_1402/normal/normal.model3.json')},
  {type:'cubism',game:'konosuba',character:pick('konosuba','为美好的世界献上祝福！Fantastic Days/1003104/1003104.model3.json')},
- {type:'spine',game:'arknights',character:manifest.characters.find(c=>c.gameId==='arknights'&&c.resourceStem==='char_002_amiya')},
+ {type:'spine',game:'arknights',motion:'Idle',character:manifest.characters.find(c=>c.gameId==='arknights'&&c.resourceStem==='char_002_amiya')},
  ...['mm-chr_000034','is-xinxiya','vs-summon_unit_80002','dc-c324_01'].map(id=>{
   const character=registered.find(c=>c.id===id);return {type:'cubism',game:character?.gameId,character};
  }),
@@ -67,6 +67,11 @@ try{
   const collection=test.character.collectionId||test.character.gameId;
   if(!data.status.startsWith('正在播放：')||data.game!==collection||(!test.allowNoMotions&&(!data.enabled||!data.animations)))
    throw Error('New model not playable: '+JSON.stringify(results.at(-1))+' page errors: '+errors.join('; '));
+  // Arknights exports a static Default pose; measure its actual standby clip.
+  if(test.motion){
+   await page.locator('#animationPicker').selectOption(test.motion);
+   results.at(-1).measuredMotion=test.motion;
+  }
   if(test.game==='lovecube'||test.game==='foxhimezero'){
    const thumb=page.locator('.character-card[data-character-id="'+test.character.id+'"] img');
    await thumb.waitFor({state:'visible',timeout:15000});
