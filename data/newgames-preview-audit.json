@@ -219,7 +219,7 @@
       "id": "ks-1349100_1349100-20ffd44"
     }
   ],
-  "newCapturesInThisRun": 2,
+  "newCapturesInThisRun": 0,
   "failedCaptures": [
     {
       "id": "ak-char_1026_gvial2_summer_12-3f53e8d",
@@ -519,7 +519,7 @@
       "id": "ks-1349100_1349100-20ffd44",
       "gameId": "konosuba",
       "category": "blank-frame",
-      "message": "Blank/tiny pixel variance 3.53"
+      "message": "Blank/tiny pixel variance 3.52"
     }
   ],
   "failureSummary": {
