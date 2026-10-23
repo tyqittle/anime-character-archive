@@ -3,6 +3,9 @@ on:
   push:
     branches: [main]
     paths:
+      - 'data/animation-catalogs.json'
+      - 'assets/js/shared/catalog-registry.js'
+      - 'scripts/catalog_registry.mjs'
       - '.github/workflows/spine-browser-test.yml'
       - 'scripts/test_spine_browser.mjs'
       - 'scripts/test_spine_ui_browser.mjs'

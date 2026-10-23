@@ -19,29 +19,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Enforce architecture boundaries
-        run: node tests/check_architecture.mjs
-      - name: Test registry and preview source contracts
-        run: node --test tests/test_catalog_registry.mjs
-      - name: Test asynchronous playback and shared voice lifecycle
-        run: node --test tests/test_async_playback.mjs tests/test_spine_highdpi.mjs tests/test_spine_illustration_quality.mjs tests/test_animation_frames.mjs tests/test_spine_utf8.mjs tests/test_desktop_launch.mjs
-      - name: Validate archive metadata and entrypoints
-        run: node tests/smoke.mjs
-      - name: Test animation skin deduplication and voice aliases
-        run: node --test tests/test_animation_dedup.mjs
-      - name: Test pinned Live2D source URL restrictions
-        run: node --test tests/test_additional_live2d_catalog.mjs
-      - name: Test high-quality Live2D model paths and identity
-        run: node --test tests/test_highquality_live2d_catalog.mjs
-      - name: Validate exact Live2D previews and footer links
-        run: node --test tests/test_preview_friendlinks.mjs
-      - name: Validate pinned mature anime Live2D models
-        run: node --test tests/test_mature_live2d_catalog.mjs
-      - name: Test bounded animation memory cache
-        run: node tests/test_spine_session_cache.mjs
-      - name: Test shared preview policy
-        run: |
-          python3 -m pip install --quiet --break-system-packages -r requirements-dev.txt
-          python3 -m unittest discover -s tests -p 'test_*.py'
-      - name: Syntax-check renamed maintenance scripts
-        run: python3 -m py_compile start_site.py scripts/mirror_static_portraits.py
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-dev.txt
+      - name: Discover every Node behavior regression
+        run: npm test
+      - name: Enforce module boundaries and archive integration
+        run: npm run check
+      - name: Discover every Python and workflow contract regression
+        run: npm run test:python
