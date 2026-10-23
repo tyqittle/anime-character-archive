@@ -30,9 +30,16 @@ for(const [folder,files] of byFolder){
   models.push({folder,stem,atlasBytes:atlas.size,skeletonBytes:skeleton.size,textureBytes:texture.size});
  }
 }
+// Actual Chromium capture rejected two source-complete but visually unusable rigs.
+// Keep exclusions model-specific, with evidence in data/preview-audits/daibloscore.json.
+const excludedModelIds=new Set([
+ 'dbcore-40350_skin_meteor05_spine-40350_skin_meteor05', // missing attachment in atlas
+ 'dbcore-70310_skin_atum03a_spine-70310_skin_atum03a' // blank rendered frame
+]);
 models.sort((a,b)=>a.folder.localeCompare(b.folder,'en')||a.stem.localeCompare(b.stem,'en'));
-if(models.length<100)throw Error('Insufficient confirmed source triplets: '+models.length);
-const characters=models.map(c=>{
+const accepted=models.filter(c=>!excludedModelIds.has('dbcore-'+c.folder.toLowerCase()+'-'+c.stem.toLowerCase()));
+if(accepted.length<100)throw Error('Insufficient confirmed source triplets: '+models.length);
+const characters=accepted.map(c=>{
  const raw=c.stem.replace(/^\d+_skin_?/i,'').replace(/_character$/i,'');
  const m=raw.match(/^([A-Za-z]+)(\d+[a-z]?)$/i);
  const characterName=m?m[1]:raw.replace(/(\d+)/g,' $1').trim();

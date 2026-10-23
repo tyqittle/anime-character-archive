@@ -1,8 +1,15 @@
 # Daiblos Core 角色动态立绘批量导入（2026-10-23）
 
-- 批量新增 **129 套** Skin 类 Spine 3.8 角色骨骼与纹理索引，其中含同一角色的不同皮肤；索引条数不代表不同角色人数。
+- 批量筛选 **129 套候选**，Chromium 成功验证 **127 套**，其中两套因渲染失败已剔除 Skin 类 Spine 3.8 角色骨骼与纹理索引，其中含同一角色的不同皮肤；索引条数不代表不同角色人数。
 - 上游仓库 `bungaku-moe/DaiblosCoreAssets`，固定 Git 提交 `3c672a0f11cc70fee35432b1a28522d7d74068c2`；本项目只登记指向固定提交的资源 URL，并不镜像第三方原作素材。
 - 选择依据：目录名称及同名 JSON Spine 骨骼 + atlas + PNG 贴图三件套，骨骼 50 KB—6.5 MB，图集 >500 B，贴图 0.8—13 MB；自动排除效果层、破损层、缺失文件及异常文件。
 - **真实验收仍必须逐模型进行**。目录存在只能证明文件级完整性，不能证明图集页名完全匹配或成功播放；未截取真实画面的条目不会伪造预览图或声音。
 - 所有角色走已有 Spine 3.8 播放器、统一目录注册和统一截图流水线，不新增游戏专属播放器或截图处理逻辑。自动从现有筛选框产生新游戏入口。
 - 回归测试：`tests/test_daiblos_catalog.mjs` 与 `scripts/test_additional_game_animations.mjs` 各验证结构和至少一套真实浏览器画面。
+
+## 本轮真实浏览器结果
+
+- 129 套源文件齐备候选，**127 套**经统一 Chromium 流水线成功渲染并获得匹配模型的 WebP 预览。
+- 拒绝 `dbcore-40350_skin_meteor05_spine-40350_skin_meteor05`：Spine 图集缺失 `expression_e_2` 附件。
+- 拒绝 `dbcore-70310_skin_atum03a_spine-70310_skin_atum03a`：实际渲染空画面。
+- 已从可选目录移除，后续重跑导入脚本也会保留同一拒绝列表。详情见 `data/preview-audits/daibloscore.json`。
