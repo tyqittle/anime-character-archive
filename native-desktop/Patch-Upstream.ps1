@@ -58,6 +58,7 @@ if ([regex]::Matches($text,[regex]::Escape($voiceHook)).Count -ne 1) {
 $text = $text.Replace($voiceHook,$voiceHook + "`r`n" + '        InitializeBrownDust2Voice();')
 [System.IO.File]::WriteAllText($source, $text, [System.Text.UTF8Encoding]::new($false))
 Copy-Item -LiteralPath $addon -Destination (Join-Path $projectDir 'NativeArchiveBridge.cs') -Force
+Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeArchiveAssetCache.cs') -Destination (Join-Path $projectDir 'NativeArchiveAssetCache.cs') -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeBrownDust2Bridge.cs') -Destination (Join-Path $projectDir 'NativeBrownDust2Bridge.cs') -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeBrownDust2Voice.cs') -Destination (Join-Path $projectDir 'NativeBrownDust2Voice.cs') -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeBrownDust2WebMDecoder.cs') -Destination (Join-Path $projectDir 'NativeBrownDust2WebMDecoder.cs') -Force
