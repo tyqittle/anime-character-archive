@@ -1,5 +1,7 @@
 # Project maintenance rules
 
+Read [the architecture rules](docs/ARCHITECTURE_RULES.md) before changing implementation. They define module boundaries, data and identity contracts, lifecycle, publication, compatibility and validation requirements. Keep the rules and architecture overview aligned when changing those contracts.
+
 This is a GitHub Pages archive with separate browser, content-processing and Windows-desktop boundaries.
 
 - Register animation catalogs in `data/animation-catalogs.json`. Browser loading, queue selection and CI publishing must read that registry.

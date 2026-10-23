@@ -1,5 +1,7 @@
 # 项目架构与维护入口
 
+本文描述当前实现；新增和修改代码遵循 [架构规范](ARCHITECTURE_RULES.md)，已知债务与迁移顺序见 [架构评审](ARCHITECTURE_REVIEW_2026-10-23.md)。
+
 站点继续使用 GitHub Pages；无需服务端或前端打包器。页面 URL、模型 ID、收藏与缓存键保持兼容。
 
 ## 边界
