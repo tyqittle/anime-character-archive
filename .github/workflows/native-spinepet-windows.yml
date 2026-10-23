@@ -249,7 +249,7 @@ jobs:
           Copy-Item ./native-upstream/LICENSE ./safe-release/source/LICENSE-GPL-3.0.txt
           git -C native-upstream archive --format=zip --output="$env:GITHUB_WORKSPACE/safe-release/source/My_SpinePet-corresponding-source.zip" HEAD
           if ($LASTEXITCODE -ne 0) { throw 'Cannot provide GPL corresponding source' }
-          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/Patch-Upstream.ps1,./native-desktop/Patch-WheelZoom.ps1,./native-desktop/Patch-RenderEnvelope.ps1,./native-desktop/Patch-ViewportSafety.ps1,./native-desktop/NativeArchiveBridge.cs,./native-desktop/NativeBrownDust2Bridge.cs,./native-desktop/NativeBrownDust2Voice.cs,./native-desktop/NativeBrownDust2WebMDecoder.cs,./native-desktop/NativeAutoUpdate.cs,./native-desktop/ArchiveDesktopFullBodyTests.cs,./native-desktop/CONCENTUS-LICENSE.txt -Destination ./safe-release/source
+          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/Patch-Upstream.ps1,./native-desktop/Patch-WheelZoom.ps1,./native-desktop/Patch-RenderEnvelope.ps1,./native-desktop/Patch-ViewportSafety.ps1,./native-desktop/NativeArchiveBridge.cs,./native-desktop/NativeArchiveAssetCache.cs,./native-desktop/NativeBrownDust2Bridge.cs,./native-desktop/NativeBrownDust2Voice.cs,./native-desktop/NativeBrownDust2WebMDecoder.cs,./native-desktop/NativeAutoUpdate.cs,./native-desktop/ArchiveDesktopFullBodyTests.cs,./native-desktop/CONCENTUS-LICENSE.txt -Destination ./safe-release/source
           Copy-Item ./native-desktop/ChooseFoldersInstaller.iss -Destination ./safe-release/source
           @'
           The distributed SpinePet.exe builds pinned upstream source plus NativeArchiveBridge.cs.
