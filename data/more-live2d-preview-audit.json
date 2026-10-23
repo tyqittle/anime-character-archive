@@ -1,0 +1,20 @@
+{
+  "scope": "new dynamic game batch",
+  "counts": {
+    "touhoucannonball": {
+      "indexed": 84,
+      "verifiedPreview": 84,
+      "missingPreview": 0
+    },
+    "girlscafegun": {
+      "indexed": 64,
+      "verifiedPreview": 64,
+      "missingPreview": 0
+    }
+  },
+  "missing": [],
+  "newCapturesInThisRun": 148,
+  "failedCaptures": [],
+  "failureSummary": {},
+  "status": "shared exact-model WebP verification policy"
+}
