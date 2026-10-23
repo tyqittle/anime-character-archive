@@ -29,3 +29,42 @@ jobs:
             head -c 220 /tmp/gh-body | tr '\n' ' '
             echo
           done
+      - name: Verify actually published dynamic game menu and models
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://tyqittle.github.io/${GITHUB_REPOSITORY#*/}"
+          curl --fail --location --silent --show-error --connect-timeout 12 --max-time 40 "$base/spine.html?publish-check=${GITHUB_SHA}" -o /tmp/live-spine.html
+          curl --fail --location --silent --show-error --connect-timeout 12 --max-time 40 "$base/data/live2d-highquality.json?publish-check=${GITHUB_SHA}" -o /tmp/live-hq.json
+          curl --fail --location --silent --show-error --connect-timeout 12 --max-time 40 "$base/data/live2d-moregames.json?publish-check=${GITHUB_SHA}" -o /tmp/live-more.json
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          import json
+          from pathlib import Path
+          class Menu(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.in_select = False
+                  self.items = []
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  if tag == "select" and attrs.get("id") == "gameFilter":
+                      self.in_select = True
+                  if tag == "option" and self.in_select:
+                      self.items.append(attrs.get("value"))
+              def handle_endtag(self, tag):
+                  if tag == "select":
+                      self.in_select = False
+          content=Path("/tmp/live-spine.html").read_text(encoding="utf-8")
+          parsed=Menu()
+          parsed.feed(content)
+          expected=["all","girldimension","sinsevendeadlysins","touhoucannonball","girlscafegun"]
+          print("ACTUAL_LIVE_MENU",parsed.items)
+          assert parsed.items[:5] == expected, "Live Pages dropdown is stale or missing 4 added games"
+          hq=json.loads(Path("/tmp/live-hq.json").read_text(encoding="utf-8"))
+          more=json.loads(Path("/tmp/live-more.json").read_text(encoding="utf-8"))
+          print("ACTUAL_LIVE_CATALOG_COUNTS",len(hq["characters"]),len(more["characters"]))
+          assert len(hq["characters"]) == 196 and len(more["characters"]) == 148
+          assert '20261023-hq-v1' in content,"Deployed browser code is not latest Live2D runtime"
+          print("PASS: public GitHub Pages serves game menu and both model catalogs")
+          PY
