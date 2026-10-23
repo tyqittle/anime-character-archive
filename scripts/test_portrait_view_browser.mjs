@@ -9,6 +9,21 @@ const bin=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/ch
 if(!bin)throw Error('Chromium missing');
 const browser=await chromium.launch({headless:true,executablePath:bin,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const results=[];
+async function captureCanvas(page,type='image/png'){
+ // Capture inside the renderer callback, before WebGL discards its backbuffer.
+ // Element screenshots include overlapping fixed UI and cannot measure a rig.
+ return Buffer.from(await page.evaluate(type=>new Promise(resolve=>{
+  const renderer=player.sceneRenderer,previous=renderer.end;
+  renderer.end=function(...args){
+   const result=previous.apply(this,args);renderer.end=previous;
+   const copy=document.createElement('canvas');
+   copy.width=player.canvas.width;copy.height=player.canvas.height;
+   copy.getContext('2d').drawImage(player.canvas,0,0);
+   resolve(copy.toDataURL(type,.55).split(',')[1]);
+   return result;
+  };
+ }),type),'base64');
+}
 try{
  const page=await browser.newPage({viewport:{width:1440,height:900},deviceScaleFactor:1.5});
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
@@ -16,6 +31,7 @@ try{
  await page.waitForFunction(()=>allCharacters.length>1000,null,{timeout:45000});
  await page.evaluate(()=>{window.__retiredPortraits=[]});
  const cases=[
+ ['daibloscore','dbcore-10070_skin_cinnabar03b_spine-10070_skin_cinnabar03b'],
  ['daibloscore','dbcore-10010_skin_alps04_spine-10010_skin_alps04'],
  ['daibloscore','dbcore-10010_skin_alps05_spine-10010_skin_alps05'],
  ['daibloscore','dbcore-70050_skin_hades03_spine-70050_skin_hades03'],
@@ -36,7 +52,7 @@ try{
    p._archiveOriginalViewport=()=>{throw Error('Action switch rescanned animation bounds')};
    return {version:loadedVersion,framing:p._archiveFraming,canvas:{w:p.canvas.width,h:p.canvas.height},bounds:p._archiveViewBounds};
   });
-  const bytes=await page.locator('#player canvas').screenshot();
+  const bytes=await captureCanvas(page);
   const png=PNG.sync.read(bytes),bounds=framing.visibleBounds({pixels:png.data,width:png.width,height:png.height,background:[20,34,56]});
   assert.ok(bounds,'No visible portrait: '+id);
   const occupancy=Math.max(bounds.width/(png.width*.9),bounds.height/(png.height*.88));
@@ -66,7 +82,7 @@ try{
   results.push({id,game,initial,occupancy,cx,cy,actions:options,retired});
   console.log('PORTRAIT_VIEW_PASS '+JSON.stringify(results.at(-1)));
   if(game==='daibloscore'){
-   const jpeg=await page.locator('#player canvas').screenshot({type:'jpeg',quality:55});
+   const jpeg=await captureCanvas(page,'image/jpeg');
    const b64=jpeg.toString('base64');console.log('PORTRAIT_IMAGE_START '+id);
    for(let i=0;i<b64.length;i+=12000)console.log('PORTRAIT_IMAGE_CHUNK '+b64.slice(i,i+12000));
    console.log('PORTRAIT_IMAGE_END');

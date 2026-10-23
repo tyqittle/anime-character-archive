@@ -66,3 +66,13 @@ test('changing animation preserves user zoom, pan, and session camera without re
  cx.applySharpSpineCamera(p);
  assert.equal(camera.zoom,before.zoom,'repeated camera callbacks must not compound zoom');
 });
+
+test('Spine 4.x output-parameter viewports receive the same stable session rectangle',()=>{
+ const {cx}=controls();let scans=0;
+ const p={currentViewport:{x:-120,y:34,width:700,height:500},calculateAnimationViewport(_animation,out){scans++;out.width=99999}};
+ cx.initializeSpinePortrait(p);
+ const out={padTop:10,padBottom:10};
+ p.calculateAnimationViewport({name:'attack'},out);
+ assert.equal(scans,0);
+ assert.deepEqual(out,{x:-120,y:34,width:700,height:500,padTop:10,padBottom:10});
+});

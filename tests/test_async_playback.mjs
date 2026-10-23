@@ -58,9 +58,9 @@ test('Live2D fit uses logical screen size at DPR 2',()=>{
  const ctx=context({location:{origin:'https://example.test'},document:{getElementById:()=>({})},navigator:{}});
  run(ctx,'assets/js/live2d/state-and-viewport.js');
  vm.runInContext("app={screen:{width:800,height:600},renderer:{width:1600,height:1200}};model={scale:{set(v){this.value=v}},position:{set(x,y){this.x=x;this.y=y}},getLocalBounds:()=>({x:0,y:0,width:400,height:600})};fit();",ctx);
- assert.equal(vm.runInContext('model.scale.value',ctx),.84);
- assert.equal(vm.runInContext('model.position.x',ctx),232);
- assert.equal(vm.runInContext('model.position.y',ctx),48);
+ assert.equal(vm.runInContext('model.scale.value',ctx),.88);
+ assert.equal(vm.runInContext('model.position.x',ctx),224);
+ assert.equal(vm.runInContext('model.position.y',ctx),36);
 });
 test('shared audio starts synchronously in the click and cancellation settles pending play',async()=>{
  const waiting=deferred(),instances=[];
@@ -222,10 +222,10 @@ test('model deadline clears a stalled stage and discards a late cache read',asyn
 test('Cubism setup errors use onError and immediately retry the same model provider',async()=>{
  const calls=[],destroyed=[],events=[];
  const ctx=context({desktopMode:false,targetFPS:60,currentGeneration:0,currentId:'',readyId:'',loadStartedAt:0,
-  zoom:1,offsetX:0,offsetY:0,model:null,performance:{now:()=>0},warn:{hidden:false},queueMicrotask,
-  document:{hidden:false},message(){},fit(){},verifyName:()=>true,modelUrlFor:()=> 'raw',
+  zoom:1,offsetX:0,offsetY:0,model:null,portraitLocalBounds:null,performance:{now:()=>0},warn:{hidden:false},queueMicrotask,
+  document:{hidden:false},message(){},fit(){},queueLive2DPortraitFit(){},verifyName:()=>true,modelUrlFor:()=> 'raw',
   graphicsReport:()=>({}),notify:(kind,data)=>events.push({kind,data}),
-  app:{screen:{width:800,height:600},stage:{addChild(){}},ticker:{stop(){},start(){}}},
+  app:{screen:{width:800,height:600},stage:{addChild(){}},ticker:{stop(){},start(){},addOnce(){}}},
   ArchiveAssets:{variants:()=>['https://raw.example/model','https://cdn.example/model']},
   ArchiveVoice:{create:()=>({stop(){},setVolume(){}})},
   PIXI:{live2d:{MotionPriority:{},Live2DModel:{fromSync(url,options){

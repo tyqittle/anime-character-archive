@@ -146,3 +146,10 @@ function fitRenderedLive2D(expected,generation){
   model._archiveFraming={source:'rendered-pixels',bounds:portraitLocalBounds};
  }catch(error){console.warn('Live2D 自动取景使用模型边界',error)}
 }
+
+function queueLive2DPortraitFit(){
+ const expected=model,generation=currentGeneration,requestedZoom=zoom,x=offsetX,y=offsetY;
+ app.ticker.addOnce(()=>{
+  if(zoom===requestedZoom&&offsetX===x&&offsetY===y)fitRenderedLive2D(expected,generation);
+ },null,-100);
+}

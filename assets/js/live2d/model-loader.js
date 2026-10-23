@@ -103,8 +103,7 @@ async function load(name,id,modelUrl){
   model.on('pointermove',evt=>{if(model?.dragging&&evt?.data?.global){const pt=evt.data.global;offsetX+=pt.x-model.dragX;offsetY+=pt.y-model.dragY;model.x+=pt.x-model.dragX;model.y+=pt.y-model.dragY;model.dragX=pt.x;model.dragY=pt.y}});
   for(const ev of ['pointerup','pointerupoutside'])model.on(ev,()=>{if(model)model.dragging=false});
   // Application renders at PIXI.UPDATE_PRIORITY.LOW (-25); sample afterwards.
-  const framedModel=model;
-  app.ticker.addOnce(()=>fitRenderedLive2D(framedModel,generation),null,-100);
+  queueLive2DPortraitFit();
   warn.hidden=true;
   if(!document.hidden&&app?.ticker)app.ticker.start();
   notify('playing',{motions:actions,motionLabels,selectedMotion:initial,zoom,loadMs:Math.round(performance.now()-loadStartedAt),fpsCap:targetFPS,graphics:graphicsReport()});
