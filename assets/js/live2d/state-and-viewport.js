@@ -57,6 +57,20 @@ function modelUrlFor(name,candidate,id){
    return m&&id==='ml-'+m[1]&&name==='model'?candidate:'';
   }catch(e){return ''}
  }
+ // Whitelisted new Cubism3 sources: pinned repository, exact model, no adult-scene paths.
+ if(id.startsWith('lc-')||id.startsWith('fh-')){
+  if(!candidate.startsWith(COMMUNITY_SOURCE))return '';
+  try{
+   const relative=decodeURIComponent(candidate.slice(COMMUNITY_SOURCE.length));
+   if(relative.includes('..'))return '';
+   if(id.startsWith('lc-')){
+    const m=relative.match(/^galgame live2d\/LOVE³-LOVE CUBE-\/live2d\/(akira|iori|nodoka)\/((?:akira|iori|nodoka)_st0[12]_w)\.model3\.json$/);
+    return m&&m[2].startsWith(m[1]+'_')&&id==='lc-'+m[2]&&name===m[2]?candidate:'';
+   }
+   const m=relative.match(/^galgame live2d\/Fox Hime Zero\/(ruri_miko)\/\1\.model3\.json$/);
+   return m&&id==='fh-'+m[1]&&name===m[1]?candidate:'';
+  }catch(e){return ''}
+ }
  if(!/^(?:gf|ks)-[a-z0-9_-]+$/.test(id)||!candidate.startsWith(COMMUNITY_SOURCE))return '';
  try{
   const sub=decodeURIComponent(candidate.slice(COMMUNITY_SOURCE.length));
