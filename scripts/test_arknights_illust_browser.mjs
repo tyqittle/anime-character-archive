@@ -20,6 +20,12 @@ try{
  if(!msg.startsWith('正在播放：'))throw Error('Illustration skeleton did not animate: '+msg);
  const canvas=p.locator('#player canvas').first();
  await canvas.waitFor({state:'visible',timeout:20000});
+ // Success fires from the skeleton loader; the next draw will resize the
+ // GPU backbuffer. Never sample canvas dimensions in that transient 1x frame.
+ await p.waitForFunction(()=>{
+  const el=document.querySelector('#player canvas');
+  return el?.clientWidth>0 && el.width/el.clientWidth>=1.8;
+ },null,{timeout:8000});
  // Regression: legacy Spine 3.8 used a 1x framebuffer even at retina DPR.
  const size=await canvas.evaluate(el=>({
   width:el.width,height:el.height,
