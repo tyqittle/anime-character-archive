@@ -472,16 +472,39 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # GitHub's workflow-specific runs API can return an empty collection
-          # for valid workflow filenames. Match immutable current branch HEAD
-          # instead of silently treating an empty collection as "stale".
+          # New website/gallery commits may arrive while ClamAV runs.
+          # They must NOT invalidate a tested, audited Windows binary.
+          # Only a newer change to native source or its release pipeline
+          # supersedes this build. Fail closed if GitHub comparison is
+          # incomplete, diverged or cannot be trusted.
           $latest = gh api 'repos/${{ github.repository }}/commits/main' --jq '.sha'
           if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($latest)) {
             throw 'Cannot verify current main commit SHA; refuse to publish'
           }
           $builtSha = '${{ github.sha }}'
-          $publish = if ($latest.Trim() -eq $builtSha) { 'true' } else { 'false' }
-          Write-Host "Build SHA $builtSha, current main SHA $latest, publish=$publish"
+          $head = $latest.Trim()
+          $publish = 'true'
+          if ($head -ne $builtSha) {
+            $diff = gh api "repos/${{ github.repository }}/compare/$builtSha...$head" | ConvertFrom-Json
+            if ($LASTEXITCODE -ne 0 -or $null -eq $diff -or
+                $diff.status -ne 'ahead' -or
+                $null -eq $diff.files -or
+                @($diff.files).Count -ge 300) {
+              throw 'Cannot safely establish which files changed since this native build'
+            }
+            $changedNative = @($diff.files | Where-Object {
+              $_.filename -like 'native-desktop/*' -or
+              $_.filename -eq '.github/workflows/native-spinepet-windows.yml'
+            })
+            if ($changedNative.Count -gt 0) {
+              $publish = 'false'
+              Write-Host 'A newer native source or release-workflow change exists:'
+              $changedNative | ForEach-Object { Write-Host $_.filename }
+            } else {
+              Write-Host 'Only website/assets/tests changed; audited native binary is still current.'
+            }
+          }
+          Write-Host "Built SHA=$builtSha; branch HEAD=$head; publish=$publish"
           "publish=$publish" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
       - name: Publish release installer plus versioned update feed
         if: steps.latest.outputs.publish == 'true'
