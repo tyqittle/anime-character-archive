@@ -12,6 +12,8 @@ on:
       - 'spine.html'
       - 'azurlane-stage.html'
       - 'scripts/test_additional_game_animations.mjs'
+      - 'scripts/diagnose_live2d_models.mjs'
+      - 'assets/js/shared/cubism-motion-policy.js'
       - '.github/workflows/newgames-animation-check.yml'
   workflow_dispatch:
 permissions:
@@ -43,3 +45,23 @@ jobs:
             /tmp/newgames-*.png
             /tmp/newgames-server.log
           if-no-files-found: ignore
+
+  cubism-behavior:
+    runs-on: ubuntu-latest
+    timeout-minutes: 13
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --no-package-lock playwright-core@1.56.1 pngjs@7.0.0
+      - run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/cubism-site.log 2>&1 &
+          sleep 2
+      - name: Inspect actual Cubism alpha, source motions and rendered geometry
+        run: node scripts/diagnose_live2d_models.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cubism-behavior-results
+          path: /tmp/cubism-behavior-diagnostics.json
