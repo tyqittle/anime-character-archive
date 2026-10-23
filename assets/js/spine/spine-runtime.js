@@ -16,35 +16,32 @@ function patchSpine38AtlasRotations(){
  if(proto.__fixedFullRotations)return;
  const originalLoad=proto.load;
  const originalSetRegion=rt.RegionAttachment.prototype.setRegion;
- // This compatibility mapping is confirmed for Blue Archive's unusual atlas
- // rotations only. Applying it to other games corrupts otherwise valid UVs.
+ // The bundled 3.8 atlas parser sizes 270-degree regions as unrotated
+ // rectangles, while MeshAttachment.updateUVs already handles 270 degrees.
+ // Normalize atlas bounds independently of game/selection; mixed atlases may
+ // contain 0/90/180/270-degree regions within a single character.
  proto.load=function(atlasText,textureLoader){
   originalLoad.call(this,atlasText,textureLoader);
-  if(!window.__archiveUseLegacyAtlasRotations)return;
   for(const region of this.regions){
    const degrees=((Number(region.degrees)||0)%360+360)%360;
-   if(degrees===270){
-    region.rotate=true;
-    region.u=region.x/region.page.width;
-    region.v=region.y/region.page.height;
-    region.u2=(region.x+region.height)/region.page.width;
-    region.v2=(region.y+region.width)/region.page.height;
-   }else if(degrees===180){
-    region.rotate=false;
-   }
+   if(degrees!==270)continue;
+   const page=region.page;
+   if(!(page?.width>0&&page?.height>0))throw Error('Invalid atlas page dimensions for '+region.name);
+   region.rotate=true;
+   region.u=region.x/page.width;
+   region.v=region.y/page.height;
+   region.u2=(region.x+region.height)/page.width;
+   region.v2=(region.y+region.width)/page.height;
   }
  };
+ // Preserve the vendor's verified 0/90 mapping. Only 180/270 require
+ // the additional corner permutations absent from RegionAttachment.setRegion.
  rt.RegionAttachment.prototype.setRegion=function(region){
-  if(!window.__archiveUseLegacyAtlasRotations){
-   return originalSetRegion.call(this,region);
-  }
+  const degrees=((Number(region?.degrees)||0)%360+360)%360;
+  if(degrees!==180&&degrees!==270)return originalSetRegion.call(this,region);
   this.region=region;
   const uv=this.uvs,u=region.u,v=region.v,U=region.u2,V=region.v2;
-  const degrees=((Number(region.degrees)||0)%360+360)%360;
-  const corners=degrees===90 ? [U,V,u,V,u,v,U,v]
-   :degrees===180 ? [U,v,U,V,u,V,u,v]
-   :degrees===270 ? [u,v,U,v,U,V,u,V]
-   :[u,V,u,v,U,v,U,V];
+  const corners=degrees===180?[U,v,U,V,u,V,u,v]:[u,v,U,v,U,V,u,V];
   for(let i=0;i<8;i++)uv[i]=corners[i];
  };
  proto.__fixedFullRotations=true;
@@ -205,9 +202,6 @@ async function show(options,title,onError){
    reject(error);
   };
   const transparentDesktop=new URLSearchParams(location.search).has('desktop');
-  // Model-scoped atlas compatibility: never let a fix for one game change
-  // the texture coordinate conventions of every Spine 3.8 character.
-  window.__archiveUseLegacyAtlasRotations=options.archiveEntry?.gameId==='bluearchive';
   const config={...normalized,showControls:false,controlBones:false,frame:(p)=>recordSpineFrame(p),update:(p)=>applySharpSpineCamera(p),premultipliedAlpha:options.premultipliedAlpha??true,
    alpha:transparentDesktop,backgroundColor:transparentDesktop?'#00000000':'#142238ff',
    fullScreenBackgroundColor:transparentDesktop?'#00000000':'#142238ff',
