@@ -11,6 +11,23 @@ function modelUrlFor(name,candidate,id){
   const suffix='/live2d/'+name+'/'+name+'.model3.json';
   return [SOURCE+suffix,MILKY_SOURCE+suffix].includes(candidate)?candidate:'';
  }
+ if(id.startsWith('tc-')){
+  if(!candidate.startsWith(TOUHOU_SOURCE))return '';
+  try{
+   const relative=decodeURIComponent(candidate.slice(TOUHOU_SOURCE.length));
+   const match=relative.match(/^([A-Za-z]+(?: \([A-Za-z ]+\))?)\/([A-Za-z0-9_.-]+)\.model3\.json$/);
+   const slug=match?.[1].toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+   return match&&id==='tc-'+slug&&match[2]===name&&!relative.includes('..')?candidate:'';
+  }catch(e){return ''}
+ }
+ if(id.startsWith('gc-')){
+  if(!candidate.startsWith(COMMUNITY_SOURCE))return '';
+  try{
+   const relative=decodeURIComponent(candidate.slice(COMMUNITY_SOURCE.length));
+   const m=relative.match(/^少女咖啡枪 girls cafe gun\/(girl\d{2})\/(l2d\d+\.u)\/\2\.model3\.json$/);
+   return m&&id==='gc-'+m[1]+'-'+m[2].slice(0,-2)&&name===m[2]?candidate:'';
+  }catch(e){return ''}
+ }
  if(!/^(?:gf|ks)-[a-z0-9_-]+$/.test(id)||!candidate.startsWith(COMMUNITY_SOURCE))return '';
  try{
   const sub=decodeURIComponent(candidate.slice(COMMUNITY_SOURCE.length));
@@ -19,6 +36,7 @@ function modelUrlFor(name,candidate,id){
  }catch(e){}
  return '';
 }
+const TOUHOU_SOURCE='https://cdn.jsdelivr.net/gh/n0099/TouhouCannonBall-Live2d-Models@3c043b183be31cade537e299e47e158a2772184f/';
 const SAME_ORIGIN=location.origin;
 const warn=document.getElementById('warning');
 let app=null,model=null,currentId='',currentGeneration=0,baseScale=1,zoom=1,offsetX=0,offsetY=0,initError='';
@@ -39,7 +57,7 @@ function requestLoad(name,id,url){
 
 function notify(kind,detail={}){window.parent.postMessage({channel:CHANNEL,kind,id:currentId,...detail},SAME_ORIGIN)}
 function message(s){warn.textContent=s;warn.hidden=false}
-function verifyName(name){return typeof name==='string'&&/^[a-zA-Z0-9_]{2,100}$/.test(name)}
+function verifyName(name){return typeof name==='string'&&/^[a-zA-Z0-9_.-]{2,100}$/.test(name)}
 function fit(){
  if(!app||!model)return;
  // Live2D models have nonzero local-bound origins. Subtracting bounds.x/y

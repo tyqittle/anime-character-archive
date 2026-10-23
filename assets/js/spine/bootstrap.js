@@ -35,7 +35,8 @@ async function fetchAnimationManifest(url){
    {name:'碧蓝航线',url:azurlaneCatalogUrl},
    {name:'棕色尘埃2',url:bd2CatalogUrl},
    {name:'扩展游戏',url:newGamesCatalogUrl},
-   {name:'明日方舟干员动态立绘',url:arknightsIllustCatalogUrl}
+   {name:'明日方舟干员动态立绘',url:arknightsIllustCatalogUrl},
+   {name:'东方炮弹/少女咖啡枪',url:moreLive2dCatalogUrl}
   ];
   const results=location.protocol==='file:'?[]:
    await Promise.allSettled(entries.map(entry=>fetchAnimationManifest(entry.url)));
