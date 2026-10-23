@@ -74,10 +74,49 @@ public sealed class ArchiveDesktopFullBodyTests
         Assert.True(lastClickableY >= physical.Top + physical.Height * 0.6f,
             $"BD2 lower-body mouse region missing: visible bounds={physical}, " +
             $"last input pixel y={lastClickableY}, regions={regions.Count}");
+        // The old test only required 60% of the geometric height to be
+        // clickable; torso-only regions could pass while visible legs did not.
+        // Instead, take REAL opaque pixels at triangle centroids, sort by
+        // projected Y, and verify the lowest visible portions are in the
+        // native Win32 input region at their actual desktop coordinates.
+        var opaqueSamples = new List<(float X, float Y)>();
+        foreach (NativeSpineDrawBatch batch in batches)
+        {
+            for (int index = 0; index + 2 < batch.IndexCount; index += 3)
+            {
+                NativeSpineVertex a = batch.Vertices[batch.Indices[index]];
+                NativeSpineVertex b = batch.Vertices[batch.Indices[index + 1]];
+                NativeSpineVertex c = batch.Vertices[batch.Indices[index + 2]];
+                float u = (a.TextureCoordinate.X +
+                    b.TextureCoordinate.X + c.TextureCoordinate.X) / 3f;
+                float v = (a.TextureCoordinate.Y +
+                    b.TextureCoordinate.Y + c.TextureCoordinate.Y) / 3f;
+                float opacity = (a.LightColor.W + b.LightColor.W +
+                    c.LightColor.W) / 3f;
+                if (!batch.Texture.IsVisiblePixel(u, v, opacity))
+                    continue;
+                float x = (a.Position.X + b.Position.X + c.Position.X) / 3f;
+                float y = (a.Position.Y + b.Position.Y + c.Position.Y) / 3f;
+                opaqueSamples.Add((
+                    anchorX + (x - pivotX) * scale,
+                    anchorY + (y - pivotY) * scale));
+            }
+        }
+        Assert.NotEmpty(opaqueSamples);
+        foreach ((float x, float y) in opaqueSamples
+            .OrderByDescending(point => point.Y).Take(64))
+        {
+            int px = (int)Math.Floor(x);
+            int py = (int)Math.Floor(y);
+            Assert.True(regions.Any(run => run.Contains(px, py)),
+                $"Visible BD2 lower-body triangle passes through to the " +
+                $"desktop at ({px},{py}); lastClickableY={lastClickableY:F1}");
+        }
         Console.WriteLine(
             $"PASS BD2 full-body: setup={setup}, animation={actual}, " +
             $"clickableBottom={lastClickableY:F1}, " +
-            $"drawnBottom={physical.Bottom:F1}, regionCount={regions.Count}");
+            $"drawnBottom={physical.Bottom:F1}, " +
+            $"opaqueSamples={opaqueSamples.Count}, regionCount={regions.Count}");
     }
 
     private static void AssertContains(
