@@ -118,7 +118,7 @@ for(const entry of spine.characters){
 console.log('Spine preview audit: '+previewDigests.size+' verified, '+unrendered+' awaiting real rendering.');
 assert.ok(chars.characters.every(x=>x.image.startsWith('./assets/portraits/')),'Not all static images are local');
 const galleryModules=["assets/js/gallery/state.js","assets/js/gallery/catalog.js","assets/js/gallery/viewer.js","assets/js/gallery/events.js","assets/js/gallery/bootstrap.js"];
-const spineModules=["assets/js/spine/state.js","assets/js/spine/viewer-controls.js","assets/js/spine/animation-identity.js","assets/js/spine/catalog.js","assets/js/spine/spine-runtime.js","assets/js/spine/spine-assets.js","assets/js/spine/live2d-bridge.js","assets/js/spine/session-cache.js","assets/js/spine/playback.js","assets/js/spine/local-tools.js","assets/js/spine/bootstrap.js"];
+const spineModules=["assets/js/spine/state.js","assets/js/spine/animation-identity.js","assets/js/spine/viewer-controls.js","assets/js/spine/catalog.js","assets/js/spine/spine-runtime.js","assets/js/spine/spine-assets.js","assets/js/spine/live2d-bridge.js","assets/js/spine/session-cache.js","assets/js/spine/playback.js","assets/js/spine/local-tools.js","assets/js/spine/bootstrap.js"];
 const gallerySource=galleryModules.map(read).join('\n');
 const spineSource=spineModules.map(read).join('\n');
 const home=read('index.html'),old=read('gallery.html'),page=read('characters.html')+'\n'+gallerySource,player=read('spine.html')+'\n'+spineSource;
@@ -316,7 +316,7 @@ assert.ok(!versionRegexp.test('unrecognized'),'Spine version regex accepted inva
 const galleryHTML=read('characters.html'),spineHTML=read('spine.html');
 for(const [html,modules] of [[galleryHTML,galleryModules],[spineHTML,spineModules]]){
  const loaded=[...html.matchAll(/<script defer src="\.\/([^"?]+)\?v=[^"]+"><\/script>/g)].map(x=>x[1]);
- assert.deepEqual(loaded,[...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/shared/asset-sources.js','assets/js/shared/voice-playback.js']:[]),...modules.slice(0,3),...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/performance.js']:[]),...modules.slice(3),'assets/js/shared/friend-links.js',...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/character-audio.js','assets/js/spine/desktop-launch.js','assets/js/spine/desktop-drag.js']:[])],'Browser modules and common friend links must preserve loading order');
+ assert.deepEqual(loaded,[...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/shared/asset-sources.js','assets/js/shared/voice-playback.js']:[]),...modules.slice(0,modules[0]?.startsWith('assets/js/spine/')?4:3),...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/performance.js']:[]),...modules.slice(modules[0]?.startsWith('assets/js/spine/')?4:3),'assets/js/shared/friend-links.js',...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/character-audio.js','assets/js/spine/desktop-launch.js','assets/js/spine/desktop-drag.js']:[])],'Browser modules and common friend links must preserve loading order');
  assert.ok(!/<script>\s*['"]use strict/.test(html),'Page-level application logic must live in feature modules');
 }
 for(const item of ['assets/gallery-base.css','assets/gallery-theme.css','assets/spine-base.css','assets/spine-theme.css']){
