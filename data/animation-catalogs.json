@@ -40,6 +40,11 @@
       "id": "mature",
       "name": "成熟风格二次元 Live2D",
       "path": "data/live2d-mature.json"
+    },
+    {
+      "id": "daibloscore",
+      "name": "Daiblos Core · 成熟风格动态立绘",
+      "path": "data/spine-daiblos-core.json"
     }
   ]
 }

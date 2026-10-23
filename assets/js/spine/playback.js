@@ -10,7 +10,7 @@ async function playCharacter(c){
   status('加载超过 55 秒，请点击“重试”或稍后再试。',true);
  },55000);
  $('title').textContent=(c.zh?c.zh+' · ':'')+c.name;
- $('stageContext').textContent=c.gameId==='browndust2'?'棕色尘埃2 · 全身角色':c.gameId==='bluearchive'?'蔚蓝档案 · 回忆大厅':c.gameId==='konosuba'?'为美好的世界献上祝福！· 战斗动画':c.gameId==='arknights'?'明日方舟 · '+(c.assetType==='battle-spine'?'战斗小人':'干员动态立绘'):'胜利女神：妮姬 · Spine';
+ $('stageContext').textContent=c.gameId==='browndust2'?'棕色尘埃2 · 全身角色':c.gameId==='bluearchive'?'蔚蓝档案 · 回忆大厅':c.gameId==='konosuba'?'为美好的世界献上祝福！· 战斗动画':c.gameId==='arknights'?'明日方舟 · '+(c.assetType==='battle-spine'?'战斗小人':'干员动态立绘'):(c.collectionName||c.game||'胜利女神：妮姬')+' · Spine';
  // Do not leave the previously selected character playing while downloading
  // a different skeleton; the stage now shows a dedicated loading notice.
  clearPlayer();
