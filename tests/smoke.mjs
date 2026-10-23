@@ -12,6 +12,10 @@ const spine=JSON.parse(read('data/spine-characters.json'));
 const bd2=JSON.parse(read('data/spine-bd2-pilot.json'));
 const bd2Full=JSON.parse(read('data/spine-bd2-characters.json'));
 const more=JSON.parse(read('data/live2d-moregames.json')).characters;
+const theaterHTML=read('spine.html');
+const gameMenu=theaterHTML.match(/<select id="gameFilter">([\s\S]*?)<\/select>/)?.[1]||'';
+const gameMenuIds=[...gameMenu.matchAll(/<option value="([^"]+)"/g)].map(m=>m[1]);
+assert.deepEqual(gameMenuIds.slice(0,3),['all','touhoucannonball','girlscafegun'],'New animated games must be visible without scrolling the dropdown');
 assert.equal(more.length,148,'Both newly imported Cubism catalogs must have 148 records');
 assert.equal(new Set(more.map(c=>c.id)).size,148,'Duplicated model in additional Cubism games');
 for(const c of more){
