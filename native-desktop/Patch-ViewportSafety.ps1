@@ -29,6 +29,8 @@ $replacement = @'
 
                 if (string.IsNullOrWhiteSpace(
 '@
+$needle = $needle.Replace("`r`n", "`n")
+$replacement = $replacement.Replace("`r`n", "`n")
 if ([regex]::Matches($c,[regex]::Escape($needle)).Count -ne 1) {
   throw 'Pinned upstream initial-load viewport hook anchor mismatch'
 }
@@ -110,6 +112,7 @@ $method = @'
     }
 
 '@
+$method = $method.Replace("`r`n", "`n")
 if ([regex]::Matches($c,[regex]::Escape($methodAnchor)).Count -ne 1) {
  throw 'Pinned upstream viewport-fit method anchor mismatch'
 }
