@@ -1,0 +1,28 @@
+# Dependencies and local interpreter caches
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+.vs/
+
+# Generated root outputs; native-desktop/build contains tracked source scripts.
+/tmp/
+/temp/
+/build/
+/dist/
+/artifacts/
+/coverage/
+/test-results/
+/playwright-report/
+/desktop/dist/
+/desktop/out/
+/native-desktop/**/bin/
+/native-desktop/**/obj/
+
+# Local logs and editor/OS files
+*.log
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

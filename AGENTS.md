@@ -14,3 +14,5 @@ This is a GitHub Pages archive with separate browser, content-processing and Win
 - Run `npm test`, `npm run check`, and `npm run test:python`. Renderer or gesture changes also require the real browser regressions. Native behavior changes require Windows tests.
 - Automated content publishers must have an explicit site-publication edge in `deploy-content.yml`; a bot push alone does not publish Pages. Keep deployment source verification and its tests when changing Pages configuration.
 - Do not edit generated audit JSON to turn failures into successes.
+
+- Keep generated dependencies and temporary outputs out of Git. Run `npm run audit:repo` before cleanup; its unreferenced media are candidates requiring reference and compatibility checks. Retire duplicate implementations instead of keeping full backup pages. See [repository hygiene](docs/REPOSITORY_HYGIENE.md).

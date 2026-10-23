@@ -2,6 +2,8 @@
 
 新增游戏、预览更新及构建边界请先遵循 [架构规范](docs/ARCHITECTURE_RULES.md)，并参考 [架构说明](docs/ARCHITECTURE.md) 和 [本次架构评审](docs/ARCHITECTURE_REVIEW_2026-10-23.md)。常规检查：`npm test`、`npm run check`、`npm run test:python`。动态目录统一注册，预览自动更新走同一条流水线。
 
+仓库清理与保留原则见 [仓库卫生与清理记录](docs/REPOSITORY_HYGIENE.md)。只读检查：`npm run audit:repo`。
+
 # 次元角色档案馆 · Anime Character Archive
 
 一个持续扩充的多游戏角色立绘与 Spine 动态素材图鉴。项目使用 **GitHub Pages** 部署，静态立绘及其轻量缩略图保存在本仓库；部分 Spine 动画在访问时从第三方素材源读取。
@@ -98,7 +100,7 @@
 
 已从 [Brown-Dust-2-Assets](https://github.com/Zormolo/Brown-Dust-2-Assets) 的固定提交 `94a3ac97b8fab7ee054e0826de7d912de0a233ef` 扫描并收录该仓库 `assets/spine/character/` 下的全部 **209 套角色骨骼**，覆盖 **87 位角色**。每套都具有同名 `.skel`、`.atlas`、`.png` 文件。完整模型索引保存在 `data/spine-bd2-characters.json`，用户可通过「游戏 → 角色 → 服装」筛选，点击即可自动播放。
 
-已使用 GitHub Actions 的 12 个并行 Chromium 分片逐套载入骨骼动画，**209/209 套成功渲染对应人物预览**，并生成 **209 张一一对应的 WebP 缩略图**保存至 `assets/animation-previews/`（约 1.1 MB）。失败清单和核验数记录在 `data/bd2-preview-audit.json`。预览生成器为 `scripts/generate_bd2_bulk_previews.mjs`，发布验证脚本为 `scripts/merge_bd2_bulk_previews.mjs`。这属于批量自动渲染验证，并不代表对每一个动作和贴图细节都逐张人工审美审核。
+已使用 GitHub Actions 的 12 个并行 Chromium 分片逐套载入骨骼动画，**209/209 套成功渲染对应人物预览**，并生成 **209 张一一对应的 WebP 缩略图**保存至 `assets/animation-previews/`（约 1.1 MB）。失败清单和核验数记录在 `data/bd2-preview-audit.json`。历史逐套渲染结果保留供追溯；当前预览更新统一通过 `.github/workflows/preview-pipeline.yml` 和 `scripts/preview_pipeline.py` 执行，不再维护旧版 BD2 专属生成与发布脚本。这属于批量自动渲染验证，并不代表对每一个动作和贴图细节都逐张人工审美审核。
 
 《棕色尘埃2》使用已经校正的 Straight Alpha 贴图混合模式，避免脸、手和腿部的白色边缘伪影。**原始模型骨骼/Atlas/贴图仍从来源 GitHub 按需加载**，本仓库存放完整索引及实际模型截图，而不是将数百 MB 的第三方版权素材整包转存。当前 209 条与 NIKKE 514 条、蔚蓝档案 179 条、KonoSuba 126 条合计为 **1028 条动态索引**，其中蔚蓝档案主要为回忆大厅动画而非全身角色立绘。
 
@@ -117,8 +119,8 @@
 
 - 逐一列出已发现的模型编号与核验范围：`data/nikke-import-audit.json`
 - 可重复执行的目录扫描导入：`node scripts/import_nikke_dynamic.mjs`
-- 只为真正能够加载的对应模型生成本地 WebP 预览：`scripts/render_spine_previews.mjs`（40 片并行增量渲染，失败项不会被其他模型贴图代替）
-- 渲染之后的成功/失败统计：`data/nikke-preview-audit.json`（仅在渲染流水线成功发布后存在）
+- 只为真正能够加载的对应模型生成本地 WebP 预览：统一 `preview-pipeline.yml`（读取共同注册表，最多 8 个总分片，失败项不会被其他模型贴图代替）
+- 当前渲染成功/失败统计：`data/preview-audits/primary.json`；`data/nikke-preview-audit.json` 保留为历史批次证据。
 
 **注意：514 条是源目录具有骨骼、Atlas、PNG 三类文件的数量，并不意味着 514 条已通过浏览器播放、动作/贴图验证。** 骨骼和贴图仍按需取自源站，并未完整镜像到本仓库。静态图鉴目前 NIKKE 仍为 129 条静态图片记录，不等同于 514 套动态模型。
 
