@@ -19,7 +19,7 @@ test('bulk skin catalog has 100+ distinct exact-source rigs and never claims unv
   if(c.preview){
    assert.equal(c.previewSource,'matching-spine-animation-frame');
    assert.match(c.previewSha256,/^[a-f0-9]{64}$/);
-   assert.ok(fs.existsSync(new URL('../'+c.preview.replace(/^\\.\\//,''),import.meta.url)),'Matching preview missing: '+c.id);
+   assert.ok(fs.existsSync(new URL('../'+c.preview.replace(/^\.\//,''),import.meta.url)),'Matching preview missing: '+c.id);
   }else assert.equal(c.previewSource,'not-rendered');
  }
 });
