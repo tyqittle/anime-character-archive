@@ -35,7 +35,7 @@ ReplaceOnce $input 'MouseInput = null;' 'MouseInput = null;
         MouseWheelInput = null;'
 
 $session=Join-Path $native 'NativeRenderSession.cs'
-ReplaceOnce $session 'Initialize(Action<uint, int, int> mouseInput)' 'Initialize(Action<uint, int, int> mouseInput, Action<int, int, int> mouseWheelInput)'
+ReplaceOnce $session 'Initialize(Action<uint, int, int> mouseInput)' 'Initialize(Action<uint, int, int> mouseInput, Action<int, int, int>? mouseWheelInput = null)'
 ReplaceOnce $session 'MouseInput = mouseInput' 'MouseInput = mouseInput,
                 MouseWheelInput = mouseWheelInput'
 ReplaceOnce $session 'InputWindow.MouseInput = null;' 'InputWindow.MouseInput = null;
