@@ -23,7 +23,7 @@ $replacement = @'
                 // working area (just 24 pixels above the taskbar). Their
                 // animated legs/tails can extend BELOW this anchor. Unlike
                 // expanding a swapchain, monitor clipping is not fixable by
-                // resizing: fit on first load using REAL rendered bounds.
+                // resizing: fit on first load using all-animation, combined-skin bounds.
                 FitNewlyLoadedCharacterToMonitor(current);
                 UpdateFrameTimerState();
 
@@ -45,7 +45,28 @@ $method = @'
         if (window == null || state.ScreenBounds.IsEmpty)
             return;
 
-        var bounds = state.ScreenBounds;
+        // Build the on-screen rectangle from the SAME combined-skin,
+        // all-animation envelope used by the GPU swap chain. Fitting only
+        // ScreenBounds (current frame) lets an idle pose fit but still clips
+        // the skirt and legs when an animation changes.
+        System.Drawing.RectangleF ProjectEnvelope()
+        {
+            if (state.Envelope.IsEmpty)
+                return state.ScreenBounds;
+            float scale = (float)state.CurrentScale * window.DpiScale;
+            float ax = window.Left +
+                NativeInputRegionCoordinator.ToClientPixelX(window,
+                    state.Config.PositionX);
+            float ay = window.Top +
+                NativeInputRegionCoordinator.ToClientPixelY(window,
+                    state.Config.PositionY);
+            return System.Drawing.RectangleF.FromLTRB(
+                ax + (state.Envelope.Left - state.PivotX) * scale,
+                ay + (state.Envelope.Top - state.PivotY) * scale,
+                ax + (state.Envelope.Right - state.PivotX) * scale,
+                ay + (state.Envelope.Bottom - state.PivotY) * scale);
+        }
+        var bounds = ProjectEnvelope();
         var middle = new System.Drawing.Point(
             (int)Math.Round((bounds.Left + bounds.Right) * 0.5),
             (int)Math.Round((bounds.Top + bounds.Bottom) * 0.5));
@@ -71,7 +92,7 @@ $method = @'
                 state.Config.ScaleMultiplier =
                     newScale / SpinePet.Models.CharacterConfig.DefaultScale;
                 RenderFrame(0);
-                bounds = state.ScreenBounds;
+                bounds = ProjectEnvelope();
             }
         }
 
