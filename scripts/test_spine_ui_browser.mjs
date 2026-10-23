@@ -231,6 +231,11 @@ try{
   page.on('framenavigated',frame=>{if(frame===page.mainFrame())navigations++});
   const switchResult=await page.evaluate(async()=>{
    const root=document.body,stage=document.querySelector('#stage');
+   // Finish any real CDN registration left by the preceding auto-play clicks
+   // before replacing its cache with deterministic namespace fixtures.
+   cancelCharacterDownload();
+   await runtimeQueue;
+   clearPlayer();
    const previous={SpinePlayer:class Mock38{}},next={SpinePlayer:class Mock41{}};
    runtimeCache.set('3.8',{namespace:previous,stylesheet:'./vendor/spine38/spine-player.css'});
    runtimeCache.set('4.1',{namespace:next,stylesheet:'./vendor/spine38/spine-player.css'});
