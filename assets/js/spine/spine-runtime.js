@@ -15,8 +15,12 @@ function patchSpine38AtlasRotations(){
  const proto=rt.TextureAtlas.prototype;
  if(proto.__fixedFullRotations)return;
  const originalLoad=proto.load;
+ const originalSetRegion=rt.RegionAttachment.prototype.setRegion;
+ // This compatibility mapping is confirmed for Blue Archive's unusual atlas
+ // rotations only. Applying it to other games corrupts otherwise valid UVs.
  proto.load=function(atlasText,textureLoader){
   originalLoad.call(this,atlasText,textureLoader);
+  if(!window.__archiveUseLegacyAtlasRotations)return;
   for(const region of this.regions){
    const degrees=((Number(region.degrees)||0)%360+360)%360;
    if(degrees===270){
@@ -31,6 +35,9 @@ function patchSpine38AtlasRotations(){
   }
  };
  rt.RegionAttachment.prototype.setRegion=function(region){
+  if(!window.__archiveUseLegacyAtlasRotations){
+   return originalSetRegion.call(this,region);
+  }
   this.region=region;
   const uv=this.uvs,u=region.u,v=region.v,U=region.u2,V=region.v2;
   const degrees=((Number(region.degrees)||0)%360+360)%360;
@@ -198,6 +205,9 @@ async function show(options,title,onError){
    reject(error);
   };
   const transparentDesktop=new URLSearchParams(location.search).has('desktop');
+  // Model-scoped atlas compatibility: never let a fix for one game change
+  // the texture coordinate conventions of every Spine 3.8 character.
+  window.__archiveUseLegacyAtlasRotations=options.archiveEntry?.gameId==='bluearchive';
   const config={...normalized,showControls:false,controlBones:false,frame:(p)=>recordSpineFrame(p),update:(p)=>applySharpSpineCamera(p),premultipliedAlpha:options.premultipliedAlpha??true,
    alpha:transparentDesktop,backgroundColor:transparentDesktop?'#00000000':'#142238ff',
    fullScreenBackgroundColor:transparentDesktop?'#00000000':'#142238ff',
