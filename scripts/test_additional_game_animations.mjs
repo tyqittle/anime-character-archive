@@ -33,7 +33,7 @@ const cases=[
  ...['mm-chr_000034','is-xinxiya','vs-summon_unit_80002','dc-c324_01'].map(id=>{
   const character=registered.find(c=>c.id===id);return {type:'cubism',game:character?.gameId,character};
  }),
- ...['ss-char2d_live2d_001','ec-60010003'].map(id=>{
+ ...['ss-char2d_live2d_001','ec-60010003','mt-Pet1001','s7-lust-stand'].map(id=>{
   const character=registered.find(c=>c.id===id);return {type:character?.engine==='cubism'?'cubism':'spine',game:character?.gameId,character};
  })
 ];

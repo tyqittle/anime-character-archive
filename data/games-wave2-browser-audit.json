@@ -1,0 +1,30 @@
+[
+  {
+    "game": "momoiro",
+    "id": "mt-Pet1001",
+    "elapsedMs": 3069,
+    "status": "正在播放：角色 / 服装 Pet1001 · star1（共 5 个动作，可用上方动作菜单切换）",
+    "enabled": true,
+    "animations": 5,
+    "frame": false,
+    "canvas": true,
+    "animation": {
+      "visible": 153437,
+      "moving": 130997
+    }
+  },
+  {
+    "game": "sexysins",
+    "id": "s7-lust-stand",
+    "elapsedMs": 9314,
+    "status": "正在播放：Lust · 常规立绘 · Idle（共 3 个动作，可用上方动作菜单切换）",
+    "enabled": true,
+    "animations": 3,
+    "frame": false,
+    "canvas": true,
+    "animation": {
+      "visible": 93919,
+      "moving": 14940
+    }
+  }
+]

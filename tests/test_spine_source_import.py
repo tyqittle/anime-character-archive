@@ -22,6 +22,22 @@ class SpineSourceTests(unittest.TestCase):
         for path in ['characters/123/123.atlas','characters/123/123.png']:
             with self.assertRaisesRegex(ValueError,'Missing'):
                 m.model_record(self.scope,'123',{p:x for p,x in self.files.items() if p!=path},self.download)
+    def test_json_content_with_skel_extension_uses_json_renderer(self):
+        self.payload['characters/123/123.skel']=json.dumps({'skeleton':{'spine':'3.8.55'}}).encode()
+        self.files['characters/123/123.skel']['sha']=m.git_blob(self.payload['characters/123/123.skel'])
+        c=m.model_record(self.scope,'123',self.files,self.download)
+        self.assertEqual(c['skeletonFormat'],'json')
+        self.assertTrue(c['skeletonUrl'].endswith('.skel'))
+    def test_spaced_json_bundle_has_encoded_urls_and_explicit_stable_id(self):
+        self.scope.update(directory='',modelPattern='Lust Stand',skeletonExtension='json',modelIds={'Lust Stand':'lust-stand'})
+        self.payload={'Lust Stand/Lust Stand.json':json.dumps({'skeleton':{'spine':'3.8.95'}}).encode(),
+            'Lust Stand/Lust Stand.atlas':b'123.png\nsize: 512,512\n',
+            'Lust Stand/123.png':self.payload['characters/123/123.png']}
+        self.files={p:{'size':len(raw),'sha':m.git_blob(raw)} for p,raw in self.payload.items()}
+        c=m.model_record(self.scope,'Lust Stand',self.files,self.download)
+        self.assertEqual(c['id'],'sample-lust-stand')
+        self.assertIn('Lust%20Stand/Lust%20Stand.json',c['skeletonUrl'])
+        self.assertEqual(c['sourcePath'],'res/Lust Stand/Lust Stand.json')
     def test_path_escape_wrong_blob_and_unsupported_versions_are_rejected(self):
         with self.assertRaisesRegex(ValueError,'identity'):m.model_record(self.scope,'../123',self.files,self.download)
         files={**self.files,'characters/123/123.skel':{'size':100,'sha':'b'*40}}

@@ -45,6 +45,95 @@
       "qualityExclusions": {
         "60004001": "Real rendered frame reviewed: oversized stage spotlight with tiny character; excluded from portrait gallery."
       }
+    },
+    {
+      "sourceRepo": "Eikanya/spine-models",
+      "sourceCommit": "d0ef626d5d9a38f419226cf03f7a97331f7d28fe",
+      "catalog": "data/spine-games-wave2.json",
+      "spineVersion": "3.8",
+      "id": "momoiro",
+      "gameId": "momoiro",
+      "name": "桃色旅团（动态角色立绘）",
+      "treeSha": "8a12ed90dd49516045c576e5f062ad37afcd24a0",
+      "treePrefix": "桃色旅团/",
+      "directory": "",
+      "idPrefix": "mt-",
+      "modelPattern": "(?:Pet|pet)[0-9]{4}(?:_anime)?",
+      "models": [
+        "Pet1001",
+        "Pet1002",
+        "Pet1003",
+        "Pet1004",
+        "Pet1005",
+        "Pet1006",
+        "Pet1007",
+        "Pet1008",
+        "Pet1009",
+        "Pet1010_anime",
+        "Pet1011",
+        "Pet1012",
+        "Pet1013_anime",
+        "Pet1015",
+        "Pet1016_anime",
+        "Pet1017",
+        "Pet1018",
+        "Pet1019",
+        "Pet1020",
+        "Pet1021",
+        "Pet1022",
+        "Pet1023",
+        "pet1014"
+      ],
+      "qualityExclusions": {
+        "Pet1011": "Visual review: petite character design outside this mature portrait selection.",
+        "Pet1012": "Visual review: petite character design outside this mature portrait selection.",
+        "Pet1018": "Visual review: petite character design outside this mature portrait selection.",
+        "Pet1020": "Visual review: petite character design outside this mature portrait selection.",
+        "Pet1022": "Visual review: petite character design outside this mature portrait selection.",
+        "Pet1023": "Visual review: petite character design outside this mature portrait selection."
+      }
+    },
+    {
+      "sourceRepo": "Eikanya/spine-models",
+      "sourceCommit": "d0ef626d5d9a38f419226cf03f7a97331f7d28fe",
+      "catalog": "data/spine-games-wave2.json",
+      "spineVersion": "3.8",
+      "id": "sexy-sins-stand",
+      "gameId": "sexysins",
+      "name": "7 Sexy Sins Tadaima（常规角色立绘）",
+      "treeSha": "666460e4dd973283d69b78cbedc57704e4a06db4",
+      "treePrefix": "galgame/",
+      "directory": "7 Sexy Sins Tadaima",
+      "idPrefix": "s7-",
+      "modelPattern": "[A-Za-z]+[ _]Stand",
+      "skeletonExtension": "json",
+      "models": [
+        "Envy Stand",
+        "Gluttony Stand",
+        "Greed_Stand",
+        "Lust Stand",
+        "Pride Stand",
+        "Sloth Stand",
+        "Wrath Stand"
+      ],
+      "modelIds": {
+        "Envy Stand": "envy-stand",
+        "Gluttony Stand": "gluttony-stand",
+        "Greed_Stand": "greed-stand",
+        "Lust Stand": "lust-stand",
+        "Pride Stand": "pride-stand",
+        "Sloth Stand": "sloth-stand",
+        "Wrath Stand": "wrath-stand"
+      },
+      "names": {
+        "Envy Stand": "Envy · 常规立绘",
+        "Gluttony Stand": "Gluttony · 常规立绘",
+        "Greed_Stand": "Greed · 常规立绘",
+        "Lust Stand": "Lust · 常规立绘",
+        "Pride Stand": "Pride · 常规立绘",
+        "Sloth Stand": "Sloth · 常规立绘",
+        "Wrath Stand": "Wrath · 常规立绘"
+      }
     }
   ]
 }

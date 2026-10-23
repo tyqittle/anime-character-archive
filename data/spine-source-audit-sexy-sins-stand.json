@@ -1,0 +1,23 @@
+{
+  "scope": "sexy-sins-stand",
+  "sourceRepo": "Eikanya/spine-models",
+  "sourceCommit": "d0ef626d5d9a38f419226cf03f7a97331f7d28fe",
+  "selected": 7,
+  "checked": 6,
+  "wouldAdd": [
+    "s7-envy-stand",
+    "s7-gluttony-stand",
+    "s7-greed-stand",
+    "s7-lust-stand",
+    "s7-pride-stand",
+    "s7-wrath-stand"
+  ],
+  "failed": [
+    {
+      "stem": "Sloth Stand",
+      "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+    }
+  ],
+  "qualityExclusions": [],
+  "note": "Selected illustrations only; source and image-header validation is separate from browser playback."
+}

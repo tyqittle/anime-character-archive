@@ -171,3 +171,7 @@ node tests/smoke.mjs
 新增 **绯色回响 21 套**、**Sacred Sword Princesses 1 套**，两款游戏均完成逐模型真实预览采集；连同第一批四款，合计新增 **6 款游戏、106 套模型**。绯色回响精选范围原有 26 套候选，其中 4 套缺骨骼/图集被拒绝，另 1 套经真实截图查看发现人物过小并作明确质量排除，未以其他人物配图替代。Sacred Sword Princesses 仅选常规角色服装，不导入 CG 场景。
 
 来源固定提交、失败和质量排除见 `data/spine-source-scopes.json`、`data/spine-source-audit-echocalypse.json`、`data/sacredsword-source-audit.json`；共同预览结果见 `data/preview-audits/mature-spine-expansion.json` 与 `data/preview-audits/mature-followup.json`。代表模型的双帧运动、动作和缩放检查保存在 `data/mature-followup-browser-audit.json`。Spine 来源导入复现命令：`python -X utf8 scripts/import_spine_source.py --scope echocalypse`；已知缺失会被明确报告并返回非零退出码。
+
+## 第三批：继续扩充动态立绘
+
+新增《桃色旅团》17 套、7 Sexy Sins Tadaima 常规站姿 6 套，共 23 套动态立绘。全部有对应模型的真实渲染预览，代表模型通过双帧运动、动作切换及缩放检查。来源范围、排除项与复现方式见 [第三批扩充记录](docs/DYNAMIC_GAMES_WAVE2_2026-10-24.md)。

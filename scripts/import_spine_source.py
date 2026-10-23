@@ -42,16 +42,20 @@ def binary_version(data):
     return string(offset)[0]
 
 def model_record(scope, stem, files, download=retrieve):
-    if not re.fullmatch(r'[a-zA-Z0-9_-]+',stem) or not re.fullmatch(scope['modelPattern'], stem): raise ValueError('Unexpected model identity')
-    folder=scope['directory']+'/'+stem+'/'
-    names=[folder+stem+'.skel',folder+stem+'.atlas']
+    if not re.fullmatch(r'[a-zA-Z0-9_ -]+',stem) or not re.fullmatch(scope['modelPattern'], stem): raise ValueError('Unexpected model identity')
+    folder=(scope['directory']+'/' if scope['directory'] else '')+stem+'/'
+    extension=scope.get('skeletonExtension','skel')
+    if extension not in ('skel','json'):raise ValueError('Unexpected skeleton extension')
+    names=[folder+stem+'.'+extension,folder+stem+'.atlas']
     if any(not files.get(p,{}).get('size',0) for p in names): raise ValueError('Missing skeleton or Atlas')
-    prefix='https://raw.githubusercontent.com/'+scope['sourceRepo']+'/'+scope['sourceCommit']+'/'+scope['treePrefix']
+    prefix='https://raw.githubusercontent.com/'+scope['sourceRepo']+'/'+scope['sourceCommit']+'/'+urllib.parse.quote(scope['treePrefix'],safe='/')
     def raw(p, header_only=False):
         data=download(prefix+urllib.parse.quote(p, safe='/'), header_only=header_only)
         if not header_only and git_blob(data)!=files[p]['sha']: raise ValueError('Source Git blob mismatch: '+p)
         return data
-    skeleton=raw(names[0]); version=binary_version(skeleton)
+    skeleton=raw(names[0])
+    is_json=skeleton.lstrip().startswith(b'{')
+    version=json.loads(skeleton)['skeleton']['spine'] if is_json else binary_version(skeleton)
     if not version.startswith(scope['spineVersion']+'.'): raise ValueError('Unsupported Spine version '+version)
     atlas=raw(names[1]).decode('utf-8-sig')
     pages=list(dict.fromkeys(line.strip() for line in atlas.splitlines() if re.search(r'\.(?:png|webp|jpg)$',line.strip(),re.I) and ':' not in line))
@@ -66,11 +70,13 @@ def model_record(scope, stem, files, download=retrieve):
         width,height=struct.unpack('>II',header[16:24])
         if min(width,height)<256 or max(width,height)>16384: raise ValueError('Invalid texture dimensions')
         textures.append({'path':scope['treePrefix']+p,'sha':files[p]['sha'],'bytes':files[p]['size'],'width':width,'height':height})
-    base=prefix+folder+stem
-    return {'id':scope['idPrefix']+stem,'gameId':scope['gameId'],'game':scope['name'],'collectionName':scope['name'],
+    base=prefix+urllib.parse.quote(folder+stem,safe='/')
+    model_id=scope.get('modelIds',{}).get(stem,stem)
+    if not re.fullmatch(r'[a-zA-Z0-9_-]+',model_id):raise ValueError('Invalid catalog ID')
+    return {'id':scope['idPrefix']+model_id,'gameId':scope['gameId'],'game':scope['name'],'collectionName':scope['name'],
         'engine':'spine','name':scope.get('names',{}).get(stem,'角色 / 服装 '+stem),'characterName':stem,'costumeName':stem,
-        'skinCode':stem,'assetType':'character-spine','spineVersion':scope['spineVersion'],'skeletonFormat':'skel',
-        'atlasCoordinateSpace':'declared','resourceStem':stem,'base':base,'skeletonUrl':base+'.skel','atlasUrl':base+'.atlas',
+        'skinCode':stem,'assetType':'character-spine','spineVersion':scope['spineVersion'],'skeletonFormat':'json' if is_json else 'skel',
+        'atlasCoordinateSpace':'declared','resourceStem':stem,'base':base,'skeletonUrl':base+'.'+extension,'atlasUrl':base+'.atlas',
         'sourceRepo':scope['sourceRepo'],'sourceCommit':scope['sourceCommit'],'sourcePath':scope['treePrefix']+names[0],
         'sourceVersion':version,'skeletonBytes':len(skeleton),'atlasBytes':len(atlas.encode('utf-8')),'textures':textures,
         'status':'indexed-unverified','playbackStatus':'not-verified','previewSource':'not-rendered','visualIntegrityPolicy':'coherent-character'}

@@ -1,0 +1,36 @@
+{
+  "scope": "momoiro",
+  "sourceRepo": "Eikanya/spine-models",
+  "sourceCommit": "d0ef626d5d9a38f419226cf03f7a97331f7d28fe",
+  "selected": 23,
+  "checked": 17,
+  "wouldAdd": [],
+  "failed": [],
+  "qualityExclusions": [
+    {
+      "stem": "Pet1011",
+      "reason": "Visual review: petite character design outside this mature portrait selection."
+    },
+    {
+      "stem": "Pet1012",
+      "reason": "Visual review: petite character design outside this mature portrait selection."
+    },
+    {
+      "stem": "Pet1018",
+      "reason": "Visual review: petite character design outside this mature portrait selection."
+    },
+    {
+      "stem": "Pet1020",
+      "reason": "Visual review: petite character design outside this mature portrait selection."
+    },
+    {
+      "stem": "Pet1022",
+      "reason": "Visual review: petite character design outside this mature portrait selection."
+    },
+    {
+      "stem": "Pet1023",
+      "reason": "Visual review: petite character design outside this mature portrait selection."
+    }
+  ],
+  "note": "Selected illustrations only; source and image-header validation is separate from browser playback."
+}

@@ -60,6 +60,11 @@
       "id": "mature-followup",
       "name": "Sacred Sword Princesses · 常规角色",
       "path": "data/live2d-mature-followup.json"
+    },
+    {
+      "id": "games-wave2",
+      "name": "桃色旅团 / 7 Sexy Sins Tadaima",
+      "path": "data/spine-games-wave2.json"
     }
   ]
 }
