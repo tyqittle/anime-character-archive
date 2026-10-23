@@ -401,8 +401,8 @@
     "scope": "shared preview pipeline",
     "counts": {
       "destinychild": {
-        "indexed": 14,
-        "verifiedPreview": 14,
+        "indexed": 973,
+        "verifiedPreview": 973,
         "missingPreview": 0
       },
       "venusscramble": {
@@ -422,7 +422,7 @@
       }
     },
     "missing": [],
-    "newCapturesInThisRun": 0,
+    "newCapturesInThisRun": 957,
     "rejectedCaptures": [],
     "failedCaptures": [],
     "failureSummary": {}
@@ -431,16 +431,40 @@
     "scope": "shared preview pipeline",
     "counts": {
       "echocalypse": {
-        "indexed": 21,
-        "verifiedPreview": 21,
-        "missingPreview": 0
+        "indexed": 336,
+        "verifiedPreview": 334,
+        "missingPreview": 2
       }
     },
-    "missing": [],
-    "newCapturesInThisRun": 0,
+    "missing": [
+      {
+        "gameId": "echocalypse",
+        "id": "ec-50010001"
+      },
+      {
+        "gameId": "echocalypse",
+        "id": "ec-500180"
+      }
+    ],
+    "newCapturesInThisRun": 311,
     "rejectedCaptures": [],
-    "failedCaptures": [],
-    "failureSummary": {}
+    "failedCaptures": [
+      {
+        "id": "ec-50010001",
+        "gameId": "echocalypse",
+        "category": "render-error",
+        "message": "角色资源下载失败。github：图集坐标适配失败：Region exceeds declared atlas page: xuena_zdatui_yinying_3；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ec-500180",
+        "gameId": "echocalypse",
+        "category": "render-error",
+        "message": "角色资源下载失败。github：图集坐标适配失败：Region exceeds declared atlas page: images/xia_yt/xia_yt_12；可点击“重试”或选择本地导入已获得的动画文件。"
+      }
+    ],
+    "failureSummary": {
+      "render-error": 2
+    }
   },
   "mature-followup": {
     "scope": "shared preview pipeline",
