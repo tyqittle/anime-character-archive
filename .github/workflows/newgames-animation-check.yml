@@ -12,7 +12,6 @@ on:
       - 'spine.html'
       - 'azurlane-stage.html'
       - 'scripts/test_additional_game_animations.mjs'
-      - 'scripts/diagnose_daiblos_atlas.mjs'
       - '.github/workflows/newgames-animation-check.yml'
   workflow_dispatch:
 permissions:
@@ -34,19 +33,6 @@ jobs:
           sleep 2
       - name: Render real models from three imported game groups
         run: node scripts/test_additional_game_animations.mjs
-      - name: Compare UV mapping on coherent and fragmented Spine rigs
-        if: always()
-        run: |
-          python -m pip install -r requirements-dev.txt
-          node scripts/diagnose_daiblos_atlas.mjs
-          python - <<'PY'
-          from pathlib import Path
-          import sys
-          sys.path.insert(0,'scripts')
-          from audit_animation_visual_integrity import connectivity
-          for path in sorted(Path('/tmp/daiblos-uv-diagnostic').glob('*.png')):
-              print('UV_DIAGNOSTIC_METRIC',path.name,connectivity(path))
-          PY
       - name: Save diagnostics
         if: always()
         uses: actions/upload-artifact@v4
@@ -56,5 +42,4 @@ jobs:
             /tmp/newgames-animation-results.json
             /tmp/newgames-*.png
             /tmp/newgames-server.log
-            /tmp/daiblos-uv-diagnostic/
           if-no-files-found: ignore

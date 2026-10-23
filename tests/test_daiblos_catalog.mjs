@@ -6,10 +6,15 @@ const data=JSON.parse(fs.readFileSync(new URL('../data/spine-daiblos-core.json',
 const models=data.characters;
 test('bulk skin catalog has 100+ distinct exact-source rigs and never claims unverified previews',()=>{
  assert.ok(models.length>=100);assert.equal(data.totalCharacters,models.length);
+ assert.equal(models.length,125,'Only coherent Daiblos Core models remain in the catalog');
  assert.ok(models.filter(c=>c.preview).length>=125,'Previously rendered previews must be preserved');
  assert.equal(new Set(models.map(c=>c.id)).size,models.length);
+ assert.equal(data.quarantinedModels.length,2);
+ assert.ok(!models.some(c=>data.quarantinedModels.some(q=>q.id===c.id)));
+ assert.ok(!models.some(c=>/alps04|hades03/.test(c.id)));
  for(const c of models){
   assert.equal(c.gameId,'daibloscore');assert.equal(c.skeletonFormat,'json');
+  assert.equal(c.visualIntegrityPolicy,'coherent-character');
   assert.match(c.id,/^dbcore-\d{5}_skin_[a-z0-9_]+-[a-z0-9_]+$/);
   assert.ok(c.base.startsWith('https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/'+data.sourceCommit+'/spine/'));
   assert.equal(c.skeletonUrl,c.base+'.json');assert.equal(c.atlasUrl,c.base+'.atlas');

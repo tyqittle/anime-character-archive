@@ -13,3 +13,14 @@
 - 拒绝 `dbcore-40350_skin_meteor05_spine-40350_skin_meteor05`：Spine 图集缺失 `expression_e_2` 附件。
 - 拒绝 `dbcore-70310_skin_atum03a_spine-70310_skin_atum03a`：实际渲染空画面。
 - 已从可选目录移除，后续重跑导入脚本也会保留同一拒绝列表。详情见 `data/preview-audits/daibloscore.json`。
+
+## 2026-10-23 图像拼接完整性复核
+
+前一轮“127 套全部通过”实际上只代表画面非空，不代表身体贴图拼接正确。新增预览连通性审计后发现两套严重异常：
+
+- **Alps04**：预览的最大连通前景比例约 28.6%，原生 Spine 3.8 和现有 Atlas 修补版均约 29%。
+- **Hades03**：预览的最大连通前景比例约 49.1%，原生与修补版均有 5 块明显分离的大型区域。
+
+两套现已从目录排除，其他游戏不需要修改 UV 兼容逻辑。连同之前的 Meteor05（缺图集附件）与 Atum03a（画面空白），129 套候选最终有 **125 套**在可选目录里，均含与自身模型绑定的真实预览。对于这 125 套，当前自动检查没有发现同等级的大块碎片化；这不代替逐张人工核实。
+
+新增统一的 `visualIntegrityPolicy: coherent-character`，共享 `preview_frame_pipeline.py` 负责像素帧转换，`audit_animation_visual_integrity.py` 负责前景连通性检查。在新游戏登记中可复用此质量策略，而不再为游戏单独写截图流程。也保留 [原生和修补渲染对比脚本](../scripts/diagnose_daiblos_atlas.mjs) 用于查证。
