@@ -61,7 +61,51 @@ Copy-Item -LiteralPath $addon -Destination (Join-Path $projectDir 'NativeArchive
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeBrownDust2Bridge.cs') -Destination (Join-Path $projectDir 'NativeBrownDust2Bridge.cs') -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeBrownDust2Voice.cs') -Destination (Join-Path $projectDir 'NativeBrownDust2Voice.cs') -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeBrownDust2WebMDecoder.cs') -Destination (Join-Path $projectDir 'NativeBrownDust2WebMDecoder.cs') -Force
-Write-Host 'Applied audited archive bridge to upstream SpinePet application; renderer unchanged.'
+# Expose a real in-app updater control on the EXISTING selection panel.
+# Directly running Update.exe is not the Velopack check-updates UI.
+$windowXaml = Join-Path $UpstreamRoot 'SpinePet/src/SpinePet/Views/MainWindow.xaml'
+$windowText = [System.IO.File]::ReadAllText($windowXaml)
+$originalExit = @'
+                                 <Button Grid.Column="2"
+                                         Width="44"
+                                         Height="24"
+                                         MinHeight="24"
+                                         Margin="8,0,0,0"
+                                         Padding="4,0"
+                                         Content="Exit"
+                                         Style="{StaticResource QuietButtonStyle}"
+                                         VerticalAlignment="Center"
+                                         x:Name="ExitButton"
+                                         ToolTip="Exit SpinePet completely"
+                                         AutomationProperties.Name="Exit application" />
+'@
+$withUpdate = @'
+                                 <StackPanel Grid.Column="2"
+                                             Orientation="Vertical"
+                                             VerticalAlignment="Center"
+                                             Margin="5,0,0,0">
+                                     <Button x:Name="ManualUpdateButton"
+                                             Width="76" Height="24"
+                                             Margin="0,0,0,3"
+                                             Padding="4,0"
+                                             Content="检查更新"
+                                             Style="{StaticResource QuietButtonStyle}"
+                                             AutomationProperties.Name="Check for updates" />
+                                     <Button Width="76" Height="24"
+                                             Padding="4,0"
+                                             Content="Exit"
+                                             Style="{StaticResource QuietButtonStyle}"
+                                             x:Name="ExitButton"
+                                             ToolTip="Exit SpinePet completely"
+                                             AutomationProperties.Name="Exit application" />
+                                 </StackPanel>
+'@
+if ([regex]::Matches($windowText,[regex]::Escape($originalExit)).Count -ne 1) {
+    throw 'Pinned upstream main-window Update button insertion anchor mismatch'
+}
+$windowText = $windowText.Replace($originalExit,$withUpdate)
+[System.IO.File]::WriteAllText($windowXaml,$windowText,[System.Text.UTF8Encoding]::new($false))
+Write-Host 'Native archive bridge and manual in-app update control integrated.'
 
 # Add the tested Velopack updater library to the pinned upstream app.
 $program = Join-Path $projectDir 'Program.cs'
