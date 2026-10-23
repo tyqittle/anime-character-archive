@@ -30,6 +30,16 @@ try{
  if(!(ratio>=1.8&&ratio<=2.05))throw Error('Arknights model rendered below retina resolution: '+JSON.stringify(size));
  const nativeCamera=await p.evaluate(()=>player?._archiveNativeView===true);
  if(!nativeCamera)throw Error('Arknights 3.8 model is not using native camera zoom');
+ await p.waitForFunction(()=>player?._archiveIllustrationQuality?.mode==='atlas-gpu-sharpen',{timeout:12000});
+ const enhance=await p.evaluate(()=>({
+  quality:player?._archiveIllustrationQuality,
+  shader:player?.sceneRenderer?.batcherShader?._archiveSharpIllustration,
+  pixelRatio:player?.canvas?.width/Math.max(1,player?.canvas?.clientWidth)
+ }));
+ if(!enhance.shader||enhance.pixelRatio<1.8){
+  throw Error('Arknights full-resolution GPU-enhanced drawing not active: '+JSON.stringify(enhance));
+ }
+ console.log('ARKNIGHTS_ATLAS_GPU_SHARPEN_PASS',JSON.stringify(enhance));
  await p.locator('#zoomIn').click();
  await p.waitForTimeout(300);
  const zoomState=await p.evaluate(()=>({
