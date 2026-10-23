@@ -6,6 +6,7 @@ on:
     paths:
       - 'scripts/audit_daiblos_visual_browser.mjs'
       - 'scripts/diagnose_daiblos_animation_sweep.mjs'
+      - 'scripts/diagnose_daiblos_atlas.mjs'
       - '.github/workflows/daiblos-visual-audit.yml'
 permissions:
   contents: read
@@ -39,6 +40,16 @@ jobs:
         with:
           name: daiblos-animation-sweep
           path: /tmp/daiblos-animation-sweep/
+          if-no-files-found: warn
+      - name: Compare original vs patched Spine 3.8 UVs
+        if: ${{ matrix.shard == 9 }}
+        run: node scripts/diagnose_daiblos_atlas.mjs
+      - name: Preserve atlas A/B evidence
+        if: ${{ always() && matrix.shard == 9 }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: daiblos-atlas-ab
+          path: /tmp/daiblos-uv-diagnostic/
           if-no-files-found: warn
       - name: Save full result and suspect screenshots
         if: always()
