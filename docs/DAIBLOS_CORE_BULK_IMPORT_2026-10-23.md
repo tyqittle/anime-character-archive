@@ -24,3 +24,7 @@
 两套现已从目录排除，其他游戏不需要修改 UV 兼容逻辑。连同之前的 Meteor05（缺图集附件）与 Atum03a（画面空白），129 套候选最终有 **125 套**在可选目录里，均含与自身模型绑定的真实预览。对于这 125 套，当前自动检查没有发现同等级的大块碎片化；这不代替逐张人工核实。
 
 新增统一的 `visualIntegrityPolicy: coherent-character`，共享 `preview_frame_pipeline.py` 负责像素帧转换，`audit_animation_visual_integrity.py` 负责前景连通性检查。在新游戏登记中可复用此质量策略，而不再为游戏单独写截图流程。也保留 [原生和修补渲染对比脚本](../scripts/diagnose_daiblos_atlas.mjs) 用于查证。
+
+## 后续坐标修复（2026-10-23）
+
+此前以截图非空作为成功依据，遗漏了缩放后纹理与 Atlas 原坐标不一致造成的贴图碎片。共享坐标适配已修复该类问题，Alps04、Hades03 经对照截图审查后恢复。当前目录为 127 套；Meteor05 和 Atum03a 仍因各自实际失败保留在排除清单。当前证据与限制见 [视觉修复记录](DAIBLOS_VISUAL_REPAIR.md)，本文件的首轮导入统计不替代最新验收结果。
