@@ -31,6 +31,8 @@ jobs:
         run: node --test tests/test_highquality_live2d_catalog.mjs
       - name: Validate exact Live2D previews and footer links
         run: node --test tests/test_preview_friendlinks.mjs
+      - name: Validate pinned mature anime Live2D models
+        run: node --test tests/test_mature_live2d_catalog.mjs
       - name: Test bounded animation memory cache
         run: node tests/test_spine_session_cache.mjs
       - name: Test shared preview policy
