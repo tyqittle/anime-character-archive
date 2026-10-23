@@ -47,7 +47,8 @@ public sealed class ArchiveUniversalDesktopTests
                     var bounds=button.TransformToAncestor(content).TransformBounds(new System.Windows.Rect(button.RenderSize));
                     Assert.True(bounds.Left>=0&&bounds.Top>=0&&bounds.Right<=content.ActualWidth+1&&
                         bounds.Bottom<=content.ActualHeight+1,name+" is clipped by the window");
-                    Assert.True(button.ActualHeight+1>=button.DesiredSize.Height,name+" is clipped vertically");
+                    Assert.True(button.ActualHeight+button.Margin.Top+button.Margin.Bottom+1>=button.DesiredSize.Height,
+                        name+" is clipped vertically");
                     var hit=content.InputHitTest(new System.Windows.Point(bounds.Left+bounds.Width/2,bounds.Top+bounds.Height/2))
                         as System.Windows.DependencyObject;
                     Assert.True(hit==button||(hit!=null&&button.IsAncestorOf(hit)),name+" is covered by settings");
