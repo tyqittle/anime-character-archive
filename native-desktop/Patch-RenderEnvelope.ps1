@@ -200,6 +200,13 @@ $helper = @'
         SilhouetteTriangle triangle,
         float left, float top, float right, float bottom)
     {
+        // Only the sub-cell / narrow-mesh case needs this expensive
+        // polygon fallback. Broad triangles were already sampled on the
+        // regular grid, so keep large animated scenes responsive.
+        float narrowLimit = (right - left) * 1.5f;
+        if (triangle.MaxX - triangle.MinX > narrowLimit &&
+            triangle.MaxY - triangle.MinY > narrowLimit)
+            return false;
         Span<System.Numerics.Vector2> a =
             stackalloc System.Numerics.Vector2[12];
         Span<System.Numerics.Vector2> b =
