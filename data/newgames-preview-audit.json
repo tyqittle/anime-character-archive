@@ -8,8 +8,8 @@
     },
     "girlsfrontline": {
       "indexed": 297,
-      "verifiedPreview": 267,
-      "missingPreview": 30
+      "verifiedPreview": 269,
+      "missingPreview": 28
     },
     "konosuba": {
       "indexed": 61,
@@ -200,14 +200,6 @@
     },
     {
       "gameId": "girlsfrontline",
-      "id": "gf-live2dnew_squads_ags_30_ags_30-bafcf0a"
-    },
-    {
-      "gameId": "girlsfrontline",
-      "id": "gf-live2dnew_squads_bgm_71_bgm_71-1a95d57"
-    },
-    {
-      "gameId": "girlsfrontline",
       "id": "gf-live2dnew_sr3mp_4101_normal_normal-3197af7"
     },
     {
@@ -227,7 +219,7 @@
       "id": "ks-1349100_1349100-20ffd44"
     }
   ],
-  "newCapturesInThisRun": 0,
+  "newCapturesInThisRun": 2,
   "failedCaptures": [
     {
       "id": "ak-char_1026_gvial2_summer_12-3f53e8d",
@@ -500,18 +492,6 @@
       "message": "page.waitForFunction: Timeout 60000ms exceeded."
     },
     {
-      "id": "gf-live2dnew_squads_ags_30_ags_30-bafcf0a",
-      "gameId": "girlsfrontline",
-      "category": "timeout",
-      "message": "page.waitForFunction: Timeout 60000ms exceeded."
-    },
-    {
-      "id": "gf-live2dnew_squads_bgm_71_bgm_71-1a95d57",
-      "gameId": "girlsfrontline",
-      "category": "timeout",
-      "message": "page.waitForFunction: Timeout 60000ms exceeded."
-    },
-    {
       "id": "gf-live2dnew_sr3mp_4101_normal_normal-3197af7",
       "gameId": "girlsfrontline",
       "category": "blank-frame",
@@ -539,13 +519,13 @@
       "id": "ks-1349100_1349100-20ffd44",
       "gameId": "konosuba",
       "category": "blank-frame",
-      "message": "Blank/tiny pixel variance 3.63"
+      "message": "Blank/tiny pixel variance 3.53"
     }
   ],
   "failureSummary": {
     "atlas-mismatch": 19,
     "blank-frame": 4,
-    "timeout": 29
+    "timeout": 27
   },
   "status": "shared exact-model WebP verification policy"
 }
