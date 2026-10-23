@@ -25,7 +25,8 @@ try{
    const rotations={};
    for(const degrees of [0,90,180,270]){
     const a=new runtime.RegionAttachment('uv-test');
-    a.setRegion({u:0.1,v:0.2,u2:0.7,v2:0.8,degrees});
+    // TextureAtlas sets rotate for odd quarter turns; preserve that real contract.
+    a.setRegion({u:0.1,v:0.2,u2:0.7,v2:0.8,degrees,rotate:degrees===90||degrees===270});
     rotations[degrees]=Array.from(a.uvs).map(x=>Math.round(x*1000)/1000);
    }
    const fixed=Boolean(runtime.TextureAtlas.prototype.__fixedFullRotations);
