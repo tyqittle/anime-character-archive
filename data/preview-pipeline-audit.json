@@ -321,16 +321,30 @@
         "missingPreview": 0
       },
       "girlscafegun": {
-        "indexed": 64,
-        "verifiedPreview": 64,
-        "missingPreview": 0
+        "indexed": 273,
+        "verifiedPreview": 272,
+        "missingPreview": 1
       }
     },
-    "missing": [],
-    "newCapturesInThisRun": 0,
+    "missing": [
+      {
+        "gameId": "girlscafegun",
+        "id": "gc-girl04-l2d05"
+      }
+    ],
+    "newCapturesInThisRun": 205,
     "rejectedCaptures": [],
-    "failedCaptures": [],
-    "failureSummary": {}
+    "failedCaptures": [
+      {
+        "id": "gc-girl04-l2d05",
+        "gameId": "girlscafegun",
+        "category": "render-error",
+        "message": "blank-frame: no rendered character"
+      }
+    ],
+    "failureSummary": {
+      "render-error": 1
+    }
   },
   "highquality": {
     "scope": "shared preview pipeline",
@@ -361,8 +375,8 @@
         "missingPreview": 0
       },
       "tokyonecro": {
-        "indexed": 62,
-        "verifiedPreview": 62,
+        "indexed": 397,
+        "verifiedPreview": 397,
         "missingPreview": 0
       },
       "lovecube": {
@@ -377,7 +391,7 @@
       }
     },
     "missing": [],
-    "newCapturesInThisRun": 0,
+    "newCapturesInThisRun": 330,
     "rejectedCaptures": [],
     "failedCaptures": [],
     "failureSummary": {}
@@ -422,7 +436,7 @@
       }
     },
     "missing": [],
-    "newCapturesInThisRun": 957,
+    "newCapturesInThisRun": 0,
     "rejectedCaptures": [],
     "failedCaptures": [],
     "failureSummary": {}
@@ -446,7 +460,7 @@
         "id": "ec-500180"
       }
     ],
-    "newCapturesInThisRun": 311,
+    "newCapturesInThisRun": 0,
     "rejectedCaptures": [],
     "failedCaptures": [
       {
