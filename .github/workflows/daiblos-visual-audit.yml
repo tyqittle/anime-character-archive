@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'scripts/audit_daiblos_visual_browser.mjs'
+      - 'scripts/diagnose_daiblos_animation_sweep.mjs'
       - '.github/workflows/daiblos-visual-audit.yml'
 permissions:
   contents: read
@@ -29,6 +30,16 @@ jobs:
           sleep 2
       - name: Capture and classify matching character frames
         run: node scripts/audit_daiblos_visual_browser.mjs ${{ matrix.shard }} 10
+      - name: Compare animation variants on suspect and control
+        if: ${{ matrix.shard == 9 }}
+        run: node scripts/diagnose_daiblos_animation_sweep.mjs
+      - name: Preserve animation comparison images
+        if: ${{ always() && matrix.shard == 9 }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: daiblos-animation-sweep
+          path: /tmp/daiblos-animation-sweep/
+          if-no-files-found: warn
       - name: Save full result and suspect screenshots
         if: always()
         uses: actions/upload-artifact@v4
