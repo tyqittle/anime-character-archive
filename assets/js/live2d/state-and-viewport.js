@@ -28,6 +28,21 @@ function modelUrlFor(name,candidate,id){
    return m&&id==='gc-'+m[1]+'-'+m[2].slice(0,-2)&&name===m[2]?candidate:'';
   }catch(e){return ''}
  }
+ // Source-pinned new games use their actual model directory and skeleton stem.
+ // Never permit a skin to load a different character's model by name or URL.
+ if(id.startsWith('gd-')||id.startsWith('sds-')){
+  if(!candidate.startsWith(COMMUNITY_SOURCE))return '';
+  try{
+   const path=decodeURIComponent(candidate.slice(COMMUNITY_SOURCE.length));
+   if(path.includes('..'))return '';
+   if(id.startsWith('gd-')){
+    const m=path.match(/^少女次元\/(\d{3})\/([A-Za-z0-9_-]+)\.model3\.json$/);
+    return m&&id==='gd-'+m[1]+'-'+m[2].toLowerCase()&&name===m[2]?candidate:'';
+   }
+   const m=path.match(/^sin 七大罪～魔王崇拜～\/([A-Za-z0-9_-]+)\/\1\.model3\.json$/);
+   return m&&id==='sds-'+m[1].toLowerCase()&&name===m[1]?candidate:'';
+  }catch(e){return ''}
+ }
  if(!/^(?:gf|ks)-[a-z0-9_-]+$/.test(id)||!candidate.startsWith(COMMUNITY_SOURCE))return '';
  try{
   const sub=decodeURIComponent(candidate.slice(COMMUNITY_SOURCE.length));

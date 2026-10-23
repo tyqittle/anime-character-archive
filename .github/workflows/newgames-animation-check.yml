@@ -5,6 +5,7 @@ on:
     paths:
       - 'data/spine-newgames.json'
       - 'data/live2d-moregames.json'
+      - 'data/live2d-highquality.json'
       - 'assets/js/spine/**'
       - 'assets/js/live2d/**'
       - 'spine.html'

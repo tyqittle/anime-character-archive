@@ -8,7 +8,10 @@ if(!browserPath)throw Error('Chrome or Chromium missing');
 const manifest=JSON.parse(fs.readFileSync('data/spine-newgames.json','utf8'));
 const pick=(game,path)=>manifest.characters.find(c=>c.gameId===game&&c.sourcePath===path);
 const more=JSON.parse(fs.readFileSync('data/live2d-moregames.json','utf8'));
+const high=JSON.parse(fs.readFileSync('data/live2d-highquality.json','utf8'));
 const cases=[
+ {type:'cubism',game:'girldimension',character:high.characters.find(c=>c.id==='gd-001-c_0005')},
+ {type:'cubism',game:'sinsevendeadlysins',character:high.characters.find(c=>c.id==='sds-xch001_01')},
  {type:'cubism',game:'touhoucannonball',character:more.characters.find(c=>c.id==='tc-reimu')},
  {type:'cubism',game:'girlscafegun',character:more.characters.find(c=>c.id==='gc-girl01-l2d00')},
  {type:'cubism',game:'girlsfrontline',character:pick('girlsfrontline','少女前线 girls Frontline/live2dnew/79type_1402/normal/normal.model3.json')},
