@@ -151,3 +151,69 @@
 #gpuStatus{flex:0 0 auto;font-size:10.5px;color:#b3dcc6;border:1px solid #48856b55;border-radius:6px;padding:3px 6px;background:#18372a65}
 #gpuStatus.gpu-software{color:#ffe1ae;border-color:#ad784860;background:#69442135}
 @media(max-width:700px){#gpuStatus{font-size:10px}.stage-head-meta #stageContext{display:none}}
+
+
+/* The stage is the primary surface. Voice controls must NOT inherit the global
+   width:100% select/input rules, which previously made the toolbar 3–4 rows. */
+.stage-toolbar{column-gap:8px;row-gap:6px}
+.stage-toolbar .toolbar-main{flex:1 1 185px;max-width:265px}
+#characterVoiceControls{
+  display:flex!important;align-items:center;flex:0 1 auto;flex-wrap:nowrap!important;
+  gap:6px!important;min-width:0;max-width:100%;margin:0
+}
+#characterVoiceControls[hidden]{display:none!important}
+#characterVoiceControls label{
+  display:inline-flex;align-items:center;gap:4px;flex:none;
+  margin:0!important;padding:0;white-space:nowrap;font-size:11px;line-height:1.3
+}
+#characterVoiceControls #voiceEnabled{
+  display:inline-block;flex:none;width:14px;height:14px;margin:0;padding:0
+}
+#characterVoiceControls #voiceLanguage{
+  display:block;flex:0 0 74px;width:74px;min-width:0;max-width:74px;
+  height:32px;min-height:32px;padding:4px 7px;font-size:12px;border-radius:7px
+}
+#characterVoiceControls #voiceTest{
+  flex:none;width:auto;min-height:32px;padding:4px 8px;font-size:11px;border-radius:7px;white-space:nowrap
+}
+#characterVoiceControls #voiceAvailability{
+  display:block;flex:0 1 auto;min-width:0;max-width:155px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:11px!important
+}
+#characterVoiceControls #voiceVolume{
+  display:block;flex:0 0 64px;width:64px!important;min-width:0;max-width:64px;
+  height:20px;margin:0;padding:0
+}
+.stage-toolbar #sendToDesktop{flex:none;padding-inline:8px}
+.stage-toolbar .toolbar-view{gap:5px}
+.stage-toolbar .toolbar-view .tool-btn{padding-inline:8px}
+.stage-toolbar .toolbar-view .zoom-value{min-width:39px}
+
+/* Extra links are available on demand, not permanently subtracted from
+   the animation viewport. Native details preserves keyboard navigation. */
+.stage-friends-drawer{
+  flex:0 0 auto;min-width:0;margin:0;background:#101a2b;border-top:1px solid #ffffff1e
+}
+.stage-friends-drawer > summary{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  min-height:30px;padding:5px 13px;cursor:pointer;list-style:none;
+  color:#aabbdb;font-size:11px;line-height:1.4;user-select:none
+}
+.stage-friends-drawer > summary::-webkit-details-marker{display:none}
+.stage-friends-drawer > summary:after{content:'展开 ▾';color:#c4c5ff;flex:none}
+.stage-friends-drawer[open] > summary:after{content:'收起 ▴'}
+.stage-friends-drawer > summary:focus-visible{outline:2px solid #b3b1ff;outline-offset:-2px}
+.stage-friends-drawer > .archive-friendlinks--stage{
+  max-height:min(185px,28dvh);overflow-y:auto;border-top:1px solid #ffffff16;
+  padding:7px 13px 10px
+}
+@media(min-width:851px) and (max-width:1330px){
+  .stage-toolbar .toolbar-main{max-width:none}
+  #characterVoiceControls #voiceAvailability{max-width:105px}
+}
+@media(max-width:850px){
+  .stage-toolbar .toolbar-main{max-width:none}
+  #characterVoiceControls{flex:1 1 100%;flex-wrap:wrap!important;justify-content:flex-start}
+  #characterVoiceControls #voiceAvailability{max-width:185px}
+  .stage-friends-drawer > .archive-friendlinks--stage{max-height:none}
+}
