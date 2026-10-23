@@ -8,6 +8,10 @@ on:
       - 'assets/js/spine/spine-assets.js'
       - 'assets/js/spine/catalog.js'
       - 'assets/js/spine/spine-runtime.js'
+      - 'assets/js/spine/illustration-quality.js'
+      - 'assets/js/spine/performance.js'
+      - 'assets/js/spine/local-tools.js'
+      - 'spine.html'
       - 'scripts/test_arknights_illust_browser.mjs'
       - '.github/workflows/arknights-illust-browser.yml'
   workflow_dispatch:
