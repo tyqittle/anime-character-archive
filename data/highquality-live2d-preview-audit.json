@@ -1,0 +1,20 @@
+{
+  "scope": "new dynamic game batch",
+  "counts": {
+    "girldimension": {
+      "indexed": 102,
+      "verifiedPreview": 102,
+      "missingPreview": 0
+    },
+    "sinsevendeadlysins": {
+      "indexed": 94,
+      "verifiedPreview": 94,
+      "missingPreview": 0
+    }
+  },
+  "missing": [],
+  "newCapturesInThisRun": 196,
+  "failedCaptures": [],
+  "failureSummary": {},
+  "status": "shared exact-model WebP verification policy"
+}
