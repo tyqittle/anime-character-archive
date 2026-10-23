@@ -113,14 +113,14 @@ $withUpdate = @'
                                              Margin="5,0,0,0">
                                      <Button x:Name="UniversalCatalogButton"
                                              Width="76" Height="24" Margin="0,0,0,3"
-                                             Padding="4,0" Content="��ҳѡ��"
+                                             Padding="4,0" Content="网页选角"
                                              Style="{StaticResource QuietButtonStyle}"
                                              AutomationProperties.Name="Choose any website animation" />
                                      <Button x:Name="ManualUpdateButton"
                                              Width="76" Height="24"
                                              Margin="0,0,0,3"
                                              Padding="4,0"
-                                             Content="������"
+                                             Content="检查更新"
                                              Style="{StaticResource QuietButtonStyle}"
                                              AutomationProperties.Name="Check for updates" />
                                      <Button Width="76" Height="24"

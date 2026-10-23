@@ -7,7 +7,7 @@ internal sealed record ArchiveWebCharacter(string Game,string Id,string Name,boo
     bool Voice=false,string Action="")
 {
     public ArchiveWebSelection Selection=>new(Game,Id);
-    public string Label=>$"{Name}\n{Game} �� {(Visible?"������ʾ��":"�ѱ���")}";
+    public string Label=>$"{Name}\n{Game} · {(Visible?"桌面显示中":"已保存")}";
 }
 
 // UI-thread owned. Identity is the exact catalog (game, model ID), never a filename.
@@ -25,11 +25,11 @@ internal sealed class ArchiveWebLibrary
         if(File.Exists(path))
         {
             var document=JsonSerializer.Deserialize<Document>(File.ReadAllText(path))
-                ??throw new InvalidDataException("��ҳ��ɫ�嵥Ϊ��");
-            if(document.Version!=1)throw new InvalidDataException("��֧�ֵ���ҳ��ɫ�嵥�汾");
+                ??throw new InvalidDataException("网页角色清单为空");
+            if(document.Version!=1)throw new InvalidDataException("不支持的网页角色清单版本");
             foreach(var item in document.Characters)
             {
-                if(!item.Selection.IsValid)throw new InvalidDataException("��ҳ��ɫ��ʶ��Ч");
+                if(!item.Selection.IsValid)throw new InvalidDataException("网页角色标识无效");
                 if(library.Find(item.Selection)==null)library._characters.Add(item);
             }
         }

@@ -100,9 +100,9 @@ public sealed class ArchiveUniversalDesktopTests
             panel.Select(new("another","two"));
             void Click(string label)=>panel.Settings.Children.OfType<System.Windows.Controls.Button>()
                 .Single(x=>Equals(x.Content,label)).RaiseEvent(new System.Windows.RoutedEventArgs(System.Windows.Controls.Button.ClickEvent));
-            Click("��ʾ��ɫ");Assert.Equal(new("another","two"),shown.Single());
-            Click("���ؽ�ɫ");Assert.Equal(new("another","two"),hidden.Single());
-            Click("���б��Ƴ�");
+            Click("显示角色");Assert.Equal(new("another","two"),shown.Single());
+            Click("隐藏角色");Assert.Equal(new("another","two"),hidden.Single());
+            Click("从列表移除");
             Assert.Single(panel.List.Items.Cast<object>());
             Assert.Single(ArchiveWebLibrary.Load(Path.Combine(root,"library.json"),Path.Combine(root,"none")).Characters);
             await Task.CompletedTask;
@@ -112,7 +112,7 @@ public sealed class ArchiveUniversalDesktopTests
 
     [Theory]
     [InlineData("girlscafegun","gc-girl01-l2d00")]
-    [InlineData("future-game","��ɫ / + & ? #")]
+    [InlineData("future-game","角色 / + & ? #")]
     public void CatalogIdentitiesRoundTripWithoutGameWhitelist(string game,string id)
     {
         string link="animecharacter://open?host=webview2&game="+Uri.EscapeDataString(game)+"&id="+Uri.EscapeDataString(id);

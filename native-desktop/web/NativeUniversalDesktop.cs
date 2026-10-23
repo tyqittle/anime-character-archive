@@ -32,7 +32,7 @@ public sealed partial class App
         }
         catch(Exception error)
         {AppLogger.Write(nameof(App),"universal-library-load "+error.Message);
-            System.Windows.MessageBox.Show(error.Message,"��ҳ��ɫ�嵥��ȡʧ��");}
+            System.Windows.MessageBox.Show(error.Message,"网页角色清单读取失败");}
     }
     private async Task ShowUniversalDesktopAsync(ArchiveWebSelection selection,bool save=true)
     {
@@ -69,7 +69,7 @@ public sealed partial class App
         {
             if(cancellation.IsCancellationRequested||IsShutdownRequested)return;
             AppLogger.Write(nameof(App),"universal-open-failed "+error.Message);
-            System.Windows.MessageBox.Show(error.Message+"\n��ɫ�ѱ������б������Ժ����ԡ�","�����������ʧ��",
+            System.Windows.MessageBox.Show(error.Message+"\n角色已保留在列表，可稍后重试。","桌面立绘加载失败",
                 MessageBoxButton.OK,MessageBoxImage.Warning);
         }
         finally

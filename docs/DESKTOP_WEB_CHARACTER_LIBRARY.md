@@ -1,7 +1,7 @@
 # Desktop website character library
 
-Website imports are registered in the existing Characters area under ��ҳ��ɫ;
-�����ز� retains the original native library and settings.
+Website imports are registered in the existing Characters area under 网页角色;
+本地素材 retains the original native library and settings.
 
 - Persist every successfully selected catalog identity as (Game, Id), with name,
   visibility, voice and selected action, in universal-characters-v1.json.

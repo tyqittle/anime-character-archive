@@ -15,7 +15,7 @@ internal sealed class ArchiveWebLibraryPanel : IDisposable
     private readonly C.StackPanel _settings=new(){Margin=new W.Thickness(14)};
     private readonly C.Border _overlay;
     private readonly C.TabControl _tabs=new();
-    private readonly C.TextBox _search=new(){Margin=new W.Thickness(0,0,0,8),ToolTip="������ҳ��ɫ����Ϸ��ģ�� ID"};
+    private readonly C.TextBox _search=new(){Margin=new W.Thickness(0,0,0,8),ToolTip="搜索网页角色、游戏或模型 ID"};
     private readonly C.TextBlock _count=new();
     private readonly C.TextBlock? _nativeCount;
     private readonly C.TextChangedEventHandler _searchChanged;
@@ -37,8 +37,8 @@ internal sealed class ArchiveWebLibraryPanel : IDisposable
         var header=new C.StackPanel();header.Children.Add(_count);
         if(search==null)header.Children.Add(_search);
         C.DockPanel.SetDock(header,C.Dock.Top);web.Children.Add(header);web.Children.Add(_list);
-        _tabs.Items.Add(new C.TabItem{Header="��ҳ��ɫ",Content=web});
-        _tabs.Items.Add(new C.TabItem{Header="�����ز�",Content=native});libraryHost.Children.Add(_tabs);
+        _tabs.Items.Add(new C.TabItem{Header="网页角色",Content=web});
+        _tabs.Items.Add(new C.TabItem{Header="本地素材",Content=native});libraryHost.Children.Add(_tabs);
         _overlay=new C.Border{Background=new M.SolidColorBrush(M.Color.FromRgb(24,24,30)),Child=_settings};
         C.Grid.SetRowSpan(_overlay,2);C.Panel.SetZIndex(_overlay,10);settingsHost.Children.Add(_overlay);
         _list.SelectionChanged+=(_,_)=>RenderSettings();
@@ -66,7 +66,7 @@ internal sealed class ArchiveWebLibraryPanel : IDisposable
             (x.Name+" "+x.Game+" "+x.Id).Contains(query,StringComparison.OrdinalIgnoreCase)).ToArray();
         _list.SelectedItem=_list.Items.Cast<ArchiveWebCharacter>().FirstOrDefault(x=>x.Selection==selection)
             ??_list.Items.Cast<ArchiveWebCharacter>().FirstOrDefault();
-        _count.Text=$"{_library.Characters.Count} ���Ѽ�����ҳ��ɫ";RenderSettings();
+        _count.Text=$"{_library.Characters.Count} 个已加入网页角色";RenderSettings();
     }
     private void RenderSettings()
     {
@@ -75,9 +75,9 @@ internal sealed class ArchiveWebLibraryPanel : IDisposable
         {
             _settings.Children.Clear();
             if(_list.SelectedItem is not ArchiveWebCharacter item)
-            {Text("����ҳѡ���ɫ��������ŵ����桹�����ɼ������");return;}
-            Text(item.Name,18);Text(item.Game+" �� "+item.Id);Text(item.Visible?"������ʾ��":"�ѱ��棬����ʱ��ʾ");
-            Button(item.Visible?"���ؽ�ɫ":"��ʾ��ɫ",async()=>{
+            {Text("从网页选择角色并点击「放到桌面」，即可加入这里。");return;}
+            Text(item.Name,18);Text(item.Game+" · "+item.Id);Text(item.Visible?"桌面显示中":"已保存，可随时显示");
+            Button(item.Visible?"隐藏角色":"显示角色",async()=>{
                 if(item.Visible)_hide(item.Selection);else await _show(item.Selection);
             });
             var host=_host(item.Selection);
@@ -87,17 +87,17 @@ internal sealed class ArchiveWebLibraryPanel : IDisposable
                     SelectedValuePath="Id",SelectedValue=item.Action,Margin=new W.Thickness(0,8,0,8)};
                 actions.SelectionChanged+=(_,_)=>{if(!_refreshing&&actions.SelectedValue is string id)host.Command("action",id);};
                 _settings.Children.Add(actions);
-                Button("�Ŵ�",()=>{host.Command("zoomIn");return Task.CompletedTask;});
-                Button("��С",()=>{host.Command("zoomOut");return Task.CompletedTask;});
-                Button("��Ӧ����",()=>{host.Command("resetView");return Task.CompletedTask;});
+                Button("放大",()=>{host.Command("zoomIn");return Task.CompletedTask;});
+                Button("缩小",()=>{host.Command("zoomOut");return Task.CompletedTask;});
+                Button("适应画面",()=>{host.Command("resetView");return Task.CompletedTask;});
             }
-            var voice=new C.CheckBox{Content="��ɫ����",IsChecked=item.Voice,Margin=new W.Thickness(0,8,0,8)};
+            var voice=new C.CheckBox{Content="角色语音",IsChecked=item.Voice,Margin=new W.Thickness(0,8,0,8)};
             voice.Click+=(_,_)=>{
                 bool enabled=voice.IsChecked==true;
                 if(host!=null)host.Command("voice",enabled:enabled);
                 else _library.Put(item with{Voice=enabled});
             };_settings.Children.Add(voice);
-            Button("���б��Ƴ�",()=>{_remove(item.Selection);return Task.CompletedTask;});
+            Button("从列表移除",()=>{_remove(item.Selection);return Task.CompletedTask;});
         }
         finally {_refreshing=false;}
     }
@@ -110,7 +110,7 @@ internal sealed class ArchiveWebLibraryPanel : IDisposable
         button.Click+=async(_,_)=>{
             button.IsEnabled=false;
             try{await action();}
-            catch(Exception error){W.MessageBox.Show(error.Message,"��ҳ��ɫ����ʧ��");}
+            catch(Exception error){W.MessageBox.Show(error.Message,"网页角色操作失败");}
             finally{Refresh();}
         };_settings.Children.Add(button);
     }
