@@ -26,5 +26,8 @@
    return validate(await response.json());
   }finally{clearTimeout(timer);signal?.removeEventListener('abort',cancel)}
  }
- return Object.freeze({validate,load});
+ function sourceIdentity(c){
+  return [c.engine||'spine',...['base','skeletonUrl','atlasUrl','modelUrl','resourceStem','spineVersion'].map(key=>c[key]||'')];
+ }
+ return Object.freeze({validate,load,sourceIdentity});
 });

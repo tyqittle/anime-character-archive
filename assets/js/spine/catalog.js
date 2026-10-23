@@ -89,7 +89,8 @@ function charInfo(c){
  // Never substitute the base character's portrait for a different costume.
  const exact=['matching-spine-animation-frame','matching-live2d-animation-frame'].includes(c.previewSource)
   &&c.preview==='./assets/animation-previews/'+(c.gameId||'nikke')+'-'+c.id+'.webp';
- const image=(exact||c.previewSource==='upstream-ship-thumbnail')?c.preview:'';
+ const currentSource=!c.previewSourceIdentity||JSON.stringify(c.previewSourceIdentity)===JSON.stringify(ArchiveCatalogRegistry.sourceIdentity(c));
+ const image=((exact&&currentSource)||c.previewSource==='upstream-ship-thumbnail')?c.preview:'';
  return {image,zh:c.zh||nikkePortraits[c.id]?.name||'',name:c.name||c.id};
 }
 function syncSelectedCharacterDisplay(){

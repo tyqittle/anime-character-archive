@@ -29,4 +29,15 @@ class PublisherTest(unittest.TestCase):
                 self.assertEqual(result['rejectedCaptures'],['demo'])
                 self.assertFalse((root/'output'/policy.filename(character)).exists())
 
+    def test_changing_source_invalidates_an_existing_verified_preview(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output=Path(directory);c={'id':'demo','gameId':'demo','base':'https://example.test/old/demo'}
+            Image.effect_noise((360,420),20).convert('RGB').save(output/policy.filename(c),'WEBP')
+            with patch.object(policy,'ROOT',output):
+                self.assertTrue(policy.apply_verified_preview(c))
+                self.assertFalse(policy.needs_capture(c))
+                c['base']='https://example.test/new/demo'
+                self.assertTrue(policy.needs_capture(c))
+                self.assertFalse(policy.apply_verified_preview(c))
+
 if __name__=='__main__':unittest.main()

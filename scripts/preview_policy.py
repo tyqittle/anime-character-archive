@@ -3,6 +3,7 @@
 from pathlib import Path
 from PIL import Image
 import hashlib
+from catalog_registry import source_identity
 
 ROOT = Path('assets/animation-previews')
 def filename(c): return f"{c['gameId']}-{c['id']}.webp"
@@ -22,14 +23,17 @@ def verified_file(c, directory=None):
     except (OSError, ValueError): return None
     return p
 def needs_capture(c):
+    if c.get('previewSourceIdentity') is not None and c['previewSourceIdentity'] != source_identity(c): return True
     return not (c.get('preview') == relative_path(c) and c.get('previewSource') == source(c) and verified_file(c) is not None)
 def apply_verified_preview(c):
+    if c.get('previewSourceIdentity') is not None and c['previewSourceIdentity'] != source_identity(c): return False
     if verified_file(c) is None: return False
     path = ROOT / filename(c)
     with Image.open(path) as im: c['previewWidth'], c['previewHeight'] = im.size
     c['previewSha256'] = hashlib.sha256(path.read_bytes()).hexdigest()
     c['preview'] = relative_path(c)
     c['previewSource'] = source(c)
+    c['previewSourceIdentity'] = source_identity(c)
     if c.get('status') != 'verified-playback': c['status'] = 'browser-preview-captured'
     if c.get('playbackStatus') != 'verified-playback': c['playbackStatus'] = 'browser-preview-captured'
     return True

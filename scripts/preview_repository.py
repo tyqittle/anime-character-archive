@@ -39,13 +39,14 @@ def publish_catalog(manifest,incoming,audit_path,require_identity=False):
                 temporary=destination.with_name(destination.name+'.tmp')
                 shutil.copyfile(candidate,temporary);temporary.replace(destination)
                 for key in ('previewSha256','previewWidth','previewHeight'):character.pop(key,None)
+                character['previewSourceIdentity']=source_identity(character)
                 added+=1
         if apply_verified_preview(character):
             for key in ('previewFailureType','previewFailureReason'):character.pop(key,None)
             if 'previewStatus' in character:character['previewStatus']='captured'
         else:
             if character.get('previewSource') in ('matching-spine-animation-frame','matching-live2d-animation-frame'):
-                for key in ('preview','previewSha256','previewWidth','previewHeight'):character.pop(key,None)
+                for key in ('preview','previewSha256','previewWidth','previewHeight','previewSourceIdentity'):character.pop(key,None)
                 character['previewSource']='not-rendered'
             if character.get('status')!='verified-playback':character['status']='unverified-playback'
             failure=failures.get(character['id'])
