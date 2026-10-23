@@ -68,3 +68,62 @@ jobs:
           assert '20261023-hq-v1' in content,"Deployed browser code is not latest Live2D runtime"
           print("PASS: public GitHub Pages serves game menu and both model catalogs")
           PY
+
+      - name: Verify new games visually in a real public browser session
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm install --no-save --no-package-lock playwright-core@1.56.1 pngjs@7.0.0
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          import {chromium} from 'playwright-core';
+          import {PNG} from 'pngjs';
+          const executable=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'].find(fs.existsSync);
+          if(!executable)throw Error('No Chrome/Chromium in CI runner');
+          const browser=await chromium.launch({headless:true,executablePath:executable,args:['--no-sandbox','--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+          const origin='https://tyqittle.github.io/anime-character-archive/';
+          const examples=[['girldimension','gd-001-c_0005'],['sinsevendeadlysins','sds-xch001_01']];
+          try{
+            const page=await browser.newPage({viewport:{width:1440,height:900},deviceScaleFactor:1});
+            for(const [game,id] of examples){
+              const url=origin+'spine.html?id='+encodeURIComponent(id)+'&probe='+Date.now();
+              const response=await page.goto(url,{waitUntil:'domcontentloaded',timeout:35000});
+              if(response?.status()!==200)throw Error('Live page HTTP '+response?.status());
+              await page.waitForFunction(expected=>document.querySelector('#characters')?.value===expected,id,{timeout:30000});
+              await page.waitForFunction(()=>{
+                const status=document.querySelector('#status')?.textContent||'';
+                return status.startsWith('正在播放：')||status.includes('失败')||status.includes('超时');
+              },null,{timeout:95000});
+              const state=await page.evaluate(()=>({
+                selected:document.querySelector('#characters')?.value,
+                game:document.querySelector('#gameFilter')?.value,
+                status:document.querySelector('#status')?.textContent,
+                frame:!!document.querySelector('iframe.azurlane-live2d-frame'),
+                actions:document.querySelector('#animationPicker')?.options.length
+              }));
+              console.log('PUBLIC_LIVE_GAME_BROWSER_RESULT',JSON.stringify(state));
+              if(!state.status.startsWith('正在播放：')||state.game!==game||!state.frame||state.actions<1){
+                throw Error('Live site unable to render '+game+': '+JSON.stringify(state));
+              }
+              await page.waitForTimeout(1100);
+              const canvas=page.frameLocator('iframe.azurlane-live2d-frame').locator('#live2dCanvas');
+              const png=PNG.sync.read(await canvas.screenshot({timeout:15000}));
+              let n=0,total=0,total2=0,step=Math.max(1,Math.floor(png.width*png.height/1500));
+              for(let i=0;i<png.width*png.height;i+=step){
+                const p=i*4,lum=.2126*png.data[p]+.7152*png.data[p+1]+.0722*png.data[p+2];
+                n++;total+=lum;total2+=lum*lum;
+              }
+              const sd=Math.sqrt(Math.max(0,total2/n-(total/n)**2));
+              console.log('PUBLIC_LIVE_GAME_VISIBLE_PIXELS',game,png.width,png.height,sd.toFixed(2));
+              if(sd<8)throw Error('Public site rendered a blank/monotone Live2D frame: '+game);
+              await page.screenshot({path:'/tmp/public-live-'+game+'.png',fullPage:true});
+            }
+          }finally{await browser.close()}
+          JS
+      - name: Upload screenshots of public website
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-live-games-evidence
+          path: /tmp/public-live-*.png
+          if-no-files-found: ignore
