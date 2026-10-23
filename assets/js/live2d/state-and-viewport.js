@@ -84,6 +84,7 @@ const SAME_ORIGIN=location.origin;
 const warn=document.getElementById('warning');
 let app=null,model=null,currentId='',currentGeneration=0,baseScale=1,zoom=1,offsetX=0,offsetY=0,initError='';
 let queuedLoad=null,readyId='',loadStartedAt=0;
+let portraitLocalBounds=null;
 // Avoid uneven frame pacing on standard 60 Hz displays. 45 FPS looks juddery
 // even with a healthy WebGL renderer. Cap only genuinely constrained devices.
 const lowPower=(Number(navigator.deviceMemory)>0&&navigator.deviceMemory<=2)
@@ -113,10 +114,10 @@ function fit(){
  // is essential: centering by model.width alone can cut off half the skin.
  const w=app.screen.width,h=app.screen.height;
  model.scale.set(1);
- let bounds=model.getLocalBounds();
+ let bounds=portraitLocalBounds||model.getLocalBounds();
  if(!bounds||!Number.isFinite(bounds.width)||!Number.isFinite(bounds.height)||bounds.width<=0||bounds.height<=0)
   bounds={x:0,y:0,width:Math.max(1,model.width),height:Math.max(1,model.height)};
- baseScale=Math.min(w*.88/Math.max(1,bounds.width),h*.84/Math.max(1,bounds.height),3);
+ baseScale=Math.min(w*.9/Math.max(1,bounds.width),h*.88/Math.max(1,bounds.height));
  const factor=baseScale*zoom;
  model.scale.set(factor);
  model.position.set(
@@ -125,3 +126,23 @@ function fit(){
  );
 }
 function setZoom(value){zoom=Math.max(.35,Math.min(3.5,value));fit();notify('zoom',{zoom})}
+
+function fitRenderedLive2D(expected,generation){
+ if(model!==expected||generation!==currentGeneration||!app||zoom!==(desktopMode?.58:1))return;
+ try{
+  const canvas=document.getElementById('live2dCanvas'),ratio=Math.min(1,384/Math.max(canvas.width,canvas.height));
+  const sample=document.createElement('canvas');
+  sample.width=Math.max(1,Math.round(canvas.width*ratio));sample.height=Math.max(1,Math.round(canvas.height*ratio));
+  const ctx=sample.getContext('2d',{willReadFrequently:true});
+  ctx.drawImage(canvas,0,0,sample.width,sample.height);
+  const pixels=ctx.getImageData(0,0,sample.width,sample.height).data;
+  const visible=ArchivePortraitFraming.visibleBounds({pixels,width:sample.width,height:sample.height});
+  if(!visible)return;
+  const sx=app.screen.width/sample.width,sy=app.screen.height/sample.height,factor=model.scale.x;
+  portraitLocalBounds={x:(visible.x*sx-model.x)/factor,y:(visible.y*sy-model.y)/factor,
+   width:visible.width*sx/factor,height:visible.height*sy/factor};
+  if(!ArchivePortraitFraming.validBounds(portraitLocalBounds)){portraitLocalBounds=null;return}
+  fit();
+  model._archiveFraming={source:'rendered-pixels',bounds:portraitLocalBounds};
+ }catch(error){console.warn('Live2D 自动取景使用模型边界',error)}
+}

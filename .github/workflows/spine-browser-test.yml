@@ -6,6 +6,8 @@ on:
       - 'data/animation-catalogs.json'
       - 'assets/js/shared/catalog-registry.js'
       - 'assets/js/shared/spine-atlas-coordinates.js'
+      - 'assets/js/shared/portrait-framing.js'
+      - 'scripts/test_portrait_view_browser.mjs'
       - 'scripts/catalog_registry.mjs'
       - '.github/workflows/spine-browser-test.yml'
       - 'scripts/test_spine_browser.mjs'
@@ -51,4 +53,27 @@ jobs:
             /tmp/spine-browser-results.json
             /tmp/ba-rotation-results.json
             /tmp/ba-ch0145-after-fix.png
+          if-no-files-found: warn
+
+  portrait-view:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --no-package-lock playwright-core@1.56.1 pngjs@7.0.0
+      - run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/portrait-site.log 2>&1 &
+          sleep 2
+      - name: Verify visible framing, action continuity and retired GPU sessions
+        run: node scripts/test_portrait_view_browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: portrait-view-results
+          path: |
+            /tmp/portrait-view-results.json
+            /tmp/portrait-*.png
           if-no-files-found: warn

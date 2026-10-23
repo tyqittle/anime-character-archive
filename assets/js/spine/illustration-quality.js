@@ -41,10 +41,10 @@ function installSpineIllustrationQuality(activePlayer,entry){
   renderer.batcherShader=sharp;
   renderer._archiveEnhanced=true;
   try{oldShader.dispose?.()}catch(error){console.warn('旧版 Spine 着色器释放失败',error)}
-  renderer._archiveRenderMinRatio=1.5; // supersampling on normal 1x desktop monitors
+  // Respect the display DPR; sharpening must not silently multiply pixel area.
   activePlayer._archiveIllustrationQuality={
    mode:'atlas-gpu-sharpen',strength:0.45,source:'original PNG',
-   minRenderRatio:1.5
+   minRenderRatio:1
   };
   return true;
  }catch(error){

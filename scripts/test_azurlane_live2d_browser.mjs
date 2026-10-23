@@ -86,6 +86,11 @@ try{
   await page.locator('#zoomIn').click();
   await page.waitForFunction(()=>document.querySelector('#zoomValue')?.textContent!=='100%',{timeout:10000});
   const zoom=await page.locator('#zoomValue').textContent();
+  await page.locator('#animationPicker').selectOption({index:0});
+  await page.waitForTimeout(200);
+  if(await page.locator('#zoomValue').textContent()!==zoom)throw Error('Cubism action reset user zoom: '+id);
+  const ownership=await frame.locator('#live2dCanvas').evaluate(()=>({autoUpdate:model.autoUpdate,framing:model._archiveFraming}));
+  if(ownership.autoUpdate!==false||ownership.framing?.source!=='rendered-pixels')throw Error('Missing owned ticker or visual fit: '+JSON.stringify(ownership));
   results.push({id,actions,zoom,status:stage.status,canvas:hasPixi});
   console.log('PASS_LIVE2D_MODEL',JSON.stringify({id,actions,zoom}));
  }

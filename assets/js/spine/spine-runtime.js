@@ -102,6 +102,39 @@ function patchSpine38HighDPI(){
  };
  proto.__archiveHighDPI=true;
 }
+// The vendored 3.8 player has stopRendering(), but no dispose(). Its pause()
+// also keeps drawing. Own the render loop and release each retired GPU session.
+function patchSpine38Lifecycle(){
+ const proto=window.spine?.SpinePlayer?.prototype;
+ if(!proto||proto.__archiveLifecycle)return;
+ const draw=proto.drawFrame;
+ proto.drawFrame=function(...args){
+  if(this._archiveDisposed)return;
+  if(document.hidden){
+   this.time?.update?.();
+   if(args[0]!==false&&!this.stopRequestAnimationFrame)requestAnimationFrame(()=>this.drawFrame());
+   return;
+  }
+  const result=draw.apply(this,args);
+  if(!this._archiveDisposed&&typeof recordSpineFrame==='function')recordSpineFrame(this);
+  return result;
+ };
+ proto.dispose=function(){
+  if(this._archiveDisposed)return;
+  this._archiveDisposed=true;
+  this.stopRendering();
+  clearTimeout(this.cancelId);
+  this.config.success=()=>{};this.config.error=()=>{};
+  // A queued rAF now returns before touching disposed buffers.
+  for(const resource of [this.assetManager,this.sceneRenderer]){
+   try{resource?.dispose?.()}catch(error){console.warn('Spine 资源释放失败',error)}
+  }
+  const gl=this.context?.gl;
+  try{gl?.getExtension?.('WEBGL_lose_context')?.loseContext()}catch(_){}
+  this.dom?.remove?.();
+ };
+ proto.__archiveLifecycle=true;
+}
 // Keep incompatible Spine namespace objects isolated and cached by version.
 function activateRuntimeStylesheet(href){
  if(!runtimeCss){
@@ -142,7 +175,7 @@ function ensureRuntime(version,isCurrent=()=>true){
      script.onload=()=>{
       clearTimeout(timeout);
       if(!window.spine?.SpinePlayer){reject(Error('脚本已加载但未注册 SpinePlayer'));return}
-      try{if(legacy){patchSpine38AtlasRotations();patchSpine38HighDPI()}resolve()}catch(e){reject(e)}
+      try{if(legacy){patchSpine38AtlasRotations();patchSpine38HighDPI();patchSpine38Lifecycle()}resolve()}catch(e){reject(e)}
      };
      script.onerror=()=>{clearTimeout(timeout);script.remove();reject(Error('脚本请求失败（可能为404或网络拦截）'))};
      document.head.append(script);
@@ -281,6 +314,7 @@ async function show(options,title,onError){
       ||names[0];
     try{
       p.setAnimation(preferred,true);
+      initializeSpinePortrait(p);
       $('animationPicker').value=preferred;
       p.play();
       if(document.hidden){pausedInBackground=p;p.pause()}

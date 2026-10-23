@@ -12,6 +12,8 @@ on:
       - 'assets/js/spine/performance.js'
       - 'assets/js/spine/local-tools.js'
       - 'spine.html'
+      - 'assets/js/shared/portrait-framing.js'
+      - 'assets/js/spine/viewer-controls.js'
       - 'scripts/test_arknights_illust_browser.mjs'
       - '.github/workflows/arknights-illust-browser.yml'
   workflow_dispatch:

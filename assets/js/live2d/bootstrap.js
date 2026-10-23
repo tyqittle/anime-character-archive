@@ -77,6 +77,11 @@ app=new PIXI.Application({view:document.getElementById('live2dCanvas'),autoStart
   if(document.hidden)app.ticker.stop();
   else if(model && readyId)app.ticker.start();
  });
+ // One ticker owns simulation and drawing, so hidden tabs stop both and
+ // frame times cannot accumulate on Live2DModel's independent shared ticker.
+ if(app?.ticker)app.ticker.add(()=>{
+  if(model&&readyId&&!document.hidden)model.update(Math.min(100,app.ticker.deltaMS));
+ },null,PIXI.UPDATE_PRIORITY.HIGH);
  let lastPerf=0;
  if(app?.ticker)app.ticker.add(()=>{
   if(!model||document.hidden||!readyId)return;

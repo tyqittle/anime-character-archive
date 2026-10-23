@@ -5,6 +5,8 @@ on:
     paths:
       - 'azurlane-stage.html'
       - 'spine.html'
+      - 'assets/js/shared/portrait-framing.js'
+      - 'assets/js/spine/viewer-controls.js'
       - 'assets/js/spine/live2d-bridge.js'
       - 'assets/js/live2d/model-loader.js'
       - 'assets/js/live2d/state-and-viewport.js'

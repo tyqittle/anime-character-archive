@@ -34,7 +34,7 @@ function motion(name){
 async function load(name,id,modelUrl){
  if(!validLive2DIdentity(name,id)){notify('error',{error:'无效的 Live2D 模型编号'});return}
  const generation=++currentGeneration;
- currentId=id;readyId='';loadStartedAt=performance.now();
+ currentId=id;readyId='';loadStartedAt=performance.now();portraitLocalBounds=null;
  zoom=desktopMode?.58:1;offsetX=desktopMode?(app?.screen?.width||window.innerWidth)*.24:0;offsetY=desktopMode?(app?.screen?.height||window.innerHeight)*.07:0;
  if(model){try{app.stage.removeChild(model);model.destroy()}catch(e){}model=null}
  if(!app){notify('error',{error:initError||'Live2D 渲染库尚未加载'});return}
@@ -60,7 +60,7 @@ async function load(name,id,modelUrl){
       // fromSync reports setup failures through onError, not an "error" event.
       // Consume the actual rejection so invalid MOC/texture files fail promptly.
       next=PIXI.live2d.Live2DModel.fromSync(candidate,{
-       motionPreload:'NONE',onLoad:()=>{clearTimeout(timer);resolve()},onError:fail
+       motionPreload:'NONE',autoUpdate:false,onLoad:()=>{clearTimeout(timer);resolve()},onError:fail
       });
       if(!next||!next.once)fail(Error('Live2D 模型加载器未初始化'));
      }catch(error){fail(error)}
@@ -102,6 +102,9 @@ async function load(name,id,modelUrl){
   model.on('pointerdown',p);
   model.on('pointermove',evt=>{if(model?.dragging&&evt?.data?.global){const pt=evt.data.global;offsetX+=pt.x-model.dragX;offsetY+=pt.y-model.dragY;model.x+=pt.x-model.dragX;model.y+=pt.y-model.dragY;model.dragX=pt.x;model.dragY=pt.y}});
   for(const ev of ['pointerup','pointerupoutside'])model.on(ev,()=>{if(model)model.dragging=false});
+  // Application renders at PIXI.UPDATE_PRIORITY.LOW (-25); sample afterwards.
+  const framedModel=model;
+  app.ticker.addOnce(()=>fitRenderedLive2D(framedModel,generation),null,-100);
   warn.hidden=true;
   if(!document.hidden&&app?.ticker)app.ticker.start();
   notify('playing',{motions:actions,motionLabels,selectedMotion:initial,zoom,loadMs:Math.round(performance.now()-loadStartedAt),fpsCap:targetFPS,graphics:graphicsReport()});

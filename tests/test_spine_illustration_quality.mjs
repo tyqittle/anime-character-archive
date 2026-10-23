@@ -37,7 +37,7 @@ test('real illustration category receives original-atlas high-quality sampling',
  const entry={gameId:'arknights',assetType:'dynamic-illustration-spine'};
  x.context.entry=entry;x.context.active=x.player;
  assert.equal(vm.runInContext('installSpineIllustrationQuality(active,entry)',x.context),true);
- assert.equal(x.renderer._archiveRenderMinRatio,1.5);
+ assert.equal(x.renderer._archiveRenderMinRatio,undefined);
  const shader=x.renderer.batcherShader;
  assert.notEqual(shader,x.original);
  assert.ok(shader.fragmentText.includes('uniform vec2 u_archiveTexel;'));
