@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');
+const catalogRegistry=JSON.parse(read('data/animation-catalogs.json')).catalogs;
 const chars=JSON.parse(read('data/characters.json'));
 const spine=JSON.parse(read('data/spine-characters.json'));
 const bd2=JSON.parse(read('data/spine-bd2-pilot.json'));
@@ -328,7 +329,7 @@ assert.ok(read('assets/js/live2d/runtime-loader.js').includes('88cb6e56a0ad472fe
 assert.ok(player.includes('value="azurlane"')&&player.includes("c.gameId==='azurlane'"),'Azur Lane must be a regular selection in the dynamic theater');
 assert.ok(player.includes('azurlaneFrame')&&player.includes('azurlane-stage.html')&&player.includes('sendAzurLane('),'Live2D must open inside the same player panel and support controls');
 assert.ok(read('assets/spine-theater-layout.css').includes('.azurlane-live2d-frame'),'Cubism stage must fit existing responsive player area');
-assert.ok(player.includes('bd2CatalogUrl')&&player.includes('value="browndust2"'),'Missing complete BD2 loader and game selection');
+assert.ok(catalogRegistry.some(entry=>entry.id==='bd2')&&player.includes('value="browndust2"'),'Missing complete BD2 loader and game selection');
 assert.ok(player.includes('value="konosuba"')&&player.includes("c.skeletonFormat==='json'"),'New game and external JSON Spine support missing');
 assert.ok(spine.characters.filter(c=>c.gameId==='bluearchive').length>=179,'Blue Archive lobby expansion missing');
 assert.equal(spine.characters.filter(c=>c.gameId==='konosuba').length,126,'KonoSuba first batch must contain 126 distinct models');
@@ -355,7 +356,7 @@ assert.ok(!versionRegexp.test('unrecognized'),'Spine version regex accepted inva
 const galleryHTML=read('characters.html'),spineHTML=read('spine.html');
 for(const [html,modules] of [[galleryHTML,galleryModules],[spineHTML,spineModules]]){
  const loaded=[...html.matchAll(/<script defer src="\.\/([^"?]+)\?v=[^"]+"><\/script>/g)].map(x=>x[1]);
- assert.deepEqual(loaded,[...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/shared/asset-sources.js','assets/js/shared/voice-playback.js']:[]),...modules.slice(0,modules[0]?.startsWith('assets/js/spine/')?4:3),...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/performance.js']:[]),...modules.slice(modules[0]?.startsWith('assets/js/spine/')?4:3),'assets/js/shared/friend-links.js',...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/character-audio.js','assets/js/spine/desktop-launch.js','assets/js/spine/desktop-drag.js']:[])],'Browser modules and common friend links must preserve loading order');
+ assert.deepEqual(loaded,[...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/shared/catalog-registry.js','assets/js/shared/asset-sources.js','assets/js/shared/voice-playback.js']:[]),...modules.slice(0,modules[0]?.startsWith('assets/js/spine/')?4:3),...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/performance.js']:[]),...modules.slice(modules[0]?.startsWith('assets/js/spine/')?4:3),'assets/js/shared/friend-links.js',...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/character-audio.js','assets/js/spine/desktop-launch.js','assets/js/spine/desktop-drag.js']:[])],'Browser modules and common friend links must preserve loading order');
  assert.ok(!/<script>\s*['"]use strict/.test(html),'Page-level application logic must live in feature modules');
 }
 for(const item of ['assets/gallery-base.css','assets/gallery-theme.css','assets/spine-base.css','assets/spine-theme.css']){
@@ -395,7 +396,7 @@ for(const c of extra.characters){
 for(const [game,count] of Object.entries(expectedNew))
  assert.equal(extra.characters.filter(x=>x.gameId===game).length,count,'Unexpected import count for '+game);
 assert.ok(spineHTML.includes('value="girlsfrontline"')&&spineHTML.includes('value="arknights"'),'New game filters not connected');
-assert.ok(spineSource.includes('newGamesCatalogUrl')&&spineSource.includes('visibleCardLimit+=96'),'New game loading/pagination missing');
+assert.ok(catalogRegistry.some(entry=>entry.id==='newgames')&&spineSource.includes('visibleCardLimit+=96'),'New game loading/pagination missing');
 
 
 // Same source and placement on the gallery footer and desktop-visible theater stage.
@@ -440,9 +441,9 @@ assert.ok(catalogBootstrap.includes('Promise.allSettled')&&catalogBootstrap.incl
  'Animation catalogs should load in parallel and revalidate mutable manifests');
 assert.ok(catalogBootstrap.includes('isPlayableAnimationEntry')&&!catalogBootstrap.includes("c.gameId==='arknights'&&c.base"),
  'Spine/Cubism catalog validation should not depend on individual game IDs');
-assert.ok(catalogBootstrap.includes('matureLive2dCatalogUrl'),'Mature model catalog not connected');
-assert.ok(catalogBootstrap.includes('highQualityLive2dCatalogUrl'),'High-quality game manifest must be loaded by shared catalog');
-assert.ok(catalogBootstrap.includes('moreLive2dCatalogUrl'),'Extra Live2D catalog missing from shared loader');
+assert.ok(catalogRegistry.some(entry=>entry.id==='mature'),'Mature model catalog not connected');
+assert.ok(catalogRegistry.some(entry=>entry.id==='highquality'),'High-quality game manifest must be loaded by shared catalog');
+assert.ok(catalogRegistry.some(entry=>entry.id==='moregames'),'Extra Live2D catalog missing from shared loader');
 assert.ok(catalogBootstrap.includes('canonicalAnimationId(requested)'),
  'Old variant deep links must resolve to the retained playable model');
 
@@ -464,7 +465,7 @@ assert.ok(illustCatalog.characters.every(c=>c.gameId==='arknights'&&c.collection
  c.previewSource==='matching-spine-animation-frame'))));
 assert.ok(spineHTML.includes('value="arknights-battle"')&&spineHTML.includes('value="arknights"'));
 assert.ok(read('assets/js/spine/catalog.js').includes('function animationCollection(c)'));
-assert.ok(read('assets/js/spine/bootstrap.js').includes('arknightsIllustCatalogUrl'));
+assert.ok(catalogRegistry.some(entry=>entry.id==='arknights-illust'));
 
 
 // Selecting a preview may only update visible cards, not rescan all model records.
@@ -484,14 +485,16 @@ assert.ok(animationListModule.includes('indexedCharacterSearch(c)'),'Search toke
 const previewDiag=read('scripts/preview_diagnostics.py');
 assert.ok(previewDiag.includes('def failure_category')&&
  previewDiag.includes('def read_capture_failures'));
-assert.ok(read('scripts/merge_newgame_previews.py').includes("'failedCaptures': failed_records"));
+assert.ok(read('scripts/preview_repository.py').includes("'failedCaptures':failed"));
 assert.ok(read('assets/js/spine/catalog.js').includes('c.previewFailureReason'));
 
 
 
 const legacyNativeImporter=read('native-desktop/Open-ArchiveCharacter.ps1');
 const nativeArchiveBridge=read('native-desktop/NativeArchiveBridge.cs');
-const nativeBuildWorkflow=read('.github/workflows/native-spinepet-windows.yml');
+const nativeBuildWorkflow=read('.github/workflows/native-spinepet-windows.yml')+'\n'+
+ fs.readdirSync(path.join(root,'native-desktop/build')).filter(file=>file.endsWith('.ps1'))
+  .map(file=>read('native-desktop/build/'+file)).join('\n');
 assert.ok(legacyNativeImporter.includes('function Assert-NativeSpine41'), 'Legacy native importer must inspect actual .skel version');
 assert.ok(!legacyNativeImporter.includes('$entry.spineVersion') && !legacyNativeImporter.includes('$entry.versionUnverified'),
  'Legacy native importer must not gate by stale catalog version flags');

@@ -1,12 +1,10 @@
-name: Repair missing archive content
+name: Refresh static archive sources
 on:
   push:
     branches: [main]
     paths:
       - '.github/workflows/repair-archive-content.yml'
       - 'scripts/expand_static_archive.py'
-      - 'scripts/repair_missing_previews.mjs'
-      - 'scripts/merge_repair_previews.py'
       - 'data/static-source-plan.json'
   workflow_dispatch:
 permissions:
@@ -38,75 +36,5 @@ jobs:
           git add data/characters.json data/static-coverage.json assets/portraits/ assets/thumbs/
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "Expand verified full-art coverage across archived games"
-          git pull --rebase origin main
-          git push origin HEAD:main
-  previews:
-    # Importer-only fixes do not need another full browser capture batch.
-    if: github.event_name == 'workflow_dispatch' || contains(toJSON(github.event.commits), 'scripts/repair_missing_previews.mjs') || contains(toJSON(github.event.commits), 'data/static-source-plan.json')
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-    strategy:
-      fail-fast: false
-      max-parallel: 4
-      matrix:
-        shard: [0,1,2,3,4,5,6,7]
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - run: |
-          npm install --no-save --no-package-lock playwright-core@1.56.1 pngjs@7.0.0
-          python -m pip install --quiet Pillow
-      - run: |
-          python -m http.server 8765 --bind 127.0.0.1 > /tmp/repair-site.log 2>&1 &
-          sleep 2
-      - name: Select all missing same-model previews
-        run: python scripts/preview_queue.py --write tmp/repair-pending.json
-      - name: Capture real rendered model frames
-        run: node scripts/repair_missing_previews.mjs ${{ matrix.shard }}
-      - name: Convert frames with shared crop and validation
-        if: always()
-        run: python scripts/merge_repair_previews.py --convert-only
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: repair-preview-${{ matrix.shard }}
-          path: |
-            tmp/repair-output/webps/
-            tmp/repair-output/reports/
-          if-no-files-found: warn
-  publish-previews:
-    needs: previews
-    if: always() && needs.previews.result == 'success'
-    runs-on: ubuntu-latest
-    timeout-minutes: 12
-    permissions:
-      contents: write
-    concurrency:
-      group: dynamic-game-previews-publish
-      cancel-in-progress: false
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-      - uses: actions/download-artifact@v4
-        with:
-          pattern: repair-preview-*
-          path: tmp/repair-merged
-          merge-multiple: true
-      - run: python -m pip install --quiet Pillow
-      - run: python scripts/merge_repair_previews.py
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - run: node tests/smoke.mjs
-      - name: Publish verified frames and remaining failures
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/ assets/animation-previews/
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m "Restore missing same-model animation previews and record unresolved source failures"
           git pull --rebase origin main
           git push origin HEAD:main

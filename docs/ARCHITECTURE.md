@@ -1,77 +1,55 @@
-# 次元角色档案馆 · 功能模块架构
+# 项目架构与维护入口
 
-## 整体约束
+站点继续使用 GitHub Pages；无需服务端或前端打包器。页面 URL、模型 ID、收藏与缓存键保持兼容。
 
-继续使用 GitHub Pages 静态托管，**无需新增构建工具、Node 服务器或额外部署服务**。HTML、样式、角色索引、动画运行时和下载/缓存逻辑分离；保留现有页面 URL、人物资源及原有浏览器存储标识。
+## 边界
 
-```text
-characters.html                    # 静态图鉴 HTML（无业务 JS）
-spine.html                         # 动态剧场 HTML（无业务 JS）
-azurlane-stage.html                # 同源隔离的 Cubism / Pixi iframe（纯页面）
-assets/
-  archive-shell.css                # 共享设计系统
-  gallery-base.css                 # 图鉴基础 CSS
-  gallery-theme.css                # 图鉴主题 CSS
-  gallery-redesign.css             # 图鉴交互响应式样式
-  spine-base.css                   # 剧场基础 CSS
-  spine-theme.css                  # 剧场主题 CSS
-  spine-theater-layout.css         # 单屏剧场响应式布局
-  live2d-stage.css                 # Cubism 子窗口样式
-  js/gallery/
-    state.js                       # 页面状态、收藏及旧 key 迁移
-    catalog.js                     # 筛选、分类、角色列表
-    viewer.js                      # 完整原图弹窗、收藏 UI
-    events.js                      # 事件代理、触屏/键盘、预热
-    bootstrap.js                   # 目录加载、初始化、深链接
-  js/live2d/
-    state-and-viewport.js          # 画布坐标、尺寸适应、帧率状态
-    model-loader.js                # 动作按需加载、旧模型取消、播放
-    bootstrap.js                   # 消息/手势监听、Pixi 初始化
-  js/spine/
-    state.js                       # 播放状态
-    viewer-controls.js             # 缩放、拖动、动作/全屏工具栏
-    catalog.js                     # 五款游戏目录和角色卡片
-    spine-runtime.js               # Spine 3.8/4.x 运行时及渲染器
-    spine-assets.js                # 骨骼图集下载、版本侦测、取消
-    live2d-bridge.js               # Live2D iframe、加载过渡和消息
-    playback.js                    # 动态角色自动播放与缓存路径
-    local-tools.js                 # 高级资源诊断、本地资源导入
-    bootstrap.js                   # 初始化入口、索引汇总
-data/                               # 原有结构化索引与核验信息
-scripts/                            # 资源导入与批量预览/浏览器工具
-tests/smoke.mjs                     # 各模块语法和内容一致性测试
+- **数据注册**：`data/animation-catalogs.json` 只登记目录；模型来源、引擎、皮肤和预览状态保留在各目录 JSON 中。
+- **浏览器**：`assets/js/shared/catalog-registry.js` 是无 DOM 的显式服务。剧场 bootstrap 读取注册表，目录 UI 由模型数据补充新分组。Spine/Cubism 仍隔离渲染。
+- **内容处理**：`catalog_registry.py/mjs` 读取同一注册表；`preview_policy.py` 校验同模型路径/尺寸/摘要；`preview_frame_pipeline.py` 只负责图像处理；`preview_repository.py` 只负责校验、状态转换与文件发布。
+- **CI**：`preview-pipeline.yml` 统一规划待处理 ID、分片采集、转码、校验和发布。游戏命名工作流仅保留手动兼容入口。
+- **桌面**：Electron 在 `desktop/`；原生应用适配在 `native-desktop/`。Windows YAML 编排步骤，构建实现与验证脚本位于 `native-desktop/build/`。
+
+## 预览数据流
+
+```mermaid
+flowchart TD
+ R["目录注册表"] --> Q["缺失预览队列"]
+ Q --> C["Spine / Cubism 真实渲染"]
+ C --> V["统一图像校验与转码"]
+ V --> P["与最新源标识比较"]
+ P --> A["原子更新文件和目录"]
 ```
 
-## 模块执行顺序和接口边界
+新截图统一 360×420；历史 480×360 截图保留并校验摘要。新增预览只来自对应模型，不允许借用其他角色或皮肤。网络或渲染失败保留在缺失队列，并记录统一错误类型。
 
-为了不破坏已部署的静态网站，本阶段采用 `<script defer src>`：浏览器可并行请求代码文件，**按 HTML 所列顺序**执行，不引入打包器；保留原经典脚本的共享全局词法环境和事件处理回调。它是**功能文件模块化，不是完整的 ES Module 隔离**。不要随意更改加载顺序、在不同模块重复声明顶层 `let/const`，或将游戏目录解析塞回 HTML。
+发布时使用截图报告中的来源标识与最新目录比较；模型来源更新后，旧帧不得覆盖新记录。所有分片成功完成后才进入发布步骤；模型级失败有报告，不冒充成功。
 
-- `state.js` 第一，`bootstrap.js` 最后，后者启动应用。
-- 静态图鉴：`catalog` 只负责记录、筛选和列表；`viewer` 管理详情；`events` 处理输入/手势；`bootstrap` 加载目录。
-- 动态剧场：`spine-assets` 负责下载/校验，`spine-runtime` 负责特定骨骼版本和渲染，`live2d-bridge` 与子页通过 `anime-archive-azurlane-v1` 通道通信，`playback` 协调加载与缓存，`catalog` 管理切换。
-- 原资源索引 `data/*.json` 保持独立，原始素材及 CDN 地址不在重构中迁移。静态图鉴原图仍用本地素材路径。
-- `indexedDB` 数据库及旧 `localStorage` 收藏 key 保留，避免旧缓存/收藏失效。
+## 新增游戏
 
-## 修改、运行和验证
+1. 选择已有 Spine/Cubism 资源适配；准备有来源与版本标识的目录 JSON。
+2. 在注册表添加目录条目。共享加载器和队列自动读取，分组可从记录的 `collectionName/game` 取得。
+3. 新来源若超出 Cubism 白名单，在源适配器添加经审核的来源规则及拒绝越界 URL 的测试；不能放开任意地址来绕过验证。
+4. 运行 `npm test`、`npm run check`、`npm run test:python`。
+5. 通过统一预览工作流生成真实截图，并通过实际浏览器播放回归。不要复制一份游戏专属截图或发布流程。
 
-开发可用 `python -m http.server 8000` 启动静态站。运行 `node tests/smoke.mjs` 验证角色和皮肤目录、预览文件路径、页面 DOM 标识以及各 JS 模块是否可被解析；再运行现有 Playwright 浏览器脚本验证真实 Spine/Live2D 播放、自动切换及静态原图弹窗。
+## 开发命令
 
-今后添加新游戏时，优先修改对应 `data/` 索引与 `assets/js/spine/catalog.js` 的筛选逻辑；新增动画格式时才动运行时和资源层。本次以**兼容性优先的第一阶段拆分**为界，进一步迁移到带显式 `import/export` 的隔离模块须配套接口回归测试，不在未经验证时大改浏览器存储。
+```sh
+python -m pip install -r requirements-dev.txt
+python start_site.py
+npm test
+npm run check
+npm run test:python
+python scripts/preview_pipeline.py plan
+python scripts/preview_pipeline.py convert
+python scripts/preview_pipeline.py publish
+```
 
-## 动态预览的唯一流水线（2026-10-22）
+采集命令为 `node scripts/repair_missing_previews.mjs SHARD COUNT`，需要固定版本的 playwright-core、pngjs 和 Chromium。普通单元测试不依赖浏览器或外网。
 
-所有游戏的截图任务共用 `scripts/preview_policy.py` 判定是否已有可用的**同模型**预览；`scripts/preview_queue.py` 为分片生成待处理 ID 列表，`scripts/preview_capture_queue.mjs` 按 ID 选择待渲染模型。渲染器可以不同（Spine、Cubism），但新游戏不能再自行决定什么叫“已有预览”或单独定义遗漏筛选条件。
+## 分阶段迁移
 
-浏览器采集的 PNG 帧全部通过 `scripts/preview_frame_pipeline.py` 进行主体检测、裁剪、缩放、360×420 WebP 编码。现存的旧版 Spine 480×360 截图保持原样并使用记录的 SHA-256 校验，不强制重渲染。新截图统一执行 360×420 的输出规则。
+经典脚本的共享全局环境仍是明确的兼容边界。后续按“存储、播放会话、语音、视图”逐个迁移至显式接口，再切换入口为 ES Modules；不能同时重写所有渲染器和存储，以免丢失用户收藏或已下载资源。
 
-发布脚本只能通过 `preview_policy.apply_verified_preview` 设置相应的预览状态；失败要保留在待处理队列中，不得把同舰船其他皮肤或其他角色的图拿来代替。新增格式只实现资源加载适配器，不复制这套公共处理流程。
-
-
-## 角色卡片性能预算（2026-10-22）
-
-动态目录可以超过两千条，但左侧每次只渲染分页内的卡片。缩略图卡片缓存为最多 420 个节点的 LRU；历史节点即使被从缓存移除，当前 DOM 仍正常展示，不会影响模型可见性。视觉上隐藏的辅助 `#characters` 下拉框至多渲染 640 条常驻选项，超出范围的具体选中角色可按需追加；页面顶部搜索和卡片仍能访问所有索引。选中高亮通过卡片的 `data-character-id` 更新，不再每次从整个目录重新筛选。这套策略按数据规模生效，对任何游戏一视同仁。
-
-
-## 动态预览失败记录（2026-10-22）
-
-所有游戏的失败截图记录使用 `scripts/preview_diagnostics.py` 的同一套分类：`atlas-mismatch`、`timeout`、`blank-frame`、`source-missing`、`skeleton-error`、`render-error`。截图合并脚本读取分片报告，在目录条目中只为真实失败的模型保存 `previewFailureType` 与 `previewFailureReason`，恢复真实预览后清除旧错误；审计 JSON 输出 `failedCaptures` 和 `failureSummary`。网页卡片只显示简短失败类型，原错误信息置于提示中，避免把所有失败粗暴显示为“没有图”，更不会用其他角色的图片代替。
+完整问题清单和未完成债务见 [本次架构评审](ARCHITECTURE_REVIEW_2026-10-23.md)。根目录 AGENTS 和 `tests/check_architecture.mjs` 是持续约束，不能只改文档不运行检查。

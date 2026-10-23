@@ -1,0 +1,128 @@
+name: Shared animation preview pipeline
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/animation-catalogs.json'
+      - 'data/spine-*.json'
+      - 'data/live2d-*.json'
+      - 'assets/js/live2d/**'
+      - 'assets/js/spine/**'
+      - 'scripts/catalog_registry.*'
+      - 'scripts/preview_*.py'
+      - 'scripts/repair_missing_previews.mjs'
+      - '.github/workflows/preview-pipeline.yml'
+  workflow_dispatch:
+    inputs:
+      catalog:
+        description: 'Registered catalog ID; leave empty for all'
+        type: string
+        default: ''
+  workflow_call:
+    inputs:
+      catalog:
+        type: string
+        default: ''
+permissions:
+  contents: read
+concurrency:
+  group: shared-preview-${{ github.ref }}-${{ inputs.catalog || 'all' }}
+  cancel-in-progress: true
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.queue.outputs.matrix }}
+      count: ${{ steps.queue.outputs.count }}
+      pending: ${{ steps.queue.outputs.pending }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-dev.txt
+      - id: queue
+        env:
+          CATALOG: ${{ inputs.catalog }}
+        run: python scripts/preview_pipeline.py plan --catalog "$CATALOG"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shared-preview-pending
+          path: tmp/repair-pending.json
+  capture:
+    needs: plan
+    if: needs.plan.outputs.pending != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: |
+          npm install --no-save --no-package-lock playwright-core@1.56.1 pngjs@7.0.0
+          python -m pip install -r requirements-dev.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: shared-preview-pending
+          path: tmp
+      - name: Serve the snapshot being captured
+        run: python -m http.server 8765 --bind 127.0.0.1 >/tmp/preview-site.log 2>&1 &
+      - name: Capture exact-model frames
+        run: node scripts/repair_missing_previews.mjs ${{ matrix.shard }} ${{ needs.plan.outputs.count }}
+      - name: Convert and validate rendered frames
+        run: python scripts/preview_pipeline.py convert
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: shared-preview-${{ matrix.shard }}
+          path: |
+            tmp/repair-output/webps/
+            tmp/repair-output/reports/
+          if-no-files-found: error
+  publish:
+    needs: [plan,capture]
+    if: needs.capture.result == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: dynamic-game-previews-publish
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: shared-preview-[0-9]*
+          path: tmp/repair-merged
+          merge-multiple: true
+      - run: python -m pip install -r requirements-dev.txt
+      - name: Reject frames if model sources changed during capture
+        env:
+          CATALOG: ${{ inputs.catalog }}
+        run: python scripts/preview_pipeline.py publish --catalog "$CATALOG"
+      - run: node tests/smoke.mjs
+      - name: Publish one validated catalog transaction
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/ assets/animation-previews/
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Publish source-checked previews through the shared pipeline"
+          git pull --rebase origin main
+          git push origin HEAD:main

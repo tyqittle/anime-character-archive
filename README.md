@@ -1,3 +1,7 @@
+# 持续维护入口
+
+新增游戏、预览更新及构建边界请先阅读 [架构说明](docs/ARCHITECTURE.md) 和 [本次架构评审](docs/ARCHITECTURE_REVIEW_2026-10-23.md)。常规检查：`npm test`、`npm run check`、`npm run test:python`。动态目录统一注册，预览自动更新走同一条流水线。
+
 # 次元角色档案馆 · Anime Character Archive
 
 一个持续扩充的多游戏角色立绘与 Spine 动态素材图鉴。项目使用 **GitHub Pages** 部署，静态立绘及其轻量缩略图保存在本仓库；部分 Spine 动画在访问时从第三方素材源读取。

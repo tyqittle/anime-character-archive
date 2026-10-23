@@ -4,10 +4,11 @@ import path from 'node:path';
 import {chromium} from 'playwright-core';
 import {PNG} from 'pngjs';
 import {compareRenderedFrames} from './animation_frame_check.mjs';
-const catalogs=['spine-characters','spine-newgames','spine-bd2-characters','live2d-azurlane','spine-arknights-illust'];
+import {readCharacters,sourceIdentity} from './catalog_registry.mjs';
 const pending=new Set(JSON.parse(fs.readFileSync('tmp/repair-pending.json','utf8')));
-const shard=Number(process.argv[2]??0),count=8;
-const all=catalogs.flatMap(name=>JSON.parse(fs.readFileSync('data/'+name+'.json','utf8')).characters);
+const shard=Number(process.argv[2]??0),count=Number(process.argv[3]??8);
+if(!Number.isInteger(shard)||!Number.isInteger(count)||count<1||shard<0||shard>=count)throw Error('Invalid preview shard');
+const all=readCharacters();
 const todo=all.filter(c=>pending.has(c.id)).filter((_,i)=>i%count===shard);
 const root='tmp/repair-output';
 for(const name of ['frames','reports'])fs.mkdirSync(path.join(root,name),{recursive:true});
@@ -33,9 +34,9 @@ try{
    }while(compareRenderedFrames(PNG.sync.read(frame),PNG.sync.read(frame)).visible<300&&Date.now()<deadline);
    if(compareRenderedFrames(PNG.sync.read(frame),PNG.sync.read(frame)).visible<300)throw Error('blank-frame: no rendered character');
    fs.writeFileSync(path.join(root,'frames',c.gameId+'-'+c.id+'.png'),frame);
-   pass.push({id:c.id,gameId:c.gameId});
+   pass.push({id:c.id,gameId:c.gameId,sourceIdentity:sourceIdentity(c)});
    console.log('REPAIR_PREVIEW_PASS',c.gameId,c.id);
-  }catch(error){fail.push({id:c.id,gameId:c.gameId,error:String(error.message||error).slice(0,600)});console.log('REPAIR_PREVIEW_FAIL',c.id,fail.at(-1).error)}
+  }catch(error){fail.push({id:c.id,gameId:c.gameId,sourceIdentity:sourceIdentity(c),error:String(error.message||error).slice(0,600)});console.log('REPAIR_PREVIEW_FAIL',c.id,fail.at(-1).error)}
   finally{await page.close()}
  }
 }finally{

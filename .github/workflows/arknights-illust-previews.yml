@@ -1,96 +1,11 @@
-name: Capture Arknights illustrated Spine previews
+name: Preview compatibility entry (arknights-illust)
+# Manual compatibility entry. Automatic updates use preview-pipeline.yml.
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'data/spine-arknights-illust.json'
-      - 'scripts/capture_newgame_previews.mjs'
-      - 'scripts/convert_newgame_previews.py'
-      - 'scripts/merge_newgame_previews.py'
-      - 'scripts/preview_policy.py'
-      - 'scripts/preview_queue.py'
-      - 'scripts/preview_capture_queue.mjs'
-      - 'scripts/preview_frame_pipeline.py'
-      - '.github/workflows/arknights-illust-previews.yml'
   workflow_dispatch:
 permissions:
-  contents: read
-concurrency:
-  group: arknights-illust-capture-${{ github.ref }}
-  cancel-in-progress: true
+  contents: write
 jobs:
-  capture:
-    runs-on: ubuntu-latest
-    timeout-minutes: 38
-    strategy:
-      fail-fast: false
-      max-parallel: 8
-      matrix:
-        shard: [0,1,2,3,4,5,6,7,8,9,10,11]
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - name: Install viewer dependencies
-        run: |
-          npm install --no-save --no-package-lock playwright-core@1.56.1 pngjs@7.0.0
-          python3 -m pip install --quiet --break-system-packages Pillow
-      - name: Serve local website
-        run: |
-          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/illust-server.log 2>&1 &
-          sleep 2
-      - name: Queue unfinished exact-model previews
-        run: python3 scripts/preview_queue.py --catalog data/spine-arknights-illust.json --write tmp/preview-pending.json
-      - name: Render actual model frames
-        run: node scripts/capture_newgame_previews.mjs ${{ matrix.shard }} 12 data/spine-arknights-illust.json tmp/arknights-illust-output
-      - name: Convert frames with shared preview policy
-        if: always()
-        run: python3 scripts/convert_newgame_previews.py tmp/arknights-illust-output
-      - name: Upload successful frames and failure reports
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: arknights-illust-shard-${{ matrix.shard }}
-          path: |
-            tmp/arknights-illust-output/webps/
-            tmp/arknights-illust-output/reports/
-          if-no-files-found: ignore
-          retention-days: 7
-  publish:
-    needs: capture
-    if: always()
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    permissions:
-      contents: write
-    concurrency:
-      group: dynamic-game-previews-publish
-      cancel-in-progress: false
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-          persist-credentials: true
-      - uses: actions/download-artifact@v4
-        with:
-          pattern: arknights-illust-shard-*
-          path: tmp/arknights-illust-merged
-          merge-multiple: true
-      - name: Publish source-matched model screenshots
-        run: |
-          python3 -m pip install --quiet --break-system-packages Pillow
-          python3 scripts/merge_newgame_previews.py --catalog data/spine-arknights-illust.json --incoming tmp/arknights-illust-merged/webps --audit data/arknights-illust-preview-audit.json
-      - name: Commit only verified model previews
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/spine-arknights-illust.json data/arknights-illust-preview-audit.json assets/animation-previews/
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m "Capture exact-model Arknights animated illustration previews"
-          for i in 1 2 3; do
-            if git push origin HEAD:main; then exit 0; fi
-            git fetch origin main
-            git rebase origin/main || { git rebase --abort; exit 1; }
-          done
-          exit 1
+  previews:
+    uses: ./.github/workflows/preview-pipeline.yml
+    with:
+      catalog: arknights-illust

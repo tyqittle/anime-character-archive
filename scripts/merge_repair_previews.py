@@ -1,48 +1,22 @@
 #!/usr/bin/env python3
-"""Convert and publish exact-model frames with the shared image policy."""
+"""Compatibility CLI for the original repair job."""
 import argparse
-import json
 from pathlib import Path
-import shutil
+from catalog_registry import load_registry
 from preview_frame_pipeline import convert_frames
-from preview_policy import ROOT, filename, apply_verified_preview, verified_file, audit
-from preview_diagnostics import failure_category
+from preview_repository import publish_catalog,write_json
 
 def main():
-    parser=argparse.ArgumentParser()
-    parser.add_argument('--convert-only',action='store_true')
+    parser=argparse.ArgumentParser();parser.add_argument('--convert-only',action='store_true')
     args=parser.parse_args()
-    incoming=Path('tmp/repair-output')
     if args.convert_only:
-        convert_frames(incoming/'frames',incoming/'webps',lambda p:p.stem+'.webp')
+        convert_frames(Path('tmp/repair-output/frames'),Path('tmp/repair-output/webps'),lambda p:p.stem+'.webp')
         return
-    incoming=Path('tmp/repair-merged')
-    failures={}
-    for path in incoming.rglob('shard-*.json'):
-        for failure in json.loads(path.read_text('utf-8')).get('fail',[]):
-            failures[failure['id']]=failure
-    added=0;catalog_audits={}
-    ROOT.mkdir(parents=True,exist_ok=True)
-    for name in ['spine-characters','spine-newgames','spine-bd2-characters','live2d-azurlane','spine-arknights-illust']:
-        manifest=Path('data')/(name+'.json')
-        data=json.loads(manifest.read_text('utf-8'))
-        for character in data['characters']:
-            candidate=incoming/'webps'/filename(character)
-            candidate_metadata={k:v for k,v in character.items() if k not in ('previewSha256','previewWidth','previewHeight')}
-            if candidate.is_file() and verified_file(candidate_metadata,incoming/'webps') is not None:
-                shutil.copyfile(candidate,ROOT/filename(character));added+=1
-                for field in ('previewSha256','previewWidth','previewHeight'):character.pop(field,None)
-            if apply_verified_preview(character):
-                character.pop('previewFailureType',None);character.pop('previewFailureReason',None)
-            elif character['id'] in failures:
-                error=failures[character['id']]['error']
-                character['previewFailureType']=failure_category(error)
-                character['previewFailureReason']=error
-        manifest.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n','utf-8')
-        catalog_audits[name]=audit(data['characters'])
-    Path('data/preview-repair-audit.json').write_text(json.dumps(
-        {'newCaptures':added,'catalogs':catalog_audits,'failures':list(failures.values())},
-        ensure_ascii=False,indent=2)+'\n','utf-8')
-    print('REPAIR_PUBLISHED',added,flush=True)
+    results={}
+    for entry in load_registry():
+        results[entry['id']]=publish_catalog(entry['path'],'tmp/repair-merged/webps',
+            Path('data/preview-audits')/(entry['id']+'.json'))
+    write_json('data/preview-repair-audit.json',{'newCaptures':sum(r['newCapturesInThisRun'] for r in results.values()),'catalogs':results})
+    print('REPAIR_PUBLISHED',sum(r['newCapturesInThisRun'] for r in results.values()))
 
 if __name__=='__main__':main()

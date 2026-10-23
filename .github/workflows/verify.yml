@@ -19,6 +19,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Enforce architecture boundaries
+        run: node tests/check_architecture.mjs
+      - name: Test registry and preview source contracts
+        run: node --test tests/test_catalog_registry.mjs
       - name: Test asynchronous playback and shared voice lifecycle
         run: node --test tests/test_async_playback.mjs tests/test_spine_highdpi.mjs tests/test_spine_illustration_quality.mjs tests/test_animation_frames.mjs tests/test_spine_utf8.mjs tests/test_desktop_launch.mjs
       - name: Validate archive metadata and entrypoints
@@ -37,7 +41,7 @@ jobs:
         run: node tests/test_spine_session_cache.mjs
       - name: Test shared preview policy
         run: |
-          python3 -m pip install --quiet --break-system-packages Pillow
+          python3 -m pip install --quiet --break-system-packages -r requirements-dev.txt
           python3 -m unittest discover -s tests -p 'test_*.py'
       - name: Syntax-check renamed maintenance scripts
         run: python3 -m py_compile start_site.py scripts/mirror_static_portraits.py

@@ -44,7 +44,7 @@ jobs:
       - name: Validate PowerShell bridge scripts
         shell: pwsh
         run: |
-          foreach ($file in @('native-desktop/Open-ArchiveCharacter.ps1','native-desktop/Register-Bridge.ps1')) {
+          foreach ($file in @(Get-ChildItem ./native-desktop -Recurse -Filter '*.ps1' | Select-Object -ExpandProperty FullName)) {
             $tokens = $null; $errors = $null
             [System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path $file), [ref]$tokens, [ref]$errors) | Out-Null
             if ($errors.Count) { $errors | Format-List; throw "PowerShell parsing failed: $file" }
@@ -60,93 +60,13 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw 'Archive resource bridge validation failed' }
       - name: Apply small GPL bridge extension to original SpinePet app
         shell: pwsh
-        run: |
-          $legacyImporter = Get-Content ./native-desktop/Open-ArchiveCharacter.ps1 -Raw
-          if (-not $legacyImporter.Contains('Assert-NativeSpine41') -or
-              $legacyImporter.Contains('$entry.spineVersion') -or
-              $legacyImporter.Contains('$entry.versionUnverified')) {
-            throw 'Legacy native importer still blocks characters using catalog metadata'
-          }
-          & ./native-desktop/Patch-Upstream.ps1 -UpstreamRoot ./native-upstream
-          # Patch-Upstream.ps1 is pure PowerShell and throws on failure;
-          # LASTEXITCODE is stale after non-native scripts and must not be checked here.
-          $patched = Get-Content ./native-upstream/SpinePet/src/SpinePet/App.xaml.cs -Raw
-          $patched.Split([char]10) | Where-Object { $_ -match 'Archive|OnStartup|StartActivation' } | ForEach-Object { Write-Host $_ }
-          $bd2Bridge = Get-Content ./native-upstream/SpinePet/src/SpinePet/NativeBrownDust2Bridge.cs -Raw
-          if (-not $bd2Bridge.Contains('EnsureBrownDust2DownloadedAsync') -or
-              -not $patched.Contains('RestoreArchiveCharactersAsync()') -or
-              -not $patched.Contains('AcceptArchiveStartupArgs(e.Args)')) {
-            throw 'Native one-click import integration did not apply'
-          }
+        run: '& ./native-desktop/build/Apply-ArchiveBridge.ps1'
       - name: Integrate My_SpinePet native character-wheel zoom
         shell: pwsh
-        run: |
-          & ./native-desktop/Patch-WheelZoom.ps1 -UpstreamRoot ./native-upstream
-          & ./native-desktop/Patch-RenderEnvelope.ps1 -UpstreamRoot ./native-upstream
-          & ./native-desktop/Patch-ViewportSafety.ps1 -UpstreamRoot ./native-upstream
-          $engine = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeCharacterRenderEngine.cs -Raw
-          $xaml = Get-Content ./native-upstream/SpinePet/src/SpinePet/Views/MainWindow.xaml -Raw
-          $updater = Get-Content ./native-upstream/SpinePet/src/SpinePet/NativeAutoUpdate.cs -Raw
-          $input = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeInputWindow.cs -Raw
-          $frame = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeFrameRenderer.cs -Raw
-          $surface = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeCompositionSurface.cs -Raw
-          $silhouette = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeSilhouetteRasterizer.cs -Raw
-          $bounds = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeSpineBounds.cs -Raw
-          $hitRegion = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeInputRegionCoordinator.cs -Raw
-          $voice = Get-Content ./native-upstream/SpinePet/src/SpinePet/NativeBrownDust2Voice.cs -Raw
-          $app = Get-Content ./native-upstream/SpinePet/src/SpinePet/App.xaml.cs -Raw
-          if (-not $engine.Contains('private void OnNativeMouseWheel') -or
-              -not $frame.Contains('NativeSpineBounds observed = state.Geometry.Bounds') -or
-              -not $surface.Contains('right <= PixelWidth - AnchorPixelX') -or
-              -not $silhouette.Contains('float halfCell = cellSize * 0.38f / pixelScale') -or
-              -not $silhouette.Contains('const int Subdivisions = 4') -or
-              -not $bounds.Contains('NativeSpineSkinIncludes.Apply(data, probe);') -or
-              -not $bounds.Contains('NativeSpineSkinIncludes.Apply(data, setupSkeleton);') -or
-              -not $engine.Contains('var bounds = ProjectEnvelope();') -or
-              -not $hitRegion.Contains('screen.Bounds,') -or
-              -not $engine.Contains('NativeDesktopVoiceRelay.NotifyClicked(') -or
-              -not $engine.Contains('FitNewlyLoadedCharacterToMonitor(current);') -or
-              -not $xaml.Contains('x:Name="ManualUpdateButton"') -or
-              -not $updater.Contains('CheckArchiveUpdatesAsync(manual: true)') -or
-              -not $voice.Contains('Char" + clipCode + "_BattleReady_') -or
-              -not $app.Contains('InitializeBrownDust2Voice();') -or
-              -not $input.Contains('MouseWheelInput')) {
-            throw 'Native mouse hit regions, auto-sizing and BD2 voice integration missing'
-          }
+        run: '& ./native-desktop/build/Apply-WheelZoom.ps1'
       - name: Validate pinned Brown Dust 2 voice file is genuine WebM
         shell: pwsh
-        run: |
-          $url = 'https://raw.githubusercontent.com/Jelosus2/BD2-L2D-Viewer/b899b929df3e3ea883984a05f83c944608a27cb4/src/assets/audios/000201/JP/Char000201_BattleReady_1.webm'
-          $path = Join-Path $env:RUNNER_TEMP 'bd2-click-voice.webm'
-          Invoke-WebRequest -Uri $url -OutFile $path
-          $data = [IO.File]::ReadAllBytes($path)
-          if ($data.Length -lt 200 -or $data.Length -gt 3000000 -or
-              $data[0] -ne 0x1a -or $data[1] -ne 0x45 -or
-              $data[2] -ne 0xdf -or $data[3] -ne 0xa3) {
-            throw 'Pinned BD2 voice is missing, oversized, or not WebM'
-          }
-          Write-Host "PASS: BD2 voice audio source is pinned and WebM header is valid ($($data.Length) bytes)"
-          # Exercise the SAME managed decoder that ships in the desktop EXE
-          # against a real pinned upstream BD2 Opus voice, not a mock WAV.
-          $project = Join-Path $env:RUNNER_TEMP 'bd2-voice-regression'
-          dotnet new console --framework net9.0 --output $project --no-restore | Out-Null
-          dotnet add (Join-Path $project 'bd2-voice-regression.csproj') package Concentus --version 2.2.2 | Out-Null
-          if ($LASTEXITCODE -ne 0) { throw 'Managed Opus test dependency restore failed' }
-          Copy-Item ./native-desktop/NativeBrownDust2WebMDecoder.cs $project
-          @'
-          using System;
-          using System.IO;
-          using SpinePet;
-          byte[] voice = File.ReadAllBytes(args[0]);
-          byte[] wav = NativeBrownDust2WebMDecoder.DecodeToWave(voice);
-          if (wav.Length < 1000 ||
-              System.Text.Encoding.ASCII.GetString(wav, 0, 4) != "RIFF" ||
-              System.Text.Encoding.ASCII.GetString(wav, 8, 4) != "WAVE")
-              throw new Exception("BD2 voice failed to decode into PCM WAV");
-          Console.WriteLine($"PASS: decoded real BD2 Opus voice to {wav.Length} PCM WAV bytes");
-          '@ | Set-Content -Path (Join-Path $project 'Program.cs') -Encoding utf8
-          dotnet run --project $project --configuration Release -- $path
-          if ($LASTEXITCODE -ne 0) { throw 'Native BD2 WebM to WAV regression failed' }
+        run: '& ./native-desktop/build/Test-BrownDustVoice.ps1'
       - name: Build actual upstream native Direct3D 11 + DirectComposition renderer
         shell: pwsh
         run: |
@@ -155,107 +75,10 @@ jobs:
           if (-not (Test-Path ./native-dist/app/SpinePet.exe)) { throw 'Missing native executable' }
       - name: Smoke-test real c015 resource download and atlas page resolution
         shell: pwsh
-        run: |
-          New-Item -Path ./native-integration-test/app -ItemType Directory -Force | Out-Null
-          New-Item -Path ./native-integration-test/app/SpinePet.exe -ItemType File -Force | Out-Null
-          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1 ./native-integration-test/Open-ArchiveCharacter.ps1
-          & ./native-integration-test/Open-ArchiveCharacter.ps1 -CharacterId c015 -DownloadOnly
-          if ($LASTEXITCODE -ne 0) { throw 'The website-to-native real resource import failed' }
-          $assets = @(Get-ChildItem -Path ./native-integration-test/res -Recurse -File)
-          if (-not ($assets.Name -contains 'c015_00.skel' -and $assets.Name -contains 'c015_00.atlas' -and $assets.Name -contains 'c015_00.png')) {
-            throw 'Missing required complete Spine standing asset files'
-          }
-          $skeleton = @(Get-ChildItem -Path ./native-integration-test/res -Recurse -Filter 'c015_00.skel')[0].FullName
-          $atlas = @(Get-ChildItem -Path ./native-integration-test/res -Recurse -Filter 'c015_00.atlas')[0].FullName
-          dotnet run --project ./native-upstream/SpinePet/tools/skeleton-inspector/SkeletonInspector.csproj -c Release -- $skeleton $atlas
-          if ($LASTEXITCODE -ne 0) { throw 'Upstream Spine 4.1 parser could not open the imported model' }
-          # Reuse the *actual pinned BD2 assets* with the upstream 4.1 reader.
-          # A catalog label is not proof that its binary or atlas is compatible.
-          $bd2 = (Get-Content ./data/spine-bd2-characters.json -Raw | ConvertFrom-Json).characters |
-            Where-Object { $_.id -eq 'bd2-char000201' } | Select-Object -First 1
-          if (-not $bd2) { throw 'Missing pinned Brown Dust 2 source record' }
-          $bd2Base = [string]$bd2.base
-          if (-not $bd2Base.StartsWith('https://raw.githubusercontent.com/Zormolo/Brown-Dust-2-Assets/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/')) {
-            throw 'Brown Dust 2 test source is not pinned'
-          }
-          New-Item -ItemType Directory -Path ./native-integration-test/bd2 -Force | Out-Null
-          foreach ($suffix in @('.skel','.atlas','.png')) {
-            Invoke-WebRequest -UseBasicParsing -Uri ($bd2Base+$suffix) -OutFile ('./native-integration-test/bd2/char000201'+$suffix)
-            if ($LASTEXITCODE -ne 0) { throw 'Brown Dust 2 sample download failed' }
-          }
-          dotnet run --project ./native-upstream/SpinePet/tools/skeleton-inspector/SkeletonInspector.csproj -c Release -- ./native-integration-test/bd2/char000201.skel ./native-integration-test/bd2/char000201.atlas
-          if ($LASTEXITCODE -ne 0) { throw 'Brown Dust 2 Spine 4.1 reader compatibility test failed' }
-          # Run a pixel-based regression against the ACTUAL pinned BD2
-          # standing costume (combined skins, lower-body input silhouette).
-          # A passing build or a string-matching assertion is NOT sufficient.
-          $testProject = './native-upstream/SpinePet/tests/SpinePet.Tests'
-          Copy-Item ./native-desktop/ArchiveDesktopFullBodyTests.cs $testProject
-          $env:SPINEPET_BD2_TEST_DIR = (Resolve-Path './native-integration-test/bd2').Path
-          dotnet test (Join-Path $testProject 'SpinePet.Tests.csproj') -c Release --filter 'FullyQualifiedName~ArchiveDesktopFullBodyTests' --logger 'console;verbosity=normal'
-          if ($LASTEXITCODE -ne 0) { throw 'Real BD2 lower-body visual and mouse hit-region regression failed' }
-          Remove-Item Env:SPINEPET_BD2_TEST_DIR
-          # Second actual 4.1 costume ID: previous code incorrectly accepted
-          # only cNNN and rejected cNNN_XX variants altogether.
-          & ./native-integration-test/Open-ArchiveCharacter.ps1 -CharacterId c010_03 -DownloadOnly
-          if ($LASTEXITCODE -ne 0) { throw 'Costume Spine 4.1 model download failed' }
-          $skinSkeleton = @(Get-ChildItem -Path ./native-integration-test/res -Recurse -Filter 'c010_03_00.skel')[0].FullName
-          $skinAtlas = @(Get-ChildItem -Path ./native-integration-test/res -Recurse -Filter 'c010_03_00.atlas')[0].FullName
-          dotnet run --project ./native-upstream/SpinePet/tools/skeleton-inspector/SkeletonInspector.csproj -c Release -- $skinSkeleton $skinAtlas
-          if ($LASTEXITCODE -ne 0) { throw 'Costume Spine 4.1 parser failed' }
-          # Regression: catalog incorrectly labeled this as 4.0/unverified,
-          # while its real .skel header reports Spine 4.1.20.
-          & ./native-integration-test/Open-ArchiveCharacter.ps1 -CharacterId c113_01 -DownloadOnly
-          if ($LASTEXITCODE -ne 0) { throw 'Misclassified c113_01 costume import failed' }
-          $realSkeleton = @(Get-ChildItem -Path ./native-integration-test/res -Recurse -Filter 'c113_01_00.skel')[0].FullName
-          $realAtlas = @(Get-ChildItem -Path ./native-integration-test/res -Recurse -Filter 'c113_01_00.atlas')[0].FullName
-          dotnet run --project ./native-upstream/SpinePet/tools/skeleton-inspector/SkeletonInspector.csproj -c Release -- $realSkeleton $realAtlas
-          if ($LASTEXITCODE -ne 0) { throw 'Actual c113_01 Spine 4.1.20 parser validation failed' }
-          Remove-Item ./native-integration-test -Recurse -Force
+        run: '& ./native-desktop/build/Test-NativeResources.ps1'
       - name: Assemble minimal core, optional bridge and corresponding GPL source
         shell: pwsh
-        run: |
-          New-Item -ItemType Directory -Force -Path ./safe-release/core,./safe-release/source | Out-Null
-          Move-Item -Path ./native-dist/app -Destination ./safe-release/core/app
-          # No game models, custom PowerShell download scripts or protocol changes
-          # in the standalone desktop application download.
-          New-Item -ItemType Directory -Force -Path ./safe-release/core/res | Out-Null
-          'SpinePet model directory. Place licensed Spine 4.1 models here; this file preserves the resource directory when unzipped.' | Set-Content ./safe-release/core/res/README.txt -Encoding utf8
-          # Upstream bundles optional Python and shell import tools. They are not
-          # required for Spine rendering or for manual .skel/.atlas/.png import.
-          foreach ($dir in @('./safe-release/core/app/Tools','./safe-release/core/app/tools')) {
-            if (Test-Path $dir) { Remove-Item $dir -Force -Recurse }
-          }
-          # createdump.exe is a .NET crash-dump helper, not needed to render Spine.
-          if (Test-Path ./safe-release/core/app/createdump.exe) { Remove-Item ./safe-release/core/app/createdump.exe -Force }
-          Copy-Item ./native-upstream/LICENSE ./safe-release/core/LICENSE-GPL-3.0.txt
-          Copy-Item ./native-upstream/NOTICE ./safe-release/core/NOTICE.txt
-          Copy-Item ./native-upstream/THIRD_PARTY_NOTICES.md ./safe-release/core/THIRD_PARTY_NOTICES.md
-          Copy-Item ./native-desktop/CONCENTUS-LICENSE.txt ./safe-release/core/CONCENTUS-LICENSE.txt
-          @'
-          Anime Character Archive — native SpinePet core (Windows x64)
-          Renderer source: KAIDO-YONAGI/My_SpinePet, GPL-3.0-or-later
-          Pinned upstream commit: 6690e986b4da31dc89337794bcef1b45e6531303
-          Launch: app/SpinePet.exe
-          Website one-click import is implemented natively inside SpinePet.exe.
-          Registration is only offered with a visible consent dialog when you launch the app.
-          No scripts, shell launchers or separate ZIPs are required.
-          This executable is unsigned and has not been certified malware-free.
-          For supported NIKKE Spine 4.1: visit the archive, select a model, and click 放到桌面.
-          The upstream Add/Scan interface remains available for manual licensed asset import.
-          GPL corresponding source is provided as another artifact from this SAME build run.
-          See https://github.com/tyqittle/anime-character-archive/tree/main/native-desktop
-          '@ | Set-Content ./safe-release/core/README.txt -Encoding utf8
-
-          Copy-Item ./native-upstream/LICENSE ./safe-release/source/LICENSE-GPL-3.0.txt
-          git -C native-upstream archive --format=zip --output="$env:GITHUB_WORKSPACE/safe-release/source/My_SpinePet-corresponding-source.zip" HEAD
-          if ($LASTEXITCODE -ne 0) { throw 'Cannot provide GPL corresponding source' }
-          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/Patch-Upstream.ps1,./native-desktop/Patch-WheelZoom.ps1,./native-desktop/Patch-RenderEnvelope.ps1,./native-desktop/Patch-ViewportSafety.ps1,./native-desktop/NativeArchiveBridge.cs,./native-desktop/NativeArchiveAssetCache.cs,./native-desktop/NativeBrownDust2Bridge.cs,./native-desktop/NativeBrownDust2Voice.cs,./native-desktop/NativeBrownDust2WebMDecoder.cs,./native-desktop/NativeAutoUpdate.cs,./native-desktop/ArchiveDesktopFullBodyTests.cs,./native-desktop/CONCENTUS-LICENSE.txt -Destination ./safe-release/source
-          Copy-Item ./native-desktop/ChooseFoldersInstaller.iss -Destination ./safe-release/source
-          @'
-          The distributed SpinePet.exe builds pinned upstream source plus NativeArchiveBridge.cs.
-          Rebuild by checking out pinned upstream commit, running Patch-Upstream.ps1, then dotnet publish.
-          Archive bridge and corresponding patch source are GPL-3.0-or-later.
-          '@ | Set-Content ./safe-release/source/REBUILD-INSTRUCTIONS.txt -Encoding utf8
+        run: '& ./native-desktop/build/Assemble-NativePackage.ps1'
       - name: Create Velopack self-updating installer and update packages
         shell: pwsh
         run: |
@@ -296,81 +119,10 @@ jobs:
           }
       - name: End-to-end smoke test of the SAME two-folder graphical installer
         shell: pwsh
-        run: |
-          # This is the exact Inno EXE a user downloads, NOT just its inner
-          # Velopack Setup. /SILENT shows the progress GUI without blocking for wizard clicks.
-          $wizard = @(Get-ChildItem ./safe-release/velopack/AnimeCharacterSpinePet-ChooseFolders-Setup.exe)
-          if ($wizard.Count -ne 1) { throw 'Missing exact two-folder EXE artifact' }
-          $root = Join-Path $env:RUNNER_TEMP 'AnimeCharacterTwoFolderSmoke'
-          $program = Join-Path $root '程序 安装'
-          $models = Join-Path $root '角色 素材'
-          $innoLog = Join-Path $env:RUNNER_TEMP 'spinepet-wizard-install.log'
-          $arguments = @('/SILENT', '/SUPPRESSMSGBOXES', '/NORESTART',
-            ('"/PROGRAMDIR=' + $program + '"'),
-            ('"/MODELDIR=' + $models + '"'),
-            ('"/LOG=' + $innoLog + '"')) -join ' '
-          Write-Host "Testing GUI wrapper with unattended choices and two separate non-default Unicode paths."
-          $proc = Start-Process -FilePath $wizard[0].FullName -ArgumentList $arguments -PassThru
-          # Do not let a hidden child dialog or a GUI descendant hang CI forever.
-          $completed = $proc.WaitForExit(360000)
-          if (-not $completed) {
-            Stop-Process -Id $proc.Id -Force -ErrorAction SilentlyContinue
-          }
-          $code = if ($completed) { $proc.ExitCode } else { 1460 }
-          if (Test-Path $innoLog) {
-            Get-Content $innoLog -Tail 65 | ForEach-Object { Write-Host $_ }
-          }
-          $innerLog = Join-Path $models 'SpinePet-Install.log'
-          if (Test-Path $innerLog) {
-            Get-Content $innerLog -Tail 40 | ForEach-Object { Write-Host $_ }
-          }
-          if ($code -ne 0) { throw "FULL INSTALL WIZARD FAILED: exit $code (1460 means timeout)" }
-          if (-not (Test-Path $innoLog)) { throw 'Inno install trace was not written' }
-          $trace = Get-Content $innoLog -Raw
-          if (-not $trace.Contains('Native Velopack GUI bootstrap started') -or
-              -not $trace.Contains('Native Velopack GUI installation verified')) {
-            throw 'GUI workflow never reached the verified progress-and-finish path'
-          }
-          if (-not (Test-Path (Join-Path $program 'current/SpinePet.exe'))) {
-            throw "Selected program folder missing actual current/SpinePet.exe: $program"
-          }
-          if (-not (Test-Path (Join-Path $program 'current/sq.version'))) {
-            throw 'Selected program folder missing Velopack update structure'
-          }
-          if (-not (Test-Path $models)) { throw "Selected model folder not created: $models" }
-          $saved = (Get-ItemProperty -Path 'HKCU:\Software\AnimeCharacterSpinePet' -Name ResourceDirectory).ResourceDirectory
-          if ($saved -ne $models) { throw "Model directory not persisted correctly" }
-          Write-Host 'PASS: /SILENT progress UI and verified completion; exact downloadable GUI EXE installed app and saved independent model directory.'
+        run: '& ./native-desktop/build/Test-Installer.ps1'
       - name: Generate SHA-256 manifest and run security checks where supported
         shell: pwsh
-        run: |
-          $core = (Resolve-Path ./safe-release/core).Path
-          $paths = @(Get-ChildItem $core -Recurse -File | Sort-Object FullName)
-          $hashes = @($paths | ForEach-Object {
-            $relative = [System.IO.Path]::GetRelativePath($core, $_.FullName).Replace('\\','/')
-            "$(Get-FileHash $_.FullName -Algorithm SHA256 | Select-Object -ExpandProperty Hash)  $relative"
-          })
-          $hashes | Set-Content ./safe-release/core/SHA256SUMS.txt -Encoding ascii
-          $signature = Get-AuthenticodeSignature ./safe-release/core/app/SpinePet.exe
-          "SpinePet.exe Authenticode: $($signature.Status)" | Tee-Object -FilePath ./safe-release/core/BUILD-SECURITY-REPORT.txt
-          "Source: KAIDO-YONAGI/My_SpinePet at 6690e986b4da31dc89337794bcef1b45e6531303" | Add-Content ./safe-release/core/BUILD-SECURITY-REPORT.txt
-          "Core binary executables:" | Add-Content ./safe-release/core/BUILD-SECURITY-REPORT.txt
-          @(Get-ChildItem $core -Recurse -File -Include *.exe | ForEach-Object {
-            "$([System.IO.Path]::GetRelativePath($core, $_.FullName)) SHA256=$((Get-FileHash $_.FullName -Algorithm SHA256).Hash)"
-          }) | Add-Content ./safe-release/core/BUILD-SECURITY-REPORT.txt
-          try {
-            $status = Get-MpComputerStatus -ErrorAction Stop
-            if ($status.AntivirusEnabled -and $status.RealTimeProtectionEnabled) {
-              Write-Host 'Microsoft Defender enabled; scanning core and optional bridge.'
-              Start-MpScan -ScanType CustomScan -ScanPath (Resolve-Path ./safe-release).Path -ErrorAction Stop
-              'Microsoft Defender custom scan completed. This is not a guarantee of safety.' | Add-Content ./safe-release/core/BUILD-SECURITY-REPORT.txt
-            } else {
-              'Microsoft Defender scanner NOT ACTIVE on build runner; security scan NOT VERIFIED.' | Add-Content ./safe-release/core/BUILD-SECURITY-REPORT.txt
-            }
-          } catch {
-            "Microsoft Defender scanning unavailable: $($_.Exception.Message)" | Add-Content ./safe-release/core/BUILD-SECURITY-REPORT.txt
-          }
-          # Do not claim that a clean CI run overrides a Chrome Safe Browsing block.
+        run: '& ./native-desktop/build/Write-SecurityManifest.ps1'
       - name: Upload minimal native renderer
         uses: actions/upload-artifact@v4
         with:

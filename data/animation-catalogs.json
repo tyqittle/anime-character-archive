@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "catalogs": [
+    {
+      "id": "primary",
+      "name": "主要动画",
+      "path": "data/spine-characters.json"
+    },
+    {
+      "id": "azurlane",
+      "name": "碧蓝航线",
+      "path": "data/live2d-azurlane.json"
+    },
+    {
+      "id": "bd2",
+      "name": "棕色尘埃2",
+      "path": "data/spine-bd2-characters.json"
+    },
+    {
+      "id": "newgames",
+      "name": "扩展游戏",
+      "path": "data/spine-newgames.json"
+    },
+    {
+      "id": "arknights-illust",
+      "name": "明日方舟干员动态立绘",
+      "path": "data/spine-arknights-illust.json"
+    },
+    {
+      "id": "moregames",
+      "name": "东方炮弹 / 少女咖啡枪",
+      "path": "data/live2d-moregames.json"
+    },
+    {
+      "id": "highquality",
+      "name": "高画质二次元 Live2D",
+      "path": "data/live2d-highquality.json"
+    },
+    {
+      "id": "mature",
+      "name": "成熟风格二次元 Live2D",
+      "path": "data/live2d-mature.json"
+    }
+  ]
+}

@@ -1,91 +1,11 @@
-name: Capture Azur Lane Live2D model previews
+name: Preview compatibility entry (azurlane)
+# Manual compatibility entry. Automatic updates use preview-pipeline.yml.
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/azurlane-preview-images.yml'
-      - 'data/live2d-azurlane.json'
-      - 'scripts/preview_policy.py'
-      - 'scripts/preview_queue.py'
-      - 'scripts/preview_capture_queue.mjs'
-      - 'scripts/render_azurlane_previews.mjs'
-      - 'scripts/convert_azurlane_previews.py'
-      - 'scripts/preview_frame_pipeline.py'
-      - 'scripts/merge_azurlane_previews.py'
-      - 'azurlane-stage.html'
-      - 'assets/js/live2d/runtime-loader.js'
-      - 'assets/js/shared/asset-sources.js'
-      - 'assets/spine-theater-layout.css'
   workflow_dispatch:
 permissions:
   contents: write
-concurrency:
-  group: azurlane-preview-${{ github.ref }}
-  cancel-in-progress: true
 jobs:
-  capture:
-    runs-on: ubuntu-latest
-    timeout-minutes: 40
-    strategy:
-      fail-fast: false
-      matrix:
-        shard: [0,1,2,3,4,5,6,7]
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-      - run: |
-          npm install --no-save --no-package-lock playwright-core@1.56.1
-          python3 -m pip install --quiet --break-system-packages Pillow
-      - run: |
-          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/al-server.log 2>&1 &
-          sleep 2
-      - run: python3 scripts/preview_queue.py --catalog data/live2d-azurlane.json --write tmp/preview-pending.json
-      - run: |
-          node scripts/render_azurlane_previews.mjs ${{ matrix.shard }} 8
-          python3 scripts/convert_azurlane_previews.py
-          mkdir -p tmp/azurlane-output/webps
-          printf 'shard: %s\n' '${{ matrix.shard }}' > tmp/azurlane-output/webps/shard-${{ matrix.shard }}.txt
-      - if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: azurlane-frame-${{ matrix.shard }}
-          path: tmp/azurlane-output/webps/
-          if-no-files-found: ignore
-          retention-days: 3
-  publish:
-    needs: capture
-    if: always()
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v4
-      - run: python3 -m pip install --quiet --break-system-packages Pillow
-      - uses: actions/download-artifact@v4
-        with:
-          pattern: azurlane-frame-*
-          merge-multiple: true
-          path: tmp/azurlane-merged
-      - name: Refresh checkout before publishing
-        run: |
-          git fetch origin main
-          git reset --hard origin/main
-      - name: Copy only newly rendered frames
-        run: |
-          find tmp/azurlane-merged -maxdepth 1 -type f -name 'azurlane-*.webp' -exec cp -n -t assets/animation-previews/ {} +
-      - run: python3 scripts/merge_azurlane_previews.py
-      - run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add assets/animation-previews/azurlane-*.webp data/live2d-azurlane.json data/azurlane-import-audit.json
-          if ! git diff --cached --quiet; then
-            git commit -m 'Add model-specific Azur Lane Live2D WebP previews'
-            for attempt in 1 2 3; do
-              if git push origin HEAD:main; then exit 0; fi
-              echo "main advanced during preview publishing; rebasing (attempt $attempt)"
-              git fetch origin main
-              git rebase origin/main || { git rebase --abort; exit 1; }
-            done
-            exit 1
-          fi
+  previews:
+    uses: ./.github/workflows/preview-pipeline.yml
+    with:
+      catalog: azurlane

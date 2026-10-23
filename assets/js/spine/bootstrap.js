@@ -30,16 +30,7 @@ async function fetchAnimationManifest(url){
 }
 (async()=>{
  try{
-  const entries=[
-   {name:'主要动画',url:manifestUrl},
-   {name:'碧蓝航线',url:azurlaneCatalogUrl},
-   {name:'棕色尘埃2',url:bd2CatalogUrl},
-   {name:'扩展游戏',url:newGamesCatalogUrl},
-   {name:'明日方舟干员动态立绘',url:arknightsIllustCatalogUrl},
-   {name:'东方炮弹/少女咖啡枪',url:moreLive2dCatalogUrl},
-   {name:'高画质二次元 Live2D',url:highQualityLive2dCatalogUrl},
-   {name:'成熟风格二次元 Live2D',url:matureLive2dCatalogUrl}
-  ];
+  const entries=await ArchiveCatalogRegistry.load(fetch);
   const results=location.protocol==='file:'?[]:
    await Promise.allSettled(entries.map(entry=>fetchAnimationManifest(entry.url)));
   const primary=results[0]?.status==='fulfilled'?results[0].value:[];
@@ -60,6 +51,14 @@ async function fetchAnimationManifest(url){
    }
   }
   allCharacters=uniqueAnimationEntries(merged);
+  // New collections are data, not another front-end branch or HTML patch.
+  const registeredOptions=new Set(Array.from($('gameFilter').options).map(option=>option.value));
+  for(const character of allCharacters){
+   const collection=animationCollection(character);
+   if(registeredOptions.has(collection))continue;
+   $('gameFilter').add(new Option(character.collectionName||character.game||collection,collection));
+   registeredOptions.add(collection);
+  }
   const roles=[...new Set(allCharacters.filter(c=>c.gameId==='browndust2').map(c=>c.characterName).filter(Boolean))]
     .sort((a,b)=>a.localeCompare(b,'en'));
   $('bd2CharacterFilter').replaceChildren(new Option('全部角色（'+roles.length+' 人）',''),
