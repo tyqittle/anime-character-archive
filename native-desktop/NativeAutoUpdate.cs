@@ -70,7 +70,7 @@ public sealed partial class App
         if (Interlocked.Exchange(ref _archiveUpdateStarted, 1) != 0)
         {
             if (manual && !IsShutdownRequested)
-                MessageBox.Show("已有更新检查正在进行，请查看更新状态。",
+                System.Windows.MessageBox.Show("已有更新检查正在进行，请查看更新状态。",
                     "次元桌面立绘", MessageBoxButton.OK,
                     MessageBoxImage.Information);
             return;
@@ -105,7 +105,7 @@ public sealed partial class App
             if (newer == null)
             {
                 if (manual && !IsShutdownRequested)
-                    MessageBox.Show("当前已经是最新版，无需重新下载 EXE。",
+                    System.Windows.MessageBox.Show("当前已经是最新版，无需重新下载 EXE。",
                         "次元桌面立绘 · 检查更新",
                         MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
@@ -124,7 +124,7 @@ public sealed partial class App
             // Keep the user's chosen app and asset paths: Velopack installs
             // an update in place; the outer two-folder wizard is NOT rerun.
             SetArchiveUpdateButton("更新已就绪", true);
-            var choice = MessageBox.Show(
+            var choice = System.Windows.MessageBox.Show(
                 "新版本已下载并通过更新包校验。\n" +
                 "是否保存当前角色状态、安装更新并重启？\n" +
                 "选择“否”会保留下载的更新包。",
@@ -137,7 +137,7 @@ public sealed partial class App
         catch (NotInstalledException)
         {
             if (manual && !IsShutdownRequested)
-                MessageBox.Show(
+                System.Windows.MessageBox.Show(
                     "当前运行的是便携版，无法原地自动更新。\n" +
                     "请先安装一次官方双目录安装版，以后就能在这里直接更新。",
                     "次元桌面立绘 · 便携版",
@@ -148,7 +148,7 @@ public sealed partial class App
             AppLogger.Write(nameof(App),
                 $"archive-update-failed {ex.GetType().Name}: {ex.Message}");
             if (manual && !IsShutdownRequested)
-                MessageBox.Show(
+                System.Windows.MessageBox.Show(
                     "检查更新失败：" + ex.Message +
                     "\n请确认网络能够访问 GitHub Releases 后重试。",
                     "次元桌面立绘 · 更新失败",
