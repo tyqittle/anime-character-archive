@@ -23,6 +23,8 @@ jobs:
         run: node --test tests/test_async_playback.mjs tests/test_animation_frames.mjs tests/test_spine_utf8.mjs tests/test_desktop_launch.mjs
       - name: Validate archive metadata and entrypoints
         run: node tests/smoke.mjs
+      - name: Test animation skin deduplication and voice aliases
+        run: node --test tests/test_animation_dedup.mjs
       - name: Test bounded animation memory cache
         run: node tests/test_spine_session_cache.mjs
       - name: Test shared preview policy

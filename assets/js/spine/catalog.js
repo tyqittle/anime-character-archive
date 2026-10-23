@@ -97,19 +97,6 @@ function charInfo(c){
  const image=(exact||c.previewSource==='upstream-ship-thumbnail')?c.preview:'';
  return {image,zh:c.zh||nikkePortraits[c.id]?.name||'',name:c.name||c.id};
 }
-function uniqueAnimationEntries(entries){
- const ids=new Set(),assets=new Set(),result=[];
- for(const c of entries){
-  if(!c||!c.id)continue;
-  const game=c.gameId||'nikke',id=game+'|'+c.id;
-  const url=c.modelUrl||c.base||'';
-  // Keep genuine costume variants: only collapse identical model paths or IDs.
-  const asset=url?game+'|'+url.replace(/[?#].*$/,'').replace(/\/$/,''):'';
-  if(ids.has(id)||(asset&&assets.has(asset)))continue;
-  ids.add(id);if(asset)assets.add(asset);result.push(c);
- }
- return result;
-}
 function syncSelectedCharacterDisplay(){
  const selected=chosen(),output=$('selectedCharacterDisplay');
  if(!output)return;

@@ -63,12 +63,14 @@ async function fetchAnimationManifest(url){
     ...roles.map(name=>new Option(name,name)));
   refreshCharacters();
   const requested=params.get('id');
-  const hit=requested&&allCharacters.find(c=>c.id===requested);
+  const canonicalId=requested&&canonicalAnimationId(requested);
+  const hit=canonicalId&&allCharacters.find(c=>c.id===canonicalId);
   if(hit){
    $('gameFilter').value=animationCollection(hit);
    refreshCharacters();
    selectCharacter(hit);
    refreshCardSelection();
+   if(requested!==hit.id)rememberSelectedCharacter();
   }
   status('已载入 '+allCharacters.length+' 条动画索引，覆盖 '+Object.keys(accepted).length+
     ' 个在线游戏目录。点击角色即可播放，模型按需下载。');

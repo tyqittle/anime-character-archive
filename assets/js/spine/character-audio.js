@@ -7,6 +7,13 @@ const azurVoiceLinkUrl='https://raw.githubusercontent.com/Fernando2603/AzurLane/
 let voiceLanguage='JP',voiceEnabled=false,voiceVolume=.8,voiceIndex=0;
 let azurVoiceIds={},azurVoiceLinks=null,voiceLoading=false,voiceAttempt=0,voiceMessageOverride='';
 const voiceOptions=['main1','main2','main3','touch','touch2','headtouch','login','detail','home','mail','mission'];
+function mappedVoiceValue(mapping,character){
+ if(!character)return '';
+ for(const id of animationVoiceIdentityIds(character)){
+  if(mapping[id])return mapping[id];
+ }
+ return '';
+}
 function voiceMessage(message){const hint=document.getElementById('voiceAvailability');if(hint)hint.textContent=message}
 const characterVoicePlayer=ArchiveVoice.create(state=>{
  voiceLoading=state==='loading';
@@ -20,18 +27,18 @@ function syncFrameVoice(){
  if(!azurlaneFrame?.contentWindow)return;
  const c=typeof chosen==='function'?chosen():null;
  azurlaneFrame.contentWindow.postMessage({channel:L2D_CHANNEL,kind:'voice-config',voice:{
-  characterId:c?.id||'',skinId:c?.gameId==='azurlane'?azurVoiceIds[c.id]||'':'',enabled:voiceEnabled,volume:voiceVolume
+  characterId:c?.id||'',skinId:c?.gameId==='azurlane'?mappedVoiceValue(azurVoiceIds,c):'',enabled:voiceEnabled,volume:voiceVolume
  }},location.origin);
 }
 function selectedVoiceChanged(){silenceCharacterVoice();voiceMessageOverride='';updateVoiceUI();syncFrameVoice()}
 function updateVoiceUI(){
  const selected=typeof chosen==='function'?chosen():null;
- const supported=!!(selected&&(characterVoiceMap[selected.id]||azurVoiceIds[selected.id]||Array.isArray(selected.audioClips)&&selected.audioClips.length));
+ const supported=!!(selected&&(mappedVoiceValue(characterVoiceMap,selected)||mappedVoiceValue(azurVoiceIds,selected)||Array.isArray(selected.audioClips)&&selected.audioClips.length));
  const ctl=document.getElementById('characterVoiceControls');if(!ctl)return;
  ctl.hidden=false;
  const test=document.getElementById('voiceTest');if(test)test.disabled=!supported||voiceLoading;
- voiceMessage(voiceMessageOverride||(azurVoiceIds[selected?.id]?'已匹配皮肤编号（音频待确认），点击试听':supported?'已匹配角色语音 · 点击人物试听':selected?'当前角色暂无已匹配语音':'请选择角色以查看可用语音'));
- document.getElementById('voiceLanguage').disabled=!!azurVoiceIds[selected?.id];
+ voiceMessage(voiceMessageOverride||(mappedVoiceValue(azurVoiceIds,selected)?'已匹配皮肤编号（音频待确认），点击试听':supported?'已匹配角色语音 · 点击人物试听':selected?'当前角色暂无已匹配语音':'请选择角色以查看可用语音'));
+ document.getElementById('voiceLanguage').disabled=!!mappedVoiceValue(azurVoiceIds,selected);
  document.getElementById('voiceEnabled').checked=voiceEnabled;
  document.getElementById('voiceLanguage').value=voiceLanguage;
  document.getElementById('voiceVolume').value=String(Math.round(voiceVolume*100));
@@ -43,9 +50,9 @@ fetch('./data/azurlane-voice-map.json?v=20261022-audio-map-3')
 function getAzurVoiceURLs(skinId){return ArchiveVoice.skinURLs(skinId)}
 function playCharacterVoice(character){
  if(!voiceEnabled||!character)return;
- const entry=characterVoiceMap[character.id];
+ const entry=mappedVoiceValue(characterVoiceMap,character);
  const external=Array.isArray(character.audioClips)?character.audioClips.filter(url=>typeof url==='string'&&/^https:\/\//.test(url)):[];
- const azurSkin=azurVoiceIds[character.id];
+ const azurSkin=mappedVoiceValue(azurVoiceIds,character);
  if(!entry&&!external.length&&!azurSkin)return;
  silenceCharacterVoice();voiceMessageOverride='';
  const urls=azurSkin?getAzurVoiceURLs(azurSkin):external,index=voiceIndex++;

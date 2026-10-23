@@ -118,7 +118,7 @@ for(const entry of spine.characters){
 console.log('Spine preview audit: '+previewDigests.size+' verified, '+unrendered+' awaiting real rendering.');
 assert.ok(chars.characters.every(x=>x.image.startsWith('./assets/portraits/')),'Not all static images are local');
 const galleryModules=["assets/js/gallery/state.js","assets/js/gallery/catalog.js","assets/js/gallery/viewer.js","assets/js/gallery/events.js","assets/js/gallery/bootstrap.js"];
-const spineModules=["assets/js/spine/state.js","assets/js/spine/viewer-controls.js","assets/js/spine/catalog.js","assets/js/spine/spine-runtime.js","assets/js/spine/spine-assets.js","assets/js/spine/live2d-bridge.js","assets/js/spine/session-cache.js","assets/js/spine/playback.js","assets/js/spine/local-tools.js","assets/js/spine/bootstrap.js"];
+const spineModules=["assets/js/spine/state.js","assets/js/spine/viewer-controls.js","assets/js/spine/animation-identity.js","assets/js/spine/catalog.js","assets/js/spine/spine-runtime.js","assets/js/spine/spine-assets.js","assets/js/spine/live2d-bridge.js","assets/js/spine/session-cache.js","assets/js/spine/playback.js","assets/js/spine/local-tools.js","assets/js/spine/bootstrap.js"];
 const gallerySource=galleryModules.map(read).join('\n');
 const spineSource=spineModules.map(read).join('\n');
 const home=read('index.html'),old=read('gallery.html'),page=read('characters.html')+'\n'+gallerySource,player=read('spine.html')+'\n'+spineSource;
@@ -401,6 +401,8 @@ assert.ok(catalogBootstrap.includes('Promise.allSettled')&&catalogBootstrap.incl
  'Animation catalogs should load in parallel and revalidate mutable manifests');
 assert.ok(catalogBootstrap.includes('isPlayableAnimationEntry')&&!catalogBootstrap.includes("c.gameId==='arknights'&&c.base"),
  'Spine/Cubism catalog validation should not depend on individual game IDs');
+assert.ok(catalogBootstrap.includes('canonicalAnimationId(requested)'),
+ 'Old variant deep links must resolve to the retained playable model');
 
 
 // Recently played verified models may remain in a strictly bounded RAM cache.
