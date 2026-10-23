@@ -13,12 +13,20 @@ const modelUrl=(c,url=c.modelUrl,name=c.skinCode)=>{
  return vm.runInContext('modelUrlFor(name,url,c.id)',cx);
 };
 test('Every catalog entry has a proper original character model, not an explicit CG scene',()=>{
- assert.equal(records.length,72);
+ const expectedByGame={tokyonecro:62,maidslife:10,lovecube:6,foxhimezero:1};
+ assert.equal(records.length,Object.values(expectedByGame).reduce((a,b)=>a+b,0));
  assert.equal(records.filter(x=>x.gameId==='tokyonecro').length,62);
- assert.equal(records.filter(x=>x.gameId==='maidslife').length,10);
- assert.equal(new Set(records.map(x=>x.id)).size,72);
+ for(const [game,count] of Object.entries(expectedByGame))assert.equal(records.filter(x=>x.gameId===game).length,count,game);
+ assert.equal(new Set(records.map(x=>x.id)).size,records.length);
  for(const c of records){
-  assert.ok(c.textureBytes>650000&&c.motionCount>0,c.id);
+  assert.ok(c.textureBytes>650000,c.id);
+  // LOVE³ ships character moc3/texture/physics but no independent motion3 files.
+  // Preserve the existing motion requirement for every other game.
+  if(c.gameId==='lovecube'){
+   assert.ok(c.textureBytes>3000000&&c.motionCount===0,c.id);
+   assert.equal(c.playbackStatus,'not-verified',c.id);
+   assert.ok(!c.preview,c.id);
+  }else assert.ok(c.motionCount>0,c.id);
   assert.ok(!c.sourcePath.includes('/adult/'),c.id);
   assert.equal(c.sourceCommit,'7e446cbd95ec352cdb0f73c079e4d075d7d528ac');
   assert.ok(!c.preview||c.previewSource==='matching-live2d-animation-frame',c.id);
