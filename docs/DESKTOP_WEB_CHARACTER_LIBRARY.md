@@ -21,3 +21,8 @@ patching adds two checked attachment points, with no game-specific UI branches.
 Windows regressions cover persistence, exact identity, migration/removal,
 failed writes and Characters-panel show/hide/remove without native resources,
 alongside existing composition, alpha, input and multi-engine playback tests.
+
+Window commands live in an auto-sized shared toolbar outside both character settings
+areas. Library import actions wrap in their own row. Windows layout regressions check
+minimum/default sizes, enlarged labels and hit testing with both library tabs active.
+The original 58-pixel selected-character title no longer contains application commands.

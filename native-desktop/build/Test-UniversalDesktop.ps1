@@ -4,6 +4,7 @@ $ErrorActionPreference = 'Stop'
 $root = Join-Path (Resolve-Path '.').Path 'native-universal-test'
 $public = Join-Path $root 'public'
 New-Item -ItemType Directory -Path $public,(Join-Path $root 'fixture') -Force | Out-Null
+Copy-Item './native-upstream/SpinePet/src/SpinePet/Views/MainWindow.xaml' -Destination (Join-Path $root 'MainWindow.xaml')
 # Explicit public inputs only. Never expose a checkout's .git or runner credentials.
 Copy-Item ./spine.html,./azurlane-stage.html -Destination $public
 New-Item -ItemType Directory -Path (Join-Path $public 'assets') -Force | Out-Null

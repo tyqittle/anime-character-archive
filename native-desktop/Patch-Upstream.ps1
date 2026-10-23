@@ -91,53 +91,8 @@ $universalApp = $universalApp.Replace($showHook,$showHook + "`n" + '            
 # Expose a real in-app updater control on the EXISTING selection panel.
 # Directly running Update.exe is not the Velopack check-updates UI.
 $windowXaml = Join-Path $UpstreamRoot 'SpinePet/src/SpinePet/Views/MainWindow.xaml'
+& (Join-Path $PSScriptRoot 'build/Apply-WindowLayout.ps1') -WindowXaml $windowXaml
 $windowText = [System.IO.File]::ReadAllText($windowXaml).Replace("`r`n", "`n")
-$originalExit = @'
-                                 <Button Grid.Column="2"
-                                         Width="44"
-                                         Height="24"
-                                         MinHeight="24"
-                                         Margin="8,0,0,0"
-                                         Padding="4,0"
-                                         Content="Exit"
-                                         Style="{StaticResource QuietButtonStyle}"
-                                         VerticalAlignment="Center"
-                                         x:Name="ExitButton"
-                                         ToolTip="Exit SpinePet completely"
-                                         AutomationProperties.Name="Exit application" />
-'@
-$withUpdate = @'
-                                 <StackPanel Grid.Column="2"
-                                             Orientation="Vertical"
-                                             VerticalAlignment="Center"
-                                             Margin="5,0,0,0">
-                                     <Button x:Name="UniversalCatalogButton"
-                                             Width="76" Height="24" Margin="0,0,0,3"
-                                             Padding="4,0" Content="网页选角"
-                                             Style="{StaticResource QuietButtonStyle}"
-                                             AutomationProperties.Name="Choose any website animation" />
-                                     <Button x:Name="ManualUpdateButton"
-                                             Width="76" Height="24"
-                                             Margin="0,0,0,3"
-                                             Padding="4,0"
-                                             Content="检查更新"
-                                             Style="{StaticResource QuietButtonStyle}"
-                                             AutomationProperties.Name="Check for updates" />
-                                     <Button Width="76" Height="24"
-                                             Padding="4,0"
-                                             Content="Exit"
-                                             Style="{StaticResource QuietButtonStyle}"
-                                             x:Name="ExitButton"
-                                             ToolTip="Exit SpinePet completely"
-                                             AutomationProperties.Name="Exit application" />
-                                 </StackPanel>
-'@
-$originalExit = $originalExit.Replace("`r`n", "`n")
-$withUpdate = $withUpdate.Replace("`r`n", "`n")
-if ([regex]::Matches($windowText,[regex]::Escape($originalExit)).Count -ne 1) {
-    throw 'Pinned upstream main-window Update button insertion anchor mismatch'
-}
-$windowText = $windowText.Replace($originalExit,$withUpdate)
 # Stable attachment points for the typed web-character library controller.
 $libraryAnchor = '                            <Grid Grid.Row="2">' + "`n" + '                                <ListBox x:Name="CharacterCards"'
 $settingsAnchor = '                    <!-- Right big column: settings scroll plus the finish button below it. -->' + "`n" + '                    <Grid Grid.Column="1">'

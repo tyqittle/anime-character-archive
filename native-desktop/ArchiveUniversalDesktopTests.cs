@@ -13,6 +13,61 @@ namespace SpinePet.Tests;
 // Profiles and public-only virtual host roots are unique to this test run.
 public sealed class ArchiveUniversalDesktopTests
 {
+    [Theory]
+    [InlineData(640,560,1)]
+    [InlineData(640,560,1.25)]
+    [InlineData(800,640,1.5)]
+    [InlineData(1020,720,2)]
+    public Task GlobalCommandsRemainVisibleAndClickableInBothLibraryTabs(double width,double height,double textScale)=>Sta(async()=>{
+        var document=System.Xml.Linq.XDocument.Load(Path.Combine(TestRoot,"MainWindow.xaml"));
+        var root=document.Root!;
+        root.SetAttributeValue("Icon",null); // The test host has no application icon resource.
+        root.SetAttributeValue(System.Xml.Linq.XNamespace.Xmlns+"views",
+            "clr-namespace:SpinePet.Views;assembly=SpinePet");
+        var window=(System.Windows.Window)System.Windows.Markup.XamlReader.Parse(document.ToString());
+        window.Width=width;window.Height=height;window.Topmost=false;window.ShowInTaskbar=false;
+        string folder=Path.Combine(TestRoot,"layout-"+Guid.NewGuid().ToString("N"));
+        Directory.CreateDirectory(folder);
+        try
+        {
+            var toolbar=(System.Windows.Controls.WrapPanel)window.FindName("ArchiveWindowToolbar");
+            foreach(var button in toolbar.Children.OfType<System.Windows.Controls.Button>())button.FontSize=12*textScale;
+            var libraryHost=(System.Windows.Controls.Grid)window.FindName("ArchiveCharacterLibraryHost");
+            var settingsHost=(System.Windows.Controls.Grid)window.FindName("ArchiveCharacterSettingsHost");
+            var library=ArchiveWebLibrary.Load(Path.Combine(folder,"library.json"),Path.Combine(folder,"none"));
+            library.Put(new("fixture","role","Layout sample"));
+            using var panel=new ArchiveWebLibraryPanel(libraryHost,settingsHost,library,
+                _=>Task.CompletedTask,_=>{},_=>{},_=>null);
+            window.Show();window.UpdateLayout();await Task.Delay(60);
+            var content=(System.Windows.FrameworkElement)window.Content;
+            foreach(int tab in new[]{0,1})
+            {
+                libraryHost.Children.OfType<System.Windows.Controls.TabControl>().Single().SelectedIndex=tab;
+                window.UpdateLayout();
+                foreach(string name in new[]{"UniversalCatalogButton","ManualUpdateButton","ExitButton"})
+                {
+                    var button=(System.Windows.Controls.Button)window.FindName(name);
+                    Assert.True(button.IsVisible&&button.IsHitTestVisible,name+" is unavailable");
+                    var bounds=button.TransformToAncestor(content).TransformBounds(new System.Windows.Rect(button.RenderSize));
+                    Assert.True(bounds.Left>=0&&bounds.Top>=0&&bounds.Right<=content.ActualWidth+1&&
+                        bounds.Bottom<=content.ActualHeight+1,name+" is clipped by the window");
+                    Assert.True(button.ActualHeight+1>=button.DesiredSize.Height,name+" is clipped vertically");
+                    var hit=content.InputHitTest(new System.Windows.Point(bounds.Left+bounds.Width/2,bounds.Top+bounds.Height/2))
+                        as System.Windows.DependencyObject;
+                    Assert.True(hit==button||(hit!=null&&button.IsAncestorOf(hit)),name+" is covered by settings");
+                }
+                var tools=(System.Windows.Controls.WrapPanel)window.FindName("ArchiveLibraryToolbar");
+                foreach(var tool in tools.Children.OfType<System.Windows.FrameworkElement>())
+                {
+                    var bounds=tool.TransformToAncestor(tools).TransformBounds(new System.Windows.Rect(tool.RenderSize));
+                    Assert.True(bounds.Left>=-1&&bounds.Right<=tools.ActualWidth+1&&
+                        bounds.Bottom<=tools.ActualHeight+1,"Library action is clipped");
+                }
+            }
+        }
+        finally {window.Close();Directory.Delete(folder,true);}
+    });
+
     [Fact]
     public void LibraryPersistsEveryModelAndUsesGameAndIdAsIdentity()
     {
