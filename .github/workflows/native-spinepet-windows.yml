@@ -73,6 +73,12 @@ jobs:
           dotnet publish ./native-upstream/SpinePet/src/SpinePet/SpinePet.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=false -p:DebugSymbols=false -p:DebugType=None -o ./native-dist/app
           if ($LASTEXITCODE -ne 0) { throw 'Native SpinePet publish failed' }
           if (-not (Test-Path ./native-dist/app/SpinePet.exe)) { throw 'Missing native executable' }
+      - name: Prepare signed Microsoft WebView2 dependency
+        shell: pwsh
+        run: '& ./native-desktop/build/Prepare-WebViewRuntime.ps1'
+      - name: Test universal native composition with actual website engines
+        shell: pwsh
+        run: '& ./native-desktop/build/Test-UniversalDesktop.ps1'
       - name: Smoke-test real c015 resource download and atlas page resolution
         shell: pwsh
         run: '& ./native-desktop/build/Test-NativeResources.ps1'
@@ -190,7 +196,11 @@ jobs:
           assert not list(root.rglob('*.ps1'))
           assert not list(root.rglob('*.cmd'))
           exes=list(root.rglob('*.exe'))
-          assert len(exes)==1 and exes[0].name=='SpinePet.exe', f'Unexpected executables: {exes}'
+          allowed={'app/SpinePet.exe','app/Dependencies/MicrosoftEdgeWebview2Setup.exe'}
+          assert {p.relative_to(root).as_posix() for p in exes}==allowed, f'Unexpected executables: {exes}'
+          helper=root/'app/Dependencies/MicrosoftEdgeWebview2Setup.exe'
+          receipt=helper.with_suffix('.sha256').read_text(encoding='ascii').strip()
+          assert hashlib.sha256(helper.read_bytes()).hexdigest().lower()==receipt.lower(), 'WebView2 helper checksum mismatch'
           print(f'Verified {len(lines)} packaged file checksums.')
           PY
       - name: Install independent ClamAV scanner

@@ -39,6 +39,7 @@ async function refreshSaved(){try{
 }catch(e){status('浏览器缓存不可用：'+e.message,true)}}
 function stopWatchdog(){if(watchdog){clearTimeout(watchdog);watchdog=null}}
 function status(message,error=false){
+ if(error)window.ArchiveDesktopBridge?.fail(message);
  $('status').textContent=message;
  $('status').classList.toggle('error',error);
  const loading=!error && /正在|已找到经版本检测的本地缓存|检测到.*Spine 版本|已读取骨骼/.test(message) && !message.startsWith('正在播放：');

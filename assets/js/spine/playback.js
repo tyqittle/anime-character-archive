@@ -1,5 +1,6 @@
 'use strict';
 async function playCharacter(c){
+ window.ArchiveDesktopBridge?.loading();
  if(c.engine==='cubism'||c.gameId==='azurlane'){playAzurLane(c);return}
  cancelCharacterDownload();
  const current=sequence,controller=new AbortController();

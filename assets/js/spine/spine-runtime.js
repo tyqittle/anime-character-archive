@@ -118,6 +118,7 @@ function patchSpine38Lifecycle(){
   const result=draw.apply(this,args);
   if(!this._archiveDisposed){
    if(typeof fitRenderedSpinePortrait==='function')fitRenderedSpinePortrait(this);
+   window.ArchiveDesktopBridge?.afterRender(this.canvas);
    if(typeof recordSpineFrame==='function')recordSpineFrame(this);
   }
   return result;
@@ -238,7 +239,7 @@ async function show(options,title,onError){
    reject(error);
   };
   const transparentDesktop=new URLSearchParams(location.search).has('desktop');
-  const config={...normalized,showControls:false,controlBones:false,frame:(p)=>recordSpineFrame(p),draw:(p)=>fitRenderedSpinePortrait(p),update:(p)=>applySharpSpineCamera(p),premultipliedAlpha:options.premultipliedAlpha??true,
+  const config={...normalized,showControls:false,controlBones:false,frame:(p)=>recordSpineFrame(p),draw:(p)=>{fitRenderedSpinePortrait(p);window.ArchiveDesktopBridge?.afterRender(p.canvas)},update:(p)=>applySharpSpineCamera(p),premultipliedAlpha:options.premultipliedAlpha??true,
    alpha:transparentDesktop,backgroundColor:transparentDesktop?'#00000000':'#142238ff',
    fullScreenBackgroundColor:transparentDesktop?'#00000000':'#142238ff',
    preserveDrawingBuffer:transparentDesktop,showLoading:!transparentDesktop,

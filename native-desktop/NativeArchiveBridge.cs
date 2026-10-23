@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 // A small integration extension for the original GPL My_SpinePet Windows app.
-// The existing Direct3D11/DirectComposition rendering engine is NOT modified.
+// Legacy native imports and the catalog-driven WebView2 composition host share startup.
 using System.IO;
 using System.Net.Http;
 using System.Text;
@@ -28,8 +28,8 @@ public sealed partial class App
 
     private readonly SemaphoreSlim _archiveShowGate = new(1, 1);
     private CharacterResourceDiscoveryService? _archiveDiscovery;
-    private sealed record ArchiveShowRequest(string ResourceName, string GameId = "nikke");
-    private sealed record ArchiveCharacterRef(string GameId, string ResourceName);
+    private sealed record ArchiveShowRequest(string ResourceName, string GameId = "nikke", string Host = "native");
+    private sealed record ArchiveCharacterRef(string GameId, string ResourceName, string Host = "native");
 
     private static string ArchiveRequestPath =>
         Path.Combine(AppPaths.LocalDataDirectory, ArchiveRequestName);
@@ -38,6 +38,8 @@ public sealed partial class App
     // This is a strict identifier, NEVER a user-supplied path or download URL.
     private static ArchiveCharacterRef? ParseArchiveUrl(string? arg)
     {
+        var universal=ArchiveWebSelection.Parse(arg);
+        if(universal!=null)return new ArchiveCharacterRef(universal.Game,universal.Id,"webview2");
         if (string.IsNullOrWhiteSpace(arg) || arg.Length > 180) return null;
         // Strict protocol routing: no arbitrary paths, sources or query params.
         Match nikke = Regex.Match(arg,
@@ -66,7 +68,7 @@ public sealed partial class App
     private static void SaveArchiveRequest(ArchiveCharacterRef selection)
     {
         Directory.CreateDirectory(AppPaths.LocalDataDirectory);
-        var request = new ArchiveShowRequest(selection.ResourceName, selection.GameId);
+        var request = new ArchiveShowRequest(selection.ResourceName, selection.GameId, selection.Host);
         string temp = ArchiveRequestPath + "." + Guid.NewGuid().ToString("N") + ".tmp";
         try
         {
@@ -104,7 +106,7 @@ public sealed partial class App
                   "若拒绝，网站可能继续调用旧版程序并错误地拒绝 c113_01。\n";
             var answer = System.Windows.MessageBox.Show(
                 prompt +
-                "启用后，浏览器可以请求此程序下载经过来源验证的妮姬和棕色尘埃2 Spine 4.1 模型。\n" +
+                "启用后，浏览器可以请求此程序加载本站目录中的 Spine 多版本与 Cubism 动态立绘；旧原生导入链接继续兼容。\n" +
                 "此设置仅影响当前 Windows 用户，可随时在系统的默认应用设置中更改。",
                 "次元立绘 · 网站一键导入", MessageBoxButton.YesNo,
                 MessageBoxImage.Question);
@@ -134,6 +136,7 @@ public sealed partial class App
     private async Task RestoreArchiveCharactersAsync()
     {
         await RestoreCharactersAsync();
+        if(!File.Exists(ArchiveRequestPath))await RestoreUniversalDesktopAsync();
         await ShowArchiveRequestAsync();
     }
 
@@ -141,14 +144,24 @@ public sealed partial class App
     {
         if (_characterManager == null || _archiveDiscovery == null || IsShutdownRequested)
             return;
-        if (!await _archiveShowGate.WaitAsync(0)) return;
+        if (!await _archiveShowGate.WaitAsync(0))
+        {
+            _universalLoad?.Cancel();
+            return; // the latest atomic request is drained in finally
+        }
         try
         {
-            if (!File.Exists(ArchiveRequestPath)) return;
-            var request = JsonSerializer.Deserialize<ArchiveShowRequest>(
-                await File.ReadAllTextAsync(ArchiveRequestPath));
+            using var claimed=ArchiveRequestInbox.Claim(ArchiveRequestPath);
+            if(claimed==null)return;
+            var request = JsonSerializer.Deserialize<ArchiveShowRequest>(await claimed.ReadAsync());
             string id = request?.ResourceName ?? "";
             string game = request?.GameId ?? "nikke";
+            // The unique claimed file cannot consume a newer browser request.
+            if(request?.Host=="webview2")
+            {
+                await ShowUniversalDesktopAsync(new ArchiveWebSelection(game,id));
+                return;
+            }
             bool supportedNikke = game == "nikke" &&
                 Regex.IsMatch(id, @"^c[0-9]{3,6}(?:_[0-9]{2})?$",
                     RegexOptions.CultureInvariant);
@@ -158,7 +171,6 @@ public sealed partial class App
             if (!supportedNikke && !supportedBd2)
             {
                 AppLogger.Write(nameof(App), "archive-invalid-game-or-character-id");
-                File.Delete(ArchiveRequestPath);
                 return;
             }
 
@@ -179,7 +191,6 @@ public sealed partial class App
 
             // Use upstream My_SpinePet's built-in animation rendering and state.
             await _characterManager.ShowCharacterAsync(character);
-            File.Delete(ArchiveRequestPath);
             AppLogger.Write(nameof(App), $"archive-one-click-shown {expectedSkeleton}");
         }
         catch (Exception ex)
@@ -192,6 +203,8 @@ public sealed partial class App
         finally
         {
             _archiveShowGate.Release();
+            if(!IsShutdownRequested&&File.Exists(ArchiveRequestPath))
+                Dispatcher.BeginInvoke(new Action(()=>_ = ShowArchiveRequestAsync()));
         }
     }
 

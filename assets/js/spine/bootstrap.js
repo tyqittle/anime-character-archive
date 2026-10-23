@@ -77,6 +77,7 @@ async function fetchAnimationManifest(url){
   }
   status('已载入 '+allCharacters.length+' 条动画索引，覆盖 '+Object.keys(accepted).length+
     ' 个在线游戏目录。点击角色即可播放，模型按需下载。');
+  window.ArchiveDesktopBridge?.catalogReady();
   if(hit&&chosen())playCharacter(chosen());
  }catch(e){
   status('角色索引初始化失败：'+(e.message||String(e))+'。可重新加载或通过本地文件导入。',true);

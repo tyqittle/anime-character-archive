@@ -62,6 +62,32 @@ Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeArchiveAssetCache.cs') -D
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeBrownDust2Bridge.cs') -Destination (Join-Path $projectDir 'NativeBrownDust2Bridge.cs') -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeBrownDust2Voice.cs') -Destination (Join-Path $projectDir 'NativeBrownDust2Voice.cs') -Force
 Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'NativeBrownDust2WebMDecoder.cs') -Destination (Join-Path $projectDir 'NativeBrownDust2WebMDecoder.cs') -Force
+# Universal visual host is a typed module; copy source rather than generate behavior.
+foreach ($module in Get-ChildItem -LiteralPath (Join-Path $PSScriptRoot 'web') -Filter '*.cs') {
+    Copy-Item -LiteralPath $module.FullName -Destination $projectDir -Force
+}
+$universalApp = [IO.File]::ReadAllText($source)
+$catalogHook = '        _mainWindow.Show();'
+if ([regex]::Matches($universalApp,[regex]::Escape($catalogHook)).Count -ne 1) { throw 'Missing universal catalog UI hook' }
+$universalApp = $universalApp.Replace($catalogHook,'        InitializeUniversalCatalogButton();' + "`n" + $catalogHook)
+$shutdownHook = '        MainWindow? mainWindow = _mainWindow;'
+$shutdownStart = $universalApp.IndexOf('    private void PrepareForShutdown()')
+$shutdownEnd = $universalApp.IndexOf('    private static void SignalExistingInstance()', $shutdownStart)
+if ($shutdownStart -lt 0 -or $shutdownEnd -lt 0) { throw 'Missing universal shutdown boundary' }
+$shutdown = $universalApp.Substring($shutdownStart,$shutdownEnd-$shutdownStart)
+if ([regex]::Matches($shutdown,[regex]::Escape($shutdownHook)).Count -ne 1) {
+    throw 'Missing unique universal shutdown hook'
+}
+$shutdown = $shutdown.Replace($shutdownHook,'        StopUniversalDesktop();' + "`n" + $shutdownHook)
+$universalApp = $universalApp.Substring(0,$shutdownStart)+$shutdown+$universalApp.Substring($shutdownEnd)
+$hideHook = '            hideAll: () => DispatchToUi(_characterManager.HideAll),'
+if ([regex]::Matches($universalApp,[regex]::Escape($hideHook)).Count -ne 1) { throw 'Missing hide-all hook' }
+$universalApp = $universalApp.Replace($hideHook,
+    '            hideAll: () => DispatchToUi(() => { _characterManager.HideAll(); HideUniversalDesktop(); }),')
+$showHook = '            await _characterManager.ShowAllAsync();'
+if ([regex]::Matches($universalApp,[regex]::Escape($showHook)).Count -ne 1) { throw 'Missing show-all hook' }
+$universalApp = $universalApp.Replace($showHook,$showHook + "`n" + '            ShowUniversalDesktop();')
+[IO.File]::WriteAllText($source,$universalApp,[Text.UTF8Encoding]::new($false))
 # Expose a real in-app updater control on the EXISTING selection panel.
 # Directly running Update.exe is not the Velopack check-updates UI.
 $windowXaml = Join-Path $UpstreamRoot 'SpinePet/src/SpinePet/Views/MainWindow.xaml'
@@ -85,6 +111,11 @@ $withUpdate = @'
                                              Orientation="Vertical"
                                              VerticalAlignment="Center"
                                              Margin="5,0,0,0">
+                                     <Button x:Name="UniversalCatalogButton"
+                                             Width="76" Height="24" Margin="0,0,0,3"
+                                             Padding="4,0" Content="网页选角"
+                                             Style="{StaticResource QuietButtonStyle}"
+                                             AutomationProperties.Name="Choose any website animation" />
                                      <Button x:Name="ManualUpdateButton"
                                              Width="76" Height="24"
                                              Margin="0,0,0,3"
@@ -122,7 +153,7 @@ $proj = Join-Path $projectDir 'SpinePet.csproj'
 $projText = [System.IO.File]::ReadAllText($proj)
 $ref = '    <PackageReference Include="Vortice.D3DCompiler"'
 if ([regex]::Matches($projText,[regex]::Escape($ref)).Count -ne 1) { throw 'Upstream NuGet reference anchor missing' }
-$projText = $projText.Replace($ref, '    <PackageReference Include="Velopack" Version="1.2.161" />' + "`r`n" + '    <PackageReference Include="Concentus" Version="2.2.2" />' + "`r`n" + $ref)
+$projText = $projText.Replace($ref, '    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3650.58" />' + "`r`n" + '    <PackageReference Include="Velopack" Version="1.2.161" />' + "`r`n" + '    <PackageReference Include="Concentus" Version="2.2.2" />' + "`r`n" + $ref)
 [System.IO.File]::WriteAllText($proj,$projText,[System.Text.UTF8Encoding]::new($false))
 
 # Persistent user models must not live inside Velopack's replaceable current/ folder.
