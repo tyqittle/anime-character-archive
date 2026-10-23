@@ -9,7 +9,18 @@ vm.runInContext(src.slice(0,src.indexOf('const SAME_ORIGIN=')),ctx);
 const valid=(c,url=c.modelUrl,name=c.skinCode)=>{ctx.c=c;ctx.url=url;ctx.n=name;return vm.runInContext('modelUrlFor(n,url,c.id)',ctx)};
 test('7 mature Cubism models have unique identities and no fake previews',()=>{
  assert.equal(chars.length,7);assert.equal(new Set(chars.map(x=>x.id)).size,7);assert.equal(chars.filter(x=>x.gameId==='lovecube').length,6);
- for(const c of chars){assert.equal(c.engine,'cubism');assert.ok(c.textureBytes>700000);assert.equal(c.playbackStatus,'not-verified');assert.equal(c.status,'indexed-unverified');assert.ok(!c.preview&&!c.previewSha256)}
+ for(const c of chars){
+  assert.equal(c.engine,'cubism');assert.ok(c.textureBytes>700000);
+  if(c.preview){
+   assert.equal(c.previewSource,'matching-live2d-animation-frame');
+   assert.match(c.previewSha256,/^[a-f0-9]{64}$/);
+   assert.deepEqual(Array.from(c.previewSourceIdentity||[]),['cubism','','','',c.modelUrl,'','']);
+   assert.ok(fs.existsSync(new URL('../'+c.preview.replace(/^\.\//,''),import.meta.url)),'Missing real model preview: '+c.id);
+  }else{
+   assert.equal(c.playbackStatus,'not-verified');assert.equal(c.status,'indexed-unverified');
+   assert.ok(!c.previewSha256);
+  }
+ }
  assert.ok(chars.find(x=>x.gameId==='foxhimezero').motionCount>0);assert.ok(chars.filter(x=>x.gameId==='lovecube').every(x=>x.motionCount===0));
 });
 test('exact source whitelist rejects floating refs and wrong scene/skin',()=>{
