@@ -129,6 +129,13 @@ $method = @'
             AppLogger.Write(nameof(NativeCharacterRenderHost),
                 $"first-load-monitor-fit id={state.Config.Id} " +
                 $"scale={state.CurrentScale:F3} dx={dx:F0} dy={dy:F0}");
+            // Persist the corrected position. Otherwise the next launch
+            // restores the old bottom-cropped coordinates.
+            CharacterPositionCommitted?.Invoke(
+                state.Config.Id, state.Config.PositionX, state.Config.PositionY);
+            if (fit < 0.999f)
+                CharacterScaleChanged?.Invoke(
+                    state.Config.Id, state.MaxScale, state.CurrentScale);
         }
     }
 
@@ -138,5 +145,40 @@ if ([regex]::Matches($c,[regex]::Escape($methodAnchor)).Count -ne 1) {
  throw 'Pinned upstream viewport-fit method anchor mismatch'
 }
 $c = $c.Replace($methodAnchor,$method + $methodAnchor)
+# "Reset position" previously returned the character to a fixed bottom
+# anchor without checking real animated geometry, undoing the full-body fix.
+# Re-fit the CURRENT character envelope and publish its corrected coordinates.
+$resetBefore = @'
+        if (state.Config.PositionX == left &&
+            state.Config.PositionY == top)
+        {
+            return;
+        }
+
+        MoveCharacter(characterId, left, top);
+        _frameRenderer.Commit();
+        CharacterPositionCommitted?.Invoke(
+            characterId,
+            state.Config.PositionX,
+            state.Config.PositionY);
+'@
+$resetAfter = @'
+        if (state.Config.PositionX != left ||
+            state.Config.PositionY != top)
+            MoveCharacter(characterId, left, top);
+        RenderFrame(0);
+        FitNewlyLoadedCharacterToMonitor(state);
+        _frameRenderer.Commit();
+        CharacterPositionCommitted?.Invoke(
+            characterId,
+            state.Config.PositionX,
+            state.Config.PositionY);
+'@
+$resetBefore = $resetBefore.Replace([string][char]13, '')
+$resetAfter = $resetAfter.Replace([string][char]13, '')
+if ([regex]::Matches($c,[regex]::Escape($resetBefore)).Count -ne 1) {
+    throw 'Pinned upstream reset-to-monitor-fit anchor mismatch'
+}
+$c = $c.Replace($resetBefore,$resetAfter)
 [System.IO.File]::WriteAllText($engine,$c,[System.Text.UTF8Encoding]::new($false))
 Write-Host 'Native imported characters now fit the actual monitor on first load.'
