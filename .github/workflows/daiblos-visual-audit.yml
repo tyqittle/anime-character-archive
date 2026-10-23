@@ -1,0 +1,38 @@
+name: Audit Daiblos model visual integrity
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/audit_daiblos_visual_browser.mjs'
+      - '.github/workflows/daiblos-visual-audit.yml'
+permissions:
+  contents: read
+jobs:
+  visual-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser dependencies
+        run: npm install --no-save --no-package-lock playwright-core@1.56.1 pngjs@7.0.0
+      - name: Start local site
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/daiblos-site.log 2>&1 &
+          sleep 2
+      - name: Capture and classify matching character frames
+        run: node scripts/audit_daiblos_visual_browser.mjs ${{ matrix.shard }} 10
+      - name: Save full result and suspect screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: daiblos-visual-${{ matrix.shard }}
+          path: /tmp/daiblos-visual-${{ matrix.shard }}/
+          if-no-files-found: warn
