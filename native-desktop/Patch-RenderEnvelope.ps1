@@ -131,14 +131,31 @@ $oldRaster = @'
 '@
 $newRaster = @'
                     float halfCell = cellSize * 0.38f / pixelScale;
-                    if (IsVisiblePoint(triangle, skeletonX, skeletonY) ||
+                    bool hit = IsVisiblePoint(triangle, skeletonX, skeletonY) ||
                         IsVisiblePoint(triangle, skeletonX-halfCell, skeletonY-halfCell) ||
                         IsVisiblePoint(triangle, skeletonX+halfCell, skeletonY-halfCell) ||
                         IsVisiblePoint(triangle, skeletonX-halfCell, skeletonY+halfCell) ||
-                        IsVisiblePoint(triangle, skeletonX+halfCell, skeletonY+halfCell))
+                        IsVisiblePoint(triangle, skeletonX+halfCell, skeletonY+halfCell);
+                    // Thin lower-leg meshes can be much narrower than the
+                    // 8px region cell. Five samples alone can miss a WHOLE
+                    // row of opaque pixels and give the desktop the click.
+                    // Run bounded 4x4 supersampling only for cells the
+                    // ordinary fast path judged empty.
+                    if (!hit)
                     {
-                        scratch.Grid[gridIndex] = true;
+                        const int Subdivisions = 4;
+                        float subStep = cellSize / (float)Subdivisions / pixelScale;
+                        for (int sy = 0; sy < Subdivisions && !hit; sy++)
+                        for (int sx = 0; sx < Subdivisions && !hit; sx++)
+                        {
+                            float ox = (sx - (Subdivisions-1)*0.5f) * subStep;
+                            float oy = (sy - (Subdivisions-1)*0.5f) * subStep;
+                            hit = IsVisiblePoint(triangle,
+                                skeletonX + ox, skeletonY + oy);
+                        }
                     }
+                    if (hit)
+                        scratch.Grid[gridIndex] = true;
 '@
 $oldRaster = $oldRaster.Replace("`r`n","`n")
 $newRaster = $newRaster.Replace("`r`n","`n")
@@ -178,4 +195,15 @@ if ([regex]::Matches($regionText,[regex]::Escape($workAreaAnchor)).Count -ne 1) 
 }
 $regionText = $regionText.Replace($workAreaAnchor, 'screen.Bounds,')
 [System.IO.File]::WriteAllText($region,$regionText,[System.Text.UTF8Encoding]::new($false))
-Write-Host 'Native surface, full-monitor hit silhouette, and click-to-voice callbacks corrected.'
+# Transparent input pixels use the SAME low-alpha portions visible on the
+# desktop, rather than discarding delicate 4..15/255 lace/limb pixels.
+$tex = Join-Path $UpstreamRoot 'SpinePet/src/SpinePet/Rendering/Native/NativeTextureSource.cs'
+$texText = [System.IO.File]::ReadAllText($tex)
+if ([regex]::Matches($texText,[regex]::Escape('opacity < 16f / 255f')).Count -ne 1 -or
+    [regex]::Matches($texText,[regex]::Escape('pixels[pixelIndex * 4 + 3] >= 16')).Count -ne 1) {
+    throw 'Pinned upstream alpha hit-mask threshold anchor mismatch'
+}
+$texText = $texText.Replace('opacity < 16f / 255f','opacity < 4f / 255f')
+$texText = $texText.Replace('pixels[pixelIndex * 4 + 3] >= 16','pixels[pixelIndex * 4 + 3] >= 4')
+[System.IO.File]::WriteAllText($tex,$texText,[System.Text.UTF8Encoding]::new($false))
+Write-Host 'Native combined-skin bounds, full monitor and oversampled translucent hit silhouettes corrected.'
