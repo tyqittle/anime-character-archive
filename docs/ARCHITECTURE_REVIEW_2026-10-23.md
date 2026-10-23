@@ -42,16 +42,19 @@
 
 | 验收 | 结果 |
 | --- | --- |
-| [基础检查](https://github.com/tyqittle/anime-character-archive/actions/runs/39896144871) | 54 项 Node 行为测试、29 项 Python 测试通过，包含完整 plan → convert → publish CLI 和源版本变更拒绝用例 |
+| [基础检查](https://github.com/tyqittle/anime-character-archive/actions/runs/39896991489) | 62 项 Node 行为测试、30 项 Python 测试通过，包含完整 plan → convert → publish CLI 和源版本变更拒绝用例 |
 | [真实图鉴浏览器回归](https://github.com/tyqittle/anime-character-archive/actions/runs/39894841783) | 全目录身份、去重、分页、图片解码和链接通过 |
 | [碧蓝航线播放](https://github.com/tyqittle/anime-character-archive/actions/runs/39896144785) / [其他游戏播放](https://github.com/tyqittle/anime-character-archive/actions/runs/39896144761) | 真实浏览器播放检查通过 |
 | [原生 Windows 完整构建](https://github.com/tyqittle/anime-character-archive/actions/runs/39894156322) | 七段构建脚本抽取后的实际构建、BD2 语音与资源、安装器、安全扫描和发布检查通过 |
+| [内容到站点发布](https://github.com/tyqittle/anime-character-archive/actions/runs/39896992346) | 显式请求构建及提交包含关系核验成功；[Pages 实际部署](https://github.com/tyqittle/anime-character-archive/actions/runs/39897042938) 全部通过 |
 | [统一预览流水线](https://github.com/tyqittle/anime-character-archive/actions/runs/39896144807) | 8 个分片和合并发布成功；126 项队列中 99 张合格预览入库，25 项渲染失败、2 项质量拒绝均保留诊断 |
 
 运行中还修正了单字符模型文件名被旧校验误拒绝的问题，并让采集器使用页面明确的错误状态结束等待。少女前线妖精模型已在真实采集中恢复出图。流水线成功表示编排、验证和结果发布完成，不代表所有外部源资源均可播放。
 
-## 部署边界仍待闭环
+## 数据发布到站点的闭环
 
-当前预览发布使用仓库 `GITHUB_TOKEN` 写回 main，不能依赖该次 push 自动触发 Pages 分支构建。[GitHub 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#troubleshooting-publishing-from-a-branch)明确这一限制。
+机器人使用 `GITHUB_TOKEN` 写回 main 后，不会自动触发 Pages 分支构建，这是 [GitHub 已文档化的限制](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#troubleshooting-publishing-from-a-branch)。
 
-应将静态数据和预览发布后的部署收敛到显式的 Pages artifact 发布链，并验证所部署的 commit SHA。当前连接没有 Pages 管理权限，无法核实或切换站点 Source 设置；本轮没有把未经验证的部署迁移加入默认流程。后续代码提交可能顺带部署新数据，但不应把这种偶然触发当作长期更新机制。
+`deploy-content.yml` 现监听统一预览、静态扩充及旧手动委托流程的成功结束，使用 `pages: write` [显式请求 Pages 构建](https://docs.github.com/en/rest/pages/pages#request-a-github-pages-build)。共享 `request_pages_build.cjs` 检查既有 main 根目录发布配置，等待实际部署包含请求的提交；旧成功记录不能冒充新数据已上线，并发更新可由包含原提交的新构建完成。
+
+部署流程只检出受信 main，不消费源工作流的 artifact，不切换 Pages 设置；如果以后将站点改为 Actions artifact 发布或换分支，必须显式迁移这份契约。覆盖旧构建、并发新构建、失败、超时、权限不足和源配置变化的测试纳入默认 CI。

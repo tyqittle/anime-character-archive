@@ -7,7 +7,7 @@
 - **数据注册**：`data/animation-catalogs.json` 只登记目录；模型来源、引擎、皮肤和预览状态保留在各目录 JSON 中。
 - **浏览器**：`assets/js/shared/catalog-registry.js` 是无 DOM 的显式服务。剧场 bootstrap 读取注册表，目录 UI 由模型数据补充新分组。Spine/Cubism 仍隔离渲染。
 - **内容处理**：`catalog_registry.py/mjs` 读取同一注册表；`preview_policy.py` 校验同模型路径/尺寸/摘要；`preview_frame_pipeline.py` 只负责图像处理；`preview_repository.py` 只负责校验、状态转换与文件发布。
-- **CI**：`preview-pipeline.yml` 统一规划待处理 ID、分片采集、转码、校验和发布。游戏命名工作流仅保留手动兼容入口。
+- **CI**：`preview-pipeline.yml` 统一规划待处理 ID、分片采集、转码、校验和发布。游戏命名工作流仅保留手动兼容入口。`deploy-content.yml` 在内容发布成功后显式请求 Pages 构建，核验实际部署提交。
 - **桌面**：Electron 在 `desktop/`；原生应用适配在 `native-desktop/`。Windows YAML 编排步骤，构建实现与验证脚本位于 `native-desktop/build/`。
 
 ## 预览数据流
@@ -24,6 +24,12 @@ flowchart TD
 新截图统一 360×420；历史 480×360 截图保留并校验摘要。新增预览只来自对应模型，不允许借用其他角色或皮肤。网络或渲染失败保留在缺失队列，并记录统一错误类型。
 
 发布时使用截图报告中的来源标识与最新目录比较；模型来源更新后，旧帧不得覆盖新记录。所有分片成功完成后才进入发布步骤；模型级失败有报告，不冒充成功。
+
+## 内容上线
+
+预览、静态扩充以及手动兼容流程成功后，通过 `workflow_run` 触发共同的站点发布。机器人 push 本身不会触发 Pages 分支构建，因此不能省略这条依赖。
+
+`request_pages_build.cjs` 使用现有 main 根目录 Pages 配置，请求构建并等待包含目标提交的实际成功结果。旧构建、失败或超时都不能视为上线。切换 Pages Source 时，应同时迁移这份契约与回归测试。
 
 ## 新增游戏
 

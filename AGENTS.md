@@ -10,4 +10,5 @@ This is a GitHub Pages archive with separate browser, content-processing and Win
 - Keep old URLs, model IDs and browser storage keys compatible. Never replace missing frames with another model.
 - Test behavior and source-change races. Text/source assertions are supplementary integration checks.
 - Run `npm test`, `npm run check`, and `npm run test:python`. Renderer or gesture changes also require the real browser regressions. Native behavior changes require Windows tests.
+- Automated content publishers must have an explicit site-publication edge in `deploy-content.yml`; a bot push alone does not publish Pages. Keep deployment source verification and its tests when changing Pages configuration.
 - Do not edit generated audit JSON to turn failures into successes.
