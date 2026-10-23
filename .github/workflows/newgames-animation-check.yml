@@ -37,6 +37,7 @@ jobs:
       - name: Compare UV mapping on coherent and fragmented Spine rigs
         if: always()
         run: |
+          python -m pip install -r requirements-dev.txt
           node scripts/diagnose_daiblos_atlas.mjs
           python - <<'PY'
           from pathlib import Path
