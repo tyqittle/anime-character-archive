@@ -32,11 +32,10 @@
       "gameId": "foxhimezero",
       "sourceRepo": "Eikanya/Live2d-model",
       "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
-      "sourceFolder": "galgame live2d/Fox Hime Zero/ruri_miko",
-      "selection": "adult Ruri shrine outfit",
-      "indexed": 1,
-      "fileChecked": 1,
-      "playbackVerified": 0
+      "sourceFolder": "galgame live2d/Fox Hime Zero",
+      "selection": "All five matched settings within the pinned source scope; browser evidence is tracked separately",
+      "indexed": 5,
+      "fileChecked": 5
     }
   ],
   "characters": [

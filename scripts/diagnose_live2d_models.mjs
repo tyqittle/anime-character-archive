@@ -78,6 +78,7 @@ try{
     const actions=await page.locator('#animationPicker option').count();
     if(actions>1){
      await page.locator('#zoomIn').click();
+     await child.waitForFunction(()=>zoom>1,null,{timeout:5000});
      const before=await child.evaluate(()=>({zoom,offsetX,offsetY}));
      await page.locator('#animationPicker').selectOption({index:1});
      await page.waitForTimeout(200);

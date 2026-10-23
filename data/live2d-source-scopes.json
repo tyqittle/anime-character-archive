@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "note": "Pinned source scopes for coverage audits. Unindexed source settings are candidates, not a count of missing unique characters; duplicate, incomplete and out-of-scope scenes require validation. Only requireComplete scopes are completeness gates.",
+  "scopes": [
+    {
+      "gameId": "foxhimezero",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "id": "foxhimezero",
+      "directory": "galgame live2d/Fox Hime Zero",
+      "catalog": "data/live2d-mature.json",
+      "name": "Fox Hime Zero",
+      "requireComplete": true,
+      "import": {
+        "idPrefix": "fh-",
+        "pattern": "^([a-z][a-z0-9_]*)/\\1\\.model3\\.json$",
+        "minimumTextureBytes": 650000,
+        "names": {
+          "ruri_miko": "瑠璃 · 巫女装",
+          "mori_miko": "Mori · 巫女装",
+          "mori_suit": "Mori · 常服",
+          "mori_mikoc": "Mori · mikoc",
+          "mori_mikocfs": "Mori · mikocfs"
+        }
+      }
+    },
+    {
+      "gameId": "girlsfrontline",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "id": "girlsfrontline",
+      "directory": "少女前线 girls Frontline/live2dnew"
+    },
+    {
+      "gameId": "girlscafegun",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "id": "girlscafegun",
+      "directory": "少女咖啡枪 girls cafe gun"
+    },
+    {
+      "gameId": "konosuba",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "id": "konosuba",
+      "directory": "为美好的世界献上祝福！Fantastic Days"
+    },
+    {
+      "gameId": "girldimension",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "id": "girldimension",
+      "directory": "少女次元"
+    },
+    {
+      "gameId": "sinsevendeadlysins",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "id": "sinsevendeadlysins",
+      "directory": "sin 七大罪～魔王崇拜～"
+    },
+    {
+      "gameId": "tokyonecro",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "id": "tokyonecro",
+      "directory": "凍京Nerco/l2d"
+    },
+    {
+      "gameId": "maidslife",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "id": "maidslife",
+      "directory": "galgame live2d/メイドさんのいる暮らしS",
+      "selection": "/(?:ele_[ab][0-4])/model\\.model3\\.json$"
+    },
+    {
+      "gameId": "lovecube",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "id": "lovecube",
+      "directory": "galgame live2d/LOVE³-LOVE CUBE-/live2d",
+      "selection": "_st0[12]_w\\.model3\\.json$"
+    },
+    {
+      "id": "touhoucannonball",
+      "gameId": "touhoucannonball",
+      "sourceRepo": "n0099/TouhouCannonBall-Live2d-Models",
+      "sourceCommit": "3c043b183be31cade537e299e47e158a2772184f",
+      "directory": ""
+    }
+  ]
+}
