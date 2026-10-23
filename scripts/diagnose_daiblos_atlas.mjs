@@ -1,4 +1,4 @@
-// Compare standard Spine 3.8 atlas UV patch with untouched vendor UV handling.
+// Compare the patched Spine 3.8 atlas handling against the original vendor runtime.\n// Keep included Daiblos rigs only; excluded Alps04 and Hades03 cannot load from the current catalog.
 // Diagnostic only: no application monkeypatch is committed or enabled for users.
 import {chromium} from 'playwright-core';
 import fs from 'node:fs';
@@ -6,7 +6,7 @@ import path from 'node:path';
 const browserPath=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'].find(fs.existsSync);
 if(!browserPath)throw Error('No Chromium browser');
 const all=JSON.parse(fs.readFileSync('data/spine-daiblos-core.json','utf8')).characters;
-const picks=['10010_skin_Alps03','10010_skin_Alps04','70050_skin_Hades03'];
+const picks=['10010_skin_Alps03','10010_skin_Alps05','30320_skin_Pelorovis03'];
 const output='/tmp/daiblos-uv-diagnostic';
 fs.mkdirSync(output,{recursive:true});
 const browser=await chromium.launch({headless:true,executablePath:browserPath,args:['--no-sandbox','--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
