@@ -26,7 +26,9 @@ public sealed partial class App
                 _mainWindow.FindName("ArchiveCharacterSettingsHost") is System.Windows.Controls.Grid settings)
                 _universalPanel=new(library,settings,UniversalLibrary,
                     selection=>ShowUniversalDesktopAsync(selection),HideUniversalCharacter,
-                    RemoveUniversalCharacter,selection=>_universalSelection==selection?_universalDesktop:null);
+                    RemoveUniversalCharacter,selection=>_universalSelection==selection?_universalDesktop:null,
+                    _mainWindow.FindName("CharacterSearchBox") as System.Windows.Controls.TextBox,
+                    _mainWindow.FindName("CharacterCountText") as System.Windows.Controls.TextBlock);
         }
         catch(Exception error)
         {AppLogger.Write(nameof(App),"universal-library-load "+error.Message);

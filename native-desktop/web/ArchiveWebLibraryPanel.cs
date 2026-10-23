@@ -17,29 +17,41 @@ internal sealed class ArchiveWebLibraryPanel : IDisposable
     private readonly C.TabControl _tabs=new();
     private readonly C.TextBox _search=new(){Margin=new W.Thickness(0,0,0,8),ToolTip="������ҳ��ɫ����Ϸ��ģ�� ID"};
     private readonly C.TextBlock _count=new();
+    private readonly C.TextBlock? _nativeCount;
+    private readonly C.TextChangedEventHandler _searchChanged;
     private bool _refreshing;
     internal C.ListBox List=>_list;
     internal C.Panel Settings=>_settings;
     internal ArchiveWebLibraryPanel(C.Grid libraryHost,C.Grid settingsHost,ArchiveWebLibrary library,
         Func<ArchiveWebSelection,Task> show,Action<ArchiveWebSelection> hide,
-        Action<ArchiveWebSelection> remove,Func<ArchiveWebSelection,ArchiveWebViewHost?> host)
+        Action<ArchiveWebSelection> remove,Func<ArchiveWebSelection,ArchiveWebViewHost?> host,
+        C.TextBox? search=null,C.TextBlock? nativeCount=null)
     {
         _library=library;_show=show;_hide=hide;_remove=remove;_host=host;
+        _nativeCount=nativeCount;
+        if(search!=null)_search=search;
         var native=new C.Grid();
         var children=libraryHost.Children.Cast<W.UIElement>().ToArray();
         libraryHost.Children.Clear();foreach(var child in children)native.Children.Add(child);
         var web=new C.DockPanel();
-        var header=new C.StackPanel();header.Children.Add(_count);header.Children.Add(_search);
+        var header=new C.StackPanel();header.Children.Add(_count);
+        if(search==null)header.Children.Add(_search);
         C.DockPanel.SetDock(header,C.Dock.Top);web.Children.Add(header);web.Children.Add(_list);
         _tabs.Items.Add(new C.TabItem{Header="��ҳ��ɫ",Content=web});
         _tabs.Items.Add(new C.TabItem{Header="�����ز�",Content=native});libraryHost.Children.Add(_tabs);
         _overlay=new C.Border{Background=new M.SolidColorBrush(M.Color.FromRgb(24,24,30)),Child=_settings};
         C.Grid.SetRowSpan(_overlay,2);C.Panel.SetZIndex(_overlay,10);settingsHost.Children.Add(_overlay);
         _list.SelectionChanged+=(_,_)=>RenderSettings();
-        _tabs.SelectionChanged+=(_,_)=>_overlay.Visibility=_tabs.SelectedIndex==0?W.Visibility.Visible:W.Visibility.Collapsed;
-        _search.TextChanged+=(_,_)=>Refresh();
+        void TabChanged()
+        {
+            _overlay.Visibility=_tabs.SelectedIndex==0?W.Visibility.Visible:W.Visibility.Collapsed;
+            if(_nativeCount!=null)_nativeCount.Visibility=_tabs.SelectedIndex==0?W.Visibility.Collapsed:W.Visibility.Visible;
+        }
+        _tabs.SelectionChanged+=(_,_)=>TabChanged();
+        _searchChanged=(_,_)=>Refresh();_search.TextChanged+=_searchChanged;
         _library.Changed+=Refresh;Refresh();
         _tabs.SelectedIndex=library.Characters.Count>0?0:1;
+        TabChanged();
     }
     public void Select(ArchiveWebSelection selection)
     {
@@ -102,5 +114,6 @@ internal sealed class ArchiveWebLibraryPanel : IDisposable
             finally{Refresh();}
         };_settings.Children.Add(button);
     }
-    public void Dispose()=>_library.Changed-=Refresh;
+    public void Dispose()
+    {_library.Changed-=Refresh;_search.TextChanged-=_searchChanged;}
 }
