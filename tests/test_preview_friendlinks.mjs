@@ -33,11 +33,11 @@ test('Both web pages render the same grouped external model source links',()=>{
   const groupNodes=root.children[1].children;
   assert.equal(groupNodes.length,2);
   const items=groupNodes.flatMap(x=>x.children[1].children);
-  assert.equal(items.length,11);
+  assert.equal(items.length,13);
   const urls=items.map(x=>x.url);
-  assert.equal(new Set(urls).size,11);
+  assert.equal(new Set(urls).size,13);
   assert.ok(urls.every(url=>url.startsWith('https://')));
-  assert.ok(items.filter(x=>x.dataset.linkType==='source').length===5);
+  assert.ok(items.filter(x=>x.dataset.linkType==='source').length===7);
   links.push(urls);
  }
  assert.deepEqual(links[0],links[1]);

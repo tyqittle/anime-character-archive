@@ -3,7 +3,7 @@
 import argparse, json
 from pathlib import Path
 from preview_policy import audit, needs_capture
-CATALOGS=['data/spine-characters.json','data/spine-newgames.json','data/spine-bd2-characters.json','data/live2d-azurlane.json','data/spine-arknights-illust.json','data/live2d-moregames.json','data/live2d-highquality.json']
+CATALOGS=['data/spine-characters.json','data/spine-newgames.json','data/spine-bd2-characters.json','data/live2d-azurlane.json','data/spine-arknights-illust.json','data/live2d-moregames.json','data/live2d-highquality.json','data/live2d-mature.json']
 p=argparse.ArgumentParser()
 p.add_argument('--catalog',choices=CATALOGS,action='append')
 p.add_argument('--write',type=Path)

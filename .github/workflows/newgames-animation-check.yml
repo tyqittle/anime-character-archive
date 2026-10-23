@@ -6,6 +6,7 @@ on:
       - 'data/spine-newgames.json'
       - 'data/live2d-moregames.json'
       - 'data/live2d-highquality.json'
+      - 'data/live2d-mature.json'
       - 'assets/js/spine/**'
       - 'assets/js/live2d/**'
       - 'spine.html'

@@ -13,6 +13,12 @@ const bd2=JSON.parse(read('data/spine-bd2-pilot.json'));
 const bd2Full=JSON.parse(read('data/spine-bd2-characters.json'));
 const more=JSON.parse(read('data/live2d-moregames.json')).characters;
 const hq=JSON.parse(read('data/live2d-highquality.json')).characters;
+const mature=JSON.parse(read('data/live2d-mature.json')).characters;
+assert.equal(mature.length,72);
+assert.equal(mature.filter(c=>c.gameId==='tokyonecro').length,62);
+assert.equal(mature.filter(c=>c.gameId==='maidslife').length,10);
+assert.equal(new Set(mature.map(c=>c.id)).size,72);
+assert.ok(mature.every(c=>c.engine==='cubism'&&c.modelUrl.includes('@'+c.sourceCommit+'/')&&c.textureBytes>650000&&c.motionCount>0));
 assert.equal(hq.length,196,'Quality-screened new game inventory must have 196 complete model file sets');
 assert.equal(new Set(hq.map(c=>c.id)).size,hq.length,'Duplicate high-quality Live2D ids');
 assert.equal(hq.filter(c=>c.gameId==='girldimension').length,102);
@@ -31,7 +37,7 @@ for(const c of hq){
 const theaterHTML=read('spine.html');
 const gameMenu=theaterHTML.match(/<select id="gameFilter">([\s\S]*?)<\/select>/)?.[1]||'';
 const gameMenuIds=[...gameMenu.matchAll(/<option value="([^"]+)"/g)].map(m=>m[1]);
-assert.deepEqual(gameMenuIds.slice(0,5),['all','girldimension','sinsevendeadlysins','touhoucannonball','girlscafegun'],'New animated games must be visible without scrolling the dropdown');
+assert.deepEqual(gameMenuIds.slice(0,7),['all','tokyonecro','maidslife','girldimension','sinsevendeadlysins','touhoucannonball','girlscafegun'],'New animated games must be visible without scrolling the dropdown');
 assert.equal(more.length,148,'Both newly imported Cubism catalogs must have 148 records');
 assert.equal(new Set(more.map(c=>c.id)).size,148,'Duplicated model in additional Cubism games');
 for(const c of more){
@@ -434,6 +440,7 @@ assert.ok(catalogBootstrap.includes('Promise.allSettled')&&catalogBootstrap.incl
  'Animation catalogs should load in parallel and revalidate mutable manifests');
 assert.ok(catalogBootstrap.includes('isPlayableAnimationEntry')&&!catalogBootstrap.includes("c.gameId==='arknights'&&c.base"),
  'Spine/Cubism catalog validation should not depend on individual game IDs');
+assert.ok(catalogBootstrap.includes('matureLive2dCatalogUrl'),'Mature model catalog not connected');
 assert.ok(catalogBootstrap.includes('highQualityLive2dCatalogUrl'),'High-quality game manifest must be loaded by shared catalog');
 assert.ok(catalogBootstrap.includes('moreLive2dCatalogUrl'),'Extra Live2D catalog missing from shared loader');
 assert.ok(catalogBootstrap.includes('canonicalAnimationId(requested)'),

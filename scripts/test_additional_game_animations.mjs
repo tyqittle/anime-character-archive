@@ -9,7 +9,10 @@ const manifest=JSON.parse(fs.readFileSync('data/spine-newgames.json','utf8'));
 const pick=(game,path)=>manifest.characters.find(c=>c.gameId===game&&c.sourcePath===path);
 const more=JSON.parse(fs.readFileSync('data/live2d-moregames.json','utf8'));
 const high=JSON.parse(fs.readFileSync('data/live2d-highquality.json','utf8'));
+const mature=JSON.parse(fs.readFileSync('data/live2d-mature.json','utf8'));
 const cases=[
+ {type:'cubism',game:'tokyonecro',character:mature.characters.find(c=>c.id==='tn-l2d00055')},
+ {type:'cubism',game:'maidslife',character:mature.characters.find(c=>c.id==='ml-ele_a0')},
  {type:'cubism',game:'girldimension',character:high.characters.find(c=>c.id==='gd-001-c_0005')},
  {type:'cubism',game:'sinsevendeadlysins',character:high.characters.find(c=>c.id==='sds-xch001_01')},
  {type:'cubism',game:'touhoucannonball',character:more.characters.find(c=>c.id==='tc-reimu')},
