@@ -16,7 +16,8 @@ class PreviewPipelineCliTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root=Path(directory);(root/'scripts').mkdir();(root/'data').mkdir()
             for file in ('catalog_registry.py','preview_policy.py','preview_repository.py',
-                         'preview_pipeline.py','preview_frame_pipeline.py','preview_diagnostics.py'):
+                         'preview_pipeline.py','preview_frame_pipeline.py','preview_diagnostics.py',
+                         'audit_animation_visual_integrity.py'):
                 shutil.copyfile(CODE/file,root/'scripts'/file)
             (root/'data/animation-catalogs.json').write_text(json.dumps({
                 'schemaVersion':1,'catalogs':[{'id':'fixture','name':'Fixture','path':'data/fixture.json'}]}))
