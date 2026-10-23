@@ -134,7 +134,7 @@ try{
     throw Error('Collapsing left catalog pane did not widen the player');
    await page.locator('#toggleRightPanel').click();
    await page.locator('#toggleLeftPanel').click();
-   const recovered=await page.locator('#player').evaluate(el=>el.getBoundingClientRect());
+   const recovered=await page.locator('#player').evaluate(el=>el.getBoundingClientRect().toJSON());
    if(Math.abs(recovered.width-startWidth)>3||Math.abs(recovered.height-layout.viewportH)>3)
     throw Error('Expanding side panes did not restore the original stage geometry');
    // Reproduce the 1700 × 864 layout shown in the report.
