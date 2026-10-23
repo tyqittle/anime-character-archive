@@ -43,6 +43,20 @@ function modelUrlFor(name,candidate,id){
    return m&&id==='sds-'+m[1].toLowerCase()&&name===m[1]?candidate:'';
   }catch(e){return ''}
  }
+ // Commit-pinned adult-themed game models: URL, character and skin must match.
+ if(id.startsWith('tn-')||id.startsWith('ml-')){
+  if(!candidate.startsWith(COMMUNITY_SOURCE))return '';
+  try{
+   const relative=decodeURIComponent(candidate.slice(COMMUNITY_SOURCE.length));
+   if(relative.includes('..'))return '';
+   if(id.startsWith('tn-')){
+    const m=relative.match(/^凍京Nerco\/l2d\/(l2d\d{5}[a-z]?)\/\1\.model3\.json$/);
+    return m&&id==='tn-'+m[1]&&name===m[1]?candidate:'';
+   }
+   const m=relative.match(/^galgame live2d\/メイドさんのいる暮らしS\/(ele_[ab][0-4])\/model\.model3\.json$/);
+   return m&&id==='ml-'+m[1]&&name==='model'?candidate:'';
+  }catch(e){return ''}
+ }
  if(!/^(?:gf|ks)-[a-z0-9_-]+$/.test(id)||!candidate.startsWith(COMMUNITY_SOURCE))return '';
  try{
   const sub=decodeURIComponent(candidate.slice(COMMUNITY_SOURCE.length));

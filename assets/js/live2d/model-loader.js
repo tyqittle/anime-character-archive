@@ -32,7 +32,7 @@ function motion(name){
  }catch(e){notify('error',{error:'无法播放动作 '+name+'：'+e.message})}
 }
 async function load(name,id,modelUrl){
- if(!verifyName(name)||!/^(?:al|gf|ks|tc|gc|gd|sds)-[a-z0-9_-]+$/.test(id)||(id.startsWith('al-')&&id!=='al-'+name.toLowerCase())){notify('error',{error:'无效的 Live2D 模型编号'});return}
+ if(!verifyName(name)||!/^(?:al|gf|ks|tc|gc|gd|sds|tn|ml)-[a-z0-9_-]+$/.test(id)||(id.startsWith('al-')&&id!=='al-'+name.toLowerCase())){notify('error',{error:'无效的 Live2D 模型编号'});return}
  const generation=++currentGeneration;
  currentId=id;readyId='';loadStartedAt=performance.now();
  zoom=desktopMode?.58:1;offsetX=desktopMode?(app?.screen?.width||window.innerWidth)*.24:0;offsetY=desktopMode?(app?.screen?.height||window.innerHeight)*.07:0;

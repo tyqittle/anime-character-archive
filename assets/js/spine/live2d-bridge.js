@@ -42,7 +42,7 @@ function playAzurLane(c){
  azurlanePending=c;azurlanePlayingId='';
  presentAzurLanePreview(c);
  $('title').textContent=c.name;
- $('stageContext').textContent=(c.gameId==='girlsfrontline'?'少女前线':c.gameId==='konosuba'?'为美好的世界献上祝福！':c.gameId==='touhoucannonball'?'东方炮弹':c.gameId==='girlscafegun'?'少女咖啡枪':c.gameId==='girldimension'?'少女次元':c.gameId==='sinsevendeadlysins'?'sin 七大罪':'碧蓝航线')+' · Cubism Live2D';
+ $('stageContext').textContent=(c.gameId==='girlsfrontline'?'少女前线':c.gameId==='konosuba'?'为美好的世界献上祝福！':c.gameId==='touhoucannonball'?'东方炮弹':c.gameId==='girlscafegun'?'少女咖啡枪':c.gameId==='girldimension'?'少女次元':c.gameId==='sinsevendeadlysins'?'sin 七大罪':c.gameId==='tokyonecro'?'凍京NECRO':c.gameId==='maidslife'?'女仆生活S':'碧蓝航线')+' · Cubism Live2D';
  $('animationPicker').disabled=true;
  $('animationPicker').replaceChildren(new Option('正在加载角色动作…',''));
  setViewerToolsEnabled(false);

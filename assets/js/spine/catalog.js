@@ -3,6 +3,7 @@ const manifestUrl='./data/spine-characters.json?v=20261021-newgames-v1';
 const bd2CatalogUrl='./data/spine-bd2-characters.json?v=20261021-bulk209';
 const newGamesCatalogUrl='./data/spine-newgames.json?v=20261022-firstbatch-v1';
 const arknightsIllustCatalogUrl='./data/spine-arknights-illust.json?v=20261022-illust-v1';
+const matureLive2dCatalogUrl='./data/live2d-mature.json?v=20261023-mature-v1';
 const highQualityLive2dCatalogUrl='./data/live2d-highquality.json?v=20261023-hq-v1';
 const moreLive2dCatalogUrl='./data/live2d-moregames.json?v=20261023-v1';
 const azurlaneCatalogUrl='./data/live2d-azurlane.json?v=20261021-azurlane-fullpreview-v3';
@@ -216,7 +217,7 @@ $('gameFilter').onchange=()=>{
  if(prior&&!chosen()){cancelCharacterDownload();clearPlayer();$('title').textContent='动画预览';$('stageContext').textContent='Spine · 原生骨骼渲染';status('已切换游戏。选择角色后将自动播放。')}
  // Warm the Cubism scripts while the user browses the Azur Lane list.
  // Keep its render ticker off until an actual model has been selected.
- if(['azurlane','girlsfrontline','konosuba','touhoucannonball','girlscafegun','girldimension','sinsevendeadlysins'].includes($('gameFilter').value)&&!azurlaneFrame&&!chosen()){
+ if(['azurlane','girlsfrontline','konosuba','touhoucannonball','girlscafegun','girldimension','sinsevendeadlysins','tokyonecro','maidslife'].includes($('gameFilter').value)&&!azurlaneFrame&&!chosen()){
   ensureAzurLaneFrame();
   $('stageContext').textContent='Cubism Live2D · 选择角色后播放';
   status('正在准备 Live2D 播放引擎，点击角色后自动播放。');

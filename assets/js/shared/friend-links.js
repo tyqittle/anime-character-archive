@@ -13,6 +13,8 @@
       {name:'少女前线',url:'https://gfl-live2d.github.io/',description:'Girls Frontline Live2D 查看器（Beta）'}
     ]},
     {label:'新增游戏 · 原模型资源',type:'source',items:[
+      {name:'凍京NECRO',url:source+encodeURIComponent('凍京Nerco'),description:'成熟风格科幻 Live2D 模型来源（非在线查看器）'},
+      {name:'女仆生活S',url:source+encodeURIComponent('galgame live2d/メイドさんのいる暮らしS'),description:'成熟风格恋爱 Live2D 模型来源（非在线查看器）'},
       {name:'少女次元',url:source+encodeURIComponent('少女次元'),description:'少女次元 Live2D 源文件目录（不是在线查看器）'},
       {name:'sin 七大罪',url:source+encodeURIComponent('sin 七大罪～魔王崇拜～'),description:'sin 七大罪 Live2D 源文件目录（不是在线查看器）'},
       {name:'东方炮弹',url:'https://github.com/n0099/TouhouCannonBall-Live2d-Models',description:'东方炮弹 Cubism 动态角色源文件（不是在线查看器）'},
