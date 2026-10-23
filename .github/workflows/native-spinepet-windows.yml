@@ -55,6 +55,9 @@ jobs:
             [System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path $file), [ref]$tokens, [ref]$errors) | Out-Null
             if ($errors.Count) { $errors | Format-List; throw "PowerShell parsing failed: $file" }
           }
+      - name: Verify native release source changes and website-only updates
+        shell: pwsh
+        run: '& ./native-desktop/build/Test-ReleaseSourceContract.ps1'
       - name: Verify site catalog can provide a real supported Spine 4.1 role
         shell: pwsh
         run: |
@@ -244,46 +247,16 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 9.0.x
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: native-desktop/build
+          persist-credentials: false
       - name: Reject stale native builds so older packages never become latest
         id: latest
         shell: pwsh
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          # New website/gallery commits may arrive while ClamAV runs.
-          # They must NOT invalidate a tested, audited Windows binary.
-          # Only a newer change to native source or its release pipeline
-          # supersedes this build. Fail closed if GitHub comparison is
-          # incomplete, diverged or cannot be trusted.
-          $latest = gh api 'repos/${{ github.repository }}/commits/main' --jq '.sha'
-          if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($latest)) {
-            throw 'Cannot verify current main commit SHA; refuse to publish'
-          }
-          $builtSha = '${{ github.sha }}'
-          $head = $latest.Trim()
-          $publish = 'true'
-          if ($head -ne $builtSha) {
-            $diff = gh api "repos/${{ github.repository }}/compare/$builtSha...$head" | ConvertFrom-Json
-            if ($LASTEXITCODE -ne 0 -or $null -eq $diff -or
-                $diff.status -ne 'ahead' -or
-                $null -eq $diff.files -or
-                @($diff.files).Count -ge 300) {
-              throw 'Cannot safely establish which files changed since this native build'
-            }
-            $changedNative = @($diff.files | Where-Object {
-              $_.filename -like 'native-desktop/*' -or
-              $_.filename -eq '.github/workflows/native-spinepet-windows.yml'
-            })
-            if ($changedNative.Count -gt 0) {
-              $publish = 'false'
-              Write-Host 'A newer native source or release-workflow change exists:'
-              $changedNative | ForEach-Object { Write-Host $_.filename }
-            } else {
-              Write-Host 'Only website/assets/tests changed; audited native binary is still current.'
-            }
-          }
-          Write-Host "Built SHA=$builtSha; branch HEAD=$head; publish=$publish"
-          "publish=$publish" | Out-File -FilePath $env:GITHUB_OUTPUT -Append -Encoding utf8
+        run: '& ./native-desktop/build/Test-ReleaseSource.ps1 -Repository "${{ github.repository }}" -BuiltSha "${{ github.sha }}"'
       - name: Publish release installer plus versioned update feed
         if: steps.latest.outputs.publish == 'true'
         shell: pwsh
