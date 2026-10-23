@@ -60,7 +60,7 @@ function patchSpine38HighDPI(){
    const reported=Number(gl.getParameter?.(gl.MAX_RENDERBUFFER_SIZE))||8192;
    this._archiveRenderLimit=Math.max(1,Math.min(8192,reported));
   }
-  const requested=Math.max(1,Math.min(2,Number(window.devicePixelRatio)||1));
+  const requested=Math.max(1,Math.min(2,Number(window.devicePixelRatio)||1,Number(this._archiveRenderMinRatio)||1));
   // Cap the backing area to avoid allocating huge framebuffers on laptops;
   // never upscale above the device's actual pixel density.
   const ratio=Math.max(0.1,Math.min(requested,
@@ -205,6 +205,15 @@ async function show(options,title,onError){
    success:(p)=>{
     if(attempt!==currentAttempt){try{p.dispose?.()}catch(e){}resolve(false);return}
     stopWatchdog();if(pendingRenderCancel===cancel)pendingRenderCancel=null;player=p;
+    // Defer shader replacement until the current Spine draw callback exits;
+    // never replace an active WebGL batcher's program halfway through a draw.
+    if(typeof installSpineIllustrationQuality==='function'&&options.archiveEntry){
+     queueMicrotask(()=>{
+      if(player!==p)return;
+      installSpineIllustrationQuality(p,options.archiveEntry);
+      updateGPUStatus(spineGraphicsStatus(p));
+     });
+    }
     if(transparentDesktop){
      const gl=p.context?.gl||p.canvas?.getContext('webgl2')||p.canvas?.getContext('webgl');
      const attributes=gl?.getContextAttributes?.();
