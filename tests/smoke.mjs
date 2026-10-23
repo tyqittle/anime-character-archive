@@ -15,11 +15,18 @@ const bd2Full=JSON.parse(read('data/spine-bd2-characters.json'));
 const more=JSON.parse(read('data/live2d-moregames.json')).characters;
 const hq=JSON.parse(read('data/live2d-highquality.json')).characters;
 const mature=JSON.parse(read('data/live2d-mature.json')).characters;
-assert.equal(mature.length,72);
-assert.equal(mature.filter(c=>c.gameId==='tokyonecro').length,62);
-assert.equal(mature.filter(c=>c.gameId==='maidslife').length,10);
-assert.equal(new Set(mature.map(c=>c.id)).size,72);
-assert.ok(mature.every(c=>c.engine==='cubism'&&c.modelUrl.includes('@'+c.sourceCommit+'/')&&c.textureBytes>650000&&c.motionCount>0));
+const expectedMatureCounts={tokyonecro:62,maidslife:10,lovecube:6,foxhimezero:1};
+assert.equal(mature.length,Object.values(expectedMatureCounts).reduce((n,count)=>n+count,0));
+for(const [game,count] of Object.entries(expectedMatureCounts))
+ assert.equal(mature.filter(c=>c.gameId===game).length,count,game);
+assert.equal(new Set(mature.map(c=>c.id)).size,mature.length);
+for(const c of mature){
+ assert.ok(c.engine==='cubism'&&c.modelUrl.includes('@'+c.sourceCommit+'/')&&c.textureBytes>650000,c.id);
+ // LOVE³ has real high-resolution Cubism3 physics rigs, but no motion3 assets.
+ // Existing games continue to require motions; don't claim an animation passed until rendered.
+ if(c.gameId==='lovecube')assert.ok(c.textureBytes>3000000&&c.motionCount===0&&c.playbackStatus==='not-verified',c.id);
+ else assert.ok(c.motionCount>0,c.id);
+}
 assert.equal(hq.length,196,'Quality-screened new game inventory must have 196 complete model file sets');
 assert.equal(new Set(hq.map(c=>c.id)).size,hq.length,'Duplicate high-quality Live2D ids');
 assert.equal(hq.filter(c=>c.gameId==='girldimension').length,102);
