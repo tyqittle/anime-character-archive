@@ -141,8 +141,25 @@ function refreshCharacters(){
    card.dataset.characterId=c.id;
    if(info.image){
     const img=document.createElement('img');img.loading='lazy';img.decoding='async';img.width=150;img.height=130;
-    img.src=info.image;img.alt=info.zh||info.name;
-    img.onerror=()=>{img.replaceWith(Object.assign(document.createElement('div'),{className:'fallback',textContent:'暂无预览图'}))};
+    img.alt=info.zh||info.name;
+    // The image is pinned to the same-model frame SHA. A newly published WebP
+    // must not be masked by an old CDN cache or a previously cached 404.
+    const version=/^[0-9a-f]{64}$/.test(c.previewSha256||'')?c.previewSha256.slice(0,16):'';
+    const previewUrl=info.image+(version?'?v='+version:'');
+    let retries=0;
+    img.onerror=()=>{
+      if(retries++===0){
+        // One forced revalidation; never substitute another character or skin.
+        img.src=info.image+(version?'?v='+version+'&retry=1':'?retry=1');
+        return;
+      }
+      const missing=document.createElement('div');
+      missing.className='fallback';
+      missing.textContent='预览图暂时不可用 · 点击播放';
+      missing.title='原模型预览图加载失败，未使用其他角色的图片代替';
+      img.replaceWith(missing);
+    };
+    img.src=previewUrl;
     img.title=c.previewSource==='matching-live2d-animation-frame'?'当前皮肤真实 Live2D 截图':c.gameId==='azurlane'?'上游角色静态缩略图（非动态模型截图）':'从当前角色的 Spine 动画直接截取的预览画面';card.append(img);
    }else{
     const placeholder=document.createElement('div');
