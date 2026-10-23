@@ -20,10 +20,18 @@ function canvasRenderQuality(canvas){
   pixelRatio:Number((canvas.width/shownWidth).toFixed(2)),
   deviceRatio:Number(window.devicePixelRatio)||1};
 }
+function spineOriginalAtlasInfo(p){
+ try{
+  const atlas=p?.assetManager?.get?.(p.config?.atlasUrl);
+  const pages=atlas?.pages||[];
+  return pages.map(page=>({width:page.width,height:page.height}))
+   .filter(x=>Number(x.width)>0&&Number(x.height)>0).slice(0,8);
+ }catch(_){return []}
+}
 function spineGraphicsStatus(p){
  let gl=p?.context?.gl||p?.context?.context||p?.sceneRenderer?.context?.gl;
  if(!gl&&p?.canvas){try{gl=p.canvas.getContext('webgl2')||p.canvas.getContext('webgl')}catch(e){}}
- return {...rendererFromGL(gl),quality:canvasRenderQuality(p?.canvas)};
+ return {...rendererFromGL(gl),quality:canvasRenderQuality(p?.canvas),atlas:spineOriginalAtlasInfo(p)};
 }
 function updateGPUStatus(info, fps){
  if(info)rendererStatus=info;
@@ -38,7 +46,11 @@ function updateGPUStatus(info, fps){
  const display=q&&q.backingWidth>0
   ?'画布 '+q.backingWidth+'×'+q.backingHeight+' 渲染像素，显示约 '+q.displayWidth+'×'+q.displayHeight+' CSS 像素（有效像素比 '+q.pixelRatio+'，屏幕 DPR '+q.deviceRatio+'）。'
   :'尚未获得画布分辨率。';
- if(details)details.textContent=(rendererStatus.renderer?rendererStatus.renderer+'。':'')+display+note;
+ const atlas=spineOriginalAtlasInfo(player);
+ const atlasNote=atlas.length?'原始动画贴图 '+atlas.map(a=>a.width+'×'+a.height).join('、')+'。':'';
+ const enhancing=player?._archiveIllustrationQuality?.mode==='atlas-gpu-sharpen'
+  ?'已启用原始动画贴图 GPU 细节增强（不会虚构丢失的像素）。':'';
+ if(details)details.textContent=(rendererStatus.renderer?rendererStatus.renderer+'。':'')+display+atlasNote+enhancing+note;
  el.title=(rendererStatus.renderer||'未能从浏览器读取 GPU 名称')+' · '+note;
 }
 function recordSpineFrame(instance){
