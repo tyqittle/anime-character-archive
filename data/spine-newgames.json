@@ -9301,11 +9301,23 @@
       "sourceRepo": "kiraio-moe/Arknights-Base",
       "sourceCommit": "1fb77e6c00310c155d2c368bdc8872be973f2739",
       "sourcePath": "Spine 2D/char_475_akafyu/BattleFront/char_475_akafyu_epoque#15/char_475_akafyu_epoque#15",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
+      "previewSource": "matching-spine-animation-frame",
+      "status": "browser-preview-captured",
       "collectionId": "arknights-battle",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "blank-frame: near blank screenshot"
+      "previewSourceIdentity": [
+        "spine",
+        "https://raw.githubusercontent.com/kiraio-moe/Arknights-Base/1fb77e6c00310c155d2c368bdc8872be973f2739/Spine%202D/char_475_akafyu/BattleFront/char_475_akafyu_epoque%2315/char_475_akafyu_epoque%2315",
+        "",
+        "",
+        "",
+        "char_475_akafyu_epoque#15",
+        "3.8"
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "95a607f04f6dbd7c4c37b80bba5c46e8caedcfa8593e1e5db7b412a6f737f56d",
+      "preview": "./assets/animation-previews/arknights-ak-char_475_akafyu_epoque_15-6b0b5ab.webp",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "ak-char_476_blkngt_nian_8-7ac2947",

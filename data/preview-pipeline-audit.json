@@ -97,8 +97,8 @@
     "counts": {
       "arknights": {
         "indexed": 359,
-        "verifiedPreview": 339,
-        "missingPreview": 20
+        "verifiedPreview": 340,
+        "missingPreview": 19
       },
       "girlsfrontline": {
         "indexed": 297,
@@ -159,10 +159,6 @@
       {
         "gameId": "arknights",
         "id": "ak-char_431_ashlok_epoque_28_0-2e6bce6"
-      },
-      {
-        "gameId": "arknights",
-        "id": "ak-char_475_akafyu_epoque_15-6b0b5ab"
       },
       {
         "gameId": "arknights",
@@ -273,12 +269,6 @@
         "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: B_B_Hair_a (mesh attachment: B_B_Hair_a)；可点击“重试”或选择本地导入已获得的动画文件。"
       },
       {
-        "id": "ak-char_475_akafyu_epoque_15-6b0b5ab",
-        "gameId": "arknights",
-        "category": "render-error",
-        "message": "blank-frame: near blank screenshot"
-      },
-      {
         "id": "ak-char_479_sleach_epoque_14-29c6bac",
         "gameId": "arknights",
         "category": "atlas-mismatch",
@@ -329,7 +319,7 @@
     ],
     "failureSummary": {
       "atlas-mismatch": 19,
-      "render-error": 2
+      "render-error": 1
     }
   },
   "arknights-illust": {
