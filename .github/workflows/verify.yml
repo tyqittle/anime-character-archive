@@ -31,3 +31,5 @@ jobs:
         run: npm run check
       - name: Discover every Python and workflow contract regression
         run: npm run test:python
+      - name: Audit animation preview fragmentation without hiding legitimate effects
+        run: python scripts/audit_animation_visual_integrity.py --json tmp/preview-visual-audit.json
