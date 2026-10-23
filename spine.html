@@ -23,9 +23,9 @@ html:has(body.desktop-mode),body.desktop-mode,body.desktop-mode .wrap,body.deskt
 body.desktop-mode .side,body.desktop-mode .head,body.desktop-mode .stage-toolbar,body.desktop-mode .stage-hint,body.desktop-mode #status,body.desktop-mode #loadNotice,body.desktop-mode footer,body.desktop-mode .archive-friendlinks{display:none!important}
 body.desktop-mode .wrap{position:fixed!important;inset:0!important;padding:0!important;margin:0!important;display:block!important;width:100%!important;height:100%!important;overflow:hidden!important}
 body.desktop-mode .stage,body.desktop-mode #player{position:absolute!important;inset:0!important;padding:0!important;width:100%!important;height:100%!important;min-height:0!important;max-height:none!important;overflow:hidden!important}
-</style><script>if(new URLSearchParams(location.search).has('desktop'))document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('desktop-mode'),{once:true})</script><link rel="stylesheet" href="./assets/spine-base.css?v=20261022-selection-fix-v1"><link rel="stylesheet" href="./assets/spine-theme.css?v=20261022-selection-fix-v1"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://unpkg.com" crossorigin><link rel="dns-prefetch" href="//raw.githubusercontent.com"><link rel="stylesheet" href="./assets/spine-theater-layout.css?v=20261023-stage-height-v1"><link rel="stylesheet" href="./assets/archive-shell.css?v=20261023-preview-friends-v1"></head><body>
-<div class="wrap">
-<section class="side" aria-label="动态立绘角色浏览">
+</style><script>if(new URLSearchParams(location.search).has('desktop'))document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('desktop-mode'),{once:true})</script><link rel="stylesheet" href="./assets/spine-base.css?v=20261022-selection-fix-v1"><link rel="stylesheet" href="./assets/spine-theme.css?v=20261022-selection-fix-v1"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://unpkg.com" crossorigin><link rel="dns-prefetch" href="//raw.githubusercontent.com"><link rel="stylesheet" href="./assets/spine-theater-layout.css?v=20261023-stage-height-v1"><link rel="stylesheet" href="./assets/archive-shell.css?v=20261023-preview-friends-v1"><link rel="stylesheet" href="./assets/spine-three-pane.css?v=20261023-sidepanes-v1"></head><body>
+<div class="wrap theater-three-pane">
+<section class="side" id="characterSidebar" aria-label="动态立绘角色浏览">
 <div class="side-sitebar">
  <a class="sitebrand" href="./characters.html">✦ 次元角色档案馆</a>
  <nav class="side-nav" aria-label="站点导航">
@@ -50,7 +50,9 @@ body.desktop-mode .stage,body.desktop-mode #player{position:absolute!important;i
 <p class="note">动态角色使用独立的 Spine 文件与浏览器渲染。部分资源从外部加载，无法获取时会显示错误。</p>
 </div></details><a href="./characters.html">← 返回角色图鉴</a>
 </section>
-<section class="stage" id="stage"><div class="head"><strong id="title">动画预览</strong><span class="stage-head-meta"><small id="stageContext">Spine · 原生骨骼渲染</small><small id="gpuStatus" title="加载模型后识别渲染后端">等待动画</small></span></div>
+<section class="stage" id="stage">
+<div id="player"><div id="placeholder">请点击角色卡片或从下拉框选中角色。<br>选中后将自动播放动态立绘。</div></div><div id="loadNotice" hidden aria-hidden="true"><span class="load-spinner"></span><span id="loadNoticeText">正在加载动画…</span></div></section>
+<aside class="theater-inspector" id="theaterInspector" aria-label="动作、语音、画面控制及播放信息"><div class="head"><strong id="title">动画预览</strong><span class="stage-head-meta"><small id="stageContext">Spine · 原生骨骼渲染</small><small id="gpuStatus" title="加载模型后识别渲染后端">等待动画</small></span></div>
 <div class="stage-toolbar" id="stageToolbar" aria-label="动画观赏工具栏">
  <div class="toolbar-main"><label class="tool-label" for="animationPicker">动作</label>
  <select id="animationPicker" class="animation-picker" aria-label="切换角色动作" disabled><option value="">选择角色后可切换动作</option></select></div>
@@ -65,9 +67,10 @@ body.desktop-mode .stage,body.desktop-mode #player{position:absolute!important;i
   <button class="tool-btn" type="button" id="fullscreenStage" title="切换全屏模式" aria-label="全屏观看">⛶</button>
  </div>
 </div>
-<div id="player"><div id="placeholder">请点击角色卡片或从下拉框选中角色。<br>选中后将自动播放动态立绘。</div></div><div id="loadNotice" hidden aria-hidden="true"><span class="load-spinner"></span><span id="loadNoticeText">正在加载动画…</span></div>
 <p class="stage-hint">鼠标在人物画面上直接滚轮缩放 · 拖动平移 · 双击还原 · 手机双指缩放</p>
-<div id="status" role="status" aria-live="polite">选择角色即可自动播放。</div><details class="stage-friends-drawer"><summary>友情链接 · 其他游戏动态立绘与素材来源</summary><nav class="archive-friendlinks archive-friendlinks--stage" data-friend-links aria-label="游戏动态立绘友情链接"></nav></details></section>
+<div id="status" role="status" aria-live="polite">选择角色即可自动播放。</div><details class="stage-friends-drawer"><summary>友情链接 · 其他游戏动态立绘与素材来源</summary><nav class="archive-friendlinks archive-friendlinks--stage" data-friend-links aria-label="游戏动态立绘友情链接"></nav></details></aside>
+<button type="button" class="theater-panel-toggle" id="toggleLeftPanel" aria-controls="characterSidebar" aria-expanded="true" aria-label="收起左侧角色列表">角色 ◀</button>
+<button type="button" class="theater-panel-toggle" id="toggleRightPanel" aria-controls="theaterInspector" aria-expanded="true" aria-label="收起右侧播放工具">工具 ▶</button>
 </div>
 <footer>Spine 运行时 © Esoteric Software · 游戏角色及其素材版权归各自权利人。仅用于个人研究和获授权的资源播放。</footer>
 <script defer src="./assets/js/shared/catalog-registry.js?v=20261023-architecture-v1"></script>
@@ -85,4 +88,4 @@ body.desktop-mode .stage,body.desktop-mode #player{position:absolute!important;i
 <script defer src="./assets/js/spine/session-cache.js?v=20261022-repair-v1"></script>
 <script defer src="./assets/js/spine/playback.js?v=20261023-daiblos-bulk-v1"></script>
 <script defer src="./assets/js/spine/local-tools.js?v=20261023-hq-illustration-v2"></script>
-<script defer src="./assets/js/spine/bootstrap.js?v=20261023-live2d-model-sync-v2"></script><script defer src="./assets/js/shared/friend-links.js?v=20261023-preview-friends-v1"></script><script defer src="./assets/js/spine/character-audio.js?v=20261023-dedup-v1"></script><script defer src="./assets/js/spine/desktop-launch.js?v=20261023-selected-game-v2"></script><script defer src="./assets/js/spine/desktop-drag.js?v=20261022-alpha-repair-v3"></script></body></html>
+<script defer src="./assets/js/spine/bootstrap.js?v=20261023-live2d-model-sync-v2"></script><script defer src="./assets/js/shared/friend-links.js?v=20261023-preview-friends-v1"></script><script defer src="./assets/js/spine/panel-layout.js?v=20261023-sidepanes-v1"></script><script defer src="./assets/js/spine/character-audio.js?v=20261023-dedup-v1"></script><script defer src="./assets/js/spine/desktop-launch.js?v=20261023-selected-game-v2"></script><script defer src="./assets/js/spine/desktop-drag.js?v=20261022-alpha-repair-v3"></script></body></html>
