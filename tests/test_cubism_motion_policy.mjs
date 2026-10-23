@@ -46,3 +46,17 @@ test('late failures from replaced requests and disposed sessions do not overwrit
  waiting[0].reject(Error('old request'));assert.equal(await old,false);assert.deepEqual(errors,[]);
  const last=c.play('@motion:0');c.dispose();waiting[2].reject(Error('retired'));assert.equal(await last,false);assert.deepEqual(errors,[]);
 });
+
+test('timed-out motion requests settle and release the native reservation',async()=>{
+ const m=manager(),errors=[];let stopped=0;
+ m.startMotion=()=>new Promise(()=>{});m.stopAllMotions=()=>stopped++;
+ const c=install({manager:m,timeoutMs:5,onError:e=>errors.push(e)});
+ assert.equal(await c.play('@motion:0'),false);
+ assert.equal(stopped,1);assert.equal(errors.length,1);assert.match(errors[0],/超时/);
+ c.dispose();
+});
+test('disposing a pending session settles without waiting for its motion download',async()=>{
+ const m=manager();m.startMotion=()=>new Promise(()=>{});
+ const c=install({manager:m}),request=c.play('@motion:0');
+ c.dispose();assert.equal(await request,false);
+});

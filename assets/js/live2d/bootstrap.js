@@ -67,7 +67,7 @@ function graphicsReport(){
 // Cap at 2x to avoid overly expensive drawing buffers on ultra-high-DPI screens.
 const renderResolution=Math.min(2,Math.max(1,Number(window.devicePixelRatio)||1));
 app=new PIXI.Application({view:document.getElementById('live2dCanvas'),autoStart:true,
- resizeTo:window,backgroundAlpha:desktopMode?0:1,backgroundColor:0x142238,antialias:false,autoDensity:true,
+ resizeTo:window,backgroundAlpha:desktopMode?0:1,backgroundColor:desktopMode?0x000000:0x142238,antialias:false,autoDensity:true,
  resolution:renderResolution,powerPreference:'high-performance'});
  // Reduce WebGL fill-rate and avoid struggling to hit 60 fps on large models.
  if(app.ticker){app.ticker.maxFPS=targetFPS;app.ticker.stop()}

@@ -93,6 +93,29 @@ try{
      });
      assert.equal(actual,selected,'A second user action was rejected by motion priority');
     }
+    if(id==='al-bulaimodun_2'){
+     const interaction=await child.evaluate(async()=>{
+      const manager=model.internalModel.motionManager;
+      const entry=frameMotionController.entries.find(e=>e.group==='login')||frameMotionController.entries.find(e=>e.group==='touch_body');
+      if(!entry)throw Error('Missing known one-shot interaction');
+      const clip=await manager.loadMotion(entry.group,entry.index);
+      const originalLoop=clip.isLoop();
+      // Exercise the real runtime's one-shot mode on a real clip, while the
+      // separate assertions above verify its original source loop metadata.
+      clip.setIsLoop(false);
+      await frameMotionController.play(entry.key);
+      const seconds=Number(clip.getLoopDuration?.())||4;
+      app.ticker.stop();
+      for(let i=0;i<Math.ceil((seconds+1)*10);i++){
+       model.update(100);app.renderer.render(app.stage);
+       if(i%10===0)await new Promise(r=>setTimeout(r,0));
+      }
+      clip.setIsLoop(originalLoop);
+      app.ticker.start();return {key:entry.key,sourceLoop:clip._motionData.loop,forcedOneShot:true,seconds};
+     });
+     await child.waitForFunction(()=>model.internalModel.motionManager.state.currentGroup==='__archive_idle',null,{timeout:12000});
+     item.oneShotRecovery=interaction;
+    }
    }else{
     await page.waitForTimeout(7000);
     item.after=await child.evaluate(()=>({playing:model.internalModel.motionManager.playing,finished:model.internalModel.motionManager.isFinished(),
@@ -101,5 +124,16 @@ try{
   }catch(e){item.error=e.message}
   console.log('CUBISM_DIAGNOSTIC '+JSON.stringify(item));
   if(strict&&item.error)throw Error(item.id+': '+item.error);
+ }
+ if(strict){
+  await page.goto('http://127.0.0.1:8765/spine.html?id=gc-girl01-l2d00&desktop=1',{waitUntil:'domcontentloaded'});
+  await page.waitForFunction(()=>document.querySelector('#status')?.textContent.startsWith('正在播放：'),null,{timeout:100000});
+  const child=page.frames().find(f=>f.url().includes('azurlane-stage.html'));
+  const surface=await child.evaluate(()=>new Promise(resolve=>app.ticker.addOnce(()=>{
+   const gl=app.renderer.gl,p=new Uint8Array(4);gl.readPixels(0,0,1,1,gl.RGBA,gl.UNSIGNED_BYTE,p);
+   resolve({alpha:app.renderer.backgroundAlpha,pixel:Array.from(p)});
+  },null,-200)));
+  assert.deepEqual(surface,{alpha:0,pixel:[0,0,0,0]},'Desktop canvas must stay truly transparent after the web backdrop fix');
+  console.log('CUBISM_DESKTOP_ALPHA_PASS '+JSON.stringify(surface));
  }
 }finally{fs.writeFileSync('/tmp/cubism-behavior-diagnostics.json',JSON.stringify(report,null,2));await browser.close()}

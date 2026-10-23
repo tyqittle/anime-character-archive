@@ -8,7 +8,7 @@ function ensureAzurLaneFrame(){
  azurlaneFrame=document.createElement('iframe');
  azurlaneFrame.className='azurlane-live2d-frame';
  azurlaneFrame.title='Live2D · Cubism 模型画布';
- azurlaneFrame.src='./azurlane-stage.html?v=20261023-live2d-motion-geometry-v3'+(new URLSearchParams(location.search).has('desktop')?'&desktop=1':'');
+ azurlaneFrame.src='./azurlane-stage.html?v=20261023-live2d-motion-geometry-v4'+(new URLSearchParams(location.search).has('desktop')?'&desktop=1':'');
  azurlaneFrame.loading='eager';
  azurlaneFrame.setAttribute('allow','autoplay');
  $('player').replaceChildren(azurlaneFrame);
@@ -87,6 +87,7 @@ window.addEventListener('message',event=>{
  if(data.kind==='voice-playing'&&typeof showVoiceMessage==='function')showVoiceMessage('互动语音播放中');
  if(data.kind==='motion'){
   const option=[...$('animationPicker').options].find(x=>x.value===data.name);
+  if(option)$('animationPicker').value=data.name;
   status('正在播放：'+azurlanePending.name+' · Live2D · '+(option?.text||data.name));
  }
 });
