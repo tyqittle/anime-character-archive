@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: '22'
       - name: Test asynchronous playback and shared voice lifecycle
-        run: node --test tests/test_async_playback.mjs tests/test_spine_highdpi.mjs tests/test_animation_frames.mjs tests/test_spine_utf8.mjs tests/test_desktop_launch.mjs
+        run: node --test tests/test_async_playback.mjs tests/test_spine_highdpi.mjs tests/test_spine_illustration_quality.mjs tests/test_animation_frames.mjs tests/test_spine_utf8.mjs tests/test_desktop_launch.mjs
       - name: Validate archive metadata and entrypoints
         run: node tests/smoke.mjs
       - name: Test animation skin deduplication and voice aliases
