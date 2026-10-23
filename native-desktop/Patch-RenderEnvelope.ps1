@@ -165,6 +165,114 @@ if ([regex]::Matches($rasterText,[regex]::Escape($oldRaster)).Count -ne 1) {
     throw 'Pinned upstream silhouette rasterization patch anchor mismatch'
 }
 $rasterText = $rasterText.Replace($oldRaster,$newRaster)
+# Four-by-four sampling can still completely miss a narrow opaque mesh that
+# falls between lattice points. Clip that triangle into its exact candidate
+# grid cell, then sample the clipped polygon (not the transparent bounding box).
+$cellAnchor = @'
+                    if (hit)
+                        scratch.Grid[gridIndex] = true;
+'@
+$cellReplacement = @'
+                    if (!hit)
+                    {
+                        float cellLeft = pivotX +
+                            (windowLeft + column * cellSize - anchorX) / pixelScale;
+                        float cellTop = pivotY +
+                            (windowTop + row * cellSize - anchorY) / pixelScale;
+                        hit = HasVisibleTriangleCellIntersection(
+                            triangle, cellLeft, cellTop,
+                            cellLeft + cellSize / pixelScale,
+                            cellTop + cellSize / pixelScale);
+                    }
+                    if (hit)
+                        scratch.Grid[gridIndex] = true;
+'@
+$cellAnchor = $cellAnchor.Replace([string][char]13, '')
+$cellReplacement = $cellReplacement.Replace([string][char]13, '')
+if ([regex]::Matches($rasterText,[regex]::Escape($cellAnchor)).Count -ne 1) {
+    throw 'Lower-body polygon-cell hit-mask anchor mismatch'
+}
+$rasterText = $rasterText.Replace($cellAnchor,$cellReplacement)
+$helperAnchor = '    private static List<(int Start, int End)> CopySpans('
+$helper = @'
+    // Conservative, alpha-aware silhouette coverage for subpixel limbs.
+    private static bool HasVisibleTriangleCellIntersection(
+        SilhouetteTriangle triangle,
+        float left, float top, float right, float bottom)
+    {
+        Span<System.Numerics.Vector2> a =
+            stackalloc System.Numerics.Vector2[12];
+        Span<System.Numerics.Vector2> b =
+            stackalloc System.Numerics.Vector2[12];
+        a[0] = triangle.First.Position;
+        a[1] = triangle.Second.Position;
+        a[2] = triangle.Third.Position;
+        int count = 3;
+        for (int edge = 0; edge < 4 && count > 0; edge++)
+        {
+            float boundary = edge switch
+            {
+                0 => left,
+                1 => right,
+                2 => top,
+                _ => bottom
+            };
+            bool keepGreater = edge is 0 or 2;
+            bool useX = edge < 2;
+            int nextCount = 0;
+            System.Numerics.Vector2 previous = a[count - 1];
+            float previousValue = useX ? previous.X : previous.Y;
+            bool previousInside = keepGreater
+                ? previousValue >= boundary : previousValue <= boundary;
+            for (int k = 0; k < count; k++)
+            {
+                System.Numerics.Vector2 current = a[k];
+                float currentValue = useX ? current.X : current.Y;
+                bool currentInside = keepGreater
+                    ? currentValue >= boundary : currentValue <= boundary;
+                if (previousInside != currentInside)
+                {
+                    float denominator = currentValue - previousValue;
+                    float t = Math.Abs(denominator) < 1e-12f
+                        ? 0f : Math.Clamp(
+                            (boundary - previousValue) / denominator, 0f, 1f);
+                    b[nextCount++] = System.Numerics.Vector2.Lerp(
+                        previous, current, t);
+                }
+                if (currentInside)
+                    b[nextCount++] = current;
+                previous = current;
+                previousValue = currentValue;
+                previousInside = currentInside;
+            }
+            Span<System.Numerics.Vector2> temp = a;
+            a = b;
+            b = temp;
+            count = nextCount;
+        }
+        if (count == 0)
+            return false;
+        System.Numerics.Vector2 centroid = default;
+        for (int k = 0; k < count; k++)
+        {
+            centroid += a[k];
+            if (IsVisiblePoint(triangle, a[k].X, a[k].Y))
+                return true;
+            System.Numerics.Vector2 midpoint =
+                (a[k] + a[(k + 1) % count]) * 0.5f;
+            if (IsVisiblePoint(triangle, midpoint.X, midpoint.Y))
+                return true;
+        }
+        centroid /= count;
+        return IsVisiblePoint(triangle, centroid.X, centroid.Y);
+    }
+
+'@
+if ([regex]::Matches($rasterText,[regex]::Escape($helperAnchor)).Count -ne 1) {
+    throw 'Triangle-cell helper insertion anchor mismatch'
+}
+$rasterText = $rasterText.Replace($helperAnchor,
+    $helper.Replace([string][char]13, '') + $helperAnchor)
 [System.IO.File]::WriteAllText($raster,$rasterText,[System.Text.UTF8Encoding]::new($false))
 # Feed genuine body clicks (but not drag motions or desktop clicks) to the
 # independent BD2 voice module while preserving upstream click animations.
