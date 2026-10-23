@@ -15,7 +15,7 @@ function harness(search='?desktop=1&transport=webview2&game=example&id=role&sess
  const window={addEventListener:(name,fn)=>events[name]=fn,
   chrome:{webview:{postMessage:m=>sent.push(m),addEventListener:(name,fn)=>commands[name]=fn}}};
  window.parent=window;
- const context={window,document,location:{search,origin:'https://archive.test'},
+ const context={innerWidth:100,innerHeight:100,window,document,location:{search,origin:'https://archive.test'},
   URLSearchParams,performance:{now:()=>state.time},Event:class {},
   chosen:()=>({id:state.id,gameId:'example',engine:'spine',name:'Role'}),
   localStorage:{getItem:()=>null,setItem(){}},viewZoom:1,viewOffsetX:0,viewOffsetY:0,

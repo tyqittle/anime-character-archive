@@ -4,7 +4,7 @@
  if(!query.has('desktop')||query.get('transport')!=='webview2')return;
  const child=window.parent!==window,session=query.get('session')||'';
  let lastSample=-Infinity,ready=false,viewRestored=false,failed=false,lastView='',lastSave=0;
- let sample=null,context=null,lastActions='',pendingChildView=null,renderedFrames=0;
+ let sample=null,context=null,lastActions='',renderedFrames=0;
  const emit=(kind,data={})=>{
   if(child){window.parent.postMessage({channel:'archive-desktop-surface',kind,...data},location.origin);return}
   window.chrome?.webview?.postMessage({channel:'archive-desktop-v1',session,kind,...data});
@@ -77,7 +77,7 @@
   }catch(error){fail('桌面命中区域生成失败：'+error.message)}
  }
  function fail(error){
-  if(failed)return;if(ready){emit('warning',{id:activeId(),error:String(error).slice(0,1000)});return}failed=true;emit('error',{id:activeId(),error:String(error).slice(0,1000)});
+  if(failed)return;if(ready){emit('warning',{id:activeId(),error:String(error).slice(0,1000)});return}failed=true;emit('error',{id:child?activeId():query.get('id'),error:String(error).slice(0,1000)});
  }
  function catalogReady(){
   if(child)return;
@@ -98,7 +98,6 @@
    const sx=box.width/d.width,sy=box.height/d.height;
    if(!Number.isFinite(sx)||!Number.isFinite(sy))return;
    const rects=d.rects.map(([x,y,w,h])=>[box.left+x*sx,box.top+y*sy,w*sx,h*sy]);
-   pendingChildView=d.view;
    if(rects.length)announce();
    emit('mask',{id:d.id,rects,width:innerWidth,height:innerHeight,view:d.view});
    saveView(d.view);

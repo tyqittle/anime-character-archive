@@ -19,10 +19,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate desktop integration and repository smoke tests
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install repository validation dependencies
+        run: python -m pip install -r requirements-dev.txt
+      - name: Validate all behavior, architecture and workflow contracts
         run: |
-          node tests/smoke.mjs
-          node --test tests/test_async_playback.mjs tests/test_animation_frames.mjs tests/test_spine_utf8.mjs
+          npm test
+          npm run check
+          npm run test:python
   build-native:
     runs-on: windows-latest
     permissions:
