@@ -35,7 +35,7 @@ try{
  const zoomState=await p.evaluate(()=>({
   zoom:viewZoom,transform:player?.canvas?.style.transform||''
  }));
- if(zoomState.zoom<=1||!/scale\\(1\\)/.test(zoomState.transform)){
+ if(zoomState.zoom<=1||!zoomState.transform.includes('scale(1)')){
   throw Error('Zoom is still CSS-upscaling the canvas: '+JSON.stringify(zoomState));
  }
  console.log('ARKNIGHTS_ILLUST_RETINA_NATIVE_ZOOM_PASS',id,JSON.stringify({size,ratio,zoomState}));
