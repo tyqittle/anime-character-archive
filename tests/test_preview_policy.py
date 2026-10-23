@@ -82,5 +82,21 @@ class PreviewPolicyTest(unittest.TestCase):
             self.assertEqual(self.character['status'],'verified-playback')
         finally: p.ROOT = previous
 
+
+
+    def test_coordinate_policy_invalidates_an_old_frame_without_changing_source_urls(self):
+        previous = p.ROOT
+        try:
+            p.ROOT = self.path
+            self.character['preview'] = p.relative_path(self.character)
+            self.character['previewSourceIdentity'] = p.source_identity(self.character)
+            self.assertFalse(p.needs_capture(self.character))
+            self.character['atlasCoordinateSpace'] = 'declared'
+            self.assertTrue(p.needs_capture(self.character))
+            self.assertFalse(p.apply_verified_preview(self.character))
+            self.assertEqual(p.source_identity(self.character)[-1], 'atlas-coordinate-space:declared')
+        finally:
+            p.ROOT = previous
+
 if __name__ == '__main__': unittest.main()
 

@@ -10,6 +10,9 @@ on:
       - 'scripts/diagnose_daiblos_animation_sweep.mjs'
       - 'scripts/diagnose_daiblos_atlas.mjs'
       - '.github/workflows/daiblos-visual-audit.yml'
+concurrency:
+  group: daiblos-visual-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:

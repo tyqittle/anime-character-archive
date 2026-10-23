@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "version": "2026-10-23-bulk-129",
+  "version": "2026-10-23-atlas-coordinates-v1",
   "gameId": "daibloscore",
   "source": "https://github.com/bungaku-moe/DaiblosCoreAssets",
   "sourceCommit": "3c672a0f11cc70fee35432b1a28522d7d74068c2",
   "sourceScope": "spine/",
-  "selection": "Complete full-character skin models only: matched .json/.atlas/.png, bounded byte sizes. Excludes effects, broken layers, oversized and incomplete assets.; verified 127 successfully rendered; two failed rigs explicitly excluded; visually quarantined two fragmented models",
-  "totalCharacters": 125,
-  "note": "Spine 3.8 skins source-tree validated; no claim that all atlases, runtime and previews are browser tested. Character art remains hosted by source copyright holders. After real Chromium capture 127/129 succeeded; rejected one atlas mismatch and one blank character, and excluded both from selectable catalog. Post-capture visual-composition audit quarantined Alps04 and Hades03. Native and patched Spine 3.8 both render separated character fragments. Source importer texture scaling is interpreted using the declared atlas coordinate space; no per-game renderer fork. Old previews become pending until recaptured with this policy.",
+  "selection": "Matched source JSON/atlas/PNG skin models; resized source textures use explicit declared atlas coordinates. Incomplete and visually unusable rigs remain excluded.",
+  "totalCharacters": 127,
+  "note": "Source-tree inventory is distinct from visual verification. Declared-coordinate A/B captures restored Alps04 and Hades03 without changing source art. Shared per-page atlas adaptation corrects resized textures; previews are recaptured under the same source policy. No claim that every action has been visually reviewed.",
   "characters": [
     {
       "id": "dbcore-10010_skin_alps03_spine-10010_skin_alps03",
@@ -51,6 +51,36 @@
       "preview": "./assets/animation-previews/daibloscore-dbcore-10010_skin_alps03_spine-10010_skin_alps03.webp",
       "visualIntegrityPolicy": "coherent-character",
       "atlasCoordinateSpace": "declared"
+    },
+    {
+      "id": "dbcore-10010_skin_alps04_spine-10010_skin_alps04",
+      "gameId": "daibloscore",
+      "game": "Daiblos Core",
+      "collectionName": "Daiblos Core · 动态角色",
+      "engine": "spine",
+      "name": "Alps · 皮肤 04",
+      "characterName": "Alps",
+      "skinCode": "10010_skin_Alps04",
+      "resourceStem": "10010_skin_Alps04",
+      "spineVersion": "3.8",
+      "skeletonFormat": "json",
+      "atlasCoordinateSpace": "declared",
+      "base": "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/10010_skin_alps04_spine/10010_skin_Alps04",
+      "skeletonUrl": "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/10010_skin_alps04_spine/10010_skin_Alps04.json",
+      "atlasUrl": "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/10010_skin_alps04_spine/10010_skin_Alps04.atlas",
+      "sourceRepo": "bungaku-moe/DaiblosCoreAssets",
+      "sourceCommit": "3c672a0f11cc70fee35432b1a28522d7d74068c2",
+      "sourcePath": "spine/10010_skin_alps04_spine/10010_skin_Alps04.json",
+      "skeletonBytes": 2134251,
+      "atlasBytes": 27918,
+      "textureBytes": 4608027,
+      "characterCode": "10010",
+      "costumeName": "皮肤 04",
+      "assetType": "character-spine",
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered",
+      "visualIntegrityPolicy": "coherent-character"
     },
     {
       "id": "dbcore-10010_skin_alps05_spine-10010_skin_alps05",
@@ -4267,6 +4297,36 @@
       "atlasCoordinateSpace": "declared"
     },
     {
+      "id": "dbcore-70050_skin_hades03_spine-70050_skin_hades03",
+      "gameId": "daibloscore",
+      "game": "Daiblos Core",
+      "collectionName": "Daiblos Core · 动态角色",
+      "engine": "spine",
+      "name": "Hades · 皮肤 03",
+      "characterName": "Hades",
+      "skinCode": "70050_skin_Hades03",
+      "resourceStem": "70050_skin_Hades03",
+      "spineVersion": "3.8",
+      "skeletonFormat": "json",
+      "atlasCoordinateSpace": "declared",
+      "base": "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70050_skin_hades03_spine/70050_skin_Hades03",
+      "skeletonUrl": "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70050_skin_hades03_spine/70050_skin_Hades03.json",
+      "atlasUrl": "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70050_skin_hades03_spine/70050_skin_Hades03.atlas",
+      "sourceRepo": "bungaku-moe/DaiblosCoreAssets",
+      "sourceCommit": "3c672a0f11cc70fee35432b1a28522d7d74068c2",
+      "sourcePath": "spine/70050_skin_hades03_spine/70050_skin_Hades03.json",
+      "skeletonBytes": 4789027,
+      "atlasBytes": 29926,
+      "textureBytes": 3172371,
+      "characterCode": "70050",
+      "costumeName": "皮肤 03",
+      "assetType": "character-spine",
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered",
+      "visualIntegrityPolicy": "coherent-character"
+    },
+    {
       "id": "dbcore-70070_skin_athena04_spine-70070_skin_athena04",
       "gameId": "daibloscore",
       "game": "Daiblos Core",
@@ -5385,14 +5445,27 @@
       "atlasCoordinateSpace": "declared"
     }
   ],
-  "quarantinedModels": [
+  "quarantinedModels": [],
+  "restoredModels": [
     {
       "id": "dbcore-10010_skin_alps04_spine-10010_skin_alps04",
-      "reason": "separated body parts, largest connected share 0.29"
+      "reason": "Resized source texture interpreted in declared atlas coordinate space; coherent frame reviewed",
+      "evidenceRun": 39937828047
     },
     {
       "id": "dbcore-70050_skin_hades03_spine-70050_skin_hades03",
-      "reason": "fragmented character, largest connected share 0.49"
+      "reason": "Resized source texture interpreted in declared atlas coordinate space; coherent frame reviewed",
+      "evidenceRun": 39937828047
+    }
+  ],
+  "excludedModels": [
+    {
+      "id": "dbcore-40350_skin_meteor05_spine-40350_skin_meteor05",
+      "reason": "Source skeleton references an attachment absent from the matching atlas"
+    },
+    {
+      "id": "dbcore-70310_skin_atum03a_spine-70310_skin_atum03a",
+      "reason": "Declared-coordinate capture still renders an unusably tiny scene; not restored"
     }
   ]
 }
