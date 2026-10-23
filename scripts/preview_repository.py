@@ -54,7 +54,9 @@ def publish_catalog(manifest,incoming,audit_path,require_identity=False):
                 character['previewFailureType']=failure['category']
                 character['previewFailureReason']=failure['message']
     summary=audit(catalog['characters'])
-    failed=[failures[c['id']] for c in summary['missing'] if c['id'] in failures]
+    characters_by_id={c['id']:c for c in catalog['characters']}
+    failed=[failures[c['id']] for c in summary['missing'] if c['id'] in failures and
+            (not require_identity or identities.get(c['id'])==source_identity(characters_by_id[c['id']]))]
     result={'scope':'shared preview pipeline','counts':summary['counts'],'missing':summary['missing'],
             'newCapturesInThisRun':added,'rejectedCaptures':rejected,'failedCaptures':failed,
             'failureSummary':group_capture_failures(failed)}

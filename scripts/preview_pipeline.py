@@ -4,14 +4,33 @@ import argparse
 import json
 from pathlib import Path
 from catalog_registry import load_registry
-from preview_policy import needs_capture
+from preview_policy import needs_capture,filename
+from catalog_registry import source_identity
 from preview_repository import publish_catalog,write_json
 from preview_frame_pipeline import convert_frames
+
+def convert_batch(root,shard):
+    root=Path(root)
+    if shard<0:raise ValueError('Invalid shard')
+    done,failed=convert_frames(root/'frames',root/'webps',lambda path:path.stem+'.webp')
+    by_frame={}
+    for entry in load_registry():
+        for character in json.loads(Path(entry['path']).read_text('utf-8'))['characters']:
+            by_frame[filename(character).replace('.webp','.png')]=character
+    failures=[]
+    for failure in failed:
+        character=by_frame.get(failure['file'])
+        if character is None:raise ValueError('Unregistered captured frame: '+failure['file'])
+        failures.append({'id':character['id'],'gameId':character['gameId'],
+            'sourceIdentity':source_identity(character),'error':'blank-frame: '+failure['error']})
+    write_json(root/'reports'/('shard-convert-'+str(shard)+'.json'),{'pass':[],'fail':failures})
+    return done,failures
 
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('command',choices=['plan','convert','publish'])
     parser.add_argument('--catalog',default='')
+    parser.add_argument('--shard',type=int,default=0)
     parser.add_argument('--root',default='tmp/repair-output')
     parser.add_argument('--incoming',default='tmp/repair-merged/webps')
     parser.add_argument('--pending',default='tmp/repair-pending.json')
@@ -34,8 +53,7 @@ def main():
                 stream.write('count='+str(len(shards))+'\n')
                 stream.write('pending='+str(len(ids))+'\n')
     elif args.command=='convert':
-        root=Path(args.root)
-        convert_frames(root/'frames',root/'webps',lambda path:path.stem+'.webp')
+        convert_batch(args.root,args.shard)
     else:
         results={}
         for entry in entries:

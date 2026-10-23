@@ -78,7 +78,7 @@ jobs:
       - name: Capture exact-model frames
         run: node scripts/repair_missing_previews.mjs ${{ matrix.shard }} ${{ needs.plan.outputs.count }}
       - name: Convert and validate rendered frames
-        run: python scripts/preview_pipeline.py convert
+        run: python scripts/preview_pipeline.py convert --shard ${{ matrix.shard }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
