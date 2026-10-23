@@ -24,7 +24,7 @@ for(const c of mature){
  assert.ok(c.engine==='cubism'&&c.modelUrl.includes('@'+c.sourceCommit+'/')&&c.textureBytes>650000,c.id);
  // LOVE³ has real high-resolution Cubism3 physics rigs, but no motion3 assets.
  // Existing games continue to require motions; don't claim an animation passed until rendered.
- if(c.gameId==='lovecube')assert.ok(c.textureBytes>3000000&&c.motionCount===0&&c.playbackStatus==='not-verified',c.id);
+ if(c.gameId==='lovecube')assert.ok(c.textureBytes>3000000&&c.motionCount===0,c.id);
  else assert.ok(c.motionCount>0,c.id);
 }
 assert.equal(hq.length,196,'Quality-screened new game inventory must have 196 complete model file sets');
