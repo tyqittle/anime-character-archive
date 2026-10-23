@@ -20,7 +20,7 @@ export function inspectScope(scope,tree,records){
  return {id:scope.id,gameId:scope.gameId,sourceRepo:scope.sourceRepo,sourceCommit:scope.sourceCommit,directory:scope.directory,
   sourceModelSettings:source.length,indexedModelSettings:indexed.length,
   unindexedSourceSettings:missing,indexedMissingFromScope:indexed.filter(c=>!found.has(c.sourcePath)).map(c=>({id:c.id,path:c.sourcePath})),
-  scopeComplete:missing.length===0&&indexed.every(c=>found.has(c.sourcePath)),requireComplete:!!scope.requireComplete};
+  scopeComplete:source.length>0&&missing.length===0&&indexed.every(c=>found.has(c.sourcePath)),requireComplete:!!scope.requireComplete};
 }
 export function sourceRecord(scope,relative,settings,tree,existing){
  if(!scope.import)throw Error('No identity adapter configured for '+scope.id);

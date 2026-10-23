@@ -37,6 +37,12 @@ flowchart TD
 
 `shared/portrait-framing.js` 通过显式像素/矩形输入计算可见内容和相机范围，Spine/Cubism 各自处理绘制回调和坐标转换。一个模型会话拥有稳定取景；动作切换保留用户缩放和平移。旧版 Spine 的停止/释放由运行时适配负责，Live2D 模拟和绘制共用 Application ticker。具体行为与验收见 [取景与生命周期](PORTRAIT_VIEW_LIFECYCLE.md)。
 
+## Live2D 动作与来源覆盖
+
+`shared/cubism-motion-policy.js` 统一枚举命名/匿名动作组、待机选择、源循环标志、优先级、有限等待及会话取消。引擎适配传入 MotionManager 与当前会话判定；共享策略不访问 DOM，不按游戏 ID 分支。视口先读取有效网格的实际范围，避免把 MOC 画布尺寸误当裁切框。网页明确绘制剧场底色，桌面保持透明黑色清屏。
+
+`data/live2d-source-scopes.json` 声明固定来源范围；`scripts/live2d_sources.mjs` 共同执行来源覆盖、文件引用校验和受控导入。已有模型 ID、素材地址和有效预览保持兼容。见 [本轮共性修复与覆盖记录](LIVE2D_COMMON_REPAIR.md)。
+
 ## 内容上线
 
 预览、静态扩充以及手动兼容流程成功后，通过 `workflow_run` 触发共同的站点发布。机器人 push 本身不会触发 Pages 分支构建，因此不能省略这条依赖。

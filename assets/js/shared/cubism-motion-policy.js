@@ -19,8 +19,10 @@
    const seen=new Set();
    items.forEach((definition,index)=>{
     const file=definition?.File||definition?.file;
-    if(typeof file!=='string'||!file||seen.has(file))return;
-    seen.add(file);
+    if(typeof file!=='string'||!file)return;
+    // Equal texture/motion paths can carry different sound or fade metadata.
+    const signature=JSON.stringify(Object.fromEntries(Object.entries(definition).sort(([a],[b])=>a.localeCompare(b))));
+    if(seen.has(signature))return;seen.add(signature);
     const key=group===''?'@motion:'+index:index===0?group:'@motion:'+encodeURIComponent(group)+':'+index;
     const entry={key,group,index,definition,label:filename(definition)||group,score:idleScore(group,definition)};
     if(byKey.has(key))throw Error('Ambiguous Cubism motion key: '+key);

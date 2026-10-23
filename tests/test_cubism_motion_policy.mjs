@@ -60,3 +60,8 @@ test('disposing a pending session settles without waiting for its motion downloa
  const c=install({manager:m}),request=c.play('@motion:0');
  c.dispose();assert.equal(await request,false);
 });
+
+test('equal motion files with distinct audio or fades stay separate selectable source actions',()=>{
+ const p=plan({Tap:[{File:'tap.motion3.json',Sound:'first.wav'},{File:'tap.motion3.json',Sound:'second.wav'},{File:'tap.motion3.json',FadeInTime:.5}]});
+ assert.equal(p.entries.length,3);assert.equal(p.entries[1].key,'@motion:Tap:1');
+});

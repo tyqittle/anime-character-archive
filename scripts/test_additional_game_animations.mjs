@@ -44,7 +44,7 @@ try{
    status:document.querySelector('#status')?.textContent||'',
    game:document.querySelector('#gameFilter')?.value,
    enabled:!document.querySelector('#animationPicker')?.disabled,
-   animations:document.querySelector('#animationPicker')?.options.length,
+   animations:[...(document.querySelector('#animationPicker')?.options||[])].filter(option=>option.value).length,
    frame:!!document.querySelector('iframe.azurlane-live2d-frame'),
    canvas:!!document.querySelector('#player canvas')
   }));

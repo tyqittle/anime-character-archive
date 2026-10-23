@@ -8,7 +8,7 @@ function ensureAzurLaneFrame(){
  azurlaneFrame=document.createElement('iframe');
  azurlaneFrame.className='azurlane-live2d-frame';
  azurlaneFrame.title='Live2D · Cubism 模型画布';
- azurlaneFrame.src='./azurlane-stage.html?v=20261023-live2d-motion-geometry-v4'+(new URLSearchParams(location.search).has('desktop')?'&desktop=1':'');
+ azurlaneFrame.src='./azurlane-stage.html?v=20261023-live2d-motion-geometry-v5'+(new URLSearchParams(location.search).has('desktop')?'&desktop=1':'');
  azurlaneFrame.loading='eager';
  azurlaneFrame.setAttribute('allow','autoplay');
  $('player').replaceChildren(azurlaneFrame);
@@ -71,11 +71,12 @@ window.addEventListener('message',event=>{
   updateGPUStatus(data.graphics||{backend:'WebGL 状态未知',renderer:'',software:false});
   setViewerToolsEnabled(true);
   const actions=Array.isArray(data.motions)?data.motions.filter(x=>typeof x==='string'):[];
-  $('animationPicker').replaceChildren(...actions.map(x=>new Option(data.motionLabels?.[x]||x,x)));
+  $('animationPicker').replaceChildren(...(actions.length
+   ?actions.map(x=>new Option(data.motionLabels?.[x]||x,x)):[new Option('模型没有预设动作','')]));
   $('animationPicker').disabled=!actions.length;
   if(data.selectedMotion)$('animationPicker').value=data.selectedMotion;
   viewZoom=clampViewZoom(Number.isFinite(data.zoom)?data.zoom:1);$('zoomValue').textContent=Math.round(viewZoom*100)+'%';
-  status('正在播放：'+azurlanePending.name+' · Live2D'+(data.selectedMotion?' · '+(data.motionLabels?.[data.selectedMotion]||data.selectedMotion):'')+'（'+actions.length+' 组动作）'+(Number.isFinite(data.loadMs)&&data.loadMs>0?' · 加载 '+(data.loadMs/1000).toFixed(1)+' 秒':''));
+  status('正在播放：'+azurlanePending.name+' · Live2D'+(data.selectedMotion?' · '+(data.motionLabels?.[data.selectedMotion]||data.selectedMotion):'')+'（'+actions.length+' 组动作）'+(actions.length?'':' · 可缩放或拖动查看')+(Number.isFinite(data.loadMs)&&data.loadMs>0?' · 加载 '+(data.loadMs/1000).toFixed(1)+' 秒':''));
  }
  if(data.kind==='motion-error'){status('Live2D：'+data.error,true);return}
  if(data.kind==='performance'&&Number.isFinite(data.fps))updateGPUStatus(null,data.fps);

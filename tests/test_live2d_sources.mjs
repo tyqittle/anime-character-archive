@@ -27,3 +27,8 @@ test('missing files, path escapes, unexpected identities and unsupported model s
  assert.throws(()=>sourceRecord(scope,'hero/hero.model3.json',settings,tree,{id:'other',modelUrl:'wrong'}),/identity differs/);
  assert.throws(()=>sourceRecord(scope,'hero/hero.model3.json',{...settings,Version:2},tree),/Incomplete/);
 });
+
+test('empty or accidentally narrowed source scopes never certify completeness',()=>{
+ assert.equal(inspectScope(scope,[],[]).scopeComplete,false);
+ assert.equal(inspectScope({...scope,selection:'never-match'},tree,[]).scopeComplete,false);
+});
