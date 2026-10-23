@@ -41,6 +41,35 @@ if ($matches.Count -ne 1) { throw "Native render envelope patch anchor mismatch:
 $text = $text.Replace($before, $after)
 [System.IO.File]::WriteAllText($file, $text, [System.Text.UTF8Encoding]::new($false))
 
+# Critical: the native renderer merges ALL outfit/attachment skins, but
+# upstream's envelope estimator creates a fresh Skeleton with ONLY the default
+# skin. BD2 lower-body attachments and costume extensions can therefore be
+# absent from SetupBounds and ALL sampled animation limits. The shared pivot
+# then sits at the wrong point and the whole lower body goes off-screen.
+# Calculate BOTH setup and animated bounds with the SAME combined skin policy
+# used by NativeSpineResource.Load.
+$boundsSource = Join-Path $UpstreamRoot 'SpinePet/src/SpinePet/Rendering/Native/NativeSpineBounds.cs'
+$boundsCode = [System.IO.File]::ReadAllText($boundsSource).Replace("`r`n","`n")
+$boundsEdits = @(
+    @('        Skeleton setupSkeleton = new(data);' + "`n" +
+      '        setupSkeleton.SetToSetupPose();',
+      '        Skeleton setupSkeleton = new(data);' + "`n" +
+      '        NativeSpineSkinIncludes.Apply(data, setupSkeleton);' + "`n" +
+      '        setupSkeleton.SetToSetupPose();'),
+    @('            Skeleton probe = new(data);' + "`n" +
+      '            AnimationState state = new(new AnimationStateData(data));',
+      '            Skeleton probe = new(data);' + "`n" +
+      '            NativeSpineSkinIncludes.Apply(data, probe);' + "`n" +
+      '            AnimationState state = new(new AnimationStateData(data));')
+)
+foreach ($edit in $boundsEdits) {
+    if ([regex]::Matches($boundsCode,[regex]::Escape($edit[0])).Count -ne 1) {
+        throw 'Spine combined-skin envelope parity anchor mismatch'
+    }
+    $boundsCode = $boundsCode.Replace($edit[0],$edit[1])
+}
+[System.IO.File]::WriteAllText($boundsSource,$boundsCode,[System.Text.UTF8Encoding]::new($false))
+
 # The ORIGINAL NativeCompositionSurface.EnsureSize() checks ONLY the scale,
 # ignoring any growth of the animation envelope. A full-body character may
 # suddenly extend below that cached swap chain: its vertices are silently
