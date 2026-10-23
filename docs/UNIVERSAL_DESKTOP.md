@@ -29,3 +29,21 @@ Windows 流程先构建实际应用，核验官方运行时依赖，再运行协
 网站启动按钮只能在该协议的二进制通过测试并发布后启用。发布报告必须写明具体版本和实际测试范围；架构覆盖不等于逐个模型已人工验收。
 
 官方 API：[CompositionController](https://learn.microsoft.com/dotnet/api/microsoft.web.webview2.core.corewebview2compositioncontroller)、[Runtime 分发](https://learn.microsoft.com/microsoft-edge/webview2/concepts/distribution)。
+
+## 0.1.152 验证记录（2026-10-24）
+
+原生源提交：`7dbbc01c20f7e55e7f5206f6e348e529e60784c3`。Windows [发布流程](https://github.com/tyqittle/anime-character-archive/actions/runs/39984625174)完成 11 项通用宿主回归与 37 项原生渲染/输入回归。全仓 135 项 Node、33 项 Python 测试及架构检查通过。
+
+真实 WebView2 CompositionController 测试加载以下角色，读取有透明背景与人物像素的 PNG，确认持续绘制、输入掩模更新、缩放与动作切换保留视图：
+
+| 游戏 | 模型 ID | 引擎 |
+| --- | --- | --- |
+| NIKKE | c010 | Spine |
+| NIKKE | c015 | Spine |
+| 蔚蓝档案 | ba-ch0058_home | Spine |
+| 碧蓝航线 | al-abeikelongbi_3 | Cubism |
+| 少女咖啡枪 | gc-girl01-l2d00 | Cubism |
+
+独立透明夹具验证实际 Win32 区域内外命中、背景 Alpha 为 0、可见红色像素及输入窗口层次。请求竞争测试确认领取旧请求不会删除后到的新请求。已有 BD2 固定资源的四组缩放/动作时刻、真实骨骼解析及双目录图形安装继续通过。
+
+包内微软 WebView2 引导程序通过 Authenticode 验证；审计核对 500 个文件摘要，ClamAV 扫描 510 个文件无已知特征命中。该结果不等于安全认证。CI 的渲染与 CPU 采样不代表用户显卡帧率；没有逐个模型或多显示器热插拔的完整人工验收。

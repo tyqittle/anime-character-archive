@@ -2,130 +2,28 @@
 (()=>{
  const button=document.getElementById('sendToDesktop');
  if(!button)return;
- const nikkeId=/^c[0-9]{3,6}(?:_[0-9]{2})?$/;
- const bd2Id=/^bd2-char[0-9]{6}(?:_c)?$/;
- const trustedNikke='https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/';
- const trustedBd2='https://raw.githubusercontent.com/Zormolo/Brown-Dust-2-Assets/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/';
- let pending=false,catalogPromise=null;
- async function getCatalog(game){
-  if(game==='browndust2'){
-   const response=await fetch('./data/spine-bd2-characters.json',{cache:'no-cache'});
-   if(!response.ok)throw Error('无法读取棕色尘埃2资源目录');
-   return response.json();
-  }
-  if(!catalogPromise)catalogPromise=fetch('./data/spine-characters.json',{cache:'no-cache'})
-   .then(response=>{if(!response.ok)throw Error('无法读取妮姬资源目录');return response.json()})
-   .catch(error=>{catalogPromise=null;throw error});
-  return catalogPromise;
- }
- // Spine's binary format stores its version string immediately after the
- // 8-byte skeleton hash, prefixed with a length+1 varint. Catalog metadata
- // is advisory: several models, including c113_01, were wrongly tagged 4.0.
- function decodeBinaryVersion(bytes){
-  if(bytes.length<12)throw Error('骨骼数据过短');
-  let size=0,shift=0,offset=8;
-  for(let i=0;i<5;i++){
-   if(offset>=bytes.length)throw Error('骨骼版本字段不完整');
-   const b=bytes[offset++];
-   size|=(b&127)<<shift;
-   if(!(b&128))break;
-   shift+=7;
-   if(i===4)throw Error('骨骼版本字段无效');
-  }
-  size-=1;
-  if(size<3||size>32||offset+size>bytes.length)throw Error('骨骼版本长度无效');
-  const str=new TextDecoder('utf-8',{fatal:true}).decode(bytes.subarray(offset,offset+size));
-  if(!/^\d+\.\d+(?:\.\d+)?$/.test(str))throw Error('骨骼版本字段不符合 Spine 格式');
-  return str;
- }
- async function getActualVersion(entry){
-  const base=entry.base||'';
-  if(entry.gameId==='nikke'){
-   if(!base.startsWith(trustedNikke+entry.id+'/')||
-      !new RegExp('/'+entry.id+'_[0-9]{2}$').test(base))
-    throw Error('妮姬模型来源校验失败');
-  }else if(entry.gameId==='browndust2'){
-   const stem=entry.id.slice(4),relative=base.slice(trustedBd2.length);
-   if(!bd2Id.test(entry.id)||!base.startsWith(trustedBd2)||
-      !/^[A-Za-z0-9_'-]+\/[A-Za-z0-9_'-]+\/char[0-9]{6}(?:_c)?$/.test(relative)||
-      !base.endsWith('/'+stem))throw Error('棕色尘埃2模型来源校验失败');
-  }else throw Error('暂不支持该游戏的桌面运行时');
-  const response=await fetch(base+'.skel',{
-   mode:'cors',credentials:'omit',cache:'default',
-   headers:{Range:'bytes=0-63'}
-  });
-  if(!response.ok)throw Error('骨骼文件下载失败（HTTP '+response.status+'）');
-  const size=Number(response.headers.get('content-length')||0);
-  if(size>30_000_000)throw Error('骨骼文件过大');
-  const bytes=new Uint8Array(await response.arrayBuffer());
-  return decodeBinaryVersion(bytes);
- }
- // Catalog and visible character selection share a single source of truth.
- // Do not infer the game from the hidden <select> alone: cards may inject
- // an option for a role beyond the selector's first 640 entries.
+ // The website owns catalog loading and source validation. The desktop receives
+ // only the exact selected catalog identity, never a model URL or a local path.
  function currentSelection(){
-  if(typeof chosen==='function'){
-   const model=chosen();
-   if(model)return model;
-  }
-  const value=document.getElementById('characters')?.value||'';
-  if(value&&typeof allCharacters!=='undefined')
-   return allCharacters.find(model=>model.id===value)||null;
-  const active=document.querySelector('#characterCards .character-card[aria-pressed="true"]');
-  const cardId=active?.dataset?.characterId||'';
-  if(cardId&&typeof allCharacters!=='undefined')
-   return allCharacters.find(model=>model.id===cardId)||null;
-  return null;
+  const selected=typeof chosen==='function'?chosen():null;
+  if(!selected||typeof allCharacters==='undefined')return null;
+  const matches=allCharacters.filter(model=>model.id===selected.id&&model.gameId===selected.gameId);
+  if(matches.length!==1)return null;
+  return matches[0];
  }
- button.title='原生桌面客户端支持妮姬和棕色尘埃2的 Spine 4.1 模型';
- button.addEventListener('click',async()=>{
-  if(pending)return;
+ const identity=value=>typeof value==='string'&&value.trim().length>0&&value.length<=256&&!/[\u0000-\u001f\u007f-\u009f]/.test(value);
+ button.title='需先安装支持通用播放的新版 Windows 桌面客户端；支持本站 Spine 与 Cubism 动态立绘';
+ button.addEventListener('click',()=>{
   const selected=currentSelection();
   if(!selected){
    alert('请先从当前游戏的角色列表选择一个动态立绘，再点击“放到桌面”。');
    return;
   }
   const {id,gameId:game}=selected;
-  if(!((game==='nikke'&&nikkeId.test(id))||
-       (game==='browndust2'&&bd2Id.test(id)))){
-   alert('当前选择：'+(selected.name||id)+'。\\n'+
-     '桌面原生渲染器目前只支持妮姬和棕色尘埃2的 Spine 4.1 资源。'+
-     '这个游戏的原生运行时尚未接入，不能直接将网页画面当作桌面角色。');
-   return;
+  if(!identity(id)||!identity(game)){
+   alert('角色目录身份无效，请刷新网站后重试。');return;
   }
-  pending=true;button.disabled=true;
-  const text=button.textContent;button.textContent='校验模型中…';
-  try{
-   const manifest=await getCatalog(game);
-   const entry=manifest.characters?.find(item=>item.id===id && item.gameId===game);
-   if(!entry){alert('角色不在网站目录中。');return}
-   if(game==='browndust2'&&!entry.base){
-    alert('该角色尚未提供完整 Spine 骨骼来源。');return;
-   }
-   // Do not reject models using "spineVersion" or "versionUnverified":
-   // these catalog labels were demonstrated wrong for real 4.1 binaries.
-   // Browser-side binary checking is advisory; corporate networks may
-   // block raw.githubusercontent.com CORS or HTTP Range requests.
-   // The native application ALWAYS validates the real skeleton itself.
-   let actual=null;
-   try{actual=await getActualVersion(entry)}
-   catch(error){
-    if(String(error?.message||'').includes('来源校验失败'))throw error;
-    console.warn('Browser binary preflight unavailable; native parser will validate',error);
-   }
-   if(actual&&!/^4\.1(?:\.|$)/.test(actual)){
-    alert('检测到 '+entry.name+' 的真实骨骼版本为 Spine '+actual+
-      '。当前 My_SpinePet 原生运行时只支持 4.1。'+
-      '\n该模型可在网页播放；其他 Spine 版本需要相应原生运行时。');
-    return;
-   }
-   window.location.href=game==='browndust2'
-    ? 'animecharacter://open?game=browndust2&id='+encodeURIComponent(id)
-    : 'animecharacter://open?id='+encodeURIComponent(id);
-  }catch(error){
-   alert('暂时无法执行桌面导入：'+(error?.message||'网络错误')+
-      '。请检查角色来源或网站连接后重试。');
-  }finally{pending=false;button.disabled=false;button.textContent=text}
+  window.location.href='animecharacter://open?host=webview2&game='+encodeURIComponent(game)+'&id='+encodeURIComponent(id);
  });
  if(new URLSearchParams(location.search).has('desktop'))button.hidden=true;
 })();

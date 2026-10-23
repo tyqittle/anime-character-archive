@@ -534,15 +534,18 @@ assert.ok(nativeArchiveBridge.includes('game=browndust2&id=') &&
 assert.ok(nativeBd2Adapter.includes('SpineSkeletonCompatibility.EnsureSupported(stagedSkeleton)') &&
  nativeBd2Adapter.includes('TrustedBrownDust2'),
  'New game importer must enforce both actual Spine 4.1 parse and pinned source origin');
-assert.ok(desktopLaunch.includes('animecharacter://open?game=browndust2&id=') &&
- desktopLaunch.includes('spine-bd2-characters.json'),
- 'Website must send selected BD2 ID to native application');
+assert.ok(desktopLaunch.includes('animecharacter://open?host=webview2&game=') &&
+ desktopLaunch.includes('encodeURIComponent(game)') && desktopLaunch.includes('encodeURIComponent(id)'),
+ 'Website must send the selected catalog identity to the universal desktop host');
 assert.ok(desktopLaunch.includes('const selected=currentSelection()') &&
  desktopLaunch.includes('gameId:game') &&
  desktopLaunch.includes('当前游戏的角色列表'),
- 'Desktop launch must use the actual selected character and game, not infer NIKKE from a hidden selector');
-assert.ok(spineHTML.includes('desktop-launch.js?v=20261023-selected-game-v2'),
- 'Site must bust previously cached single-game launcher');
+ 'Desktop launch must use the selected catalog character and game');
+assert.ok(!desktopLaunch.includes('spine-bd2-characters.json') &&
+ !desktopLaunch.includes('getActualVersion') && !desktopLaunch.includes('fetch('),
+ 'Desktop launcher must delegate catalog and engine loading to the common website runtime');
+assert.ok(spineHTML.includes('desktop-launch.js?v=20261024-universal-catalog-v1'),
+ 'Desktop protocol migration must invalidate the old restricted launcher cache');
 const bd2IdPattern=/^bd2-char[0-9]{6}(?:_c)?$/;
 const bd2Origin='https://raw.githubusercontent.com/Zormolo/Brown-Dust-2-Assets/94a3ac97b8fab7ee054e0826de7d912de0a233ef/assets/spine/character/';
 for(const model of bd2Full.characters){
