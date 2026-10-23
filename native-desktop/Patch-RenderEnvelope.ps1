@@ -50,24 +50,26 @@ $text = $text.Replace($before, $after)
 # used by NativeSpineResource.Load.
 $boundsSource = Join-Path $UpstreamRoot 'SpinePet/src/SpinePet/Rendering/Native/NativeSpineBounds.cs'
 $boundsCode = [System.IO.File]::ReadAllText($boundsSource).Replace("`r`n","`n")
-$boundsEdits = @(
-    @('        Skeleton setupSkeleton = new(data);' + "`n" +
-      '        setupSkeleton.SetToSetupPose();',
-      '        Skeleton setupSkeleton = new(data);' + "`n" +
-      '        NativeSpineSkinIncludes.Apply(data, setupSkeleton);' + "`n" +
-      '        setupSkeleton.SetToSetupPose();'),
-    @('            Skeleton probe = new(data);' + "`n" +
-      '            AnimationState state = new(new AnimationStateData(data));',
-      '            Skeleton probe = new(data);' + "`n" +
-      '            NativeSpineSkinIncludes.Apply(data, probe);' + "`n" +
-      '            AnimationState state = new(new AnimationStateData(data));')
-)
-foreach ($edit in $boundsEdits) {
-    if ([regex]::Matches($boundsCode,[regex]::Escape($edit[0])).Count -ne 1) {
-        throw 'Spine combined-skin envelope parity anchor mismatch'
-    }
-    $boundsCode = $boundsCode.Replace($edit[0],$edit[1])
+# Avoid nested @() here: PowerShell enumerates nested arrays during pipeline
+# construction and loses the two-string before/after pair.
+$setupBefore = '        Skeleton setupSkeleton = new(data);' + "`n" +
+    '        setupSkeleton.SetToSetupPose();'
+$setupAfter = '        Skeleton setupSkeleton = new(data);' + "`n" +
+    '        NativeSpineSkinIncludes.Apply(data, setupSkeleton);' + "`n" +
+    '        setupSkeleton.SetToSetupPose();'
+$probeBefore = '            Skeleton probe = new(data);' + "`n" +
+    '            AnimationState state = new(new AnimationStateData(data));'
+$probeAfter = '            Skeleton probe = new(data);' + "`n" +
+    '            NativeSpineSkinIncludes.Apply(data, probe);' + "`n" +
+    '            AnimationState state = new(new AnimationStateData(data));'
+if ([regex]::Matches($boundsCode, [regex]::Escape($setupBefore)).Count -ne 1) {
+    throw 'Combined-skin setup skeleton patch anchor mismatch'
 }
+$boundsCode = $boundsCode.Replace($setupBefore, $setupAfter)
+if ([regex]::Matches($boundsCode, [regex]::Escape($probeBefore)).Count -ne 1) {
+    throw 'Combined-skin animation probe patch anchor mismatch'
+}
+$boundsCode = $boundsCode.Replace($probeBefore, $probeAfter)
 [System.IO.File]::WriteAllText($boundsSource,$boundsCode,[System.Text.UTF8Encoding]::new($false))
 
 # The ORIGINAL NativeCompositionSurface.EnsureSize() checks ONLY the scale,
