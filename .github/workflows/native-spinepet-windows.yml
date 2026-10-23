@@ -83,7 +83,10 @@ jobs:
         run: |
           & ./native-desktop/Patch-WheelZoom.ps1 -UpstreamRoot ./native-upstream
           & ./native-desktop/Patch-RenderEnvelope.ps1 -UpstreamRoot ./native-upstream
+          & ./native-desktop/Patch-ViewportSafety.ps1 -UpstreamRoot ./native-upstream
           $engine = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeCharacterRenderEngine.cs -Raw
+          $xaml = Get-Content ./native-upstream/SpinePet/src/SpinePet/Views/MainWindow.xaml -Raw
+          $updater = Get-Content ./native-upstream/SpinePet/src/SpinePet/NativeAutoUpdate.cs -Raw
           $input = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeInputWindow.cs -Raw
           $frame = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeFrameRenderer.cs -Raw
           $surface = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeCompositionSurface.cs -Raw
@@ -97,6 +100,9 @@ jobs:
               -not $silhouette.Contains('float halfCell = cellSize * 0.38f / pixelScale') -or
               -not $hitRegion.Contains('screen.Bounds,') -or
               -not $engine.Contains('NativeDesktopVoiceRelay.NotifyClicked(') -or
+              -not $engine.Contains('FitNewlyLoadedCharacterToMonitor(current);') -or
+              -not $xaml.Contains('x:Name="ManualUpdateButton"') -or
+              -not $updater.Contains('CheckArchiveUpdatesAsync(manual: true)') -or
               -not $voice.Contains('Char" + clipCode + "_BattleReady_') -or
               -not $app.Contains('InitializeBrownDust2Voice();') -or
               -not $input.Contains('MouseWheelInput')) {
@@ -229,7 +235,7 @@ jobs:
           Copy-Item ./native-upstream/LICENSE ./safe-release/source/LICENSE-GPL-3.0.txt
           git -C native-upstream archive --format=zip --output="$env:GITHUB_WORKSPACE/safe-release/source/My_SpinePet-corresponding-source.zip" HEAD
           if ($LASTEXITCODE -ne 0) { throw 'Cannot provide GPL corresponding source' }
-          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/Patch-Upstream.ps1,./native-desktop/Patch-WheelZoom.ps1,./native-desktop/Patch-RenderEnvelope.ps1,./native-desktop/NativeArchiveBridge.cs,./native-desktop/NativeBrownDust2Bridge.cs,./native-desktop/NativeBrownDust2Voice.cs,./native-desktop/NativeBrownDust2WebMDecoder.cs,./native-desktop/NativeAutoUpdate.cs,./native-desktop/CONCENTUS-LICENSE.txt -Destination ./safe-release/source
+          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/Patch-Upstream.ps1,./native-desktop/Patch-WheelZoom.ps1,./native-desktop/Patch-RenderEnvelope.ps1,./native-desktop/Patch-ViewportSafety.ps1,./native-desktop/NativeArchiveBridge.cs,./native-desktop/NativeBrownDust2Bridge.cs,./native-desktop/NativeBrownDust2Voice.cs,./native-desktop/NativeBrownDust2WebMDecoder.cs,./native-desktop/NativeAutoUpdate.cs,./native-desktop/CONCENTUS-LICENSE.txt -Destination ./safe-release/source
           Copy-Item ./native-desktop/ChooseFoldersInstaller.iss -Destination ./safe-release/source
           @'
           The distributed SpinePet.exe builds pinned upstream source plus NativeArchiveBridge.cs.
