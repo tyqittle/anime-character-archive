@@ -396,5 +396,65 @@
     "rejectedCaptures": [],
     "failedCaptures": [],
     "failureSummary": {}
+  },
+  "expanded-games": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "destinychild": {
+        "indexed": 14,
+        "verifiedPreview": 14,
+        "missingPreview": 0
+      },
+      "venusscramble": {
+        "indexed": 17,
+        "verifiedPreview": 17,
+        "missingPreview": 0
+      },
+      "ironsaga": {
+        "indexed": 4,
+        "verifiedPreview": 4,
+        "missingPreview": 0
+      },
+      "mementomori": {
+        "indexed": 49,
+        "verifiedPreview": 49,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
+  },
+  "mature-spine-expansion": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "echocalypse": {
+        "indexed": 21,
+        "verifiedPreview": 21,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
+  },
+  "mature-followup": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "sacredswordprincesses": {
+        "indexed": 1,
+        "verifiedPreview": 1,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
   }
 }
