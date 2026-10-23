@@ -215,7 +215,7 @@
         "id": "ks-1349100_1349100-20ffd44"
       }
     ],
-    "newCapturesInThisRun": 27,
+    "newCapturesInThisRun": 0,
     "rejectedCaptures": [],
     "failedCaptures": [
       {
@@ -429,10 +429,20 @@
         "indexed": 62,
         "verifiedPreview": 62,
         "missingPreview": 0
+      },
+      "lovecube": {
+        "indexed": 6,
+        "verifiedPreview": 6,
+        "missingPreview": 0
+      },
+      "foxhimezero": {
+        "indexed": 1,
+        "verifiedPreview": 1,
+        "missingPreview": 0
       }
     },
     "missing": [],
-    "newCapturesInThisRun": 72,
+    "newCapturesInThisRun": 7,
     "rejectedCaptures": [],
     "failedCaptures": [],
     "failureSummary": {}

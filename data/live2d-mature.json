@@ -2434,8 +2434,22 @@
       "textureBytes": 3516404,
       "motionCount": 0,
       "contentStyle": "mature-anime",
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/LOVE%C2%B3-LOVE%20CUBE-/live2d/akira/akira_st01_w.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8761c87e1f86f96e9f38848050223db0f4b23064e8f639afae8f7ea0962c51f5",
+      "preview": "./assets/animation-previews/lovecube-lc-akira_st01_w.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "lc-akira_st02_w",
@@ -2455,8 +2469,22 @@
       "textureBytes": 3527851,
       "motionCount": 0,
       "contentStyle": "mature-anime",
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/LOVE%C2%B3-LOVE%20CUBE-/live2d/akira/akira_st02_w.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "10c157752a398b204e71b85f41dee59e59bbe68e6cad44b75c0fc007998b3a34",
+      "preview": "./assets/animation-previews/lovecube-lc-akira_st02_w.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "lc-iori_st01_w",
@@ -2476,8 +2504,22 @@
       "textureBytes": 3629722,
       "motionCount": 0,
       "contentStyle": "mature-anime",
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/LOVE%C2%B3-LOVE%20CUBE-/live2d/iori/iori_st01_w.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a4d7cffc49a77631288e6250ca051e24615f01c90757989e7ade99cad01bcebb",
+      "preview": "./assets/animation-previews/lovecube-lc-iori_st01_w.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "lc-iori_st02_w",
@@ -2497,8 +2539,22 @@
       "textureBytes": 3642255,
       "motionCount": 0,
       "contentStyle": "mature-anime",
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/LOVE%C2%B3-LOVE%20CUBE-/live2d/iori/iori_st02_w.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "438179a36a7346536d0c3df8fb1cfd5f0f8c9ef1dda69ef3657ceb6eef4d3730",
+      "preview": "./assets/animation-previews/lovecube-lc-iori_st02_w.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "lc-nodoka_st01_w",
@@ -2518,8 +2574,22 @@
       "textureBytes": 3834234,
       "motionCount": 0,
       "contentStyle": "mature-anime",
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/LOVE%C2%B3-LOVE%20CUBE-/live2d/nodoka/nodoka_st01_w.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "68fba344f958d29a2dc1a84d22f4a0611fb5424e1dc13bac71f1dec0c5211c58",
+      "preview": "./assets/animation-previews/lovecube-lc-nodoka_st01_w.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "lc-nodoka_st02_w",
@@ -2539,8 +2609,22 @@
       "textureBytes": 4595062,
       "motionCount": 0,
       "contentStyle": "mature-anime",
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/LOVE%C2%B3-LOVE%20CUBE-/live2d/nodoka/nodoka_st02_w.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9e8f0f13063547b657c2af94cad42c6fb5e16166ac9114771954a8a8ea59e289",
+      "preview": "./assets/animation-previews/lovecube-lc-nodoka_st02_w.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "fh-ruri_miko",
@@ -2560,8 +2644,22 @@
       "textureBytes": 7082834,
       "motionCount": 85,
       "contentStyle": "mature-anime",
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/Fox%20Hime%20Zero/ruri_miko/ruri_miko.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9156fa472dd5e597c92bd1a874f931fa5883b7218a8baf63e08d6cc25288edcf",
+      "preview": "./assets/animation-previews/foxhimezero-fh-ruri_miko.webp",
+      "previewSource": "matching-live2d-animation-frame"
     }
   ]
 }
