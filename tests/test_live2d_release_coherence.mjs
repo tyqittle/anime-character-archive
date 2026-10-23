@@ -22,7 +22,7 @@ test('ID validation uses the common model identity grammar, not game-specific du
  vm.runInContext(viewport.slice(start,end),cx);
  const valid=(name,id)=>{cx.name=name;cx.id=id;return vm.runInContext('validLive2DIdentity(name,id)',cx)};
  const models=JSON.parse(read('data/live2d-mature.json')).characters.filter(x=>['lovecube','foxhimezero'].includes(x.gameId));
- assert.equal(models.length,7);
+ assert.equal(models.length,11);
  for(const c of models)assert.equal(valid(c.skinCode,c.id),true,c.id);
  assert.equal(valid('some_skin','al-unrelated_skin'),false);
  for(const id of ['lc-../../wrong','fh-foo/bar','LC-no','unknown','x-!'])

@@ -44,5 +44,20 @@
    y:frame.y+frame.worldHeight/2-(bounds.y+bounds.height)/height*frame.worldHeight,
    width:bounds.width/width*frame.worldWidth,height:bounds.height/height*frame.worldHeight};
  }
- return {validBounds,visibleBounds,cameraFrame,pixelsToWorld};
+ function unionTransformedBounds(rects,m={a:1,b:0,c:0,d:1,tx:0,ty:0}){
+  m=m||{a:1,b:0,c:0,d:1,tx:0,ty:0};
+  const matrix=['a','b','c','d','tx','ty'].map(k=>Number(m[k]));
+  if(!matrix.every(Number.isFinite))return null;
+  const [a,b,c,d,tx,ty]=matrix;let left=Infinity,top=Infinity,right=-Infinity,bottom=-Infinity;
+  for(const r of rects||[]){
+   if(!validBounds(r))continue;
+   for(const [x,y] of [[r.x,r.y],[r.x+r.width,r.y],[r.x,r.y+r.height],[r.x+r.width,r.y+r.height]]){
+    const X=x*a+y*c+tx,Y=x*b+y*d+ty;
+    left=Math.min(left,X);top=Math.min(top,Y);right=Math.max(right,X);bottom=Math.max(bottom,Y);
+   }
+  }
+  const result={x:left,y:top,width:right-left,height:bottom-top};
+  return validBounds(result)?result:null;
+ }
+ return {validBounds,visibleBounds,cameraFrame,pixelsToWorld,unionTransformedBounds};
 });

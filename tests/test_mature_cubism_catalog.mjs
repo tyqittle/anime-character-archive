@@ -7,8 +7,8 @@ const chars=JSON.parse(read('data/live2d-mature.json')).characters.filter(c=>['l
 const src=read('assets/js/live2d/state-and-viewport.js');const ctx=vm.createContext({});
 vm.runInContext(src.slice(0,src.indexOf('const SAME_ORIGIN=')),ctx);
 const valid=(c,url=c.modelUrl,name=c.skinCode)=>{ctx.c=c;ctx.url=url;ctx.n=name;return vm.runInContext('modelUrlFor(n,url,c.id)',ctx)};
-test('7 mature Cubism models have unique identities and no fake previews',()=>{
- assert.equal(chars.length,7);assert.equal(new Set(chars.map(x=>x.id)).size,7);assert.equal(chars.filter(x=>x.gameId==='lovecube').length,6);
+test('11 mature Cubism models have unique identities and no fake previews',()=>{
+ assert.equal(chars.length,11);assert.equal(new Set(chars.map(x=>x.id)).size,11);assert.equal(chars.filter(x=>x.gameId==='lovecube').length,6);
  for(const c of chars){
   assert.equal(c.engine,'cubism');assert.ok(c.textureBytes>700000);
   if(c.preview){

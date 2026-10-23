@@ -13,7 +13,7 @@ const modelUrl=(c,url=c.modelUrl,name=c.skinCode)=>{
  return vm.runInContext('modelUrlFor(name,url,c.id)',cx);
 };
 test('Every catalog entry has a proper original character model, not an explicit CG scene',()=>{
- const expectedByGame={tokyonecro:62,maidslife:10,lovecube:6,foxhimezero:1};
+ const expectedByGame={tokyonecro:62,maidslife:10,lovecube:6,foxhimezero:5};
  assert.equal(records.length,Object.values(expectedByGame).reduce((a,b)=>a+b,0));
  assert.equal(records.filter(x=>x.gameId==='tokyonecro').length,62);
  for(const [game,count] of Object.entries(expectedByGame))assert.equal(records.filter(x=>x.gameId===game).length,count,game);

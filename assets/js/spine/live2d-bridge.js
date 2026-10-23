@@ -8,7 +8,7 @@ function ensureAzurLaneFrame(){
  azurlaneFrame=document.createElement('iframe');
  azurlaneFrame.className='azurlane-live2d-frame';
  azurlaneFrame.title='Live2D · Cubism 模型画布';
- azurlaneFrame.src='./azurlane-stage.html?v=20261023-live2d-stable-view-v2'+(new URLSearchParams(location.search).has('desktop')?'&desktop=1':'');
+ azurlaneFrame.src='./azurlane-stage.html?v=20261023-live2d-motion-geometry-v3'+(new URLSearchParams(location.search).has('desktop')?'&desktop=1':'');
  azurlaneFrame.loading='eager';
  azurlaneFrame.setAttribute('allow','autoplay');
  $('player').replaceChildren(azurlaneFrame);
@@ -77,6 +77,7 @@ window.addEventListener('message',event=>{
   viewZoom=clampViewZoom(Number.isFinite(data.zoom)?data.zoom:1);$('zoomValue').textContent=Math.round(viewZoom*100)+'%';
   status('正在播放：'+azurlanePending.name+' · Live2D'+(data.selectedMotion?' · '+(data.motionLabels?.[data.selectedMotion]||data.selectedMotion):'')+'（'+actions.length+' 组动作）'+(Number.isFinite(data.loadMs)&&data.loadMs>0?' · 加载 '+(data.loadMs/1000).toFixed(1)+' 秒':''));
  }
+ if(data.kind==='motion-error'){status('Live2D：'+data.error,true);return}
  if(data.kind==='performance'&&Number.isFinite(data.fps))updateGPUStatus(null,data.fps);
  if(data.kind==='zoom'&&Number.isFinite(data.zoom)){
   viewZoom=clampViewZoom(data.zoom);

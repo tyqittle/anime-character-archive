@@ -67,7 +67,7 @@ function modelUrlFor(name,candidate,id){
     const m=relative.match(/^galgame live2d\/LOVE³-LOVE CUBE-\/live2d\/(akira|iori|nodoka)\/((?:akira|iori|nodoka)_st0[12]_w)\.model3\.json$/);
     return m&&m[2].startsWith(m[1]+'_')&&id==='lc-'+m[2]&&name===m[2]?candidate:'';
    }
-   const m=relative.match(/^galgame live2d\/Fox Hime Zero\/(ruri_miko)\/\1\.model3\.json$/);
+   const m=relative.match(/^galgame live2d\/Fox Hime Zero\/([a-z][a-z0-9_]*)\/\1\.model3\.json$/);
    return m&&id==='fh-'+m[1]&&name===m[1]?candidate:'';
   }catch(e){return ''}
  }
@@ -84,7 +84,7 @@ const SAME_ORIGIN=location.origin;
 const warn=document.getElementById('warning');
 let app=null,model=null,currentId='',currentGeneration=0,baseScale=1,zoom=1,offsetX=0,offsetY=0,initError='';
 let queuedLoad=null,readyId='',loadStartedAt=0;
-let portraitLocalBounds=null;
+let portraitLocalBounds=null,portraitGeometryBounds=null;
 // Avoid uneven frame pacing on standard 60 Hz displays. 45 FPS looks juddery
 // even with a healthy WebGL renderer. Cap only genuinely constrained devices.
 const lowPower=(Number(navigator.deviceMemory)>0&&navigator.deviceMemory<=2)
@@ -108,13 +108,31 @@ function validLive2DIdentity(name,id){
  return verifyName(name)&&typeof id==='string'&&/^[a-z][a-z0-9]*-[a-z0-9_-]{1,100}$/.test(id)
   &&(!id.startsWith('al-')||id==='al-'+name.toLowerCase());
 }
+// The MOC canvas size is a coordinate system, not a clipping rectangle.
+// Include visible meshes outside it before doing one rendered-pixel refinement.
+function measureLive2DGeometry(active){
+ const im=active?.internalModel,core=im?.coreModel;
+ if(!im?.getDrawableIDs||!im?.getDrawableBounds)return null;
+ try{
+  const rects=[],ids=im.getDrawableIDs(),opacities=core?._model?.drawables?.opacities;
+  for(let i=0;i<ids.length;i++){
+   if(opacities&&opacities[i]<=.01)continue;
+   if(core?.getDrawableDynamicFlagIsVisible&&!core.getDrawableDynamicFlagIsVisible(i))continue;
+   const rect=im.getDrawableBounds(i);
+   if(ArchivePortraitFraming.validBounds(rect))rects.push({...rect});
+  }
+  const bounds=ArchivePortraitFraming.unionTransformedBounds(rects,im.localTransform);
+  if(bounds){portraitGeometryBounds=bounds;return bounds}
+ }catch(error){console.warn('Live2D 几何取景失败，使用声明画布',error)}
+ return null;
+}
 function fit(){
  if(!app||!model)return;
  // Live2D models have nonzero local-bound origins. Subtracting bounds.x/y
  // is essential: centering by model.width alone can cut off half the skin.
  const w=app.screen.width,h=app.screen.height;
  model.scale.set(1);
- let bounds=portraitLocalBounds||model.getLocalBounds();
+ let bounds=portraitLocalBounds||portraitGeometryBounds||measureLive2DGeometry(model)||model.getLocalBounds();
  if(!bounds||!Number.isFinite(bounds.width)||!Number.isFinite(bounds.height)||bounds.width<=0||bounds.height<=0)
   bounds={x:0,y:0,width:Math.max(1,model.width),height:Math.max(1,model.height)};
  baseScale=Math.min(w*.9/Math.max(1,bounds.width),h*.88/Math.max(1,bounds.height));
@@ -136,7 +154,8 @@ function fitRenderedLive2D(expected,generation){
   const ctx=sample.getContext('2d',{willReadFrequently:true});
   ctx.drawImage(canvas,0,0,sample.width,sample.height);
   const pixels=ctx.getImageData(0,0,sample.width,sample.height).data;
-  const visible=ArchivePortraitFraming.visibleBounds({pixels,width:sample.width,height:sample.height});
+  const visible=ArchivePortraitFraming.visibleBounds({pixels,width:sample.width,height:sample.height,
+   background:desktopMode?null:[20,34,56]});
   if(!visible)return;
   const sx=app.screen.width/sample.width,sy=app.screen.height/sample.height,factor=model.scale.x;
   portraitLocalBounds={x:(visible.x*sx-model.x)/factor,y:(visible.y*sy-model.y)/factor,
@@ -150,6 +169,12 @@ function fitRenderedLive2D(expected,generation){
 function queueLive2DPortraitFit(){
  const expected=model,generation=currentGeneration,requestedZoom=zoom,x=offsetX,y=offsetY;
  app.ticker.addOnce(()=>{
-  if(zoom===requestedZoom&&offsetX===x&&offsetY===y)fitRenderedLive2D(expected,generation);
+  if(model!==expected||generation!==currentGeneration||zoom!==requestedZoom||offsetX!==x||offsetY!==y)return;
+  // The first draw applies the actual motion to the MOC meshes. Refit those
+  // meshes, including portions outside the declared canvas, before sampling.
+  portraitGeometryBounds=null;portraitLocalBounds=null;
+  measureLive2DGeometry(expected);fit();
+  app.renderer.render(app.stage);
+  fitRenderedLive2D(expected,generation);
  },null,-100);
 }

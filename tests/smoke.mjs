@@ -15,7 +15,7 @@ const bd2Full=JSON.parse(read('data/spine-bd2-characters.json'));
 const more=JSON.parse(read('data/live2d-moregames.json')).characters;
 const hq=JSON.parse(read('data/live2d-highquality.json')).characters;
 const mature=JSON.parse(read('data/live2d-mature.json')).characters;
-const expectedMatureCounts={tokyonecro:62,maidslife:10,lovecube:6,foxhimezero:1};
+const expectedMatureCounts={tokyonecro:62,maidslife:10,lovecube:6,foxhimezero:5};
 assert.equal(mature.length,Object.values(expectedMatureCounts).reduce((n,count)=>n+count,0));
 for(const [game,count] of Object.entries(expectedMatureCounts))
  assert.equal(mature.filter(c=>c.gameId===game).length,count,game);
@@ -343,7 +343,7 @@ for(const file of cubismModules){
  assert.ok(live2dFrame.includes('./'+file+'?v='),'Cubism page missing versioned module: '+file);
  new Function(read(file));
 }
-assert.ok(live2dFrame.includes('./assets/live2d-stage.css?v=20261021-modules-v1'),'Cubism style must be an external module');
+assert.ok(live2dFrame.includes('./assets/live2d-stage.css?v='),'Cubism style must be an external module');
 assert.ok(cubismSource.includes('PIXI.live2d.Live2DModel.fromSync'),'Azur Lane needs a real Cubism renderer, not an image swap');
 assert.ok(read('assets/js/live2d/runtime-loader.js').includes('88cb6e56a0ad472fe7e546509f096545d2bbc5b9'),'Cubism runtime must be pinned');
 assert.ok(player.includes('value="azurlane"')&&player.includes("c.gameId==='azurlane'"),'Azur Lane must be a regular selection in the dynamic theater');

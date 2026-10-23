@@ -19,22 +19,16 @@ function playFrameVoice(){
  const urls=ArchiveVoice.skinURLs(frameVoiceSkin),index=frameVoiceIndex++%urls.length;
  return frameVoicePlayer.play([...urls.slice(index),...urls.slice(0,index)],frameVoiceVolume);
 }
+let frameMotionController=null;
 function motion(name){
  if(!model||typeof name!=='string')return;
- try{
-  if(name.startsWith('@motion:')){
-   const i=Number(name.slice(8));
-   if(!Number.isSafeInteger(i)||!model.internalModel?.motionManager?.definitions?.['']?.[i])return;
-   model.motion('',i,PIXI.live2d.MotionPriority.NORMAL);
-  }else if(name)model.motion(name,0,PIXI.live2d.MotionPriority.NORMAL);
-  else return;
-  notify('motion',{name});
- }catch(e){notify('error',{error:'无法播放动作 '+name+'：'+e.message})}
+ return frameMotionController?.play(name);
 }
 async function load(name,id,modelUrl){
  if(!validLive2DIdentity(name,id)){notify('error',{error:'无效的 Live2D 模型编号'});return}
  const generation=++currentGeneration;
- currentId=id;readyId='';loadStartedAt=performance.now();portraitLocalBounds=null;
+ currentId=id;readyId='';loadStartedAt=performance.now();portraitLocalBounds=null;portraitGeometryBounds=null;
+ frameMotionController?.dispose();frameMotionController=null;
  zoom=desktopMode?.58:1;offsetX=desktopMode?(app?.screen?.width||window.innerWidth)*.24:0;offsetY=desktopMode?(app?.screen?.height||window.innerHeight)*.07:0;
  if(model){try{app.stage.removeChild(model);model.destroy()}catch(e){}model=null}
  if(!app){notify('error',{error:initError||'Live2D 渲染库尚未加载'});return}
@@ -76,25 +70,21 @@ async function load(name,id,modelUrl){
   model=next;readyId=id;app.stage.addChild(model);
   model.interactive=true;
   fit();
-  const defs=model.internalModel?.motionManager?.definitions||{};
-  const actions=[],motionLabels={};
-  for(const [group,items] of Object.entries(defs)){
-   if(!Array.isArray(items)||!items.length)continue;
-   if(group===''){
-    items.forEach((m,index)=>{
-     const key='@motion:'+index;
-     actions.push(key);
-     motionLabels[key]=String(m.File||m.file||('动作 '+(index+1))).split('/').pop().replace(/\.motion3\.json$/,'');
-    });
-   }else{actions.push(group);motionLabels[group]=group;}
-  }
-  const initial=actions.find(x=>/^(idle|home|login|main_1)$/i.test(x))
-   ||actions.find(x=>/^(?:00_Wait|idle|daiji)/i.test(motionLabels[x]||''))||actions[0]||'';
-  if(model.internalModel?.motionManager&&defs.idle)model.internalModel.motionManager.groups.idle='idle';
-  if(initial){
-   if(initial.startsWith('@motion:'))model.motion('',Number(initial.slice(8)),PIXI.live2d.MotionPriority.FORCE);
-   else model.motion(initial,0,PIXI.live2d.MotionPriority.FORCE);
-  }
+  const manager=model.internalModel?.motionManager;
+  let motionAnnounced=false;
+  frameMotionController=ArchiveCubismMotions.install({manager,priorities:PIXI.live2d.MotionPriority,
+   isCurrent:()=>generation===currentGeneration&&model===next,
+   onChange:name=>{if(motionAnnounced)notify('motion',{name})},
+   onError:error=>notify('motion-error',{error})
+  });
+  const actions=frameMotionController.entries.map(entry=>entry.key);
+  const motionLabels=Object.fromEntries(frameMotionController.entries.map(entry=>[entry.key,entry.label]));
+  const initial=frameMotionController.initialKey;
+  model._archiveMotionPolicy={idle:initial,idleKind:frameMotionController.idleKind,actions:actions.length};
+  // Await only the selected standby clip, leaving all other actions lazy.
+  // Model readiness and the first visible fit must refer to its standby pose.
+  if(initial&&!await frameMotionController.start()&&generation===currentGeneration&&model===next)throw Error('初始动作未能加载：'+initial);
+  if(generation!==currentGeneration||model!==next)return;
   model.on('hit',areas=>{if(Array.isArray(areas)&&areas.length){const a=areas[0];notify('interaction',{area:a});if(actions.includes(a))motion(a)}});
   const p=(evt)=>{if(!model)return;const pt=evt?.data?.global;if(!pt)return;model.dragging=true;model.dragX=pt.x;model.dragY=pt.y};
   // Play audio within the SAME pointer gesture and iframe. postMessage to the
@@ -106,6 +96,7 @@ async function load(name,id,modelUrl){
   queueLive2DPortraitFit();
   warn.hidden=true;
   if(!document.hidden&&app?.ticker)app.ticker.start();
+  motionAnnounced=true;
   notify('playing',{motions:actions,motionLabels,selectedMotion:initial,zoom,loadMs:Math.round(performance.now()-loadStartedAt),fpsCap:targetFPS,graphics:graphicsReport()});
  }catch(e){try{next?.destroy()}catch(_){}if(generation!==currentGeneration)return;model=null;readyId='';message('模型加载失败：'+(e?.message||String(e)));notify('error',{error:'模型加载失败：'+(e?.message||String(e))})}
 }

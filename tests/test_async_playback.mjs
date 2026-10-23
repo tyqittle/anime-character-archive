@@ -222,7 +222,7 @@ test('model deadline clears a stalled stage and discards a late cache read',asyn
 test('Cubism setup errors use onError and immediately retry the same model provider',async()=>{
  const calls=[],destroyed=[],events=[];
  const ctx=context({desktopMode:false,targetFPS:60,currentGeneration:0,currentId:'',readyId:'',loadStartedAt:0,
-  zoom:1,offsetX:0,offsetY:0,model:null,portraitLocalBounds:null,performance:{now:()=>0},warn:{hidden:false},queueMicrotask,
+  zoom:1,offsetX:0,offsetY:0,model:null,portraitLocalBounds:null,portraitGeometryBounds:null,performance:{now:()=>0},warn:{hidden:false},queueMicrotask,
   document:{hidden:false},message(){},fit(){},queueLive2DPortraitFit(){},verifyName:()=>true,modelUrlFor:()=> 'raw',
   graphicsReport:()=>({}),notify:(kind,data)=>events.push({kind,data}),
   app:{screen:{width:800,height:600},stage:{addChild(){}},ticker:{stop(){},start(){},addOnce(){}}},
@@ -242,6 +242,7 @@ test('Cubism setup errors use onError and immediately retry the same model provi
  const validatorEnd=viewportSource.indexOf('function fit(',validatorStart);
  assert.ok(validatorStart>=0&&validatorEnd>validatorStart);
  vm.runInContext(viewportSource.slice(validatorStart,validatorEnd),ctx);
+ run(ctx,'assets/js/shared/cubism-motion-policy.js');
  run(ctx,'assets/js/live2d/model-loader.js');
  await ctx.load('demo','al-demo','raw');
  assert.equal(calls.length,2);

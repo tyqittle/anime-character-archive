@@ -7,7 +7,7 @@ window.addEventListener('message',event=>{
  else if(d.kind==='voice-config')setFrameVoice(d.voice);
  else if(d.kind==='motion')motion(d.motion);
  else if(d.kind==='zoom')setZoom(Number(d.zoom)||1);
- else if(d.kind==='reset'){zoom=desktopMode?.58:1;offsetX=desktopMode?(app?.screen?.width||window.innerWidth)*.24:0;offsetY=desktopMode?(app?.screen?.height||window.innerHeight)*.07:0;portraitLocalBounds=null;fit();if(model)queueLive2DPortraitFit();notify('zoom',{zoom})}
+ else if(d.kind==='reset'){zoom=desktopMode?.58:1;offsetX=desktopMode?(app?.screen?.width||window.innerWidth)*.24:0;offsetY=desktopMode?(app?.screen?.height||window.innerHeight)*.07:0;portraitLocalBounds=null;portraitGeometryBounds=null;fit();if(model)queueLive2DPortraitFit();notify('zoom',{zoom})}
 });
 window.addEventListener('resize',()=>{if(model)fit()});
 const desktopMode=new URLSearchParams(location.search).has('desktop');
@@ -67,7 +67,7 @@ function graphicsReport(){
 // Cap at 2x to avoid overly expensive drawing buffers on ultra-high-DPI screens.
 const renderResolution=Math.min(2,Math.max(1,Number(window.devicePixelRatio)||1));
 app=new PIXI.Application({view:document.getElementById('live2dCanvas'),autoStart:true,
- resizeTo:window,backgroundAlpha:0,antialias:false,autoDensity:true,
+ resizeTo:window,backgroundAlpha:desktopMode?0:1,backgroundColor:0x142238,antialias:false,autoDensity:true,
  resolution:renderResolution,powerPreference:'high-performance'});
  // Reduce WebGL fill-rate and avoid struggling to hit 60 fps on large models.
  if(app.ticker){app.ticker.maxFPS=targetFPS;app.ticker.stop()}
