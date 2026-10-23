@@ -91,6 +91,7 @@ jobs:
           $frame = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeFrameRenderer.cs -Raw
           $surface = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeCompositionSurface.cs -Raw
           $silhouette = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeSilhouetteRasterizer.cs -Raw
+          $bounds = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeSpineBounds.cs -Raw
           $hitRegion = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeInputRegionCoordinator.cs -Raw
           $voice = Get-Content ./native-upstream/SpinePet/src/SpinePet/NativeBrownDust2Voice.cs -Raw
           $app = Get-Content ./native-upstream/SpinePet/src/SpinePet/App.xaml.cs -Raw
@@ -98,6 +99,10 @@ jobs:
               -not $frame.Contains('NativeSpineBounds observed = state.Geometry.Bounds') -or
               -not $surface.Contains('right <= PixelWidth - AnchorPixelX') -or
               -not $silhouette.Contains('float halfCell = cellSize * 0.38f / pixelScale') -or
+              -not $silhouette.Contains('const int Subdivisions = 4') -or
+              -not $bounds.Contains('NativeSpineSkinIncludes.Apply(data, probe);') -or
+              -not $bounds.Contains('NativeSpineSkinIncludes.Apply(data, setupSkeleton);') -or
+              -not $engine.Contains('var bounds = ProjectEnvelope();') -or
               -not $hitRegion.Contains('screen.Bounds,') -or
               -not $engine.Contains('NativeDesktopVoiceRelay.NotifyClicked(') -or
               -not $engine.Contains('FitNewlyLoadedCharacterToMonitor(current);') -or
@@ -180,6 +185,15 @@ jobs:
           }
           dotnet run --project ./native-upstream/SpinePet/tools/skeleton-inspector/SkeletonInspector.csproj -c Release -- ./native-integration-test/bd2/char000201.skel ./native-integration-test/bd2/char000201.atlas
           if ($LASTEXITCODE -ne 0) { throw 'Brown Dust 2 Spine 4.1 reader compatibility test failed' }
+          # Run a pixel-based regression against the ACTUAL pinned BD2
+          # standing costume (combined skins, lower-body input silhouette).
+          # A passing build or a string-matching assertion is NOT sufficient.
+          $testProject = './native-upstream/SpinePet/tests/SpinePet.Tests'
+          Copy-Item ./native-desktop/ArchiveDesktopFullBodyTests.cs $testProject
+          $env:SPINEPET_BD2_TEST_DIR = (Resolve-Path './native-integration-test/bd2').Path
+          dotnet test (Join-Path $testProject 'SpinePet.Tests.csproj') -c Release --filter 'FullyQualifiedName~ArchiveDesktopFullBodyTests' --logger 'console;verbosity=normal'
+          if ($LASTEXITCODE -ne 0) { throw 'Real BD2 lower-body visual and mouse hit-region regression failed' }
+          Remove-Item Env:SPINEPET_BD2_TEST_DIR
           # Second actual 4.1 costume ID: previous code incorrectly accepted
           # only cNNN and rejected cNNN_XX variants altogether.
           & ./native-integration-test/Open-ArchiveCharacter.ps1 -CharacterId c010_03 -DownloadOnly
@@ -235,7 +249,7 @@ jobs:
           Copy-Item ./native-upstream/LICENSE ./safe-release/source/LICENSE-GPL-3.0.txt
           git -C native-upstream archive --format=zip --output="$env:GITHUB_WORKSPACE/safe-release/source/My_SpinePet-corresponding-source.zip" HEAD
           if ($LASTEXITCODE -ne 0) { throw 'Cannot provide GPL corresponding source' }
-          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/Patch-Upstream.ps1,./native-desktop/Patch-WheelZoom.ps1,./native-desktop/Patch-RenderEnvelope.ps1,./native-desktop/Patch-ViewportSafety.ps1,./native-desktop/NativeArchiveBridge.cs,./native-desktop/NativeBrownDust2Bridge.cs,./native-desktop/NativeBrownDust2Voice.cs,./native-desktop/NativeBrownDust2WebMDecoder.cs,./native-desktop/NativeAutoUpdate.cs,./native-desktop/CONCENTUS-LICENSE.txt -Destination ./safe-release/source
+          Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/Patch-Upstream.ps1,./native-desktop/Patch-WheelZoom.ps1,./native-desktop/Patch-RenderEnvelope.ps1,./native-desktop/Patch-ViewportSafety.ps1,./native-desktop/NativeArchiveBridge.cs,./native-desktop/NativeBrownDust2Bridge.cs,./native-desktop/NativeBrownDust2Voice.cs,./native-desktop/NativeBrownDust2WebMDecoder.cs,./native-desktop/NativeAutoUpdate.cs,./native-desktop/ArchiveDesktopFullBodyTests.cs,./native-desktop/CONCENTUS-LICENSE.txt -Destination ./safe-release/source
           Copy-Item ./native-desktop/ChooseFoldersInstaller.iss -Destination ./safe-release/source
           @'
           The distributed SpinePet.exe builds pinned upstream source plus NativeArchiveBridge.cs.
