@@ -60,7 +60,7 @@ function patchSpine38HighDPI(){
    const reported=Number(gl.getParameter?.(gl.MAX_RENDERBUFFER_SIZE))||8192;
    this._archiveRenderLimit=Math.max(1,Math.min(8192,reported));
   }
-  const requested=Math.max(1,Math.min(2,Number(window.devicePixelRatio)||1,Number(this._archiveRenderMinRatio)||1));
+  const requested=Math.min(2,Math.max(1,Number(window.devicePixelRatio)||1,Number(this._archiveRenderMinRatio)||1));
   // Cap the backing area to avoid allocating huge framebuffers on laptops;
   // never upscale above the device's actual pixel density.
   const ratio=Math.max(0.1,Math.min(requested,
