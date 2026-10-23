@@ -446,5 +446,45 @@
     "rejectedCaptures": [],
     "failedCaptures": [],
     "failureSummary": {}
+  },
+  "daibloscore": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "daibloscore": {
+        "indexed": 129,
+        "verifiedPreview": 127,
+        "missingPreview": 2
+      }
+    },
+    "missing": [
+      {
+        "gameId": "daibloscore",
+        "id": "dbcore-40350_skin_meteor05_spine-40350_skin_meteor05"
+      },
+      {
+        "gameId": "daibloscore",
+        "id": "dbcore-70310_skin_atum03a_spine-70310_skin_atum03a"
+      }
+    ],
+    "newCapturesInThisRun": 127,
+    "rejectedCaptures": [],
+    "failedCaptures": [
+      {
+        "id": "dbcore-40350_skin_meteor05_spine-40350_skin_meteor05",
+        "gameId": "daibloscore",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .json. Error: Region not found in atlas: expression_e_2 (mesh attachment: expression_e_2)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "dbcore-70310_skin_atum03a_spine-70310_skin_atum03a",
+        "gameId": "daibloscore",
+        "category": "render-error",
+        "message": "blank-frame: no rendered character"
+      }
+    ],
+    "failureSummary": {
+      "atlas-mismatch": 1,
+      "render-error": 1
+    }
   }
 }
