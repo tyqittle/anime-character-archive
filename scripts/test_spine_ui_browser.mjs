@@ -74,6 +74,7 @@ try{
     scrollY:window.scrollY,
     navInSidebar:sidebar.contains(nav),
     side:box('.side'),stage:box('.stage'),player:box('#player'),
+    toolbar:box('.stage-toolbar'),friends:box('.stage-friends-drawer'),voiceLanguage:box('#voiceLanguage'),
     listClientH:list.clientHeight,listScrollH:list.scrollHeight,
     bodyOverflowY:getComputedStyle(document.body).overflowY
    };
@@ -84,12 +85,41 @@ try{
     throw Error('Desktop still has document scrolling: '+JSON.stringify(layout));
    if(layout.side.bottom>layout.viewportH+1||layout.stage.bottom>layout.viewportH+1)
     throw Error('Desktop sidebar or stage escaped the viewport: '+JSON.stringify(layout));
+   if(layout.toolbar.height>110||layout.friends.height>42||layout.voiceLanguage.width>112)
+    throw Error('Voice toolbar or expanded links waste the animation stage height: '+JSON.stringify(layout));
+   if(layout.player.height<520)
+    throw Error('Desktop animation viewport must receive most of the stage height: '+JSON.stringify(layout));
    if(layout.player.height<220)
     throw Error('Desktop stage player has insufficient remaining height: '+JSON.stringify(layout));
    if(layout.bodyOverflowY!=='hidden')
     throw Error('Desktop document scrolling was not locked: '+JSON.stringify(layout));
   }else if(layout.player.height<290){
    throw Error('Mobile animation stage was collapsed: '+JSON.stringify(layout));
+  }
+  if(viewport.width>=851){
+   // Expand on demand, then collapse without losing the original player height.
+   const drawer=page.locator('.stage-friends-drawer');
+   await drawer.locator('summary').click();
+   const opened=await page.evaluate(()=>({
+    isOpen:document.querySelector('.stage-friends-drawer').open,
+    links:document.querySelectorAll('.stage-friends-drawer a').length,
+    playerHeight:document.querySelector('#player').getBoundingClientRect().height
+   }));
+   if(!opened.isOpen||opened.links<3||opened.playerHeight>=layout.player.height)
+    throw Error('Friend links drawer failed to expand: '+JSON.stringify(opened));
+   await drawer.locator('summary').click();
+   const restored=await page.locator('#player').evaluate(el=>el.getBoundingClientRect().height);
+   if(Math.abs(restored-layout.player.height)>3)
+    throw Error('Collapsing friend links did not restore animation space');
+   // Match the ultra-wide viewport from the layout regression screenshot.
+   await page.setViewportSize({width:1700,height:864});
+   const wide=await page.evaluate(()=>({
+    toolbar:document.querySelector('.stage-toolbar').getBoundingClientRect().height,
+    player:document.querySelector('#player').getBoundingClientRect().height
+   }));
+   if(wide.toolbar>75||wide.player<550)
+    throw Error('Wide theater still squeezes the animation into a strip: '+JSON.stringify(wide));
+   await page.setViewportSize(viewport);
   }
   if(await page.locator('.advanced-tools').evaluate(el=>el.open))throw Error('Advanced tools are expanded by default');
   await page.selectOption('#gameFilter','browndust2');
