@@ -13,14 +13,13 @@ async function captureCanvas(page,type='image/png'){
  // Capture inside the renderer callback, before WebGL discards its backbuffer.
  // Element screenshots include overlapping fixed UI and cannot measure a rig.
  return Buffer.from(await page.evaluate(type=>new Promise(resolve=>{
-  const renderer=player.sceneRenderer,previous=renderer.end;
-  renderer.end=function(...args){
-   const result=previous.apply(this,args);renderer.end=previous;
+  const previous=fitRenderedSpinePortrait;
+  fitRenderedSpinePortrait=function(p){
+   previous(p);fitRenderedSpinePortrait=previous;
    const copy=document.createElement('canvas');
-   copy.width=player.canvas.width;copy.height=player.canvas.height;
-   copy.getContext('2d').drawImage(player.canvas,0,0);
+   copy.width=p.canvas.width;copy.height=p.canvas.height;
+   copy.getContext('2d').drawImage(p.canvas,0,0);
    resolve(copy.toDataURL(type,.55).split(',')[1]);
-   return result;
   };
  }),type),'base64');
 }
@@ -54,6 +53,8 @@ try{
   });
   const bytes=await captureCanvas(page);
   const png=PNG.sync.read(bytes),bounds=framing.visibleBounds({pixels:png.data,width:png.width,height:png.height,background:[20,34,56]});
+  fs.writeFileSync('/tmp/portrait-'+id+'.png',bytes);
+  console.log('PORTRAIT_INITIAL '+JSON.stringify({id,initial,bounds}));
   assert.ok(bounds,'No visible portrait: '+id);
   const occupancy=Math.max(bounds.width/(png.width*.9),bounds.height/(png.height*.88));
   const cx=(bounds.x+bounds.width/2)/png.width,cy=(bounds.y+bounds.height/2)/png.height;

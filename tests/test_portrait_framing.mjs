@@ -76,3 +76,13 @@ test('Spine 4.x output-parameter viewports receive the same stable session recta
  assert.equal(scans,0);
  assert.deepEqual(out,{x:-120,y:34,width:700,height:500,padTop:10,padBottom:10});
 });
+
+test('explicit fit reacquires an offscreen action pose without invoking 100-pose animation scans',()=>{
+ const {cx}=controls();
+ cx.window.spine={Vector2:class Vector2{}};
+ cx.player={canvas:null,skeleton:{getBounds(offset,size){offset.x=8000;offset.y=-3000;size.x=200;size.y=600}}};
+ cx.viewZoom=3;cx.viewOffsetX=400;cx.viewOffsetY=100;
+ cx.resetViewerTransform();
+ assert.equal(cx.viewZoom,1);assert.equal(cx.viewOffsetX,0);assert.equal(cx.viewOffsetY,0);
+ assert.deepEqual(JSON.parse(JSON.stringify(cx.player._archiveViewBounds)),{x:8000,y:-3000,width:200,height:600});
+});

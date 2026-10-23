@@ -76,14 +76,6 @@ function initializeSpinePortrait(p){
    return {...this._archiveViewBounds};
   };
  }
- if(p.sceneRenderer?.end&&!p._archiveOriginalRenderEnd){
-  p._archiveOriginalRenderEnd=p.sceneRenderer.end;
-  p.sceneRenderer.end=function(...args){
-   const result=p._archiveOriginalRenderEnd.apply(this,args);
-   fitRenderedSpinePortrait(p);
-   return result;
-  };
- }
  p._archiveFitPending=2;
 }
 function sendAzurLane(kind,extra={}){if(azurlaneFrame?.contentWindow&&azurlaneReady)azurlaneFrame.contentWindow.postMessage({channel:L2D_CHANNEL,kind,...extra},location.origin)}
@@ -92,7 +84,20 @@ function resetViewerTransform(){
  viewZoom=desktop?Math.max(.5,Math.min(.7,650/Math.max(650,$('player').clientHeight))):1;
  viewOffsetX=desktop?$('player').clientWidth*.24:0;
  viewOffsetY=desktop?$('player').clientHeight*.07:0;
- if(player)player._archiveFitPending=2;
+ if(player){
+  // Reacquire the current pose even when a different action moved outside
+  // the previous camera. This is explicit reset work, never a per-frame scan.
+  const Vector=window.spine?.Vector2;
+  if(Vector&&player.skeleton?.getBounds){
+   try{
+    const offset=new Vector(),size=new Vector();
+    player.skeleton.getBounds(offset,size);
+    const bounds={x:offset.x,y:offset.y,width:size.x,height:size.y};
+    if(ArchivePortraitFraming.validBounds(bounds))player._archiveViewBounds=bounds;
+   }catch(error){console.warn('当前姿态取景失败，保留会话边界',error)}
+  }
+  player._archiveFitPending=2;
+ }
  if(azurlaneFrame)sendAzurLane('reset');
  syncViewTransform();
 }

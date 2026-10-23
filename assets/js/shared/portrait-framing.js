@@ -12,7 +12,7 @@
   const count=width*height,mask=new Uint8Array(count),queue=new Int32Array(count),parts=[];
   for(let i=0;i<count;i++){
    const p=i*4;
-   mask[i]=pixels[p+3]>24&&(!background||Math.max(...background.map((c,j)=>Math.abs(pixels[p+j]-c)))>tolerance)?1:0;
+   mask[i]=pixels[p+3]>24&&(!background||Math.max(Math.abs(pixels[p]-background[0]),Math.abs(pixels[p+1]-background[1]),Math.abs(pixels[p+2]-background[2]))>tolerance)?1:0;
   }
   for(let i=0;i<count;i++){
    if(!mask[i])continue;

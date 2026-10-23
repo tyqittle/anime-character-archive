@@ -10,7 +10,7 @@ function setup(){
  SpinePlayer.prototype.stopRendering=function(){this.stopRequestAnimationFrame=true};
  const document={hidden:false};
  const cx=vm.createContext({window:{spine:{SpinePlayer}},document,console,clearTimeout,
-  requestAnimationFrame:cb=>pending.push(cb),recordSpineFrame(){calls.frames++}});
+  requestAnimationFrame:cb=>pending.push(cb),fitRenderedSpinePortrait(){calls.capturedDraw=calls.draws},recordSpineFrame(){calls.frames++}});
  vm.runInContext(code,cx);cx.patchSpine38Lifecycle();cx.patchSpine38Lifecycle();
  const p=new SpinePlayer();Object.assign(p,{
   config:{success(){throw Error('stale callback')},error(){throw Error('stale error')}},
@@ -32,6 +32,6 @@ test('hidden legacy sessions suspend rendering and resume without elapsed-time j
  const x=setup();x.document.hidden=true;x.p.drawFrame();
  assert.equal(x.calls.draws,0);assert.equal(x.calls.time,1);assert.equal(x.pending.length,1);
  x.document.hidden=false;x.pending.shift()();
- assert.equal(x.calls.draws,1);assert.equal(x.calls.frames,1);
+ assert.equal(x.calls.draws,1);assert.equal(x.calls.frames,1);assert.equal(x.calls.capturedDraw,1);
  x.p.dispose();x.pending.shift()();assert.equal(x.pending.length,0);
 });
