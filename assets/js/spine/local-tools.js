@@ -81,6 +81,7 @@ return {id:skeletonName,version,exportVersion:detected.version,headerChecked:tru
 function playPack(pack){
  // Spine 3.8 consumes data URIs through XHR; 4.x reads their text literally.
  // Normalize both atlas and JSON skeleton files, including local FileReader output.
+ let archiveAtlasText='';
  const textFiles=[[pack.atlas,'text/plain']];
  if(/\.json$/i.test(pack.skeleton))textFiles.push([pack.skeleton,'application/json']);
  for(const [filename,type] of textFiles){
@@ -95,6 +96,7 @@ function playPack(pack){
    try{contents=decodeURIComponent(contents)}catch(e){}
   }
   const clean=contents.replace(/^\uFEFF/,'');
+  if(filename===pack.atlas)archiveAtlasText=clean;
   pack.rawDataURIs[filename]=pack.version==='3.8'
    ?'data:'+type+';charset=utf-8,'+encodeURIComponent(clean):'data:'+type+','+clean;
  }
@@ -106,7 +108,7 @@ function playPack(pack){
  // white seams at the hands, face and skin. Keep other sources unchanged.
  const brownDust2=String(pack.id||'').startsWith('browndust2-');
  const premultipliedAlpha=brownDust2?false:!String(pack.id||'').startsWith('bluearchive-');
- return show({skeleton:pack.skeleton,atlas:pack.atlas,rawDataURIs:pack.rawDataURIs,premultipliedAlpha,archiveEntry:matching||null},title)
+ return show({skeleton:pack.skeleton,atlas:pack.atlas,rawDataURIs:pack.rawDataURIs,premultipliedAlpha,archiveEntry:matching||null,archiveAtlasText},title)
 }
 $('saveLocal').onclick=async()=>{try{status('正在保存到浏览器本地缓存…');const pack=await preparePack(chosenFileList);await dbAction('readwrite',s=>s.put(pack));await refreshSaved();status('已保存 '+pack.id+'。以后可直接从“已保存的本地动画包”加载，无须重新选择素材文件。')}catch(e){status('保存失败：'+e.message,true)}};
 $('savedPacks').onchange=async()=>{

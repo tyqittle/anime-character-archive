@@ -209,6 +209,15 @@ async function show(options,title,onError){
    success:(p)=>{
     if(attempt!==currentAttempt){try{p.dispose?.()}catch(e){}resolve(false);return}
     stopWatchdog();if(pendingRenderCancel===cancel)pendingRenderCancel=null;player=p;
+    if(options.archiveEntry?.atlasCoordinateSpace){
+     try{
+      const atlas=p.assetManager.get(p.config.atlasUrl);
+      p._archiveAtlasCoordinateDiagnostics=ArchiveSpineAtlasCoordinates.applyCoordinateSpace({
+       atlas,atlasText:options.archiveAtlasText,skeleton:p.skeleton,runtime:window.spine,
+       mode:options.archiveEntry.atlasCoordinateSpace
+      });
+     }catch(error){fail('图集坐标适配失败：'+error.message);return}
+    }
     // Defer shader replacement until the current Spine draw callback exits;
     // never replace an active WebGL batcher's program halfway through a draw.
     if(typeof installSpineIllustrationQuality==='function'&&options.archiveEntry){

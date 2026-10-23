@@ -25,3 +25,12 @@ test('preview source identity changes when the actual model source changes',()=>
  const c={engine:'cubism',modelUrl:'https://example.test/ref1/demo.model3.json'};
  assert.notDeepEqual(sourceIdentity(c),sourceIdentity({...c,modelUrl:'https://example.test/ref2/demo.model3.json'}));
 });
+
+test('atlas coordinate interpretation invalidates old previews without changing legacy identities',()=>{
+ const c={engine:'spine',base:'https://example.test/ref/rig'};
+ const legacy=sourceIdentity(c),declared=sourceIdentity({...c,atlasCoordinateSpace:'declared'});
+ assert.equal(legacy.length,7);
+ assert.deepEqual(declared.slice(0,7),legacy);
+ assert.equal(declared[7],'atlas-coordinate-space:declared');
+ assert.notDeepEqual(legacy,declared);
+});

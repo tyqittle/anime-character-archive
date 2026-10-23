@@ -24,5 +24,8 @@ def catalog_paths():
     return [entry['path'] for entry in load_registry()]
 
 def source_identity(character):
-    return [character.get('engine') or 'spine', *[character.get(key) or '' for key in
+    identity = [character.get('engine') or 'spine', *[character.get(key) or '' for key in
         ('base','skeletonUrl','atlasUrl','modelUrl','resourceStem','spineVersion')]]
+    if character.get('atlasCoordinateSpace'):
+        identity.append('atlas-coordinate-space:' + character['atlasCoordinateSpace'])
+    return identity

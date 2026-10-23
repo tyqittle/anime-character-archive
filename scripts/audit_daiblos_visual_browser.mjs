@@ -69,7 +69,7 @@ async function inspectRuntime(page){
   const pageDimensions=(atlas?.pages||[]).map(x=>{
    const img=x.texture?.getImage?.();
    return {name:x.name,width:x.width,height:x.height,
-    imageWidth:img?.naturalWidth||img?.width||null,imageHeight:img?.naturalHeight||img?.height||null};
+    imageWidth:img?.naturalWidth||img?.width||null,imageHeight:img?.naturalHeight||img?.height||null,coordinateSize:x._archiveCoordinateSize||null};
   });
   let declaredAtlasSize=null;
   try{
@@ -85,7 +85,7 @@ async function inspectRuntime(page){
    skin:p.skeleton?.skin?.name||null,rotationCounts:rotations,
    atlasRegions:regions.length,invalidRegions,meshAttachments:mesh,
    regionAttachments:region,invalidUVAttachments,invalidUVNames,
-   declaredAtlasSize,pageDimensions};
+   declaredAtlasSize,pageDimensions,coordinatePolicy:p._archiveAtlasCoordinateDiagnostics||null};
  });
 }
 const results=[];try{

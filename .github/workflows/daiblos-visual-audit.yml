@@ -4,6 +4,8 @@ on:
   push:
     branches: [main]
     paths:
+      - 'assets/js/shared/spine-atlas-coordinates.js'
+      - 'data/spine-daiblos-core.json'
       - 'scripts/audit_daiblos_visual_browser.mjs'
       - 'scripts/diagnose_daiblos_animation_sweep.mjs'
       - 'scripts/diagnose_daiblos_atlas.mjs'

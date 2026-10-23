@@ -27,7 +27,9 @@
   }finally{clearTimeout(timer);signal?.removeEventListener('abort',cancel)}
  }
  function sourceIdentity(c){
-  return [c.engine||'spine',...['base','skeletonUrl','atlasUrl','modelUrl','resourceStem','spineVersion'].map(key=>c[key]||'')];
+  const identity=[c.engine||'spine',...['base','skeletonUrl','atlasUrl','modelUrl','resourceStem','spineVersion'].map(key=>c[key]||'')];
+  if(c.atlasCoordinateSpace)identity.push('atlas-coordinate-space:'+c.atlasCoordinateSpace);
+  return identity;
  }
  return Object.freeze({validate,load,sourceIdentity});
 });

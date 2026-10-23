@@ -49,7 +49,7 @@ const characters=accepted.map(c=>{
  const base='https://raw.githubusercontent.com/'+repo+'/'+pinnedCommit+'/spine/'+encodeURIComponent(c.folder)+'/'+encodeURIComponent(c.stem);
  return {id:'dbcore-'+c.folder.toLowerCase()+'-'+c.stem.toLowerCase(),gameId:'daibloscore',game:'Daiblos Core',collectionName:'Daiblos Core · 动态角色',engine:'spine',
   name:characterName+' · '+costumeName,characterName,characterCode:c.folder.split('_')[0],costumeName,skinCode:c.stem,assetType:'character-spine',
-  spineVersion:'3.8',skeletonFormat:'json',resourceStem:c.stem,base,skeletonUrl:base+'.json',atlasUrl:base+'.atlas',
+  spineVersion:'3.8',skeletonFormat:'json',atlasCoordinateSpace:'declared',resourceStem:c.stem,base,skeletonUrl:base+'.json',atlasUrl:base+'.atlas',
   sourceRepo:repo,sourceCommit:pinnedCommit,sourcePath:'spine/'+c.folder+'/'+c.stem+'.json',
   skeletonBytes:c.skeletonBytes,atlasBytes:c.atlasBytes,textureBytes:c.textureBytes,
   status:'indexed-unverified',playbackStatus:'not-verified',previewSource:'not-rendered',visualIntegrityPolicy:'coherent-character'};
