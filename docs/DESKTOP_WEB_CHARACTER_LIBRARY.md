@@ -1,0 +1,23 @@
+# Desktop website character library
+
+Website imports are registered in the existing Characters area under ��ҳ��ɫ;
+�����ز� retains the original native library and settings.
+
+- Persist every successfully selected catalog identity as (Game, Id), with name,
+  visibility, voice and selected action, in universal-characters-v1.json.
+- Import the previous universal-desktop-v1.json on first use. Once the new file
+  exists it is authoritative, including an empty library after removal.
+- Selection replaces the currently displayed website character, matching the
+  previous single-host behavior; earlier selections remain available in the list.
+- Hide preserves the entry; remove only removes its registration and active host.
+  Neither operation deletes downloaded resources or the shared WebView2 profile.
+- Writes use a temporary file and atomic replacement. Failed writes retain the
+  previous in-memory list. Invalid documents are preserved and reported.
+- The program can recover the last role saved by old versions; older website
+  selections were never recorded by those versions and must be added again.
+
+Application behavior is typed C# under native-desktop/web/. Pinned upstream
+patching adds two checked attachment points, with no game-specific UI branches.
+Windows regressions cover persistence, exact identity, migration/removal,
+failed writes and Characters-panel show/hide/remove without native resources,
+alongside existing composition, alpha, input and multi-engine playback tests.

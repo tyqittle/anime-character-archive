@@ -113,14 +113,14 @@ $withUpdate = @'
                                              Margin="5,0,0,0">
                                      <Button x:Name="UniversalCatalogButton"
                                              Width="76" Height="24" Margin="0,0,0,3"
-                                             Padding="4,0" Content="网页选角"
+                                             Padding="4,0" Content="��ҳѡ��"
                                              Style="{StaticResource QuietButtonStyle}"
                                              AutomationProperties.Name="Choose any website animation" />
                                      <Button x:Name="ManualUpdateButton"
                                              Width="76" Height="24"
                                              Margin="0,0,0,3"
                                              Padding="4,0"
-                                             Content="检查更新"
+                                             Content="������"
                                              Style="{StaticResource QuietButtonStyle}"
                                              AutomationProperties.Name="Check for updates" />
                                      <Button Width="76" Height="24"
@@ -138,6 +138,14 @@ if ([regex]::Matches($windowText,[regex]::Escape($originalExit)).Count -ne 1) {
     throw 'Pinned upstream main-window Update button insertion anchor mismatch'
 }
 $windowText = $windowText.Replace($originalExit,$withUpdate)
+# Stable attachment points for the typed web-character library controller.
+$libraryAnchor = '                            <Grid Grid.Row="2">' + "`n" + '                                <ListBox x:Name="CharacterCards"'
+$settingsAnchor = '                    <!-- Right big column: settings scroll plus the finish button below it. -->' + "`n" + '                    <Grid Grid.Column="1">'
+foreach ($anchor in @($libraryAnchor,$settingsAnchor)) {
+    if ([regex]::Matches($windowText,[regex]::Escape($anchor)).Count -ne 1) { throw 'Pinned library attachment anchor mismatch' }
+}
+$windowText = $windowText.Replace($libraryAnchor,$libraryAnchor.Replace('<Grid Grid.Row="2">','<Grid Grid.Row="2" x:Name="ArchiveCharacterLibraryHost">'))
+$windowText = $windowText.Replace($settingsAnchor,$settingsAnchor.Replace('<Grid Grid.Column="1">','<Grid Grid.Column="1" x:Name="ArchiveCharacterSettingsHost">'))
 [System.IO.File]::WriteAllText($windowXaml,$windowText,[System.Text.UTF8Encoding]::new($false))
 Write-Host 'Native archive bridge and manual in-app update control integrated.'
 

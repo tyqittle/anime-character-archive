@@ -34,6 +34,11 @@ internal sealed class ArchiveWebViewHost : IDisposable
     internal NativeCompositionWindow? Window => _window;
     internal IntPtr InputHandle => _input?.Handle ?? IntPtr.Zero;
     public event Action? HiddenByUser;
+    public event Action? SettingsChanged;
+    internal sealed record MotionOption(string Id,string Label);
+    internal MotionOption[] Actions=>_actions.Select(x=>new MotionOption(x.Id,x.Label)).ToArray();
+    internal bool VoiceEnabled=>_voice;
+    internal string ActionId {get;private set;}="";
     public ArchiveWebViewHost(ArchiveWebSelection selection,Uri? site=null)
     { _selection=selection;_site=site??ArchiveWebSelection.Site; }
 
@@ -88,11 +93,11 @@ internal sealed class ArchiveWebViewHost : IDisposable
                 _input?.ClearAndHide();
             };
             web.NavigationCompleted+=(_,e)=>{
-                if (!e.IsSuccess) _ready.TrySetException(new IOException("桌宠页面加载失败："+e.WebErrorStatus));
+                if (!e.IsSuccess) _ready.TrySetException(new IOException("����ҳ�����ʧ�ܣ�"+e.WebErrorStatus));
             };
             web.ProcessFailed+=(_,e)=>{
                 _input?.ClearAndHide();
-                _ready.TrySetException(new IOException("网页渲染进程已停止："+e.ProcessFailedKind));
+                _ready.TrySetException(new IOException("��ҳ��Ⱦ������ֹͣ��"+e.ProcessFailedKind));
                 AppLogger.Write(nameof(ArchiveWebViewHost),"web-process-failed "+e.ProcessFailedKind);
             };
             web.WebMessageReceived+=OnMessage;
@@ -139,7 +144,7 @@ internal sealed class ArchiveWebViewHost : IDisposable
             if (kind=="error")
             {
                 _input?.ClearAndHide();
-                string error=data.GetProperty("error").GetString()??"模型加载失败";
+                string error=data.GetProperty("error").GetString()??"ģ�ͼ���ʧ��";
                 _ready.TrySetException(new InvalidDataException(error));
                 AppLogger.Write(nameof(ArchiveWebViewHost),"universal-model-error "+error);
             }
@@ -218,17 +223,20 @@ internal sealed class ArchiveWebViewHost : IDisposable
     }
     public void Command(string command,string? value=null,bool enabled=false)
     {
+        if(command=="voice")_voice=enabled;
+        if(command=="action")ActionId=value??"";
         _controller?.CoreWebView2.PostWebMessageAsJson(JsonSerializer.Serialize(
             new {kind="command",session=_session,command,value,enabled}));
+        if(command is "voice" or "action")SettingsChanged?.Invoke();
     }
     private void ShowMenu(Point position)
     {
         _menu?.Dispose();_menu=new Forms.ContextMenuStrip();
         _menu.Items.Add(string.IsNullOrWhiteSpace(ReadyName)?_selection.Id:ReadyName).Enabled=false;
-        var motions=new Forms.ToolStripMenuItem("切换动作");
+        var motions=new Forms.ToolStripMenuItem("�л�����");
         for(int start=0;start<_actions.Count;start+=40)
         {
-            var page=new Forms.ToolStripMenuItem(_actions.Count<=40?"动作":$"{start+1}–{Math.Min(start+40,_actions.Count)}");
+            var page=new Forms.ToolStripMenuItem(_actions.Count<=40?"����":$"{start+1}�C{Math.Min(start+40,_actions.Count)}");
             foreach(var action in _actions.Skip(start).Take(40))
             {
                 var item=new Forms.ToolStripMenuItem(action.Label);
@@ -237,13 +245,13 @@ internal sealed class ArchiveWebViewHost : IDisposable
             if(_actions.Count<=40)motions=page;else motions.DropDownItems.Add(page);
         }
         motions.Enabled=_actions.Count>0;_menu.Items.Add(motions);
-        _menu.Items.Add("放大",null,(_,_)=>Command("zoomIn"));
-        _menu.Items.Add("缩小",null,(_,_)=>Command("zoomOut"));
-        _menu.Items.Add("适应画面",null,(_,_)=>Command("resetView"));
-        var voice=new Forms.ToolStripMenuItem("角色语音"){Checked=_voice,CheckOnClick=true};
+        _menu.Items.Add("�Ŵ�",null,(_,_)=>Command("zoomIn"));
+        _menu.Items.Add("��С",null,(_,_)=>Command("zoomOut"));
+        _menu.Items.Add("��Ӧ����",null,(_,_)=>Command("resetView"));
+        var voice=new Forms.ToolStripMenuItem("��ɫ����"){Checked=_voice,CheckOnClick=true};
         voice.Click+=(_,_)=>{_voice=voice.Checked;Command("voice",enabled:_voice);};_menu.Items.Add(voice);
-        _menu.Items.Add("重新加载",null,(_,_)=>Command("retryCharacter"));
-        _menu.Items.Add("隐藏角色",null,(_,_)=>{SetVisible(false);HiddenByUser?.Invoke();});
+        _menu.Items.Add("���¼���",null,(_,_)=>Command("retryCharacter"));
+        _menu.Items.Add("���ؽ�ɫ",null,(_,_)=>{SetVisible(false);HiddenByUser?.Invoke();});
         _menu.Show(position);
     }
     public void SetVisible(bool visible)

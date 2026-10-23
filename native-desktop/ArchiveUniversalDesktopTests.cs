@@ -13,9 +13,100 @@ namespace SpinePet.Tests;
 // Profiles and public-only virtual host roots are unique to this test run.
 public sealed class ArchiveUniversalDesktopTests
 {
+    [Fact]
+    public void LibraryPersistsEveryModelAndUsesGameAndIdAsIdentity()
+    {
+        string root=Path.Combine(Path.GetTempPath(),"archive-library-"+Guid.NewGuid().ToString("N"));
+        try
+        {
+            string path=Path.Combine(root,"library.json"),legacy=Path.Combine(root,"old.json");
+            var library=ArchiveWebLibrary.Load(path,legacy);
+            library.Put(new("game-a","same","First",true));
+            library.Put(new("game-b","same","Second",true,true,"idle-2"));
+            library.Put(new("game-a","same","Renamed"));
+            var restored=ArchiveWebLibrary.Load(path,legacy);
+            Assert.Equal(2,restored.Characters.Count);
+            Assert.Equal("Renamed",restored.Find(new("game-a","same"))!.Name);
+            var second=restored.Find(new("game-b","same"))!;
+            Assert.True(second.Visible);Assert.True(second.Voice);Assert.Equal("idle-2",second.Action);
+            Assert.Single(restored.Characters.Where(x=>x.Visible));
+            Assert.Empty(Directory.GetFiles(root,"*.tmp"));
+        }
+        finally {if(Directory.Exists(root))Directory.Delete(root,true);}
+    }
+
+    [Fact]
+    public void MigrationAndRemovalDoNotResurrectTheLastLegacyCharacter()
+    {
+        string root=Path.Combine(Path.GetTempPath(),"archive-migrate-"+Guid.NewGuid().ToString("N"));
+        Directory.CreateDirectory(root);
+        try
+        {
+            string path=Path.Combine(root,"library.json"),legacy=Path.Combine(root,"old.json");
+            File.WriteAllText(legacy,JsonSerializer.Serialize(new{Game="example",Id="old",Visible=true}));
+            var library=ArchiveWebLibrary.Load(path,legacy);
+            Assert.True(library.Characters.Single().Visible);
+            library.Remove(new("example","old"));
+            Assert.Empty(ArchiveWebLibrary.Load(path,legacy).Characters);
+            Assert.True(File.Exists(legacy));
+        }
+        finally {Directory.Delete(root,true);}
+    }
+
+    [Fact]
+    public void FailedSaveKeepsThePreviousLibraryAndMalformedInputIsPreserved()
+    {
+        string root=Path.Combine(Path.GetTempPath(),"archive-save-"+Guid.NewGuid().ToString("N"));
+        Directory.CreateDirectory(root);
+        try
+        {
+            string path=Path.Combine(root,"library.json");
+            var library=ArchiveWebLibrary.Load(path,Path.Combine(root,"none"));
+            library.Put(new("example","one","One"));
+            using(var locked=File.Open(path,FileMode.Open,FileAccess.Read,FileShare.None))
+                Assert.ThrowsAny<IOException>(()=>library.Put(new("example","two","Two")));
+            Assert.Single(library.Characters);
+            File.WriteAllText(path,"broken");
+            Assert.Throws<JsonException>(()=>ArchiveWebLibrary.Load(path,Path.Combine(root,"none")));
+            Assert.Equal("broken",File.ReadAllText(path));
+        }
+        finally {Directory.Delete(root,true);}
+    }
+
+    [Fact]
+    public Task SavedWebsiteModelsAppearInCharactersWithoutNativeResources()=>Sta(async()=>{
+        string root=Path.Combine(TestRoot,"library-ui-"+Guid.NewGuid().ToString("N"));
+        Directory.CreateDirectory(root);
+        try
+        {
+            var library=ArchiveWebLibrary.Load(Path.Combine(root,"library.json"),Path.Combine(root,"none"));
+            library.Put(new("example","one","First"));
+            library.Put(new("another","two","Second"));
+            var listHost=new System.Windows.Controls.Grid();
+            listHost.Children.Add(new System.Windows.Controls.ListBox());
+            var settingsHost=new System.Windows.Controls.Grid();
+            var shown=new List<ArchiveWebSelection>();var hidden=new List<ArchiveWebSelection>();
+            using var panel=new ArchiveWebLibraryPanel(listHost,settingsHost,library,
+                selected=>{shown.Add(selected);library.Put(library.Find(selected)! with{Visible=true});return Task.CompletedTask;},
+                selected=>{hidden.Add(selected);library.Put(library.Find(selected)! with{Visible=false});},
+                selected=>library.Remove(selected),_=>null);
+            Assert.Equal(2,panel.List.Items.Count);
+            panel.Select(new("another","two"));
+            void Click(string label)=>panel.Settings.Children.OfType<System.Windows.Controls.Button>()
+                .Single(x=>Equals(x.Content,label)).RaiseEvent(new System.Windows.RoutedEventArgs(System.Windows.Controls.Button.ClickEvent));
+            Click("��ʾ��ɫ");Assert.Equal(new("another","two"),shown.Single());
+            Click("���ؽ�ɫ");Assert.Equal(new("another","two"),hidden.Single());
+            Click("���б��Ƴ�");
+            Assert.Single(panel.List.Items.Cast<object>());
+            Assert.Single(ArchiveWebLibrary.Load(Path.Combine(root,"library.json"),Path.Combine(root,"none")).Characters);
+            await Task.CompletedTask;
+        }
+        finally {Directory.Delete(root,true);}
+    });
+
     [Theory]
     [InlineData("girlscafegun","gc-girl01-l2d00")]
-    [InlineData("future-game","角色 / + & ? #")]
+    [InlineData("future-game","��ɫ / + & ? #")]
     public void CatalogIdentitiesRoundTripWithoutGameWhitelist(string game,string id)
     {
         string link="animecharacter://open?host=webview2&game="+Uri.EscapeDataString(game)+"&id="+Uri.EscapeDataString(id);
