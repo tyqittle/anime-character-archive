@@ -2,6 +2,20 @@
 // advanced controls, and seamless version switches without reloading the document.
 import fs from 'node:fs';
 import {chromium} from 'playwright-core';
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {readCharacters} from './catalog_registry.mjs';
+const require=createRequire(import.meta.url);
+const {uniqueAnimationEntries}=require('../assets/js/spine/animation-identity.js');
+const expectedCharacters=uniqueAnimationEntries(readCharacters());
+const expectedInventory={byGame:{},byEngine:{}};
+for(const c of expectedCharacters){
+ const game=c.gameId||'nikke',engine=game+'/'+(c.engine==='cubism'?'cubism':'spine');
+ expectedInventory.byGame[game]=(expectedInventory.byGame[game]||0)+1;
+ expectedInventory.byEngine[engine]=(expectedInventory.byEngine[engine]||0)+1;
+}
+const expectedBd2Count=expectedInventory.byGame.browndust2;
+const expectedOptions=collection=>Math.min(640,expectedCharacters.filter(c=>(c.collectionId||c.gameId)===collection).length)+1;
 const executablePath=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'].find(fs.existsSync);
 if(!executablePath)throw Error('Chromium is not installed');
 const browser=await chromium.launch({headless:true,executablePath,args:['--no-sandbox']});
@@ -23,22 +37,16 @@ try{
    }
    return {byGame,byEngine};
   });
-  const minimums={nikke:514,bluearchive:179,konosuba:187,arknights:451,
-   girlsfrontline:297,browndust2:209,azurlane:242};
-  for(const [game,count] of Object.entries(minimums))
-   if((inventory.byGame[game]||0)<count)throw Error('Incomplete game catalog: '+game+' '+JSON.stringify(inventory));
-  if((inventory.byEngine['konosuba/cubism']||0)<61||
-     (inventory.byEngine['konosuba/spine']||0)<126)
-   throw Error('Both animations engines must be indexed for Konosuba: '+JSON.stringify(inventory));
+  assert.deepEqual(inventory,expectedInventory,'Browser merge must preserve every canonical registered model');
   // The all-games auxiliary select is hidden; it must never allocate every
   // option on a gallery with 2,000+ dynamic models.
   const allOptions=await page.locator('#characters option').count();
   if(allOptions>641)throw Error('All-games selector allocated too many options: '+allOptions);
   await page.selectOption('#gameFilter','arknights');
-  if((await page.locator('#characters option').count())!==93)
+  if((await page.locator('#characters option').count())!==expectedOptions('arknights'))
     throw Error('Expected 92 animated Arknights illustrations; battle rigs leaked into main list');
   await page.selectOption('#gameFilter','arknights-battle');
-  if((await page.locator('#characters option').count())!==360)
+  if((await page.locator('#characters option').count())!==expectedOptions('arknights-battle'))
     throw Error('Expected 359 separate BattleFront sprites');
   await page.selectOption('#gameFilter','all');
   // A non-first-page deep-link must still be selectable with a limited dropdown.
@@ -95,7 +103,7 @@ try{
   if(await cards.count()!==96)throw Error('Expected a bounded first page of 96 costumes, got '+await cards.count());
   while(await page.locator('#characterCards .load-more-characters').count())
    await page.locator('#characterCards .load-more-characters').click();
-  if(await cards.count()!==209)throw Error('Pagination must expose all 209 BD2 costumes, got '+await cards.count());
+  if(await cards.count()!==expectedBd2Count)throw Error('Pagination must expose all canonical BD2 costumes, got '+await cards.count());
   // Catch the CSS-grid regression where 240+ buttons shrink to 16px
   // inside a flex-column sidebar, hiding all thumbnails and text.
   const tileMetrics=await cards.first().evaluate(card=>{
@@ -121,8 +129,8 @@ try{
   }
 
   const imgs=page.locator('#characterCards img');
-  if(await imgs.count()!==209)throw Error('All 209 costumes must show exact-model thumbnails, not placeholders');
-  for(const index of [0,1,2,3,4,50,104,153,201,208]){
+  if(await imgs.count()!==expectedBd2Count)throw Error('All canonical costumes must show exact-model thumbnails, not placeholders');
+  for(const index of [0,1,2,3,4,50,104,153,201,expectedBd2Count-1]){
    const img=imgs.nth(index);
    await img.scrollIntoViewIfNeeded();
    await img.evaluate(el=>new Promise((resolve,reject)=>{
@@ -134,7 +142,7 @@ try{
   }
   await page.selectOption('#bd2CharacterFilter','Diana');
   const roleCount=await cards.count();
-  if(roleCount<1||roleCount>=209)throw Error('BD2 role selector failed to group costumes');
+  if(roleCount<1||roleCount>=expectedBd2Count)throw Error('BD2 role selector failed to group costumes');
   await page.selectOption('#bd2CharacterFilter','');
   await page.selectOption('#gameFilter','browndust2');
   if(await page.locator('#playSaved, #local').count())throw Error('Advanced play buttons still exist');

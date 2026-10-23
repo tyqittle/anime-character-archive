@@ -77,3 +77,6 @@ function uniqueAnimationEntries(entries){
  }
  return result;
 }
+
+// The browser and Node regressions must use the same skin identity policy.
+if(typeof module==='object'&&module.exports)module.exports={uniqueAnimationEntries,canonicalAnimationId,animationVoiceIdentityIds};
