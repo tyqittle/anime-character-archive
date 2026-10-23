@@ -16,7 +16,8 @@ async function fetchAnimationManifest(url){
  const controller=new AbortController();
  const timeout=setTimeout(()=>controller.abort(),12000);
  try{
-  const response=await fetch(url,{cache:'no-cache',signal:controller.signal});
+  const latestUrl=url+(url.includes('?')?'&':'?')+'catalogSnapshot='+Date.now().toString(36);
+  const response=await fetch(latestUrl,{cache:'no-cache',signal:controller.signal});
   if(!response.ok)throw Error('HTTP '+response.status);
   const payload=await response.json();
   if(!Array.isArray(payload.characters))throw Error('目录结构不完整');

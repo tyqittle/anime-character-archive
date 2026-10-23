@@ -13,6 +13,8 @@ const mature=JSON.parse(fs.readFileSync('data/live2d-mature.json','utf8'));
 const cases=[
  {type:'cubism',game:'tokyonecro',character:mature.characters.find(c=>c.id==='tn-l2d00055')},
  {type:'cubism',game:'maidslife',character:mature.characters.find(c=>c.id==='ml-ele_a0')},
+ {type:'cubism',game:'lovecube',character:mature.characters.find(c=>c.id==='lc-akira_st01_w'),allowNoMotions:true},
+ {type:'cubism',game:'foxhimezero',character:mature.characters.find(c=>c.id==='fh-ruri_miko')},
  {type:'cubism',game:'girldimension',character:high.characters.find(c=>c.id==='gd-001-c_0005')},
  {type:'cubism',game:'sinsevendeadlysins',character:high.characters.find(c=>c.id==='sds-xch001_01')},
  {type:'cubism',game:'touhoucannonball',character:more.characters.find(c=>c.id==='tc-reimu')},
@@ -47,8 +49,14 @@ try{
   results.push({game:test.game,id:test.character.id,elapsedMs:Date.now()-start,...data});
   console.log('NEW_GAME_RESULT',JSON.stringify(results.at(-1)));
   const collection=test.character.collectionId||test.character.gameId;
-  if(!data.status.startsWith('正在播放：')||data.game!==collection||!data.enabled||!data.animations)
+  if(!data.status.startsWith('正在播放：')||data.game!==collection||(!test.allowNoMotions&&(!data.enabled||!data.animations)))
    throw Error('New model not playable: '+JSON.stringify(results.at(-1))+' page errors: '+errors.join('; '));
+  if(test.game==='lovecube'||test.game==='foxhimezero'){
+   const thumb=page.locator('.character-card[data-character-id="'+test.character.id+'"] img');
+   await thumb.waitFor({state:'visible',timeout:15000});
+   const preview=await thumb.evaluate(async image=>{try{await image.decode()}catch(e){}return {width:image.naturalWidth,height:image.naturalHeight,src:image.currentSrc}});
+   if(preview.width<100||preview.height<100)throw Error('Missing or stale matching-model WebP: '+JSON.stringify(preview));
+  }
   const canvas=test.type==='cubism'
    ?page.frameLocator('iframe.azurlane-live2d-frame').locator('#live2dCanvas')
    :page.locator('#player canvas').first();
@@ -69,8 +77,10 @@ try{
   if(deviation<8)throw Error('No discernible animated character pixels for '+test.game+' (stddev '+deviation.toFixed(2)+')');
   if(test.type==='cubism'){
    if(!data.frame)throw Error('Missing Cubism stage: '+test.character.id);
-   if(data.animations<1)throw Error('Unnamed motion group was ignored');
-   await page.locator('#animationPicker').selectOption({index:Math.min(1,data.animations-1)});
+   if(!test.allowNoMotions){
+    if(data.animations<1)throw Error('Unnamed motion group was ignored');
+    await page.locator('#animationPicker').selectOption({index:Math.min(1,data.animations-1)});
+   }else if(data.animations>0)throw Error('LOVE³ advertised motions absent upstream');
   }else if(!data.canvas)throw Error('Spine model missing actual canvas: '+test.character.id);
  }
  if(errors.length)throw Error('Browser JS errors: '+errors.join('; '));

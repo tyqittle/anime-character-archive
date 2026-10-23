@@ -101,6 +101,12 @@ function requestLoad(name,id,url){
 function notify(kind,detail={}){window.parent.postMessage({channel:CHANNEL,kind,id:currentId,...detail},SAME_ORIGIN)}
 function message(s){warn.textContent=s;warn.hidden=false}
 function verifyName(name){return typeof name==='string'&&name!=='.'&&name!=='..'&&/^[a-zA-Z0-9_.-]{1,100}$/.test(name)}
+// The strict per-game modelUrlFor allowlist owns source identity. Do not copy its
+// game-prefix inventory into a second check that rejects newly registered games.
+function validLive2DIdentity(name,id){
+ return verifyName(name)&&typeof id==='string'&&/^[a-z][a-z0-9]*-[a-z0-9_-]{1,100}$/.test(id)
+  &&(!id.startsWith('al-')||id==='al-'+name.toLowerCase());
+}
 function fit(){
  if(!app||!model)return;
  // Live2D models have nonzero local-bound origins. Subtracting bounds.x/y
