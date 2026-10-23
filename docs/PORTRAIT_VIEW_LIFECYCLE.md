@@ -24,3 +24,19 @@ vendored Spine 3.8 只有 stopRendering，没有 dispose。旧 clearPlayer 的�
 `test_portrait_view_browser.mjs` 加载真实 Daiblos Core、蔚蓝档案与棕色尘埃2，检查实际可见范围、居中、换动作和侧栏尺寸变化，检查退休会话不再绘制；现有 Live2D 浏览器测试验证模型更新时钟、可见取景和动作保留。
 
 GitHub Actions 使用软件 WebGL 验证行为，不代表 RTX 5060 Ti 的实测 FPS。这个修复不承诺所有大型场景在任意浏览器上达到固定帧率。不同模型内容的长宽比及场景背景仍然不同；统一的是取景规则，不强行把所有人物拉成相同尺寸。
+
+## 本次验收记录（2026-10-23）
+
+行为修复提交：`d78b3d47fc5e75119d52f9047b604556d277fb8e`。后续版本提升仅更新缓存入口和维护记录。
+
+- [Node/Python 与架构检查](https://github.com/tyqittle/anime-character-archive/actions/runs/39945599326)：112 个 Node、33 个 Python 测试通过。
+- [真实画布取景与会话回归](https://github.com/tyqittle/anime-character-archive/actions/runs/39945599398)：Cinnabar03b、Alps04、Alps05、Hades03、蔚蓝档案 ch0145 和棕色尘埃2 Diana 六个针对样本通过；同一任务还通过既有选角、UV 与十套真实模型动画回归。
+- [Live2D](https://github.com/tyqittle/anime-character-archive/actions/runs/39945599387)：六套模型动画、动作保留、单时钟更新、互动语音和静音通过。
+- [明日方舟](https://github.com/tyqittle/anime-character-archive/actions/runs/39945599482)与[棕色尘埃2](https://github.com/tyqittle/anime-character-archive/actions/runs/39945599393)原有浏览器回归通过。
+- [实际 Pages 部署](https://github.com/tyqittle/anime-character-archive/actions/runs/39945599241)的 deploy 任务成功。
+
+六个针对样本的初始可见范围中心落在画布宽、高的 48.4%–50.3% 之间；可见范围相对 90%/88% 目标占比约 99.4%–103.8%，差异包括动画移动与边缘采样。相同页面连续换角色后，五个退休会话均已释放，观察期间绘制计数没有再增加。
+
+3.8 的加载屏和角色共用 SceneRenderer，不能挂在每次 renderer.end 上采样；最终取景在 drawFrame 返回后执行。4.x 使用角色绘制后的 config.draw。浏览器取证同样在完整角色帧后复制 WebGL 画布，避免元素截图把两侧浮动按钮计入边界。四套 Daiblos 场景输出图已检查，未借用其他模型资源。
+
+适应画面还会读取当前姿态的几何边界，以重新找回已移动到旧视口外的动作，再进行一次像素取景。动作菜单不会触发这一过程。保存的素材包与资源来源标识保持兼容，不需要重新下载全部素材。
