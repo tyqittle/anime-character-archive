@@ -180,7 +180,7 @@ public sealed partial class App
             // Use upstream My_SpinePet's built-in animation rendering and state.
             await _characterManager.ShowCharacterAsync(character);
             File.Delete(ArchiveRequestPath);
-            AppLogger.Write(nameof(App), $"archive-one-click-shown {stem}");
+            AppLogger.Write(nameof(App), $"archive-one-click-shown {expectedSkeleton}");
         }
         catch (Exception ex)
         {
