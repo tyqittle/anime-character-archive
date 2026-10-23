@@ -3,7 +3,7 @@
 // visible button always bypasses the eight-hour scheduled-check throttle.
 using System.IO;
 using System.Windows;
-using System.Windows.Controls;
+using Button = System.Windows.Controls.Button;
 using System.Windows.Threading;
 using Velopack;
 using Velopack.Sources;
