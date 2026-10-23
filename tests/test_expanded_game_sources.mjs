@@ -13,7 +13,11 @@ function allow(c,url=c.modelUrl,id=c.id,name=c.skinCode){Object.assign(cx,{url,i
 
 test('new games use the common registry and retain exact, unique model identities',()=>{
  assert.ok(readCatalogRegistry().some(c=>c.id==='expanded-games'));
- assert.deepEqual(Object.fromEntries(['mementomori','ironsaga','venusscramble','destinychild'].map(game=>[game,chars.filter(c=>c.gameId===game).length])),{mementomori:49,ironsaga:4,venusscramble:17,destinychild:14});
+ for(const [game,count] of Object.entries({mementomori:49,ironsaga:4,venusscramble:17}))assert.equal(chars.filter(c=>c.gameId===game).length,count);
+ const destinyAudit=JSON.parse(read('data/destinychild-full-source-audit.json')).scopes[0];
+ assert.equal(chars.filter(c=>c.gameId==='destinychild').length,destinyAudit.checkedModels);
+ assert.equal(destinyAudit.checkedModels+destinyAudit.failedModels.length,destinyAudit.sourceModelSettings);
+ assert.equal(scopes.find(s=>s.id==='destinychild').selection,undefined,'A curated selection cannot certify an encyclopedia');
  assert.equal(new Set(readCharacters().map(c=>c.id)).size,readCharacters().length);
  for(const c of chars){
   assert.equal(allow(c),c.modelUrl,c.id);

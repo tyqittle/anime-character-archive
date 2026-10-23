@@ -57,6 +57,14 @@ export function sourceRecord(scope,relative,settings,tree,existing){
   ...(!existing?{status:'indexed-unverified',playbackStatus:'not-verified',previewSource:'not-rendered'}:{})};
 }
 const cache=new Map();
+export async function mapBounded(items,concurrency,work){
+ if(!Number.isInteger(concurrency)||concurrency<1||concurrency>12)throw Error('Invalid source concurrency');
+ const results=new Array(items.length);let next=0;
+ await Promise.all(Array.from({length:Math.min(concurrency,items.length)},async()=>{
+  while(next<items.length){const index=next++;results[index]=await work(items[index],index)}
+ }));
+ return results;
+}
 async function api(url){
  if(!cache.has(url))cache.set(url,(async()=>{
   const headers={Accept:'application/vnd.github+json'};
@@ -97,24 +105,31 @@ export async function main(args=process.argv.slice(2)){
  const output=args.includes('--output')?args[args.indexOf('--output')+1]:path.join(os.tmpdir(),'live2d-source-coverage.json');
  let failed=false;
  for(const scope of config.scopes.filter(s=>!selected||s.id===selected)){
+  if(args.includes('--whole-directory'))delete scope.selection;
   const entry={id:scope.id};report.push(entry);
   try{
+   if(scope.import?.namesFile){
+    if(!/^data\/[a-z0-9-]+\.json$/.test(scope.import.namesFile))throw Error('Invalid name mapping path');
+    const mapping=read(scope.import.namesFile);
+    scope.import.names={...Object.fromEntries(Object.entries(mapping).map(([key,value])=>[key,value.title?value.character+' · '+value.title:value.character])),...scope.import.names};
+   }
    const tree=await scopedTree(scope);Object.assign(entry,inspectScope(scope,tree,records));
-   if(scope.import){
+   if(scope.import&&!args.includes('--inventory-only')){
     const incoming=[];
     entry.failedModels=[];
-    for(const file of sourceSettings(scope,tree)){
+    const outcomes=await mapBounded(sourceSettings(scope,tree),6,async file=>{
      const sourcePath=(scope.directory?scope.directory+'/':'')+file.path;
      const existing=records.find(c=>c.sourceRepo===scope.sourceRepo&&c.sourceCommit===scope.sourceCommit&&c.sourcePath===sourcePath);
      try{
       const settings=await settingsBlob(scope,file);
-      incoming.push(sourceRecord(scope,file.path,settings,tree,existing));
+      return {record:sourceRecord(scope,file.path,settings,tree,existing)};
      }catch(error){
-      entry.failedModels.push({path:sourcePath,error:error.message});
-      // Informational scopes retain missing-file diagnostics without failing
-      // the complete-source gates. An explicit import still reports failure.
-      if(scope.requireComplete||importId===scope.id)failed=true;
+      return {failure:{path:sourcePath,error:error.message}};
      }
+    });
+    for(const outcome of outcomes){
+     if(outcome.record)incoming.push(outcome.record);
+     else{entry.failedModels.push(outcome.failure);if(scope.requireComplete||importId===scope.id)failed=true}
     }
     entry.checkedModels=incoming.length;entry.wouldAdd=incoming.filter(c=>!records.some(x=>x.id===c.id)).map(c=>c.id);
     if(importId===scope.id){

@@ -4,12 +4,13 @@ Uses source-scope data, exact Atlas pages and the common preview identity contra
 Raw assets remain upstream; only verified source references are indexed locally.
 """
 import argparse, hashlib, json, re, struct, time, urllib.parse, urllib.request
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path, PurePosixPath
 from catalog_registry import source_identity
 
 ROOT = Path(__file__).resolve().parents[1]
 
-def retrieve(url, budget=4_000_000, header_only=False):
+def retrieve(url, budget=8_000_000, header_only=False):
     deadline=time.monotonic()+25
     with urllib.request.urlopen(url, timeout=25) as response:
         if header_only:
@@ -82,19 +83,44 @@ def model_record(scope, stem, files, download=retrieve):
         'status':'indexed-unverified','playbackStatus':'not-verified','previewSource':'not-rendered','visualIntegrityPolicy':'coherent-character'}
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--scope',required=True);parser.add_argument('--dry-run',action='store_true');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--scope',required=True);parser.add_argument('--dry-run',action='store_true');parser.add_argument('--retry-failed',action='store_true');args=parser.parse_args()
     scope=next(s for s in json.loads((ROOT/'data/spine-source-scopes.json').read_text(encoding='utf-8'))['scopes'] if s['id']==args.scope)
     if not re.fullmatch(r'[\w.-]+/[\w.-]+',scope['sourceRepo']) or not re.fullmatch(r'[0-9a-f]{40}',scope['sourceCommit']):raise ValueError('Source must be pinned')
     tree=json.loads(retrieve('https://api.github.com/repos/'+scope['sourceRepo']+'/git/trees/'+scope['treeSha']+'?recursive=1',budget=12_000_000))
     if tree.get('truncated') or tree.get('sha')!=scope['treeSha']:raise ValueError('Cannot certify source tree')
     files={x['path']:x for x in tree['tree'] if x['type']=='blob'}
+    if scope.get('includeAllModels'):
+        directory=scope['directory']+'/' if scope['directory'] else ''
+        extension=scope.get('skeletonExtension','skel')
+        scope['models']=sorted({p[len(directory):].split('/')[0] for p in files if p.startswith(directory)
+            and len(p[len(directory):].split('/'))==2
+            and p[len(directory):].split('/')[1]==p[len(directory):].split('/')[0]+'.'+extension
+            and re.fullmatch(scope['modelPattern'],p[len(directory):].split('/')[0])})
+        if not scope['models']:raise ValueError('Empty discovered model scope')
     dest=ROOT/scope['catalog'];catalog=json.loads(dest.read_text(encoding='utf-8'))
     previous={c['id']:c for c in catalog['characters']};accepted=[];failed=[];excluded=[]
+    audit_path=ROOT/'data'/('spine-source-audit-'+scope['id']+'.json')
+    retry_ids=None
+    if args.retry_failed:
+        old_audit=json.loads(audit_path.read_text(encoding='utf-8'))
+        if old_audit['sourceRepo']!=scope['sourceRepo'] or old_audit['sourceCommit']!=scope['sourceCommit']:raise ValueError('Retry source changed')
+        retry_ids={item['stem'] for item in old_audit['failed']}
+    def inspect(stem):
+        try:return model_record(scope,stem,files),None
+        except Exception as error:return None,str(error)
+    candidates=[stem for stem in scope['models'] if stem not in scope.get('qualityExclusions',{}) and (retry_ids is None or stem in retry_ids)]
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        results=dict(zip(candidates,pool.map(inspect,candidates)))
     for stem in scope['models']:
         if stem in scope.get('qualityExclusions',{}):
             excluded.append({'stem':stem,'reason':scope['qualityExclusions'][stem]});continue
         try:
-            entry=model_record(scope,stem,files)
+            if stem not in results:
+                old=previous.get(scope['idPrefix']+scope.get('modelIds',{}).get(stem,stem))
+                if not old or old.get('sourceRepo')!=scope['sourceRepo'] or old.get('sourceCommit')!=scope['sourceCommit']:raise ValueError('Previously verified record missing')
+                accepted.append(old);continue
+            entry,error=results[stem]
+            if error:raise ValueError(error)
             old=previous.get(entry['id'])
             if old and source_identity(old)==source_identity(entry):
                 for key in ['preview','previewSource','previewSourceIdentity','previewSha256','previewWidth','previewHeight','status','playbackStatus','previewFailureType','previewFailureReason']:
@@ -106,7 +132,8 @@ def main():
         incoming={c['id']:c for c in accepted};excluded_ids={scope['idPrefix']+x['stem'] for x in excluded}
         catalog['characters']=[incoming.pop(c['id'],c) for c in catalog['characters'] if c['id'] not in excluded_ids];catalog['characters']+=list(incoming.values())
         dest.write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-    (ROOT/'data'/('spine-source-audit-'+scope['id']+'.json')).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+    report['attemptedThisRun']=len(results)
+    audit_path.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print('SPINE_SOURCE_SUMMARY',json.dumps(report),flush=True)
     if failed:raise SystemExit(1)
 

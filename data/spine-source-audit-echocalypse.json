@@ -2,10 +2,22 @@
   "scope": "echocalypse",
   "sourceRepo": "leililei/echocalypse-spine",
   "sourceCommit": "54649cbe1c63e718810ba1dda605ab4d5c0d745d",
-  "selected": 26,
-  "checked": 21,
-  "wouldAdd": [],
+  "selected": 344,
+  "checked": 336,
+  "wouldAdd": [
+    "ec-20700360",
+    "ec-20700600",
+    "ec-700540"
+  ],
   "failed": [
+    {
+      "stem": "400020",
+      "error": "Missing skeleton or Atlas"
+    },
+    {
+      "stem": "500050",
+      "error": "Missing skeleton or Atlas"
+    },
     {
       "stem": "60005001",
       "error": "Missing skeleton or Atlas"
@@ -21,13 +33,17 @@
     {
       "stem": "600110",
       "error": "Missing skeleton or Atlas"
-    }
-  ],
-  "qualityExclusions": [
+    },
     {
-      "stem": "60004001",
-      "reason": "Real rendered frame reviewed: oversized stage spotlight with tiny character; excluded from portrait gallery."
+      "stem": "70002001",
+      "error": "Missing skeleton or Atlas"
+    },
+    {
+      "stem": "700030",
+      "error": "Missing skeleton or Atlas"
     }
   ],
-  "note": "Selected illustrations only; source and image-header validation is separate from browser playback."
+  "qualityExclusions": [],
+  "note": "Selected illustrations only; source and image-header validation is separate from browser playback.",
+  "attemptedThisRun": 12
 }

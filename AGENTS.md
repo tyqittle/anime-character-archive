@@ -4,6 +4,8 @@ Read [the architecture rules](docs/ARCHITECTURE_RULES.md) before changing implem
 
 This is a GitHub Pages archive with separate browser, content-processing and Windows-desktop boundaries.
 
+- Dynamic portraits are a complete character-and-skin encyclopedia, per the user's explicit scope. Include all available dynamic portraits and every skin; do not substitute curated samples or add static-image fallbacks. Audit the whole source, report unresolved/missing assets, and distinguish source coverage from current-game completeness. Existing small selections are backlog to expand, not a completed game.
+
 - Register animation catalogs in `data/animation-catalogs.json`. Browser loading, queue selection and CI publishing must read that registry.
 - New games using an existing engine are data additions. Do not add game-name conditionals to generic loading, cropping, cache or publishing code.
 - Preview processing uses `preview_pipeline.py`, `preview_repository.py`, `preview_frame_pipeline.py` and `preview_policy.py`. Existing named workflows are manual compatibility entries. Do not copy a workflow for a new game.

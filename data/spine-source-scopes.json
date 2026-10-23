@@ -12,7 +12,7 @@
       "directory": "common/knight_spine",
       "catalog": "data/spine-mature-expansion.json",
       "idPrefix": "ec-",
-      "modelPattern": "6\\d{5,7}",
+      "modelPattern": "[0-9]{6,8}",
       "spineVersion": "3.8",
       "models": [
         "600010",
@@ -42,9 +42,7 @@
         "60012001",
         "600170"
       ],
-      "qualityExclusions": {
-        "60004001": "Real rendered frame reviewed: oversized stage spotlight with tiny character; excluded from portrait gallery."
-      }
+      "includeAllModels": true
     },
     {
       "sourceRepo": "Eikanya/spine-models",

@@ -12,7 +12,7 @@ const EXPANSION_CUBISM_SOURCES=[
   path:/^model\/(CHR_\d{6})\/\1\.model3\.json$/},
  {prefix:'is-',source:COMMUNITY_SOURCE,path:/^机动战队\/(leila|madierda|siluokayi|xinxiya)\/model\.model\.json$/,stem:'model'},
  {prefix:'vs-',source:COMMUNITY_SOURCE,path:/^VenusScramble\/(?:player|other|summon)units\/((?:player|other|summon)_unit_\d{5})\/live2d\/model\.json$/,stem:'model'},
- {prefix:'dc-',source:COMMUNITY_SOURCE,path:/^destiny_child_kr 天命之子\/((?:c001|c002|c294|c296|c324|c365|c393)_0[12])\/model\.json$/,stem:'model'},
+ {prefix:'dc-',source:COMMUNITY_SOURCE,path:/^destiny_child_kr 天命之子\/(c\d+_\d+)\/model\.json$/,stem:'model'},
  {prefix:'ss-',source:COMMUNITY_SOURCE,path:/^Sacred Sword princesses\/(char2d_live2d_001)\/res\/sardyamodel\.model\.json$/,stem:'sardyamodel'}
 ];
 function modelUrlFor(name,candidate,id){

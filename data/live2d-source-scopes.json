@@ -146,16 +146,15 @@
     {
       "id": "destinychild",
       "gameId": "destinychild",
-      "name": "天命之子（成熟风格 Live2D）",
+      "name": "天命之子（动态立绘图鉴）",
       "sourceRepo": "Eikanya/Live2d-model",
       "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
       "directory": "destiny_child_kr 天命之子",
       "catalog": "data/live2d-expanded-games.json",
-      "requireComplete": true,
-      "selection": "/(?:c001|c002|c294|c296|c324|c365|c393)_0[12]/model\\.json$",
+      "requireComplete": false,
       "import": {
         "idPrefix": "dc-",
-        "pattern": "^((?:c001|c002|c294|c296|c324|c365|c393)_0[12])/model\\.json$",
+        "pattern": "^(c[0-9]+_[0-9]+)/model[.]json$",
         "modelStem": "model",
         "format": "cubism2",
         "names": {
@@ -173,7 +172,8 @@
           "c365_02": "丽莎 · Lisa · Devil Buster",
           "c393_01": "莫娜 · Mona · Lightbeam",
           "c393_02": "莫娜 · Mona · Heavenly Ray"
-        }
+        },
+        "namesFile": "data/destinychild-names.json"
       }
     },
     {

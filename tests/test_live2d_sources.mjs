@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {inspectScope,sourceRecord,sourceSettings,main} from '../scripts/live2d_sources.mjs';
+import {inspectScope,sourceRecord,sourceSettings,main,mapBounded} from '../scripts/live2d_sources.mjs';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
@@ -10,6 +10,14 @@ const scope={id:'test',gameId:'sample',sourceRepo:'owner/repo',sourceCommit:'a'.
 const tree=['hero/hero.model3.json','hero/hero.moc3','hero/tex.png','hero/motions/idle.motion3.json','other/other.model3.json']
  .map(path=>({path,type:'blob',size:1000}));
 const settings={Version:3,FileReferences:{Moc:'hero.moc3',Textures:['tex.png'],Motions:{'':[{File:'motions/idle.motion3.json'}]}}};
+test('full-source validation bounds simultaneous work and preserves source order',async()=>{
+ let active=0,peak=0;
+ const result=await mapBounded([0,1,2,3,4,5,6],3,async value=>{
+  active++;peak=Math.max(peak,active);await new Promise(resolve=>setImmediate(resolve));active--;return value*2;
+ });
+ assert.equal(peak,3);assert.equal(active,0);assert.deepEqual(result,[0,2,4,6,8,10,12]);
+ await assert.rejects(()=>mapBounded([1],0,async x=>x),/concurrency/);
+});
 test('coverage is based on the whole pinned source scope, including unindexed models',()=>{
  const records=[{gameId:'sample',sourceRepo:scope.sourceRepo,sourceCommit:scope.sourceCommit,id:'s-hero',sourcePath:'game/hero/hero.model3.json'}];
  const audit=inspectScope(scope,tree,records);

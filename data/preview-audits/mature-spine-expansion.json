@@ -2,13 +2,1266 @@
   "scope": "shared preview pipeline",
   "counts": {
     "echocalypse": {
-      "indexed": 21,
-      "verifiedPreview": 21,
-      "missingPreview": 0
+      "indexed": 336,
+      "verifiedPreview": 23,
+      "missingPreview": 313
     }
   },
-  "missing": [],
-  "newCapturesInThisRun": 0,
+  "missing": [
+    {
+      "gameId": "echocalypse",
+      "id": "ec-200000"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-200003"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-200004"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-200005"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-2000051"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-2000052"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-2000053"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-2000054"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-2000055"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-2000056"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-2000057"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-2000058"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-2000059"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-20500050"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-20700640"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-20700720"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-210003"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-210004"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-210005"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-2100051"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-2100052"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-2100053"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-2100054"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-2100055"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-2100056"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-2100057"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-2100058"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-2100059"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-300030"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-300040"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-300050"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-300080"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-300800"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-300820"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-300900"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-300901"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-300910"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-300990"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-301050"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-400010"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-400030"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-400040"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-400050"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-400060"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-400070"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-400080"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-400090"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-400100"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-40010002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-400110"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-400130"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-400140"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-400150"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-400160"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500010"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500020"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500030"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500040"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50004001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50005001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50005002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500060"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50006001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500070"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50007001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500080"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50008001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500090"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50009001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500100"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50010001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50010002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500110"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50011001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500120"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500130"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50013001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500140"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50014001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500150"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50015001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50015002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50015003"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500160"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50016001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500170"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50017001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500180"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500190"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500200"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50020001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500210"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50021001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500220"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50022001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500230"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50023001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-500240"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-50024001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-510010"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-51001002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-51002001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-510030"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-51003002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-51003003"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-510040"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-51004001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-51004003"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-51004004"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-510050"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-51005001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-51005002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-510060"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-51006001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-510070"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-51007001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-510080"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-51008001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700010"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70001001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70001002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700020"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70002002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70002003"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70003001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700040"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70004001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700050"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70005001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70005002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700060"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70006001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700070"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70007001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70007002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700080"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70008001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700090"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70009001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700100"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70010001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700110"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70011001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700120"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70012001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70012002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700150"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70015001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70015002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700160"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700170"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70017002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700180"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70018001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70018002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700200"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70020001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700220"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70022001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700250"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70025001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70025002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700290"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70029001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70030001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700310"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70031001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700320"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70032001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700330"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70033001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700340"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70034001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70034002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700350"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70035001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700360"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70036001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700370"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70037001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70037002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700380"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70038001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700390"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70039001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70039002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70039003"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700400"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70040001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700410"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70041001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700420"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70042001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70042003"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700430"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70043001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700440"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70044001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700460"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70046001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700470"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70047001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700480"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70048001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700490"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70049001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700500"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70050001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700520"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70052002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700530"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70053001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700560"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700570"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700580"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70058001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70058002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700590"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70059002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700600"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70060001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70060002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70060003"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700610"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70061001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700620"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70062001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700630"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700640"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70064001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700650"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70065002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700660"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700670"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700680"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70068001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700720"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700730"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700740"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70074001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700750"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70075001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700760"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700780"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70078002"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700790"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700800"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700810"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70081001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700820"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700830"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700840"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70084001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700860"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70086001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700870"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70087001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700880"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70088001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700910"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700920"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70092001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700930"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70093001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700940"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70094001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700950"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70095001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700970"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70097001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700980"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70098001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700990"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70099001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-701000"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-701010"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70101001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-701030"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70103001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-701080"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70108001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-701090"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70109001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-701100"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70110001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-701120"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70112001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-701130"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70113001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-701140"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70114001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-701150"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70115001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-701160"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70116001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-701180"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70118001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-701210"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70121001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-701250"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70125001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-701260"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70126001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-701290"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-70129001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-800010"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-80001001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-800020"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-80002001"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-800110"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-20700360"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-20700600"
+    },
+    {
+      "gameId": "echocalypse",
+      "id": "ec-700540"
+    }
+  ],
+  "newCapturesInThisRun": 2,
   "rejectedCaptures": [],
   "failedCaptures": [],
   "failureSummary": {}
