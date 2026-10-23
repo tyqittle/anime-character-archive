@@ -24,8 +24,17 @@ test('Every catalog entry has a proper original character model, not an explicit
   // Preserve the existing motion requirement for every other game.
   if(c.gameId==='lovecube'){
    assert.ok(c.textureBytes>3000000&&c.motionCount===0,c.id);
-   assert.equal(c.playbackStatus,'not-verified',c.id);
-   assert.ok(!c.preview,c.id);
+   // Preview capture upgrades status legitimately; absence of motion3 is
+   // independent of whether the physics rig rendered a real preview.
+   if(c.preview){
+    assert.equal(c.previewSource,'matching-live2d-animation-frame',c.id);
+    assert.equal(c.playbackStatus,'browser-preview-captured',c.id);
+    assert.match(c.previewSha256,/^[0-9a-f]{64}$/,c.id);
+    assert.ok(fs.existsSync(new URL('../'+c.preview.replace(/^\.\//,''),import.meta.url)),c.id);
+   }else{
+    assert.equal(c.playbackStatus,'not-verified',c.id);
+    assert.ok(!c.previewSha256,c.id);
+   }
   }else assert.ok(c.motionCount>0,c.id);
   assert.ok(!c.sourcePath.includes('/adult/'),c.id);
   assert.equal(c.sourceCommit,'7e446cbd95ec352cdb0f73c079e4d075d7d528ac');
