@@ -249,7 +249,7 @@
       "id": "ak-char_130_doberm_epoque_7-ceed0c3",
       "gameId": "arknights",
       "category": "blank-frame",
-      "message": "Blank/tiny pixel variance 4.66"
+      "message": "Blank/tiny pixel variance 4.34"
     },
     {
       "id": "ak-char_209_ardign_snow_1-14a2c0b",
@@ -303,7 +303,7 @@
       "id": "ak-char_475_akafyu_epoque_15-6b0b5ab",
       "gameId": "arknights",
       "category": "blank-frame",
-      "message": "Blank/tiny pixel variance 4.19"
+      "message": "Blank/tiny pixel variance 2.93"
     },
     {
       "id": "ak-char_479_sleach_epoque_14-29c6bac",
@@ -495,7 +495,7 @@
       "id": "gf-live2dnew_sr3mp_4101_normal_normal-3197af7",
       "gameId": "girlsfrontline",
       "category": "blank-frame",
-      "message": "Blank/tiny pixel variance 0.10"
+      "message": "Blank/tiny pixel variance 0.35"
     },
     {
       "id": "gf-live2dnew_target_1_1-9e68c50",
@@ -519,7 +519,7 @@
       "id": "ks-1349100_1349100-20ffd44",
       "gameId": "konosuba",
       "category": "blank-frame",
-      "message": "Blank/tiny pixel variance 3.52"
+      "message": "Blank/tiny pixel variance 2.19"
     }
   ],
   "failureSummary": {
