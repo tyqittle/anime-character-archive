@@ -36,8 +36,18 @@ git -C native-upstream archive --format=zip --output="$env:GITHUB_WORKSPACE/safe
 if ($LASTEXITCODE -ne 0) { throw 'Cannot provide GPL corresponding source' }
 Copy-Item ./native-desktop/Open-ArchiveCharacter.ps1,./native-desktop/Register-Bridge.ps1,./native-desktop/Patch-Upstream.ps1,./native-desktop/Patch-WheelZoom.ps1,./native-desktop/Patch-RenderEnvelope.ps1,./native-desktop/Patch-ViewportSafety.ps1,./native-desktop/NativeArchiveBridge.cs,./native-desktop/NativeArchiveAssetCache.cs,./native-desktop/NativeBrownDust2Bridge.cs,./native-desktop/NativeBrownDust2Voice.cs,./native-desktop/NativeBrownDust2WebMDecoder.cs,./native-desktop/NativeAutoUpdate.cs,./native-desktop/ArchiveDesktopFullBodyTests.cs,./native-desktop/CONCENTUS-LICENSE.txt -Destination ./safe-release/source
 Copy-Item ./native-desktop/ChooseFoldersInstaller.iss -Destination ./safe-release/source
+# Include every build adapter, typed overlay, manifest and regression required
+# to reconstruct this binary; the upstream archive alone is not patched source.
+Copy-Item ./native-desktop -Destination ./safe-release/source/native-desktop -Recurse -Force
+Copy-Item ./native-upstream/archive-render-overlays.json -Destination ./safe-release/source
 @'
 The distributed SpinePet.exe builds pinned upstream source plus NativeArchiveBridge.cs.
-Rebuild by checking out pinned upstream commit, running Patch-Upstream.ps1, then dotnet publish.
+From this source bundle, expand My_SpinePet-corresponding-source.zip into native-upstream/.
+Run PowerShell from the bundle root:
+  & ./native-desktop/build/Apply-ArchiveBridge.ps1
+  & ./native-desktop/build/Apply-WheelZoom.ps1
+  dotnet publish ./native-upstream/SpinePet/src/SpinePet/SpinePet.csproj -c Release -r win-x64 --self-contained true
+The rendering manifest verifies the pinned upstream files before copying typed C# modules.
+archive-render-overlays.json records the exact installed rendering source hashes.
 Archive bridge and corresponding patch source are GPL-3.0-or-later.
 '@ | Set-Content ./safe-release/source/REBUILD-INSTRUCTIONS.txt -Encoding utf8

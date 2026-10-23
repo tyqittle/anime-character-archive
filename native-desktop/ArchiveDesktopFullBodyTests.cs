@@ -10,8 +10,13 @@ namespace SpinePet.Tests;
 
 public sealed class ArchiveDesktopFullBodyTests
 {
-    [Fact]
-    public void CombinedSkinSetupBoundsAndMouseMaskCoverRealBd2LowerBody()
+    [Theory]
+    [InlineData(0.35f, 0f)]
+    [InlineData(0.65f, 0.25f)]
+    [InlineData(1f, 1f)]
+    [InlineData(1.3f, 2f)]
+    public void CombinedSkinSetupBoundsAndMouseMaskCoverRealBd2LowerBody(
+        float scaleFactor, float elapsedSeconds)
     {
         string directory = Environment.GetEnvironmentVariable("SPINEPET_BD2_TEST_DIR")
             ?? throw new InvalidOperationException(
@@ -47,7 +52,7 @@ public sealed class ArchiveDesktopFullBodyTests
                 StringComparison.OrdinalIgnoreCase))
             ?? resource.AnimationNames.FirstOrDefault();
         resource.SetAnimation(idle, repeat: true);
-        resource.Update(1f / 60f);
+        resource.Update(elapsedSeconds + 1f / 60f);
         var batches = geometry.Build(resource.Skeleton);
         var actual = geometry.Bounds;
         Assert.False(actual.IsEmpty);
@@ -56,7 +61,7 @@ public sealed class ArchiveDesktopFullBodyTests
         // Test the SAME alpha-mask rasterizer used for Win32 SetWindowRgn.
         // An opaque lower limb must create input-window regions in the
         // LOWER part of its real projected geometry, not just the torso.
-        float scale = Math.Min(1f, 650f / Math.Max(1f, actual.Height));
+        float scale = Math.Min(1f, 650f / Math.Max(1f, actual.Height)) * scaleFactor;
         float anchorX = 920f, anchorY = 780f;
         float pivotX = (setup.Left + setup.Right) * 0.5f;
         float pivotY = setup.Bottom;

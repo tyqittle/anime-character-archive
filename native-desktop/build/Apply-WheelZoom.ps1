@@ -1,5 +1,7 @@
 # Extracted from the Windows workflow. Run from the repository root.
 & ./native-desktop/Patch-WheelZoom.ps1 -UpstreamRoot ./native-upstream
+& ./native-desktop/build/Test-RenderOverlayContract.ps1 -UpstreamRoot ./native-upstream
+& ./native-desktop/build/Apply-RenderOverlays.ps1 -UpstreamRoot ./native-upstream
 & ./native-desktop/Patch-RenderEnvelope.ps1 -UpstreamRoot ./native-upstream
 & ./native-desktop/Patch-ViewportSafety.ps1 -UpstreamRoot ./native-upstream
 $engine = Get-Content ./native-upstream/SpinePet/src/SpinePet/Rendering/Native/NativeCharacterRenderEngine.cs -Raw
@@ -15,7 +17,7 @@ $voice = Get-Content ./native-upstream/SpinePet/src/SpinePet/NativeBrownDust2Voi
 $app = Get-Content ./native-upstream/SpinePet/src/SpinePet/App.xaml.cs -Raw
 if (-not $engine.Contains('private void OnNativeMouseWheel') -or
     -not $frame.Contains('NativeSpineBounds observed = state.Geometry.Bounds') -or
-    -not $surface.Contains('right <= PixelWidth - AnchorPixelX') -or
+    -not $surface.Contains('NativeSurfaceSizing.Contains(') -or
     -not $silhouette.Contains('float halfCell = cellSize * 0.38f / pixelScale') -or
     -not $silhouette.Contains('const int Subdivisions = 4') -or
     -not $bounds.Contains('NativeSpineSkinIncludes.Apply(data, probe);') -or

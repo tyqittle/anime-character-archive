@@ -1,0 +1,27 @@
+{
+  "upstream": "6690e986b4da31dc89337794bcef1b45e6531303",
+  "directory": "SpinePet/src/SpinePet/Rendering/Native",
+  "replacements": [
+    {
+      "file": "NativeCompositionSurface.cs",
+      "sha256": "4F4E9E851FD1E38FD9FC4CF7379647033F99231939A4057784F8ACF18911F42F"
+    },
+    {
+      "file": "NativeFrameRenderer.cs",
+      "sha256": "ACA507E0A771EC4F00D01BE6806F58CA23C7A20ED3FCAED905B1C7C722B3A2DA"
+    },
+    {
+      "file": "NativeInputRegionCoordinator.cs",
+      "sha256": "4173A47675DBFD1BAFD4080523719896692CA6747B2C8DC4229C4217778EBF1D"
+    },
+    {
+      "file": "NativeSilhouetteRasterizer.cs",
+      "sha256": "F6A2B144DEE13508EE888FA9B3986D464B69A28B80FC6AD4D84273698719F54A"
+    }
+  ],
+  "additions": [
+    "NativeTriangleCoverage.cs",
+    "NativeSurfaceSizing.cs",
+    "NativeInputRegionSnapshot.cs"
+  ]
+}

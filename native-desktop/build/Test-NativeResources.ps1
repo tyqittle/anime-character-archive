@@ -32,10 +32,10 @@ if ($LASTEXITCODE -ne 0) { throw 'Brown Dust 2 Spine 4.1 reader compatibility te
 # standing costume (combined skins, lower-body input silhouette).
 # A passing build or a string-matching assertion is NOT sufficient.
 $testProject = './native-upstream/SpinePet/tests/SpinePet.Tests'
-Copy-Item ./native-desktop/ArchiveDesktopFullBodyTests.cs $testProject
+Copy-Item ./native-desktop/ArchiveDesktopFullBodyTests.cs,./native-desktop/ArchiveDesktopPerformanceTests.cs $testProject
 $env:SPINEPET_BD2_TEST_DIR = (Resolve-Path './native-integration-test/bd2').Path
-dotnet test (Join-Path $testProject 'SpinePet.Tests.csproj') -c Release --filter 'FullyQualifiedName~ArchiveDesktopFullBodyTests' --logger 'console;verbosity=normal'
-if ($LASTEXITCODE -ne 0) { throw 'Real BD2 lower-body visual and mouse hit-region regression failed' }
+dotnet test (Join-Path $testProject 'SpinePet.Tests.csproj') -c Release --filter 'FullyQualifiedName~ArchiveDesktop|FullyQualifiedName~NativeSilhouetteRefreshTests|FullyQualifiedName~NativeCharacterRenderHostPerformanceTests|FullyQualifiedName~NativeRenderPipelineEfficiencyTests|FullyQualifiedName~NativeInputWindowTests' --logger 'console;verbosity=normal' --logger 'trx;LogFileName=archive-native.trx' --results-directory ./native-test-results
+if ($LASTEXITCODE -ne 0) { throw 'Native rendering, input reuse, performance or real BD2 full-body regression failed' }
 Remove-Item Env:SPINEPET_BD2_TEST_DIR
 # Second actual 4.1 costume ID: previous code incorrectly accepted
 # only cNNN and rejected cNNN_XX variants altogether.

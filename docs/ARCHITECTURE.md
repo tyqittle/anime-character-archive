@@ -77,3 +77,7 @@ python scripts/preview_pipeline.py publish
 经典脚本的共享全局环境仍是明确的兼容边界。后续按“存储、播放会话、语音、视图”逐个迁移至显式接口，再切换入口为 ES Modules；不能同时重写所有渲染器和存储，以免丢失用户收藏或已下载资源。
 
 完整问题清单和未完成债务见 [本次架构评审](ARCHITECTURE_REVIEW_2026-10-23.md)。根目录 AGENTS 和 `tests/check_architecture.mjs` 是持续约束，不能只改文档不运行检查。
+
+## 原生渲染维护边界
+
+Windows 原生 Spine 4.1 宿主的持续维护模块位于 `native-desktop/rendering/`。输入快照、三角形覆盖与表面容量检查为纯 C# 服务；四个上游渲染/输入模块通过固定摘要清单安装。构建适配先核对全部原始输入，拒绝源变化或新类型冲突，成功后记录实际安装源摘要。剩余兼容钩子仍有唯一锚点检查，不能宣称全部原生适配均已去除补丁。完整重建输入包含在 GPL 源码产物中。性能数据、回归与兼容范围见 [桌宠优化记录](DESKTOP_OPTIMIZATION.md)。

@@ -76,6 +76,16 @@ jobs:
       - name: Smoke-test real c015 resource download and atlas page resolution
         shell: pwsh
         run: '& ./native-desktop/build/Test-NativeResources.ps1'
+      - name: Preserve native rendering and input regression results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-desktop-regression-results
+          path: |
+            native-test-results/
+            native-upstream/archive-render-overlays.json
+          if-no-files-found: error
+          retention-days: 14
       - name: Assemble minimal core, optional bridge and corresponding GPL source
         shell: pwsh
         run: '& ./native-desktop/build/Assemble-NativePackage.ps1'
