@@ -81,3 +81,16 @@ test('native camera is used for zoom and pan only on the active renderer',()=>{
  renderer.begin();
  assert.equal(calls.nativeZoom,2);
 });
+
+test('illustration supersampling has a 1.5x floor but never caps a 2x retina screen',()=>{
+ const standard=setup({dpr:1,width:600,height:400});
+ standard.renderer._archiveRenderMinRatio=1.5;
+ standard.renderer.resize(1);
+ assert.equal(standard.canvas.width,900);
+ assert.equal(standard.canvas.height,600);
+ const retina=setup({dpr:2,width:600,height:400});
+ retina.renderer._archiveRenderMinRatio=1.5;
+ retina.renderer.resize(1);
+ assert.equal(retina.canvas.width,1200);
+ assert.equal(retina.canvas.height,800);
+});
