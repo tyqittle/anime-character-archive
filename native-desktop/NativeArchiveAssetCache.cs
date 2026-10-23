@@ -202,6 +202,24 @@ public sealed partial class App
                 "archive-cache-repaired source=" + sourceUrl +
                 " files=" + hashes.Count);
         }
+        catch (Exception ex) when (ex is System.Net.Http.HttpRequestException ||
+                                   ex is TaskCanceledException)
+        {
+            // Previously downloaded characters must remain usable offline.
+            // Do not replace a working legacy pack if its trusted source is
+            // temporarily unreachable; retry verification on next import.
+            string skeleton = Path.Combine(standing, stem + ".skel");
+            string atlas = Path.Combine(standing, stem + ".atlas");
+            if (!File.Exists(skeleton) || !File.Exists(atlas))
+                throw;
+            SpineSkeletonCompatibility.EnsureSupported(skeleton);
+            string[] pages = AtlasImagePages(
+                await File.ReadAllTextAsync(atlas));
+            if (!pages.All(page => File.Exists(Path.Combine(standing, page))))
+                throw;
+            AppLogger.Write(nameof(App),
+                "archive-cache-verify-deferred-offline " + ex.Message);
+        }
         finally
         {
             if (Directory.Exists(staging))
