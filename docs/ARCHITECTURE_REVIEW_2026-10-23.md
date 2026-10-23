@@ -37,3 +37,21 @@
 5. 原生下载进一步统一流式响应体上限、取消与总预算；目前若干大小检查发生在完整接收之后。源代码包也应直接记录实际补丁工作树和构建输入，避免仅依赖上游 HEAD 加重建说明。
 
 这些项仍是明确未完成的债务，不因目录重排或 CI 通过而自动消失。
+
+## 本轮验收证据
+
+| 验收 | 结果 |
+| --- | --- |
+| [基础检查](https://github.com/tyqittle/anime-character-archive/actions/runs/39896144871) | 54 项 Node 行为测试、29 项 Python 测试通过，包含完整 plan → convert → publish CLI 和源版本变更拒绝用例 |
+| [真实图鉴浏览器回归](https://github.com/tyqittle/anime-character-archive/actions/runs/39894841783) | 全目录身份、去重、分页、图片解码和链接通过 |
+| [碧蓝航线播放](https://github.com/tyqittle/anime-character-archive/actions/runs/39896144785) / [其他游戏播放](https://github.com/tyqittle/anime-character-archive/actions/runs/39896144761) | 真实浏览器播放检查通过 |
+| [原生 Windows 完整构建](https://github.com/tyqittle/anime-character-archive/actions/runs/39894156322) | 七段构建脚本抽取后的实际构建、BD2 语音与资源、安装器、安全扫描和发布检查通过 |
+| [统一预览流水线](https://github.com/tyqittle/anime-character-archive/actions/runs/39896144807) | 8 个分片和合并发布成功；126 项队列中 99 张合格预览入库，25 项渲染失败、2 项质量拒绝均保留诊断 |
+
+运行中还修正了单字符模型文件名被旧校验误拒绝的问题，并让采集器使用页面明确的错误状态结束等待。少女前线妖精模型已在真实采集中恢复出图。流水线成功表示编排、验证和结果发布完成，不代表所有外部源资源均可播放。
+
+## 部署边界仍待闭环
+
+当前预览发布使用仓库 `GITHUB_TOKEN` 写回 main，不能依赖该次 push 自动触发 Pages 分支构建。[GitHub 官方说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#troubleshooting-publishing-from-a-branch)明确这一限制。
+
+应将静态数据和预览发布后的部署收敛到显式的 Pages artifact 发布链，并验证所部署的 commit SHA。当前连接没有 Pages 管理权限，无法核实或切换站点 Source 设置；本轮没有把未经验证的部署迁移加入默认流程。后续代码提交可能顺带部署新数据，但不应把这种偶然触发当作长期更新机制。
