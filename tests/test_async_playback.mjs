@@ -235,6 +235,13 @@ test('Cubism setup errors use onError and immediately retry the same model provi
    return result;
   }}}}
  });
+ // The loader relies on the shared source/identity service. Exercise the
+ // real validator without bootstrapping the whole iframe in this isolated test.
+ const viewportSource=source('assets/js/live2d/state-and-viewport.js');
+ const validatorStart=viewportSource.indexOf('function verifyName(');
+ const validatorEnd=viewportSource.indexOf('function fit(',validatorStart);
+ assert.ok(validatorStart>=0&&validatorEnd>validatorStart);
+ vm.runInContext(viewportSource.slice(validatorStart,validatorEnd),ctx);
  run(ctx,'assets/js/live2d/model-loader.js');
  await ctx.load('demo','al-demo','raw');
  assert.equal(calls.length,2);
