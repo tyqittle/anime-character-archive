@@ -21508,10 +21508,22 @@
       "sourceRepo": "Eikanya/Live2d-model",
       "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
       "sourcePath": "为美好的世界献上祝福！Fantastic Days/1349100/1349100.model3.json",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "blank-frame: near blank screenshot"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E4%B8%BA%E7%BE%8E%E5%A5%BD%E7%9A%84%E4%B8%96%E7%95%8C%E7%8C%AE%E4%B8%8A%E7%A5%9D%E7%A6%8F%EF%BC%81Fantastic%20Days/1349100/1349100.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "841920522c900360cb10e53ffe262d46d2ce54262ff04bb4297d8815a5f7949a",
+      "preview": "./assets/animation-previews/konosuba-ks-1349100_1349100-20ffd44.webp",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "ks-1369100_1369100-5b1d656",

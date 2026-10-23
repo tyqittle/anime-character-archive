@@ -13,8 +13,8 @@
     },
     "konosuba": {
       "indexed": 61,
-      "verifiedPreview": 60,
-      "missingPreview": 1
+      "verifiedPreview": 61,
+      "missingPreview": 0
     }
   },
   "missing": [
@@ -101,10 +101,6 @@
     {
       "gameId": "girlsfrontline",
       "id": "gf-live2dnew_sr3mp_4101_normal_normal-3197af7"
-    },
-    {
-      "gameId": "konosuba",
-      "id": "ks-1349100_1349100-20ffd44"
     }
   ],
   "newCapturesInThisRun": 1,
@@ -235,16 +231,10 @@
       "gameId": "girlsfrontline",
       "category": "render-error",
       "message": "blank-frame: near blank screenshot"
-    },
-    {
-      "id": "ks-1349100_1349100-20ffd44",
-      "gameId": "konosuba",
-      "category": "render-error",
-      "message": "blank-frame: near blank screenshot"
     }
   ],
   "failureSummary": {
     "atlas-mismatch": 19,
-    "render-error": 3
+    "render-error": 2
   }
 }
