@@ -43,14 +43,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/10010_skin_alps03_spine/10010_skin_Alps03.atlas",
         "",
         "10010_skin_Alps03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "f59abbd4d0734157f780f34fc24274a8859d0ae94b13a275b9355771293c16d8",
       "preview": "./assets/animation-previews/daibloscore-dbcore-10010_skin_alps03_spine-10010_skin_alps03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1f5511d9e1df8be24dcc9e7409c0af81adb0799f0947b5be6361e9bd62b94ac3"
     },
     {
       "id": "dbcore-10010_skin_alps04_spine-10010_skin_alps04",
@@ -77,10 +78,24 @@
       "characterCode": "10010",
       "costumeName": "皮肤 04",
       "assetType": "character-spine",
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "visualIntegrityPolicy": "coherent-character"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-spine-animation-frame",
+      "visualIntegrityPolicy": "coherent-character",
+      "previewSourceIdentity": [
+        "spine",
+        "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/10010_skin_alps04_spine/10010_skin_Alps04",
+        "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/10010_skin_alps04_spine/10010_skin_Alps04.json",
+        "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/10010_skin_alps04_spine/10010_skin_Alps04.atlas",
+        "",
+        "10010_skin_Alps04",
+        "3.8",
+        "atlas-coordinate-space:declared"
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3134a20201bd14973e72ac3ed103dba744b172d094065b63a0adca191287e05b",
+      "preview": "./assets/animation-previews/daibloscore-dbcore-10010_skin_alps04_spine-10010_skin_alps04.webp"
     },
     {
       "id": "dbcore-10010_skin_alps05_spine-10010_skin_alps05",
@@ -116,14 +131,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/10010_skin_alps05_spine/10010_skin_Alps05.atlas",
         "",
         "10010_skin_Alps05",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "1f85265e3f8d11a9c821fd0ab63c13547eba3fcfcbeaf5632c5aa2d8904a225e",
       "preview": "./assets/animation-previews/daibloscore-dbcore-10010_skin_alps05_spine-10010_skin_alps05.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8db1002be70d573fb384300ee6977d5308efbc16d08bc4adeb4b02c1a5e2e500"
     },
     {
       "id": "dbcore-10020_skin_kunlun04_spine-10020_skin_kunlun04",
@@ -159,14 +175,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/10020_skin_kunlun04_spine/10020_skin_Kunlun04.atlas",
         "",
         "10020_skin_Kunlun04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "6f1ba8ce4885f778e6570964b4c425c275f0e3a911c3afcce4235ea198fd9661",
       "preview": "./assets/animation-previews/daibloscore-dbcore-10020_skin_kunlun04_spine-10020_skin_kunlun04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7fe06f4e2c974345040fc8db2a04f48b3c0dba3e65a3925013224016b3e4f49e"
     },
     {
       "id": "dbcore-10030_skin_wolframite04_spine-10030_skin_wolframite04",
@@ -202,14 +219,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/10030_skin_wolframite04_spine/10030_skin_Wolframite04.atlas",
         "",
         "10030_skin_Wolframite04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "e2859859538d59dfdba02dca599cf62dfe418d3015a90cacf7b38185ffbb6d36",
       "preview": "./assets/animation-previews/daibloscore-dbcore-10030_skin_wolframite04_spine-10030_skin_wolframite04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "777806ae28b927840404373d501438df14c1cc10725c5db0a3392bf859de1dee"
     },
     {
       "id": "dbcore-10070_skin_cinnabar03b_spine-10070_skin_cinnabar03b",
@@ -245,14 +263,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/10070_skin_cinnabar03b_spine/10070_skin_Cinnabar03b.atlas",
         "",
         "10070_skin_Cinnabar03b",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "7dd5af4375c407e7c767a14d9668205cd64c5d7bf994fc64487e5991b739e581",
       "preview": "./assets/animation-previews/daibloscore-dbcore-10070_skin_cinnabar03b_spine-10070_skin_cinnabar03b.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "66fb4e9d1f718920e375ad793df6d817cda1bee2af2a1ca15ea8b6908cc705d2"
     },
     {
       "id": "dbcore-10070_skin_cinnabar03c_spine-10070_skin_cinnabar03c",
@@ -288,14 +307,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/10070_skin_cinnabar03c_spine/10070_skin_Cinnabar03c.atlas",
         "",
         "10070_skin_Cinnabar03c",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "6d7a32c8ecb1f4307d2d15343352c3eaaba0c95c20fd754dc0631467f26afbdb",
       "preview": "./assets/animation-previews/daibloscore-dbcore-10070_skin_cinnabar03c_spine-10070_skin_cinnabar03c.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f4875988e6836db3dbc420030f22d71ce40886779f3c23edd81c7d3d3f3c2263"
     },
     {
       "id": "dbcore-10220_skin_garnet03b_spine-10220_skin_garnet03b",
@@ -331,14 +351,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/10220_skin_garnet03b_spine/10220_skin_Garnet03b.atlas",
         "",
         "10220_skin_Garnet03b",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "ebca17fafd5d78fa709aa13f64fcb145bc9957dbb625446a397398be137cf63f",
       "preview": "./assets/animation-previews/daibloscore-dbcore-10220_skin_garnet03b_spine-10220_skin_garnet03b.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9df1a02524e4ad148c52f1820eed55809568b4828a3c952e8c7cb55b81a66d39"
     },
     {
       "id": "dbcore-10220_skin_garnet03c_spine-10220_skin_garnet3c",
@@ -374,14 +395,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/10220_skin_garnet03c_spine/10220_skin_Garnet3c.atlas",
         "",
         "10220_skin_Garnet3c",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "25263c101b0ff16a682571ea8ffac3fb4431f16ef966ab52fe5844cd44ab9e91",
       "preview": "./assets/animation-previews/daibloscore-dbcore-10220_skin_garnet03c_spine-10220_skin_garnet3c.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7728dd7427c833dcf094569025d78e7870043e31efed7584a75108a15151c9f1"
     },
     {
       "id": "dbcore-10240_skin_pyroxene03_spine-10240_skin_pyroxene03",
@@ -417,14 +439,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/10240_skin_pyroxene03_spine/10240_skin_Pyroxene03.atlas",
         "",
         "10240_skin_Pyroxene03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "18cd6e6af9a750fbc5e97483f5001e11a32cbe8436a70842746c886866a3fc18",
       "preview": "./assets/animation-previews/daibloscore-dbcore-10240_skin_pyroxene03_spine-10240_skin_pyroxene03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f88d9beb8ff8c5dda3fa68928b30a42a60ce9cfff2bb995bb6b483734f15b2da"
     },
     {
       "id": "dbcore-10260_skin_ruby03_spine-10260_skin_ruby03",
@@ -460,14 +483,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/10260_skin_ruby03_spine/10260_skin_Ruby03.atlas",
         "",
         "10260_skin_Ruby03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "f6492027e541f7239d7d2cda9777f9f632f9d44c322f82190039cb348c31ec59",
       "preview": "./assets/animation-previews/daibloscore-dbcore-10260_skin_ruby03_spine-10260_skin_ruby03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "516165ace61d762626b3cad27bd8df36e448f2b20726c8c3d902d59ab3da7301"
     },
     {
       "id": "dbcore-20040_skin_fugue03_spine-20040_skin_fugue03",
@@ -503,14 +527,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/20040_skin_fugue03_spine/20040_skin_Fugue03.atlas",
         "",
         "20040_skin_Fugue03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "a81aeb5d3226d2260a03643907948def7bcfd973cb91a3368ee009549d79377f",
       "preview": "./assets/animation-previews/daibloscore-dbcore-20040_skin_fugue03_spine-20040_skin_fugue03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "606f631d1ec7efbbe975a0a20594d7251614d52a2712e282ac0930867ea548d0"
     },
     {
       "id": "dbcore-20070_skin_anthem03_spine-20070_skin_anthem03",
@@ -546,14 +571,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/20070_skin_anthem03_spine/20070_skin_Anthem03.atlas",
         "",
         "20070_skin_Anthem03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "4e2322c85f3d46b9128fa5306c5105b470f9aea42436b073237e89cf8ffb63dc",
       "preview": "./assets/animation-previews/daibloscore-dbcore-20070_skin_anthem03_spine-20070_skin_anthem03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c6bfc7933dcfb17b14b4af1bf37ce68c5a75e2ca3132ebd4a8189812d9fbf0df"
     },
     {
       "id": "dbcore-20070_skin_anthem04_spine-20070_skin_anthem04_character",
@@ -589,14 +615,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/20070_skin_anthem04_spine/20070_skin_Anthem04_character.atlas",
         "",
         "20070_skin_Anthem04_character",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "0eba6157be00e003a361fc7af1f14d41ba0157936c8fb0aac7d17e84ecf6005d",
       "preview": "./assets/animation-previews/daibloscore-dbcore-20070_skin_anthem04_spine-20070_skin_anthem04_character.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "6d445da423fc8df8a25476cf4b5ed655ee3e45b1b2f83f9a4578bf95a6a3d2ee"
     },
     {
       "id": "dbcore-20070_skin_anthem05_spine-20070_skin_anthem05",
@@ -632,14 +659,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/20070_skin_anthem05_spine/20070_skin_Anthem05.atlas",
         "",
         "20070_skin_Anthem05",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "9d25857ce2305cd14dd250dc8a7cb15082bfaaca29812f2b22ed1519ec6e0657",
       "preview": "./assets/animation-previews/daibloscore-dbcore-20070_skin_anthem05_spine-20070_skin_anthem05.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e3a6b69fa88b0e3c2ca3d2a2bcafa70218dc53861b21f7abbf81fa3081fbb42f"
     },
     {
       "id": "dbcore-20080_skin_melody03_spine-2008003_melody",
@@ -675,14 +703,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/20080_skin_melody03_spine/2008003_Melody.atlas",
         "",
         "2008003_Melody",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "128f8944baee11c964aee809a69021dd2b41e19bfe71fb33e81841c0382291ba",
       "preview": "./assets/animation-previews/daibloscore-dbcore-20080_skin_melody03_spine-2008003_melody.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4d63a81b4512497978ca78fe7bb57acebde847fcc07d78a9a75edea76ecd6c4e"
     },
     {
       "id": "dbcore-20080_skin_melody04_spine-20080_skin_melody04",
@@ -718,14 +747,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/20080_skin_melody04_spine/20080_skin_Melody04.atlas",
         "",
         "20080_skin_Melody04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "a392d256b816815a4471399c28ab2621b10afe98909850ef92973df4e6a6c38d",
       "preview": "./assets/animation-previews/daibloscore-dbcore-20080_skin_melody04_spine-20080_skin_melody04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "031f8eefe82f85362f2c7b3aa9b56789ab6abb0d9247f83db719f6fa6bbd61c8"
     },
     {
       "id": "dbcore-20080_skin_melody05_spine-20080_skin_melody05",
@@ -761,14 +791,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/20080_skin_melody05_spine/20080_skin_Melody05.atlas",
         "",
         "20080_skin_Melody05",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "391e1e6abee599443d667c9d67093aa30c8440171900b3936c0b5430f9d6a0ba",
       "preview": "./assets/animation-previews/daibloscore-dbcore-20080_skin_melody05_spine-20080_skin_melody05.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5c89a81c0ce3055ac94d55989939e8307c4a9f9f2635461e36fa4a20b5318570"
     },
     {
       "id": "dbcore-20110_skin_arpeggio03_spine-20110_skin_arpeggio03",
@@ -804,14 +835,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/20110_skin_arpeggio03_spine/20110_skin_Arpeggio03.atlas",
         "",
         "20110_skin_Arpeggio03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "fccba75dd5fd9fa457bc608c5cdb5d6dbf1de8c7f82f08c82ca0eeda313a2e33",
       "preview": "./assets/animation-previews/daibloscore-dbcore-20110_skin_arpeggio03_spine-20110_skin_arpeggio03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bc9f4fa2d0306fe72dccbefb26e00ace3a1ab5de36644ec1448c3f5340237378"
     },
     {
       "id": "dbcore-20110_skin_arpeggio04-20110_skin_arpeggio04",
@@ -847,14 +879,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/20110_skin_arpeggio04/20110_skin_Arpeggio04.atlas",
         "",
         "20110_skin_Arpeggio04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "6cf07d4be83ef8a390b6cfcbb209989ccc0165c5c1740cdc3c4b6b808a89241d",
       "preview": "./assets/animation-previews/daibloscore-dbcore-20110_skin_arpeggio04-20110_skin_arpeggio04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0eaf22dc29a253c45062de819ac8b6bd07468c2ad73547bd3ed2e1205e23a386"
     },
     {
       "id": "dbcore-20110_skin_arpeggio06_spine-20110_skin_arpeggio06",
@@ -890,14 +923,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/20110_skin_arpeggio06_spine/20110_skin_Arpeggio06.atlas",
         "",
         "20110_skin_Arpeggio06",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "11b041f34b871792f133d41a74aa96ee4151a3a5c65f50cc52d5d1549aef7adf",
       "preview": "./assets/animation-previews/daibloscore-dbcore-20110_skin_arpeggio06_spine-20110_skin_arpeggio06.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5669646d4075d2ade387bb78487c41a57c8a2999e18ca1f68847c7ff40b98ced"
     },
     {
       "id": "dbcore-20120_skin_elegy03_spine-20120_skin_elegy03",
@@ -933,14 +967,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/20120_skin_elegy03_spine/20120_skin_Elegy03.atlas",
         "",
         "20120_skin_Elegy03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "831e3eaed8f49e5f8c9b0dc9fff0c794461f0c6d9ad10d61ae750ee58d92dba9",
       "preview": "./assets/animation-previews/daibloscore-dbcore-20120_skin_elegy03_spine-20120_skin_elegy03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1f773e7198583e2ca93dc6c30d839b742b8c9f3ea0aeda6d1b439cf26edcf1e5"
     },
     {
       "id": "dbcore-20140_skin_capriccio03_spine-20140_skin_capriccio03",
@@ -976,14 +1011,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/20140_skin_capriccio03_spine/20140_skin_Capriccio03.atlas",
         "",
         "20140_skin_Capriccio03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "b804382773f5cdf2c456d23afbeae85d2ce4b00b074c64d2b18124dced6d0774",
       "preview": "./assets/animation-previews/daibloscore-dbcore-20140_skin_capriccio03_spine-20140_skin_capriccio03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "578e197c4b3d8a722457ee0570361de284a123aae47de5a3655d424efc812013"
     },
     {
       "id": "dbcore-20230_skin_strum03_spine-20230_skin_strum03",
@@ -1019,14 +1055,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/20230_skin_strum03_spine/20230_skin_STRUM03.atlas",
         "",
         "20230_skin_STRUM03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "0e05c5fd9166a088593e67a4ddd5a914947d84370a690424bbff761032cc1640",
       "preview": "./assets/animation-previews/daibloscore-dbcore-20230_skin_strum03_spine-20230_skin_strum03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e5a44ee24c1906e1af1f6b7d5c004cff725af4c0d20a43ef95031b09b8789afc"
     },
     {
       "id": "dbcore-20230_skin_strum04_spine-20230_skin_strum04",
@@ -1062,14 +1099,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/20230_skin_strum04_spine/20230_skin_STRUM04.atlas",
         "",
         "20230_skin_STRUM04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "e0a5566f3f9a8fcf5535fa8836177252bc3643e759545f1d54beb8eeaa1b22ce",
       "preview": "./assets/animation-previews/daibloscore-dbcore-20230_skin_strum04_spine-20230_skin_strum04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "49c38214de8d54862cd8e09d92c41240aff8606b5d1baee52881084ac5197614"
     },
     {
       "id": "dbcore-20230_skin_strum05_spine-20230_skin_strum05",
@@ -1105,14 +1143,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/20230_skin_strum05_spine/20230_skin_STRUM05.atlas",
         "",
         "20230_skin_STRUM05",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "9f622a5749e55ce83b365cbe8d94c39bc19562de95226a4a72970f90be274975",
       "preview": "./assets/animation-previews/daibloscore-dbcore-20230_skin_strum05_spine-20230_skin_strum05.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a46227a08607f375b53a3251aa4793b043853c522405402c917c28b56f5fbf19"
     },
     {
       "id": "dbcore-20240_skin_uillean03_spine-20240_skin_uillean03_spine",
@@ -1148,14 +1187,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/20240_skin_uillean03_spine/20240_skin_Uillean03_spine.atlas",
         "",
         "20240_skin_Uillean03_spine",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "cb66f87f4925f645ee3e3e71e76e4f55035ace7ec15ddd4a8832d63d527c6b33",
       "preview": "./assets/animation-previews/daibloscore-dbcore-20240_skin_uillean03_spine-20240_skin_uillean03_spine.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "39837a4ce4d35f63e7cc3a1d77c7e8d141c1f7b1fe93c7fd86e8c75bcf8a802e"
     },
     {
       "id": "dbcore-20240_skin_uillean04_spine-20240_skin_uillean04",
@@ -1191,14 +1231,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/20240_skin_uillean04_spine/20240_skin_Uillean04.atlas",
         "",
         "20240_skin_Uillean04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "cc154a2b1b9bc4f97e6e9c48c75dcbd1d8b0922225e2d81570232d251c4ea19f",
       "preview": "./assets/animation-previews/daibloscore-dbcore-20240_skin_uillean04_spine-20240_skin_uillean04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4b15870df9d350f12cc280ab26bfbbfb54e0c800019bbbd5a65e5b1505c32692"
     },
     {
       "id": "dbcore-30020_skin_lokotunjailurus03_spine-30020_skin_lokotunjailurus03",
@@ -1234,14 +1275,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/30020_skin_lokotunjailurus03_spine/30020_skin_Lokotunjailurus03.atlas",
         "",
         "30020_skin_Lokotunjailurus03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "4a06371eab9709f32051483646da4481714a38dfcccf9e14780c9b55cfdc156d",
       "preview": "./assets/animation-previews/daibloscore-dbcore-30020_skin_lokotunjailurus03_spine-30020_skin_lokotunjailurus03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "000dd5c6e82f9e67ab60b6bf3ae27edd221ba72f1b5b7a8bc13143e3ba8716b6"
     },
     {
       "id": "dbcore-30050_skin_acheron03_spine-30050_skin_acheron03",
@@ -1277,14 +1319,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/30050_skin_acheron03_spine/30050_skin_Acheron03.atlas",
         "",
         "30050_skin_Acheron03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "846dfdc3a404c731c0af116dba66076bf84f455e80eb87a40f4bf4bd12ce35db",
       "preview": "./assets/animation-previews/daibloscore-dbcore-30050_skin_acheron03_spine-30050_skin_acheron03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "74c30a34463c342f5d31bcca3c8b244c6bfae98a20c59e7fed35033f1d9b5fba"
     },
     {
       "id": "dbcore-30050_skin_acheron04-30050_skin_acheron04",
@@ -1320,14 +1363,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/30050_skin_acheron04/30050_skin_Acheron04.atlas",
         "",
         "30050_skin_Acheron04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "0eb491479a1e57bf1fba564b3783a22f5d2f6714bbba3e97b7b7a4993f6bbf6f",
       "preview": "./assets/animation-previews/daibloscore-dbcore-30050_skin_acheron04-30050_skin_acheron04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "aa850a7d80fb8f627d59c8ac6bf626f04c727389fa998142dcddaa991ba61fd2"
     },
     {
       "id": "dbcore-30050_skin_acheron05_spine-30050_skin_acheron05",
@@ -1363,14 +1407,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/30050_skin_acheron05_spine/30050_skin_Acheron05.atlas",
         "",
         "30050_skin_Acheron05",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "8b29007ac54bccc886cf3b9554d5de5fb65507a4173f951e6a9be98d79d40bce",
       "preview": "./assets/animation-previews/daibloscore-dbcore-30050_skin_acheron05_spine-30050_skin_acheron05.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "242f9299e69d65d2c37ded50f319aadec0bb11eab65c6467b8a9440711ed7a26"
     },
     {
       "id": "dbcore-30080_skin_talbot03_spine-30080_skin_talbot03",
@@ -1406,14 +1451,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/30080_skin_talbot03_spine/30080_skin_Talbot03.atlas",
         "",
         "30080_skin_Talbot03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "2b6b60f651ef986adda7e804a8938d6f4bf54e329bdb23e36f8d86da21ba6be9",
       "preview": "./assets/animation-previews/daibloscore-dbcore-30080_skin_talbot03_spine-30080_skin_talbot03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "14b6c5fc2c8850c969beb7ab19d3870b7973577a3a3e9bb81195a55dd0e0c14e"
     },
     {
       "id": "dbcore-30100_skin_pongo03_spine-30100_skin_pongo03",
@@ -1449,14 +1495,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/30100_skin_pongo03_spine/30100_skin_Pongo03.atlas",
         "",
         "30100_skin_Pongo03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "fab06111ecf51f415c05234060d269a40b447f39ce565df95989988f2aa35807",
       "preview": "./assets/animation-previews/daibloscore-dbcore-30100_skin_pongo03_spine-30100_skin_pongo03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d145092d30648b087f47cbb91fc346f35781fe5111015cdf27966676bc7ce085"
     },
     {
       "id": "dbcore-30200_skin_direwolf03_spine-30200_skin_direwolf03",
@@ -1492,14 +1539,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/30200_skin_direwolf03_spine/30200_skin_Direwolf03.atlas",
         "",
         "30200_skin_Direwolf03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "1491adeb054e880f968e5bb29ac85fd7a286781eed9e6b42be6ab58164004651",
       "preview": "./assets/animation-previews/daibloscore-dbcore-30200_skin_direwolf03_spine-30200_skin_direwolf03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4f2bdbadb448c3a010d6b7ab55ccd6ff0f700e77ec24d3b293f7480d85ebfd77"
     },
     {
       "id": "dbcore-30200_skin_direwolf04_spine-30200_skin_direwolf04",
@@ -1535,14 +1583,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/30200_skin_direwolf04_spine/30200_skin_Direwolf04.atlas",
         "",
         "30200_skin_Direwolf04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "6075189ad9f27911b9ad3898240b358496229c9c8f0e407a6d1dcecf020200d6",
       "preview": "./assets/animation-previews/daibloscore-dbcore-30200_skin_direwolf04_spine-30200_skin_direwolf04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b08c36da739ea905905a7cd3934eda71ab7ad4a4626142133175a91a5f86ad9e"
     },
     {
       "id": "dbcore-30220_skin_rex03_spine-30220_skin_rex03",
@@ -1578,14 +1627,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/30220_skin_rex03_spine/30220_skin_Rex03.atlas",
         "",
         "30220_skin_Rex03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "3d818d1d852c79f27cd5a5e8021a279588d2009d9777e3ddeededb26f61a86bb",
       "preview": "./assets/animation-previews/daibloscore-dbcore-30220_skin_rex03_spine-30220_skin_rex03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "eadc0a229dfd51ae71eff4bb3970f26e177d5129087790a212267fc86b3404a5"
     },
     {
       "id": "dbcore-30220_skin_rex04_spine-30220_skin_rex04",
@@ -1621,14 +1671,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/30220_skin_rex04_spine/30220_skin_Rex04.atlas",
         "",
         "30220_skin_Rex04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "6622f801d0d8037687312b400dd5637d41c147a6bce2ec46cb6ab9b1b7acab86",
       "preview": "./assets/animation-previews/daibloscore-dbcore-30220_skin_rex04_spine-30220_skin_rex04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "25102747498f3322c00c4f31b4f282a82c2c562bfd78d23d66ef2fb3828be6b8"
     },
     {
       "id": "dbcore-30250_skin_stegosaurus03_spine-30250_skin_stegosaurus03",
@@ -1664,14 +1715,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/30250_skin_stegosaurus03_spine/30250_skin_Stegosaurus03.atlas",
         "",
         "30250_skin_Stegosaurus03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "f733c1e78b8e7b2238d2d7b5cfe0bcbbeb8e020c19ee8c74665ec4f0b19bdbcc",
       "preview": "./assets/animation-previews/daibloscore-dbcore-30250_skin_stegosaurus03_spine-30250_skin_stegosaurus03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "fe779d6caff5fae75215c16391f3da7abe7b0fccab5b30bab3b447ba3c3bf526"
     },
     {
       "id": "dbcore-30260_skin_tyrant03_spine-30260_skin_tyrant03",
@@ -1707,14 +1759,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/30260_skin_tyrant03_spine/30260_skin_Tyrant03.atlas",
         "",
         "30260_skin_Tyrant03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "b4bc10f8614f19640f274a5f19ce231055a36e19f6a718b18430a92a642533a8",
       "preview": "./assets/animation-previews/daibloscore-dbcore-30260_skin_tyrant03_spine-30260_skin_tyrant03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3245b17c604ebf72b2b1418e8eecf459e5acf6d66c02aca674cbc7aa920d1021"
     },
     {
       "id": "dbcore-30320_skin_pelorovis03_spine-30320_skin_pelorovis03",
@@ -1750,14 +1803,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/30320_skin_pelorovis03_spine/30320_skin_Pelorovis03.atlas",
         "",
         "30320_skin_Pelorovis03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "63c1d8673da4298fea685cdc9216248bca73066fa8242901903589db68b1cf88",
       "preview": "./assets/animation-previews/daibloscore-dbcore-30320_skin_pelorovis03_spine-30320_skin_pelorovis03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "2fdf1d9e6059b7b08026f29adf1d0951ad5341f7bd1dc2365bf3da8c12ad702b"
     },
     {
       "id": "dbcore-30420_skin_lynx04_spine-30420_skin_lynx04",
@@ -1793,14 +1847,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/30420_skin_lynx04_spine/30420_skin_Lynx04.atlas",
         "",
         "30420_skin_Lynx04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "6a69c3590fefc03d0e06f7f3500be7ad2cbbbbeeed44d7f6150d7607e1e4be9e",
       "preview": "./assets/animation-previews/daibloscore-dbcore-30420_skin_lynx04_spine-30420_skin_lynx04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "566842a52657206f52c181b9e8015567d48bbcc6e6c7cb33d12038ccc2af4fc1"
     },
     {
       "id": "dbcore-30420_skin_lynx05_spine-30420_skin_lynx05",
@@ -1836,14 +1891,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/30420_skin_lynx05_spine/30420_skin_Lynx05.atlas",
         "",
         "30420_skin_Lynx05",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "373656bffeab55ab3d728c4439611b2fe910de16af0a56f66dd826a4d60e0e4d",
       "preview": "./assets/animation-previews/daibloscore-dbcore-30420_skin_lynx05_spine-30420_skin_lynx05.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b5e05096d990b6bcbaa4a2d146a85ca41c466316a7d29132136da2abb5ee644d"
     },
     {
       "id": "dbcore-30430_skin_lepus03_spine-30430_skin_lepus03",
@@ -1879,14 +1935,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/30430_skin_lepus03_spine/30430_skin_Lepus03.atlas",
         "",
         "30430_skin_Lepus03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "28399253b18805ef24c5e8f60ddf82f121acc942b1f19617c9d74a74de7a29ab",
       "preview": "./assets/animation-previews/daibloscore-dbcore-30430_skin_lepus03_spine-30430_skin_lepus03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0fd0e757595fef712051f66e86223299b1907a6ac368055ec90fb4580641e09b"
     },
     {
       "id": "dbcore-30480_skin_ushuaia03_spine-30480_skin_ushuaia03",
@@ -1922,14 +1979,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/30480_skin_ushuaia03_spine/30480_skin_Ushuaia03.atlas",
         "",
         "30480_skin_Ushuaia03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "d8915a2daa4e4a374f92ecdcc2bd302ab926d102f7cde0f9fe543671620f6d8a",
       "preview": "./assets/animation-previews/daibloscore-dbcore-30480_skin_ushuaia03_spine-30480_skin_ushuaia03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f2f91a2f457ac7d88d7c55813286be3c0e4d36cc6d94e8c0888304c564039408"
     },
     {
       "id": "dbcore-40020_skin_trade03_spine-40020_skin_trade03",
@@ -1965,14 +2023,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/40020_skin_trade03_spine/40020_skin_Trade03.atlas",
         "",
         "40020_skin_Trade03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "21e1cbdf122f85d99756a24e55a3dcbeb25727ff7ceea493f826710a249cf749",
       "preview": "./assets/animation-previews/daibloscore-dbcore-40020_skin_trade03_spine-40020_skin_trade03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "997ec8820a289f9830056f71cb762eadf0eeac83c21bab86106ee42edc3deaa4"
     },
     {
       "id": "dbcore-40030_skin_frost03_spine-40030_skin_frost03",
@@ -2008,14 +2067,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/40030_skin_frost03_spine/40030_skin_Frost03.atlas",
         "",
         "40030_skin_Frost03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "682e42a869656d0cd4f03d7e3307d3dfee9799b4d1ffa6b3a1f13b4bc8e42e97",
       "preview": "./assets/animation-previews/daibloscore-dbcore-40030_skin_frost03_spine-40030_skin_frost03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "47adfac578a0de05141b330a5853f7ee8bdd9f058615105260d8341ff7167534"
     },
     {
       "id": "dbcore-40040_skin_prominence03_spine-40040_skin_prominence03",
@@ -2051,14 +2111,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/40040_skin_prominence03_spine/40040_skin_Prominence03.atlas",
         "",
         "40040_skin_Prominence03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "010f935bedc1dfcf92f8c0ed62f196dcdbc949f81e8b8e2b72cdc8abd6a62da6",
       "preview": "./assets/animation-previews/daibloscore-dbcore-40040_skin_prominence03_spine-40040_skin_prominence03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "526bc1ad67a9349266a4f41b3d5a54446f18d8e816f3d776e1c8285462d67aa1"
     },
     {
       "id": "dbcore-40050_skin_vortex03_spine-40050_skin_vortex03",
@@ -2094,14 +2155,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/40050_skin_vortex03_spine/40050_skin_Vortex03.atlas",
         "",
         "40050_skin_Vortex03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "2388b766d723e88e0e5c6d94ea365fc388f54fc9eb24523f221708512e7f1989",
       "preview": "./assets/animation-previews/daibloscore-dbcore-40050_skin_vortex03_spine-40050_skin_vortex03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "15e12671415f28fae32d109055db6f445db4c136d09e984ab0831987bd280fda"
     },
     {
       "id": "dbcore-40150_skin_rainbow03_spine-40150_skin_rainbow03",
@@ -2137,14 +2199,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/40150_skin_rainbow03_spine/40150_skin_Rainbow03.atlas",
         "",
         "40150_skin_Rainbow03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "04eb24e56ac44814b23d088823091231722fede95223203104601211b00a3080",
       "preview": "./assets/animation-previews/daibloscore-dbcore-40150_skin_rainbow03_spine-40150_skin_rainbow03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5652b1d7889414acf41b437f797e9d6f7e9b03c792e88b5c0456eee8c495c22c"
     },
     {
       "id": "dbcore-40190_skin_aurora03_spine-40190_skin_aurora03",
@@ -2180,14 +2243,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/40190_skin_aurora03_spine/40190_skin_Aurora03.atlas",
         "",
         "40190_skin_Aurora03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "e9417546951306a7e239ca4a0869adb43dede17cb55960a508d5a3fd586e73f2",
       "preview": "./assets/animation-previews/daibloscore-dbcore-40190_skin_aurora03_spine-40190_skin_aurora03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "958723d11b99fcd2aa58090479057b22e62dcdb90577c88ed67dac7911ac38c9"
     },
     {
       "id": "dbcore-40230_skin_scorching03a-40230_skin_scorching03a",
@@ -2223,14 +2287,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/40230_skin_scorching03a/40230_skin_Scorching03a.atlas",
         "",
         "40230_skin_Scorching03a",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "92b14184c3615692ab8b8e0601c834aa1bbbab3818793d61975181ba575e5645",
       "preview": "./assets/animation-previews/daibloscore-dbcore-40230_skin_scorching03a-40230_skin_scorching03a.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c6384acba6f77704fe41310fa236b4a38107e7d55107c5604ba80a1e950f3315"
     },
     {
       "id": "dbcore-40230_skin_scorching03b-40230_skin_scorching03b",
@@ -2266,14 +2331,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/40230_skin_scorching03b/40230_skin_Scorching03b.atlas",
         "",
         "40230_skin_Scorching03b",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "b3b3b2033a129fa9e23fc782a17ad6bda68e7b4d3372ef55d803f392ca2d59dc",
       "preview": "./assets/animation-previews/daibloscore-dbcore-40230_skin_scorching03b-40230_skin_scorching03b.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "45b394a41727f117584c221be57a574342ab64fa2ead471142601d6cf18356d6"
     },
     {
       "id": "dbcore-40290_skin_rain03_spine-40290_skin_rain03",
@@ -2309,14 +2375,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/40290_skin_rain03_spine/40290_skin_Rain03.atlas",
         "",
         "40290_skin_Rain03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "436d5ba5721b6296c3d462306a0d49d47046689e808e952c4e3e187aa3b923fc",
       "preview": "./assets/animation-previews/daibloscore-dbcore-40290_skin_rain03_spine-40290_skin_rain03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bb96fc77280cbc00aeedeab55aeedfd789d1958b263a446ddcae4543249320eb"
     },
     {
       "id": "dbcore-40310_skin_noctilucent03_spine-40310_skin_noctilucent03",
@@ -2352,14 +2419,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/40310_skin_noctilucent03_spine/40310_skin_Noctilucent03.atlas",
         "",
         "40310_skin_Noctilucent03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "e2928e62dcb6d17dd6b81efca3a5afed072a00d8f39e92b00f247f49736570fa",
       "preview": "./assets/animation-previews/daibloscore-dbcore-40310_skin_noctilucent03_spine-40310_skin_noctilucent03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "fac2f35270ce7e3b0ca868c59dd25eb9e940e82d63ba39c409fa2a80af7720b8"
     },
     {
       "id": "dbcore-40310_skin_noctilucent04_spine-40310_skin_noctilucent04",
@@ -2395,14 +2463,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/40310_skin_noctilucent04_spine/40310_skin_Noctilucent04.atlas",
         "",
         "40310_skin_Noctilucent04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "77d901b6c4d06c7176ba27d36c528b131b5cc5b1184bf373882ac6d6ebf399c8",
       "preview": "./assets/animation-previews/daibloscore-dbcore-40310_skin_noctilucent04_spine-40310_skin_noctilucent04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c486b542b6f2797338f4965df5f74133ece47f8bf0f6a0d2ad46a1e3fd4b8bb7"
     },
     {
       "id": "dbcore-40310_skin_noctilucent05_spine-40310_skin_noctilucent05",
@@ -2438,14 +2507,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/40310_skin_noctilucent05_spine/40310_skin_Noctilucent05.atlas",
         "",
         "40310_skin_Noctilucent05",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "6a9963730a83a2e0db7cef28efef905003e89a395911e06dcfac0628440ed23f",
       "preview": "./assets/animation-previews/daibloscore-dbcore-40310_skin_noctilucent05_spine-40310_skin_noctilucent05.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0601e844e31bfb8881748a9973c0e617acf016d19bc460cf243d5f2d02361390"
     },
     {
       "id": "dbcore-40350_skin_meteor03_spine-40350_skin_meteor03",
@@ -2481,14 +2551,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/40350_skin_meteor03_spine/40350_skin_Meteor03.atlas",
         "",
         "40350_skin_Meteor03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "46ecdcf9a244ec78bee97a8f22661633b0e57b5df434838c064b8122a9cfc611",
       "preview": "./assets/animation-previews/daibloscore-dbcore-40350_skin_meteor03_spine-40350_skin_meteor03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "193188f63dec6bf4a9b248686826019036e3e7fc2316b8bb10013794fa326a32"
     },
     {
       "id": "dbcore-40350_skin_meteor04_spine-40350_skin_meteor04",
@@ -2524,14 +2595,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/40350_skin_meteor04_spine/40350_skin_Meteor04.atlas",
         "",
         "40350_skin_Meteor04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "cccc5300a4aa08edcb68090712fd07fd00e14d2a78ccc70463bb484b77cd0d01",
       "preview": "./assets/animation-previews/daibloscore-dbcore-40350_skin_meteor04_spine-40350_skin_meteor04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0550a78144e3aa5634d9bcc530bc6da9b37d1f28c6572d85d556fa9243aad06a"
     },
     {
       "id": "dbcore-40400_skin_collapsar03_spine-40400_skin_collapsar03",
@@ -2567,14 +2639,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/40400_skin_collapsar03_spine/40400_skin_Collapsar03.atlas",
         "",
         "40400_skin_Collapsar03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "c064d0b8580b1fa3e48e255eaf29095141fef6283cd73d1462081d45a0d2e169",
       "preview": "./assets/animation-previews/daibloscore-dbcore-40400_skin_collapsar03_spine-40400_skin_collapsar03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ad9c7bd0ff3d401c67322827b003198548843eac0d2fb80c011c42ed923fc9e1"
     },
     {
       "id": "dbcore-50010_skin_queenbee03_spine-50010_skin_queenbee03",
@@ -2610,14 +2683,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/50010_skin_queenbee03_spine/50010_skin_Queenbee03.atlas",
         "",
         "50010_skin_Queenbee03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "d773579439b98c23ec2e7b85198b90a86a74346e52905bc1b0dc38336160aea6",
       "preview": "./assets/animation-previews/daibloscore-dbcore-50010_skin_queenbee03_spine-50010_skin_queenbee03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a1cd377459169f56b3e86fd71832f14825b3b00b1a7ce5164543c87934f4325d"
     },
     {
       "id": "dbcore-50011_skin_queenbee03_spine-50011_skin_queenbee03",
@@ -2653,14 +2727,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/50011_skin_queenbee03_spine/50011_skin_Queenbee03.atlas",
         "",
         "50011_skin_Queenbee03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "d10585d939aff4a0e1be5e00c1f936d2c05663b033d882c3a59f8a805da42e54",
       "preview": "./assets/animation-previews/daibloscore-dbcore-50011_skin_queenbee03_spine-50011_skin_queenbee03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "7915de6cf48da0f5c1ab96f67fd825cbef983af0a178641ad80aa11f00b29f5c"
     },
     {
       "id": "dbcore-50030_skin_stinger03_spine-50030_skin_stinger03",
@@ -2696,14 +2771,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/50030_skin_stinger03_spine/50030_skin_Stinger03.atlas",
         "",
         "50030_skin_Stinger03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "957f37a6ebdc637ca2aaf9f3cd3e8094ccb99663a4a00615e2b157c13f41567d",
       "preview": "./assets/animation-previews/daibloscore-dbcore-50030_skin_stinger03_spine-50030_skin_stinger03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "644da2f550f680cc02d56dbc70b43e7f20e5a15598324019c7c0a1fbf98b6ad5"
     },
     {
       "id": "dbcore-50040_skin_silverfeather03_spine-50040_skin_silverfeather03",
@@ -2739,14 +2815,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/50040_skin_silverfeather03_spine/50040_skin_SilverFeather03.atlas",
         "",
         "50040_skin_SilverFeather03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "3f3c957835767d41d7b0d8b0a3fd8ca29db548a6049a69f43bd7fe65a410d4b7",
       "preview": "./assets/animation-previews/daibloscore-dbcore-50040_skin_silverfeather03_spine-50040_skin_silverfeather03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e9208dbba23203e26eaec84adf8a114fd285eb39217fe64e3cb1df29919faeec"
     },
     {
       "id": "dbcore-50041_skin_silverfeather03a_spine-50041_skin_silverfeather03a",
@@ -2782,14 +2859,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/50041_skin_silverfeather03a_spine/50041_skin_SilverFeather03a.atlas",
         "",
         "50041_skin_SilverFeather03a",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "19c363cf4f628d8b9f28449474cb157c57d8718bd807e9094b61c1d16eb09961",
       "preview": "./assets/animation-previews/daibloscore-dbcore-50041_skin_silverfeather03a_spine-50041_skin_silverfeather03a.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "213e37f74e481a6df1ad3f0fc0ed10b39a8480cf18aecf26660782c95ce6d077"
     },
     {
       "id": "dbcore-50041_skin_silverfeather03b_spine-50041_skin_silverfeather03b",
@@ -2825,14 +2903,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/50041_skin_silverfeather03b_spine/50041_skin_SilverFeather03b.atlas",
         "",
         "50041_skin_SilverFeather03b",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "a80b12bf4ff48b001f29049c1667d4834de9819654ff000ce90bf13658f86b12",
       "preview": "./assets/animation-previews/daibloscore-dbcore-50041_skin_silverfeather03b_spine-50041_skin_silverfeather03b.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8c8051042174ba6d6f9a99775014649f833175ca26a7b1a94ceba75ef82b18b6"
     },
     {
       "id": "dbcore-50080_skin_sandfly03_spine-50080_skin_sandfly03",
@@ -2868,14 +2947,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/50080_skin_sandfly03_spine/50080_skin_Sandfly03.atlas",
         "",
         "50080_skin_Sandfly03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "d412e5c731b40db592af5e4d6a48c2cfeb0f893f3cf0173a69f7b8b9bc008d8d",
       "preview": "./assets/animation-previews/daibloscore-dbcore-50080_skin_sandfly03_spine-50080_skin_sandfly03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c6db6b285948f3bce031ed49357e8f18ab79ec5f4ea8b8a3593699291c33e80f"
     },
     {
       "id": "dbcore-50080_skin_sandfly04_spine-50080_skin_sandfly04",
@@ -2911,14 +2991,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/50080_skin_sandfly04_spine/50080_skin_Sandfly04.atlas",
         "",
         "50080_skin_Sandfly04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "585b830916bf439387110f6cc513b42c9afa5b9fb83627dcdb8bc14a9fa2e551",
       "preview": "./assets/animation-previews/daibloscore-dbcore-50080_skin_sandfly04_spine-50080_skin_sandfly04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0a9d19c6a0ae0121e10e6fb254d094ebc935be141ebd62ea39b6d04136c11d97"
     },
     {
       "id": "dbcore-50080_skin_sandfly05_spine-50080_skin_sandfly05",
@@ -2954,14 +3035,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/50080_skin_sandfly05_spine/50080_skin_Sandfly05.atlas",
         "",
         "50080_skin_Sandfly05",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "d17cd6188dfa8f19351970af2fbf19718446e9bab293c336fd3c2d188c7ae3ba",
       "preview": "./assets/animation-previews/daibloscore-dbcore-50080_skin_sandfly05_spine-50080_skin_sandfly05.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "33d04d3bd72fecbd0fe7a48a9e0432bbb5ac8cd81a8481b7c09fc19126d6125f"
     },
     {
       "id": "dbcore-50180_skin_odonata03-50180_skin_odonata03",
@@ -2997,14 +3079,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/50180_skin_odonata03/50180_skin_Odonata03.atlas",
         "",
         "50180_skin_Odonata03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "1b8dd32a7c82bf6786683baae458ccd66c7fecb4a987710194114a13866078ac",
       "preview": "./assets/animation-previews/daibloscore-dbcore-50180_skin_odonata03-50180_skin_odonata03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e88989909f626a8450ced30960c38dd10c41b590c2ecb126aff18d5afcb47981"
     },
     {
       "id": "dbcore-50250_skin_ccc03_spine-50250_skin_ccc03",
@@ -3040,14 +3123,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/50250_skin_ccc03_spine/50250_skin_CCC03.atlas",
         "",
         "50250_skin_CCC03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "264a828e0fd01a9391d2177e5dc9235d5ab94e33636caee8c2e44894685e41eb",
       "preview": "./assets/animation-previews/daibloscore-dbcore-50250_skin_ccc03_spine-50250_skin_ccc03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "619eee0f24f8ff03581092773b096dc9ad8e9ddd68ce4ad7a3b3a779d05b523e"
     },
     {
       "id": "dbcore-50250_skin_ccc04_spine-50250_skin_ccc04",
@@ -3083,14 +3167,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/50250_skin_ccc04_spine/50250_skin_CCC04.atlas",
         "",
         "50250_skin_CCC04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "d299c83e840a71dce0d8dfb544ff3f6620c074af01d22f164dba5f2c413977b1",
       "preview": "./assets/animation-previews/daibloscore-dbcore-50250_skin_ccc04_spine-50250_skin_ccc04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0115cd7d8eb8d206d72d1449ae0b88cf01e59af67d4c6b320e5acb7770673d77"
     },
     {
       "id": "dbcore-50300_skin_reduvia03_spine-50300_skin_reduvia03",
@@ -3126,14 +3211,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/50300_skin_reduvia03_spine/50300_skin_Reduvia03.atlas",
         "",
         "50300_skin_Reduvia03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "84fb6fcac9bf34a3e8fadd5a76c3c527c3e90cef2b45250393edc76d0adab85d",
       "preview": "./assets/animation-previews/daibloscore-dbcore-50300_skin_reduvia03_spine-50300_skin_reduvia03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "810074833bc81361ea04439c57457cc6a01c491586877a5d6f77f1f8ae9d2f86"
     },
     {
       "id": "dbcore-50300_skin_reduvia05_spine-50300_skin_reduvia05",
@@ -3169,14 +3255,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/50300_skin_reduvia05_spine/50300_skin_Reduvia05.atlas",
         "",
         "50300_skin_Reduvia05",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "4f2d86ca29a1b9f8a4478a9b423ab4108ef71ec99887d4b426ec5f85d87e5a8a",
       "preview": "./assets/animation-previews/daibloscore-dbcore-50300_skin_reduvia05_spine-50300_skin_reduvia05.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "fb59fa1351598be91dd1835e3667d573aec67156692eb11e7db1120f9dfaeb06"
     },
     {
       "id": "dbcore-50310_skin_orchid03-50310_skin_orchid03",
@@ -3212,14 +3299,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/50310_skin_orchid03/50310_skin_Orchid03.atlas",
         "",
         "50310_skin_Orchid03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "b01fd568a5d77c7fcee443225996b6ce7b811b7fcaf25414e00804217e0dc46c",
       "preview": "./assets/animation-previews/daibloscore-dbcore-50310_skin_orchid03-50310_skin_orchid03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8b23c28e1955db5e9d1dcdc18dccc8cab359ee2bc13a90971d472095cb38cf6c"
     },
     {
       "id": "dbcore-50310_skin_orchid04_spine-50310_skin_orchid04",
@@ -3255,14 +3343,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/50310_skin_orchid04_spine/50310_skin_Orchid04.atlas",
         "",
         "50310_skin_Orchid04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "693970f1f90576d12d9804d89dba3b5a2ed1cfc2ba44808f40e47e90992420b1",
       "preview": "./assets/animation-previews/daibloscore-dbcore-50310_skin_orchid04_spine-50310_skin_orchid04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3277a3c88dccbd1427bcc3b586666ed8350b829e01aaa50c9c279eb6ccfcbe3e"
     },
     {
       "id": "dbcore-50320_skin_salticidae03_spine-50320_skin_salticidae03",
@@ -3298,14 +3387,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/50320_skin_salticidae03_spine/50320_skin_Salticidae03.atlas",
         "",
         "50320_skin_Salticidae03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "34e02fb1d3f32b4cde8d63b4a9db7168351faf6eaa5e3d742ddad7e4f09fcb79",
       "preview": "./assets/animation-previews/daibloscore-dbcore-50320_skin_salticidae03_spine-50320_skin_salticidae03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "57018e93218c9310ec804c91ce8e39beb363d8d6d253c9eacba47df81d3d9cd6"
     },
     {
       "id": "dbcore-50320_skin_salticidae04_spine-50320_skin_salticidae04",
@@ -3341,14 +3431,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/50320_skin_salticidae04_spine/50320_skin_Salticidae04.atlas",
         "",
         "50320_skin_Salticidae04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "89effe1b5b605b01fd72828b3b2bcfbb587982469fcf0ef25c7f44926e1004d6",
       "preview": "./assets/animation-previews/daibloscore-dbcore-50320_skin_salticidae04_spine-50320_skin_salticidae04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "93e70fa936a6bab8d97cba5cf15122f204d729174872a717a2486463796378db"
     },
     {
       "id": "dbcore-60020_skin_joyeuse03_spine-60020_skin_joyeuse03",
@@ -3384,14 +3475,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/60020_skin_joyeuse03_spine/60020_skin_Joyeuse03.atlas",
         "",
         "60020_skin_Joyeuse03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "7da53a6c9a0e88863919af9aaa80e678d67da37a6bffd403165154eafcc65c17",
       "preview": "./assets/animation-previews/daibloscore-dbcore-60020_skin_joyeuse03_spine-60020_skin_joyeuse03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "beb9cc481e3e4b86a55f6c95a39909e09c1ca36277b7f4832b53474f32ce41e0"
     },
     {
       "id": "dbcore-60020_skin_joyeuse04_spine-60020_skin_joyeuse04",
@@ -3427,14 +3519,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/60020_skin_joyeuse04_spine/60020_skin_joyeuse04.atlas",
         "",
         "60020_skin_joyeuse04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "84e934e4a972a0443893a0d142909e5fdd4475e8da601a3438b676b603c137c4",
       "preview": "./assets/animation-previews/daibloscore-dbcore-60020_skin_joyeuse04_spine-60020_skin_joyeuse04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5325eef93a39e02564af7e8d26b4edb6a73e0defe07555a3e4b82ceb11ca5a07"
     },
     {
       "id": "dbcore-60050_skin_naglering03_spine-60050_skin_naglering03",
@@ -3470,14 +3563,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/60050_skin_naglering03_spine/60050_skin_Naglering03.atlas",
         "",
         "60050_skin_Naglering03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "376733efd5b9ed26c365fbb85dc73377af907b9a9d2cce5eeb4c52ba8deb994a",
       "preview": "./assets/animation-previews/daibloscore-dbcore-60050_skin_naglering03_spine-60050_skin_naglering03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "dd33d63dea5adfe1fe8c72e89763c41616dff3a8ebea82c16bd6b7f3412eafb2"
     },
     {
       "id": "dbcore-60050_skin_naglering04_spine-60050_skin_naglering04",
@@ -3513,14 +3607,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/60050_skin_naglering04_spine/60050_skin_Naglering04.atlas",
         "",
         "60050_skin_Naglering04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "58ea6433b1d9e96675f57d0250c7ee27f0542dc6db4443d5faecbc7301ff3899",
       "preview": "./assets/animation-previews/daibloscore-dbcore-60050_skin_naglering04_spine-60050_skin_naglering04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "74bcdc7fb30cf4a31ba3e04045308920926eb196c1d52593df4b7ef54080a5ce"
     },
     {
       "id": "dbcore-60090_skin_curtana03_spine-60090_skin_curtana03",
@@ -3556,14 +3651,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/60090_skin_curtana03_spine/60090_skin_Curtana03.atlas",
         "",
         "60090_skin_Curtana03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "c2e9458c1051201a76948ad457d29f59896223bb1ee60c4616bb99700b50b063",
       "preview": "./assets/animation-previews/daibloscore-dbcore-60090_skin_curtana03_spine-60090_skin_curtana03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ac0f14f3ff2846753cf87b18bdf5de37703ac6b76eee0e353b01a451224dbb89"
     },
     {
       "id": "dbcore-60090_skin_curtana04_spine-60090_skin_curtana04",
@@ -3599,14 +3695,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/60090_skin_curtana04_spine/60090_skin_Curtana04.atlas",
         "",
         "60090_skin_Curtana04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "24907c2fb13e9336a3daf3fad9a54f0a732ba3c3fea157ea621e08883c48f7c2",
       "preview": "./assets/animation-previews/daibloscore-dbcore-60090_skin_curtana04_spine-60090_skin_curtana04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f272027094a35ba87fa0f05e93c952c2948c672f5c40a4fead50e0a5c816a612"
     },
     {
       "id": "dbcore-60110_skin_burtgang03_spine-60110_skin_burtgang03",
@@ -3642,14 +3739,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/60110_skin_burtgang03_spine/60110_skin_Burtgang03.atlas",
         "",
         "60110_skin_Burtgang03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "e1d62e7830e1d1a6c88a97e01efa4c6cc62465e5b98ca40f4779d51ce008b778",
       "preview": "./assets/animation-previews/daibloscore-dbcore-60110_skin_burtgang03_spine-60110_skin_burtgang03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f6ee7a60236fc2279979648e01d300eaba2fd414b5ee39280ace215e26c7bcab"
     },
     {
       "id": "dbcore-60110_skin_burtgang04_spine-60110_skin_burtgang04",
@@ -3685,14 +3783,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/60110_skin_burtgang04_spine/60110_skin_Burtgang04.atlas",
         "",
         "60110_skin_Burtgang04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "0a17c27a31f0515ce3e8aa0cc3da2ba1580c5e6da4bf24f97adcbddd071fef00",
       "preview": "./assets/animation-previews/daibloscore-dbcore-60110_skin_burtgang04_spine-60110_skin_burtgang04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "99f36c5db7ae5e48cc3a62cb19dc7d3c808d43c6ee71af193a83fccf737ac6fc"
     },
     {
       "id": "dbcore-60150_skin_tyrfing03_spine-60150_skin_tyrfing03",
@@ -3728,14 +3827,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/60150_skin_tyrfing03_spine/60150_skin_Tyrfing03.atlas",
         "",
         "60150_skin_Tyrfing03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "32ff38b7424189965b2f9012755f0550cec3964db64e74538aa2c12648243493",
       "preview": "./assets/animation-previews/daibloscore-dbcore-60150_skin_tyrfing03_spine-60150_skin_tyrfing03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "afbff6ae06ebf1c3dff1e6a89a661c41f1783da9f9c5fe4dee1d1793c849ad67"
     },
     {
       "id": "dbcore-60160_skin_aymur03_spine-60160_skin_aymur03",
@@ -3771,14 +3871,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/60160_skin_aymur03_spine/60160_skin_Aymur03.atlas",
         "",
         "60160_skin_Aymur03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "f4f7d63df5b0561a204a53b8868a109ece117b6f9d52e990692566555f604588",
       "preview": "./assets/animation-previews/daibloscore-dbcore-60160_skin_aymur03_spine-60160_skin_aymur03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "25918bc6b370a6823deb60fba480ba8c9a457e0015df79f25b07a16bf2835c94"
     },
     {
       "id": "dbcore-60210_skin_longxian03a-60210_skin_longxian03a",
@@ -3814,14 +3915,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/60210_skin_longxian03a/60210_skin_Longxian03a.atlas",
         "",
         "60210_skin_Longxian03a",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "98be64a09b08e44c446c8f83512c12b3c625e875ff79ab918a558063c57c46e1",
       "preview": "./assets/animation-previews/daibloscore-dbcore-60210_skin_longxian03a-60210_skin_longxian03a.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f7c94b7520c48398abe4fd7cb85e41041b6c4105dfb4d7ae36629570f754a978"
     },
     {
       "id": "dbcore-60210_skin_longxian03b-60210_skin_longxian03b",
@@ -3857,14 +3959,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/60210_skin_longxian03b/60210_skin_Longxian03b.atlas",
         "",
         "60210_skin_Longxian03b",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "785e358422598f4dad8a3e5f89b35138158db4c2ffe5efa8a0c2481681e26f0e",
       "preview": "./assets/animation-previews/daibloscore-dbcore-60210_skin_longxian03b-60210_skin_longxian03b.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "afe86d937163c97d2ffa38eee0c29bb9a40251cf9ed565d99afe1e4b6ec78aeb"
     },
     {
       "id": "dbcore-60280_skin_clarent03_spine-60280_skin_clarent03",
@@ -3900,14 +4003,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/60280_skin_clarent03_spine/60280_skin_Clarent03.atlas",
         "",
         "60280_skin_Clarent03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "59d443a0855a371a19cd08fc24ed6e3474dcbb7192ce05e6e912e90bc621ef90",
       "preview": "./assets/animation-previews/daibloscore-dbcore-60280_skin_clarent03_spine-60280_skin_clarent03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4824141f34ec96d2697d71558fbb95837e6b86dc46e85098c179985486be1e09"
     },
     {
       "id": "dbcore-60301_skin_moralltach03_spine-60301_skin_moralltach03",
@@ -3943,14 +4047,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/60301_skin_moralltach03_spine/60301_skin_Moralltach03.atlas",
         "",
         "60301_skin_Moralltach03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "fe917c03774eb0a1ae690a9a3395d4213a62918978cfdaf25bebe4316040de5b",
       "preview": "./assets/animation-previews/daibloscore-dbcore-60301_skin_moralltach03_spine-60301_skin_moralltach03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bc00f65cf316fa557a2e6c45a0a38f6579179de7ccea281939b898537c1de7ae"
     },
     {
       "id": "dbcore-60310_skin_tizona03_spine-60310_skin_tizona03",
@@ -3986,14 +4091,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/60310_skin_tizona03_spine/60310_skin_Tizona03.atlas",
         "",
         "60310_skin_Tizona03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "3810078e18f11217e9b77c15cad2f77192fe987a024ad43da274783d38b620c9",
       "preview": "./assets/animation-previews/daibloscore-dbcore-60310_skin_tizona03_spine-60310_skin_tizona03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4d028cf21add3932dc5d0ab4183e81b1605cc412c5a0c2e642b07d9f606705ff"
     },
     {
       "id": "dbcore-60321_skin_dainslef03_spine-60321_skin_dainslef03",
@@ -4029,14 +4135,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/60321_skin_dainslef03_spine/60321_skin_dainslef03.atlas",
         "",
         "60321_skin_dainslef03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "00a2ddc6945292696b0416b9cb79ad8e09e6ad39bb434d12e3c371c749c7a1f6",
       "preview": "./assets/animation-previews/daibloscore-dbcore-60321_skin_dainslef03_spine-60321_skin_dainslef03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1ed32b0f497bac6ad7581ebd1c34dfa318827e2443e1c14ae47846baf82c0627"
     },
     {
       "id": "dbcore-60350_skin_ijen03_spine-60350_skin_ijen03",
@@ -4072,14 +4179,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/60350_skin_ijen03_spine/60350_skin_Ijen03.atlas",
         "",
         "60350_skin_Ijen03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "0abad3d7ca22977219dba2e7d06462223099812f404cfdc86169e6f88a00d486",
       "preview": "./assets/animation-previews/daibloscore-dbcore-60350_skin_ijen03_spine-60350_skin_ijen03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "213dfdb32c560fce680cc94c64abed6f1627f4d186b76b1d30099c93619058e3"
     },
     {
       "id": "dbcore-60350_skin_ijen03a_spine-60350_skin_ijen03a",
@@ -4115,14 +4223,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/60350_skin_ijen03a_spine/60350_skin_Ijen03a.atlas",
         "",
         "60350_skin_Ijen03a",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "48ca5b143705c0e1363519616dec05abb9bab0cff6c34f3f0be9dcd0e8cab448",
       "preview": "./assets/animation-previews/daibloscore-dbcore-60350_skin_ijen03a_spine-60350_skin_ijen03a.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f84ef4511926b695f1207e3f86b8336252d3ec673a0de26b710838c6b9bc7a97"
     },
     {
       "id": "dbcore-60350_skin_ijen03b_spine-60350_skin_ijen03b",
@@ -4158,14 +4267,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/60350_skin_ijen03b_spine/60350_skin_Ijen03b.atlas",
         "",
         "60350_skin_Ijen03b",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "a682fed197579ea318ae2a2561fbbe25d69b8fae3b8f9b5e83679e50d43dffcf",
       "preview": "./assets/animation-previews/daibloscore-dbcore-60350_skin_ijen03b_spine-60350_skin_ijen03b.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "081c8d42eaf3b2c10f3087c86e80477d2b4a64dca08f74aed36587b504285b9c"
     },
     {
       "id": "dbcore-70010_skin_zeus03_spine-70010_skin_zeus03",
@@ -4201,14 +4311,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70010_skin_zeus03_spine/70010_skin_Zeus03.atlas",
         "",
         "70010_skin_Zeus03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "a9bd70d7930a79f94568ae4190e724050422df36ba14ecd16dbc22ac7565493b",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70010_skin_zeus03_spine-70010_skin_zeus03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b8c4954f6c34f094937083137e2c1edcfe4fdcbd64ab24f58d4513e41b7ee20d"
     },
     {
       "id": "dbcore-70030_skin_poseidon03_spine-70030_skin_poseidon03",
@@ -4244,14 +4355,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70030_skin_poseidon03_spine/70030_skin_Poseidon03.atlas",
         "",
         "70030_skin_Poseidon03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "d97162c82d1c410508d6bd4b85bad3840bf6aa4ae7c928e8acdf80e26b53194f",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70030_skin_poseidon03_spine-70030_skin_poseidon03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f54452f40f47ec9bff470354f0fa6aeddd8abd99b2429f2e89dd95763cc68f3c"
     },
     {
       "id": "dbcore-70030_skin_poseidon04_spine-70030_skin_poseidon04",
@@ -4287,14 +4399,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70030_skin_poseidon04_spine/70030_skin_poseidon04.atlas",
         "",
         "70030_skin_poseidon04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "1edb938001a8c5cb8f5348cec05365f20be916a414a44137d26cbc98af7ab5d8",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70030_skin_poseidon04_spine-70030_skin_poseidon04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1437f7be18aa20dc4c8a1c734dd4e94ef2192e69b4799aff176acb1e231703c8"
     },
     {
       "id": "dbcore-70050_skin_hades03_spine-70050_skin_hades03",
@@ -4321,10 +4434,24 @@
       "characterCode": "70050",
       "costumeName": "皮肤 03",
       "assetType": "character-spine",
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "visualIntegrityPolicy": "coherent-character"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-spine-animation-frame",
+      "visualIntegrityPolicy": "coherent-character",
+      "previewSourceIdentity": [
+        "spine",
+        "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70050_skin_hades03_spine/70050_skin_Hades03",
+        "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70050_skin_hades03_spine/70050_skin_Hades03.json",
+        "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70050_skin_hades03_spine/70050_skin_Hades03.atlas",
+        "",
+        "70050_skin_Hades03",
+        "3.8",
+        "atlas-coordinate-space:declared"
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c6409a84d0f2c15687de2837d914745bb9fd646a22c273b74707313418e1f939",
+      "preview": "./assets/animation-previews/daibloscore-dbcore-70050_skin_hades03_spine-70050_skin_hades03.webp"
     },
     {
       "id": "dbcore-70070_skin_athena04_spine-70070_skin_athena04",
@@ -4360,14 +4487,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70070_skin_athena04_spine/70070_skin_Athena04.atlas",
         "",
         "70070_skin_Athena04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "da3aa53e1db34a07f798b164a44818151cb7303040bc51e0347a6ab91fc2cd84",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70070_skin_athena04_spine-70070_skin_athena04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "97f32a35a1f98c9635a9ad0040189d138de9e364a0ae83aa52f41b58a15bc881"
     },
     {
       "id": "dbcore-70090_skin_ares03_spine-70090_skin_ares03",
@@ -4403,14 +4531,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70090_skin_ares03_spine/70090_skin_Ares03.atlas",
         "",
         "70090_skin_Ares03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "7500e0fb6b5e32c5f6f3b15e69e2c3af753f0500cd606cf876b86e43bd5f6f06",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70090_skin_ares03_spine-70090_skin_ares03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5f7fc74d35995a36e6f2c590af0bbafdc5f20dc4c2a74dd673e56c1294e56019"
     },
     {
       "id": "dbcore-70090_skin_ares04_spine-70090_skin_ares04",
@@ -4446,14 +4575,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70090_skin_ares04_spine/70090_skin_Ares04.atlas",
         "",
         "70090_skin_Ares04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "d8d58dc04eaafb103f9fb26dfb75042cc539897d3b2d6493bf7748fd42a6b0ae",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70090_skin_ares04_spine-70090_skin_ares04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f1d91f76c5ab525979aa343d2afd78e1d969089c14362ac20cb4eb05560f0b30"
     },
     {
       "id": "dbcore-70110_skin_hermes03_spine-70110_skin_hermes03",
@@ -4489,14 +4619,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70110_skin_hermes03_spine/70110_skin_Hermes03.atlas",
         "",
         "70110_skin_Hermes03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "d4270ae2ec1e87f49a7ca30fcc3561ca18d7db2b6760661a5ba1be5f55b21bc0",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70110_skin_hermes03_spine-70110_skin_hermes03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "2ef0312cf7c74486d2976e0b6f2068fed9cbcd061b706928f498f02986a08728"
     },
     {
       "id": "dbcore-70130_skin_hera03-70130_skin_hera03",
@@ -4532,14 +4663,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70130_skin_hera03/70130_skin_Hera03.atlas",
         "",
         "70130_skin_Hera03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "5581c08e2d3b5191ac0e9a159f51d0d11e3b6c08d941ebe73e3a490d5d243281",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70130_skin_hera03-70130_skin_hera03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bb667022b0cdd68e06087a80e44842ff8e796b81730d49cc0e85198e00b79ef4"
     },
     {
       "id": "dbcore-70130_skin_hera04_spine-70130_skin_hera04",
@@ -4575,14 +4707,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70130_skin_hera04_spine/70130_skin_Hera04.atlas",
         "",
         "70130_skin_Hera04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "8be07c6e78157adf6e2661a99a2ff1d622b9d97c285d30046b77e677b161ffbe",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70130_skin_hera04_spine-70130_skin_hera04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "dd001a347abe30538884e841d13dcad31b8a36651239d1e973968f5a166d283e"
     },
     {
       "id": "dbcore-70220_skin_loki03_spine-70220_skin_loki03",
@@ -4618,14 +4751,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70220_skin_loki03_spine/70220_skin_Loki03.atlas",
         "",
         "70220_skin_Loki03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "adaf6014c5abd55944397c9ab834352f1ed670cb593383109fcd52c8d8e3f68a",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70220_skin_loki03_spine-70220_skin_loki03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c0246e5c7c710bf725348744907ae7d659efb56939ea0f110cc1b743b7b000b8"
     },
     {
       "id": "dbcore-70240_skin_skadi03-70240_skin_skadi03",
@@ -4661,14 +4795,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70240_skin_skadi03/70240_skin_Skadi03.atlas",
         "",
         "70240_skin_Skadi03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "6fa33f5ee20bfdde31427ff666692723bd4b638299d18e29f6a82c7c3f1f29e6",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70240_skin_skadi03-70240_skin_skadi03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "53223d44faf575d516c82a2b1f0d2cd863cd1da8435db777d9e93d775a7db3f9"
     },
     {
       "id": "dbcore-70260_skin_thor03-70260_skin_thor03",
@@ -4704,14 +4839,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70260_skin_thor03/70260_skin_Thor03.atlas",
         "",
         "70260_skin_Thor03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "ef27660050c18ce3132b959e375ceb5dbd456de8ae18d6a2f42cbdbd2c7b8fdf",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70260_skin_thor03-70260_skin_thor03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9cc343a63e5a70046f76c79be780c9dd7cc2ed35915a8c5f5c230d1c52e06511"
     },
     {
       "id": "dbcore-70260_skin_thor04_spine-70260_skin_thor04",
@@ -4747,14 +4883,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70260_skin_thor04_spine/70260_skin_Thor04.atlas",
         "",
         "70260_skin_Thor04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "e834ad348bb5398a861dfe192c1c2d7f18cfb604703a83f765c38f33382e4d2a",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70260_skin_thor04_spine-70260_skin_thor04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a4b5fa4e40ebd134dda18a8d9fe2c200857af18035a8c7752093f8399ff45324"
     },
     {
       "id": "dbcore-70280_skin_gondul03_spine-70280_skin_gondul03",
@@ -4790,14 +4927,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70280_skin_gondul03_spine/70280_skin_Gondul03.atlas",
         "",
         "70280_skin_Gondul03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "28388c701a2b25565db548643e265ca83f53fd9ea33c8ab65d83a20d91e80bd6",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70280_skin_gondul03_spine-70280_skin_gondul03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "2cb41cd3652493252410ac798dfbb3985d9a92e32606fbf26ad86ef7a29bb3c2"
     },
     {
       "id": "dbcore-70290_skin_brynhild03_spine-70290_skin_brynhild03",
@@ -4833,14 +4971,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70290_skin_brynhild03_spine/70290_skin_Brynhild03.atlas",
         "",
         "70290_skin_Brynhild03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "7627430ccbf839176ebbcc9156da542fe99b3bf5d0b7bae5a9847aec864e1cac",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70290_skin_brynhild03_spine-70290_skin_brynhild03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c3c54fbd8630cd4de6913e868b791e86f2598c1a603a45c33a1d757a8a484930"
     },
     {
       "id": "dbcore-70290_skin_brynhild04_spine-70290_skin_brynhild04",
@@ -4876,14 +5015,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70290_skin_brynhild04_spine/70290_skin_Brynhild04.atlas",
         "",
         "70290_skin_Brynhild04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "e8c1855033af6e7beabcbd708f12840c9309a755a781cf513f7ea8cd230d8332",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70290_skin_brynhild04_spine-70290_skin_brynhild04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8c4cc7d564ea7fdece2aa955df0870307eb9963e6488ac9f81667147367f0d36"
     },
     {
       "id": "dbcore-70310_skin_atum03a_spine-70310_skin_atum03b",
@@ -4919,14 +5059,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70310_skin_atum03a_spine/70310_skin_Atum03b.atlas",
         "",
         "70310_skin_Atum03b",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "ba5d33516f35ea984ac8e9863739e6ddb49830a2d54a4c22b18b384b6f91ecf4",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70310_skin_atum03a_spine-70310_skin_atum03b.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "37f4da524bbede572246dc5f4de9555c301df3392a921e65ab38c4692bbac37d"
     },
     {
       "id": "dbcore-70310_skin_atum03b_spine-70310_skin_atum03b",
@@ -4962,14 +5103,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70310_skin_atum03b_spine/70310_skin_Atum03b.atlas",
         "",
         "70310_skin_Atum03b",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "f94bfbfa0fef4bd7c58b668e9d98cd7f2fda50cb5929d589bbf343f4d4375810",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70310_skin_atum03b_spine-70310_skin_atum03b.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4ac72f51cb94a1ed85f1856cb84bf772ed969354ffd3f05b46e6e98880d2945c"
     },
     {
       "id": "dbcore-70310_skin_atum04_spine-70310_skin_atum04",
@@ -5005,14 +5147,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70310_skin_atum04_spine/70310_skin_Atum04.atlas",
         "",
         "70310_skin_Atum04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "349d84d596e8b2e3bb70dcd6c5decc72e6c8cf9c4da8eb4c1c9a31870e3005e0",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70310_skin_atum04_spine-70310_skin_atum04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "087391a83ac694f3f73b7df99d25b65af67504323d4ba01ac8a88d6d315ac473"
     },
     {
       "id": "dbcore-70330_skin_anubis03_spine-70330_skin_anubis03",
@@ -5048,14 +5191,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70330_skin_anubis03_spine/70330_skin_Anubis03.atlas",
         "",
         "70330_skin_Anubis03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "3e559c755ff61a7f317cc3cdaa5476c0059861575be14b9be13001cb747eb5a2",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70330_skin_anubis03_spine-70330_skin_anubis03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "236a63431a548c92713eecb8fd0e5efeae0f3c477499f49946aa35da6fd20957"
     },
     {
       "id": "dbcore-70330_skin_anubis04_spine-70330_skin_anubis04",
@@ -5091,14 +5235,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70330_skin_anubis04_spine/70330_skin_Anubis04.atlas",
         "",
         "70330_skin_Anubis04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "7b45e38badd1adf7a8bfc3ec171ac3d507f658e8024f3a68f80fc0802a3e5ea5",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70330_skin_anubis04_spine-70330_skin_anubis04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bd6334fca3d76aaee9d3706e70a4485a0ef802ec3d89a1773d1d8a2ebf8bb042"
     },
     {
       "id": "dbcore-70330_skin_anubis05_spine-70330_skin_anubis05",
@@ -5134,14 +5279,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70330_skin_anubis05_spine/70330_skin_Anubis05.atlas",
         "",
         "70330_skin_Anubis05",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "8ef94d2397337a95891945648fb471ec06184780eaae95cf0719d0cbc0498d54",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70330_skin_anubis05_spine-70330_skin_anubis05.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "54a2fd2630a86db178afc1d665e8cebeacd8357c77c957ec00bd432f5cb00738"
     },
     {
       "id": "dbcore-70350_skin_nut03_spine-70350_skin_nut03",
@@ -5177,14 +5323,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70350_skin_nut03_spine/70350_skin_Nut03.atlas",
         "",
         "70350_skin_Nut03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "f350168d706d8830c2aea2a5cc5f8a72f3f71325b707f4652f30045fbabffeec",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70350_skin_nut03_spine-70350_skin_nut03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9a3ba631a4540b15feb9b5e285f3d54537deb375fae5ee00160411a8fc0c82cd"
     },
     {
       "id": "dbcore-70360_skin_ra04_spine-70360_skin_ra04",
@@ -5220,14 +5367,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70360_skin_ra04_spine/70360_skin_RA04.atlas",
         "",
         "70360_skin_RA04",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "6bbc49ac1fe081190ede30546db84edcfa48d4b9a74daa99df425bcdf05f8f0f",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70360_skin_ra04_spine-70360_skin_ra04.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "42b5c1667b8d46f0500fde09d41411fc2eeb195e1707abd55ca1c6b974a1508c"
     },
     {
       "id": "dbcore-70400_skin_lycorisradiata03b_spine-70400_skin_lycorisradiata03b",
@@ -5263,14 +5411,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70400_skin_lycorisradiata03b_spine/70400_skin_LycorisRadiata03b.atlas",
         "",
         "70400_skin_LycorisRadiata03b",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "3e0e15195ab4233b5afeca13334d302fc1f0e3699a57bb009fa6a485f360d79d",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70400_skin_lycorisradiata03b_spine-70400_skin_lycorisradiata03b.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c2790d0ff3040142b47d92a9b94d21c2dac091e2d70de37f3b6fa441a7e3c7de"
     },
     {
       "id": "dbcore-70420_skin_smelt03_spine-70420_skin_smelt03",
@@ -5306,14 +5455,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70420_skin_smelt03_spine/70420_skin_Smelt03.atlas",
         "",
         "70420_skin_Smelt03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "3e7091ba0aac1c9ae71f88b065a420a10add82906e976f384d3438d3f9bce941",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70420_skin_smelt03_spine-70420_skin_smelt03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1d9b4a30d31ff700821d11369b70ddd7f4c0f716aac94635820a76fbd5e983f5"
     },
     {
       "id": "dbcore-70440_skin_sunrise03_spine-70440_skin_sunrise03",
@@ -5349,14 +5499,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70440_skin_sunrise03_spine/70440_skin_Sunrise03.atlas",
         "",
         "70440_skin_Sunrise03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "0d4d8c768a45bc65d7a99f6ddef70a2f9f5ff3f6dcf678dc3aa05312c8604688",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70440_skin_sunrise03_spine-70440_skin_sunrise03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c147919b68067ba622731d2e31ef5b71b3d2ed4c4ec18f707fa0ebc1d536bf24"
     },
     {
       "id": "dbcore-70450_skin_midnight03_spine-70450_skin_midnight03",
@@ -5392,14 +5543,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/70450_skin_midnight03_spine/70450_skin_Midnight03.atlas",
         "",
         "70450_skin_Midnight03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "469185d222af1c13590a93fb5d239e132fe02614061cbed33f984e610775ad43",
       "preview": "./assets/animation-previews/daibloscore-dbcore-70450_skin_midnight03_spine-70450_skin_midnight03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "81bc318c718fecc03285673ac7eb9a80cf6b13a6653a1b919cc78d64c8310321"
     },
     {
       "id": "dbcore-75020_skin_barberared03_spine-75020_skin_barberared03",
@@ -5435,14 +5587,15 @@
         "https://raw.githubusercontent.com/bungaku-moe/DaiblosCoreAssets/3c672a0f11cc70fee35432b1a28522d7d74068c2/spine/75020_skin_barberared03_spine/75020_skin_BarberaRed03.atlas",
         "",
         "75020_skin_BarberaRed03",
-        "3.8"
+        "3.8",
+        "atlas-coordinate-space:declared"
       ],
-      "previewWidth": 360,
-      "previewHeight": 420,
-      "previewSha256": "eca9817f780b2ccce03f74cdad390958031f1a18bcbf303b8fe47cc493ff50c5",
       "preview": "./assets/animation-previews/daibloscore-dbcore-75020_skin_barberared03_spine-75020_skin_barberared03.webp",
       "visualIntegrityPolicy": "coherent-character",
-      "atlasCoordinateSpace": "declared"
+      "atlasCoordinateSpace": "declared",
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "92aa230a1a060d99ac6643ab502e005545818d321bfa0723ca8ef8110450586a"
     }
   ],
   "quarantinedModels": [],

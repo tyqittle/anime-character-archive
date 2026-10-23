@@ -5140,7 +5140,7 @@
       "modelFormat": "Cubism moc3",
       "playbackStatus": "pending-browser-verification",
       "previewFailureType": "render-error",
-      "previewFailureReason": "blank-frame: no rendered character",
+      "previewFailureReason": "blank-frame: near blank screenshot",
       "status": "unverified-playback"
     },
     {
@@ -5918,10 +5918,22 @@
       "sourceCommit": "1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "blank-frame: no rendered character",
-      "status": "unverified-playback"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/MilkyLan/AzurLane-Live2d@1befbb04aba3ca8a7dd9e6c8907e71d09025f2c3/live2d/wuqi_3/wuqi_3.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c3a11e60cafe6d3257d748867fdf9cfaa2b236363a7a0670527263664d2c369c",
+      "preview": "./assets/animation-previews/azurlane-al-wuqi_3.webp",
+      "previewSource": "matching-live2d-animation-frame"
     },
     {
       "id": "al-wuzang_3",

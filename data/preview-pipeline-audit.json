@@ -53,38 +53,28 @@
     "counts": {
       "azurlane": {
         "indexed": 242,
-        "verifiedPreview": 240,
-        "missingPreview": 2
+        "verifiedPreview": 241,
+        "missingPreview": 1
       }
     },
     "missing": [
       {
         "gameId": "azurlane",
         "id": "al-shengluyisi_3"
-      },
-      {
-        "gameId": "azurlane",
-        "id": "al-wuqi_3"
       }
     ],
-    "newCapturesInThisRun": 0,
+    "newCapturesInThisRun": 1,
     "rejectedCaptures": [],
     "failedCaptures": [
       {
         "id": "al-shengluyisi_3",
         "gameId": "azurlane",
         "category": "render-error",
-        "message": "blank-frame: no rendered character"
-      },
-      {
-        "id": "al-wuqi_3",
-        "gameId": "azurlane",
-        "category": "render-error",
-        "message": "blank-frame: no rendered character"
+        "message": "blank-frame: near blank screenshot"
       }
     ],
     "failureSummary": {
-      "render-error": 2
+      "render-error": 1
     }
   },
   "bd2": {
@@ -107,8 +97,8 @@
     "counts": {
       "arknights": {
         "indexed": 359,
-        "verifiedPreview": 338,
-        "missingPreview": 21
+        "verifiedPreview": 339,
+        "missingPreview": 20
       },
       "girlsfrontline": {
         "indexed": 297,
@@ -137,10 +127,6 @@
       {
         "gameId": "arknights",
         "id": "ak-char_1027_greyy2_snow_5_0-65ebbcc"
-      },
-      {
-        "gameId": "arknights",
-        "id": "ak-char_130_doberm_epoque_7-ceed0c3"
       },
       {
         "gameId": "arknights",
@@ -215,7 +201,7 @@
         "id": "ks-1349100_1349100-20ffd44"
       }
     ],
-    "newCapturesInThisRun": 0,
+    "newCapturesInThisRun": 1,
     "rejectedCaptures": [],
     "failedCaptures": [
       {
@@ -241,12 +227,6 @@
         "gameId": "arknights",
         "category": "atlas-mismatch",
         "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: C_E_Finger_01 (region attachment: C_E_Finger_01)；可点击“重试”或选择本地导入已获得的动画文件。"
-      },
-      {
-        "id": "ak-char_130_doberm_epoque_7-ceed0c3",
-        "gameId": "arknights",
-        "category": "render-error",
-        "message": "blank-frame: near blank screenshot"
       },
       {
         "id": "ak-char_209_ardign_snow_1-14a2c0b",
@@ -348,7 +328,7 @@
         "id": "gf-live2dnew_sr3mp_4101_normal_normal-3197af7",
         "gameId": "girlsfrontline",
         "category": "render-error",
-        "message": "blank-frame: no rendered character"
+        "message": "blank-frame: near blank screenshot"
       },
       {
         "id": "ks-1349100_1349100-20ffd44",
@@ -359,7 +339,7 @@
     ],
     "failureSummary": {
       "atlas-mismatch": 19,
-      "render-error": 4
+      "render-error": 3
     }
   },
   "arknights-illust": {
@@ -451,13 +431,13 @@
     "scope": "shared preview pipeline",
     "counts": {
       "daibloscore": {
-        "indexed": 125,
-        "verifiedPreview": 125,
+        "indexed": 127,
+        "verifiedPreview": 127,
         "missingPreview": 0
       }
     },
     "missing": [],
-    "newCapturesInThisRun": 0,
+    "newCapturesInThisRun": 127,
     "rejectedCaptures": [],
     "failedCaptures": [],
     "failureSummary": {}

@@ -2,13 +2,13 @@
   "scope": "shared preview pipeline",
   "counts": {
     "daibloscore": {
-      "indexed": 125,
-      "verifiedPreview": 125,
+      "indexed": 127,
+      "verifiedPreview": 127,
       "missingPreview": 0
     }
   },
   "missing": [],
-  "newCapturesInThisRun": 0,
+  "newCapturesInThisRun": 127,
   "rejectedCaptures": [],
   "failedCaptures": [],
   "failureSummary": {}
