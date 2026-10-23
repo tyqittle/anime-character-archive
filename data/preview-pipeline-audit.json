@@ -456,5 +456,25 @@
     "rejectedCaptures": [],
     "failedCaptures": [],
     "failureSummary": {}
+  },
+  "games-wave2": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "momoiro": {
+        "indexed": 17,
+        "verifiedPreview": 17,
+        "missingPreview": 0
+      },
+      "sexysins": {
+        "indexed": 6,
+        "verifiedPreview": 6,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
   }
 }
