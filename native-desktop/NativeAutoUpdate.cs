@@ -38,7 +38,9 @@ public sealed partial class App
             if (_archiveUpdateButton != null)
             {
                 _archiveUpdateButton.ToolTip =
-                    "立即检查 GitHub Releases。无需重新下载安装包。";
+                    "当前程序版本：" +
+                    (typeof(App).Assembly.GetName().Version?.ToString() ?? "未知") +
+                    "；从 GitHub Releases 在线检查更新，无需重新下载安装包。";
                 _archiveUpdateButton.Click += (_, _) =>
                     _ = CheckArchiveUpdatesAsync(manual: true);
             }
@@ -59,10 +61,11 @@ public sealed partial class App
             _ = CheckArchiveUpdatesAsync(manual: false);
         };
         _archiveUpdateTimer.Start();
-        _ = CheckArchiveUpdatesAsync(manual: false);
+        _ = CheckArchiveUpdatesAsync(manual: false, onStartup: true);
     }
 
-    private async Task CheckArchiveUpdatesAsync(bool manual = false)
+    private async Task CheckArchiveUpdatesAsync(
+        bool manual = false, bool onStartup = false)
     {
         if (Interlocked.Exchange(ref _archiveUpdateStarted, 1) != 0)
         {
@@ -84,7 +87,7 @@ public sealed partial class App
 
             string marker = Path.Combine(AppPaths.LocalDataDirectory,
                 "native-archive-update-check.txt");
-            if (!manual && File.Exists(marker) &&
+            if (!manual && !onStartup && File.Exists(marker) &&
                 DateTimeOffset.TryParse(await File.ReadAllTextAsync(marker),
                     out DateTimeOffset lastCheck) &&
                 DateTimeOffset.UtcNow - lastCheck < TimeSpan.FromHours(8))
@@ -110,7 +113,12 @@ public sealed partial class App
             if (IsShutdownRequested) return;
 
             SetArchiveUpdateButton("下载更新…", false);
-            await manager.DownloadUpdatesAsync(newer);
+            await manager.DownloadUpdatesAsync(newer, percent =>
+            {
+                if (Dispatcher.HasShutdownStarted) return;
+                _ = Dispatcher.BeginInvoke(new Action(() =>
+                    SetArchiveUpdateButton($"下载 {percent}%", false)));
+            });
             if (IsShutdownRequested) return;
 
             // Keep the user's chosen app and asset paths: Velopack installs
