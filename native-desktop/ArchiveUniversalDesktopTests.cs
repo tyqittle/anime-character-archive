@@ -13,18 +13,20 @@ namespace SpinePet.Tests;
 // Profiles and public-only virtual host roots are unique to this test run.
 public sealed class ArchiveUniversalDesktopTests
 {
+    private static readonly Lazy<bool> LayoutResources=new(()=>{
+        System.Windows.Application.ResourceAssembly=typeof(SpinePet.App).Assembly;
+        return true;
+    });
     [Theory]
     [InlineData(640,560,1)]
     [InlineData(640,560,1.25)]
     [InlineData(800,640,1.5)]
     [InlineData(1020,720,2)]
     public Task GlobalCommandsRemainVisibleAndClickableInBothLibraryTabs(double width,double height,double textScale)=>Sta(async()=>{
-        var document=System.Xml.Linq.XDocument.Load(Path.Combine(TestRoot,"MainWindow.xaml"));
-        var root=document.Root!;
-        root.SetAttributeValue("Icon",null); // The test host has no application icon resource.
-        root.SetAttributeValue(System.Xml.Linq.XNamespace.Xmlns+"views",
-            "clr-namespace:SpinePet.Views;assembly=SpinePet");
-        var window=(System.Windows.Window)System.Windows.Markup.XamlReader.Parse(document.ToString());
+        _=LayoutResources.Value;
+        var window=new System.Windows.Window();
+        System.Windows.Application.LoadComponent(window,
+            new Uri("/SpinePet;component/Views/MainWindow.xaml",UriKind.Relative));
         window.Width=width;window.Height=height;window.Topmost=false;window.ShowInTaskbar=false;
         string folder=Path.Combine(TestRoot,"layout-"+Guid.NewGuid().ToString("N"));
         Directory.CreateDirectory(folder);
