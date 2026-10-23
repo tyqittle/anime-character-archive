@@ -3,27 +3,13 @@
   "counts": {
     "azurlane": {
       "indexed": 242,
-      "verifiedPreview": 241,
-      "missingPreview": 1
+      "verifiedPreview": 242,
+      "missingPreview": 0
     }
   },
-  "missing": [
-    {
-      "gameId": "azurlane",
-      "id": "al-shengluyisi_3"
-    }
-  ],
-  "newCapturesInThisRun": 0,
+  "missing": [],
+  "newCapturesInThisRun": 1,
   "rejectedCaptures": [],
-  "failedCaptures": [
-    {
-      "id": "al-shengluyisi_3",
-      "gameId": "azurlane",
-      "category": "render-error",
-      "message": "blank-frame: near blank screenshot"
-    }
-  ],
-  "failureSummary": {
-    "render-error": 1
-  }
+  "failedCaptures": [],
+  "failureSummary": {}
 }

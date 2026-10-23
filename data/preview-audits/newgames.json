@@ -8,8 +8,8 @@
     },
     "girlsfrontline": {
       "indexed": 297,
-      "verifiedPreview": 296,
-      "missingPreview": 1
+      "verifiedPreview": 297,
+      "missingPreview": 0
     },
     "konosuba": {
       "indexed": 61,
@@ -93,10 +93,6 @@
     {
       "gameId": "arknights",
       "id": "ak-token_10027_ironmn_pile3_summer_11_1-985bf58"
-    },
-    {
-      "gameId": "girlsfrontline",
-      "id": "gf-live2dnew_sr3mp_4101_normal_normal-3197af7"
     }
   ],
   "newCapturesInThisRun": 1,
@@ -215,16 +211,9 @@
       "gameId": "arknights",
       "category": "atlas-mismatch",
       "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: C_R_Body_01 (mesh attachment: C_R_Body_01)；可点击“重试”或选择本地导入已获得的动画文件。"
-    },
-    {
-      "id": "gf-live2dnew_sr3mp_4101_normal_normal-3197af7",
-      "gameId": "girlsfrontline",
-      "category": "render-error",
-      "message": "blank-frame: near blank screenshot"
     }
   ],
   "failureSummary": {
-    "atlas-mismatch": 19,
-    "render-error": 1
+    "atlas-mismatch": 19
   }
 }

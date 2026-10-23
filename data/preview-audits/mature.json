@@ -17,13 +17,13 @@
       "missingPreview": 0
     },
     "foxhimezero": {
-      "indexed": 1,
-      "verifiedPreview": 1,
+      "indexed": 5,
+      "verifiedPreview": 5,
       "missingPreview": 0
     }
   },
   "missing": [],
-  "newCapturesInThisRun": 0,
+  "newCapturesInThisRun": 4,
   "rejectedCaptures": [],
   "failedCaptures": [],
   "failureSummary": {}

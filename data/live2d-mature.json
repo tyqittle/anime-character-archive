@@ -2679,9 +2679,22 @@
       "textureBytes": 5939176,
       "motionCount": 85,
       "contentStyle": "mature-anime",
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/Fox%20Hime%20Zero/mori_miko/mori_miko.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a15a1fb12d58f138b677af9110f3f4288a32438efda9b4def6e4f65c807747df",
+      "preview": "./assets/animation-previews/foxhimezero-fh-mori_miko.webp"
     },
     {
       "id": "fh-mori_mikoc",
@@ -2701,9 +2714,22 @@
       "textureBytes": 5073184,
       "motionCount": 85,
       "contentStyle": "mature-anime",
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/Fox%20Hime%20Zero/mori_mikoc/mori_mikoc.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "48aa8584471a7e02e8707adf31ba379a7243da54b9194bb51f399c2d41059a19",
+      "preview": "./assets/animation-previews/foxhimezero-fh-mori_mikoc.webp"
     },
     {
       "id": "fh-mori_mikocfs",
@@ -2723,9 +2749,22 @@
       "textureBytes": 5073184,
       "motionCount": 85,
       "contentStyle": "mature-anime",
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/Fox%20Hime%20Zero/mori_mikocfs/mori_mikocfs.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "450bbb5dd72dd0f6879e013a53e0f49323bb56c7e5d7771013c629aba20b5222",
+      "preview": "./assets/animation-previews/foxhimezero-fh-mori_mikocfs.webp"
     },
     {
       "id": "fh-mori_suit",
@@ -2745,9 +2784,22 @@
       "textureBytes": 5126629,
       "motionCount": 85,
       "contentStyle": "mature-anime",
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/Fox%20Hime%20Zero/mori_suit/mori_suit.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "eb195476e96edfcdd917b71446deec71a7242eccb8a077fec9ef174a5e8c1eb2",
+      "preview": "./assets/animation-previews/foxhimezero-fh-mori_suit.webp"
     }
   ]
 }

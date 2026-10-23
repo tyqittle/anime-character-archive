@@ -5132,16 +5132,26 @@
       "characterName": "shengluyisi",
       "skinCode": "shengluyisi_3",
       "modelUrl": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/shengluyisi_3/shengluyisi_3.model3.json",
-      "preview": "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/shipmodels/shengluyisi_3.png",
-      "previewSource": "upstream-ship-thumbnail",
+      "preview": "./assets/animation-previews/azurlane-al-shengluyisi_3.webp",
+      "previewSource": "matching-live2d-animation-frame",
       "source": "https://github.com/Chaoray/AzurLane-Live2D-Viewer/tree/88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/shengluyisi_3",
       "sourceCommit": "88cb6e56a0ad472fe7e546509f096545d2bbc5b9",
       "assetType": "live2d-skin",
       "modelFormat": "Cubism moc3",
-      "playbackStatus": "pending-browser-verification",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "blank-frame: near blank screenshot",
-      "status": "unverified-playback"
+      "playbackStatus": "browser-preview-captured",
+      "status": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Chaoray/AzurLane-Live2D-Viewer@88cb6e56a0ad472fe7e546509f096545d2bbc5b9/live2d/shengluyisi_3/shengluyisi_3.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a3319cb25075fd8c7fd4fd8ba9916a6ba6116cc9c29f241e7d0117e6156e0d10"
     },
     {
       "id": "al-shengluyisi_4",

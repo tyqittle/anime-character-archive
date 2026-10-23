@@ -18516,10 +18516,22 @@
       "sourceRepo": "Eikanya/Live2d-model",
       "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
       "sourcePath": "少女前线 girls Frontline/live2dnew/sr3mp_4101/normal/normal.model3.json",
-      "previewSource": "not-rendered",
-      "status": "unverified-playback",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "blank-frame: near blank screenshot"
+      "previewSource": "matching-live2d-animation-frame",
+      "status": "browser-preview-captured",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B0%91%E5%A5%B3%E5%89%8D%E7%BA%BF%20girls%20Frontline/live2dnew/sr3mp_4101/normal/normal.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9bc3695b3a81ca3f19aeaa42d93b49b9d95a342b8c8d11ae8c9edff109123b12",
+      "preview": "./assets/animation-previews/girlsfrontline-gf-live2dnew_sr3mp_4101_normal_normal-3197af7.webp",
+      "playbackStatus": "browser-preview-captured"
     },
     {
       "id": "gf-live2dnew_tabuk_4906_destroy_destroy-d41eb2b",
