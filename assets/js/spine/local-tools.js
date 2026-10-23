@@ -106,7 +106,7 @@ function playPack(pack){
  // white seams at the hands, face and skin. Keep other sources unchanged.
  const brownDust2=String(pack.id||'').startsWith('browndust2-');
  const premultipliedAlpha=brownDust2?false:!String(pack.id||'').startsWith('bluearchive-');
- return show({skeleton:pack.skeleton,atlas:pack.atlas,rawDataURIs:pack.rawDataURIs,premultipliedAlpha},title)
+ return show({skeleton:pack.skeleton,atlas:pack.atlas,rawDataURIs:pack.rawDataURIs,premultipliedAlpha,archiveEntry:matching||null},title)
 }
 $('saveLocal').onclick=async()=>{try{status('正在保存到浏览器本地缓存…');const pack=await preparePack(chosenFileList);await dbAction('readwrite',s=>s.put(pack));await refreshSaved();status('已保存 '+pack.id+'。以后可直接从“已保存的本地动画包”加载，无须重新选择素材文件。')}catch(e){status('保存失败：'+e.message,true)}};
 $('savedPacks').onchange=async()=>{
