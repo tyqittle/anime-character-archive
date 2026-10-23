@@ -12,7 +12,7 @@ const high=JSON.parse(fs.readFileSync('data/live2d-highquality.json','utf8'));
 const mature=JSON.parse(fs.readFileSync('data/live2d-mature.json','utf8'));
 const daiblos=JSON.parse(fs.readFileSync('data/spine-daiblos-core.json','utf8'));
 const cases=[
- {type:'spine',game:'daibloscore',character:daiblos.characters.find(c=>c.resourceStem==='10010_skin_Alps04')},
+ {type:'spine',game:'daibloscore',character:daiblos.characters.find(c=>c.resourceStem==='10010_skin_Alps03')},
  {type:'cubism',game:'tokyonecro',character:mature.characters.find(c=>c.id==='tn-l2d00055')},
  {type:'cubism',game:'maidslife',character:mature.characters.find(c=>c.id==='ml-ele_a0')},
  {type:'cubism',game:'lovecube',character:mature.characters.find(c=>c.id==='lc-akira_st01_w'),allowNoMotions:true},

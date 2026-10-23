@@ -42,7 +42,7 @@ def frame_to_preview(frame):
     result.alpha_composite(crop, ((OUTPUT_SIZE[0]-crop.width)//2,(OUTPUT_SIZE[1]-crop.height)//2))
     return result.convert('RGB')
 
-def convert_frames(source, destination, filename):
+def convert_frames(source, destination, filename, validate=None):
     source, destination = Path(source), Path(destination)
     destination.mkdir(parents=True, exist_ok=True)
     done, failed = 0, []
@@ -50,6 +50,8 @@ def convert_frames(source, destination, filename):
         try:
             with Image.open(path) as original:
                 result = frame_to_preview(original)
+            if validate is not None:
+                validate(path, result)
             result.save(destination / filename(path), 'WEBP', quality=84, method=5)
             done += 1
         except (OSError, ValueError) as error:

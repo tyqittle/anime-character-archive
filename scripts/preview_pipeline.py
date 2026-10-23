@@ -12,11 +12,18 @@ from preview_frame_pipeline import convert_frames
 def convert_batch(root,shard):
     root=Path(root)
     if shard<0:raise ValueError('Invalid shard')
-    done,failed=convert_frames(root/'frames',root/'webps',lambda path:path.stem+'.webp')
     by_frame={}
     for entry in load_registry():
         for character in json.loads(Path(entry['path']).read_text('utf-8'))['characters']:
             by_frame[filename(character).replace('.webp','.png')]=character
+    from audit_animation_visual_integrity import is_fragmented_character
+    def validate_character_frame(frame_path, preview):
+        c=by_frame.get(frame_path.name)
+        if c and c.get('visualIntegrityPolicy')=='coherent-character':
+            if is_fragmented_character(preview):
+                raise ValueError('fragmented-character-frame: disconnected body components')
+    done,failed=convert_frames(root/'frames',root/'webps',lambda path:path.stem+'.webp',
+                               validate=validate_character_frame)
     failures=[]
     for failure in failed:
         character=by_frame.get(failure['file'])

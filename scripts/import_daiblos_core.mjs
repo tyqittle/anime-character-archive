@@ -34,7 +34,9 @@ for(const [folder,files] of byFolder){
 // Keep exclusions model-specific, with evidence in data/preview-audits/daibloscore.json.
 const excludedModelIds=new Set([
  'dbcore-40350_skin_meteor05_spine-40350_skin_meteor05', // missing attachment in atlas
- 'dbcore-70310_skin_atum03a_spine-70310_skin_atum03a' // blank rendered frame
+ 'dbcore-70310_skin_atum03a_spine-70310_skin_atum03a' // blank rendered frame,
+ 'dbcore-10010_skin_alps04_spine-10010_skin_alps04', // fragmented with native and patched atlas UV handling
+ 'dbcore-70050_skin_hades03_spine-70050_skin_hades03' // separated character regions
 ]);
 models.sort((a,b)=>a.folder.localeCompare(b.folder,'en')||a.stem.localeCompare(b.stem,'en'));
 const accepted=models.filter(c=>!excludedModelIds.has('dbcore-'+c.folder.toLowerCase()+'-'+c.stem.toLowerCase()));
@@ -50,7 +52,7 @@ const characters=accepted.map(c=>{
   spineVersion:'3.8',skeletonFormat:'json',resourceStem:c.stem,base,skeletonUrl:base+'.json',atlasUrl:base+'.atlas',
   sourceRepo:repo,sourceCommit:pinnedCommit,sourcePath:'spine/'+c.folder+'/'+c.stem+'.json',
   skeletonBytes:c.skeletonBytes,atlasBytes:c.atlasBytes,textureBytes:c.textureBytes,
-  status:'indexed-unverified',playbackStatus:'not-verified',previewSource:'not-rendered'};
+  status:'indexed-unverified',playbackStatus:'not-verified',previewSource:'not-rendered',visualIntegrityPolicy:'coherent-character'};
 });
 if(new Set(characters.map(c=>c.id)).size!==characters.length)throw Error('Duplicate generated IDs');
 const dest='data/spine-daiblos-core.json';

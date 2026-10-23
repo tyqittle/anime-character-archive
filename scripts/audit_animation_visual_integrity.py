@@ -15,9 +15,12 @@ from PIL import Image, ImageFilter
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT = "data/spine-daiblos-core.json"
 
-def connectivity(path: Path) -> dict:
-    with Image.open(path) as image:
-        im = image.convert("RGB")
+def connectivity(image_or_path) -> dict:
+    if isinstance(image_or_path, Image.Image):
+        im = image_or_path.convert('RGB')
+    else:
+        with Image.open(image_or_path) as image:
+            im = image.convert('RGB')
     width, height = im.size
     corners = [im.getpixel((x, y)) for x, y in ((0, 0), (width - 1, 0), (0, height - 1), (width - 1, height - 1))]
     bg = tuple(sorted(c[i] for c in corners)[2] for i in range(3))
@@ -54,6 +57,12 @@ def connectivity(path: Path) -> dict:
         "foregroundFraction": round(total / (width * height), 4),
         "dimensions": [width, height],
     }
+
+def is_fragmented_character(image_or_path):
+    metrics = connectivity(image_or_path)
+    return (metrics["largestShare"] < .55
+            and metrics["majorComponents"] >= 3
+            and metrics["foregroundFraction"] >= .025)
 
 def main():
     parser = argparse.ArgumentParser()
