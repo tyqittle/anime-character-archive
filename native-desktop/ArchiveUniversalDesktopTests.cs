@@ -19,8 +19,7 @@ public sealed class ArchiveUniversalDesktopTests
     [InlineData(800,640,1.5)]
     [InlineData(1020,720,2)]
     public Task GlobalCommandsRemainVisibleAndClickableInBothLibraryTabs(double width,double height,double textScale)=>Sta(async()=>{
-        var window=new System.Windows.Window();
-        System.Windows.Application.LoadComponent(window,
+        var window=(System.Windows.Window)System.Windows.Application.LoadComponent(
             new Uri("/SpinePet;component/Views/MainWindow.xaml",UriKind.Relative));
         window.Width=width;window.Height=height;window.Topmost=false;window.ShowInTaskbar=false;
         string folder=Path.Combine(TestRoot,"layout-"+Guid.NewGuid().ToString("N"));
