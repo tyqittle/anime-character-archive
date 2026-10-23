@@ -44,7 +44,7 @@ public sealed partial class App
         {
             if(cancellation.IsCancellationRequested||IsShutdownRequested)return;
             AppLogger.Write(nameof(App),"universal-open-failed "+error.Message);
-            MessageBox.Show(error.Message+"\n可在网站重新选择角色并重试。","桌面立绘加载失败",
+            System.Windows.MessageBox.Show(error.Message+"\n可在网站重新选择角色并重试。","桌面立绘加载失败",
                 MessageBoxButton.OK,MessageBoxImage.Warning);
         }
         finally
