@@ -37,10 +37,26 @@ public sealed partial class App
                 _mainWindow.FindName("ManualUpdateButton") as Button;
             if (_archiveUpdateButton != null)
             {
+                // AssemblyVersion is NOT the Velopack package version.
+                // Always read sq.version via UpdateManager.CurrentVersion.
+                string installedVersion;
+                try
+                {
+                    var current = new UpdateManager(new GithubSource(
+                        ArchiveUpdateRepository, accessToken: null,
+                        prerelease: false));
+                    installedVersion = current.CurrentVersion?.ToString()
+                        ?? "便携版（不支持原地更新）";
+                }
+                catch (Exception ex)
+                {
+                    AppLogger.Write(nameof(App),
+                        "update-version-detect-failed " + ex.Message);
+                    installedVersion = "未知";
+                }
                 _archiveUpdateButton.ToolTip =
-                    "当前程序版本：" +
-                    (typeof(App).Assembly.GetName().Version?.ToString() ?? "未知") +
-                    "；从 GitHub Releases 在线检查更新，无需重新下载安装包。";
+                    "当前安装版本：" + installedVersion +
+                    "；点击从 GitHub Releases 检查更新，无需重下安装器。";
                 _archiveUpdateButton.Click += (_, _) =>
                     _ = CheckArchiveUpdatesAsync(manual: true);
             }
