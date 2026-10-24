@@ -1,10 +1,11 @@
 {
   "schemaVersion": 1,
-  "batch": "2026-10-24-highquality-unknownbride-18-characters",
+  "batch": "2026-10-24-highquality-unknownbride-18-source-complete",
   "catalog": "data/live2d-games-wave5.json",
   "audit": "data/live2d-games-wave5-source-audit.json",
   "catalogId": "games-wave5",
   "scopes": [
     "unknownbride-cubism3"
-  ]
+  ],
+  "minimumModels": 18
 }
