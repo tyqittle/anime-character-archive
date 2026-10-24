@@ -413,20 +413,27 @@ public sealed class ArchiveUniversalDesktopTests
     private static string TestRoot=>Environment.GetEnvironmentVariable("ARCHIVE_WEB_TEST_ROOT")
         ??throw new InvalidOperationException("Universal test fixtures missing");
     private static readonly Uri TestSite=new("https://archive-desktop.test/");
-    private static async Task Sta(Func<Task> action)
-    {
-        var completion=new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
+    // WebView2 may post COM/Win32 callbacks after Close. Keep the application's
+    // single UI apartment alive across cases instead of destroying its thread
+    // after each test while runtime callbacks are still queued.
+    private static readonly Lazy<Dispatcher> TestDispatcher=new(()=>{
+        var ready=new TaskCompletionSource<Dispatcher>(TaskCreationOptions.RunContinuationsAsynchronously);
         var thread=new Thread(()=>{
             var dispatcher=Dispatcher.CurrentDispatcher;
             SynchronizationContext.SetSynchronizationContext(new DispatcherSynchronizationContext(dispatcher));
-            dispatcher.BeginInvoke(new Action(async()=>{
-                try {await action();completion.TrySetResult(true);}
-                catch(Exception error){completion.TrySetException(error);}
-                finally {dispatcher.BeginInvokeShutdown(DispatcherPriority.Background);}
-            }));
+            ready.SetResult(dispatcher);
             Dispatcher.Run();
         }){IsBackground=true};
         thread.SetApartmentState(ApartmentState.STA);thread.Start();
+        return ready.Task.GetAwaiter().GetResult();
+    });
+    private static async Task Sta(Func<Task> action)
+    {
+        var completion=new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
+        TestDispatcher.Value.BeginInvoke(new Action(async()=>{
+            try {await action();completion.TrySetResult(true);}
+            catch(Exception error){completion.TrySetException(error);}
+        }));
         await completion.Task.WaitAsync(TimeSpan.FromMinutes(15));
     }
     [DllImport("gdi32.dll")]private static extern IntPtr CreateRectRgn(int left,int top,int right,int bottom);
