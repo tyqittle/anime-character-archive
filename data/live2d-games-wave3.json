@@ -1,6 +1,1646 @@
 {
   "schemaVersion": 1,
   "note": "New-game Cubism2 sources pinned to Eikanya/Live2d-model 7e446cbd95ec352cdb0f73c079e4d075d7d528ac. A record becomes playable only if its declared MOC, texture, and other referenced assets pass the reusable source importer. Preview evidence is published separately through the shared pipeline.",
-  "characters": [],
+  "characters": [
+    {
+      "id": "ggz-bronya",
+      "gameId": "gunsgirlz",
+      "engine": "cubism",
+      "name": "bronya",
+      "characterName": "bronya",
+      "costumeName": "bronya",
+      "skinCode": "ggz-bronya",
+      "game": "崩坏学园2（Live2D 动态立绘）",
+      "collectionName": "崩坏学园2（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ggz-bronya.model.json?v=577b164a53ec99ba18c826bcdee86652f7711b1153eeeff718ef9a2c34e91b0c",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "崩坏学园2/bronya/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 777549,
+      "motionCount": 16,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "577b164a53ec99ba18c826bcdee86652f7711b1153eeeff718ef9a2c34e91b0c",
+      "normalizationNotes": [
+        {
+          "file": "sound/bronya_live2d_012.wav",
+          "error": "Missing or empty source file: bronya/sound/bronya_live2d_012.wav"
+        },
+        {
+          "file": "sound/bronya_live2d_006.wav",
+          "error": "Missing or empty source file: bronya/sound/bronya_live2d_006.wav"
+        },
+        {
+          "file": "sound/bronya_live2d_003.wav",
+          "error": "Missing or empty source file: bronya/sound/bronya_live2d_003.wav"
+        },
+        {
+          "file": "sound/bronya_live2d_001.wav",
+          "error": "Missing or empty source file: bronya/sound/bronya_live2d_001.wav"
+        },
+        {
+          "file": "sound/bronya_live2d_004.wav",
+          "error": "Missing or empty source file: bronya/sound/bronya_live2d_004.wav"
+        },
+        {
+          "file": "sound/bronya_live2d_005.wav",
+          "error": "Missing or empty source file: bronya/sound/bronya_live2d_005.wav"
+        },
+        {
+          "file": "sound/bronya_live2d_005.wav",
+          "error": "Missing or empty source file: bronya/sound/bronya_live2d_005.wav"
+        },
+        {
+          "file": "sound/bronya_live2d_015.wav",
+          "error": "Missing or empty source file: bronya/sound/bronya_live2d_015.wav"
+        },
+        {
+          "file": "sound/bronya_live2d_012.wav",
+          "error": "Missing or empty source file: bronya/sound/bronya_live2d_012.wav"
+        },
+        {
+          "file": "sound/bronya_live2d_012.wav",
+          "error": "Missing or empty source file: bronya/sound/bronya_live2d_012.wav"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ggz-delisha",
+      "gameId": "gunsgirlz",
+      "engine": "cubism",
+      "name": "delisha",
+      "characterName": "delisha",
+      "costumeName": "delisha",
+      "skinCode": "ggz-delisha",
+      "game": "崩坏学园2（Live2D 动态立绘）",
+      "collectionName": "崩坏学园2（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ggz-delisha.model.json?v=1a826bf3d532b2554db9c66d2013d67c037efa01c05eaba7e9716f95ba84d85b",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "崩坏学园2/delisha/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 823538,
+      "motionCount": 15,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "1a826bf3d532b2554db9c66d2013d67c037efa01c05eaba7e9716f95ba84d85b",
+      "normalizationNotes": [
+        {
+          "file": "sound/theresa_live2d_001.wav",
+          "error": "Missing or empty source file: delisha/sound/theresa_live2d_001.wav"
+        },
+        {
+          "file": "sound/theresa_live2d_002.wav",
+          "error": "Missing or empty source file: delisha/sound/theresa_live2d_002.wav"
+        },
+        {
+          "file": "sound/theresa_live2d_002.wav",
+          "error": "Missing or empty source file: delisha/sound/theresa_live2d_002.wav"
+        },
+        {
+          "file": "sound/theresa_live2d_004.wav",
+          "error": "Missing or empty source file: delisha/sound/theresa_live2d_004.wav"
+        },
+        {
+          "file": "sound/theresa_live2d_004.wav",
+          "error": "Missing or empty source file: delisha/sound/theresa_live2d_004.wav"
+        },
+        {
+          "file": "sound/theresa_live2d_004.wav",
+          "error": "Missing or empty source file: delisha/sound/theresa_live2d_004.wav"
+        },
+        {
+          "file": "sound/theresa_live2d_009.wav",
+          "error": "Missing or empty source file: delisha/sound/theresa_live2d_009.wav"
+        },
+        {
+          "file": "sound/theresa_live2d_009.wav",
+          "error": "Missing or empty source file: delisha/sound/theresa_live2d_009.wav"
+        },
+        {
+          "file": "sound/theresa_live2d_015.wav",
+          "error": "Missing or empty source file: delisha/sound/theresa_live2d_015.wav"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ggz-himeko",
+      "gameId": "gunsgirlz",
+      "engine": "cubism",
+      "name": "himeko",
+      "characterName": "himeko",
+      "costumeName": "himeko",
+      "skinCode": "ggz-himeko",
+      "game": "崩坏学园2（Live2D 动态立绘）",
+      "collectionName": "崩坏学园2（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ggz-himeko.model.json?v=e4255b1d008ddedd6b2c8d3586254ac385f4b38669a3039599503be61d95c8c7",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "崩坏学园2/himeko/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 610327,
+      "motionCount": 16,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "e4255b1d008ddedd6b2c8d3586254ac385f4b38669a3039599503be61d95c8c7",
+      "normalizationNotes": [
+        {
+          "file": "sound/himeko_live2d_010.wav",
+          "error": "Missing or empty source file: himeko/sound/himeko_live2d_010.wav"
+        },
+        {
+          "file": "sound/himeko_live2d_003.wav",
+          "error": "Missing or empty source file: himeko/sound/himeko_live2d_003.wav"
+        },
+        {
+          "file": "sound/himeko_live2d_003.wav",
+          "error": "Missing or empty source file: himeko/sound/himeko_live2d_003.wav"
+        },
+        {
+          "file": "sound/himeko_live2d_004.wav",
+          "error": "Missing or empty source file: himeko/sound/himeko_live2d_004.wav"
+        },
+        {
+          "file": "sound/himeko_live2d_001.wav",
+          "error": "Missing or empty source file: himeko/sound/himeko_live2d_001.wav"
+        },
+        {
+          "file": "sound/himeko_live2d_006.wav",
+          "error": "Missing or empty source file: himeko/sound/himeko_live2d_006.wav"
+        },
+        {
+          "file": "sound/himeko_live2d_011.wav",
+          "error": "Missing or empty source file: himeko/sound/himeko_live2d_011.wav"
+        },
+        {
+          "file": "sound/himeko_live2d_019.wav",
+          "error": "Missing or empty source file: himeko/sound/himeko_live2d_019.wav"
+        },
+        {
+          "file": "sound/himeko_live2d_019.wav",
+          "error": "Missing or empty source file: himeko/sound/himeko_live2d_019.wav"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ggz-houraiji",
+      "gameId": "gunsgirlz",
+      "engine": "cubism",
+      "name": "houraiji",
+      "characterName": "houraiji",
+      "costumeName": "houraiji",
+      "skinCode": "ggz-houraiji",
+      "game": "崩坏学园2（Live2D 动态立绘）",
+      "collectionName": "崩坏学园2（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ggz-houraiji.model.json?v=3eb05dffd67fba4fdf4fa6748a3797b51387e685b71e45135057dc4a40ca27fb",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "崩坏学园2/houraiji/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 876347,
+      "motionCount": 15,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "3eb05dffd67fba4fdf4fa6748a3797b51387e685b71e45135057dc4a40ca27fb",
+      "normalizationNotes": [
+        {
+          "file": "sound/houraiji_live2d_001.wav",
+          "error": "Missing or empty source file: houraiji/sound/houraiji_live2d_001.wav"
+        },
+        {
+          "file": "sound/houraiji_live2d_004.wav",
+          "error": "Missing or empty source file: houraiji/sound/houraiji_live2d_004.wav"
+        },
+        {
+          "file": "sound/houraiji_live2d_005.wav",
+          "error": "Missing or empty source file: houraiji/sound/houraiji_live2d_005.wav"
+        },
+        {
+          "file": "sound/houraiji_live2d_002.wav",
+          "error": "Missing or empty source file: houraiji/sound/houraiji_live2d_002.wav"
+        },
+        {
+          "file": "sound/houraiji_live2d_006.wav",
+          "error": "Missing or empty source file: houraiji/sound/houraiji_live2d_006.wav"
+        },
+        {
+          "file": "sound/houraiji_live2d_002.wav",
+          "error": "Missing or empty source file: houraiji/sound/houraiji_live2d_002.wav"
+        },
+        {
+          "file": "sound/houraiji_live2d_003.wav",
+          "error": "Missing or empty source file: houraiji/sound/houraiji_live2d_003.wav"
+        },
+        {
+          "file": "sound/houraiji_live2d_003.wav",
+          "error": "Missing or empty source file: houraiji/sound/houraiji_live2d_003.wav"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ggz-kaguya",
+      "gameId": "gunsgirlz",
+      "engine": "cubism",
+      "name": "kaguya",
+      "characterName": "kaguya",
+      "costumeName": "kaguya",
+      "skinCode": "ggz-kaguya",
+      "game": "崩坏学园2（Live2D 动态立绘）",
+      "collectionName": "崩坏学园2（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ggz-kaguya.model.json?v=2632c47e16050e5fc4df0881b9623160edeb1947573c102d7b3f3304a090778c",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "崩坏学园2/kaguya/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 949788,
+      "motionCount": 16,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "2632c47e16050e5fc4df0881b9623160edeb1947573c102d7b3f3304a090778c",
+      "normalizationNotes": [
+        {
+          "file": "sound/kaguya_live2d_001.wav",
+          "error": "Missing or empty source file: kaguya/sound/kaguya_live2d_001.wav"
+        },
+        {
+          "file": "sound/kaguya_live2d_004.wav",
+          "error": "Missing or empty source file: kaguya/sound/kaguya_live2d_004.wav"
+        },
+        {
+          "file": "sound/kaguya_live2d_006.wav",
+          "error": "Missing or empty source file: kaguya/sound/kaguya_live2d_006.wav"
+        },
+        {
+          "file": "sound/kaguya_live2d_003.wav",
+          "error": "Missing or empty source file: kaguya/sound/kaguya_live2d_003.wav"
+        },
+        {
+          "file": "sound/kaguya_live2d_005.wav",
+          "error": "Missing or empty source file: kaguya/sound/kaguya_live2d_005.wav"
+        },
+        {
+          "file": "sound/kaguya_live2d_005.wav",
+          "error": "Missing or empty source file: kaguya/sound/kaguya_live2d_005.wav"
+        },
+        {
+          "file": "sound/kaguya_live2d_009.wav",
+          "error": "Missing or empty source file: kaguya/sound/kaguya_live2d_009.wav"
+        },
+        {
+          "file": "sound/kaguya_live2d_011.wav",
+          "error": "Missing or empty source file: kaguya/sound/kaguya_live2d_011.wav"
+        },
+        {
+          "file": "sound/kaguya_live2d_009.wav",
+          "error": "Missing or empty source file: kaguya/sound/kaguya_live2d_009.wav"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ggz-keluoyi",
+      "gameId": "gunsgirlz",
+      "engine": "cubism",
+      "name": "keluoyi",
+      "characterName": "keluoyi",
+      "costumeName": "keluoyi",
+      "skinCode": "ggz-keluoyi",
+      "game": "崩坏学园2（Live2D 动态立绘）",
+      "collectionName": "崩坏学园2（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ggz-keluoyi.model.json?v=4783253f83ffc8bad5faa93ce694beac33acd3a5bf5f7727db9c6ba57aa7205a",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "崩坏学园2/keluoyi/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 983262,
+      "motionCount": 16,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "4783253f83ffc8bad5faa93ce694beac33acd3a5bf5f7727db9c6ba57aa7205a",
+      "normalizationNotes": [
+        {
+          "file": "sound/kuroe_live2d_001.wav",
+          "error": "Missing or empty source file: keluoyi/sound/kuroe_live2d_001.wav"
+        },
+        {
+          "file": "sound/kuroe_live2d_003.wav",
+          "error": "Missing or empty source file: keluoyi/sound/kuroe_live2d_003.wav"
+        },
+        {
+          "file": "sound/kuroe_live2d_005.wav",
+          "error": "Missing or empty source file: keluoyi/sound/kuroe_live2d_005.wav"
+        },
+        {
+          "file": "sound/kuroe_live2d_002.wav",
+          "error": "Missing or empty source file: keluoyi/sound/kuroe_live2d_002.wav"
+        },
+        {
+          "file": "sound/kuroe_live2d_006.wav",
+          "error": "Missing or empty source file: keluoyi/sound/kuroe_live2d_006.wav"
+        },
+        {
+          "file": "sound/kuroe_live2d_004.wav",
+          "error": "Missing or empty source file: keluoyi/sound/kuroe_live2d_004.wav"
+        },
+        {
+          "file": "sound/kuroe_live2d_009.wav",
+          "error": "Missing or empty source file: keluoyi/sound/kuroe_live2d_009.wav"
+        },
+        {
+          "file": "sound/kuroe_live2d_011.wav",
+          "error": "Missing or empty source file: keluoyi/sound/kuroe_live2d_011.wav"
+        },
+        {
+          "file": "sound/kuroe_live2d_011.wav",
+          "error": "Missing or empty source file: keluoyi/sound/kuroe_live2d_011.wav"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ggz-kika",
+      "gameId": "gunsgirlz",
+      "engine": "cubism",
+      "name": "kika",
+      "characterName": "kika",
+      "costumeName": "kika",
+      "skinCode": "ggz-kika",
+      "game": "崩坏学园2（Live2D 动态立绘）",
+      "collectionName": "崩坏学园2（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ggz-kika.model.json?v=a39e49c2880f97b9ed06cdce94b5637fd9a832f0b5ab82585d418f532b495470",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "崩坏学园2/kika/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 1482329,
+      "motionCount": 16,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "a39e49c2880f97b9ed06cdce94b5637fd9a832f0b5ab82585d418f532b495470",
+      "normalizationNotes": [
+        {
+          "file": "Ev_Cv_Partner_1177_003",
+          "error": "Missing or empty source file: kika/Ev_Cv_Partner_1177_003"
+        },
+        {
+          "file": "Ev_Cv_Partner_1177_104",
+          "error": "Missing or empty source file: kika/Ev_Cv_Partner_1177_104"
+        },
+        {
+          "file": "Ev_Cv_Partner_1177_133",
+          "error": "Missing or empty source file: kika/Ev_Cv_Partner_1177_133"
+        },
+        {
+          "file": "Ev_Cv_Partner_1177_006",
+          "error": "Missing or empty source file: kika/Ev_Cv_Partner_1177_006"
+        },
+        {
+          "file": "Ev_Cv_Partner_1177_006",
+          "error": "Missing or empty source file: kika/Ev_Cv_Partner_1177_006"
+        },
+        {
+          "file": "Ev_Cv_Partner_1177_009",
+          "error": "Missing or empty source file: kika/Ev_Cv_Partner_1177_009"
+        },
+        {
+          "file": "Ev_Cv_Partner_1177_011",
+          "error": "Missing or empty source file: kika/Ev_Cv_Partner_1177_011"
+        },
+        {
+          "file": "Ev_Cv_Partner_1177_001",
+          "error": "Missing or empty source file: kika/Ev_Cv_Partner_1177_001"
+        },
+        {
+          "file": "Ev_Cv_Partner_1177_104",
+          "error": "Missing or empty source file: kika/Ev_Cv_Partner_1177_104"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ggz-mie",
+      "gameId": "gunsgirlz",
+      "engine": "cubism",
+      "name": "mie",
+      "characterName": "mie",
+      "costumeName": "mie",
+      "skinCode": "ggz-mie",
+      "game": "崩坏学园2（Live2D 动态立绘）",
+      "collectionName": "崩坏学园2（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ggz-mie.model.json?v=c5d4e2c4d1afb281f1142f79776f9823aa04b13a916a360ade16297404157b75",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "崩坏学园2/mie/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 704855,
+      "motionCount": 16,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "c5d4e2c4d1afb281f1142f79776f9823aa04b13a916a360ade16297404157b75",
+      "normalizationNotes": [
+        {
+          "file": "sound/mei_live2d_001.wav",
+          "error": "Missing or empty source file: mie/sound/mei_live2d_001.wav"
+        },
+        {
+          "file": "sound/mei_live2d_003.wav",
+          "error": "Missing or empty source file: mie/sound/mei_live2d_003.wav"
+        },
+        {
+          "file": "sound/mei_live2d_004.wav",
+          "error": "Missing or empty source file: mie/sound/mei_live2d_004.wav"
+        },
+        {
+          "file": "sound/mei_live2d_002.wav",
+          "error": "Missing or empty source file: mie/sound/mei_live2d_002.wav"
+        },
+        {
+          "file": "sound/mei_live2d_006.wav",
+          "error": "Missing or empty source file: mie/sound/mei_live2d_006.wav"
+        },
+        {
+          "file": "sound/mei_live2d_006.wav",
+          "error": "Missing or empty source file: mie/sound/mei_live2d_006.wav"
+        },
+        {
+          "file": "sound/mei_live2d_005.wav",
+          "error": "Missing or empty source file: mie/sound/mei_live2d_005.wav"
+        },
+        {
+          "file": "sound/mei_live2d_007.wav",
+          "error": "Missing or empty source file: mie/sound/mei_live2d_007.wav"
+        },
+        {
+          "file": "sound/mei_live2d_007.wav",
+          "error": "Missing or empty source file: mie/sound/mei_live2d_007.wav"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ggz-shin",
+      "gameId": "gunsgirlz",
+      "engine": "cubism",
+      "name": "shin",
+      "characterName": "shin",
+      "costumeName": "shin",
+      "skinCode": "ggz-shin",
+      "game": "崩坏学园2（Live2D 动态立绘）",
+      "collectionName": "崩坏学园2（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ggz-shin.model.json?v=ace73718d037f02fc279a9e4d43d926664162032c410c7cf9425192d8659df81",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "崩坏学园2/shin/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 873750,
+      "motionCount": 17,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "ace73718d037f02fc279a9e4d43d926664162032c410c7cf9425192d8659df81",
+      "normalizationNotes": [
+        {
+          "file": "sound/sin_live2d_jp_01.wav",
+          "error": "Missing or empty source file: shin/sound/sin_live2d_jp_01.wav"
+        },
+        {
+          "file": "sound/shin_020.wav",
+          "error": "Missing or empty source file: shin/sound/shin_020.wav"
+        },
+        {
+          "file": "sound/shin_006.wav",
+          "error": "Missing or empty source file: shin/sound/shin_006.wav"
+        },
+        {
+          "file": "sound/shin_009.wav",
+          "error": "Missing or empty source file: shin/sound/shin_009.wav"
+        },
+        {
+          "file": "sound/sin_live2d_jp_06.wav",
+          "error": "Missing or empty source file: shin/sound/sin_live2d_jp_06.wav"
+        },
+        {
+          "file": "sound/sin_live2d_jp_05.wav",
+          "error": "Missing or empty source file: shin/sound/sin_live2d_jp_05.wav"
+        },
+        {
+          "file": "sound/sin_live2d_jp_08.wav",
+          "error": "Missing or empty source file: shin/sound/sin_live2d_jp_08.wav"
+        },
+        {
+          "file": "sound/shin_020.wav",
+          "error": "Missing or empty source file: shin/sound/shin_020.wav"
+        },
+        {
+          "file": "sound/sin_live2d_jp_18.wav",
+          "error": "Missing or empty source file: shin/sound/sin_live2d_jp_18.wav"
+        },
+        {
+          "file": "sound/shin_009.wav",
+          "error": "Missing or empty source file: shin/sound/shin_009.wav"
+        },
+        {
+          "file": "sound/sin_live2d_jp_18.wav",
+          "error": "Missing or empty source file: shin/sound/sin_live2d_jp_18.wav"
+        },
+        {
+          "file": "sound/sin_live2d_jp_18.wav",
+          "error": "Missing or empty source file: shin/sound/sin_live2d_jp_18.wav"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ggz-xier",
+      "gameId": "gunsgirlz",
+      "engine": "cubism",
+      "name": "xier",
+      "characterName": "xier",
+      "costumeName": "xier",
+      "skinCode": "ggz-xier",
+      "game": "崩坏学园2（Live2D 动态立绘）",
+      "collectionName": "崩坏学园2（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ggz-xier.model.json?v=8be87b67e166d5e1045cca391ada59e383cc922a1649f5108d27e9f10ba0b199",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "崩坏学园2/xier/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 679530,
+      "motionCount": 15,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "8be87b67e166d5e1045cca391ada59e383cc922a1649f5108d27e9f10ba0b199",
+      "normalizationNotes": [
+        {
+          "file": "Ev_Cv_Partner_1026_001",
+          "error": "Missing or empty source file: xier/Ev_Cv_Partner_1026_001"
+        },
+        {
+          "file": "Ev_Cv_Partner_1026_003",
+          "error": "Missing or empty source file: xier/Ev_Cv_Partner_1026_003"
+        },
+        {
+          "file": "Ev_Cv_Partner_1026_002",
+          "error": "Missing or empty source file: xier/Ev_Cv_Partner_1026_002"
+        },
+        {
+          "file": "Ev_Cv_Partner_1026_010",
+          "error": "Missing or empty source file: xier/Ev_Cv_Partner_1026_010"
+        },
+        {
+          "file": "Ev_Cv_Partner_1026_014",
+          "error": "Missing or empty source file: xier/Ev_Cv_Partner_1026_014"
+        },
+        {
+          "file": "Ev_Cv_Partner_1026_014",
+          "error": "Missing or empty source file: xier/Ev_Cv_Partner_1026_014"
+        },
+        {
+          "file": "Ev_Cv_Partner_1026_007",
+          "error": "Missing or empty source file: xier/Ev_Cv_Partner_1026_007"
+        },
+        {
+          "file": "Ev_Cv_Partner_1026_010",
+          "error": "Missing or empty source file: xier/Ev_Cv_Partner_1026_010"
+        },
+        {
+          "file": "Ev_Cv_Partner_1026_012",
+          "error": "Missing or empty source file: xier/Ev_Cv_Partner_1026_012"
+        },
+        {
+          "file": "Ev_Cv_Partner_1026_012",
+          "error": "Missing or empty source file: xier/Ev_Cv_Partner_1026_012"
+        },
+        {
+          "file": "Ev_Cv_Partner_1026_008",
+          "error": "Missing or empty source file: xier/Ev_Cv_Partner_1026_008"
+        },
+        {
+          "file": "Ev_Cv_Partner_1026_019",
+          "error": "Missing or empty source file: xier/Ev_Cv_Partner_1026_019"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ggz-yazakura",
+      "gameId": "gunsgirlz",
+      "engine": "cubism",
+      "name": "yazakura",
+      "characterName": "yazakura",
+      "costumeName": "yazakura",
+      "skinCode": "ggz-yazakura",
+      "game": "崩坏学园2（Live2D 动态立绘）",
+      "collectionName": "崩坏学园2（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ggz-yazakura.model.json?v=b974158a05d5acd888d7c38eb6e9ddb39cfb53cfebb045eee65a9943d5e832b1",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "崩坏学园2/yazakura/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 647213,
+      "motionCount": 17,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "b974158a05d5acd888d7c38eb6e9ddb39cfb53cfebb045eee65a9943d5e832b1",
+      "normalizationNotes": [
+        {
+          "file": "sound/sakura_live2d_002.wav",
+          "error": "Missing or empty source file: yazakura/sound/sakura_live2d_002.wav"
+        },
+        {
+          "file": "sound/sakura_live2d_011.wav",
+          "error": "Missing or empty source file: yazakura/sound/sakura_live2d_011.wav"
+        },
+        {
+          "file": "sound/sakura_live2d_003.wav",
+          "error": "Missing or empty source file: yazakura/sound/sakura_live2d_003.wav"
+        },
+        {
+          "file": "sound/sakura_live2d_005.wav",
+          "error": "Missing or empty source file: yazakura/sound/sakura_live2d_005.wav"
+        },
+        {
+          "file": "sound/sakura_live2d_004.wav",
+          "error": "Missing or empty source file: yazakura/sound/sakura_live2d_004.wav"
+        },
+        {
+          "file": "sound/sakura_live2d_005.wav",
+          "error": "Missing or empty source file: yazakura/sound/sakura_live2d_005.wav"
+        },
+        {
+          "file": "sound/sakura_live2d_006.wav",
+          "error": "Missing or empty source file: yazakura/sound/sakura_live2d_006.wav"
+        },
+        {
+          "file": "sound/sakura_live2d_011.wav",
+          "error": "Missing or empty source file: yazakura/sound/sakura_live2d_011.wav"
+        },
+        {
+          "file": "sound/sakura_live2d_001.wav",
+          "error": "Missing or empty source file: yazakura/sound/sakura_live2d_001.wav"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ggz-yiselin",
+      "gameId": "gunsgirlz",
+      "engine": "cubism",
+      "name": "yiselin",
+      "characterName": "yiselin",
+      "costumeName": "yiselin",
+      "skinCode": "ggz-yiselin",
+      "game": "崩坏学园2（Live2D 动态立绘）",
+      "collectionName": "崩坏学园2（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ggz-yiselin.model.json?v=b07927c70771b9f43f177c68e7c0baab4fd13f067464cf59d9b8a44c1a85b465",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "崩坏学园2/yiselin/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 858997,
+      "motionCount": 16,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "b07927c70771b9f43f177c68e7c0baab4fd13f067464cf59d9b8a44c1a85b465",
+      "normalizationNotes": [
+        {
+          "file": "sound/hakasecn_live2d_003.wav",
+          "error": "Missing or empty source file: yiselin/sound/hakasecn_live2d_003.wav"
+        },
+        {
+          "file": "sound/hakasecn_live2d_005.wav",
+          "error": "Missing or empty source file: yiselin/sound/hakasecn_live2d_005.wav"
+        },
+        {
+          "file": "sound/hakasecn_live2d_002.wav",
+          "error": "Missing or empty source file: yiselin/sound/hakasecn_live2d_002.wav"
+        },
+        {
+          "file": "sound/hakasecn_live2d_002.wav",
+          "error": "Missing or empty source file: yiselin/sound/hakasecn_live2d_002.wav"
+        },
+        {
+          "file": "sound/hakasecn_live2d_006.wav",
+          "error": "Missing or empty source file: yiselin/sound/hakasecn_live2d_006.wav"
+        },
+        {
+          "file": "sound/hakasecn_live2d_009.wav",
+          "error": "Missing or empty source file: yiselin/sound/hakasecn_live2d_009.wav"
+        },
+        {
+          "file": "sound/hakasecn_live2d_011.wav",
+          "error": "Missing or empty source file: yiselin/sound/hakasecn_live2d_011.wav"
+        },
+        {
+          "file": "sound/hakasecn_live2d_011.wav",
+          "error": "Missing or empty source file: yiselin/sound/hakasecn_live2d_011.wav"
+        },
+        {
+          "file": "sound/hakasecn_live2d_001.wav",
+          "error": "Missing or empty source file: yiselin/sound/hakasecn_live2d_001.wav"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ao-l_103300401",
+      "gameId": "arkorder",
+      "engine": "cubism",
+      "name": "l_103300401",
+      "characterName": "l",
+      "costumeName": "l_103300401",
+      "skinCode": "ao-l_103300401",
+      "game": "方舟指令（Live2D 动态立绘）",
+      "collectionName": "方舟指令（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ao-l_103300401.model.json?v=0a0cce8dd0cd4237ff464a7821e5a0b2971113b63d7586535c63f638ec6dac89",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "方舟指令/l_103300401/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 8928706,
+      "motionCount": 14,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "0a0cce8dd0cd4237ff464a7821e5a0b2971113b63d7586535c63f638ec6dac89",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ao-l_103501211",
+      "gameId": "arkorder",
+      "engine": "cubism",
+      "name": "l_103501211",
+      "characterName": "l",
+      "costumeName": "l_103501211",
+      "skinCode": "ao-l_103501211",
+      "game": "方舟指令（Live2D 动态立绘）",
+      "collectionName": "方舟指令（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ao-l_103501211.model.json?v=a33e4c72e736d56003b596f9a15ce849c5962b20c03fd378bb54aba5d191610f",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "方舟指令/l_103501211/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 7287759,
+      "motionCount": 13,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "a33e4c72e736d56003b596f9a15ce849c5962b20c03fd378bb54aba5d191610f",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ao-l_114202911",
+      "gameId": "arkorder",
+      "engine": "cubism",
+      "name": "l_114202911",
+      "characterName": "l",
+      "costumeName": "l_114202911",
+      "skinCode": "ao-l_114202911",
+      "game": "方舟指令（Live2D 动态立绘）",
+      "collectionName": "方舟指令（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ao-l_114202911.model.json?v=b3b4c75c738d249f620a0f44eb75d408a748257d3b9a68dcda66d3bc82a290cf",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "方舟指令/l_114202911/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 8092051,
+      "motionCount": 13,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "b3b4c75c738d249f620a0f44eb75d408a748257d3b9a68dcda66d3bc82a290cf",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ao-l_133100301",
+      "gameId": "arkorder",
+      "engine": "cubism",
+      "name": "l_133100301",
+      "characterName": "l",
+      "costumeName": "l_133100301",
+      "skinCode": "ao-l_133100301",
+      "game": "方舟指令（Live2D 动态立绘）",
+      "collectionName": "方舟指令（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ao-l_133100301.model.json?v=02c658dcff953db70a25bc99a965eb7f15f19622b5003bcca6337d32943d1969",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "方舟指令/l_133100301/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 13589678,
+      "motionCount": 13,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "02c658dcff953db70a25bc99a965eb7f15f19622b5003bcca6337d32943d1969",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ao-l_133100611",
+      "gameId": "arkorder",
+      "engine": "cubism",
+      "name": "l_133100611",
+      "characterName": "l",
+      "costumeName": "l_133100611",
+      "skinCode": "ao-l_133100611",
+      "game": "方舟指令（Live2D 动态立绘）",
+      "collectionName": "方舟指令（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ao-l_133100611.model.json?v=3298a49c2725c44a9f3e6594dca3ad89b0db988e2710970ae6bdb071e3f0f8f2",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "方舟指令/l_133100611/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 7973639,
+      "motionCount": 13,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "3298a49c2725c44a9f3e6594dca3ad89b0db988e2710970ae6bdb071e3f0f8f2",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ao-l_134100111",
+      "gameId": "arkorder",
+      "engine": "cubism",
+      "name": "l_134100111",
+      "characterName": "l",
+      "costumeName": "l_134100111",
+      "skinCode": "ao-l_134100111",
+      "game": "方舟指令（Live2D 动态立绘）",
+      "collectionName": "方舟指令（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ao-l_134100111.model.json?v=01f7c0a1bcd5a0ee6df5424aa78e16ca0f5d5a21eedb77f82642427d892888a3",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "方舟指令/l_134100111/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 4633775,
+      "motionCount": 13,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "01f7c0a1bcd5a0ee6df5424aa78e16ca0f5d5a21eedb77f82642427d892888a3",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ao-l_143200301",
+      "gameId": "arkorder",
+      "engine": "cubism",
+      "name": "l_143200301",
+      "characterName": "l",
+      "costumeName": "l_143200301",
+      "skinCode": "ao-l_143200301",
+      "game": "方舟指令（Live2D 动态立绘）",
+      "collectionName": "方舟指令（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ao-l_143200301.model.json?v=669dab49b7a8cbe7672628118bfad2e5359575f0c94890d294de4895a1bc70ca",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "方舟指令/l_143200301/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 8728126,
+      "motionCount": 13,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "669dab49b7a8cbe7672628118bfad2e5359575f0c94890d294de4895a1bc70ca",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ao-l_144402311",
+      "gameId": "arkorder",
+      "engine": "cubism",
+      "name": "l_144402311",
+      "characterName": "l",
+      "costumeName": "l_144402311",
+      "skinCode": "ao-l_144402311",
+      "game": "方舟指令（Live2D 动态立绘）",
+      "collectionName": "方舟指令（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ao-l_144402311.model.json?v=9cf5d864a44a3bee1b9a898bbdbf06dadd67138781013e5edc0826db93737c98",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "方舟指令/l_144402311/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 4163694,
+      "motionCount": 13,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "9cf5d864a44a3bee1b9a898bbdbf06dadd67138781013e5edc0826db93737c98",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ao-l_154500211",
+      "gameId": "arkorder",
+      "engine": "cubism",
+      "name": "l_154500211",
+      "characterName": "l",
+      "costumeName": "l_154500211",
+      "skinCode": "ao-l_154500211",
+      "game": "方舟指令（Live2D 动态立绘）",
+      "collectionName": "方舟指令（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ao-l_154500211.model.json?v=dbbe64ef873e9d0ac7bd7c9ed3e70f42e7104802f4297aa54d548f18bc706dc4",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "方舟指令/l_154500211/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 4906758,
+      "motionCount": 13,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "dbbe64ef873e9d0ac7bd7c9ed3e70f42e7104802f4297aa54d548f18bc706dc4",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ao-l_234100511",
+      "gameId": "arkorder",
+      "engine": "cubism",
+      "name": "l_234100511",
+      "characterName": "l",
+      "costumeName": "l_234100511",
+      "skinCode": "ao-l_234100511",
+      "game": "方舟指令（Live2D 动态立绘）",
+      "collectionName": "方舟指令（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ao-l_234100511.model.json?v=08f488edbb85575de5fbf7b6e8939c560be731b690112a51ae41f4164508ec1d",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "方舟指令/l_234100511/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 2541381,
+      "motionCount": 13,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "08f488edbb85575de5fbf7b6e8939c560be731b690112a51ae41f4164508ec1d",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ao-l_234200211",
+      "gameId": "arkorder",
+      "engine": "cubism",
+      "name": "l_234200211",
+      "characterName": "l",
+      "costumeName": "l_234200211",
+      "skinCode": "ao-l_234200211",
+      "game": "方舟指令（Live2D 动态立绘）",
+      "collectionName": "方舟指令（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ao-l_234200211.model.json?v=aacd651f3a3d5609e701c07f0d80b3cb35485f4ad63ffa32a1ea9fb96a41ebf5",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "方舟指令/l_234200211/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 6877094,
+      "motionCount": 13,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "aacd651f3a3d5609e701c07f0d80b3cb35485f4ad63ffa32a1ea9fb96a41ebf5",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ao-l_234400411",
+      "gameId": "arkorder",
+      "engine": "cubism",
+      "name": "l_234400411",
+      "characterName": "l",
+      "costumeName": "l_234400411",
+      "skinCode": "ao-l_234400411",
+      "game": "方舟指令（Live2D 动态立绘）",
+      "collectionName": "方舟指令（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ao-l_234400411.model.json?v=d0b4ed43bf3d4a35a3f5d52579c779a059be1ffe006ddaca6db651e2fbe19067",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "方舟指令/l_234400411/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 7132684,
+      "motionCount": 13,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "d0b4ed43bf3d4a35a3f5d52579c779a059be1ffe006ddaca6db651e2fbe19067",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ao-l_234400412",
+      "gameId": "arkorder",
+      "engine": "cubism",
+      "name": "l_234400412",
+      "characterName": "l",
+      "costumeName": "l_234400412",
+      "skinCode": "ao-l_234400412",
+      "game": "方舟指令（Live2D 动态立绘）",
+      "collectionName": "方舟指令（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ao-l_234400412.model.json?v=90b8886712cb3dfbe24a63923e6e527a7ccd87fe4fefd2e52be8f6e3aac10d2e",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "方舟指令/l_234400412/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 8733050,
+      "motionCount": 13,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "90b8886712cb3dfbe24a63923e6e527a7ccd87fe4fefd2e52be8f6e3aac10d2e",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ao-l_234500311",
+      "gameId": "arkorder",
+      "engine": "cubism",
+      "name": "l_234500311",
+      "characterName": "l",
+      "costumeName": "l_234500311",
+      "skinCode": "ao-l_234500311",
+      "game": "方舟指令（Live2D 动态立绘）",
+      "collectionName": "方舟指令（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ao-l_234500311.model.json?v=14ff203cfef131315a6b70abd910f242e0511ab033720992298469323f2f8bdf",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "方舟指令/l_234500311/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 6419020,
+      "motionCount": 13,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "14ff203cfef131315a6b70abd910f242e0511ab033720992298469323f2f8bdf",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ao-l_234600111",
+      "gameId": "arkorder",
+      "engine": "cubism",
+      "name": "l_234600111",
+      "characterName": "l",
+      "costumeName": "l_234600111",
+      "skinCode": "ao-l_234600111",
+      "game": "方舟指令（Live2D 动态立绘）",
+      "collectionName": "方舟指令（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ao-l_234600111.model.json?v=277ad495e03b0ce596cc09f253d21e51b2de5c3856836d6cb6475009c5918134",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "方舟指令/l_234600111/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 4845122,
+      "motionCount": 13,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "277ad495e03b0ce596cc09f253d21e51b2de5c3856836d6cb6475009c5918134",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "gs1-aite",
+      "gameId": "gemstory",
+      "engine": "cubism",
+      "name": "aite",
+      "characterName": "aite",
+      "costumeName": "aite",
+      "skinCode": "gs1-aite",
+      "game": "宝石研物语（动态角色）",
+      "collectionName": "宝石研物语（动态角色）",
+      "modelUrl": "./assets/model-settings/newgames/gs1-aite.model.json?v=5f3764845a1126f69b4161b01563a051232d33c495b04a58ef358b07fa50a10f",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "宝石研物语/宝石研物语/aite/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 826439,
+      "motionCount": 4,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "5f3764845a1126f69b4161b01563a051232d33c495b04a58ef358b07fa50a10f",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "gs1-lili",
+      "gameId": "gemstory",
+      "engine": "cubism",
+      "name": "lili",
+      "characterName": "lili",
+      "costumeName": "lili",
+      "skinCode": "gs1-lili",
+      "game": "宝石研物语（动态角色）",
+      "collectionName": "宝石研物语（动态角色）",
+      "modelUrl": "./assets/model-settings/newgames/gs1-lili.model.json?v=e4f56d7d67081bad9346d66c5e2414668d51771d77807c0f74fb34410241204d",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "宝石研物语/宝石研物语/lili/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 2036322,
+      "motionCount": 3,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "e4f56d7d67081bad9346d66c5e2414668d51771d77807c0f74fb34410241204d",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "gs1-magelite",
+      "gameId": "gemstory",
+      "engine": "cubism",
+      "name": "magelite",
+      "characterName": "magelite",
+      "costumeName": "magelite",
+      "skinCode": "gs1-magelite",
+      "game": "宝石研物语（动态角色）",
+      "collectionName": "宝石研物语（动态角色）",
+      "modelUrl": "./assets/model-settings/newgames/gs1-magelite.model.json?v=328c40d591087f62e363c9cc9264ad8f5279e118da1cd7eb21776ad8099d808f",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "宝石研物语/宝石研物语/magelite/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 1067867,
+      "motionCount": 4,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "328c40d591087f62e363c9cc9264ad8f5279e118da1cd7eb21776ad8099d808f",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "gs1-safeiya",
+      "gameId": "gemstory",
+      "engine": "cubism",
+      "name": "safeiya",
+      "characterName": "safeiya",
+      "costumeName": "safeiya",
+      "skinCode": "gs1-safeiya",
+      "game": "宝石研物语（动态角色）",
+      "collectionName": "宝石研物语（动态角色）",
+      "modelUrl": "./assets/model-settings/newgames/gs1-safeiya.model.json?v=508cc32c909ab16e3c4a835d89a7f6ef8ec9630db840b2127d5d840dc4266d5f",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "宝石研物语/宝石研物语/safeiya/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 1524989,
+      "motionCount": 5,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "508cc32c909ab16e3c4a835d89a7f6ef8ec9630db840b2127d5d840dc4266d5f",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "gs1-west",
+      "gameId": "gemstory",
+      "engine": "cubism",
+      "name": "west",
+      "characterName": "west",
+      "costumeName": "west",
+      "skinCode": "gs1-west",
+      "game": "宝石研物语（动态角色）",
+      "collectionName": "宝石研物语（动态角色）",
+      "modelUrl": "./assets/model-settings/newgames/gs1-west.model.json?v=f97a333a083c2e5908528e9bfb3056725509d695de341a5a006ec2be54f93b4d",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "宝石研物语/宝石研物语/west/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 1761145,
+      "motionCount": 13,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "f97a333a083c2e5908528e9bfb3056725509d695de341a5a006ec2be54f93b4d",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "gs2-elizabeth_1",
+      "gameId": "gemstory",
+      "engine": "cubism",
+      "name": "elizabeth_1",
+      "characterName": "elizabeth",
+      "costumeName": "elizabeth_1",
+      "skinCode": "gs2-elizabeth_1",
+      "game": "宝石研物语（动态角色）",
+      "collectionName": "宝石研物语（动态角色）",
+      "modelUrl": "./assets/model-settings/newgames/gs2-elizabeth_1.model.json?v=13a82fa7195b6b9c8d89e9f8748728575bd8f722529cddb7fd1ac540a948b018",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "宝石研物语/宝石研物语2/elizabeth_1/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 1527156,
+      "motionCount": 11,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "13a82fa7195b6b9c8d89e9f8748728575bd8f722529cddb7fd1ac540a948b018",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "gs2-elizabeth_2",
+      "gameId": "gemstory",
+      "engine": "cubism",
+      "name": "elizabeth_2",
+      "characterName": "elizabeth",
+      "costumeName": "elizabeth_2",
+      "skinCode": "gs2-elizabeth_2",
+      "game": "宝石研物语（动态角色）",
+      "collectionName": "宝石研物语（动态角色）",
+      "modelUrl": "./assets/model-settings/newgames/gs2-elizabeth_2.model.json?v=a17f5727995f94d8ba986a6f8abf1f8f13629f45c32157dd50fc6308d89f5ba6",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "宝石研物语/宝石研物语2/elizabeth_2/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 4492905,
+      "motionCount": 8,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "a17f5727995f94d8ba986a6f8abf1f8f13629f45c32157dd50fc6308d89f5ba6",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "gs2-elizabeth_3",
+      "gameId": "gemstory",
+      "engine": "cubism",
+      "name": "elizabeth_3",
+      "characterName": "elizabeth",
+      "costumeName": "elizabeth_3",
+      "skinCode": "gs2-elizabeth_3",
+      "game": "宝石研物语（动态角色）",
+      "collectionName": "宝石研物语（动态角色）",
+      "modelUrl": "./assets/model-settings/newgames/gs2-elizabeth_3.model.json?v=79d05996947ca42cc74772162c36c3ae1b01f4fb75472cceb908d9e98655609c",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "宝石研物语/宝石研物语2/elizabeth_3/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 6806733,
+      "motionCount": 3,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "79d05996947ca42cc74772162c36c3ae1b01f4fb75472cceb908d9e98655609c",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "gs2-elizabeth_4",
+      "gameId": "gemstory",
+      "engine": "cubism",
+      "name": "elizabeth_4",
+      "characterName": "elizabeth",
+      "costumeName": "elizabeth_4",
+      "skinCode": "gs2-elizabeth_4",
+      "game": "宝石研物语（动态角色）",
+      "collectionName": "宝石研物语（动态角色）",
+      "modelUrl": "./assets/model-settings/newgames/gs2-elizabeth_4.model.json?v=a78c1e047f822d5df9725b38a225e22f86fc11012c7ac7cf89e3e57e6a5799e3",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "宝石研物语/宝石研物语2/elizabeth_4/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 4396619,
+      "motionCount": 10,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "a78c1e047f822d5df9725b38a225e22f86fc11012c7ac7cf89e3e57e6a5799e3",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "gs2-elizabeth_5",
+      "gameId": "gemstory",
+      "engine": "cubism",
+      "name": "elizabeth_5",
+      "characterName": "elizabeth",
+      "costumeName": "elizabeth_5",
+      "skinCode": "gs2-elizabeth_5",
+      "game": "宝石研物语（动态角色）",
+      "collectionName": "宝石研物语（动态角色）",
+      "modelUrl": "./assets/model-settings/newgames/gs2-elizabeth_5.model.json?v=23ee9c238cd0d6c781c367f11cad7e5bc6be157a2297153bdaf09355de7aa988",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "宝石研物语/宝石研物语2/elizabeth_5/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 5512484,
+      "motionCount": 18,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "23ee9c238cd0d6c781c367f11cad7e5bc6be157a2297153bdaf09355de7aa988",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "gs2-elizabeth_6",
+      "gameId": "gemstory",
+      "engine": "cubism",
+      "name": "elizabeth_6",
+      "characterName": "elizabeth",
+      "costumeName": "elizabeth_6",
+      "skinCode": "gs2-elizabeth_6",
+      "game": "宝石研物语（动态角色）",
+      "collectionName": "宝石研物语（动态角色）",
+      "modelUrl": "./assets/model-settings/newgames/gs2-elizabeth_6.model.json?v=a1b9226df2f7bf0598282e70012a148de0957cb465b9a7a64c896daed97407a2",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "宝石研物语/宝石研物语2/elizabeth_6/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 8012933,
+      "motionCount": 2,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "a1b9226df2f7bf0598282e70012a148de0957cb465b9a7a64c896daed97407a2",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "gs2-elizabeth_7",
+      "gameId": "gemstory",
+      "engine": "cubism",
+      "name": "elizabeth_7",
+      "characterName": "elizabeth",
+      "costumeName": "elizabeth_7",
+      "skinCode": "gs2-elizabeth_7",
+      "game": "宝石研物语（动态角色）",
+      "collectionName": "宝石研物语（动态角色）",
+      "modelUrl": "./assets/model-settings/newgames/gs2-elizabeth_7.model.json?v=9c30a0fc29b8dedfcc8affb5b53742fb4be95029bdb16531909e72090ccb66e1",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "宝石研物语/宝石研物语2/elizabeth_7/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 10902289,
+      "motionCount": 4,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "9c30a0fc29b8dedfcc8affb5b53742fb4be95029bdb16531909e72090ccb66e1",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "gs2-elizabeth_9",
+      "gameId": "gemstory",
+      "engine": "cubism",
+      "name": "elizabeth_9",
+      "characterName": "elizabeth",
+      "costumeName": "elizabeth_9",
+      "skinCode": "gs2-elizabeth_9",
+      "game": "宝石研物语（动态角色）",
+      "collectionName": "宝石研物语（动态角色）",
+      "modelUrl": "./assets/model-settings/newgames/gs2-elizabeth_9.model.json?v=84666d13edc209dbe8f247728a0bec65573c451868de372eac5b8524fe78c06e",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "宝石研物语/宝石研物语2/elizabeth_9/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 4131315,
+      "motionCount": 7,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "84666d13edc209dbe8f247728a0bec65573c451868de372eac5b8524fe78c06e",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "gs2-elizabeth_9_1",
+      "gameId": "gemstory",
+      "engine": "cubism",
+      "name": "elizabeth_9_1",
+      "characterName": "elizabeth",
+      "costumeName": "elizabeth_9_1",
+      "skinCode": "gs2-elizabeth_9_1",
+      "game": "宝石研物语（动态角色）",
+      "collectionName": "宝石研物语（动态角色）",
+      "modelUrl": "./assets/model-settings/newgames/gs2-elizabeth_9_1.model.json?v=438d0b9b4fc6fcc5413b02b98e7c2411cfad34ee1a0ce99c4455d205e8d690fa",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "宝石研物语/宝石研物语2/elizabeth_9_1/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 3680079,
+      "motionCount": 4,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "438d0b9b4fc6fcc5413b02b98e7c2411cfad34ee1a0ce99c4455d205e8d690fa",
+      "normalizationNotes": [],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "wg-209_2",
+      "gameId": "warshipgirls",
+      "engine": "cubism",
+      "name": "209_2",
+      "characterName": "209",
+      "costumeName": "209_2",
+      "skinCode": "wg-209_2",
+      "game": "战舰少女（动态立绘）",
+      "collectionName": "战舰少女（动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/wg-209_2.model.json?v=927c9abfb4793b4ed07bfaf71eaa63a8e64ccc0a34cc0ff366e4487c2a074fb3",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "战舰少女/209_2/model.model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 2912376,
+      "motionCount": 10,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "927c9abfb4793b4ed07bfaf71eaa63a8e64ccc0a34cc0ff366e4487c2a074fb3",
+      "normalizationNotes": [
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 209_2/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 209_2/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 209_2/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 209_2/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 209_2/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 209_2/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 209_2/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 209_2/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 209_2/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 209_2/test"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "wg-248_1",
+      "gameId": "warshipgirls",
+      "engine": "cubism",
+      "name": "248_1",
+      "characterName": "248",
+      "costumeName": "248_1",
+      "skinCode": "wg-248_1",
+      "game": "战舰少女（动态立绘）",
+      "collectionName": "战舰少女（动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/wg-248_1.model.json?v=7e8b09f7cde22615685e9c930311b4f0c47ed709cb967e5db78e8e2fe49ed9c7",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "战舰少女/248_1/model.model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 1116936,
+      "motionCount": 12,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "7e8b09f7cde22615685e9c930311b4f0c47ed709cb967e5db78e8e2fe49ed9c7",
+      "normalizationNotes": [
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 248_1/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 248_1/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 248_1/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 248_1/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 248_1/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 248_1/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 248_1/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 248_1/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 248_1/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 248_1/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 248_1/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 248_1/test"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "wg-325_1",
+      "gameId": "warshipgirls",
+      "engine": "cubism",
+      "name": "325_1",
+      "characterName": "325",
+      "costumeName": "325_1",
+      "skinCode": "wg-325_1",
+      "game": "战舰少女（动态立绘）",
+      "collectionName": "战舰少女（动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/wg-325_1.model.json?v=d56a0f0eb6c31992c43a71eb34da116645380cb2a6bf739fb4e0cffe8bdc82ed",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "战舰少女/325_1/model.model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 745898,
+      "motionCount": 6,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "d56a0f0eb6c31992c43a71eb34da116645380cb2a6bf739fb4e0cffe8bdc82ed",
+      "normalizationNotes": [
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 325_1/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 325_1/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 325_1/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 325_1/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 325_1/test"
+        },
+        {
+          "file": "test",
+          "error": "Missing or empty source file: 325_1/test"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    }
+  ],
   "sources": []
 }

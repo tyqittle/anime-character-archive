@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "scope": "Four new games; pinned source file completeness checks (not WebGL playback).",
+  "games": {
+    "gunsgirlz": 12,
+    "arkorder": 15,
+    "gemstory": 14,
+    "warshipgirls": 3
+  },
+  "total": 44,
+  "reports": [
+    {
+      "scope": "gunsgirlz",
+      "gameId": "gunsgirlz",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "selectedModelSettings": 18,
+      "checkedModels": 12,
+      "rejectedModels": [
+        {
+          "path": "崩坏学园2/BYC/model.json",
+          "error": "Invalid normalized settings destination"
+        },
+        {
+          "path": "崩坏学园2/Kiana/model.json",
+          "error": "Invalid normalized settings destination"
+        },
+        {
+          "path": "崩坏学园2/Kiro/model.json",
+          "error": "Invalid normalized settings destination"
+        },
+        {
+          "path": "崩坏学园2/Lita/model.json",
+          "error": "Invalid normalized settings destination"
+        },
+        {
+          "path": "崩坏学园2/Nina/model.json",
+          "error": "Invalid normalized settings destination"
+        },
+        {
+          "path": "崩坏学园2/Nindi/model.json",
+          "error": "Invalid normalized settings destination"
+        }
+      ],
+      "error": null,
+      "importerExitCode": 1,
+      "completeWithinSelectedScope": false
+    },
+    {
+      "scope": "arkorder",
+      "gameId": "arkorder",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "selectedModelSettings": 20,
+      "checkedModels": 15,
+      "rejectedModels": [
+        {
+          "path": "方舟指令/l_103300460/model.json",
+          "error": "Missing or empty source file: l_103300460/textures/texture_03.png"
+        },
+        {
+          "path": "方舟指令/l_113100911/model.json",
+          "error": "Missing or empty source file: l_113100911/motions/020.mtn"
+        },
+        {
+          "path": "方舟指令/l_143200360/model.json",
+          "error": "Incomplete Cubism settings: l_143200360/model.json"
+        },
+        {
+          "path": "方舟指令/l_153400301/model.json",
+          "error": "Missing or empty source file: l_153400301/motions/idle.mtn"
+        },
+        {
+          "path": "方舟指令/l_153400360/model.json",
+          "error": "Incomplete Cubism settings: l_153400360/model.json"
+        }
+      ],
+      "error": null,
+      "importerExitCode": 1,
+      "completeWithinSelectedScope": false
+    },
+    {
+      "scope": "gemstory",
+      "gameId": "gemstory",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "selectedModelSettings": 5,
+      "checkedModels": 5,
+      "rejectedModels": [],
+      "error": null,
+      "importerExitCode": 0,
+      "completeWithinSelectedScope": true
+    },
+    {
+      "scope": "gemstory2",
+      "gameId": "gemstory",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "selectedModelSettings": 10,
+      "checkedModels": 9,
+      "rejectedModels": [
+        {
+          "path": "宝石研物语/宝石研物语2/elizabeth_8/model.json",
+          "error": "Missing or empty source file: elizabeth_8/motions/guide.mtn"
+        }
+      ],
+      "error": null,
+      "importerExitCode": 1,
+      "completeWithinSelectedScope": false
+    },
+    {
+      "scope": "warshipgirls",
+      "gameId": "warshipgirls",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "selectedModelSettings": 3,
+      "checkedModels": 3,
+      "rejectedModels": [],
+      "error": null,
+      "importerExitCode": 0,
+      "completeWithinSelectedScope": true
+    }
+  ]
+}

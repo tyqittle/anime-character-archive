@@ -1,0 +1,105 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/209_2/model.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/209_2/model.2048/texture_00.png"
+  ],
+  "motions": {
+    "idle": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/209_2/daiji_idle_01.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000,
+        "priority": 1
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/209_2/daiji_idle_02.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000,
+        "priority": 1
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/209_2/MISULI.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000,
+        "priority": 1
+      }
+    ],
+    "kiss": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/209_2/KISS.mtn",
+        "fade_in": 1000,
+        "fade_out": 0,
+        "priority": 2
+      }
+    ],
+    "moxiong": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/209_2/moxiong_01.mtn",
+        "fade_in": 1000,
+        "fade_out": 0,
+        "priority": 2
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/209_2/moxiong_02.mtn",
+        "fade_in": 1000,
+        "fade_out": 0,
+        "priority": 2
+      }
+    ],
+    "open": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/209_2/TUR_OPEN.mtn",
+        "fade_in": 1000,
+        "fade_out": 0,
+        "priority": 2
+      }
+    ],
+    "close": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/209_2/TUR_CLOSE.mtn",
+        "fade_in": 1000,
+        "fade_out": 0,
+        "priority": 2
+      }
+    ],
+    "glass_on": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/209_2/GLASS_On.mtn",
+        "fade_in": 1000,
+        "fade_out": 0,
+        "priority": 2
+      }
+    ],
+    "glass_off": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/209_2/GLASS_Off.mtn",
+        "fade_in": 1000,
+        "fade_out": 0,
+        "priority": 2
+      }
+    ]
+  },
+  "physics": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/209_2/physics.json",
+  "hit_areas": [
+    {
+      "name": "head",
+      "id": "D_REF_FACE"
+    },
+    {
+      "name": "head2",
+      "id": "D_REF_FACE2"
+    },
+    {
+      "name": "body",
+      "id": "D_REF_BODY"
+    },
+    {
+      "name": "tur",
+      "id": "D_REF.TUR"
+    },
+    {
+      "name": "tur2",
+      "id": "D_REF.TUR2"
+    }
+  ]
+}

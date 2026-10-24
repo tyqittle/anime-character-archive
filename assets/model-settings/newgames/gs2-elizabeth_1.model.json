@@ -1,0 +1,80 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_1/model.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_1/model.2048/texture_00.png"
+  ],
+  "motions": {
+    "idle": [],
+    "idle_1": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_1/motions/idle_1.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "idle_2": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_1/motions/idle_2.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "touch_1": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_1/motions/dianji_1.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "touch_2": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_1/motions/dianji_2.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "unlock": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_1/motions/unlock2.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "move_1": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_1/motions/move_1.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "move_2": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_1/motions/move_2.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "fixed_frame": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_1/motions/move_1.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_1/motions/move_2.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_1/motions/move2_1.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_1/motions/move2_2.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ]
+  }
+}

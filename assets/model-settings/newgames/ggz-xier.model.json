@@ -1,0 +1,128 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/xier/model.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/xier/xier.2048/texture_00.png"
+  ],
+  "motions": {
+    "shake": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/xier/motions/001.mtn",
+        "text": 155021,
+        "sound_delay": -2
+      }
+    ],
+    "flick_head": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/xier/motions/003.mtn",
+        "text": 155023,
+        "sound_delay": -4
+      }
+    ],
+    "tap_face": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/xier/motions/002.mtn",
+        "text": 155022,
+        "sound_delay": -2
+      }
+    ],
+    "tap_breast": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/xier/motions/010.mtn",
+        "text": 155030,
+        "sound_delay": -5
+      }
+    ],
+    "tap_leg": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/xier/motions/014.mtn",
+        "text": 155034,
+        "sound_delay": -1
+      }
+    ],
+    "tap_belly": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/xier/motions/014.mtn",
+        "text": 155034,
+        "sound_delay": -1
+      }
+    ],
+    "mail": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/xier/motions/007.mtn",
+        "text": 155027,
+        "sound_delay": -2
+      }
+    ],
+    "idle": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/xier/motions/010.mtn",
+        "text": 155030,
+        "sound_delay": -5
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/xier/motions/idle.mtn"
+      }
+    ],
+    "activity": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/xier/motions/012.mtn",
+        "text": 155032,
+        "sound_delay": -2
+      }
+    ],
+    "born": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/xier/motions/012.mtn",
+        "text": 155032,
+        "sound_delay": -2
+      }
+    ],
+    "friend": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/xier/motions/idle.mtn"
+      }
+    ],
+    "morning": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/xier/motions/008.mtn",
+        "text": 155028,
+        "sound_delay": -2
+      }
+    ],
+    "afternoon": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/xier/motions/idle.mtn"
+      }
+    ],
+    "evening": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/xier/motions/019.mtn",
+        "text": 155039,
+        "sound_delay": -2
+      }
+    ]
+  },
+  "physics": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/xier/physics.json",
+  "hit_areas": [
+    {
+      "name": "head",
+      "id": "D_CORE_HEAD"
+    },
+    {
+      "name": "face",
+      "id": "D_CORE_FACE"
+    },
+    {
+      "name": "breast",
+      "id": "D_CORE_BREAST"
+    },
+    {
+      "name": "belly",
+      "id": "D_CORE_BELLY"
+    },
+    {
+      "name": "leg",
+      "id": "D_CORE_LEG"
+    }
+  ]
+}

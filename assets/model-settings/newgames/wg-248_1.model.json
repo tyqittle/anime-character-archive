@@ -1,0 +1,124 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/248_1/model.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/248_1/model.1024/texture_00.png",
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/248_1/model.1024/texture_01.png"
+  ],
+  "motions": {
+    "idle": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/248_1/dadian_idle.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "priority": 1
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/248_1/dadian_idle1.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "priority": 1
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/248_1/dadian_idle2.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "priority": 1
+      }
+    ],
+    "hide_plane": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/248_1/dadian_hide_plane.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "priority": 2
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/248_1/dadian_hide_plane_2.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "priority": 2
+      }
+    ],
+    "skirt": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/248_1/dadian_skirt.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "priority": 2
+      }
+    ],
+    "look_left": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/248_1/dadian_look_left.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "priority": 2
+      }
+    ],
+    "look_right": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/248_1/dadian_look_right.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "priority": 2
+      }
+    ],
+    "hide_bra": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/248_1/dadian_hide_bra.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "priority": 2
+      }
+    ],
+    "spoiled": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/248_1/ordinarily_spoiled.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "priority": 2
+      }
+    ],
+    "smile": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/248_1/dadian_smile_01.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "priority": 2
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/248_1/dadian_smile_02.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "priority": 2
+      }
+    ]
+  },
+  "physics": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/248_1/physics.json",
+  "hit_areas": [
+    {
+      "name": "Face",
+      "id": "D_REF_FACE"
+    },
+    {
+      "name": "Mune",
+      "id": "D_REF_MUNE"
+    },
+    {
+      "name": "SUTOKA",
+      "id": "D_REF_SUTOKA"
+    },
+    {
+      "name": "Muppet",
+      "id": "D_REF_MUPPET"
+    },
+    {
+      "name": "Right",
+      "id": "D_REF_RIGHT"
+    },
+    {
+      "name": "Left",
+      "id": "D_REF_LEFT"
+    }
+  ]
+}

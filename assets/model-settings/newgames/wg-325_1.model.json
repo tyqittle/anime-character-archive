@@ -1,0 +1,75 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/325_1/model.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/325_1/model.1024/texture_00.png"
+  ],
+  "motions": {
+    "idle": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/325_1/daiji_idle_01.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "priority": 1
+      }
+    ],
+    "motou": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/325_1/motou.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "priority": 2
+      }
+    ],
+    "moxiong": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/325_1/moxiong.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "priority": 2
+      }
+    ],
+    "nanguo": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/325_1/nanguo.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "priority": 2
+      }
+    ],
+    "yansu": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/325_1/yansu.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "priority": 2
+      }
+    ],
+    "zixin": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/325_1/zixin.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "priority": 2
+      }
+    ]
+  },
+  "physics": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%88%98%E8%88%B0%E5%B0%91%E5%A5%B3/325_1/physics.json",
+  "hit_areas": [
+    {
+      "name": "head",
+      "id": "D_REF.FACE"
+    },
+    {
+      "name": "body",
+      "id": "D_REF.BODY"
+    },
+    {
+      "name": "gear_l",
+      "id": "D_REF.GEAR_L"
+    },
+    {
+      "name": "gear_r",
+      "id": "D_REF.GEAR_R"
+    }
+  ]
+}

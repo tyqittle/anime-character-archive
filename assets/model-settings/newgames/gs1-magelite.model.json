@@ -1,0 +1,35 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/magelite/model.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/magelite/model.1024/texture_00.png"
+  ],
+  "motions": {
+    "idle": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/magelite/motions/daiji.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/magelite/motions/suiji.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "tap_zuopifeng": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/magelite/motions/dianji2.mtn",
+        "sound": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/magelite/sound/mglt02.mp3",
+        "fade_in": 0,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/magelite/motions/dianji3.mtn",
+        "sound": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/magelite/sound/mglt03.mp3",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ]
+  },
+  "hit_areas": []
+}

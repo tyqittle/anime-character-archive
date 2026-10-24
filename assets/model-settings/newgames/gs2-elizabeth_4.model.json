@@ -1,0 +1,81 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_4/model.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_4/model.2048/texture_00.png",
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_4/model.2048/texture_01.png"
+  ],
+  "motions": {
+    "idle": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_4/motions/idle.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "idle_2": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_4/motions/idle2.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "idle_3": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_4/motions/dianji3_2.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "dianji1": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_4/motions/dianji1.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "dianji2": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_4/motions/dianji2.mtn",
+        "sound": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_4/sound/dianji2_effect.mp3",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "dianji4": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_4/motions/dianji4.mtn",
+        "sound": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_4/sound/dianji4_effect.mp3",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "eat": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_4/motions/dianji3_3.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "tap_head": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_4/motions/dianji3_1.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "tou1": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_4/motions/tou1.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "tou2": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_4/motions/tou2.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ]
+  }
+}

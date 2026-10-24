@@ -1,0 +1,130 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/model.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/model.2048/texture_00.png",
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/model.2048/texture_01.png"
+  ],
+  "motions": {
+    "idle": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/motions/idle1.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "idle_2": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/motions/idle2.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "dianji_1": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/motions/dianji1.mtn",
+        "sound": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/sound/dianji1_talk.mp3",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "dianji_2": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/motions/dianji2.mtn",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "tap_none_item": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/motions/dianji3.mtn",
+        "sound": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/sound/dianji3_talk.mp3",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "tap_have_item": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/motions/dianji3.mtn",
+        "sound": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/sound/dianji3_talk.mp3",
+        "fade_in": 0,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/motions/dianji4.mtn",
+        "sound": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/sound/dianji4_talk.mp3",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "tap_head_idle2": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/motions/dianji5.mtn",
+        "sound": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/sound/dianji5_talk.mp3",
+        "fade_in": 0,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/motions/dianji5.mtn",
+        "sound": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/sound/dianji5_talk.mp3",
+        "fade_in": 0,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/motions/dianji5.mtn",
+        "sound": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/sound/dianji5_talk.mp3",
+        "fade_in": 0,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/motions/dianji5.mtn",
+        "sound": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/sound/dianji5_talk.mp3",
+        "fade_in": 0,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/motions/dianji5.mtn",
+        "sound": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/sound/dianji5_talk.mp3",
+        "fade_in": 0,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/motions/dianji5.mtn",
+        "sound": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/sound/dianji5_talk.mp3",
+        "fade_in": 0,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/motions/dianji5.mtn",
+        "sound": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/sound/dianji5_talk.mp3",
+        "fade_in": 0,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/motions/dianji6.mtn",
+        "sound": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/sound/dianji6_talk.mp3",
+        "fade_in": 0,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/motions/dianji6.mtn",
+        "sound": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/sound/dianji6_talk.mp3",
+        "fade_in": 0,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/motions/dianji6.mtn",
+        "sound": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/sound/dianji6_talk.mp3",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ],
+    "dianji7": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/motions/dianji7.mtn",
+        "sound": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD/%E5%AE%9D%E7%9F%B3%E7%A0%94%E7%89%A9%E8%AF%AD2/elizabeth_5/sound/dianji7_talk.mp3",
+        "fade_in": 0,
+        "fade_out": 0
+      }
+    ]
+  }
+}

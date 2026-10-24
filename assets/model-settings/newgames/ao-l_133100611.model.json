@@ -1,0 +1,93 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%96%B9%E8%88%9F%E6%8C%87%E4%BB%A4/l_133100611/model.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%96%B9%E8%88%9F%E6%8C%87%E4%BB%A4/l_133100611/textures/texture_00.png",
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%96%B9%E8%88%9F%E6%8C%87%E4%BB%A4/l_133100611/textures/texture_01.png"
+  ],
+  "motions": {
+    "idle": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%96%B9%E8%88%9F%E6%8C%87%E4%BB%A4/l_133100611/motions/idle.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "cv_id": 1
+      }
+    ],
+    "idle_click": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%96%B9%E8%88%9F%E6%8C%87%E4%BB%A4/l_133100611/motions/002.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "cv_id": 2
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%96%B9%E8%88%9F%E6%8C%87%E4%BB%A4/l_133100611/motions/003.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "cv_id": 3
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%96%B9%E8%88%9F%E6%8C%87%E4%BB%A4/l_133100611/motions/004.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "cv_id": 4
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%96%B9%E8%88%9F%E6%8C%87%E4%BB%A4/l_133100611/motions/005.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "cv_id": 5
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%96%B9%E8%88%9F%E6%8C%87%E4%BB%A4/l_133100611/motions/006.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "cv_id": 6
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%96%B9%E8%88%9F%E6%8C%87%E4%BB%A4/l_133100611/motions/007.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "cv_id": 7
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%96%B9%E8%88%9F%E6%8C%87%E4%BB%A4/l_133100611/motions/008.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "cv_id": 8
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%96%B9%E8%88%9F%E6%8C%87%E4%BB%A4/l_133100611/motions/009.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "cv_id": 9
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%96%B9%E8%88%9F%E6%8C%87%E4%BB%A4/l_133100611/motions/010.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "cv_id": 10
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%96%B9%E8%88%9F%E6%8C%87%E4%BB%A4/l_133100611/motions/011.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "cv_id": 11
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%96%B9%E8%88%9F%E6%8C%87%E4%BB%A4/l_133100611/motions/012.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "cv_id": 12
+      }
+    ],
+    "login": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E6%96%B9%E8%88%9F%E6%8C%87%E4%BB%A4/l_133100611/motions/020.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "cv_id": 20
+      }
+    ]
+  }
+}
