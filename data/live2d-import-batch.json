@@ -1,13 +1,10 @@
 {
   "schemaVersion": 1,
-  "batch": "2026-10-24-adult-games-wave4-shift-jis-and-visual-dedup",
-  "catalog": "data/live2d-games-wave4.json",
-  "audit": "data/live2d-games-wave4-source-audit.json",
-  "catalogId": "games-wave4",
+  "batch": "2026-10-24-highquality-unknownbride-18-characters",
+  "catalog": "data/live2d-games-wave5.json",
+  "audit": "data/live2d-games-wave5-source-audit.json",
+  "catalogId": "games-wave5",
   "scopes": [
-    "ruins-seeker-characters",
-    "kagura-core",
-    "kagura-chapters2",
-    "kagura-chapters3"
+    "unknownbride-cubism3"
   ]
 }
