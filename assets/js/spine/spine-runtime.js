@@ -204,7 +204,7 @@ function clearPlayer(){
  pausedInBackground=null;
  rendererFrameStats.at=0;rendererFrameStats.count=0;
  viewZoom=1;viewOffsetX=0;viewOffsetY=0;
- $('zoomValue').textContent='100%';
+ window.ArchiveTheaterUI.setZoom(1);
  setViewerToolsEnabled(false);
  if(azurlaneFrame){azurlaneFrame.remove();azurlaneFrame=null;azurlaneReady=false;azurlanePending=null;azurlanePlayingId=''}
  const ph=document.createElement('div');ph.id='placeholder';ph.textContent='正在准备动画画布…';
@@ -214,7 +214,7 @@ function clearPlayer(){
 async function show(options,title,onError){
  const attempt=++currentAttempt;
  stopWatchdog();
- status('正在加载 '+title+' 的骨骼、图集与贴图…');$('title').textContent=title;
+ status('正在加载 '+title+' 的骨骼、图集与贴图…');window.ArchiveTheaterUI.setHeading(title);
  try{
   const version=$('version').value;
   await ensureRuntime(version,()=>attempt===currentAttempt);
@@ -311,8 +311,7 @@ async function show(options,title,onError){
     resolve(true);
     const names=(p.skeleton?.data?.animations||[]).map(a=>a.name).filter(Boolean);
     initializeSpineInteractions(p,names);
-    $('animationPicker').replaceChildren(...names.map(name=>new Option(name,name)));
-    $('animationPicker').disabled=!names.length;
+    window.ArchiveTheaterUI.setAnimations(names);
     if(!names.length){status('骨骼已显示，但没有找到可播放的动作。',true);return}
     const preferred=names.find(n=>/^(idle|idle_0?1|stand|breath|loop|wait|default)$/i.test(n))
       ||names.find(n=>/idle|stand|breath|wait/i.test(n))
@@ -321,7 +320,7 @@ async function show(options,title,onError){
       p._archiveIdleAnimation=preferred;
       p.setAnimation(preferred,true);
       initializeSpinePortrait(p);
-      $('animationPicker').value=preferred;
+      window.ArchiveTheaterUI.selectAnimation(preferred);
       p.play();
       if(document.hidden){pausedInBackground=p;p.pause()}
       status('正在播放：'+title+' · '+preferred+'（共 '+names.length+' 个动作，可用上方动作菜单切换）');
