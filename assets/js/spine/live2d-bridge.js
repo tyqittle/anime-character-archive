@@ -8,7 +8,7 @@ function ensureAzurLaneFrame(){
  azurlaneFrame=document.createElement('iframe');
  azurlaneFrame.className='azurlane-live2d-frame';
  azurlaneFrame.title='Live2D · Cubism 模型画布';
- azurlaneFrame.src='./azurlane-stage.html?v=20261024-live2d-encyclopedia-v9'+(new URLSearchParams(location.search).has('desktop')?'&desktop=1'+(new URLSearchParams(location.search).get('transport')==='webview2'?'&transport=webview2':''):'');
+ azurlaneFrame.src='./azurlane-stage.html?v=20261024-live2d-interactions-v10'+(new URLSearchParams(location.search).has('desktop')?'&desktop=1'+(new URLSearchParams(location.search).get('transport')==='webview2'?'&transport=webview2':''):'');
  azurlaneFrame.loading='eager';
  azurlaneFrame.setAttribute('allow','autoplay');
  $('player').replaceChildren(azurlaneFrame);
@@ -65,6 +65,9 @@ window.addEventListener('message',event=>{
   status('Live2D：'+data.error,true);return;
  }
  if(data.id!==azurlanePending?.id)return;
+ if(data.kind==='interaction-capability'){
+  setInteractionAvailability(data.description||'模型暂无点击互动动作');return;
+ }
  if(data.kind==='playing'){
   $('player').querySelector('.azurlane-loading-cover')?.remove();
   azurlanePlayingId=data.id;
@@ -99,4 +102,3 @@ $('retryCharacter').addEventListener('click',()=>{
  if(azurlaneFrame){clearPlayer()}
  playCharacter(character);
 });
-

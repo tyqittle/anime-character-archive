@@ -101,7 +101,7 @@ function rendererContext(){
   runtimeCss:null,player:null,currentAttempt:0,pendingRenderCancel:null,watchdog:null,
   pausedInBackground:null,rendererFrameStats:{},azurlaneFrame:null,
   setViewerToolsEnabled(){},selectedVoiceChanged(){},recordSpineFrame(){},applySharpSpineCamera(){},
-  status(){},updateGPUStatus(){},spineGraphicsStatus(){},resetViewerTransform(){},connectCanvasGestures(){},
+  status(){},updateGPUStatus(){},spineGraphicsStatus(){},resetViewerTransform(){},connectCanvasGestures(){},initializeSpineInteractions(){},
   viewZoom:1,viewOffsetX:0,viewOffsetY:0,document:{hidden:false,createElement:()=>({})},
   Option:class {constructor(text,value){this.text=text;this.value=value}}});
  ctx.stopWatchdog=()=>{ctx.clearTimeout(ctx.watchdog);ctx.watchdog=null};
@@ -243,6 +243,7 @@ test('Cubism setup errors use onError and immediately retry the same model provi
  assert.ok(validatorStart>=0&&validatorEnd>validatorStart);
  vm.runInContext(viewportSource.slice(validatorStart,validatorEnd),ctx);
  run(ctx,'assets/js/shared/cubism-motion-policy.js');
+ run(ctx,'assets/js/shared/portrait-interactions.js');
  run(ctx,'assets/js/live2d/model-loader.js');
  await ctx.load('demo','al-demo','raw');
  assert.equal(calls.length,2);

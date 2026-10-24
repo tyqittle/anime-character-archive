@@ -1,7 +1,50 @@
 'use strict';
 function setViewerToolsEnabled(ready){
+ if(!ready)setInteractionAvailability('请选择角色以查看点击交互');
  for(const id of ['zoomOut','zoomIn','resetView'])$(id).disabled=!ready;
  if(!ready){$('animationPicker').disabled=true;$('animationPicker').replaceChildren(new Option('选择角色后可切换动作',''))}
+}
+function setInteractionAvailability(description){
+ const node=$('interactionAvailability');if(node)node.textContent=description;
+ window.ArchiveDesktopBridge?.capabilities({interaction:description});
+}
+function initializeSpineInteractions(activePlayer,names){
+ let hitBounds=null,areas=[];
+ try{
+  if(window.spine?.SkeletonBounds){hitBounds=new window.spine.SkeletonBounds();hitBounds.update(activePlayer.skeleton,true);
+   areas=hitBounds.boundingBoxes.map(x=>x.name).filter(Boolean)}
+ }catch(_){hitBounds=null}
+ activePlayer._archiveHitBounds=hitBounds;
+ activePlayer._archiveInteractions=ArchivePortraitInteractions.plan({
+  entries:names.map(name=>({key:name,group:name,label:name})),areas
+ });
+ setInteractionAvailability(activePlayer._archiveInteractions.description);
+}
+function triggerSpineInteraction(activePlayer,event){
+ if(activePlayer!==player||!activePlayer._archiveInteractions)return;
+ const frame=activePlayer._archiveCameraFrame,box=activePlayer.canvas.getBoundingClientRect();
+ if(!frame||!box.width||!box.height)return;
+ const point={x:frame.x+((event.clientX-box.left)/box.width-.5)*frame.worldWidth,
+  y:frame.y+(.5-(event.clientY-box.top)/box.height)*frame.worldHeight,yDown:false};
+ let hits=[];
+ try{activePlayer._archiveHitBounds?.update(activePlayer.skeleton,true);
+  const hit=activePlayer._archiveHitBounds?.containsPoint(point.x,point.y);if(hit?.name)hits=[hit.name];
+ }catch(_){}
+ const result=activePlayer._archiveInteractions.resolve({hits,point,bounds:activePlayer._archiveViewBounds});
+ if(!result)return;
+ activePlayer.setAnimation(result.entry.key,false);activePlayer.play();
+ activePlayer._archiveLastInteraction={area:result.area,key:result.entry.key,mode:result.mode};
+ const picker=$('animationPicker');if(picker)picker.value=result.entry.key;
+ const track=activePlayer.animationState?.getCurrent(0);
+ if(track){
+  const old=track.listener;
+  track.listener={...old,complete:entry=>{
+   old?.complete?.(entry);
+   if(activePlayer!==player||activePlayer.animationState?.getCurrent(0)!==track)return;
+   if(activePlayer._archiveIdleAnimation){activePlayer.setAnimation(activePlayer._archiveIdleAnimation,true);
+    if(picker)picker.value=activePlayer._archiveIdleAnimation;}
+  }};
+ }
 }
 function syncViewTransform(){
  // Zoom and reset must update synchronously (including direct browser tests).
@@ -105,26 +148,36 @@ function adjustViewerZoom(factor){if(!player?.canvas&&!azurlaneFrame)return;if(p
 function connectCanvasGestures(activePlayer){
  const canvas=activePlayer.canvas;if(!canvas)return;
  canvas.classList.add('portrait-canvas');canvas.style.touchAction='none';
- const pointers=new Map();let pinchOrigin=0,pinchZoom=1;
+ const pointers=new Map(),tapStarts=new Map();let pinchOrigin=0,pinchZoom=1;
  const distance=()=>{const [a,b]=[...pointers.values()];return Math.hypot(a.x-b.x,a.y-b.y)};
  canvas.addEventListener('pointerdown',e=>{
   if(e.pointerType==='mouse'&&e.button!==0||activePlayer!==player)return;
   activePlayer._archiveFitPending=0;
   pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
+  tapStarts.set(e.pointerId,{id:e.pointerId,x:e.clientX,y:e.clientY});
+  if(pointers.size>1)for(const start of tapStarts.values())start.multiple=true;
   try{canvas.setPointerCapture(e.pointerId)}catch(_){}
   if(pointers.size===2){pinchOrigin=distance();pinchZoom=viewZoom}
  });
  canvas.addEventListener('pointermove',e=>{
   if(activePlayer!==player||!pointers.has(e.pointerId))return;
   const previous=pointers.get(e.pointerId);
+  const start=tapStarts.get(e.pointerId);
+  if(start&&Math.hypot(e.clientX-start.x,e.clientY-start.y)>8)start.moved=true;
   pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
   if(pointers.size===1){viewOffsetX+=e.clientX-previous.x;viewOffsetY+=e.clientY-previous.y}
   else if(pointers.size===2&&pinchOrigin>0)viewZoom=clampViewZoom(pinchZoom*distance()/pinchOrigin);
   syncViewTransform();
  });
- const finish=e=>{pointers.delete(e.pointerId);if(pointers.size<2)pinchOrigin=0};
- canvas.addEventListener('pointerup',finish);
- canvas.addEventListener('pointercancel',finish);
+ const finish=(e,canceled=false)=>{
+  const start=tapStarts.get(e.pointerId);tapStarts.delete(e.pointerId);
+  pointers.delete(e.pointerId);if(pointers.size<2)pinchOrigin=0;
+  if(!canceled&&ArchivePortraitInteractions.isTap(start,e)){
+   e._archivePortraitTap=true;triggerSpineInteraction(activePlayer,e);
+  }
+ };
+ canvas.addEventListener('pointerup',e=>finish(e));
+ canvas.addEventListener('pointercancel',e=>finish(e,true));
  canvas.addEventListener('dblclick',()=>{if(activePlayer===player)resetViewerTransform()});
  syncViewTransform();
 }

@@ -37,16 +37,25 @@ document.addEventListener('pointerup',()=>drag=false);
 // Canvas gestures work for every Cubism model, including skins whose PIXI
 // hit area does not dispatch pointertap. Do not play a voice at the end of a drag.
 let voicePointer=null;
+const interactionPointers=new Set();
 const voiceCanvas=document.getElementById('live2dCanvas');
 voiceCanvas.addEventListener('pointerdown',e=>{
- if(e.button===0)voicePointer={id:e.pointerId,x:e.clientX,y:e.clientY};
+ if(e.button!==0)return;
+ interactionPointers.add(e.pointerId);
+ if(interactionPointers.size===1)voicePointer={id:e.pointerId,x:e.clientX,y:e.clientY,generation:currentGeneration};
+ else if(voicePointer)voicePointer.multiple=true;
+});
+voiceCanvas.addEventListener('pointermove',e=>{
+ if(voicePointer&&Math.hypot(e.clientX-voicePointer.x,e.clientY-voicePointer.y)>8)voicePointer.moved=true;
 });
 voiceCanvas.addEventListener('pointerup',e=>{
+ interactionPointers.delete(e.pointerId);
  const start=voicePointer;voicePointer=null;
- if(!start||start.id!==e.pointerId||Math.hypot(e.clientX-start.x,e.clientY-start.y)>8)return;
+ if(!ArchivePortraitInteractions.isTap(start,e,{generation:currentGeneration}))return;
+ triggerLive2DInteraction(e);
  playFrameVoice();
 });
-voiceCanvas.addEventListener('pointercancel',()=>voicePointer=null);
+voiceCanvas.addEventListener('pointercancel',e=>{interactionPointers.delete(e.pointerId);voicePointer=null});
 function graphicsReport(){
  const canvas=document.getElementById('live2dCanvas'),box=canvas.getBoundingClientRect();
  const quality={backingWidth:canvas.width,backingHeight:canvas.height,
@@ -83,7 +92,7 @@ app=new PIXI.Application({view:document.getElementById('live2dCanvas'),autoStart
  if(app?.ticker)app.ticker.add(()=>{
   if(model&&readyId&&!document.hidden)model.update(Math.min(100,app.ticker.deltaMS));
  },null,PIXI.UPDATE_PRIORITY.HIGH);
- if(app?.ticker)app.ticker.add(()=>window.ArchiveDesktopBridge?.afterRender(app.view),null,PIXI.UPDATE_PRIORITY.LOW-2);
+ if(app?.ticker)app.ticker.add(()=>window.ArchiveDesktopBridge?.afterRender(app.view,live2DInputRects),null,PIXI.UPDATE_PRIORITY.LOW-2);
  let lastPerf=0;
  if(app?.ticker)app.ticker.add(()=>{
   if(!model||document.hidden||!readyId)return;
@@ -97,5 +106,3 @@ app=new PIXI.Application({view:document.getElementById('live2dCanvas'),autoStart
  message('Live2D 播放器已准备，正在等待选择角色…');
  notify('ready');
 }catch(e){initError=e.message;message('Live2D 初始化失败：'+initError);notify('error',{error:initError})}})();
-
-

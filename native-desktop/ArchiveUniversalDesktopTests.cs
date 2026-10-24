@@ -13,6 +13,102 @@ namespace SpinePet.Tests;
 // Profiles and public-only virtual host roots are unique to this test run.
 public sealed class ArchiveUniversalDesktopTests
 {
+    private sealed class SessionProbe:IDisposable
+    {
+        public readonly TaskCompletionSource<bool> Loaded=new(TaskCreationOptions.RunContinuationsAsynchronously);
+        public bool Visible;
+        public int Disposals;
+        public void Dispose()=>Disposals++;
+    }
+    [Fact]
+    public async Task DesktopSessionsLoadTogetherAndVisibilityBelongsToEachIdentity()
+    {
+        var probes=new Dictionary<ArchiveWebSelection,SessionProbe>();
+        using var sessions=new ArchiveDesktopSessions<SessionProbe>(
+            selection=>probes[selection]=new(),(host,_)=>host.Loaded.Task,(host,visible)=>host.Visible=visible);
+        var first=new ArchiveWebSelection("one","shared"),second=new ArchiveWebSelection("two","shared");
+        var a=sessions.ShowAsync(first);var b=sessions.ShowAsync(second);
+        Assert.Equal(2,sessions.Count);
+        probes[second].Loaded.SetResult(true);await b;
+        Assert.True(probes[second].Visible);Assert.False(a.IsCompleted);
+        probes[first].Loaded.SetResult(true);await a;
+        Assert.True(probes[first].Visible&&probes[second].Visible);
+        sessions.Hide(first);Assert.False(probes[first].Visible);Assert.True(probes[second].Visible);
+        Assert.Same(probes[first],await sessions.ShowAsync(first));
+        sessions.Remove(second);Assert.Equal(1,probes[second].Disposals);Assert.True(probes[first].Visible);
+    }
+    [Fact]
+    public async Task RemovingALoadingPetCannotResurrectItOrDisposeItsReplacement()
+    {
+        var probes=new List<SessionProbe>();
+        using var sessions=new ArchiveDesktopSessions<SessionProbe>(
+            _=>{var probe=new SessionProbe();probes.Add(probe);return probe;},
+            (host,_)=>host.Loaded.Task,(host,visible)=>host.Visible=visible);
+        var selection=new ArchiveWebSelection("one","role");
+        var old=sessions.ShowAsync(selection);sessions.Remove(selection);
+        var replacement=sessions.ShowAsync(selection);
+        probes[0].Loaded.SetResult(true);Assert.Null(await old);
+        Assert.Equal(1,sessions.Count);Assert.Equal(1,probes[0].Disposals);
+        probes[1].Loaded.SetResult(true);Assert.Same(probes[1],await replacement);
+        Assert.Same(probes[1],sessions.Find(selection));Assert.Equal(0,probes[1].Disposals);
+    }
+    [Fact]
+    public void MultipleVisiblePetsAndMouseThroughPreferencesSurviveRestart()
+    {
+        string root=Path.Combine(Path.GetTempPath(),"archive-multiple-"+Guid.NewGuid().ToString("N"));
+        try
+        {
+            string path=Path.Combine(root,"library.json"),legacy=Path.Combine(root,"none");
+            var library=ArchiveWebLibrary.Load(path,legacy);
+            library.Put(new("one","a","First",true,MouseThrough:true));
+            library.Put(new("two","b","Second",true));
+            var restored=ArchiveWebLibrary.Load(path,legacy);
+            Assert.Equal(2,restored.Characters.Count(x=>x.Visible));
+            Assert.True(restored.Find(new("one","a"))!.MouseThrough);
+            restored.Remove(new("one","a"));
+            Assert.True(restored.Characters.Single().Visible);
+        }
+        finally {if(Directory.Exists(root))Directory.Delete(root,true);}
+    }
+    [Fact]
+    public Task DesktopClicksReachBackgroundAndContextMenusStayAboveThePortrait()=>Sta(async()=>{
+        using var backdrop=new System.Windows.Forms.Form{
+            FormBorderStyle=System.Windows.Forms.FormBorderStyle.None,
+            StartPosition=System.Windows.Forms.FormStartPosition.Manual,
+            Bounds=new Rectangle(0,0,320,300),ShowInTaskbar=false
+        };
+        var target=new System.Windows.Forms.Button{Location=new Point(155,155),Size=new Size(100,80),Text="Desktop target"};
+        backdrop.Controls.Add(target);backdrop.Show();
+        using var host=new ArchiveWebViewHost(new("fixture","one"),TestSite);
+        await host.OpenAsync(Path.Combine(TestRoot,"input-profile"),CancellationToken.None,Path.Combine(TestRoot,"fixture"));
+        await Task.Delay(250);
+        Assert.False(IsWindowEnabled(host.Window!.Handle));
+        var backgroundPoint=target.PointToScreen(new Point(20,20));
+        Assert.Equal(target.Handle,WindowFromPoint(backgroundPoint));
+        await host.Core!.ExecuteScriptAsync("window.__pointerUps=0;document.addEventListener('pointerup',()=>window.__pointerUps++);chrome.webview.addEventListener('message',e=>window.__command=e.data.command)");
+        int x=host.Window.Left+40,y=host.Window.Top+40;
+        SetCursorPos(x,y);
+        SendMessage(host.InputHandle,0x0200,IntPtr.Zero,IntPtr.Zero);
+        SendMessage(host.InputHandle,0x0201,IntPtr.Zero,IntPtr.Zero);
+        SendMessage(host.InputHandle,0x0202,IntPtr.Zero,IntPtr.Zero);
+        await Task.Delay(120);
+        Assert.Equal("1",await host.Core.ExecuteScriptAsync("window.__pointerUps"));
+        SendMessage(host.InputHandle,0x0204,IntPtr.Zero,IntPtr.Zero);
+        SendMessage(host.InputHandle,0x0205,IntPtr.Zero,IntPtr.Zero);
+        await Task.Delay(350);
+        Assert.NotNull(host.Menu);Assert.True(host.Menu!.Visible);
+        var zoom=host.Menu.Items.Cast<System.Windows.Forms.ToolStripItem>().Single(item=>item.Text=="放大");
+        var menuPoint=host.Menu.PointToScreen(new Point(zoom.Bounds.Left+12,zoom.Bounds.Top+zoom.Bounds.Height/2));
+        Assert.Equal(host.Menu.Handle,WindowFromPoint(menuPoint));
+        zoom.PerformClick();await Task.Delay(80);
+        Assert.Equal("\"zoomIn\"",await host.Core.ExecuteScriptAsync("window.__command"));
+        host.Menu.Close();
+        host.SetMouseThrough(true);await Task.Delay(150);
+        Assert.False(IsWindowVisible(host.InputHandle));
+        Assert.Equal(target.Handle,WindowFromPoint(backgroundPoint));
+        host.SetMouseThrough(false);await Task.Delay(150);Assert.True(IsWindowVisible(host.InputHandle));
+        backdrop.Close();
+    });
     [Theory]
     [InlineData(640,560,1)]
     [InlineData(640,560,1.25)]
@@ -241,6 +337,23 @@ public sealed class ArchiveUniversalDesktopTests
     });
 
     [Fact]
+    public Task TwoRealCompositionHostsShareTheCacheAndKeepIndependentVisibility()=>Sta(async()=>{
+        string profile=Path.Combine(TestRoot,"multi-profile"),root=Path.Combine(TestRoot,"fixture");
+        using var first=new ArchiveWebViewHost(new("fixture","first"),TestSite);
+        using var second=new ArchiveWebViewHost(new("fixture","second"),TestSite,placementIndex:1);
+        await Task.WhenAll(first.OpenAsync(profile,CancellationToken.None,root),
+            second.OpenAsync(profile,CancellationToken.None,root));
+        Assert.NotEqual(first.Window!.Handle,second.Window!.Handle);
+        Assert.True(first.MaskCount>0&&second.MaskCount>0);
+        int count=second.MaskCount;
+        first.SetVisible(false);await Task.Delay(350);
+        Assert.False(IsWindowVisible(first.InputHandle));Assert.True(IsWindowVisible(second.InputHandle));
+        Assert.True(second.MaskCount>count);
+        first.SetVisible(true);await Task.Delay(150);
+        Assert.True(IsWindowVisible(first.InputHandle)&&IsWindowVisible(second.InputHandle));
+    });
+
+    [Fact]
     public Task CurrentWebsiteEnginesRenderAndKeepUserView()=>Sta(async()=>{
         var cases=JsonSerializer.Deserialize<List<CatalogCase>>(
             await File.ReadAllTextAsync(Path.Combine(TestRoot,"cases.json")))!;
@@ -316,4 +429,8 @@ public sealed class ArchiveUniversalDesktopTests
     [DllImport("user32.dll")]private static extern int GetWindowRgn(IntPtr hwnd,IntPtr region);
     [DllImport("user32.dll")]private static extern IntPtr GetWindow(IntPtr hwnd,uint command);
     [DllImport("user32.dll")]private static extern bool IsWindowVisible(IntPtr hwnd);
+    [DllImport("user32.dll")]private static extern bool IsWindowEnabled(IntPtr hwnd);
+    [DllImport("user32.dll")]private static extern IntPtr WindowFromPoint(Point point);
+    [DllImport("user32.dll")]private static extern bool SetCursorPos(int x,int y);
+    [DllImport("user32.dll",EntryPoint="SendMessageW")]private static extern IntPtr SendMessage(IntPtr window,uint message,IntPtr wParam,IntPtr lParam);
 }

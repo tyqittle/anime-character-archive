@@ -7,8 +7,9 @@ Website imports are registered in the existing Characters area under 网页角�
   visibility, voice and selected action, in universal-characters-v1.json.
 - Import the previous universal-desktop-v1.json on first use. Once the new file
   exists it is authoritative, including an empty library after removal.
-- Selection replaces the currently displayed website character, matching the
-  previous single-host behavior; earlier selections remain available in the list.
+- Every visible identity owns an independent composition host and cancellable load.
+  Showing a new identity retains other visible pets; showing an existing identity
+  reuses its host. All visible registrations are restored after restart.
 - Hide preserves the entry; remove only removes its registration and active host.
   Neither operation deletes downloaded resources or the shared WebView2 profile.
 - Writes use a temporary file and atomic replacement. Failed writes retain the
@@ -26,3 +27,9 @@ Window commands live in an auto-sized shared toolbar outside both character sett
 areas. Library import actions wrap in their own row. Windows layout regressions check
 minimum/default sizes, enlarged labels and hit testing with both library tabs active.
 The original 58-pixel selected-character title no longer contains application commands.
+
+The source input HWND owns the alpha/interaction region; the visual browser HWND
+is disabled for native input. Popup menus open after right-button capture releases
+and remain above composition windows. Mouse-through is individually configurable
+in the client and persisted per model. Exported hit regions restrict input for
+scenery-heavy Cubism models without changing their rendered pixels.

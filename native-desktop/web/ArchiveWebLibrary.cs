@@ -4,7 +4,7 @@ using System.Text.Json;
 namespace SpinePet;
 
 internal sealed record ArchiveWebCharacter(string Game,string Id,string Name,bool Visible=false,
-    bool Voice=false,string Action="")
+    bool Voice=false,string Action="",bool MouseThrough=false)
 {
     public ArchiveWebSelection Selection=>new(Game,Id);
     public string Label=>$"{Name}\n{Game} · {(Visible?"桌面显示中":"已保存")}";
@@ -53,8 +53,6 @@ internal sealed class ArchiveWebLibrary
         var next=_characters.ToList();
         int index=next.FindIndex(x=>x.Game==character.Game&&x.Id==character.Id);
         if(index<0)next.Add(character);else next[index]=character;
-        if(character.Visible)
-            for(int i=0;i<next.Count;i++)if(i!= (index<0?next.Count-1:index))next[i]=next[i] with{Visible=false};
         Commit(next);
     }
     public void Remove(ArchiveWebSelection selection)=>Commit(_characters.Where(x=>x.Selection!=selection).ToList());

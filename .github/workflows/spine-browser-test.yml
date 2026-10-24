@@ -8,6 +8,10 @@ on:
       - 'assets/js/shared/spine-atlas-coordinates.js'
       - 'assets/js/shared/portrait-framing.js'
       - 'scripts/test_portrait_view_browser.mjs'
+      - 'scripts/test_portrait_interactions_browser.mjs'
+      - 'assets/js/shared/portrait-interactions.js'
+      - 'assets/js/live2d/**'
+      - 'assets/js/spine/desktop-webview-bridge.js'
       - 'scripts/catalog_registry.mjs'
       - '.github/workflows/spine-browser-test.yml'
       - 'scripts/test_spine_browser.mjs'
@@ -44,6 +48,8 @@ jobs:
         run: node scripts/test_spine_ui_browser.mjs
       - name: Test actual character playback in Chromium
         run: node scripts/test_spine_browser.mjs
+      - name: Verify source body interactions and drag separation
+        run: node scripts/test_portrait_interactions_browser.mjs
       - name: Upload browser test details even on failure
         if: always()
         uses: actions/upload-artifact@v4
@@ -51,6 +57,7 @@ jobs:
           name: spine-browser-results
           path: |
             /tmp/spine-browser-results.json
+            /tmp/portrait-interaction-results.json
             /tmp/ba-rotation-results.json
             /tmp/ba-ch0145-after-fix.png
           if-no-files-found: warn

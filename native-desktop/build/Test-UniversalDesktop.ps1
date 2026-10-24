@@ -17,8 +17,8 @@ foreach ($directory in @('assets/js','data','vendor')) {
 # Only the chosen cases' thumbnails are useful; hidden gallery assets are not renderer input.
 @'
 <!doctype html><html><head><style>html,body{margin:0;background:transparent}#pixel{position:absolute;left:20px;top:20px;width:100px;height:100px;background:red}</style></head><body><div id="pixel"></div><script>
-const q=new URLSearchParams(location.search),session=q.get('session');
-function emit(kind,data){chrome.webview.postMessage({channel:'archive-desktop-v1',session,kind,id:'one',...data})}
+const q=new URLSearchParams(location.search),session=q.get('session'),id=q.get('id')||'one';
+function emit(kind,data){chrome.webview.postMessage({channel:'archive-desktop-v1',session,kind,id,...data})}
 emit('ready',{game:'fixture',engine:'fixture',name:'fixture'});
 setInterval(()=>emit('mask',{width:innerWidth,height:innerHeight,rects:[[20,20,100,100]]}),100);
 </script></body></html>

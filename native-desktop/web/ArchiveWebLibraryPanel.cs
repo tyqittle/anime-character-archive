@@ -81,6 +81,7 @@ internal sealed class ArchiveWebLibraryPanel : IDisposable
                 if(item.Visible)_hide(item.Selection);else await _show(item.Selection);
             });
             var host=_host(item.Selection);
+            if(!string.IsNullOrWhiteSpace(host?.InteractionDescription))Text(host.InteractionDescription);
             if(host!=null)
             {
                 var actions=new C.ComboBox{ItemsSource=host.Actions,DisplayMemberPath="Label",
@@ -91,7 +92,14 @@ internal sealed class ArchiveWebLibraryPanel : IDisposable
                 Button("缩小",()=>{host.Command("zoomOut");return Task.CompletedTask;});
                 Button("适应画面",()=>{host.Command("resetView");return Task.CompletedTask;});
             }
-            var voice=new C.CheckBox{Content="角色语音",IsChecked=item.Voice,Margin=new W.Thickness(0,8,0,8)};
+            var through=new C.CheckBox{Content="鼠标穿透",IsChecked=item.MouseThrough,
+                Foreground=M.Brushes.White,Margin=new W.Thickness(0,8,0,8)};
+            through.Click+=(_,_)=>{
+                if(host!=null)host.SetMouseThrough(through.IsChecked==true);
+                else _library.Put(item with{MouseThrough=through.IsChecked==true});
+            };_settings.Children.Add(through);
+            var voice=new C.CheckBox{Content="角色语音",IsChecked=item.Voice,
+                Foreground=M.Brushes.White,Margin=new W.Thickness(0,8,0,8)};
             voice.Click+=(_,_)=>{
                 bool enabled=voice.IsChecked==true;
                 if(host!=null)host.Command("voice",enabled:enabled);

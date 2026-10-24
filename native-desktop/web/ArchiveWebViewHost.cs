@@ -16,6 +16,7 @@ internal sealed class ArchiveWebViewHost : IDisposable
 {
     private readonly ArchiveWebSelection _selection;
     private readonly Uri _site;
+    private readonly int _placementIndex;
     private readonly string _session=Guid.NewGuid().ToString("N");
     private readonly TaskCompletionSource<bool> _ready=new(TaskCreationOptions.RunContinuationsAsynchronously);
     private NativeCompositionWindow? _window;
@@ -25,6 +26,7 @@ internal sealed class ArchiveWebViewHost : IDisposable
     private Forms.ContextMenuStrip? _menu;
     private readonly List<(string Id,string Label)> _actions=[];
     private bool _pressed,_disposed,_visible=true,_voice;
+    private bool _menuOpen,_mouseThrough;
     internal int MaskCount { get; private set; }
     internal int InputApplyCount => _input?.RegionApplyCount ?? 0;
     internal string ReadyEngine { get; private set; }="";
@@ -35,12 +37,16 @@ internal sealed class ArchiveWebViewHost : IDisposable
     internal IntPtr InputHandle => _input?.Handle ?? IntPtr.Zero;
     public event Action? HiddenByUser;
     public event Action? SettingsChanged;
+    public event Action? CapabilitiesChanged;
+    internal bool MouseThrough=>_mouseThrough;
+    internal string InteractionDescription {get;private set;}="";
+    internal Forms.ContextMenuStrip? Menu=>_menu;
     internal sealed record MotionOption(string Id,string Label);
     internal MotionOption[] Actions=>_actions.Select(x=>new MotionOption(x.Id,x.Label)).ToArray();
     internal bool VoiceEnabled=>_voice;
     internal string ActionId {get;private set;}="";
-    public ArchiveWebViewHost(ArchiveWebSelection selection,Uri? site=null)
-    { _selection=selection;_site=site??ArchiveWebSelection.Site; }
+    public ArchiveWebViewHost(ArchiveWebSelection selection,Uri? site=null,int placementIndex=0)
+    { _selection=selection;_site=site??ArchiveWebSelection.Site;_placementIndex=Math.Clamp(placementIndex,0,99); }
 
     public async Task OpenAsync(string profileDirectory,CancellationToken cancellation,string? publicTestDirectory=null)
     {
@@ -50,6 +56,9 @@ internal sealed class ArchiveWebViewHost : IDisposable
             await ArchiveWebRuntime.EnsureAsync(cancellation);
             cancellation.ThrowIfCancellationRequested();
             _window=new NativeCompositionWindow();
+            // This HWND owns visuals only. Its browser child windows must
+            // never become a desktop-sized operating-system input target.
+            EnableWindow(_window.Handle,false);
             _input=new NativeInputWindow(_window.Left,_window.Top,_window.Width,_window.Height);
             _input.ClearAndHide();
             _input.MouseInput=OnMouse;
@@ -108,7 +117,7 @@ internal sealed class ArchiveWebViewHost : IDisposable
                     CoreWebView2HostResourceAccessKind.DenyCors);
             }
             _composition.Commit();
-            web.Navigate(_selection.Page(_site,_session).AbsoluteUri);
+            web.Navigate(_selection.Page(_site,_session).AbsoluteUri+"&slot="+_placementIndex);
             await _ready.Task.WaitAsync(TimeSpan.FromSeconds(80),cancellation);
             AppLogger.Write(nameof(ArchiveWebViewHost),
                 $"universal-playing game={_selection.Game} id={_selection.Id} engine={ReadyEngine}");
@@ -167,6 +176,13 @@ internal sealed class ArchiveWebViewHost : IDisposable
                     _actions.Add((value,label));
                 }
             }
+            else if (kind=="capabilities")
+            {
+                InteractionDescription=data.TryGetProperty("interaction",out var description)
+                    ?(description.GetString()??""):"";
+                if(InteractionDescription.Length>512)throw new InvalidDataException("Interaction description budget exceeded");
+                CapabilitiesChanged?.Invoke();
+            }
             else if (kind=="mask") ApplyMask(data);
         }
         catch(Exception error)
@@ -198,9 +214,12 @@ internal sealed class ArchiveWebViewHost : IDisposable
                 (int)Math.Ceiling((x+w)/width*_window.Width),(int)Math.Ceiling((y+h)/height*_window.Height)));
         }
         if(regions.Count==0){if(!_pressed)_input.ClearAndHide();return;}
-        _input.SetInteractiveRegions(regions);_input.Show();
-        // Keep the no-paint input HWND underneath the GPU visual in the same topmost band.
-        SetWindowPos(_input.Handle,_window.Handle,0,0,0,0,0x0001|0x0002|0x0010);
+        if(_mouseThrough||_menuOpen)_input.ClearAndHide();
+        else
+        {
+            _input.SetInteractiveRegions(regions);_input.Show();
+            SetWindowPos(_input.Handle,_window.Handle,0,0,0,0,0x0001|0x0002|0x0010);
+        }
         MaskCount++;
         if(!string.IsNullOrEmpty(ReadyEngine))_ready.TrySetResult(true);
     }
@@ -219,7 +238,17 @@ internal sealed class ArchiveWebViewHost : IDisposable
         else if(message==0x0202){_pressed=false;Forward(CoreWebView2MouseEventKind.LeftButtonUp,point);}
         else if(message==0x0200)Forward(CoreWebView2MouseEventKind.Move,point);
         else if(message==0x0215&&_pressed){_pressed=false;Forward(CoreWebView2MouseEventKind.LeftButtonUp,point);}
-        else if(message==0x0205)ShowMenu(new Point(x,y));
+        else if(message==0x0205&&!_menuOpen)
+        {
+            _menuOpen=true;
+            // NativeInputWindow releases its right-button capture after this
+            // callback. Open the popup afterwards so it keeps its own capture.
+            var position=new Point(x,y);
+            System.Windows.Threading.Dispatcher.CurrentDispatcher.BeginInvoke(new Action(()=>{
+                try{if(!_disposed)ShowMenu(position);}
+                catch(Exception error){_menuOpen=false;AppLogger.Write(nameof(ArchiveWebViewHost),"menu-open "+error.Message);}
+            }));
+        }
     }
     public void Command(string command,string? value=null,bool enabled=false)
     {
@@ -229,9 +258,16 @@ internal sealed class ArchiveWebViewHost : IDisposable
             new {kind="command",session=_session,command,value,enabled}));
         if(command is "voice" or "action")SettingsChanged?.Invoke();
     }
-    private void ShowMenu(Point position)
+    internal void ShowMenu(Point position)
     {
+        if(_disposed)return;
         _menu?.Dispose();_menu=new Forms.ContextMenuStrip();
+        _menuOpen=true;_input?.ClearAndHide();
+        _menu.Closed+=(_,_)=>_menuOpen=false;
+        static void KeepAbove(Forms.ToolStripDropDown popup)=>popup.Opened+=(_,_)=>{
+            if(!popup.IsDisposed)SetWindowPos(popup.Handle,new IntPtr(-1),0,0,0,0,0x0001|0x0002|0x0010);
+        };
+        KeepAbove(_menu);
         _menu.Items.Add(string.IsNullOrWhiteSpace(ReadyName)?_selection.Id:ReadyName).Enabled=false;
         var motions=new Forms.ToolStripMenuItem("切换动作");
         for(int start=0;start<_actions.Count;start+=40)
@@ -242,17 +278,27 @@ internal sealed class ArchiveWebViewHost : IDisposable
                 var item=new Forms.ToolStripMenuItem(action.Label);
                 item.Click+=(_,_)=>Command("action",action.Id);page.DropDownItems.Add(item);
             }
+            KeepAbove(page.DropDown);
             if(_actions.Count<=40)motions=page;else motions.DropDownItems.Add(page);
         }
         motions.Enabled=_actions.Count>0;_menu.Items.Add(motions);
+        KeepAbove(motions.DropDown);
         _menu.Items.Add("放大",null,(_,_)=>Command("zoomIn"));
         _menu.Items.Add("缩小",null,(_,_)=>Command("zoomOut"));
         _menu.Items.Add("适应画面",null,(_,_)=>Command("resetView"));
         var voice=new Forms.ToolStripMenuItem("角色语音"){Checked=_voice,CheckOnClick=true};
         voice.Click+=(_,_)=>{_voice=voice.Checked;Command("voice",enabled:_voice);};_menu.Items.Add(voice);
+        var through=new Forms.ToolStripMenuItem("鼠标穿透（可在客户端关闭）"){Checked=_mouseThrough,CheckOnClick=true};
+        through.Click+=(_,_)=>SetMouseThrough(through.Checked);_menu.Items.Add(through);
         _menu.Items.Add("重新加载",null,(_,_)=>Command("retryCharacter"));
         _menu.Items.Add("隐藏角色",null,(_,_)=>{SetVisible(false);HiddenByUser?.Invoke();});
         _menu.Show(position);
+    }
+    internal void SetMouseThrough(bool enabled)
+    {
+        _mouseThrough=enabled;
+        if(enabled){_pressed=false;_input?.ClearAndHide();}
+        SettingsChanged?.Invoke();
     }
     public void SetVisible(bool visible)
     {
@@ -276,4 +322,5 @@ internal sealed class ArchiveWebViewHost : IDisposable
     }
     [DllImport("user32.dll")]private static extern bool SetWindowPos(IntPtr hwnd,IntPtr after,int x,int y,int w,int h,uint flags);
     [DllImport("user32.dll")]private static extern bool ShowWindow(IntPtr hwnd,int command);
+    [DllImport("user32.dll")]private static extern bool EnableWindow(IntPtr hwnd,bool enabled);
 }

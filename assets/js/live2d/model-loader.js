@@ -20,6 +20,30 @@ function playFrameVoice(){
  return frameVoicePlayer.play([...urls.slice(index),...urls.slice(0,index)],frameVoiceVolume);
 }
 let frameMotionController=null;
+let frameInteractionPlan=null;
+function live2DInputRects(){
+ const im=model?.internalModel,areas=Object.values(im?.hitAreas||{});
+ if(!areas.length||!app||!model?.worldTransform)return null;
+ const box=document.getElementById('live2dCanvas').getBoundingClientRect();
+ try{return areas.map(area=>{
+  const b=im.getDrawableBounds(area.index),points=[
+   {x:b.x,y:b.y},{x:b.x+b.width,y:b.y},{x:b.x,y:b.y+b.height},{x:b.x+b.width,y:b.y+b.height}
+  ].map(p=>model.worldTransform.apply(im.localTransform.apply(p)));
+  const x=Math.min(...points.map(p=>p.x)),y=Math.min(...points.map(p=>p.y));
+  return [box.left+x*box.width/app.screen.width,box.top+y*box.height/app.screen.height,
+   (Math.max(...points.map(p=>p.x))-x)*box.width/app.screen.width,
+   (Math.max(...points.map(p=>p.y))-y)*box.height/app.screen.height];
+ }).filter(r=>r.every(Number.isFinite)&&r[2]>0&&r[3]>0)}catch(_){return null}
+}
+function triggerLive2DInteraction(event){
+ if(!model||!readyId||!frameInteractionPlan||!app)return null;
+ const box=document.getElementById('live2dCanvas').getBoundingClientRect();
+ if(!box.width||!box.height)return null;
+ const point={x:(event.clientX-box.left)*app.screen.width/box.width,y:(event.clientY-box.top)*app.screen.height/box.height};
+ const hit=frameInteractionPlan.resolve({hits:model.hitTest(point.x,point.y),point,bounds:model.getBounds()});
+ if(hit){model._archiveLastInteraction={area:hit.area,key:hit.entry.key,mode:hit.mode};motion(hit.entry.key);notify('interaction',model._archiveLastInteraction)}
+ return hit;
+}
 function motion(name){
  if(!model||typeof name!=='string')return;
  return frameMotionController?.play(name);
@@ -28,7 +52,7 @@ async function load(name,id,modelUrl){
  if(!validLive2DIdentity(name,id)){notify('error',{error:'无效的 Live2D 模型编号'});return}
  const generation=++currentGeneration;
  currentId=id;readyId='';loadStartedAt=performance.now();portraitLocalBounds=null;portraitGeometryBounds=null;
- frameMotionController?.dispose();frameMotionController=null;
+ frameMotionController?.dispose();frameMotionController=null;frameInteractionPlan=null;
  zoom=desktopMode?.58:1;offsetX=desktopMode?(app?.screen?.width||window.innerWidth)*.24:0;offsetY=desktopMode?(app?.screen?.height||window.innerHeight)*.07:0;
  if(model){try{app.stage.removeChild(model);model.destroy()}catch(e){}model=null}
  if(!app){notify('error',{error:initError||'Live2D 渲染库尚未加载'});return}
@@ -85,7 +109,12 @@ async function load(name,id,modelUrl){
   // Model readiness and the first visible fit must refer to its standby pose.
   if(initial&&!await frameMotionController.start()&&generation===currentGeneration&&model===next)throw Error('初始动作未能加载：'+initial);
   if(generation!==currentGeneration||model!==next)return;
-  model.on('hit',areas=>{if(Array.isArray(areas)&&areas.length){const a=areas[0];notify('interaction',{area:a});if(actions.includes(a))motion(a)}});
+  frameInteractionPlan=ArchivePortraitInteractions.plan({
+   entries:frameMotionController.entries,areas:Object.keys(model.internalModel?.hitAreas||{})
+  });
+  model._archiveInteractions={mode:frameInteractionPlan.mode,areas:frameInteractionPlan.sourceAreas,
+   mapped:frameInteractionPlan.mappedAreas};
+  notify('interaction-capability',{description:frameInteractionPlan.description});
   const p=(evt)=>{if(!model)return;const pt=evt?.data?.global;if(!pt)return;model.dragging=true;model.dragX=pt.x;model.dragY=pt.y};
   // Play audio within the SAME pointer gesture and iframe. postMessage to the
   // parent is asynchronous and loses transient user activation in some browsers.
@@ -100,4 +129,3 @@ async function load(name,id,modelUrl){
   notify('playing',{motions:actions,motionLabels,selectedMotion:initial,zoom,loadMs:Math.round(performance.now()-loadStartedAt),fpsCap:targetFPS,graphics:graphicsReport()});
  }catch(e){try{next?.destroy()}catch(_){}if(generation!==currentGeneration)return;model=null;readyId='';message('模型加载失败：'+(e?.message||String(e)));notify('error',{error:'模型加载失败：'+(e?.message||String(e))})}
 }
-

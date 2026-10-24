@@ -64,7 +64,7 @@ window.addEventListener('DOMContentLoaded',()=>{
  document.getElementById('voiceEnabled').addEventListener('change',e=>{voiceEnabled=e.target.checked;if(!voiceEnabled)selectedVoiceChanged();else syncFrameVoice()});
  document.getElementById('voiceLanguage').addEventListener('change',e=>{voiceLanguage=e.target.value;selectedVoiceChanged()});
  document.getElementById('voiceVolume').addEventListener('input',e=>{voiceVolume=Number(e.target.value)/100;characterVoicePlayer.setVolume(voiceVolume);syncFrameVoice()});
- document.getElementById('player').addEventListener('pointerup',e=>{if(e.target.closest('canvas'))playCharacterVoice(chosen())});
+ document.getElementById('player').addEventListener('pointerup',e=>{if(e._archivePortraitTap===true&&e.target.closest('canvas'))playCharacterVoice(chosen())});
  document.getElementById('characters').addEventListener('change',selectedVoiceChanged);
  document.getElementById('characterCards').addEventListener('click',selectedVoiceChanged);
  document.getElementById('gameFilter').addEventListener('change',selectedVoiceChanged);
@@ -74,4 +74,3 @@ window.addEventListener('DOMContentLoaded',()=>{
  updateVoiceUI();
  if(voiceEnabled)syncFrameVoice();
 });
-

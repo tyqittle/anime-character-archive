@@ -310,6 +310,7 @@ async function show(options,title,onError){
     }
     resolve(true);
     const names=(p.skeleton?.data?.animations||[]).map(a=>a.name).filter(Boolean);
+    initializeSpineInteractions(p,names);
     $('animationPicker').replaceChildren(...names.map(name=>new Option(name,name)));
     $('animationPicker').disabled=!names.length;
     if(!names.length){status('骨骼已显示，但没有找到可播放的动作。',true);return}
@@ -317,6 +318,7 @@ async function show(options,title,onError){
       ||names.find(n=>/idle|stand|breath|wait/i.test(n))
       ||names[0];
     try{
+      p._archiveIdleAnimation=preferred;
       p.setAnimation(preferred,true);
       initializeSpinePortrait(p);
       $('animationPicker').value=preferred;

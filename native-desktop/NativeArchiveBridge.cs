@@ -136,7 +136,7 @@ public sealed partial class App
     private async Task RestoreArchiveCharactersAsync()
     {
         await RestoreCharactersAsync();
-        if(!File.Exists(ArchiveRequestPath))await RestoreUniversalDesktopAsync();
+        _ = RestoreUniversalDesktopAsync();
         await ShowArchiveRequestAsync();
     }
 
@@ -146,7 +146,6 @@ public sealed partial class App
             return;
         if (!await _archiveShowGate.WaitAsync(0))
         {
-            _universalLoad?.Cancel();
             return; // the latest atomic request is drained in finally
         }
         try
@@ -159,7 +158,7 @@ public sealed partial class App
             // The unique claimed file cannot consume a newer browser request.
             if(request?.Host=="webview2")
             {
-                await ShowUniversalDesktopAsync(new ArchiveWebSelection(game,id));
+                _ = ShowUniversalDesktopAsync(new ArchiveWebSelection(game,id));
                 return;
             }
             bool supportedNikke = game == "nikke" &&

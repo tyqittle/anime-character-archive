@@ -4,7 +4,7 @@
  if(!query.has('desktop')||query.get('transport')!=='webview2')return;
  const child=window.parent!==window,session=query.get('session')||'';
  let lastSample=-Infinity,ready=false,viewRestored=false,failed=false,lastView='',lastSave=0;
- let sample=null,context=null,lastActions='',renderedFrames=0;
+ let sample=null,context=null,lastActions='',renderedFrames=0,lastFrameView=null;
  const emit=(kind,data={})=>{
   if(child){window.parent.postMessage({channel:'archive-desktop-surface',kind,...data},location.origin);return}
   window.chrome?.webview?.postMessage({channel:'archive-desktop-v1',session,kind,...data});
@@ -23,8 +23,15 @@
   if(child||viewRestored)return;
   viewRestored=true;
   try{
-   const v=JSON.parse(localStorage.getItem(viewKey())||'null');
-   if(!v||![v.zoom,v.offsetX,v.offsetY].every(Number.isFinite))return;
+   let v=JSON.parse(localStorage.getItem(viewKey())||'null');
+   if(!v){
+    const slot=Math.max(0,Math.min(99,Number(query.get('slot'))||0));
+    if(!slot)return;
+    v={...frameView()};
+    v.offsetX-=(slot%3)*innerWidth*.26;
+    v.offsetY-=Math.floor(slot/3)*innerHeight*.18;
+   }
+   if(![v.zoom,v.offsetX,v.offsetY].every(Number.isFinite))return;
    v.zoom=Math.min(3.5,Math.max(.5,v.zoom));
    v.offsetX=Math.min(50000,Math.max(-50000,v.offsetX));
    v.offsetY=Math.min(50000,Math.max(-50000,v.offsetY));
@@ -43,9 +50,10 @@
  }
  function frameView(){
   if(child)return {zoom,offsetX,offsetY};
+  if(typeof azurlaneFrame!=='undefined'&&azurlaneFrame&&lastFrameView)return lastFrameView;
   return {zoom:viewZoom,offsetX:viewOffsetX,offsetY:viewOffsetY};
  }
- function afterRender(canvas){
+ function afterRender(canvas,inputRects=null){
   if(failed||document.hidden||!canvas)return;
   const id=activeId();if(!id)return;
   if(child){if(typeof model==='undefined'||!model||!readyId)return}
@@ -56,6 +64,7 @@
   try{
    const box=canvas.getBoundingClientRect();
    if(!box.width||!box.height||!canvas.width||!canvas.height)return;
+   if(typeof inputRects==='function')inputRects=inputRects();
    if(!sample){sample=document.createElement('canvas');context=sample.getContext('2d',{willReadFrequently:true})}
    let size=320,rectangles=[];
    do{
@@ -64,7 +73,9 @@
     if(sample.width!==w||sample.height!==h){sample.width=w;sample.height=h}
     context.clearRect(0,0,w,h);context.drawImage(canvas,0,0,w,h);
     const pixels=context.getImageData(0,0,w,h);
-    rectangles=ArchiveDesktopAlphaMask.runs(pixels.data,w,h);
+    const allowed=Array.isArray(inputRects)?inputRects.map(([x,y,rw,rh])=>[
+     (x-box.left)/box.width*w,(y-box.top)/box.height*h,rw/box.width*w,rh/box.height*h]):null;
+    rectangles=ArchiveDesktopAlphaMask.runs(pixels.data,w,h,1,allowed);
     size=Math.floor(size/2);
    }while(rectangles.length>768&&size>=40);
    if(rectangles.length>768)throw Error('桌面输入轮廓超过区域预算');
@@ -98,6 +109,7 @@
    const sx=box.width/d.width,sy=box.height/d.height;
    if(!Number.isFinite(sx)||!Number.isFinite(sy))return;
    const rects=d.rects.map(([x,y,w,h])=>[box.left+x*sx,box.top+y*sy,w*sx,h*sy]);
+   lastFrameView=d.view;
    if(rects.length)announce();
    emit('mask',{id:d.id,rects,width:innerWidth,height:innerHeight,view:d.view});
    saveView(d.view);
@@ -114,11 +126,13 @@
    }
   });
  }
- window.ArchiveDesktopBridge=Object.freeze({afterRender,catalogReady,fail,inspect:()=>{
+ window.ArchiveDesktopBridge=Object.freeze({afterRender,catalogReady,fail,
+ capabilities:data=>{if(!child)emit('capabilities',{id:activeId(),...data})},
+ inspect:()=>{
   const nested=!child&&document.querySelector('#player iframe')?.contentWindow?.ArchiveDesktopBridge?.inspect();
   return {id:activeId(),ready,failed,renderedFrames:nested?.renderedFrames??renderedFrames,view:nested?.view??frameView()};
  },loading:()=>{
-  ready=false;viewRestored=false;failed=false;lastActions='';lastSample=-Infinity;
+  ready=false;viewRestored=false;failed=false;lastActions='';lastSample=-Infinity;lastFrameView=null;
   emit('mask',{id:activeId(),rects:[],width:innerWidth,height:innerHeight});
  }});
  window.addEventListener('pagehide',()=>emit('mask',{id:activeId(),rects:[],width:innerWidth,height:innerHeight}),{once:true});
