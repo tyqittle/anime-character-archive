@@ -48,3 +48,29 @@ export function normalizedCubism2Settings(settings,fileURL,id,directory){
  const path=directory+'/'+id+'.model.json';
  return {path,body,sha256,notes,url:'./'+path+'?v='+sha256};
 }
+
+/**
+ * Compose source-pinned Cubism3 model/motions with an audited original texture.
+ * Some upstream game exports split a motion-only manifest (Textures: []) from
+ * its art. Never guess textures at runtime or accept arbitrary new sources.
+ */
+export function normalizedCubism3Settings(settings,fileURL,id,directory){
+ if(!/^assets\/model-settings\/[a-z0-9-]+$/.test(directory)||!/^[-a-z0-9_]+$/.test(id))throw Error('Invalid normalized Cubism3 settings destination');
+ if(settings.Version!==3||!settings.FileReferences?.Moc||!Array.isArray(settings.FileReferences.Textures)||settings.FileReferences.Textures.length!==1)
+  throw Error('Incomplete composed Cubism3 settings');
+ const refs=settings.FileReferences;
+ const motions={};
+ for(const [group,items] of Object.entries(refs.Motions||{})){
+  if(!Array.isArray(items))throw Error('Invalid Cubism3 motion group');
+  motions[group]=items.map(item=>({...item,File:fileURL(item.File)}));
+ }
+ if(!Object.values(motions).some(items=>items.length))throw Error('Character has no playable motions');
+ const mapped={...refs,Moc:fileURL(refs.Moc),Textures:refs.Textures.map(fileURL),Motions:motions};
+ for(const optional of ['Physics','Pose','DisplayInfo','UserData'])if(mapped[optional])mapped[optional]=fileURL(mapped[optional]);
+ if(Array.isArray(mapped.Expressions))mapped.Expressions=mapped.Expressions.map(item=>({...item,File:fileURL(item.File)}));
+ const out={...settings,FileReferences:mapped};
+ const body=JSON.stringify(out,null,2)+'\n';
+ const sha256=createHash('sha256').update(body).digest('hex');
+ const filename=directory+'/'+id+'.model3.json';
+ return {path:filename,body,sha256,notes:['Audited split Cubism3 settings, textures and source animations'],url:'./'+filename+'?v='+sha256};
+}
