@@ -310,7 +310,7 @@ assert.ok(stageMarkup.includes('id="player"')&&!stageMarkup.includes('id="stageT
 assert.ok(inspectorMarkup.includes('id="stageToolbar"')&&inspectorMarkup.includes('id="status"')&&inspectorMarkup.includes('data-friend-links'),'All metadata and controls belong in the right drawer');
 assert.ok(player.includes('new spine.SpinePlayer'),'Spine renderer missing');
 assert.ok(player.includes('connectCanvasGestures')&&player.includes("canvas.addEventListener('pointermove'"),'Theater lacks dragging');
-assert.ok(player.includes("$('player').addEventListener('wheel'")&&player.includes('e.preventDefault()'),'Unmodified mouse wheel zoom missing');
+assert.ok(read('assets/js/spine/theater-ui.js').includes("el('player').addEventListener('wheel',commands.wheel,{passive:false,capture:true})")&&player.includes('e.preventDefault()'),'Wheel zoom must retain event capture and cancel browser scrolling');
 assert.ok(!player.includes('if(!(e.ctrlKey||e.metaKey)'),'Wheel zoom must not require Ctrl or Meta');
 assert.ok(player.includes('id="animationPicker"')&&player.includes("p.setAnimation(preferred,true)"),'Animation selector missing');
 assert.ok(player.includes('requestFullscreen()')&&player.includes('resetViewerTransform()'),'Fullscreen or fit control missing');
@@ -320,7 +320,7 @@ assert.ok(!player.includes('location.assign(')&&!player.includes('location.reloa
 assert.ok(player.includes('history.replaceState('),'Deep links must update without navigation');
 assert.ok(player.includes('rememberSelectedCharacter()'),'Character selection must keep its deep link');
 assert.ok(player.includes('refreshCardSelection();'),'Character list must sync highlighting');
-assert.ok(player.includes('id="loadNotice"')&&player.includes("'loadNotice').hidden=!loading"),'Dynamic stage needs a loading indicator');
+assert.ok(player.includes('id="loadNotice"')&&read('assets/js/spine/theater-ui.js').includes("el('loadNotice').hidden=!loading"),'Dynamic stage needs a loading indicator owned by the theater UI');
 assert.ok(player.includes('class="advanced-tools"'),'Advanced tools must be optional');
 
 const azure=JSON.parse(read('data/live2d-azurlane.json'));
