@@ -75,6 +75,11 @@
       "id": "games-wave4",
       "name": "神乐黎明记 / Ruins Seeker · 成人向常规动态立绘",
       "path": "data/live2d-games-wave4.json"
+    },
+    {
+      "id": "games-wave5",
+      "name": "Unknown Bride · 18 套角色 Live2D",
+      "path": "data/live2d-games-wave5.json"
     }
   ]
 }
