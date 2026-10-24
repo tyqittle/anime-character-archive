@@ -42,10 +42,12 @@ test('zoom halves the world extent and CSS-pixel pan has the correct orientation
 function controls(){
  const elements=new Map();
  const $=id=>{if(!elements.has(id))elements.set(id,{listeners:{},addEventListener(kind,fn){this.listeners[kind]=fn},textContent:''});return elements.get(id)};
- const cx=vm.createContext({$,document:{addEventListener(){}},URLSearchParams,location:{search:''},
+ const cx=vm.createContext({$,document:{addEventListener(){},getElementById:$},URLSearchParams,location:{search:''},
   window:{},ArchivePortraitFraming:framing,player:null,azurlaneFrame:null,
   viewZoom:1,viewOffsetX:0,viewOffsetY:0,status(){},console});
+ vm.runInContext(fs.readFileSync(new URL('../assets/js/spine/theater-ui.js',import.meta.url),'utf8'),cx);
  vm.runInContext(fs.readFileSync(new URL('../assets/js/spine/viewer-controls.js',import.meta.url),'utf8'),cx);
+ vm.runInContext(fs.readFileSync(new URL('../assets/js/spine/viewer-ui-events.js',import.meta.url),'utf8'),cx);
  return {cx,$};
 }
 test('changing animation preserves user zoom, pan, and session camera without rescanning 100 poses',()=>{

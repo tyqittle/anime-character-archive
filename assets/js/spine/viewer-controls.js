@@ -1,11 +1,10 @@
 'use strict';
 function setViewerToolsEnabled(ready){
  if(!ready)setInteractionAvailability('请选择角色以查看点击交互');
- for(const id of ['zoomOut','zoomIn','resetView'])$(id).disabled=!ready;
- if(!ready){$('animationPicker').disabled=true;$('animationPicker').replaceChildren(new Option('选择角色后可切换动作',''))}
+ window.ArchiveTheaterUI.setToolsEnabled(ready);
 }
 function setInteractionAvailability(description){
- const node=$('interactionAvailability');if(node)node.textContent=description;
+ window.ArchiveTheaterUI.setInteractionHint(description);
  window.ArchiveDesktopBridge?.capabilities({interaction:description});
 }
 function initializeSpineInteractions(activePlayer,names){
@@ -34,7 +33,7 @@ function triggerSpineInteraction(activePlayer,event){
  if(!result)return;
  activePlayer.setAnimation(result.entry.key,false);activePlayer.play();
  activePlayer._archiveLastInteraction={area:result.area,key:result.entry.key,mode:result.mode};
- const picker=$('animationPicker');if(picker)picker.value=result.entry.key;
+ window.ArchiveTheaterUI.selectAnimation(result.entry.key);
  const track=activePlayer.animationState?.getCurrent(0);
  if(track){
   const old=track.listener;
@@ -42,7 +41,7 @@ function triggerSpineInteraction(activePlayer,event){
    old?.complete?.(entry);
    if(activePlayer!==player||activePlayer.animationState?.getCurrent(0)!==track)return;
    if(activePlayer._archiveIdleAnimation){activePlayer.setAnimation(activePlayer._archiveIdleAnimation,true);
-    if(picker)picker.value=activePlayer._archiveIdleAnimation;}
+    window.ArchiveTheaterUI.selectAnimation(activePlayer._archiveIdleAnimation);}
   }};
  }
 }
@@ -57,7 +56,7 @@ function syncViewTransform(){
    ?'translate(0px,0px) scale(1)'
    :'translate('+viewOffsetX+'px,'+viewOffsetY+'px) scale('+viewZoom+')';
  }
- $('zoomValue').textContent=Math.round(viewZoom*100)+'%';
+ window.ArchiveTheaterUI.setZoom(viewZoom);
 }
 function applySharpSpineCamera(activePlayer){
  if(activePlayer!==player||!activePlayer?._archiveNativeView)return;
@@ -181,9 +180,9 @@ function connectCanvasGestures(activePlayer){
  canvas.addEventListener('dblclick',()=>{if(activePlayer===player)resetViewerTransform()});
  syncViewTransform();
 }
-// Handle native wheel events on the persistent stage (not per-character
-// canvases). Zoom directly without requiring a Ctrl or Meta modifier.
-$('player').addEventListener('wheel',e=>{
+
+// Playback commands called by the UI adapter; no event listeners live here.
+function zoomViewerAtPointer(e){
  if(!player?.canvas||!Number.isFinite(e.deltaY)||e.deltaY===0)return;
  e.preventDefault();
  e.stopPropagation();
@@ -201,21 +200,11 @@ $('player').addEventListener('wheel',e=>{
  viewOffsetY=y-(y-viewOffsetY)*ratio;
  viewZoom=nextZoom;
  syncViewTransform();
-},{passive:false,capture:true});
-$('zoomIn').addEventListener('click',()=>adjustViewerZoom(1.2));
-$('zoomOut').addEventListener('click',()=>adjustViewerZoom(1/1.2));
-$('resetView').addEventListener('click',resetViewerTransform);
-$('animationPicker').addEventListener('change',e=>{
- if(azurlaneFrame&&e.target.value){sendAzurLane('motion',{motion:e.target.value});return}
- if(!player||!e.target.value)return;
- try{player.setAnimation(e.target.value,true);player.play();status('正在播放：'+$('title').textContent+' · '+e.target.value)}
+
+}
+function chooseViewerAnimation(value){
+ if(azurlaneFrame&&value){sendAzurLane('motion',{motion:value});return}
+ if(!player||!value)return;
+ try{player.setAnimation(value,true);player.play();status('正在播放：'+window.ArchiveTheaterUI.heading()+' · '+value)}
  catch(err){status('动作切换失败：'+err.message,true)}
-});
-$('fullscreenStage').addEventListener('click',async()=>{
- try{if(document.fullscreenElement)await document.exitFullscreen();else await $('stage').requestFullscreen()}
- catch(err){status('无法切换全屏：'+err.message,true)}
-});
-document.addEventListener('fullscreenchange',()=>{
- $('fullscreenStage').textContent=document.fullscreenElement?'⤢':'⛶';
- $('fullscreenStage').setAttribute('aria-label',document.fullscreenElement?'退出全屏':'全屏观看');
-});
+}

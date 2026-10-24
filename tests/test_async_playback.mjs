@@ -97,7 +97,7 @@ test('browser autoplay rejection is reported without retrying every file',async(
 function rendererContext(){
  const elements=new Map();
  const $=id=>{if(!elements.has(id))elements.set(id,{value:id==='version'?'4.1':'',textContent:'',replaceChildren(){},style:{},classList:{add(){}},addEventListener(){}});return elements.get(id)};
- const ctx=context({$,loadedVersion:'4.1',runtimeQueue:Promise.resolve(),runtimeCache:new Map(),
+ const ctx=context({$,ArchiveTheaterUI:{setHeading(){},setZoom(){},setAnimations(){},selectAnimation(){}},loadedVersion:'4.1',runtimeQueue:Promise.resolve(),runtimeCache:new Map(),
   runtimeCss:null,player:null,currentAttempt:0,pendingRenderCancel:null,watchdog:null,
   pausedInBackground:null,rendererFrameStats:{},azurlaneFrame:null,
   setViewerToolsEnabled(){},selectedVoiceChanged(){},recordSpineFrame(){},applySharpSpineCamera(){},
@@ -206,7 +206,7 @@ test('download cache is invalidated when the source revision changes',()=>{
 });
 test('model deadline clears a stalled stage and discards a late cache read',async()=>{
  const read=deferred(),messages=[],elements=new Map();let cleared=0,played=0;
- const ctx=context({pendingRenderCancel:null,currentAttempt:0,stopWatchdog(){},clearPlayer(){cleared++},
+ const ctx=context({ArchiveTheaterUI:{setHeading(){},setContext(){}},pendingRenderCancel:null,currentAttempt:0,stopWatchdog(){},clearPlayer(){cleared++},
   $:id=>{if(!elements.has(id))elements.set(id,{});return elements.get(id)},
   status:(message)=>messages.push(message),recentSpinePack:()=>null,dbAction:()=>read.promise,
   playPack:()=>{played++}});

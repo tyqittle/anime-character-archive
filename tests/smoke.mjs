@@ -170,7 +170,7 @@ for(const entry of spine.characters){
 console.log('Spine preview audit: '+previewDigests.size+' verified, '+unrendered+' awaiting real rendering.');
 assert.ok(chars.characters.every(x=>x.image.startsWith('./assets/portraits/')),'Not all static images are local');
 const galleryModules=["assets/js/gallery/state.js","assets/js/gallery/catalog.js","assets/js/gallery/viewer.js","assets/js/gallery/events.js","assets/js/gallery/bootstrap.js"];
-const spineModules=["assets/js/spine/state.js","assets/js/spine/animation-identity.js","assets/js/spine/viewer-controls.js","assets/js/spine/catalog.js","assets/js/spine/illustration-quality.js","assets/js/spine/spine-runtime.js","assets/js/spine/spine-assets.js","assets/js/spine/live2d-bridge.js","assets/js/spine/session-cache.js","assets/js/spine/playback.js","assets/js/spine/local-tools.js","assets/js/spine/bootstrap.js"];
+const spineModules=["assets/js/spine/state.js","assets/js/spine/theater-ui.js","assets/js/spine/animation-identity.js","assets/js/spine/viewer-controls.js","assets/js/spine/viewer-ui-events.js","assets/js/spine/catalog.js","assets/js/spine/illustration-quality.js","assets/js/spine/spine-runtime.js","assets/js/spine/spine-assets.js","assets/js/spine/live2d-bridge.js","assets/js/spine/session-cache.js","assets/js/spine/playback.js","assets/js/spine/local-tools.js","assets/js/spine/bootstrap.js"];
 const gallerySource=galleryModules.map(read).join('\n');
 const spineSource=spineModules.map(read).join('\n');
 const home=read('index.html'),old=read('gallery.html'),page=read('characters.html')+'\n'+gallerySource,player=read('spine.html')+'\n'+spineSource;
@@ -310,7 +310,7 @@ assert.ok(stageMarkup.includes('id="player"')&&!stageMarkup.includes('id="stageT
 assert.ok(inspectorMarkup.includes('id="stageToolbar"')&&inspectorMarkup.includes('id="status"')&&inspectorMarkup.includes('data-friend-links'),'All metadata and controls belong in the right drawer');
 assert.ok(player.includes('new spine.SpinePlayer'),'Spine renderer missing');
 assert.ok(player.includes('connectCanvasGestures')&&player.includes("canvas.addEventListener('pointermove'"),'Theater lacks dragging');
-assert.ok(player.includes("$('player').addEventListener('wheel'")&&player.includes('e.preventDefault()'),'Unmodified mouse wheel zoom missing');
+assert.ok(read('assets/js/spine/theater-ui.js').includes("el('player').addEventListener('wheel',commands.wheel,{passive:false,capture:true})")&&player.includes('e.preventDefault()'),'Wheel zoom must retain event capture and cancel browser scrolling');
 assert.ok(!player.includes('if(!(e.ctrlKey||e.metaKey)'),'Wheel zoom must not require Ctrl or Meta');
 assert.ok(player.includes('id="animationPicker"')&&player.includes("p.setAnimation(preferred,true)"),'Animation selector missing');
 assert.ok(player.includes('requestFullscreen()')&&player.includes('resetViewerTransform()'),'Fullscreen or fit control missing');
@@ -320,7 +320,7 @@ assert.ok(!player.includes('location.assign(')&&!player.includes('location.reloa
 assert.ok(player.includes('history.replaceState('),'Deep links must update without navigation');
 assert.ok(player.includes('rememberSelectedCharacter()'),'Character selection must keep its deep link');
 assert.ok(player.includes('refreshCardSelection();'),'Character list must sync highlighting');
-assert.ok(player.includes('id="loadNotice"')&&player.includes("'loadNotice').hidden=!loading"),'Dynamic stage needs a loading indicator');
+assert.ok(player.includes('id="loadNotice"')&&read('assets/js/spine/theater-ui.js').includes("el('loadNotice').hidden=!loading"),'Dynamic stage needs a loading indicator owned by the theater UI');
 assert.ok(player.includes('class="advanced-tools"'),'Advanced tools must be optional');
 
 const azure=JSON.parse(read('data/live2d-azurlane.json'));
@@ -382,7 +382,7 @@ assert.ok(!versionRegexp.test('unrecognized'),'Spine version regex accepted inva
 const galleryHTML=read('characters.html'),spineHTML=read('spine.html');
 for(const [html,modules] of [[galleryHTML,galleryModules],[spineHTML,spineModules]]){
  const loaded=[...html.matchAll(/<script defer src="\.\/([^"?]+)\?v=[^"]+"><\/script>/g)].map(x=>x[1]);
- assert.deepEqual(loaded,[...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/shared/catalog-registry.js','assets/js/shared/portrait-framing.js','assets/js/shared/spine-atlas-coordinates.js','assets/js/shared/asset-sources.js','assets/js/shared/voice-playback.js','assets/js/shared/portrait-interactions.js']:[]),...modules.slice(0,modules[0]?.startsWith('assets/js/spine/')?4:3),...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/performance.js']:[]),...modules.slice(modules[0]?.startsWith('assets/js/spine/')?4:3).flatMap(f=>f==='assets/js/spine/bootstrap.js'?['assets/js/shared/desktop-alpha-mask.js','assets/js/spine/desktop-webview-bridge.js',f]:[f]),'assets/js/shared/friend-links.js',...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/panel-layout.js','assets/js/spine/character-audio.js','assets/js/spine/desktop-launch.js','assets/js/spine/desktop-drag.js']:[])],'Browser modules and common friend links must preserve loading order');
+ assert.deepEqual(loaded,[...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/shared/catalog-registry.js','assets/js/shared/portrait-framing.js','assets/js/shared/spine-atlas-coordinates.js','assets/js/shared/asset-sources.js','assets/js/shared/voice-playback.js','assets/js/shared/portrait-interactions.js']:[]),...modules.slice(0,modules[0]?.startsWith('assets/js/spine/')?6:3),...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/performance.js']:[]),...modules.slice(modules[0]?.startsWith('assets/js/spine/')?6:3).flatMap(f=>f==='assets/js/spine/bootstrap.js'?['assets/js/shared/desktop-alpha-mask.js','assets/js/spine/desktop-webview-bridge.js',f]:[f]),'assets/js/shared/friend-links.js',...(modules[0]?.startsWith('assets/js/spine/')?['assets/js/spine/panel-layout.js','assets/js/spine/character-audio.js','assets/js/spine/desktop-launch.js','assets/js/spine/desktop-drag.js']:[])],'Browser modules and common friend links must preserve loading order');
  assert.ok(!/<script>\s*['"]use strict/.test(html),'Page-level application logic must live in feature modules');
 }
 for(const item of ['assets/gallery-base.css','assets/gallery-theme.css','assets/spine-base.css','assets/spine-theme.css']){
