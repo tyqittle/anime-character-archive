@@ -51,7 +51,8 @@ jobs:
       - name: Request shared model preview capture
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: CATALOG=$(node -p "JSON.parse(require('fs').readFileSync('data/live2d-import-batch.json','utf8')).catalogId||'games-wave3'")
+        run: |
+          CATALOG=$(node -p "JSON.parse(require('fs').readFileSync('data/live2d-import-batch.json','utf8')).catalogId||'games-wave3'")
           gh workflow run preview-pipeline.yml --ref main --field catalog="$CATALOG"
       - name: Publish imported catalog even while new previews are pending
         env:
