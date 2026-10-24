@@ -52,3 +52,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh workflow run preview-pipeline.yml --ref main --field catalog=games-wave3
+      - name: Publish imported catalog even while new previews are pending
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy-content.yml --ref main
