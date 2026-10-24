@@ -70,6 +70,11 @@
       "id": "games-wave3",
       "name": "崩坏学园2 / 方舟指令 / 宝石研物语 / 战舰少女",
       "path": "data/live2d-games-wave3.json"
+    },
+    {
+      "id": "games-wave4",
+      "name": "神乐黎明记 / Ruins Seeker · 成人向常规动态立绘",
+      "path": "data/live2d-games-wave4.json"
     }
   ]
 }
