@@ -1,0 +1,71 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Orc/Orc.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Orc/Orc.1024/texture_00.png"
+  ],
+  "motions": {
+    "": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Orc/motions/0Taiki.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Orc/motions/1Sounyu.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Orc/motions/2Taiki.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Orc/motions/3Ugoki.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Orc/motions/4Ugoki.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Orc/motions/5Ugoki.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Orc/motions/6Syasei.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      }
+    ]
+  },
+  "expressions": [
+    {
+      "name": "H1",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Orc/expressions/H1.exp.json"
+    },
+    {
+      "name": "H2",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Orc/expressions/H2.exp.json"
+    },
+    {
+      "name": "H3",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Orc/expressions/H3.exp.json"
+    },
+    {
+      "name": "H4",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Orc/expressions/H4.exp.json"
+    },
+    {
+      "name": "H5",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Orc/expressions/H5.exp.json"
+    },
+    {
+      "name": "H6",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Orc/expressions/H6.exp.json"
+    }
+  ]
+}

@@ -1,0 +1,220 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/v107a_01.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/v107a_01.2048/texture_00.png",
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/v107a_01.2048/texture_01.png"
+  ],
+  "motions": {
+    "v107a_a": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_base_a.mtn",
+        "fade_in": 500,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_base_a.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "jump_index": 1
+      }
+    ],
+    "v107a_b": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_base_b.mtn",
+        "fade_in": 500,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_base_b.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "jump_index": 1
+      }
+    ],
+    "v107a_c": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_base_c.mtn",
+        "fade_in": 500,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_base_c.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "jump_index": 1
+      }
+    ],
+    "v107h_a": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_h_a.mtn",
+        "fade_in": 500,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_h_a.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "jump_index": 1
+      }
+    ],
+    "v107h_b": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_h_b.mtn",
+        "fade_in": 500,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_h_b.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "jump_index": 1
+      }
+    ],
+    "v107h_c": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_h_c.mtn",
+        "fade_in": 500,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_h_c.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "jump_index": 1
+      }
+    ],
+    "v107i_a": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_i_a.mtn",
+        "fade_in": 500,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_i_a.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "jump_index": 1
+      }
+    ],
+    "v107i_b": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_i_b.mtn",
+        "fade_in": 500,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_i_b.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "jump_index": 1
+      }
+    ],
+    "v107i_c": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_i_c.mtn",
+        "fade_in": 500,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_i_c.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "jump_index": 1
+      }
+    ],
+    "v107j_a": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_j_a.mtn",
+        "fade_in": 500,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_j_a.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "jump_index": 1
+      }
+    ],
+    "v107j_b": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_j_b.mtn",
+        "fade_in": 500,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_j_b.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "jump_index": 1
+      }
+    ],
+    "v107j_c": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_j_c.mtn",
+        "fade_in": 500,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_j_c.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "jump_index": 1
+      }
+    ],
+    "idle": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_base_a.mtn",
+        "fade_in": 1000,
+        "fade_out": 0
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/motions/v107a_base_a.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "jump_index": 1
+      }
+    ]
+  },
+  "expressions": [
+    {
+      "name": "v107a",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/expressions/v107a_a.exp.json",
+      "parts_index": 0
+    },
+    {
+      "name": "v107b",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/expressions/v107a_b.exp.json",
+      "parts_index": 0
+    },
+    {
+      "name": "v107c",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/expressions/v107a_c.exp.json",
+      "parts_index": 0
+    },
+    {
+      "name": "v107d",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/expressions/v107a_d.exp.json",
+      "parts_index": 0
+    },
+    {
+      "name": "v107e",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/expressions/v107a_e.exp.json",
+      "parts_index": 0
+    },
+    {
+      "name": "v107f",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/expressions/v107a_f.exp.json",
+      "parts_index": 0
+    },
+    {
+      "name": "v107g",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/expressions/v107a_g.exp.json",
+      "parts_index": 0
+    },
+    {
+      "name": "v107aa",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E4%B9%90%E9%BB%8E%E6%98%8E%E8%AE%B0Live2d/model/v107a/expressions/v107a_a.exp.json",
+      "parts_index": 1
+    }
+  ]
+}

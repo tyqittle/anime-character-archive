@@ -1,0 +1,142 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/Player.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/Player.1024/texture_00.png"
+  ],
+  "motions": {
+    "": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/motions/Shazi.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/motions/Skamen.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/motions/Sleft1.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/motions/Snomal.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/motions/SRflesh.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/motions/Sright1.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/motions/SsianN.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/motions/Sstop.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/motions/SzetuN.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/motions/Szzzzz.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      }
+    ]
+  },
+  "expressions": [
+    {
+      "name": "H2hagisiri",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/H2hagisiri.exp.json"
+    },
+    {
+      "name": "H2hatujo",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/H2hatujo.exp.json"
+    },
+    {
+      "name": "H2odoroki",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/H2odoroki.exp.json"
+    },
+    {
+      "name": "Hakire",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/Hakire.exp.json"
+    },
+    {
+      "name": "Hdoya",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/Hdoya.exp.json"
+    },
+    {
+      "name": "Hegao",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/Hegao.exp.json"
+    },
+    {
+      "name": "Hhagisiri",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/Hhagisiri.exp.json"
+    },
+    {
+      "name": "Hhatujo",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/Hhatujo.exp.json"
+    },
+    {
+      "name": "Hhazui",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/Hhazui.exp.json"
+    },
+    {
+      "name": "Hikari",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/Hikari.exp.json"
+    },
+    {
+      "name": "Hisamasi",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/Hisamasi.exp.json"
+    },
+    {
+      "name": "Hjitome",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/Hjitome.exp.json"
+    },
+    {
+      "name": "Hkanasi",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/Hkanasi.exp.json"
+    },
+    {
+      "name": "Hkomari",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/Hkomari.exp.json"
+    },
+    {
+      "name": "Hmajime",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/Hmajime.exp.json"
+    },
+    {
+      "name": "Hnaki",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/Hnaki.exp.json"
+    },
+    {
+      "name": "Hodoroki",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/Hodoroki.exp.json"
+    },
+    {
+      "name": "Hsaimin",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/Hsaimin.exp.json"
+    },
+    {
+      "name": "Htujo",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/Htujo.exp.json"
+    },
+    {
+      "name": "Hzetu",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Player/expressions/Hzetu.exp.json"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/Baisu.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/Baisu.1024/texture_00.png"
+  ],
+  "motions": {
+    "": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/motions/SHazi.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/motions/SKizuN.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/motions/SKizuR.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/motions/SKurai.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/motions/Sleft1.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/motions/Snomal.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/motions/SNWaru.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/motions/Sright1.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/motions/Sstop.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/motions/SUtuleft1.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/motions/SUtunomal.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/motions/SUturight1.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/motions/SWaru.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/motions/SWaru2.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/motions/SWnomal.mtn",
+        "fade_in": 1000,
+        "fade_out": 1000
+      }
+    ]
+  },
+  "expressions": [
+    {
+      "name": "Hakire",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/expressions/Hakire.exp.json"
+    },
+    {
+      "name": "HB1metoji",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/expressions/HB1metoji.exp.json"
+    },
+    {
+      "name": "HB2metoji",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/expressions/HB2metoji.exp.json"
+    },
+    {
+      "name": "HB3metoji",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/expressions/HB3metoji.exp.json"
+    },
+    {
+      "name": "HBodoroki",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/expressions/HBodoroki.exp.json"
+    },
+    {
+      "name": "Hegao",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/expressions/Hegao.exp.json"
+    },
+    {
+      "name": "Hjitome",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/expressions/Hjitome.exp.json"
+    },
+    {
+      "name": "Hjitome2",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/expressions/Hjitome2.exp.json"
+    },
+    {
+      "name": "Hkana",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/expressions/Hkana.exp.json"
+    },
+    {
+      "name": "Hkanashi",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/expressions/Hkanashi.exp.json"
+    },
+    {
+      "name": "Hkeno",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/expressions/Hkeno.exp.json"
+    },
+    {
+      "name": "Hkirakira",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/expressions/Hkirakira.exp.json"
+    },
+    {
+      "name": "Hodoroki",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/expressions/Hodoroki.exp.json"
+    },
+    {
+      "name": "Htujo",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/expressions/Htujo.exp.json"
+    },
+    {
+      "name": "Htujo2",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/expressions/Htujo2.exp.json"
+    },
+    {
+      "name": "Hwarui",
+      "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%5B%E3%81%AC%E3%81%B7%E7%AB%9C%E3%81%AE%E9%87%8C%5D%20%E3%83%AB%E3%82%A4%E3%83%B3%E3%82%BA%E3%82%B7%E3%83%BC%E3%82%AB%E3%83%BC%20live2d/Baisu/expressions/Hwarui.exp.json"
+    }
+  ]
+}

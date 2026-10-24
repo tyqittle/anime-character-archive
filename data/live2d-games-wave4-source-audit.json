@@ -1,7 +1,89 @@
 {
   "schemaVersion": 1,
-  "scope": "Pending pinned-source batch; empty is not a successful import",
-  "games": {},
-  "total": 0,
-  "reports": []
+  "scope": "Pinned source checks for 2026-10-24-adult-games-kagura-ruins-wave4 (not WebGL playback)",
+  "games": {
+    "ruinsseeker": 23,
+    "kagurareimeiki": 8
+  },
+  "total": 31,
+  "reports": [
+    {
+      "scope": "ruins-seeker-characters",
+      "gameId": "ruinsseeker",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "selectedModelSettings": 23,
+      "checkedModels": 23,
+      "rejectedModels": [],
+      "error": null,
+      "importerExitCode": 0,
+      "completeWithinSelectedScope": true
+    },
+    {
+      "scope": "kagura-core",
+      "gameId": "kagurareimeiki",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "selectedModelSettings": 10,
+      "checkedModels": 6,
+      "rejectedModels": [
+        {
+          "path": "galgame live2d/神楽黎明記～Live2d/神乐黎明记Live2d/model/s_chihaya01/s_chihaya01.model.json",
+          "error": "Expected ',' or '}' after property value in JSON at position 1104 (line 29 column 71)"
+        },
+        {
+          "path": "galgame live2d/神楽黎明記～Live2d/神乐黎明记Live2d/model/s_maika01/s_maika01.model.json",
+          "error": "Expected ',' or '}' after property value in JSON at position 1225 (line 29 column 69)"
+        },
+        {
+          "path": "galgame live2d/神楽黎明記～Live2d/神乐黎明记Live2d/model/s_rio01/s_rio01.model.json",
+          "error": "Expected ',' or '}' after property value in JSON at position 1238 (line 29 column 70)"
+        },
+        {
+          "path": "galgame live2d/神楽黎明記～Live2d/神乐黎明记Live2d/model/s_yukari01/s_yukari01.model.json",
+          "error": "Expected ',' or '}' after property value in JSON at position 1228 (line 29 column 70)"
+        }
+      ],
+      "error": null,
+      "importerExitCode": 1,
+      "completeWithinSelectedScope": false
+    },
+    {
+      "scope": "kagura-chapters2",
+      "gameId": "kagurareimeiki",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "selectedModelSettings": 3,
+      "checkedModels": 0,
+      "rejectedModels": [
+        {
+          "path": "galgame live2d/神楽黎明記～Live2d/神楽黎明記～弥生の章～/s_yayoi01/s_yayoi01.model.json",
+          "error": "Expected ',' or '}' after property value in JSON at position 1125 (line 31 column 61)"
+        },
+        {
+          "path": "galgame live2d/神楽黎明記～Live2d/神楽黎明記～梓紗の章～/s_azusa01/s_azusa01.model.json",
+          "error": "Expected ',' or '}' after property value in JSON at position 1120 (line 31 column 61)"
+        },
+        {
+          "path": "galgame live2d/神楽黎明記～Live2d/神楽黎明記～舞歌の章～/s_maika01/s_maika01.model.json",
+          "error": "Expected ',' or '}' after property value in JSON at position 1219 (line 29 column 69)"
+        }
+      ],
+      "error": null,
+      "importerExitCode": 1,
+      "completeWithinSelectedScope": false
+    },
+    {
+      "scope": "kagura-chapters3",
+      "gameId": "kagurareimeiki",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "selectedModelSettings": 2,
+      "checkedModels": 2,
+      "rejectedModels": [],
+      "error": null,
+      "importerExitCode": 0,
+      "completeWithinSelectedScope": true
+    }
+  ]
 }
