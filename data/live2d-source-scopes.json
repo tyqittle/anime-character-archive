@@ -347,7 +347,16 @@
         "modelStem": "model",
         "format": "cubism2",
         "allowJSONC": true,
-        "normalizedSettingsDirectory": "assets/model-settings/newgames"
+        "normalizedSettingsDirectory": "assets/model-settings/newgames",
+        "lowercaseId": true,
+        "names": {
+          "Kiana": "琪亚娜 · Kiana",
+          "bronya": "布洛妮娅 · Bronya",
+          "himeko": "姬子 · Himeko",
+          "delisha": "德丽莎 · Theresa",
+          "xier": "希儿 · Seele",
+          "yazakura": "八重樱 · Yae Sakura"
+        }
       }
     },
     {
