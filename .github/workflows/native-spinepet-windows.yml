@@ -250,13 +250,14 @@ jobs:
       - uses: actions/checkout@v4
         with:
           sparse-checkout: native-desktop/build
+          path: release-source
           persist-credentials: false
       - name: Reject stale native builds so older packages never become latest
         id: latest
         shell: pwsh
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: '& ./native-desktop/build/Test-ReleaseSource.ps1 -Repository "${{ github.repository }}" -BuiltSha "${{ github.sha }}"'
+        run: '& ./release-source/native-desktop/build/Test-ReleaseSource.ps1 -Repository "${{ github.repository }}" -BuiltSha "${{ github.sha }}"'
       - name: Publish release installer plus versioned update feed
         if: steps.latest.outputs.publish == 'true'
         shell: pwsh
