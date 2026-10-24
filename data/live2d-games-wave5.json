@@ -24,11 +24,22 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "timeout",
-      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ub-c_3012.model3.json?v=b78517b05b17da228f231baf9a29e787b638900702b787f263ff0ce8e916ae54",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "31894f13af84922d3babcdf9c7ba514de1fb510677aa4ec51e5d2b9318b0d734",
+      "preview": "./assets/animation-previews/unknownbride-ub-c_3012.webp"
     },
     {
       "id": "ub-c_3023",
@@ -52,11 +63,22 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "timeout",
-      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ub-c_3023.model3.json?v=2449b3cd9e3585747b643d116327cde06b736dd78fcf29f258b051e82a74b339",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8b99fb04e8eb2b591c1fae37139e743fb21b05d702e90df608ce4baac2e9420f",
+      "preview": "./assets/animation-previews/unknownbride-ub-c_3023.webp"
     },
     {
       "id": "ub-c_3033",
@@ -80,11 +102,22 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "timeout",
-      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ub-c_3033.model3.json?v=ca0fb87bf3f249c8a573b4d7266dd6f029abcf26aa7cbf6f9d7102bb68ee7dbc",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0411c2c2d9202bef37b57e77b4f2515e25e9807a9cc38f4e18b903fab05a6bcb",
+      "preview": "./assets/animation-previews/unknownbride-ub-c_3033.webp"
     },
     {
       "id": "ub-c_3112",
@@ -108,11 +141,22 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "timeout",
-      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ub-c_3112.model3.json?v=c5af7b2449f4e348b3bcf8aafe773812c4ef8191a2184bb2669f9a6e4400f13a",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8add2cd56900cfe82a0bbb99bee4a42cf5de16ec892b6d4d5f4ec7aff6d28446",
+      "preview": "./assets/animation-previews/unknownbride-ub-c_3112.webp"
     },
     {
       "id": "ub-c_3123",
@@ -136,11 +180,22 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "timeout",
-      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ub-c_3123.model3.json?v=a46badbe199f078f96ef24b7f5a033f09c952c70060a08cdd148341404476ed7",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0138b898ce0fa02af579da902b1d63b13acd22f236132fef8de740698d18b78b",
+      "preview": "./assets/animation-previews/unknownbride-ub-c_3123.webp"
     },
     {
       "id": "ub-c_3131",
@@ -164,11 +219,22 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "timeout",
-      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ub-c_3131.model3.json?v=ecc581f67ecb8b2d3aedda68602f7dda70435cde1a9128428dd7a219e2a3a3b8",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bad7000fa7d50241f39afe5ad5f1f4dfb4987c8f23725ff3ef819083bfdcfade",
+      "preview": "./assets/animation-previews/unknownbride-ub-c_3131.webp"
     },
     {
       "id": "ub-c_3212",
@@ -192,11 +258,22 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "timeout",
-      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ub-c_3212.model3.json?v=6898f893b021e95a500f34f806d164eba6d001390d4276dcfca4852bf6ce27ed",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ad67cadff6fb539339578b26e0c70b318afc3d0c0b4ab34d1287740ff815046a",
+      "preview": "./assets/animation-previews/unknownbride-ub-c_3212.webp"
     },
     {
       "id": "ub-c_3223",
@@ -220,11 +297,22 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "timeout",
-      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ub-c_3223.model3.json?v=ce0fbdef6bad2aa3fffb69eb399153c470fde03a216265ff35a46175b1a82312",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4628cd60fddf550f067af93d2cdcf850387b3bc6fe240b8403f5573145d0f258",
+      "preview": "./assets/animation-previews/unknownbride-ub-c_3223.webp"
     },
     {
       "id": "ub-c_3231",
@@ -248,11 +336,22 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "timeout",
-      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ub-c_3231.model3.json?v=995ca258b4ce9505f23c2027e947731ac71d31f01d845322484bdf0a20cb3340",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "443543159cabd7a3ae2ef65849e5be1bb7d3004bfabcd9114e07e1e0f6c7bf75",
+      "preview": "./assets/animation-previews/unknownbride-ub-c_3231.webp"
     },
     {
       "id": "ub-c_3312",
@@ -276,11 +375,22 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "timeout",
-      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ub-c_3312.model3.json?v=cc4247a3fa9d5698dc84348b2a7559ad03cada94f7054d02f960cce284e6b1ec",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1ba4c9dfc72a359ff40d9af04b6c543f46840edd165d8364a3283783bef860db",
+      "preview": "./assets/animation-previews/unknownbride-ub-c_3312.webp"
     },
     {
       "id": "ub-c_3321",
@@ -304,11 +414,22 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "timeout",
-      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ub-c_3321.model3.json?v=be0b67daa810e34b891c69d70c7d7dd499f67d40af0b3f9bd8b336ebebee72a1",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5ef263ad72ee85d837d16ce0efb96d327e83f864773550444f86924abb573b69",
+      "preview": "./assets/animation-previews/unknownbride-ub-c_3321.webp"
     },
     {
       "id": "ub-c_3323",
@@ -332,11 +453,22 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "timeout",
-      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ub-c_3323.model3.json?v=64ec0371dfda05ec891d34638ed3cf64581f654d03a76535d3aa01028daf4233",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "894f3c4253a26fd339bc5c07ecba43b7437b84d68238496924f8c46c879e42a8",
+      "preview": "./assets/animation-previews/unknownbride-ub-c_3323.webp"
     },
     {
       "id": "ub-c_3412",
@@ -360,11 +492,22 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "timeout",
-      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ub-c_3412.model3.json?v=eafc3a6661ac34719e161e66ecc6d5bfc4e7d7ba869ae590605eb82e53f8066a",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ef28795e07b1739f6df84970877d41872ce9a41f9dff4a7c314533b3e3b566a4",
+      "preview": "./assets/animation-previews/unknownbride-ub-c_3412.webp"
     },
     {
       "id": "ub-c_3421",
@@ -388,11 +531,22 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "timeout",
-      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ub-c_3421.model3.json?v=6ad3de84117c701d68e096402161a05ee7e1a3d631442b539e42d95b8866016d",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "31e73440eaea8df820b99d17c8ced0893dbef71f5f0f3f8f40ebc981d4f52653",
+      "preview": "./assets/animation-previews/unknownbride-ub-c_3421.webp"
     },
     {
       "id": "ub-c_5021",
@@ -416,11 +570,22 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "timeout",
-      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ub-c_5021.model3.json?v=e823daeb00f375e2f1c5657bef7b53ff367b0c68c4c30754116a7a06401677bb",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "6c4ad0067690c30d4744c3c98798dac4557b2bff7040cc40e93617bd6646e202",
+      "preview": "./assets/animation-previews/unknownbride-ub-c_5021.webp"
     },
     {
       "id": "ub-c_5131",
@@ -444,11 +609,22 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "timeout",
-      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ub-c_5131.model3.json?v=d936b40e5f4c5ec93f231c5fae7c4d0764d918b62b0ef04ce2abcc0ddcfc779d",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "309918677d6cbfaa0717347b795eda87f6f81c2ed4bb60cc3653770a72bdb883",
+      "preview": "./assets/animation-previews/unknownbride-ub-c_5131.webp"
     },
     {
       "id": "ub-c_5212",
@@ -472,11 +648,22 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "timeout",
-      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ub-c_5212.model3.json?v=3bae755d73ff3ad8bed6f9155fa6b636473c8b0a0f5f8b605c3944ff73445bbc",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3113303803b6277344fbf92c0e7d1a5b416c47eeb7c5fb5291983c97ab134000",
+      "preview": "./assets/animation-previews/unknownbride-ub-c_5212.webp"
     },
     {
       "id": "ub-c_5233",
@@ -500,11 +687,22 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "timeout",
-      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ub-c_5233.model3.json?v=5f8c8938bd77c97553d9ec164fc2c4405777e051a74fe032efa5d1bf5307347d",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "20f8b0805368f146a47f675811bc6f0616d6a5e9d5dcfda4b585837b38ba6961",
+      "preview": "./assets/animation-previews/unknownbride-ub-c_5233.webp"
     }
   ],
   "sources": []
