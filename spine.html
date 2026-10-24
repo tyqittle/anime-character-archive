@@ -8,22 +8,7 @@ if(new URLSearchParams(location.search).has('desktop')){
  document.documentElement.style.setProperty('background-color','transparent','important');
  document.documentElement.style.setProperty('background-image','none','important');
 }
-</script><style id="desktop-window-reset">
-html.desktop-mode,html.desktop-mode body,html.desktop-mode .wrap,html.desktop-mode .stage,html.desktop-mode #player,
-html.desktop-mode #player canvas,html.desktop-mode .spine-player,html.desktop-mode .spine-player-container,
-html.desktop-mode .spine-player-canvas,html.desktop-mode .spine-player-content,
-html.desktop-mode .azurlane-loading-cover,html.desktop-mode .azurlane-live2d-frame{
-background:transparent!important;background-image:none!important;background-color:transparent!important;
-box-shadow:none!important;border:0!important;border-radius:0!important;outline:0!important;
-}
-html.desktop-mode,html.desktop-mode body{margin:0!important;height:100%!important;width:100%!important;overflow:hidden!important}
-html.desktop-mode body::before,html.desktop-mode body::after{display:none!important}
-</style><style>#characterVoiceControls[hidden]{display:none!important}</style><style id="desktop-transparency">
-html:has(body.desktop-mode),body.desktop-mode,body.desktop-mode .wrap,body.desktop-mode .stage,body.desktop-mode #player,body.desktop-mode .spine-player,body.desktop-mode .spine-player-container{background:none!important;background-color:transparent!important;background-image:none!important;border:0!important;border-radius:0!important;box-shadow:none!important}
-body.desktop-mode .side,body.desktop-mode .head,body.desktop-mode .stage-toolbar,body.desktop-mode .stage-hint,body.desktop-mode #status,body.desktop-mode #loadNotice,body.desktop-mode footer,body.desktop-mode .archive-friendlinks{display:none!important}
-body.desktop-mode .wrap{position:fixed!important;inset:0!important;padding:0!important;margin:0!important;display:block!important;width:100%!important;height:100%!important;overflow:hidden!important}
-body.desktop-mode .stage,body.desktop-mode #player{position:absolute!important;inset:0!important;padding:0!important;width:100%!important;height:100%!important;min-height:0!important;max-height:none!important;overflow:hidden!important}
-</style><script>if(new URLSearchParams(location.search).has('desktop'))document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('desktop-mode'),{once:true})</script><link rel="stylesheet" href="./assets/spine-base.css?v=20261022-selection-fix-v1"><link rel="stylesheet" href="./assets/spine-theme.css?v=20261022-selection-fix-v1"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://unpkg.com" crossorigin><link rel="dns-prefetch" href="//raw.githubusercontent.com"><link rel="stylesheet" href="./assets/spine-theater-layout.css?v=20261023-stage-height-v1"><link rel="stylesheet" href="./assets/archive-shell.css?v=20261023-preview-friends-v1"><link rel="stylesheet" href="./assets/spine-three-pane.css?v=20261023-sidepanes-v1"></head><body>
+</script><script>if(new URLSearchParams(location.search).has('desktop'))document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('desktop-mode'),{once:true})</script><link rel="stylesheet" href="./assets/spine-base.css?v=20261022-selection-fix-v1"><link rel="stylesheet" href="./assets/spine-theme.css?v=20261022-selection-fix-v1"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://unpkg.com" crossorigin><link rel="dns-prefetch" href="//raw.githubusercontent.com"><link rel="stylesheet" href="./assets/spine-theater-layout.css?v=20261023-stage-height-v1"><link rel="stylesheet" href="./assets/archive-shell.css?v=20261023-preview-friends-v1"><link rel="stylesheet" href="./assets/spine-three-pane.css?v=20261023-sidepanes-v1"><link rel="stylesheet" href="./assets/spine-ui-isolation.css?v=20261024-ui-isolation-v1"></head><body>
 <div class="wrap theater-three-pane">
 <section class="side" id="characterSidebar" aria-label="动态立绘角色浏览">
 <div class="side-sitebar">
