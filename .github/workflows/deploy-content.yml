@@ -5,10 +5,19 @@ on:
     paths:
       - '.github/workflows/deploy-content.yml'
       - 'scripts/request_pages_build.cjs'
+      - 'spine.html'
+      - 'data/animation-catalogs.json'
+      - 'data/live2d-*.json'
+      - 'data/spine-*.json'
+      - 'assets/model-settings/**'
+      - 'assets/animation-previews/**'
+      - 'assets/js/spine/**'
+      - 'assets/js/shared/catalog-registry.js'
   workflow_dispatch:
   workflow_run:
     workflows:
       - 'Shared animation preview pipeline'
+      - 'Import pinned Cubism source batch'
       - 'Refresh static archive sources'
       - 'Preview compatibility entry (newgames)'
       - 'Preview compatibility entry (highquality)'
