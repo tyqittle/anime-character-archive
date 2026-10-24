@@ -26,7 +26,8 @@ public sealed class ArchiveUniversalDesktopTests
         var probes=new Dictionary<ArchiveWebSelection,SessionProbe>();
         using var sessions=new ArchiveDesktopSessions<SessionProbe>(
             selection=>probes[selection]=new(),(host,_)=>host.Loaded.Task,(host,visible)=>host.Visible=visible);
-        var first=new ArchiveWebSelection("one","shared"),second=new ArchiveWebSelection("two","shared");
+        var first=new ArchiveWebSelection("one","shared");
+        var second=new ArchiveWebSelection("two","shared");
         var a=sessions.ShowAsync(first);var b=sessions.ShowAsync(second);
         Assert.Equal(2,sessions.Count);
         probes[second].Loaded.SetResult(true);await b;
