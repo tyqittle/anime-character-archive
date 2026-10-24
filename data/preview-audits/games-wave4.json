@@ -1,0 +1,20 @@
+{
+  "scope": "shared preview pipeline",
+  "counts": {
+    "ruinsseeker": {
+      "indexed": 23,
+      "verifiedPreview": 23,
+      "missingPreview": 0
+    },
+    "kagurareimeiki": {
+      "indexed": 8,
+      "verifiedPreview": 8,
+      "missingPreview": 0
+    }
+  },
+  "missing": [],
+  "newCapturesInThisRun": 31,
+  "rejectedCaptures": [],
+  "failedCaptures": [],
+  "failureSummary": {}
+}

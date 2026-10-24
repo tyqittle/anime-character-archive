@@ -22,9 +22,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "0a08464d5236dfe4ec5c57ca3f38d41154ac1dc272557cefc85c459ac66d3af9",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-2boss.model.json?v=0a08464d5236dfe4ec5c57ca3f38d41154ac1dc272557cefc85c459ac66d3af9",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3387e081c297f535bb5b2ed9bb5ccd529f5bf0030bdf6445c262c6e95e86f9ac",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-2boss.webp"
     },
     {
       "id": "rs-baisu",
@@ -46,9 +59,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "bbc7f7c19e9c4c8cb366b8d164039042a4f28e48e1ae602aa12bb27e0249a7c1",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-baisu.model.json?v=bbc7f7c19e9c4c8cb366b8d164039042a4f28e48e1ae602aa12bb27e0249a7c1",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a43f313c663a68b108c9f9d6abcfd5ff5e44ef7d7fd63b40bed71d9fd14496fc",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-baisu.webp"
     },
     {
       "id": "rs-baisut",
@@ -70,9 +96,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "832c0c425c5165d00b87baeee624fb86cb6c810c9c502271634f28c7e562ad25",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-baisut.model.json?v=832c0c425c5165d00b87baeee624fb86cb6c810c9c502271634f28c7e562ad25",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e89d4195864367888b30f9ecc5f7a531eb5b9ea938acb07708b7f37c765b841f",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-baisut.webp"
     },
     {
       "id": "rs-boss1",
@@ -94,9 +133,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "42be929cca391f05fd90cc325d9a2c946efaa02f11a15f1446792a898085a956",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-boss1.model.json?v=42be929cca391f05fd90cc325d9a2c946efaa02f11a15f1446792a898085a956",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bea2321cbe0b98a120aa48a1fbf53a8d71c6a3fd5c61b27d62887ecb3bf092bb",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-boss1.webp"
     },
     {
       "id": "rs-bossdwa",
@@ -118,9 +170,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "b6165aff00fae793c1b791db7d81de9d3fd3a7b994537ec8a1dab58c67ac58ce",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-bossdwa.model.json?v=b6165aff00fae793c1b791db7d81de9d3fd3a7b994537ec8a1dab58c67ac58ce",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "eca1f506a1c07c04544fd134402b993510520c9617b77a4a2ce9047bd2ed7dbf",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-bossdwa.webp"
     },
     {
       "id": "rs-bossslim",
@@ -142,9 +207,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "e1253ecd872f9d3126989b5149090db44b3e3b54f5f0876db4f8cea69e3df831",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-bossslim.model.json?v=e1253ecd872f9d3126989b5149090db44b3e3b54f5f0876db4f8cea69e3df831",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e08e1215f5fe8bb0d5f648729416fd6b7c2ca88463608c98029447e56d3ab958",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-bossslim.webp"
     },
     {
       "id": "rs-bosstensi",
@@ -166,9 +244,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "35e465d6fa3d8c42785e1e4f1038db1bf438927b3add4775406206746e223531",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-bosstensi.model.json?v=35e465d6fa3d8c42785e1e4f1038db1bf438927b3add4775406206746e223531",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ae8cb10eb8397ac6bd03046b6a08dd7a49255da73c51f22f5771d8b3b064d2a8",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-bosstensi.webp"
     },
     {
       "id": "rs-gitaisura",
@@ -190,9 +281,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "4832ff1f533ae9cfabdd713791d81f3732fb1a2a95771e265150a0f4acc6e85f",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-gitaisura.model.json?v=4832ff1f533ae9cfabdd713791d81f3732fb1a2a95771e265150a0f4acc6e85f",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ffb41c74a851caef6de9af8cca7f396724fabb2f1391129f0fbf35a15e0b9a6a",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-gitaisura.webp"
     },
     {
       "id": "rs-gobrin",
@@ -214,9 +318,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "2103692afdaec2753f8e2598b6bcf550cd423879c0fa9d1eec6e50189cbc0e9b",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-gobrin.model.json?v=2103692afdaec2753f8e2598b6bcf550cd423879c0fa9d1eec6e50189cbc0e9b",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "53c0f2098aa07fb478de02cd5a61b082845d19fc6d32e72d210d2db4f8ef12c7",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-gobrin.webp"
     },
     {
       "id": "rs-gorem",
@@ -238,9 +355,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "b8919f461b50fa7d41c5e8c2b03f76ae9df05c6992fe21aa76b2a747e9ac0e62",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-gorem.model.json?v=b8919f461b50fa7d41c5e8c2b03f76ae9df05c6992fe21aa76b2a747e9ac0e62",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "dfd32ddc46dfaccddd00e4bf4afc16f2f0fdaf5127bc04ee59e6b6326c49661a",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-gorem.webp"
     },
     {
       "id": "rs-homun",
@@ -262,9 +392,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "48842fc8ad8839604c2b860a311f53458c9da4d78d4f6d4ac6a4a7d3e5b9046d",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-homun.model.json?v=48842fc8ad8839604c2b860a311f53458c9da4d78d4f6d4ac6a4a7d3e5b9046d",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "6e136fde70853f2dab1dee42d3584356e8fbfefa0e5d18f831da80582d8f1512",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-homun.webp"
     },
     {
       "id": "rs-hwnd",
@@ -286,9 +429,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "2aa991b7cb8311ba3ed3ec9a57a5d7e1771cec1aabd56aff9e0f7d77d884e7d8",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-hwnd.model.json?v=2aa991b7cb8311ba3ed3ec9a57a5d7e1771cec1aabd56aff9e0f7d77d884e7d8",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0cef5ae3d0329de7bff024fb24ccfa6a10ee67b330bc8d769a17a6e42927e1db",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-hwnd.webp"
     },
     {
       "id": "rs-likelike",
@@ -310,9 +466,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "939c7145ded9126b72b0d1847b26ccaf233753eac9626415208d46ece0dbd1a7",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-likelike.model.json?v=939c7145ded9126b72b0d1847b26ccaf233753eac9626415208d46ece0dbd1a7",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f09d070ba5679a2a8189f45e70fc1e7c989c65cd55fa1af519b511554b7e1c80",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-likelike.webp"
     },
     {
       "id": "rs-orc",
@@ -334,9 +503,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "0af2412564d2e47989b54c1bfbeae8a1773b5e70865d674045f5f6a90c345e37",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-orc.model.json?v=0af2412564d2e47989b54c1bfbeae8a1773b5e70865d674045f5f6a90c345e37",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "44af94e1f701f80ec6b1d6a3dfcdb08ddbaa159bcc700828e1b5d3c6a1770e6c",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-orc.webp"
     },
     {
       "id": "rs-player",
@@ -358,9 +540,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "5d95e53677faba50b64e05f5ae761ebc74af560c6b43d1cb8086e7cd4df391be",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-player.model.json?v=5d95e53677faba50b64e05f5ae761ebc74af560c6b43d1cb8086e7cd4df391be",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8b11b1014010c8f591650aa79fda128cae1f6f656d654c928ef684ec4ea2815e",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-player.webp"
     },
     {
       "id": "rs-sfera",
@@ -382,9 +577,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "e973e73a7f0c9b9d52ff541e723ffbb8953b18774330d94aa97149dc80ca43ac",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-sfera.model.json?v=e973e73a7f0c9b9d52ff541e723ffbb8953b18774330d94aa97149dc80ca43ac",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "daad89fd195e09ac503ba5c88098241926824a392c70e38389162ab7449ec8e4",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-sfera.webp"
     },
     {
       "id": "rs-sgobrin",
@@ -406,9 +614,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "d325064b96ac7aacff1fdd647ccd369e3aa5b83a328575b0b3473b7ecda52290",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-sgobrin.model.json?v=d325064b96ac7aacff1fdd647ccd369e3aa5b83a328575b0b3473b7ecda52290",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0033f0376e676a0a1519e55c9c194fbabb625e8f8025e56b2a9a1a496d45cf74",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-sgobrin.webp"
     },
     {
       "id": "rs-slaim",
@@ -430,9 +651,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "226a46c33afff9adc5ac7dc1eacdc2522a3b38fa2ac6506c3e1ef058d311dd54",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-slaim.model.json?v=226a46c33afff9adc5ac7dc1eacdc2522a3b38fa2ac6506c3e1ef058d311dd54",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f371d164ed5b3e9fea4ca1f6a067dbeac82b61a98a3ed44371d3c04191fd604f",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-slaim.webp"
     },
     {
       "id": "rs-warm",
@@ -454,9 +688,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "9e65b9370c9122e9f511e2b1954897606b42197fe852b33fc6019321272b6da5",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-warm.model.json?v=9e65b9370c9122e9f511e2b1954897606b42197fe852b33fc6019321272b6da5",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "62147fc9a965c67597f7623f06a0d0e90c5992d3745f2936062ff404c68a67ae",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-warm.webp"
     },
     {
       "id": "rs-dorohand",
@@ -478,9 +725,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "396f3eee9a15d6fabcfb0a4407c1b5b8aceee2c53b343bd5b780260a164d9c67",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-dorohand.model.json?v=396f3eee9a15d6fabcfb0a4407c1b5b8aceee2c53b343bd5b780260a164d9c67",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ae86e92cbcd578cefe45d3e0da83491072bb5529bfa1446634a41943537e5495",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-dorohand.webp"
     },
     {
       "id": "rs-facehaga",
@@ -502,9 +762,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "a4dd56d0dd86a179c58f8fc0598df8bdac9b85e5b2faea14e4e614a391e15fcc",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-facehaga.model.json?v=a4dd56d0dd86a179c58f8fc0598df8bdac9b85e5b2faea14e4e614a391e15fcc",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "fdad64212f43e1fd6b432ec8d6e29e371b44b2ce4a86b8607167e1478fbfee9f",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-facehaga.webp"
     },
     {
       "id": "rs-gadhian",
@@ -526,9 +799,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "35b1050fb67a35a0f6cf6c59105a5fd6380f6d2e53a39c258003f11e7877025d",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-gadhian.model.json?v=35b1050fb67a35a0f6cf6c59105a5fd6380f6d2e53a39c258003f11e7877025d",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "6f52fd8ca19470424af52c41c1c69dd8fdba8c7f7f84f0d1a72003fa9ba390b0",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-gadhian.webp"
     },
     {
       "id": "rs-mimic",
@@ -550,9 +836,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "fff4c45821a7d836611c5819e442756f5d3922cd48be5a40c583332b05132298",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/rs-mimic.model.json?v=fff4c45821a7d836611c5819e442756f5d3922cd48be5a40c583332b05132298",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d41666e173b18e10f5a85b34f408a0c402b13ed67400e680f31d1ff7005f7624",
+      "preview": "./assets/animation-previews/ruinsseeker-rs-mimic.webp"
     },
     {
       "id": "kg-v106a",
@@ -574,9 +873,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "4c0945f24888aa5783c80c5ac2d0c1ddd188252ad0eb661d1d365b705ae05a8f",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/kg-v106a.model.json?v=4c0945f24888aa5783c80c5ac2d0c1ddd188252ad0eb661d1d365b705ae05a8f",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "25ad4afae57e4a7f34ed351b1e00488669e00fd8741e5ca86c53e41182c56d8d",
+      "preview": "./assets/animation-previews/kagurareimeiki-kg-v106a.webp"
     },
     {
       "id": "kg-v106a1",
@@ -598,9 +910,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "46365edadfdd9e9a432a7fad06ab6ffa3a65f17d5ad859b8efd9b6b0c29a7acb",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/kg-v106a1.model.json?v=46365edadfdd9e9a432a7fad06ab6ffa3a65f17d5ad859b8efd9b6b0c29a7acb",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5d3d36c3b22cd5fd926ebdc6b818bea5f3ca2d89e58f20b0029976558ec886ce",
+      "preview": "./assets/animation-previews/kagurareimeiki-kg-v106a1.webp"
     },
     {
       "id": "kg-v107a",
@@ -622,9 +947,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "75f16b48b4c777532e4dc78e356e9dc1366810f734485d6e0f6445a78db3f87d",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/kg-v107a.model.json?v=75f16b48b4c777532e4dc78e356e9dc1366810f734485d6e0f6445a78db3f87d",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d7ed380833bdbad44bff1c4b569e7a70c41d42a3eaed818b59cf48db55d73a95",
+      "preview": "./assets/animation-previews/kagurareimeiki-kg-v107a.webp"
     },
     {
       "id": "kg-w102a",
@@ -646,9 +984,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "4856dee2c754dfb8f92e3f2c449d8a93ff520993089b360239601e63da01e78a",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/kg-w102a.model.json?v=4856dee2c754dfb8f92e3f2c449d8a93ff520993089b360239601e63da01e78a",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "880af8942bf8c28a6f6af62b941a8571f08765807e5ca0a0db6f0cb06c983d94",
+      "preview": "./assets/animation-previews/kagurareimeiki-kg-w102a.webp"
     },
     {
       "id": "kg-w108a",
@@ -670,9 +1021,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "b62995488e5bd5a662230973d8c77e372afdf31fa8246187e38f4012116ed3a0",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/kg-w108a.model.json?v=b62995488e5bd5a662230973d8c77e372afdf31fa8246187e38f4012116ed3a0",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "2cc557dc67ebf447f854495c6f22ff7b8bff7ac3f3e1c83bd9a4c4eb0785341a",
+      "preview": "./assets/animation-previews/kagurareimeiki-kg-w108a.webp"
     },
     {
       "id": "kg-w108a1",
@@ -694,9 +1058,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "cbaba8894a1e0d889034ad374e4a8eb31b772cd0393c61bea7734db149926057",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/kg-w108a1.model.json?v=cbaba8894a1e0d889034ad374e4a8eb31b772cd0393c61bea7734db149926057",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "faf97b41c7859b06e583c58e2d52e15d2ec5cc4465c5c6c89e490c041acbd78b",
+      "preview": "./assets/animation-previews/kagurareimeiki-kg-w108a1.webp"
     },
     {
       "id": "kg3-s_natsu01",
@@ -715,9 +1092,22 @@
       "assetType": "live2d-character",
       "textureBytes": 4751390,
       "motionCount": 18,
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%20%E3%80%9C%E3%83%8A%E3%83%84%E3%81%AE%E7%AB%A0%E3%80%9C/s_natsu01/s_natsu01.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ba6bd9ab0f24b9157f12aae6dee57e7a3351e86f420bba5d5206b43a78e6e101",
+      "preview": "./assets/animation-previews/kagurareimeiki-kg3-s_natsu01.webp"
     },
     {
       "id": "kg3-s_hatsuka01",
@@ -736,9 +1126,22 @@
       "assetType": "live2d-character",
       "textureBytes": 4109479,
       "motionCount": 19,
-      "status": "indexed-unverified",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%88%9D%E8%8A%B1%E3%81%AE%E7%AB%A0%EF%BD%9E/s_hatsuka01/s_hatsuka01.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e229a997916607f581bcfee53fd2a645d2f838403368db8bdf336c664cc024cc",
+      "preview": "./assets/animation-previews/kagurareimeiki-kg3-s_hatsuka01.webp"
     }
   ],
   "sources": []
