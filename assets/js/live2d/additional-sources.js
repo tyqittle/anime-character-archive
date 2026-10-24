@@ -6,6 +6,12 @@
  const localPrefix='./assets/model-settings/newgames/';
  function resolve(name,url,id){
   if(typeof url!=='string'||typeof id!=='string')return '';
+  if(/^ub-c_[0-9]+$/.test(id)){
+   if(!url.startsWith(localPrefix)||name!==id)return '';
+   const relative=url.slice(localPrefix.length);
+   const found=relative.match(/^([a-z0-9_-]+)\.model3\.json\?v=([a-f0-9]{64})$/);
+   return found&&found[1]===id?new URL(url,root.location.href).href:'';
+  }
   if(/^(?:rs|kg|kg2)-[a-z0-9_]+$/.test(id)){
    if(!url.startsWith(localPrefix)||name!==id)return '';
    const relative=url.slice(localPrefix.length);
