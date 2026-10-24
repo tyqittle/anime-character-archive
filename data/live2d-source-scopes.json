@@ -476,7 +476,8 @@
         "format": "cubism2",
         "allowJSONC": true,
         "normalizedSettingsDirectory": "assets/model-settings/newgames",
-        "minimumTextureBytes": 75000
+        "minimumTextureBytes": 75000,
+        "repairLegacyMotionCommas": true
       }
     },
     {
@@ -495,7 +496,8 @@
         "format": "cubism2",
         "allowJSONC": true,
         "normalizedSettingsDirectory": "assets/model-settings/newgames",
-        "minimumTextureBytes": 75000
+        "minimumTextureBytes": 75000,
+        "repairLegacyMotionCommas": true
       }
     },
     {
