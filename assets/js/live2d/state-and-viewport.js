@@ -24,6 +24,8 @@ const EXPANSION_CUBISM_SOURCES=[
 ];
 function modelUrlFor(name,candidate,id){
  if(typeof candidate!=='string')return '';
+ const additional=window.ArchiveAdditionalLive2DSources?.resolve(name,candidate,id);
+ if(additional)return additional;
  // Wave-3 normalized Cubism2 settings: only the same-origin, exact-ID file.
  // The catalog is source-checked, so never accept external or cross-skin URLs.
  if(/^(?:ggz|ao|gs1|gs2|wg)-[a-z0-9_]+$/.test(id)){
