@@ -7,13 +7,38 @@
       "missingPreview": 0
     },
     "kagurareimeiki": {
-      "indexed": 8,
-      "verifiedPreview": 8,
-      "missingPreview": 0
+      "indexed": 13,
+      "verifiedPreview": 7,
+      "missingPreview": 6
     }
   },
-  "missing": [],
-  "newCapturesInThisRun": 31,
+  "missing": [
+    {
+      "gameId": "kagurareimeiki",
+      "id": "kg-s_chihaya01"
+    },
+    {
+      "gameId": "kagurareimeiki",
+      "id": "kg-s_maika01"
+    },
+    {
+      "gameId": "kagurareimeiki",
+      "id": "kg-s_rio01"
+    },
+    {
+      "gameId": "kagurareimeiki",
+      "id": "kg-s_yukari01"
+    },
+    {
+      "gameId": "kagurareimeiki",
+      "id": "kg2-s_yayoi01"
+    },
+    {
+      "gameId": "kagurareimeiki",
+      "id": "kg2-s_azusa01"
+    }
+  ],
+  "newCapturesInThisRun": 0,
   "rejectedCaptures": [],
   "failedCaptures": [],
   "failureSummary": {}
