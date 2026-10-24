@@ -8,7 +8,7 @@ function ensureAzurLaneFrame(){
  azurlaneFrame=document.createElement('iframe');
  azurlaneFrame.className='azurlane-live2d-frame';
  azurlaneFrame.title='Live2D · Cubism 模型画布';
- azurlaneFrame.src='./azurlane-stage.html?v=20261024-live2d-interactions-v10'+(new URLSearchParams(location.search).has('desktop')?'&desktop=1'+(new URLSearchParams(location.search).get('transport')==='webview2'?'&transport=webview2':''):'');
+ azurlaneFrame.src='./azurlane-stage.html?v=20261024-wave3-sources-v1'+(new URLSearchParams(location.search).has('desktop')?'&desktop=1'+(new URLSearchParams(location.search).get('transport')==='webview2'?'&transport=webview2':''):'');
  azurlaneFrame.loading='eager';
  azurlaneFrame.setAttribute('allow','autoplay');
  $('player').replaceChildren(azurlaneFrame);
