@@ -24,9 +24,11 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "timeout",
+      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
     },
     {
       "id": "ub-c_3023",
@@ -50,9 +52,11 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "timeout",
+      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
     },
     {
       "id": "ub-c_3033",
@@ -76,9 +80,11 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "timeout",
+      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
     },
     {
       "id": "ub-c_3112",
@@ -102,9 +108,11 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "timeout",
+      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
     },
     {
       "id": "ub-c_3123",
@@ -128,9 +136,11 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "timeout",
+      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
     },
     {
       "id": "ub-c_3131",
@@ -154,9 +164,11 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "timeout",
+      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
     },
     {
       "id": "ub-c_3212",
@@ -180,9 +192,11 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "timeout",
+      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
     },
     {
       "id": "ub-c_3223",
@@ -206,9 +220,11 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "timeout",
+      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
     },
     {
       "id": "ub-c_3231",
@@ -232,9 +248,11 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "timeout",
+      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
     },
     {
       "id": "ub-c_3312",
@@ -258,9 +276,11 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "timeout",
+      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
     },
     {
       "id": "ub-c_3321",
@@ -284,9 +304,11 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "timeout",
+      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
     },
     {
       "id": "ub-c_3323",
@@ -310,9 +332,11 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "timeout",
+      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
     },
     {
       "id": "ub-c_3412",
@@ -336,9 +360,11 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "timeout",
+      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
     },
     {
       "id": "ub-c_3421",
@@ -362,9 +388,11 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "timeout",
+      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
     },
     {
       "id": "ub-c_5021",
@@ -388,9 +416,11 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "timeout",
+      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
     },
     {
       "id": "ub-c_5131",
@@ -414,9 +444,11 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "timeout",
+      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
     },
     {
       "id": "ub-c_5212",
@@ -440,9 +472,11 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "timeout",
+      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
     },
     {
       "id": "ub-c_5233",
@@ -466,9 +500,11 @@
       "normalizationNotes": [
         "Audited split Cubism3 settings, textures and source animations"
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "timeout",
+      "previewFailureReason": "page.waitForFunction: Timeout 30000ms exceeded."
     }
   ],
   "sources": []
