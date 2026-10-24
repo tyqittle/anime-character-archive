@@ -181,3 +181,31 @@ function connectCanvasGestures(activePlayer){
  canvas.addEventListener('dblclick',()=>{if(activePlayer===player)resetViewerTransform()});
  syncViewTransform();
 }
+
+// Playback commands called by the UI adapter; no event listeners live here.
+function zoomViewerAtPointer(e){
+ if(!player?.canvas||!Number.isFinite(e.deltaY)||e.deltaY===0)return;
+ e.preventDefault();
+ e.stopPropagation();
+ const dy=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?$('player').clientHeight:1);
+ player._archiveFitPending=0;
+ const oldZoom=viewZoom;
+ const nextZoom=clampViewZoom(oldZoom*Math.exp(-dy*0.0015));
+ if(nextZoom===oldZoom)return;
+ // Zoom about the pointer, rather than pulling the character offscreen.
+ const bounds=$('player').getBoundingClientRect();
+ const x=e.clientX-(bounds.left+bounds.width/2);
+ const y=e.clientY-(bounds.top+bounds.height/2);
+ const ratio=nextZoom/oldZoom;
+ viewOffsetX=x-(x-viewOffsetX)*ratio;
+ viewOffsetY=y-(y-viewOffsetY)*ratio;
+ viewZoom=nextZoom;
+ syncViewTransform();
+
+}
+function chooseViewerAnimation(value){
+ if(azurlaneFrame&&value){sendAzurLane('motion',{motion:value});return}
+ if(!player||!value)return;
+ try{player.setAnimation(value,true);player.play();status('正在播放：'+$('title').textContent+' · '+value)}
+ catch(err){status('动作切换失败：'+err.message,true)}
+}
