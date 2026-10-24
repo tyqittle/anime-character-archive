@@ -63,11 +63,22 @@
           "error": "Missing or empty source file: bronya/sound/bronya_live2d_012.wav"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ggz-bronya.model.json?v=577b164a53ec99ba18c826bcdee86652f7711b1153eeeff718ef9a2c34e91b0c",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "dcbef929e58f43c278cd56fe1367590ee89f9b41581db65eaae364815e1010c3",
+      "preview": "./assets/animation-previews/gunsgirlz-ggz-bronya.webp"
     },
     {
       "id": "ggz-delisha",
@@ -126,11 +137,22 @@
           "error": "Missing or empty source file: delisha/sound/theresa_live2d_015.wav"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ggz-delisha.model.json?v=1a826bf3d532b2554db9c66d2013d67c037efa01c05eaba7e9716f95ba84d85b",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3937d16680dfbf911d98f8d6ca85a4b72e59ff49a944ef1b1de622d4bfeea9d6",
+      "preview": "./assets/animation-previews/gunsgirlz-ggz-delisha.webp"
     },
     {
       "id": "ggz-himeko",
@@ -189,11 +211,22 @@
           "error": "Missing or empty source file: himeko/sound/himeko_live2d_019.wav"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ggz-himeko.model.json?v=e4255b1d008ddedd6b2c8d3586254ac385f4b38669a3039599503be61d95c8c7",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "280e460f0557629583c2e1897f2ad8100be32a73c0d5edfe47392302f72251ba",
+      "preview": "./assets/animation-previews/gunsgirlz-ggz-himeko.webp"
     },
     {
       "id": "ggz-houraiji",
@@ -248,11 +281,22 @@
           "error": "Missing or empty source file: houraiji/sound/houraiji_live2d_003.wav"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ggz-houraiji.model.json?v=3eb05dffd67fba4fdf4fa6748a3797b51387e685b71e45135057dc4a40ca27fb",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ea7974405a293d5423c0b21498b3a1bb68a6351595f69b9f5abd8862f5f25354",
+      "preview": "./assets/animation-previews/gunsgirlz-ggz-houraiji.webp"
     },
     {
       "id": "ggz-kaguya",
@@ -311,11 +355,22 @@
           "error": "Missing or empty source file: kaguya/sound/kaguya_live2d_009.wav"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ggz-kaguya.model.json?v=2632c47e16050e5fc4df0881b9623160edeb1947573c102d7b3f3304a090778c",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "54f1ac6361ba6ebb4be1517e67f64ebacbfb3204206d478ae00eafa3974f9416",
+      "preview": "./assets/animation-previews/gunsgirlz-ggz-kaguya.webp"
     },
     {
       "id": "ggz-keluoyi",
@@ -374,11 +429,22 @@
           "error": "Missing or empty source file: keluoyi/sound/kuroe_live2d_011.wav"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ggz-keluoyi.model.json?v=4783253f83ffc8bad5faa93ce694beac33acd3a5bf5f7727db9c6ba57aa7205a",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "99e89ea130b7f5e794c9217212e8fadbe1f7049dfa6e40314afdf601a5a3c524",
+      "preview": "./assets/animation-previews/gunsgirlz-ggz-keluoyi.webp"
     },
     {
       "id": "ggz-kika",
@@ -437,11 +503,22 @@
           "error": "Missing or empty source file: kika/Ev_Cv_Partner_1177_104"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ggz-kika.model.json?v=a39e49c2880f97b9ed06cdce94b5637fd9a832f0b5ab82585d418f532b495470",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "2a60a78439740275f6ffbb663824978916b08667c2702e133b25c9aa6c59cf02",
+      "preview": "./assets/animation-previews/gunsgirlz-ggz-kika.webp"
     },
     {
       "id": "ggz-mie",
@@ -500,11 +577,22 @@
           "error": "Missing or empty source file: mie/sound/mei_live2d_007.wav"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ggz-mie.model.json?v=c5d4e2c4d1afb281f1142f79776f9823aa04b13a916a360ade16297404157b75",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "323a52d7ff22f9410d4d36614d92344006c7758917e2e05f7fc716346c65e83b",
+      "preview": "./assets/animation-previews/gunsgirlz-ggz-mie.webp"
     },
     {
       "id": "ggz-shin",
@@ -575,11 +663,22 @@
           "error": "Missing or empty source file: shin/sound/sin_live2d_jp_18.wav"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ggz-shin.model.json?v=ace73718d037f02fc279a9e4d43d926664162032c410c7cf9425192d8659df81",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "dd8d5072fe2932a94feaab4fbcc26308afef94374de4af3d9d3ba7626211edbb",
+      "preview": "./assets/animation-previews/gunsgirlz-ggz-shin.webp"
     },
     {
       "id": "ggz-xier",
@@ -650,11 +749,22 @@
           "error": "Missing or empty source file: xier/Ev_Cv_Partner_1026_019"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ggz-xier.model.json?v=8be87b67e166d5e1045cca391ada59e383cc922a1649f5108d27e9f10ba0b199",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bb2348d874d69f0d5dbf0ae1a4b867a989440cf15fc60cd4bb1be4b6a5dfca06",
+      "preview": "./assets/animation-previews/gunsgirlz-ggz-xier.webp"
     },
     {
       "id": "ggz-yazakura",
@@ -713,11 +823,22 @@
           "error": "Missing or empty source file: yazakura/sound/sakura_live2d_001.wav"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ggz-yazakura.model.json?v=b974158a05d5acd888d7c38eb6e9ddb39cfb53cfebb045eee65a9943d5e832b1",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "89b20b280d10a7375b8d7a3770ff858b0cccd6e4f283936b2424cf666a6d35a0",
+      "preview": "./assets/animation-previews/gunsgirlz-ggz-yazakura.webp"
     },
     {
       "id": "ggz-yiselin",
@@ -776,11 +897,22 @@
           "error": "Missing or empty source file: yiselin/sound/hakasecn_live2d_001.wav"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ggz-yiselin.model.json?v=b07927c70771b9f43f177c68e7c0baab4fd13f067464cf59d9b8a44c1a85b465",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "85d3da50ae619c41b5c74e5fe3244bcb5566c1716cd444e4ed62150554fadf4c",
+      "preview": "./assets/animation-previews/gunsgirlz-ggz-yiselin.webp"
     },
     {
       "id": "ao-l_103300401",
@@ -802,11 +934,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "0a0cce8dd0cd4237ff464a7821e5a0b2971113b63d7586535c63f638ec6dac89",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ao-l_103300401.model.json?v=0a0cce8dd0cd4237ff464a7821e5a0b2971113b63d7586535c63f638ec6dac89",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e6878ad85067eadaa946ef122ab46bd4389a45d513ec53d4ab833565326cb7ee",
+      "preview": "./assets/animation-previews/arkorder-ao-l_103300401.webp"
     },
     {
       "id": "ao-l_103501211",
@@ -828,11 +971,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "a33e4c72e736d56003b596f9a15ce849c5962b20c03fd378bb54aba5d191610f",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ao-l_103501211.model.json?v=a33e4c72e736d56003b596f9a15ce849c5962b20c03fd378bb54aba5d191610f",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3cd4c356e10c3a42378c3c1c15dac7e48053be9588407ed90187400183402038",
+      "preview": "./assets/animation-previews/arkorder-ao-l_103501211.webp"
     },
     {
       "id": "ao-l_114202911",
@@ -854,11 +1008,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "b3b4c75c738d249f620a0f44eb75d408a748257d3b9a68dcda66d3bc82a290cf",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ao-l_114202911.model.json?v=b3b4c75c738d249f620a0f44eb75d408a748257d3b9a68dcda66d3bc82a290cf",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "26435b60a1123205767ec94794c47af8b126deef6bea786c121ea2e92f0b0218",
+      "preview": "./assets/animation-previews/arkorder-ao-l_114202911.webp"
     },
     {
       "id": "ao-l_133100301",
@@ -880,11 +1045,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "02c658dcff953db70a25bc99a965eb7f15f19622b5003bcca6337d32943d1969",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ao-l_133100301.model.json?v=02c658dcff953db70a25bc99a965eb7f15f19622b5003bcca6337d32943d1969",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "06dfb55352139cc37d9b7cb783eed7faefb00b742e88c95eb4d947533e459af3",
+      "preview": "./assets/animation-previews/arkorder-ao-l_133100301.webp"
     },
     {
       "id": "ao-l_133100611",
@@ -906,11 +1082,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "3298a49c2725c44a9f3e6594dca3ad89b0db988e2710970ae6bdb071e3f0f8f2",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ao-l_133100611.model.json?v=3298a49c2725c44a9f3e6594dca3ad89b0db988e2710970ae6bdb071e3f0f8f2",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "414727d7d824dc5601d01c91b4e5ce0ab2ff06d590f1c346d2b1363b2b7f043c",
+      "preview": "./assets/animation-previews/arkorder-ao-l_133100611.webp"
     },
     {
       "id": "ao-l_134100111",
@@ -932,11 +1119,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "01f7c0a1bcd5a0ee6df5424aa78e16ca0f5d5a21eedb77f82642427d892888a3",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ao-l_134100111.model.json?v=01f7c0a1bcd5a0ee6df5424aa78e16ca0f5d5a21eedb77f82642427d892888a3",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c21cc0ee318bd00943598b0ae2b0098146c93b572d027180041b29515dd15da0",
+      "preview": "./assets/animation-previews/arkorder-ao-l_134100111.webp"
     },
     {
       "id": "ao-l_143200301",
@@ -958,11 +1156,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "669dab49b7a8cbe7672628118bfad2e5359575f0c94890d294de4895a1bc70ca",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ao-l_143200301.model.json?v=669dab49b7a8cbe7672628118bfad2e5359575f0c94890d294de4895a1bc70ca",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "120c422eda4b01321c2ba7884370536bee69ff2ea03196b49af2a01b1f29d645",
+      "preview": "./assets/animation-previews/arkorder-ao-l_143200301.webp"
     },
     {
       "id": "ao-l_144402311",
@@ -984,11 +1193,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "9cf5d864a44a3bee1b9a898bbdbf06dadd67138781013e5edc0826db93737c98",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ao-l_144402311.model.json?v=9cf5d864a44a3bee1b9a898bbdbf06dadd67138781013e5edc0826db93737c98",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9aaa24cdff118f26fbd06ff5510eabcd6ad4cb664960ec6045af3d92e482b448",
+      "preview": "./assets/animation-previews/arkorder-ao-l_144402311.webp"
     },
     {
       "id": "ao-l_154500211",
@@ -1010,11 +1230,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "dbbe64ef873e9d0ac7bd7c9ed3e70f42e7104802f4297aa54d548f18bc706dc4",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ao-l_154500211.model.json?v=dbbe64ef873e9d0ac7bd7c9ed3e70f42e7104802f4297aa54d548f18bc706dc4",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "781555c1fb42f73d13ac9755e374775278a3e6687ab96af312d560daac9b41b0",
+      "preview": "./assets/animation-previews/arkorder-ao-l_154500211.webp"
     },
     {
       "id": "ao-l_234100511",
@@ -1036,11 +1267,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "08f488edbb85575de5fbf7b6e8939c560be731b690112a51ae41f4164508ec1d",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ao-l_234100511.model.json?v=08f488edbb85575de5fbf7b6e8939c560be731b690112a51ae41f4164508ec1d",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e4ce9cb1a368f3e4ee207a53be1977a3daca468a9ddaabdedbc7a17f6d91412d",
+      "preview": "./assets/animation-previews/arkorder-ao-l_234100511.webp"
     },
     {
       "id": "ao-l_234200211",
@@ -1062,11 +1304,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "aacd651f3a3d5609e701c07f0d80b3cb35485f4ad63ffa32a1ea9fb96a41ebf5",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ao-l_234200211.model.json?v=aacd651f3a3d5609e701c07f0d80b3cb35485f4ad63ffa32a1ea9fb96a41ebf5",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3e8315ac254e2b514b6927b703c8cbe3397981abd1e1c4bf5f5e0e2838994798",
+      "preview": "./assets/animation-previews/arkorder-ao-l_234200211.webp"
     },
     {
       "id": "ao-l_234400411",
@@ -1088,11 +1341,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "d0b4ed43bf3d4a35a3f5d52579c779a059be1ffe006ddaca6db651e2fbe19067",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ao-l_234400411.model.json?v=d0b4ed43bf3d4a35a3f5d52579c779a059be1ffe006ddaca6db651e2fbe19067",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e7ec43bef9c63d193b56b24c6daf799407bbca84b1d5f1f56db756e2d83d76e5",
+      "preview": "./assets/animation-previews/arkorder-ao-l_234400411.webp"
     },
     {
       "id": "ao-l_234400412",
@@ -1114,11 +1378,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "90b8886712cb3dfbe24a63923e6e527a7ccd87fe4fefd2e52be8f6e3aac10d2e",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ao-l_234400412.model.json?v=90b8886712cb3dfbe24a63923e6e527a7ccd87fe4fefd2e52be8f6e3aac10d2e",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8bef3bd3779e65b64809bd5d3103de46e958513a53d40f39d2161d067aec8dfe",
+      "preview": "./assets/animation-previews/arkorder-ao-l_234400412.webp"
     },
     {
       "id": "ao-l_234500311",
@@ -1140,11 +1415,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "14ff203cfef131315a6b70abd910f242e0511ab033720992298469323f2f8bdf",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ao-l_234500311.model.json?v=14ff203cfef131315a6b70abd910f242e0511ab033720992298469323f2f8bdf",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "50df0409432a927c88fca92eb8d610c125164d1f68316a0656878d5c91683c21",
+      "preview": "./assets/animation-previews/arkorder-ao-l_234500311.webp"
     },
     {
       "id": "ao-l_234600111",
@@ -1166,11 +1452,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "277ad495e03b0ce596cc09f253d21e51b2de5c3856836d6cb6475009c5918134",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ao-l_234600111.model.json?v=277ad495e03b0ce596cc09f253d21e51b2de5c3856836d6cb6475009c5918134",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e7d49d5c0989ce4d4547377b1a14475391ff0818e735564888bebf37ca5b5648",
+      "preview": "./assets/animation-previews/arkorder-ao-l_234600111.webp"
     },
     {
       "id": "gs1-aite",
@@ -1192,11 +1489,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "5f3764845a1126f69b4161b01563a051232d33c495b04a58ef358b07fa50a10f",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/gs1-aite.model.json?v=5f3764845a1126f69b4161b01563a051232d33c495b04a58ef358b07fa50a10f",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "56cf06566c5cccbacce83ca7462fd2645f9d1d3f0fcc9208d4c92b2486df520a",
+      "preview": "./assets/animation-previews/gemstory-gs1-aite.webp"
     },
     {
       "id": "gs1-lili",
@@ -1218,11 +1526,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "e4f56d7d67081bad9346d66c5e2414668d51771d77807c0f74fb34410241204d",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/gs1-lili.model.json?v=e4f56d7d67081bad9346d66c5e2414668d51771d77807c0f74fb34410241204d",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "34e259e69b7630ff7ac532549cb2b40f2ea2a455b6ae66f306525c8612243749",
+      "preview": "./assets/animation-previews/gemstory-gs1-lili.webp"
     },
     {
       "id": "gs1-magelite",
@@ -1244,11 +1563,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "328c40d591087f62e363c9cc9264ad8f5279e118da1cd7eb21776ad8099d808f",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/gs1-magelite.model.json?v=328c40d591087f62e363c9cc9264ad8f5279e118da1cd7eb21776ad8099d808f",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ccbb4439cf258f1a7d69be8154a8477a53ed76026f0167a4a1f2a2ac80362eb9",
+      "preview": "./assets/animation-previews/gemstory-gs1-magelite.webp"
     },
     {
       "id": "gs1-safeiya",
@@ -1270,11 +1600,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "508cc32c909ab16e3c4a835d89a7f6ef8ec9630db840b2127d5d840dc4266d5f",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/gs1-safeiya.model.json?v=508cc32c909ab16e3c4a835d89a7f6ef8ec9630db840b2127d5d840dc4266d5f",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "8d7d17553cbd0fcac50ed74598165cf26f50c389648e702d65d890a6ff08b4eb",
+      "preview": "./assets/animation-previews/gemstory-gs1-safeiya.webp"
     },
     {
       "id": "gs1-west",
@@ -1296,11 +1637,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "f97a333a083c2e5908528e9bfb3056725509d695de341a5a006ec2be54f93b4d",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/gs1-west.model.json?v=f97a333a083c2e5908528e9bfb3056725509d695de341a5a006ec2be54f93b4d",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a4c5d677ac7c01d45ae09b56f2c76748ee675d3b62b93ee98034d4be49f0c8d3",
+      "preview": "./assets/animation-previews/gemstory-gs1-west.webp"
     },
     {
       "id": "gs2-elizabeth_1",
@@ -1322,11 +1674,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "13a82fa7195b6b9c8d89e9f8748728575bd8f722529cddb7fd1ac540a948b018",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/gs2-elizabeth_1.model.json?v=13a82fa7195b6b9c8d89e9f8748728575bd8f722529cddb7fd1ac540a948b018",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "26d6d83a098c6846d9a73d17b258b9b38092dd473f3ed93adb6f7bfdaa0648f3",
+      "preview": "./assets/animation-previews/gemstory-gs2-elizabeth_1.webp"
     },
     {
       "id": "gs2-elizabeth_2",
@@ -1348,11 +1711,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "a17f5727995f94d8ba986a6f8abf1f8f13629f45c32157dd50fc6308d89f5ba6",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/gs2-elizabeth_2.model.json?v=a17f5727995f94d8ba986a6f8abf1f8f13629f45c32157dd50fc6308d89f5ba6",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "dc669b918a9a76880bb971caa536b3f92f67961bdfdec084d8fcc60cc265f59a",
+      "preview": "./assets/animation-previews/gemstory-gs2-elizabeth_2.webp"
     },
     {
       "id": "gs2-elizabeth_3",
@@ -1374,11 +1748,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "79d05996947ca42cc74772162c36c3ae1b01f4fb75472cceb908d9e98655609c",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/gs2-elizabeth_3.model.json?v=79d05996947ca42cc74772162c36c3ae1b01f4fb75472cceb908d9e98655609c",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bd69af4d328211ae5b52f7255995ea095b841b19c47edc0b3d87010b1dd00123",
+      "preview": "./assets/animation-previews/gemstory-gs2-elizabeth_3.webp"
     },
     {
       "id": "gs2-elizabeth_4",
@@ -1400,11 +1785,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "a78c1e047f822d5df9725b38a225e22f86fc11012c7ac7cf89e3e57e6a5799e3",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/gs2-elizabeth_4.model.json?v=a78c1e047f822d5df9725b38a225e22f86fc11012c7ac7cf89e3e57e6a5799e3",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "27b857cf280f22094c61138b704cef54732f1b07077feb3aa0384ce02eb06d66",
+      "preview": "./assets/animation-previews/gemstory-gs2-elizabeth_4.webp"
     },
     {
       "id": "gs2-elizabeth_5",
@@ -1426,11 +1822,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "23ee9c238cd0d6c781c367f11cad7e5bc6be157a2297153bdaf09355de7aa988",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/gs2-elizabeth_5.model.json?v=23ee9c238cd0d6c781c367f11cad7e5bc6be157a2297153bdaf09355de7aa988",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "c6c5dd6153ec0eb0ac238c0012a3f81d193b19054ff398c364615ee40732f7b3",
+      "preview": "./assets/animation-previews/gemstory-gs2-elizabeth_5.webp"
     },
     {
       "id": "gs2-elizabeth_6",
@@ -1452,11 +1859,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "a1b9226df2f7bf0598282e70012a148de0957cb465b9a7a64c896daed97407a2",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/gs2-elizabeth_6.model.json?v=a1b9226df2f7bf0598282e70012a148de0957cb465b9a7a64c896daed97407a2",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "91656e07b2aa9b51517deeed07c45b82b2f5e89b3e4e344325bfdf5cbcc6b8fc",
+      "preview": "./assets/animation-previews/gemstory-gs2-elizabeth_6.webp"
     },
     {
       "id": "gs2-elizabeth_7",
@@ -1478,11 +1896,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "9c30a0fc29b8dedfcc8affb5b53742fb4be95029bdb16531909e72090ccb66e1",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/gs2-elizabeth_7.model.json?v=9c30a0fc29b8dedfcc8affb5b53742fb4be95029bdb16531909e72090ccb66e1",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "bddf31cb94699f2f99cdafd6e5655f3b87852db095999679d04034217a7fb7a4",
+      "preview": "./assets/animation-previews/gemstory-gs2-elizabeth_7.webp"
     },
     {
       "id": "gs2-elizabeth_9",
@@ -1504,11 +1933,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "84666d13edc209dbe8f247728a0bec65573c451868de372eac5b8524fe78c06e",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/gs2-elizabeth_9.model.json?v=84666d13edc209dbe8f247728a0bec65573c451868de372eac5b8524fe78c06e",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f5c6980d922d12c18637d4c5a9117c4f2d01844e819bdf00e6e8fd8f86f66584",
+      "preview": "./assets/animation-previews/gemstory-gs2-elizabeth_9.webp"
     },
     {
       "id": "gs2-elizabeth_9_1",
@@ -1530,11 +1970,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "438d0b9b4fc6fcc5413b02b98e7c2411cfad34ee1a0ce99c4455d205e8d690fa",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/gs2-elizabeth_9_1.model.json?v=438d0b9b4fc6fcc5413b02b98e7c2411cfad34ee1a0ce99c4455d205e8d690fa",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "f21d0ece1cd65de705ca54f0cd4def873dceb4c3e63b425f3b65cb24005116a5",
+      "preview": "./assets/animation-previews/gemstory-gs2-elizabeth_9_1.webp"
     },
     {
       "id": "wg-209_2",
@@ -1597,11 +2048,22 @@
           "error": "Missing or empty source file: 209_2/test"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/wg-209_2.model.json?v=927c9abfb4793b4ed07bfaf71eaa63a8e64ccc0a34cc0ff366e4487c2a074fb3",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "0573ba7dd526e9a2f4f55de6f1851fd70eb2ad1b608e51c2d9af7941fdd961e1",
+      "preview": "./assets/animation-previews/warshipgirls-wg-209_2.webp"
     },
     {
       "id": "wg-248_1",
@@ -1672,11 +2134,22 @@
           "error": "Missing or empty source file: 248_1/test"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/wg-248_1.model.json?v=7e8b09f7cde22615685e9c930311b4f0c47ed709cb967e5db78e8e2fe49ed9c7",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "39ae010723819bce0b42e87cc9f7354b7346fb617f7c4296b26e36848a9f2f84",
+      "preview": "./assets/animation-previews/warshipgirls-wg-248_1.webp"
     },
     {
       "id": "wg-325_1",
@@ -1723,11 +2196,22 @@
           "error": "Missing or empty source file: 325_1/test"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/wg-325_1.model.json?v=d56a0f0eb6c31992c43a71eb34da116645380cb2a6bf739fb4e0cffe8bdc82ed",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3787b7d348ac0a9a0eb4d20866891b5159f0a54f7b9f107084bf04166d26acc7",
+      "preview": "./assets/animation-previews/warshipgirls-wg-325_1.webp"
     },
     {
       "id": "ggz-byc",
@@ -1818,11 +2302,22 @@
           "error": "Missing or empty source file: BYC/sound/D_Sak_Live2D013.wav"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ggz-byc.model.json?v=8929fe8c8ebc9c564bdc662fcba77c452659c223939257258511d9eb6fb2abd5",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "60719929f18fe1eb1d2d20d4deaf465e948fdfebdf1c268b69955861d4285b8d",
+      "preview": "./assets/animation-previews/gunsgirlz-ggz-byc.webp"
     },
     {
       "id": "ggz-kiana",
@@ -1877,11 +2372,22 @@
           "error": "Missing or empty source file: Kiana/sound/kiana_live2d_014.wav"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ggz-kiana.model.json?v=8458f6141567ac8eb789625e77a0af23f8b40d06e1b502d573b94b184543018f",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "ab1169e7fb8eeceae2aa5ffe68d4296947572fb8c002e9f102f3a24420e2d798",
+      "preview": "./assets/animation-previews/gunsgirlz-ggz-kiana.webp"
     },
     {
       "id": "ggz-kiro",
@@ -1940,11 +2446,22 @@
           "error": "Missing or empty source file: Kiro/Ev_Cv_Partner_1279_008"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ggz-kiro.model.json?v=ff57aa5f60d06c6dedda1276e0814285b0a27c8ad4d4e0c9f46b0171240f5901",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "79e8bda6b7b5f88edf1f2c3db7764fd5a31c203f9eadf050fa98ef7a62992178",
+      "preview": "./assets/animation-previews/gunsgirlz-ggz-kiro.webp"
     },
     {
       "id": "ggz-lita",
@@ -2007,11 +2524,22 @@
           "error": "Missing or empty source file: Lita/Ev_Cv_Partner_1234_005_cn"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ggz-lita.model.json?v=a74a9d0be3c42b10b60da9e7ae698ca74732c2ac0c6cd0d735ca35ce154dfd60",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "1eb9957ee1bdab6e0c0db3576ff895979c7ad2951a2eec5ed278f88cc33478e8",
+      "preview": "./assets/animation-previews/gunsgirlz-ggz-lita.webp"
     },
     {
       "id": "ggz-nina",
@@ -2070,11 +2598,22 @@
           "error": "Missing or empty source file: Nina/Ev_Cv_Partner_1278_008"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ggz-nina.model.json?v=118f95a645b0ebda56b3d5c24e3240d1a4df2442ef03cfef0781825b5ac61460",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "a3922387193252a6d3814b54a5e146c8215643e9c548cce8154784f1779e78ea",
+      "preview": "./assets/animation-previews/gunsgirlz-ggz-nina.webp"
     },
     {
       "id": "ggz-nindi",
@@ -2133,11 +2672,22 @@
           "error": "Missing or empty source file: Nindi/Ev_Cv_Partner_Live2D_1276_009_Jp"
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "Live2D：模型地址未通过来源校验"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/ggz-nindi.model.json?v=674d1da93c7f6def82b53e545893ad5b8e414a4dc3c775694ea4b937d167b039",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "98f7178cae66fc4b1f133abea795333701541d3f050569e45ea508c49d7c0c6f",
+      "preview": "./assets/animation-previews/gunsgirlz-ggz-nindi.webp"
     }
   ],
   "sources": []

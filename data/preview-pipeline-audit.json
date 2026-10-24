@@ -1,536 +1,548 @@
 {
-  "games-wave3": {
+  "primary": {
     "scope": "shared preview pipeline",
     "counts": {
-      "gunsgirlz": {
-        "indexed": 18,
-        "verifiedPreview": 0,
-        "missingPreview": 18
+      "nikke": {
+        "indexed": 514,
+        "verifiedPreview": 514,
+        "missingPreview": 0
       },
-      "arkorder": {
-        "indexed": 15,
-        "verifiedPreview": 0,
-        "missingPreview": 15
+      "bluearchive": {
+        "indexed": 179,
+        "verifiedPreview": 179,
+        "missingPreview": 0
       },
-      "gemstory": {
-        "indexed": 14,
-        "verifiedPreview": 0,
-        "missingPreview": 14
-      },
-      "warshipgirls": {
-        "indexed": 3,
-        "verifiedPreview": 0,
-        "missingPreview": 3
+      "konosuba": {
+        "indexed": 126,
+        "verifiedPreview": 124,
+        "missingPreview": 2
       }
     },
     "missing": [
       {
-        "gameId": "gunsgirlz",
-        "id": "ggz-bronya"
+        "gameId": "konosuba",
+        "id": "kf-1191100-1190100"
       },
       {
-        "gameId": "gunsgirlz",
-        "id": "ggz-delisha"
-      },
-      {
-        "gameId": "gunsgirlz",
-        "id": "ggz-himeko"
-      },
-      {
-        "gameId": "gunsgirlz",
-        "id": "ggz-houraiji"
-      },
-      {
-        "gameId": "gunsgirlz",
-        "id": "ggz-kaguya"
-      },
-      {
-        "gameId": "gunsgirlz",
-        "id": "ggz-keluoyi"
-      },
-      {
-        "gameId": "gunsgirlz",
-        "id": "ggz-kika"
-      },
-      {
-        "gameId": "gunsgirlz",
-        "id": "ggz-mie"
-      },
-      {
-        "gameId": "gunsgirlz",
-        "id": "ggz-shin"
-      },
-      {
-        "gameId": "gunsgirlz",
-        "id": "ggz-xier"
-      },
-      {
-        "gameId": "gunsgirlz",
-        "id": "ggz-yazakura"
-      },
-      {
-        "gameId": "gunsgirlz",
-        "id": "ggz-yiselin"
-      },
-      {
-        "gameId": "arkorder",
-        "id": "ao-l_103300401"
-      },
-      {
-        "gameId": "arkorder",
-        "id": "ao-l_103501211"
-      },
-      {
-        "gameId": "arkorder",
-        "id": "ao-l_114202911"
-      },
-      {
-        "gameId": "arkorder",
-        "id": "ao-l_133100301"
-      },
-      {
-        "gameId": "arkorder",
-        "id": "ao-l_133100611"
-      },
-      {
-        "gameId": "arkorder",
-        "id": "ao-l_134100111"
-      },
-      {
-        "gameId": "arkorder",
-        "id": "ao-l_143200301"
-      },
-      {
-        "gameId": "arkorder",
-        "id": "ao-l_144402311"
-      },
-      {
-        "gameId": "arkorder",
-        "id": "ao-l_154500211"
-      },
-      {
-        "gameId": "arkorder",
-        "id": "ao-l_234100511"
-      },
-      {
-        "gameId": "arkorder",
-        "id": "ao-l_234200211"
-      },
-      {
-        "gameId": "arkorder",
-        "id": "ao-l_234400411"
-      },
-      {
-        "gameId": "arkorder",
-        "id": "ao-l_234400412"
-      },
-      {
-        "gameId": "arkorder",
-        "id": "ao-l_234500311"
-      },
-      {
-        "gameId": "arkorder",
-        "id": "ao-l_234600111"
-      },
-      {
-        "gameId": "gemstory",
-        "id": "gs1-aite"
-      },
-      {
-        "gameId": "gemstory",
-        "id": "gs1-lili"
-      },
-      {
-        "gameId": "gemstory",
-        "id": "gs1-magelite"
-      },
-      {
-        "gameId": "gemstory",
-        "id": "gs1-safeiya"
-      },
-      {
-        "gameId": "gemstory",
-        "id": "gs1-west"
-      },
-      {
-        "gameId": "gemstory",
-        "id": "gs2-elizabeth_1"
-      },
-      {
-        "gameId": "gemstory",
-        "id": "gs2-elizabeth_2"
-      },
-      {
-        "gameId": "gemstory",
-        "id": "gs2-elizabeth_3"
-      },
-      {
-        "gameId": "gemstory",
-        "id": "gs2-elizabeth_4"
-      },
-      {
-        "gameId": "gemstory",
-        "id": "gs2-elizabeth_5"
-      },
-      {
-        "gameId": "gemstory",
-        "id": "gs2-elizabeth_6"
-      },
-      {
-        "gameId": "gemstory",
-        "id": "gs2-elizabeth_7"
-      },
-      {
-        "gameId": "gemstory",
-        "id": "gs2-elizabeth_9"
-      },
-      {
-        "gameId": "gemstory",
-        "id": "gs2-elizabeth_9_1"
-      },
-      {
-        "gameId": "warshipgirls",
-        "id": "wg-209_2"
-      },
-      {
-        "gameId": "warshipgirls",
-        "id": "wg-248_1"
-      },
-      {
-        "gameId": "warshipgirls",
-        "id": "wg-325_1"
-      },
-      {
-        "gameId": "gunsgirlz",
-        "id": "ggz-byc"
-      },
-      {
-        "gameId": "gunsgirlz",
-        "id": "ggz-kiana"
-      },
-      {
-        "gameId": "gunsgirlz",
-        "id": "ggz-kiro"
-      },
-      {
-        "gameId": "gunsgirlz",
-        "id": "ggz-lita"
-      },
-      {
-        "gameId": "gunsgirlz",
-        "id": "ggz-nina"
-      },
-      {
-        "gameId": "gunsgirlz",
-        "id": "ggz-nindi"
+        "gameId": "konosuba",
+        "id": "kf-1193207-1190100"
       }
     ],
     "newCapturesInThisRun": 0,
     "rejectedCaptures": [],
     "failedCaptures": [
       {
-        "id": "ggz-bronya",
-        "gameId": "gunsgirlz",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
+        "id": "kf-1191100-1190100",
+        "gameId": "konosuba",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .json. Error: Region not found in atlas: 01_backhair_2_1 (mesh attachment: 01_backhair_2_1)；可点击“重试”或选择本地导入已获得的动画文件。"
       },
       {
-        "id": "ggz-delisha",
-        "gameId": "gunsgirlz",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ggz-himeko",
-        "gameId": "gunsgirlz",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ggz-houraiji",
-        "gameId": "gunsgirlz",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ggz-kaguya",
-        "gameId": "gunsgirlz",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ggz-keluoyi",
-        "gameId": "gunsgirlz",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ggz-kika",
-        "gameId": "gunsgirlz",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ggz-mie",
-        "gameId": "gunsgirlz",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ggz-shin",
-        "gameId": "gunsgirlz",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ggz-xier",
-        "gameId": "gunsgirlz",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ggz-yazakura",
-        "gameId": "gunsgirlz",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ggz-yiselin",
-        "gameId": "gunsgirlz",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ao-l_103300401",
-        "gameId": "arkorder",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ao-l_103501211",
-        "gameId": "arkorder",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ao-l_114202911",
-        "gameId": "arkorder",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ao-l_133100301",
-        "gameId": "arkorder",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ao-l_133100611",
-        "gameId": "arkorder",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ao-l_134100111",
-        "gameId": "arkorder",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ao-l_143200301",
-        "gameId": "arkorder",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ao-l_144402311",
-        "gameId": "arkorder",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ao-l_154500211",
-        "gameId": "arkorder",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ao-l_234100511",
-        "gameId": "arkorder",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ao-l_234200211",
-        "gameId": "arkorder",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ao-l_234400411",
-        "gameId": "arkorder",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ao-l_234400412",
-        "gameId": "arkorder",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ao-l_234500311",
-        "gameId": "arkorder",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ao-l_234600111",
-        "gameId": "arkorder",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "gs1-aite",
-        "gameId": "gemstory",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "gs1-lili",
-        "gameId": "gemstory",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "gs1-magelite",
-        "gameId": "gemstory",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "gs1-safeiya",
-        "gameId": "gemstory",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "gs1-west",
-        "gameId": "gemstory",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "gs2-elizabeth_1",
-        "gameId": "gemstory",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "gs2-elizabeth_2",
-        "gameId": "gemstory",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "gs2-elizabeth_3",
-        "gameId": "gemstory",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "gs2-elizabeth_4",
-        "gameId": "gemstory",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "gs2-elizabeth_5",
-        "gameId": "gemstory",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "gs2-elizabeth_6",
-        "gameId": "gemstory",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "gs2-elizabeth_7",
-        "gameId": "gemstory",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "gs2-elizabeth_9",
-        "gameId": "gemstory",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "gs2-elizabeth_9_1",
-        "gameId": "gemstory",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "wg-209_2",
-        "gameId": "warshipgirls",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "wg-248_1",
-        "gameId": "warshipgirls",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "wg-325_1",
-        "gameId": "warshipgirls",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ggz-byc",
-        "gameId": "gunsgirlz",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ggz-kiana",
-        "gameId": "gunsgirlz",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ggz-kiro",
-        "gameId": "gunsgirlz",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ggz-lita",
-        "gameId": "gunsgirlz",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ggz-nina",
-        "gameId": "gunsgirlz",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
-      },
-      {
-        "id": "ggz-nindi",
-        "gameId": "gunsgirlz",
-        "category": "render-error",
-        "message": "Live2D：模型地址未通过来源校验"
+        "id": "kf-1193207-1190100",
+        "gameId": "konosuba",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .json. Error: Region not found in atlas: 01_backhair_2_1 (mesh attachment: 01_backhair_2_1)；可点击“重试”或选择本地导入已获得的动画文件。"
       }
     ],
     "failureSummary": {
-      "render-error": 50
+      "atlas-mismatch": 2
     }
+  },
+  "azurlane": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "azurlane": {
+        "indexed": 242,
+        "verifiedPreview": 242,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
+  },
+  "bd2": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "browndust2": {
+        "indexed": 209,
+        "verifiedPreview": 209,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
+  },
+  "newgames": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "arknights": {
+        "indexed": 359,
+        "verifiedPreview": 340,
+        "missingPreview": 19
+      },
+      "girlsfrontline": {
+        "indexed": 297,
+        "verifiedPreview": 297,
+        "missingPreview": 0
+      },
+      "konosuba": {
+        "indexed": 61,
+        "verifiedPreview": 61,
+        "missingPreview": 0
+      }
+    },
+    "missing": [
+      {
+        "gameId": "arknights",
+        "id": "ak-char_1026_gvial2_summer_12-3f53e8d"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_1026_gvial2_summer_12_0-22ce5fd"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_1027_greyy2_snow_5-48369fe"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_1027_greyy2_snow_5_0-65ebbcc"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_209_ardign_snow_1-14a2c0b"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_209_ardign_snow_1_0-e0c9a91"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_343_tknogi_snow_6-5a95f91"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_343_tknogi_snow_6_0-820e1ab"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_388_mint_epoque_30-d8296f6"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_388_mint_epoque_30_0-d189e95"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_431_ashlok_epoque_28-0924673"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_431_ashlok_epoque_28_0-2e6bce6"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_479_sleach_epoque_14-29c6bac"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_479_sleach_epoque_14_0-3d9c464"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_485_pallas_epoque_19-90edf0f"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-char_485_pallas_epoque_19_0-3a94e85"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-token_10027_ironmn_pile3_summer_11-3024f3c"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-token_10027_ironmn_pile3_summer_11_0-42006ca"
+      },
+      {
+        "gameId": "arknights",
+        "id": "ak-token_10027_ironmn_pile3_summer_11_1-985bf58"
+      }
+    ],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [
+      {
+        "id": "ak-char_1026_gvial2_summer_12-3f53e8d",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: B_Annex_9 (mesh attachment: B_Annex_9)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_1026_gvial2_summer_12_0-22ce5fd",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: F_Annex_1a(3) (mesh attachment: F_Annex_1a(3))；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_1027_greyy2_snow_5-48369fe",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: B_Bell_01 (region attachment: B_Bell_01)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_1027_greyy2_snow_5_0-65ebbcc",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: C_E_Finger_01 (region attachment: C_E_Finger_01)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_209_ardign_snow_1-14a2c0b",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: F_B_Bow (mesh attachment: F_B_Bow)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_209_ardign_snow_1_0-e0c9a91",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: B_Bow (mesh attachment: B_Bow)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_343_tknogi_snow_6-5a95f91",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: B_Annex_A_a (mesh attachment: B_Annex_A_a)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_343_tknogi_snow_6_0-820e1ab",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: F_Annex_A_a (mesh attachment: F_Annex_A_a)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_388_mint_epoque_30-d8296f6",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: B_A_Belt (region attachment: B_A_Belt)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_388_mint_epoque_30_0-d189e95",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: F_A_Bangs (mesh attachment: F_A_Bangs)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_431_ashlok_epoque_28-0924673",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: F_B_Hair (mesh attachment: F_B_Hair)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_431_ashlok_epoque_28_0-2e6bce6",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: B_B_Hair_a (mesh attachment: B_B_Hair_a)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_479_sleach_epoque_14-29c6bac",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: F_Arm_L (mesh attachment: F_Arm_L)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_479_sleach_epoque_14_0-3d9c464",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: B_Arm_L (mesh attachment: B_Arm_L)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_485_pallas_epoque_19-90edf0f",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: C_FX_01 (mesh attachment: C_FX_01)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-char_485_pallas_epoque_19_0-3a94e85",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: B_Belt_01 (mesh attachment: B_Belt_01)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-token_10027_ironmn_pile3_summer_11-3024f3c",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: C_F_Body_01 (mesh attachment: C_F_Body_01)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-token_10027_ironmn_pile3_summer_11_0-42006ca",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: C_B_Body (mesh attachment: C_B_Body)；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ak-token_10027_ironmn_pile3_summer_11_1-985bf58",
+        "gameId": "arknights",
+        "category": "atlas-mismatch",
+        "message": "角色资源下载失败。github：Error: could not load skeleton .skel. Error: Region not found in atlas: C_R_Body_01 (mesh attachment: C_R_Body_01)；可点击“重试”或选择本地导入已获得的动画文件。"
+      }
+    ],
+    "failureSummary": {
+      "atlas-mismatch": 19
+    }
+  },
+  "arknights-illust": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "arknights": {
+        "indexed": 92,
+        "verifiedPreview": 92,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
+  },
+  "moregames": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "touhoucannonball": {
+        "indexed": 84,
+        "verifiedPreview": 84,
+        "missingPreview": 0
+      },
+      "girlscafegun": {
+        "indexed": 273,
+        "verifiedPreview": 272,
+        "missingPreview": 1
+      }
+    },
+    "missing": [
+      {
+        "gameId": "girlscafegun",
+        "id": "gc-girl04-l2d05"
+      }
+    ],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [
+      {
+        "id": "gc-girl04-l2d05",
+        "gameId": "girlscafegun",
+        "category": "render-error",
+        "message": "blank-frame: no rendered character"
+      }
+    ],
+    "failureSummary": {
+      "render-error": 1
+    }
+  },
+  "highquality": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "girldimension": {
+        "indexed": 102,
+        "verifiedPreview": 102,
+        "missingPreview": 0
+      },
+      "sinsevendeadlysins": {
+        "indexed": 94,
+        "verifiedPreview": 94,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
+  },
+  "mature": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "maidslife": {
+        "indexed": 10,
+        "verifiedPreview": 10,
+        "missingPreview": 0
+      },
+      "tokyonecro": {
+        "indexed": 397,
+        "verifiedPreview": 397,
+        "missingPreview": 0
+      },
+      "lovecube": {
+        "indexed": 6,
+        "verifiedPreview": 6,
+        "missingPreview": 0
+      },
+      "foxhimezero": {
+        "indexed": 5,
+        "verifiedPreview": 5,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
+  },
+  "daibloscore": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "daibloscore": {
+        "indexed": 127,
+        "verifiedPreview": 127,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
+  },
+  "expanded-games": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "destinychild": {
+        "indexed": 973,
+        "verifiedPreview": 973,
+        "missingPreview": 0
+      },
+      "venusscramble": {
+        "indexed": 17,
+        "verifiedPreview": 17,
+        "missingPreview": 0
+      },
+      "ironsaga": {
+        "indexed": 4,
+        "verifiedPreview": 4,
+        "missingPreview": 0
+      },
+      "mementomori": {
+        "indexed": 49,
+        "verifiedPreview": 49,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
+  },
+  "mature-spine-expansion": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "echocalypse": {
+        "indexed": 336,
+        "verifiedPreview": 334,
+        "missingPreview": 2
+      }
+    },
+    "missing": [
+      {
+        "gameId": "echocalypse",
+        "id": "ec-50010001"
+      },
+      {
+        "gameId": "echocalypse",
+        "id": "ec-500180"
+      }
+    ],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [
+      {
+        "id": "ec-50010001",
+        "gameId": "echocalypse",
+        "category": "render-error",
+        "message": "角色资源下载失败。github：图集坐标适配失败：Region exceeds declared atlas page: xuena_zdatui_yinying_3；可点击“重试”或选择本地导入已获得的动画文件。"
+      },
+      {
+        "id": "ec-500180",
+        "gameId": "echocalypse",
+        "category": "render-error",
+        "message": "角色资源下载失败。github：图集坐标适配失败：Region exceeds declared atlas page: images/xia_yt/xia_yt_12；可点击“重试”或选择本地导入已获得的动画文件。"
+      }
+    ],
+    "failureSummary": {
+      "render-error": 2
+    }
+  },
+  "mature-followup": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "sacredswordprincesses": {
+        "indexed": 1,
+        "verifiedPreview": 1,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
+  },
+  "games-wave2": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "momoiro": {
+        "indexed": 17,
+        "verifiedPreview": 17,
+        "missingPreview": 0
+      },
+      "sexysins": {
+        "indexed": 6,
+        "verifiedPreview": 6,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
+  },
+  "games-wave3": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "gunsgirlz": {
+        "indexed": 18,
+        "verifiedPreview": 18,
+        "missingPreview": 0
+      },
+      "arkorder": {
+        "indexed": 15,
+        "verifiedPreview": 15,
+        "missingPreview": 0
+      },
+      "gemstory": {
+        "indexed": 14,
+        "verifiedPreview": 14,
+        "missingPreview": 0
+      },
+      "warshipgirls": {
+        "indexed": 3,
+        "verifiedPreview": 3,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 50,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
   }
 }
