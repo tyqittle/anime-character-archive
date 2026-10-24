@@ -1,0 +1,49 @@
+name: Import pinned Cubism source batch
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/live2d-import-batch.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: import-cubism-sources
+  cancel-in-progress: false
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check pinned source models and import complete records
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/import_registered_live2d_batch.mjs
+      - name: Check shared catalog and site invariants
+        run: |
+          npm test
+          npm run check
+          npm run test:python
+      - name: Publish source-checked catalog
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/live2d-games-wave3.json data/live2d-games-wave3-source-audit.json
+          if git diff --cached --quiet; then
+            echo "No source changes"
+          else
+            git commit -m "Import four new game dynamic portrait catalogs from pinned sources"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Request shared model preview capture
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run preview-pipeline.yml --ref main --field catalog=games-wave3
