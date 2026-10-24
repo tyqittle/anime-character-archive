@@ -6,7 +6,7 @@ import os from 'node:os';
 import {pathToFileURL} from 'node:url';
 import {createHash} from 'node:crypto';
 import {readCharacters} from './catalog_registry.mjs';
-import {parseSourceSettings,normalizedCubism2Settings} from './cubism_source_settings.mjs';
+import {parseSourceSettings,normalizedCubism2Settings,normalizedCubism3Settings} from './cubism_source_settings.mjs';
 const root=new URL('../',import.meta.url);
 const read=p=>JSON.parse(fs.readFileSync(new URL(p,root),'utf8'));
 export function sourceSettings(scope,tree){
@@ -46,6 +46,22 @@ export function prepareSourceRecord(scope,relative,settings,tree,existing){
    (settings.motions[group]||=[]).push({file:ref});known.add(ref);discoveredMotions.push(ref);
   }
  }
+ // Certain complete Cubism3 rigs ship art and motion settings separately.
+ // Only an explicitly enabled source scope may compose their one pinned texture.
+ if(!legacy&&scope.import.composeCubism3Texture){
+  if(settings.Version!==3||!settings.FileReferences?.Moc||!Array.isArray(settings.FileReferences.Textures)||settings.FileReferences.Textures.length!==0)
+   throw Error('Expected motion-only Cubism3 manifest: '+relative);
+  if(!Object.values(settings.FileReferences.Motions||{}).some(group=>Array.isArray(group)&&group.length))
+   throw Error('Missing source Cubism3 motions: '+relative);
+  const folder=path.posix.dirname(relative);
+  const textureOptions=[
+   folder+'/textures/texture_00.png',folder+'/textures/texture_00 .png',
+   folder+'/texture_00.png',folder+'/texture_00 .png'
+  ].filter(candidate=>tree.some(file=>file.type==='blob'&&file.size>0&&file.path===candidate));
+  if(textureOptions.length!==1)throw Error('Missing or ambiguous source Cubism3 texture: '+relative);
+  settings=structuredClone(settings);
+  settings.FileReferences.Textures=[path.posix.relative(folder,textureOptions[0])];
+ }
  const refs=legacy?{Moc:settings.model,Textures:settings.textures,Physics:settings.physics,Pose:settings.pose,
   Expressions:(settings.expressions||[]).map(x=>({File:x.file||x.File})),
   Motions:Object.fromEntries(Object.entries(settings.motions||{}).map(([group,items])=>[group,items.map(x=>({File:x.file||x.File}))]))}:settings.FileReferences;
@@ -82,16 +98,20 @@ export function prepareSourceRecord(scope,relative,settings,tree,existing){
  const identity=scope.import.idGroups?scope.import.idGroups.map(index=>match[index]).join('-'):stem;
  if(!/^[a-zA-Z0-9_-]+$/.test(identity))throw Error('Invalid model identity: '+relative);
  const id=scope.import.idPrefix+(scope.import.lowercaseId?identity.toLowerCase():identity);
- const generated=scope.import.normalizedSettingsDirectory?normalizedCubism2Settings(settings,
-  ref=>'https://raw.githubusercontent.com/'+scope.sourceRepo+'/'+scope.sourceCommit+'/'+((scope.directory?scope.directory+'/':'')+resolve(ref)).split('/').map(encodeURIComponent).join('/'),id,scope.import.normalizedSettingsDirectory):null;
- if(generated){if(!legacy)throw Error('Only legacy source settings require this adapter');modelUrl=generated.url}
+ const generated=scope.import.normalizedSettingsDirectory?(
+  legacy?normalizedCubism2Settings(settings,
+  ref=>'https://raw.githubusercontent.com/'+scope.sourceRepo+'/'+scope.sourceCommit+'/'+((scope.directory?scope.directory+'/':'')+resolve(ref)).split('/').map(encodeURIComponent).join('/'),id,scope.import.normalizedSettingsDirectory)
+  :scope.import.composeCubism3Texture?normalizedCubism3Settings(settings,
+  ref=>'https://raw.githubusercontent.com/'+scope.sourceRepo+'/'+scope.sourceCommit+'/'+((scope.directory?scope.directory+'/':'')+resolve(ref)).split('/').map(encodeURIComponent).join('/'),id,scope.import.normalizedSettingsDirectory)
+  :null):null;
+ if(generated)modelUrl=generated.url;
  if(existing&&(existing.id!==id||(!generated&&existing.modelUrl!==modelUrl)))throw Error('Existing model identity differs: '+sourcePath);
  const name=scope.import.names?.[stem]||stem;
  const record={...(existing||{}),id:existing?.id||id,gameId:scope.gameId,engine:'cubism',
   name:existing?.name||name,characterName:existing?.characterName||stem.split('_')[0],costumeName:existing?.costumeName||stem,
   skinCode:generated?id:mapped?.modelStem||scope.import.modelStem||(scope.import.modelStemGroup?match[scope.import.modelStemGroup]:stem)+(scope.import.modelStemSuffix||''),game:scope.name||scope.gameId,collectionName:scope.name||scope.gameId,modelUrl,
   sourceRepo:scope.sourceRepo,sourceCommit:scope.sourceCommit,sourcePath,assetType:'live2d-character',textureBytes,motionCount:motions.length,
-  ...(legacy?{modelFormat:'cubism2'}:{}),
+  ...(legacy?{modelFormat:'cubism2'}:{modelFormat:'cubism3'}),
   ...(generated?{normalizedSettingsSha256:generated.sha256,normalizationNotes:generated.notes}:{}),
   ...(referenceRepairs.length?{sourceReferenceRepairs:referenceRepairs}:{}),
   ...(discoveredMotions.length?{sourceDiscoveredMotions:discoveredMotions}:{}),
