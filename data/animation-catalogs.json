@@ -65,6 +65,11 @@
       "id": "games-wave2",
       "name": "桃色旅团 / 7 Sexy Sins Tadaima",
       "path": "data/spine-games-wave2.json"
+    },
+    {
+      "id": "games-wave3",
+      "name": "崩坏学园2 / 方舟指令 / 宝石研物语 / 战舰少女",
+      "path": "data/live2d-games-wave3.json"
     }
   ]
 }
