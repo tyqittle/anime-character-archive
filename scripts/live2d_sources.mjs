@@ -143,7 +143,7 @@ async function settingsBlob(scope,entry){
  const bytes=Buffer.from(await response.arrayBuffer());
  const hash=createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex');
  if(hash!==entry.sha)throw Error('Model settings Git blob mismatch: '+sourcePath);
- return parseSourceSettings(bytes.toString('utf8'),!!scope.import?.allowJSONC);
+ return parseSourceSettings(bytes.toString('utf8'),!!scope.import?.allowJSONC,!!scope.import?.repairLegacyMotionCommas);
 }
 export async function main(args=process.argv.slice(2)){
  const config=read('data/live2d-source-scopes.json'),records=readCharacters(),report=[];
