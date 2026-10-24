@@ -1,7 +1,7 @@
 import {createHash} from 'node:crypto';
 
 // Accept only JSON plus comments/trailing commas, never executable JavaScript.
-export function parseSourceSettings(text,allowJSONC=false){
+export function parseSourceSettings(text,allowJSONC=false,repairLegacyMotionCommas=false){
  text=text.replace(/^\uFEFF/,'');
  if(!allowJSONC)return JSON.parse(text);
  let stripped='',quoted=false,escaped=false;
@@ -24,6 +24,11 @@ export function parseSourceSettings(text,allowJSONC=false){
   if(ch===','){let next=i+1;while(/\s/.test(stripped[next]||'')&&next<stripped.length)next++;if(/[}\]]/.test(stripped[next]||''))continue}
   normalized+=ch;
  }
+ // A few pinned Kagura Cubism2 exports omit the comma between the numeric
+ // fade_out value and the next lip_* key. Scope-level opt-in only: do not
+ // silently repair other malformed JSON or non-motion properties.
+ if(repairLegacyMotionCommas)
+  normalized=normalized.replace(/("fade_out"\s*:\s*-?\d+(?:\.\d+)?)(\s+)("(?:lip_offset|lip_weight|lip_id|lip_scale)"\s*:)/g,'$1,$2$3');
  return JSON.parse(normalized);
 }
 
