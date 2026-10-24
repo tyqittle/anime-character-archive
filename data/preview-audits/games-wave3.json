@@ -1,9 +1,534 @@
 {
   "scope": "shared preview pipeline",
-  "counts": {},
-  "missing": [],
+  "counts": {
+    "gunsgirlz": {
+      "indexed": 18,
+      "verifiedPreview": 0,
+      "missingPreview": 18
+    },
+    "arkorder": {
+      "indexed": 15,
+      "verifiedPreview": 0,
+      "missingPreview": 15
+    },
+    "gemstory": {
+      "indexed": 14,
+      "verifiedPreview": 0,
+      "missingPreview": 14
+    },
+    "warshipgirls": {
+      "indexed": 3,
+      "verifiedPreview": 0,
+      "missingPreview": 3
+    }
+  },
+  "missing": [
+    {
+      "gameId": "gunsgirlz",
+      "id": "ggz-bronya"
+    },
+    {
+      "gameId": "gunsgirlz",
+      "id": "ggz-delisha"
+    },
+    {
+      "gameId": "gunsgirlz",
+      "id": "ggz-himeko"
+    },
+    {
+      "gameId": "gunsgirlz",
+      "id": "ggz-houraiji"
+    },
+    {
+      "gameId": "gunsgirlz",
+      "id": "ggz-kaguya"
+    },
+    {
+      "gameId": "gunsgirlz",
+      "id": "ggz-keluoyi"
+    },
+    {
+      "gameId": "gunsgirlz",
+      "id": "ggz-kika"
+    },
+    {
+      "gameId": "gunsgirlz",
+      "id": "ggz-mie"
+    },
+    {
+      "gameId": "gunsgirlz",
+      "id": "ggz-shin"
+    },
+    {
+      "gameId": "gunsgirlz",
+      "id": "ggz-xier"
+    },
+    {
+      "gameId": "gunsgirlz",
+      "id": "ggz-yazakura"
+    },
+    {
+      "gameId": "gunsgirlz",
+      "id": "ggz-yiselin"
+    },
+    {
+      "gameId": "arkorder",
+      "id": "ao-l_103300401"
+    },
+    {
+      "gameId": "arkorder",
+      "id": "ao-l_103501211"
+    },
+    {
+      "gameId": "arkorder",
+      "id": "ao-l_114202911"
+    },
+    {
+      "gameId": "arkorder",
+      "id": "ao-l_133100301"
+    },
+    {
+      "gameId": "arkorder",
+      "id": "ao-l_133100611"
+    },
+    {
+      "gameId": "arkorder",
+      "id": "ao-l_134100111"
+    },
+    {
+      "gameId": "arkorder",
+      "id": "ao-l_143200301"
+    },
+    {
+      "gameId": "arkorder",
+      "id": "ao-l_144402311"
+    },
+    {
+      "gameId": "arkorder",
+      "id": "ao-l_154500211"
+    },
+    {
+      "gameId": "arkorder",
+      "id": "ao-l_234100511"
+    },
+    {
+      "gameId": "arkorder",
+      "id": "ao-l_234200211"
+    },
+    {
+      "gameId": "arkorder",
+      "id": "ao-l_234400411"
+    },
+    {
+      "gameId": "arkorder",
+      "id": "ao-l_234400412"
+    },
+    {
+      "gameId": "arkorder",
+      "id": "ao-l_234500311"
+    },
+    {
+      "gameId": "arkorder",
+      "id": "ao-l_234600111"
+    },
+    {
+      "gameId": "gemstory",
+      "id": "gs1-aite"
+    },
+    {
+      "gameId": "gemstory",
+      "id": "gs1-lili"
+    },
+    {
+      "gameId": "gemstory",
+      "id": "gs1-magelite"
+    },
+    {
+      "gameId": "gemstory",
+      "id": "gs1-safeiya"
+    },
+    {
+      "gameId": "gemstory",
+      "id": "gs1-west"
+    },
+    {
+      "gameId": "gemstory",
+      "id": "gs2-elizabeth_1"
+    },
+    {
+      "gameId": "gemstory",
+      "id": "gs2-elizabeth_2"
+    },
+    {
+      "gameId": "gemstory",
+      "id": "gs2-elizabeth_3"
+    },
+    {
+      "gameId": "gemstory",
+      "id": "gs2-elizabeth_4"
+    },
+    {
+      "gameId": "gemstory",
+      "id": "gs2-elizabeth_5"
+    },
+    {
+      "gameId": "gemstory",
+      "id": "gs2-elizabeth_6"
+    },
+    {
+      "gameId": "gemstory",
+      "id": "gs2-elizabeth_7"
+    },
+    {
+      "gameId": "gemstory",
+      "id": "gs2-elizabeth_9"
+    },
+    {
+      "gameId": "gemstory",
+      "id": "gs2-elizabeth_9_1"
+    },
+    {
+      "gameId": "warshipgirls",
+      "id": "wg-209_2"
+    },
+    {
+      "gameId": "warshipgirls",
+      "id": "wg-248_1"
+    },
+    {
+      "gameId": "warshipgirls",
+      "id": "wg-325_1"
+    },
+    {
+      "gameId": "gunsgirlz",
+      "id": "ggz-byc"
+    },
+    {
+      "gameId": "gunsgirlz",
+      "id": "ggz-kiana"
+    },
+    {
+      "gameId": "gunsgirlz",
+      "id": "ggz-kiro"
+    },
+    {
+      "gameId": "gunsgirlz",
+      "id": "ggz-lita"
+    },
+    {
+      "gameId": "gunsgirlz",
+      "id": "ggz-nina"
+    },
+    {
+      "gameId": "gunsgirlz",
+      "id": "ggz-nindi"
+    }
+  ],
   "newCapturesInThisRun": 0,
   "rejectedCaptures": [],
-  "failedCaptures": [],
-  "failureSummary": {}
+  "failedCaptures": [
+    {
+      "id": "ggz-bronya",
+      "gameId": "gunsgirlz",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ggz-delisha",
+      "gameId": "gunsgirlz",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ggz-himeko",
+      "gameId": "gunsgirlz",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ggz-houraiji",
+      "gameId": "gunsgirlz",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ggz-kaguya",
+      "gameId": "gunsgirlz",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ggz-keluoyi",
+      "gameId": "gunsgirlz",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ggz-kika",
+      "gameId": "gunsgirlz",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ggz-mie",
+      "gameId": "gunsgirlz",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ggz-shin",
+      "gameId": "gunsgirlz",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ggz-xier",
+      "gameId": "gunsgirlz",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ggz-yazakura",
+      "gameId": "gunsgirlz",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ggz-yiselin",
+      "gameId": "gunsgirlz",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ao-l_103300401",
+      "gameId": "arkorder",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ao-l_103501211",
+      "gameId": "arkorder",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ao-l_114202911",
+      "gameId": "arkorder",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ao-l_133100301",
+      "gameId": "arkorder",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ao-l_133100611",
+      "gameId": "arkorder",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ao-l_134100111",
+      "gameId": "arkorder",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ao-l_143200301",
+      "gameId": "arkorder",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ao-l_144402311",
+      "gameId": "arkorder",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ao-l_154500211",
+      "gameId": "arkorder",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ao-l_234100511",
+      "gameId": "arkorder",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ao-l_234200211",
+      "gameId": "arkorder",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ao-l_234400411",
+      "gameId": "arkorder",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ao-l_234400412",
+      "gameId": "arkorder",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ao-l_234500311",
+      "gameId": "arkorder",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ao-l_234600111",
+      "gameId": "arkorder",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "gs1-aite",
+      "gameId": "gemstory",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "gs1-lili",
+      "gameId": "gemstory",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "gs1-magelite",
+      "gameId": "gemstory",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "gs1-safeiya",
+      "gameId": "gemstory",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "gs1-west",
+      "gameId": "gemstory",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "gs2-elizabeth_1",
+      "gameId": "gemstory",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "gs2-elizabeth_2",
+      "gameId": "gemstory",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "gs2-elizabeth_3",
+      "gameId": "gemstory",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "gs2-elizabeth_4",
+      "gameId": "gemstory",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "gs2-elizabeth_5",
+      "gameId": "gemstory",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "gs2-elizabeth_6",
+      "gameId": "gemstory",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "gs2-elizabeth_7",
+      "gameId": "gemstory",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "gs2-elizabeth_9",
+      "gameId": "gemstory",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "gs2-elizabeth_9_1",
+      "gameId": "gemstory",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "wg-209_2",
+      "gameId": "warshipgirls",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "wg-248_1",
+      "gameId": "warshipgirls",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "wg-325_1",
+      "gameId": "warshipgirls",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ggz-byc",
+      "gameId": "gunsgirlz",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ggz-kiana",
+      "gameId": "gunsgirlz",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ggz-kiro",
+      "gameId": "gunsgirlz",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ggz-lita",
+      "gameId": "gunsgirlz",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ggz-nina",
+      "gameId": "gunsgirlz",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    },
+    {
+      "id": "ggz-nindi",
+      "gameId": "gunsgirlz",
+      "category": "render-error",
+      "message": "Live2D：模型地址未通过来源校验"
+    }
+  ],
+  "failureSummary": {
+    "render-error": 50
+  }
 }

@@ -63,9 +63,11 @@
           "error": "Missing or empty source file: bronya/sound/bronya_live2d_012.wav"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ggz-delisha",
@@ -124,9 +126,11 @@
           "error": "Missing or empty source file: delisha/sound/theresa_live2d_015.wav"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ggz-himeko",
@@ -185,9 +189,11 @@
           "error": "Missing or empty source file: himeko/sound/himeko_live2d_019.wav"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ggz-houraiji",
@@ -242,9 +248,11 @@
           "error": "Missing or empty source file: houraiji/sound/houraiji_live2d_003.wav"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ggz-kaguya",
@@ -303,9 +311,11 @@
           "error": "Missing or empty source file: kaguya/sound/kaguya_live2d_009.wav"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ggz-keluoyi",
@@ -364,9 +374,11 @@
           "error": "Missing or empty source file: keluoyi/sound/kuroe_live2d_011.wav"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ggz-kika",
@@ -425,9 +437,11 @@
           "error": "Missing or empty source file: kika/Ev_Cv_Partner_1177_104"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ggz-mie",
@@ -486,9 +500,11 @@
           "error": "Missing or empty source file: mie/sound/mei_live2d_007.wav"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ggz-shin",
@@ -559,9 +575,11 @@
           "error": "Missing or empty source file: shin/sound/sin_live2d_jp_18.wav"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ggz-xier",
@@ -632,9 +650,11 @@
           "error": "Missing or empty source file: xier/Ev_Cv_Partner_1026_019"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ggz-yazakura",
@@ -693,9 +713,11 @@
           "error": "Missing or empty source file: yazakura/sound/sakura_live2d_001.wav"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ggz-yiselin",
@@ -754,9 +776,11 @@
           "error": "Missing or empty source file: yiselin/sound/hakasecn_live2d_001.wav"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ao-l_103300401",
@@ -778,9 +802,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "0a0cce8dd0cd4237ff464a7821e5a0b2971113b63d7586535c63f638ec6dac89",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ao-l_103501211",
@@ -802,9 +828,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "a33e4c72e736d56003b596f9a15ce849c5962b20c03fd378bb54aba5d191610f",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ao-l_114202911",
@@ -826,9 +854,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "b3b4c75c738d249f620a0f44eb75d408a748257d3b9a68dcda66d3bc82a290cf",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ao-l_133100301",
@@ -850,9 +880,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "02c658dcff953db70a25bc99a965eb7f15f19622b5003bcca6337d32943d1969",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ao-l_133100611",
@@ -874,9 +906,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "3298a49c2725c44a9f3e6594dca3ad89b0db988e2710970ae6bdb071e3f0f8f2",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ao-l_134100111",
@@ -898,9 +932,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "01f7c0a1bcd5a0ee6df5424aa78e16ca0f5d5a21eedb77f82642427d892888a3",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ao-l_143200301",
@@ -922,9 +958,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "669dab49b7a8cbe7672628118bfad2e5359575f0c94890d294de4895a1bc70ca",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ao-l_144402311",
@@ -946,9 +984,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "9cf5d864a44a3bee1b9a898bbdbf06dadd67138781013e5edc0826db93737c98",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ao-l_154500211",
@@ -970,9 +1010,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "dbbe64ef873e9d0ac7bd7c9ed3e70f42e7104802f4297aa54d548f18bc706dc4",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ao-l_234100511",
@@ -994,9 +1036,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "08f488edbb85575de5fbf7b6e8939c560be731b690112a51ae41f4164508ec1d",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ao-l_234200211",
@@ -1018,9 +1062,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "aacd651f3a3d5609e701c07f0d80b3cb35485f4ad63ffa32a1ea9fb96a41ebf5",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ao-l_234400411",
@@ -1042,9 +1088,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "d0b4ed43bf3d4a35a3f5d52579c779a059be1ffe006ddaca6db651e2fbe19067",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ao-l_234400412",
@@ -1066,9 +1114,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "90b8886712cb3dfbe24a63923e6e527a7ccd87fe4fefd2e52be8f6e3aac10d2e",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ao-l_234500311",
@@ -1090,9 +1140,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "14ff203cfef131315a6b70abd910f242e0511ab033720992298469323f2f8bdf",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ao-l_234600111",
@@ -1114,9 +1166,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "277ad495e03b0ce596cc09f253d21e51b2de5c3856836d6cb6475009c5918134",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "gs1-aite",
@@ -1138,9 +1192,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "5f3764845a1126f69b4161b01563a051232d33c495b04a58ef358b07fa50a10f",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "gs1-lili",
@@ -1162,9 +1218,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "e4f56d7d67081bad9346d66c5e2414668d51771d77807c0f74fb34410241204d",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "gs1-magelite",
@@ -1186,9 +1244,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "328c40d591087f62e363c9cc9264ad8f5279e118da1cd7eb21776ad8099d808f",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "gs1-safeiya",
@@ -1210,9 +1270,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "508cc32c909ab16e3c4a835d89a7f6ef8ec9630db840b2127d5d840dc4266d5f",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "gs1-west",
@@ -1234,9 +1296,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "f97a333a083c2e5908528e9bfb3056725509d695de341a5a006ec2be54f93b4d",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "gs2-elizabeth_1",
@@ -1258,9 +1322,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "13a82fa7195b6b9c8d89e9f8748728575bd8f722529cddb7fd1ac540a948b018",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "gs2-elizabeth_2",
@@ -1282,9 +1348,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "a17f5727995f94d8ba986a6f8abf1f8f13629f45c32157dd50fc6308d89f5ba6",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "gs2-elizabeth_3",
@@ -1306,9 +1374,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "79d05996947ca42cc74772162c36c3ae1b01f4fb75472cceb908d9e98655609c",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "gs2-elizabeth_4",
@@ -1330,9 +1400,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "a78c1e047f822d5df9725b38a225e22f86fc11012c7ac7cf89e3e57e6a5799e3",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "gs2-elizabeth_5",
@@ -1354,9 +1426,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "23ee9c238cd0d6c781c367f11cad7e5bc6be157a2297153bdaf09355de7aa988",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "gs2-elizabeth_6",
@@ -1378,9 +1452,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "a1b9226df2f7bf0598282e70012a148de0957cb465b9a7a64c896daed97407a2",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "gs2-elizabeth_7",
@@ -1402,9 +1478,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "9c30a0fc29b8dedfcc8affb5b53742fb4be95029bdb16531909e72090ccb66e1",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "gs2-elizabeth_9",
@@ -1426,9 +1504,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "84666d13edc209dbe8f247728a0bec65573c451868de372eac5b8524fe78c06e",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "gs2-elizabeth_9_1",
@@ -1450,9 +1530,11 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "438d0b9b4fc6fcc5413b02b98e7c2411cfad34ee1a0ce99c4455d205e8d690fa",
       "normalizationNotes": [],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "wg-209_2",
@@ -1515,9 +1597,11 @@
           "error": "Missing or empty source file: 209_2/test"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "wg-248_1",
@@ -1588,9 +1672,11 @@
           "error": "Missing or empty source file: 248_1/test"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "wg-325_1",
@@ -1637,9 +1723,11 @@
           "error": "Missing or empty source file: 325_1/test"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ggz-byc",
@@ -1730,9 +1818,11 @@
           "error": "Missing or empty source file: BYC/sound/D_Sak_Live2D013.wav"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ggz-kiana",
@@ -1787,9 +1877,11 @@
           "error": "Missing or empty source file: Kiana/sound/kiana_live2d_014.wav"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ggz-kiro",
@@ -1848,9 +1940,11 @@
           "error": "Missing or empty source file: Kiro/Ev_Cv_Partner_1279_008"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ggz-lita",
@@ -1913,9 +2007,11 @@
           "error": "Missing or empty source file: Lita/Ev_Cv_Partner_1234_005_cn"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ggz-nina",
@@ -1974,9 +2070,11 @@
           "error": "Missing or empty source file: Nina/Ev_Cv_Partner_1278_008"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     },
     {
       "id": "ggz-nindi",
@@ -2035,9 +2133,11 @@
           "error": "Missing or empty source file: Nindi/Ev_Cv_Partner_Live2D_1276_009_Jp"
         }
       ],
-      "status": "indexed-unverified",
+      "status": "unverified-playback",
       "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "previewSource": "not-rendered",
+      "previewFailureType": "render-error",
+      "previewFailureReason": "Live2D：模型地址未通过来源校验"
     }
   ],
   "sources": []
