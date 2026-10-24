@@ -40,18 +40,19 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/live2d-games-wave3.json data/live2d-games-wave3-source-audit.json assets/model-settings/newgames/
+          git add data/live2d-games-wave*.json data/live2d-games-wave*-source-audit.json assets/model-settings/newgames/
           if git diff --cached --quiet; then
             echo "No source changes"
           else
-            git commit -m "Import four new game dynamic portrait catalogs from pinned sources"
+            git commit -m "Import batch of pinned game animation sources"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
       - name: Request shared model preview capture
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run preview-pipeline.yml --ref main --field catalog=games-wave3
+        run: CATALOG=$(node -p "JSON.parse(require('fs').readFileSync('data/live2d-import-batch.json','utf8')).catalogId||'games-wave3'")
+          gh workflow run preview-pipeline.yml --ref main --field catalog="$CATALOG"
       - name: Publish imported catalog even while new previews are pending
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
