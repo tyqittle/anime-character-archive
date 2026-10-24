@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "scope": "Four new games; pinned source file completeness checks (not WebGL playback).",
   "games": {
-    "gunsgirlz": 12,
+    "gunsgirlz": 18,
     "arkorder": 15,
     "gemstory": 14,
     "warshipgirls": 3
   },
-  "total": 44,
+  "total": 50,
   "reports": [
     {
       "scope": "gunsgirlz",
@@ -15,36 +15,11 @@
       "sourceRepo": "Eikanya/Live2d-model",
       "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
       "selectedModelSettings": 18,
-      "checkedModels": 12,
-      "rejectedModels": [
-        {
-          "path": "崩坏学园2/BYC/model.json",
-          "error": "Invalid normalized settings destination"
-        },
-        {
-          "path": "崩坏学园2/Kiana/model.json",
-          "error": "Invalid normalized settings destination"
-        },
-        {
-          "path": "崩坏学园2/Kiro/model.json",
-          "error": "Invalid normalized settings destination"
-        },
-        {
-          "path": "崩坏学园2/Lita/model.json",
-          "error": "Invalid normalized settings destination"
-        },
-        {
-          "path": "崩坏学园2/Nina/model.json",
-          "error": "Invalid normalized settings destination"
-        },
-        {
-          "path": "崩坏学园2/Nindi/model.json",
-          "error": "Invalid normalized settings destination"
-        }
-      ],
+      "checkedModels": 18,
+      "rejectedModels": [],
       "error": null,
-      "importerExitCode": 1,
-      "completeWithinSelectedScope": false
+      "importerExitCode": 0,
+      "completeWithinSelectedScope": true
     },
     {
       "scope": "arkorder",

@@ -1640,6 +1640,404 @@
       "status": "indexed-unverified",
       "playbackStatus": "not-verified",
       "previewSource": "not-rendered"
+    },
+    {
+      "id": "ggz-byc",
+      "gameId": "gunsgirlz",
+      "engine": "cubism",
+      "name": "BYC",
+      "characterName": "BYC",
+      "costumeName": "BYC",
+      "skinCode": "ggz-byc",
+      "game": "崩坏学园2（Live2D 动态立绘）",
+      "collectionName": "崩坏学园2（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ggz-byc.model.json?v=8929fe8c8ebc9c564bdc662fcba77c452659c223939257258511d9eb6fb2abd5",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "崩坏学园2/BYC/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 881678,
+      "motionCount": 18,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "8929fe8c8ebc9c564bdc662fcba77c452659c223939257258511d9eb6fb2abd5",
+      "normalizationNotes": [
+        {
+          "file": "sound/D_Sak_Live2D001.wav",
+          "error": "Missing or empty source file: BYC/sound/D_Sak_Live2D001.wav"
+        },
+        {
+          "file": "sound/D_Sak_Live2D002.wav",
+          "error": "Missing or empty source file: BYC/sound/D_Sak_Live2D002.wav"
+        },
+        {
+          "file": "sound/D_Sak_Live2D002.wav",
+          "error": "Missing or empty source file: BYC/sound/D_Sak_Live2D002.wav"
+        },
+        {
+          "file": "sound/D_Sak_Live2D002.wav",
+          "error": "Missing or empty source file: BYC/sound/D_Sak_Live2D002.wav"
+        },
+        {
+          "file": "sound/D_Sak_Live2D002.wav",
+          "error": "Missing or empty source file: BYC/sound/D_Sak_Live2D002.wav"
+        },
+        {
+          "file": "sound/D_Sak_Live2D002.wav",
+          "error": "Missing or empty source file: BYC/sound/D_Sak_Live2D002.wav"
+        },
+        {
+          "file": "sound/D_Sak_Live2D003.wav",
+          "error": "Missing or empty source file: BYC/sound/D_Sak_Live2D003.wav"
+        },
+        {
+          "file": "sound/D_Sak_Live2D004.wav",
+          "error": "Missing or empty source file: BYC/sound/D_Sak_Live2D004.wav"
+        },
+        {
+          "file": "sound/D_Sak_Live2D011.wav",
+          "error": "Missing or empty source file: BYC/sound/D_Sak_Live2D011.wav"
+        },
+        {
+          "file": "sound/D_Sak_Live2D005.wav",
+          "error": "Missing or empty source file: BYC/sound/D_Sak_Live2D005.wav"
+        },
+        {
+          "file": "sound/D_Sak_Live2D007.wav",
+          "error": "Missing or empty source file: BYC/sound/D_Sak_Live2D007.wav"
+        },
+        {
+          "file": "sound/D_Sak_Live2D008.wav",
+          "error": "Missing or empty source file: BYC/sound/D_Sak_Live2D008.wav"
+        },
+        {
+          "file": "sound/D_Sak_Live2D006.wav",
+          "error": "Missing or empty source file: BYC/sound/D_Sak_Live2D006.wav"
+        },
+        {
+          "file": "sound/D_Sak_Live2D009.wav",
+          "error": "Missing or empty source file: BYC/sound/D_Sak_Live2D009.wav"
+        },
+        {
+          "file": "sound/D_Sak_Live2D010.wav",
+          "error": "Missing or empty source file: BYC/sound/D_Sak_Live2D010.wav"
+        },
+        {
+          "file": "sound/D_Sak_Live2D012.wav",
+          "error": "Missing or empty source file: BYC/sound/D_Sak_Live2D012.wav"
+        },
+        {
+          "file": "sound/D_Sak_Live2D013.wav",
+          "error": "Missing or empty source file: BYC/sound/D_Sak_Live2D013.wav"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ggz-kiana",
+      "gameId": "gunsgirlz",
+      "engine": "cubism",
+      "name": "琪亚娜 · Kiana",
+      "characterName": "Kiana",
+      "costumeName": "Kiana",
+      "skinCode": "ggz-kiana",
+      "game": "崩坏学园2（Live2D 动态立绘）",
+      "collectionName": "崩坏学园2（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ggz-kiana.model.json?v=8458f6141567ac8eb789625e77a0af23f8b40d06e1b502d573b94b184543018f",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "崩坏学园2/Kiana/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 802467,
+      "motionCount": 16,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "8458f6141567ac8eb789625e77a0af23f8b40d06e1b502d573b94b184543018f",
+      "normalizationNotes": [
+        {
+          "file": "sound/kiana_live2d_001.wav",
+          "error": "Missing or empty source file: Kiana/sound/kiana_live2d_001.wav"
+        },
+        {
+          "file": "sound/kiana_live2d_004.wav",
+          "error": "Missing or empty source file: Kiana/sound/kiana_live2d_004.wav"
+        },
+        {
+          "file": "sound/kiana_live2d_014.wav",
+          "error": "Missing or empty source file: Kiana/sound/kiana_live2d_014.wav"
+        },
+        {
+          "file": "sound/kiana_live2d_007.wav",
+          "error": "Missing or empty source file: Kiana/sound/kiana_live2d_007.wav"
+        },
+        {
+          "file": "sound/kiana_live2d_002.wav",
+          "error": "Missing or empty source file: Kiana/sound/kiana_live2d_002.wav"
+        },
+        {
+          "file": "sound/kiana_live2d_007.wav",
+          "error": "Missing or empty source file: Kiana/sound/kiana_live2d_007.wav"
+        },
+        {
+          "file": "sound/kiana_live2d_010.wav",
+          "error": "Missing or empty source file: Kiana/sound/kiana_live2d_010.wav"
+        },
+        {
+          "file": "sound/kiana_live2d_014.wav",
+          "error": "Missing or empty source file: Kiana/sound/kiana_live2d_014.wav"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ggz-kiro",
+      "gameId": "gunsgirlz",
+      "engine": "cubism",
+      "name": "Kiro",
+      "characterName": "Kiro",
+      "costumeName": "Kiro",
+      "skinCode": "ggz-kiro",
+      "game": "崩坏学园2（Live2D 动态立绘）",
+      "collectionName": "崩坏学园2（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ggz-kiro.model.json?v=ff57aa5f60d06c6dedda1276e0814285b0a27c8ad4d4e0c9f46b0171240f5901",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "崩坏学园2/Kiro/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 1543941,
+      "motionCount": 16,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "ff57aa5f60d06c6dedda1276e0814285b0a27c8ad4d4e0c9f46b0171240f5901",
+      "normalizationNotes": [
+        {
+          "file": "Ev_Cv_Partner_1279_002",
+          "error": "Missing or empty source file: Kiro/Ev_Cv_Partner_1279_002"
+        },
+        {
+          "file": "Ev_Cv_Partner_1279_003",
+          "error": "Missing or empty source file: Kiro/Ev_Cv_Partner_1279_003"
+        },
+        {
+          "file": "Ev_Cv_Partner_1279_003",
+          "error": "Missing or empty source file: Kiro/Ev_Cv_Partner_1279_003"
+        },
+        {
+          "file": "Ev_Cv_Partner_1279_002",
+          "error": "Missing or empty source file: Kiro/Ev_Cv_Partner_1279_002"
+        },
+        {
+          "file": "Ev_Cv_Partner_1279_002",
+          "error": "Missing or empty source file: Kiro/Ev_Cv_Partner_1279_002"
+        },
+        {
+          "file": "Ev_Cv_Partner_1279_008",
+          "error": "Missing or empty source file: Kiro/Ev_Cv_Partner_1279_008"
+        },
+        {
+          "file": "Ev_Cv_Partner_1279_009",
+          "error": "Missing or empty source file: Kiro/Ev_Cv_Partner_1279_009"
+        },
+        {
+          "file": "Ev_Cv_Partner_1279_001",
+          "error": "Missing or empty source file: Kiro/Ev_Cv_Partner_1279_001"
+        },
+        {
+          "file": "Ev_Cv_Partner_1279_008",
+          "error": "Missing or empty source file: Kiro/Ev_Cv_Partner_1279_008"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ggz-lita",
+      "gameId": "gunsgirlz",
+      "engine": "cubism",
+      "name": "Lita",
+      "characterName": "Lita",
+      "costumeName": "Lita",
+      "skinCode": "ggz-lita",
+      "game": "崩坏学园2（Live2D 动态立绘）",
+      "collectionName": "崩坏学园2（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ggz-lita.model.json?v=a74a9d0be3c42b10b60da9e7ae698ca74732c2ac0c6cd0d735ca35ce154dfd60",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "崩坏学园2/Lita/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 2537949,
+      "motionCount": 17,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "a74a9d0be3c42b10b60da9e7ae698ca74732c2ac0c6cd0d735ca35ce154dfd60",
+      "normalizationNotes": [
+        {
+          "file": "Ev_Cv_Partner_1234_001_cn",
+          "error": "Missing or empty source file: Lita/Ev_Cv_Partner_1234_001_cn"
+        },
+        {
+          "file": "Ev_Cv_Partner_1234_002_cn",
+          "error": "Missing or empty source file: Lita/Ev_Cv_Partner_1234_002_cn"
+        },
+        {
+          "file": "Ev_Cv_Partner_1234_004_cn",
+          "error": "Missing or empty source file: Lita/Ev_Cv_Partner_1234_004_cn"
+        },
+        {
+          "file": "Ev_Cv_Partner_1234_004_cn",
+          "error": "Missing or empty source file: Lita/Ev_Cv_Partner_1234_004_cn"
+        },
+        {
+          "file": "Ev_Cv_Partner_1234_003_cn",
+          "error": "Missing or empty source file: Lita/Ev_Cv_Partner_1234_003_cn"
+        },
+        {
+          "file": "Ev_Cv_Partner_1234_005_cn",
+          "error": "Missing or empty source file: Lita/Ev_Cv_Partner_1234_005_cn"
+        },
+        {
+          "file": "Ev_Cv_Partner_1234_006_cn",
+          "error": "Missing or empty source file: Lita/Ev_Cv_Partner_1234_006_cn"
+        },
+        {
+          "file": "Ev_Cv_Partner_1234_007_cn",
+          "error": "Missing or empty source file: Lita/Ev_Cv_Partner_1234_007_cn"
+        },
+        {
+          "file": "Ev_Cv_Partner_1234_008_cn",
+          "error": "Missing or empty source file: Lita/Ev_Cv_Partner_1234_008_cn"
+        },
+        {
+          "file": "Ev_Cv_Partner_1234_005_cn",
+          "error": "Missing or empty source file: Lita/Ev_Cv_Partner_1234_005_cn"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ggz-nina",
+      "gameId": "gunsgirlz",
+      "engine": "cubism",
+      "name": "Nina",
+      "characterName": "Nina",
+      "costumeName": "Nina",
+      "skinCode": "ggz-nina",
+      "game": "崩坏学园2（Live2D 动态立绘）",
+      "collectionName": "崩坏学园2（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ggz-nina.model.json?v=118f95a645b0ebda56b3d5c24e3240d1a4df2442ef03cfef0781825b5ac61460",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "崩坏学园2/Nina/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 1877583,
+      "motionCount": 16,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "118f95a645b0ebda56b3d5c24e3240d1a4df2442ef03cfef0781825b5ac61460",
+      "normalizationNotes": [
+        {
+          "file": "Ev_Cv_Partner_1278_005",
+          "error": "Missing or empty source file: Nina/Ev_Cv_Partner_1278_005"
+        },
+        {
+          "file": "Ev_Cv_Partner_1278_011",
+          "error": "Missing or empty source file: Nina/Ev_Cv_Partner_1278_011"
+        },
+        {
+          "file": "Ev_Cv_Partner_1278_010",
+          "error": "Missing or empty source file: Nina/Ev_Cv_Partner_1278_010"
+        },
+        {
+          "file": "Ev_Cv_Partner_1278_007",
+          "error": "Missing or empty source file: Nina/Ev_Cv_Partner_1278_007"
+        },
+        {
+          "file": "Ev_Cv_Partner_1278_007",
+          "error": "Missing or empty source file: Nina/Ev_Cv_Partner_1278_007"
+        },
+        {
+          "file": "Ev_Cv_Partner_1278_008",
+          "error": "Missing or empty source file: Nina/Ev_Cv_Partner_1278_008"
+        },
+        {
+          "file": "Ev_Cv_Partner_1278_009",
+          "error": "Missing or empty source file: Nina/Ev_Cv_Partner_1278_009"
+        },
+        {
+          "file": "Ev_Cv_Partner_1278_001",
+          "error": "Missing or empty source file: Nina/Ev_Cv_Partner_1278_001"
+        },
+        {
+          "file": "Ev_Cv_Partner_1278_008",
+          "error": "Missing or empty source file: Nina/Ev_Cv_Partner_1278_008"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
+    },
+    {
+      "id": "ggz-nindi",
+      "gameId": "gunsgirlz",
+      "engine": "cubism",
+      "name": "Nindi",
+      "characterName": "Nindi",
+      "costumeName": "Nindi",
+      "skinCode": "ggz-nindi",
+      "game": "崩坏学园2（Live2D 动态立绘）",
+      "collectionName": "崩坏学园2（Live2D 动态立绘）",
+      "modelUrl": "./assets/model-settings/newgames/ggz-nindi.model.json?v=674d1da93c7f6def82b53e545893ad5b8e414a4dc3c775694ea4b937d167b039",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "sourcePath": "崩坏学园2/Nindi/model.json",
+      "assetType": "live2d-character",
+      "textureBytes": 1399962,
+      "motionCount": 16,
+      "modelFormat": "cubism2",
+      "normalizedSettingsSha256": "674d1da93c7f6def82b53e545893ad5b8e414a4dc3c775694ea4b937d167b039",
+      "normalizationNotes": [
+        {
+          "file": "Ev_Cv_Partner_Live2D_1276_004_Jp",
+          "error": "Missing or empty source file: Nindi/Ev_Cv_Partner_Live2D_1276_004_Jp"
+        },
+        {
+          "file": "Ev_Cv_Partner_Live2D_1276_020_Jp",
+          "error": "Missing or empty source file: Nindi/Ev_Cv_Partner_Live2D_1276_020_Jp"
+        },
+        {
+          "file": "Ev_Cv_Partner_Live2D_1276_002_Jp",
+          "error": "Missing or empty source file: Nindi/Ev_Cv_Partner_Live2D_1276_002_Jp"
+        },
+        {
+          "file": "Ev_Cv_Partner_Live2D_1276_002_Jp",
+          "error": "Missing or empty source file: Nindi/Ev_Cv_Partner_Live2D_1276_002_Jp"
+        },
+        {
+          "file": "Ev_Cv_Partner_Live2D_1276_005_Jp",
+          "error": "Missing or empty source file: Nindi/Ev_Cv_Partner_Live2D_1276_005_Jp"
+        },
+        {
+          "file": "Ev_Cv_Partner_Live2D_1276_009_Jp",
+          "error": "Missing or empty source file: Nindi/Ev_Cv_Partner_Live2D_1276_009_Jp"
+        },
+        {
+          "file": "Ev_Cv_Partner_Live2D_1276_003_Jp",
+          "error": "Missing or empty source file: Nindi/Ev_Cv_Partner_Live2D_1276_003_Jp"
+        },
+        {
+          "file": "Ev_Cv_Partner_Live2D_1276_001_Jp",
+          "error": "Missing or empty source file: Nindi/Ev_Cv_Partner_Live2D_1276_001_Jp"
+        },
+        {
+          "file": "Ev_Cv_Partner_Live2D_1276_009_Jp",
+          "error": "Missing or empty source file: Nindi/Ev_Cv_Partner_Live2D_1276_009_Jp"
+        }
+      ],
+      "status": "indexed-unverified",
+      "playbackStatus": "not-verified",
+      "previewSource": "not-rendered"
     }
   ],
   "sources": []

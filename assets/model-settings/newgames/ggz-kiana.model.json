@@ -1,0 +1,127 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/Kiana/model.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/Kiana/Kiana.2048/texture_00.png"
+  ],
+  "motions": {
+    "shake": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/Kiana/motions/6.mtn",
+        "text": 155040,
+        "sound_delay": -1
+      }
+    ],
+    "flick_head": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/Kiana/motions/4.mtn",
+        "text": 155043,
+        "sound_delay": -1
+      }
+    ],
+    "tap_face": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/Kiana/motions/3.mtn",
+        "text": 155053,
+        "sound_delay": -1
+      }
+    ],
+    "tap_breast": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/Kiana/motions/1.mtn",
+        "text": 155046,
+        "sound_delay": -1
+      }
+    ],
+    "tap_belly": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/Kiana/motions/2.mtn",
+        "text": 155041,
+        "sound_delay": -1
+      }
+    ],
+    "tap_leg": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/Kiana/motions/1.mtn",
+        "text": 155046,
+        "sound_delay": -1
+      }
+    ],
+    "mail": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/Kiana/motions/idle.mtn"
+      }
+    ],
+    "morning": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/Kiana/motions/idle.mtn"
+      }
+    ],
+    "idle": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/Kiana/motions/5.mtn",
+        "text": 155049,
+        "sound_delay": -1
+      }
+    ],
+    "activity": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/Kiana/motions/idle.mtn"
+      }
+    ],
+    "born": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/Kiana/motions/3.mtn",
+        "text": 155053,
+        "sound_delay": -1
+      }
+    ],
+    "friend": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/Kiana/motions/idle.mtn"
+      }
+    ],
+    "afternoon": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/Kiana/motions/idle.mtn"
+      }
+    ],
+    "evening": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/Kiana/motions/idle.mtn"
+      }
+    ],
+    "special01": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/Kiana/motions/idle.mtn"
+      }
+    ],
+    "birthday": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/Kiana/motions/idle.mtn"
+      }
+    ]
+  },
+  "physics": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B4%A9%E5%9D%8F%E5%AD%A6%E5%9B%AD2/Kiana/physics.json",
+  "hit_areas": [
+    {
+      "name": "head",
+      "id": "D_CORE_HEAD"
+    },
+    {
+      "name": "face",
+      "id": "D_CORE_FACE"
+    },
+    {
+      "name": "breast",
+      "id": "D_CORE_BREAST"
+    },
+    {
+      "name": "belly",
+      "id": "D_CORE_BELLY"
+    },
+    {
+      "name": "leg",
+      "id": "D_CORE_LEG"
+    }
+  ]
+}
