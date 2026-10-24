@@ -1,0 +1,460 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/s_yayoi_01.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/s_yayoi_01.2048/texture_00.png"
+  ],
+  "motions": {
+    "m01": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/idle_a.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 2,
+        "lip_id": "PARAM_MOUTH_OPEN_Y",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "01通常"
+      }
+    ],
+    "m02": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m02.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 1,
+        "lip_id": "PARAM_MOUTH_FORM",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "02キリッ"
+      }
+    ],
+    "m03": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m03.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 1,
+        "lip_id": "PARAM_MOUTH_OPEN_Y",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "03にっこり"
+      }
+    ],
+    "m04": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m04.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 1,
+        "lip_id": "PARAMM_06_M__Y",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "04あれ？"
+      }
+    ],
+    "m05": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m05.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 1,
+        "lip_id": "PARAMKANASHI_M__Y",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "05落ち込んでる"
+      }
+    ],
+    "m06": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m06.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 1,
+        "lip_id": "PARAM_MOUTH_FORM",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "06不安げな表情"
+      }
+    ],
+    "m07": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m07.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 1,
+        "lip_id": "PARAMM_06_M__Y",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "07不機嫌"
+      }
+    ],
+    "m08": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m08.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 2,
+        "lip_id": "PARAM_MOUTH_FORM",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "08真剣"
+      }
+    ],
+    "m09": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m09.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 0.4,
+        "lip_id": "PARAMBIG_M__Y",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "09怒り（咆哮）"
+      }
+    ],
+    "m10": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m10.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 1,
+        "lip_id": "PARAM_MOUTH_FORM",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "10考える"
+      }
+    ],
+    "m11": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m11.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 2,
+        "lip_id": "PARAM_MOUTH_OPEN_Y",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "11肯定"
+      }
+    ],
+    "m12": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m12.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 2,
+        "lip_id": "PARAM_MOUTH_OPEN_Y",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "12否定"
+      }
+    ],
+    "m17": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m17.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 2,
+        "lip_id": "PARAM_MOUTH_OPEN_Y",
+        "lip_scale": 1,
+        "memo": "17ハッとする→照れ"
+      }
+    ],
+    "m18": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m18.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 0.4,
+        "lip_id": "PARAMBIG_M__Y",
+        "lip_scale": 1,
+        "memo": "18乳揺れ＆照れ驚き→照れ怒り"
+      }
+    ],
+    "m19": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m03.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 1,
+        "lip_id": "PARAM_MOUTH_OPEN_Y",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "03にっこり"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m27.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 2,
+        "lip_id": "PARAM_MOUTH_OPEN_Y",
+        "lip_scale": 1,
+        "end_delay": 1000,
+        "memo": "27笑い・口を閉じてにっこり"
+      }
+    ],
+    "m20": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m20.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 0.5,
+        "lip_id": "PARAM_MOUTH_OPEN_Y",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "20照れ笑い"
+      }
+    ],
+    "m21": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m21.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 0.8,
+        "lip_weight": 0.5,
+        "lip_id": "PARAM_MOUTH_OPEN_Y",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "21歓喜・大きく口をあけてにっこり"
+      }
+    ],
+    "m22": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m22.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 0.4,
+        "lip_id": "PARAMBIG_M__Y",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "22怒りＢ"
+      }
+    ],
+    "m23": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m23.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 2,
+        "lip_id": "PARAM_MOUTH_FORM",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "23がんばります"
+      }
+    ],
+    "m24": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m24.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 1,
+        "lip_id": "PARAM_MOUTH_FORM",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "24気合を入れてる表情"
+      }
+    ],
+    "m25": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m25.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 0.4,
+        "lip_id": "PARAMBIG_M__Y",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "25ビックリ"
+      }
+    ],
+    "m26": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m26.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 1,
+        "lip_id": "PARAM_MOUTH_OPEN_Y",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "26えーっと"
+      }
+    ],
+    "m27": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m27.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 1,
+        "lip_id": "PARAM_MOUTH_OPEN_Y",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "27笑い・口を閉じてにっこり"
+      }
+    ],
+    "m28": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m28.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 1,
+        "lip_id": "PARAMKANASHI_M__Y",
+        "lip_scale": 1,
+        "end_delay": -1,
+        "memo": "28やだなー"
+      }
+    ],
+    "idle": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/idle_b.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "memo": "01通常"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/idle_b.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "memo": "01通常"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m27.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 1,
+        "lip_id": "PARAM_MOUTH_OPEN_Y",
+        "lip_scale": 1,
+        "end_delay": 1000,
+        "memo": "27笑い・口を閉じてにっこり"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/idle_b.mtn",
+        "fade_in": 500,
+        "fade_out": 0,
+        "memo": "01通常"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/idle_b.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "memo": "01通常"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/idle_b.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "memo": "01通常"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m04.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 1,
+        "lip_id": "PARAMM_06_M__Y",
+        "lip_scale": 1,
+        "end_delay": 1000,
+        "memo": "04あれ？"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/idle_b.mtn",
+        "fade_in": 500,
+        "fade_out": 0,
+        "memo": "01通常"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/idle_b.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "memo": "01通常"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/idle_b.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "memo": "01通常"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m27.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 1,
+        "lip_id": "PARAM_MOUTH_OPEN_Y",
+        "lip_scale": 1,
+        "end_delay": 1000,
+        "memo": "27笑い・口を閉じてにっこり"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/idle_b.mtn",
+        "fade_in": 500,
+        "fade_out": 0,
+        "memo": "01通常"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/idle_b.mtn",
+        "fade_in": 0,
+        "fade_out": 0,
+        "memo": "01通常"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/m04.mtn",
+        "fade_in": 300,
+        "fade_out": 0,
+        "lip_offset": 1,
+        "lip_weight": 1,
+        "lip_id": "PARAMM_06_M__Y",
+        "lip_scale": 1,
+        "end_delay": 1000,
+        "memo": "04あれ？"
+      },
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/motions/idle_b.mtn",
+        "fade_in": 500,
+        "fade_out": 0,
+        "memo": "01通常"
+      }
+    ]
+  },
+  "physics": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/galgame%20live2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9ELive2d/%E7%A5%9E%E6%A5%BD%E9%BB%8E%E6%98%8E%E8%A8%98%EF%BD%9E%E5%BC%A5%E7%94%9F%E3%81%AE%E7%AB%A0%EF%BD%9E/s_yayoi01/s_yayoi_01.physics.json",
+  "hit_areas": [
+    {
+      "name": "head",
+      "id": "D_REF_HEAD",
+      "offset_x": 0,
+      "offset_y": 50,
+      "scale_x": 0.6,
+      "scale_y": 0.7
+    },
+    {
+      "name": "body",
+      "id": "D_REF_BODY",
+      "offset_x": -3,
+      "offset_y": 12,
+      "scale_x": 0.82,
+      "scale_y": 0.68
+    }
+  ]
+}

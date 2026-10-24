@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "scope": "Pinned source checks for 2026-10-24-adult-games-kagura-ruins-wave4-legacy-json-recovery (not WebGL playback)",
+  "scope": "Pinned source checks for 2026-10-24-adult-games-wave4-shift-jis-and-visual-dedup (not WebGL playback)",
   "games": {
     "ruinsseeker": 23,
-    "kagurareimeiki": 8
+    "kagurareimeiki": 13
   },
-  "total": 31,
+  "total": 36,
   "reports": [
     {
       "scope": "ruins-seeker-characters",
@@ -24,54 +24,24 @@
       "gameId": "kagurareimeiki",
       "sourceRepo": "Eikanya/Live2d-model",
       "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
-      "selectedModelSettings": 10,
-      "checkedModels": 6,
-      "rejectedModels": [
-        {
-          "path": "galgame live2d/神楽黎明記～Live2d/神乐黎明记Live2d/model/s_chihaya01/s_chihaya01.model.json",
-          "error": "Unexpected token '�', ...\"0�s�����ȕ\\��\"},\n\t\t{\"\"... is not valid JSON"
-        },
-        {
-          "path": "galgame live2d/神楽黎明記～Live2d/神乐黎明记Live2d/model/s_maika01/s_maika01.model.json",
-          "error": "Unexpected token '�', ...\"9�s�����ȕ\\��\"},\n\t\t{\"\"... is not valid JSON"
-        },
-        {
-          "path": "galgame live2d/神楽黎明記～Live2d/神乐黎明记Live2d/model/s_rio01/s_rio01.model.json",
-          "error": "Unexpected token '�', ...\"9�s�����ȕ\\��\"},\n\t\t{\"\"... is not valid JSON"
-        },
-        {
-          "path": "galgame live2d/神楽黎明記～Live2d/神乐黎明记Live2d/model/s_yukari01/s_yukari01.model.json",
-          "error": "Unexpected token '�', ...\"9�s�����ȕ\\��\"},\n\t\t{\"\"... is not valid JSON"
-        }
-      ],
+      "selectedModelSettings": 9,
+      "checkedModels": 9,
+      "rejectedModels": [],
       "error": null,
-      "importerExitCode": 1,
-      "completeWithinSelectedScope": false
+      "importerExitCode": 0,
+      "completeWithinSelectedScope": true
     },
     {
       "scope": "kagura-chapters2",
       "gameId": "kagurareimeiki",
       "sourceRepo": "Eikanya/Live2d-model",
       "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
-      "selectedModelSettings": 3,
-      "checkedModels": 0,
-      "rejectedModels": [
-        {
-          "path": "galgame live2d/神楽黎明記～Live2d/神楽黎明記～弥生の章～/s_yayoi01/s_yayoi01.model.json",
-          "error": "Unexpected token '�', ...\"6�s�����ȕ\\��\"}\n\t\t],\n\"... is not valid JSON"
-        },
-        {
-          "path": "galgame live2d/神楽黎明記～Live2d/神楽黎明記～梓紗の章～/s_azusa01/s_azusa01.model.json",
-          "error": "Unexpected token '�', ...\"�������Ă�\\��\"}\n\t\t],\n\"... is not valid JSON"
-        },
-        {
-          "path": "galgame live2d/神楽黎明記～Live2d/神楽黎明記～舞歌の章～/s_maika01/s_maika01.model.json",
-          "error": "Unexpected token '�', ...\"9�s�����ȕ\\��\"},\n\t\t{\"\"... is not valid JSON"
-        }
-      ],
+      "selectedModelSettings": 2,
+      "checkedModels": 2,
+      "rejectedModels": [],
       "error": null,
-      "importerExitCode": 1,
-      "completeWithinSelectedScope": false
+      "importerExitCode": 0,
+      "completeWithinSelectedScope": true
     },
     {
       "scope": "kagura-chapters3",
