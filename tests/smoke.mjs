@@ -51,7 +51,22 @@ for(const c of hq){
 const theaterHTML=read('spine.html');
 const gameMenu=theaterHTML.match(/<select id="gameFilter">([\s\S]*?)<\/select>/)?.[1]||'';
 const gameMenuIds=[...gameMenu.matchAll(/<option value="([^"]+)"/g)].map(m=>m[1]);
-assert.deepEqual(gameMenuIds.slice(0,7),['all','tokyonecro','maidslife','girldimension','sinsevendeadlysins','touhoucannonball','girlscafegun'],'New animated games must be visible without scrolling the dropdown');
+assert.deepEqual(gameMenuIds.slice(0,5),['all','gunsgirlz','arkorder','gemstory','warshipgirls'],'The newly imported games must be visible at the top of the theater filter');
+const wave3=JSON.parse(read('data/live2d-games-wave3.json')).characters;
+const wave3Counts={gunsgirlz:18,arkorder:15,gemstory:14,warshipgirls:3};
+assert.equal(wave3.length,50,'Current pinned batch must contain exactly 50 source-checked models');
+for(const [gameId,count] of Object.entries(wave3Counts)){
+ assert.equal(wave3.filter(c=>c.gameId===gameId).length,count,gameId+' lost source-checked records');
+ assert.ok(gameMenuIds.includes(gameId),gameId+' missing from the visible game filter');
+}
+for(const c of wave3){
+ assert.equal(c.engine,'cubism',c.id);
+ assert.equal(c.modelFormat,'cubism2',c.id);
+ assert.match(c.modelUrl,/^\.\/assets\/model-settings\/newgames\/[-a-z0-9_]+\.model\.json\?v=[a-f0-9]{64}$/,c.id);
+ const modelPath=c.modelUrl.split('?')[0].replace(/^\.\//,'');
+ assert.ok(fs.existsSync(path.join(root,modelPath)),c.id+' normalized model settings missing');
+ assert.equal(createHash('sha256').update(read(modelPath)).digest('hex'),c.normalizedSettingsSha256,c.id+' normalized model settings changed');
+}
 assert.equal(more.length,84+JSON.parse(read('data/girlscafegun-full-inventory.json')).scopes[0].sourceModelSettings);
 assert.equal(new Set(more.map(c=>c.id)).size,more.length,'Duplicated model in additional Cubism games');
 for(const c of more){
