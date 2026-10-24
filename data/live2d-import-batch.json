@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "batch": "2026-10-24-adult-games-kagura-ruins-wave4",
+  "batch": "2026-10-24-adult-games-kagura-ruins-wave4-legacy-json-recovery",
   "catalog": "data/live2d-games-wave4.json",
   "audit": "data/live2d-games-wave4-source-audit.json",
   "catalogId": "games-wave4",
