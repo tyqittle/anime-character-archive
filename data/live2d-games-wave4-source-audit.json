@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "scope": "Pinned source checks for 2026-10-24-adult-games-kagura-ruins-wave4 (not WebGL playback)",
+  "scope": "Pinned source checks for 2026-10-24-adult-games-kagura-ruins-wave4-legacy-json-recovery (not WebGL playback)",
   "games": {
     "ruinsseeker": 23,
     "kagurareimeiki": 8
@@ -29,19 +29,19 @@
       "rejectedModels": [
         {
           "path": "galgame live2d/神楽黎明記～Live2d/神乐黎明记Live2d/model/s_chihaya01/s_chihaya01.model.json",
-          "error": "Expected ',' or '}' after property value in JSON at position 1104 (line 29 column 71)"
+          "error": "Unexpected token '�', ...\"0�s�����ȕ\\��\"},\n\t\t{\"\"... is not valid JSON"
         },
         {
           "path": "galgame live2d/神楽黎明記～Live2d/神乐黎明记Live2d/model/s_maika01/s_maika01.model.json",
-          "error": "Expected ',' or '}' after property value in JSON at position 1225 (line 29 column 69)"
+          "error": "Unexpected token '�', ...\"9�s�����ȕ\\��\"},\n\t\t{\"\"... is not valid JSON"
         },
         {
           "path": "galgame live2d/神楽黎明記～Live2d/神乐黎明记Live2d/model/s_rio01/s_rio01.model.json",
-          "error": "Expected ',' or '}' after property value in JSON at position 1238 (line 29 column 70)"
+          "error": "Unexpected token '�', ...\"9�s�����ȕ\\��\"},\n\t\t{\"\"... is not valid JSON"
         },
         {
           "path": "galgame live2d/神楽黎明記～Live2d/神乐黎明记Live2d/model/s_yukari01/s_yukari01.model.json",
-          "error": "Expected ',' or '}' after property value in JSON at position 1228 (line 29 column 70)"
+          "error": "Unexpected token '�', ...\"9�s�����ȕ\\��\"},\n\t\t{\"\"... is not valid JSON"
         }
       ],
       "error": null,
@@ -58,15 +58,15 @@
       "rejectedModels": [
         {
           "path": "galgame live2d/神楽黎明記～Live2d/神楽黎明記～弥生の章～/s_yayoi01/s_yayoi01.model.json",
-          "error": "Expected ',' or '}' after property value in JSON at position 1125 (line 31 column 61)"
+          "error": "Unexpected token '�', ...\"6�s�����ȕ\\��\"}\n\t\t],\n\"... is not valid JSON"
         },
         {
           "path": "galgame live2d/神楽黎明記～Live2d/神楽黎明記～梓紗の章～/s_azusa01/s_azusa01.model.json",
-          "error": "Expected ',' or '}' after property value in JSON at position 1120 (line 31 column 61)"
+          "error": "Unexpected token '�', ...\"�������Ă�\\��\"}\n\t\t],\n\"... is not valid JSON"
         },
         {
           "path": "galgame live2d/神楽黎明記～Live2d/神楽黎明記～舞歌の章～/s_maika01/s_maika01.model.json",
-          "error": "Expected ',' or '}' after property value in JSON at position 1219 (line 29 column 69)"
+          "error": "Unexpected token '�', ...\"9�s�����ȕ\\��\"},\n\t\t{\"\"... is not valid JSON"
         }
       ],
       "error": null,
