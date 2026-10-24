@@ -1126,9 +1126,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "2f73ec21d172e4a70ef56cc3abed5bd019ee2a312ea3e0205870e3e96cce16e7",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/kg-s_chihaya01.model.json?v=2f73ec21d172e4a70ef56cc3abed5bd019ee2a312ea3e0205870e3e96cce16e7",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5c68026c8ad49e3c1522622b13a8fac7f2fc22716ec3843fb9daa4958a2aa9a9",
+      "preview": "./assets/animation-previews/kagurareimeiki-kg-s_chihaya01.webp"
     },
     {
       "id": "kg-s_maika01",
@@ -1150,9 +1163,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "6c3db9c076c3370a5e8875acd910342ceca45bc1a9a7d5ac56204e61da387219",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/kg-s_maika01.model.json?v=6c3db9c076c3370a5e8875acd910342ceca45bc1a9a7d5ac56204e61da387219",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "4cb67f0e6717da6299cb389275a2e440448f56360db0c87dd733b06e0368471f",
+      "preview": "./assets/animation-previews/kagurareimeiki-kg-s_maika01.webp"
     },
     {
       "id": "kg-s_rio01",
@@ -1174,9 +1200,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "720f2165f8fd3324792a471a4d18e48e35ffe1c5b58cdd3f20f9788ae686ed68",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/kg-s_rio01.model.json?v=720f2165f8fd3324792a471a4d18e48e35ffe1c5b58cdd3f20f9788ae686ed68",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "9b4b8d1076e4dd406011a1584659267fd9f7d4595a17cae4d6e159de8e7b63ae",
+      "preview": "./assets/animation-previews/kagurareimeiki-kg-s_rio01.webp"
     },
     {
       "id": "kg-s_yukari01",
@@ -1198,9 +1237,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "955fc955a76b71b2625bc929710ed9d8d0be4f8d6e96f6506ac87103b30b53a4",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/kg-s_yukari01.model.json?v=955fc955a76b71b2625bc929710ed9d8d0be4f8d6e96f6506ac87103b30b53a4",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "b52d57a312e1c276a0429829bfa9195e6d5e353e486c015a063d265fad7bcf80",
+      "preview": "./assets/animation-previews/kagurareimeiki-kg-s_yukari01.webp"
     },
     {
       "id": "kg2-s_yayoi01",
@@ -1222,9 +1274,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "4c7a23741b7aa0b621456ec6fc9d936c40323d5df7530eb6901e76c4c4fa7576",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/kg2-s_yayoi01.model.json?v=4c7a23741b7aa0b621456ec6fc9d936c40323d5df7530eb6901e76c4c4fa7576",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "d0cb00fc431cbbdf9cf137a55320f326ccda17962567929541fad3c8b1701917",
+      "preview": "./assets/animation-previews/kagurareimeiki-kg2-s_yayoi01.webp"
     },
     {
       "id": "kg2-s_azusa01",
@@ -1246,9 +1311,22 @@
       "modelFormat": "cubism2",
       "normalizedSettingsSha256": "67d6ea6be9f9ed8efccf0eaf62a684eba07ad4a8968330c33f4aeed28859fb70",
       "normalizationNotes": [],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/kg2-s_azusa01.model.json?v=67d6ea6be9f9ed8efccf0eaf62a684eba07ad4a8968330c33f4aeed28859fb70",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "e7db9a30e5e5fcacd93b9cd2167898e30b6442ce0e872cd382e671f5336bb519",
+      "preview": "./assets/animation-previews/kagurareimeiki-kg2-s_azusa01.webp"
     }
   ],
   "sources": []
