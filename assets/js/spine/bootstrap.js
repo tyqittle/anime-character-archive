@@ -8,7 +8,7 @@ function isPlayableAnimationEntry(c){
  if(c.engine==='cubism'){
   if(typeof c.modelUrl!=='string')return false;
   if(/^https:\/\//.test(c.modelUrl))return true;
-  const normalized=c.modelUrl.match(/^\.\/assets\/model-settings\/[a-z0-9-]+\/([-a-z0-9_]+)\.model\.json\?v=([a-f0-9]{64})$/);
+  const normalized=c.modelUrl.match(/^\.\/assets\/model-settings\/[a-z0-9-]+\/([-a-z0-9_]+)\.model(?:3)?\.json\?v=([a-f0-9]{64})$/);
   return !!normalized&&normalized[1]===c.id&&normalized[2]===c.normalizedSettingsSha256&&/^[a-f0-9]{40}$/.test(c.sourceCommit||'');
  }
  return typeof c.base==='string'&&/^https:\/\//.test(c.base)&&
