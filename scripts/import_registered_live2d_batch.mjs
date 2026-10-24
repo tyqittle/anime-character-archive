@@ -30,4 +30,6 @@ const games=Object.fromEntries([...new Set(reports.map(x=>x.gameId))].map(gameId
 const audit={schemaVersion:1,scope:'Pinned source checks for '+manifest.batch+' (not WebGL playback)',games,total:catalog.characters.length,reports};
 fs.writeFileSync(new URL(auditPath,root),JSON.stringify(audit,null,2)+'\n');
 console.log('NEW_GAME_SOURCE_IMPORT',JSON.stringify({games,total:audit.total,rejected:reports.reduce((n,x)=>n+x.rejectedModels.length,0),errors:reports.filter(x=>x.error)}));
-if(reports.some(x=>x.error)||Object.values(games).some(n=>n<1)||audit.total<20)throw Error('Source import failed minimum batch checks; do not publish');
+const minModels=manifest.minimumModels??20;
+if(!Number.isInteger(minModels)||minModels<1||minModels>1000)throw Error('Invalid batch minimum model count');
+if(reports.some(x=>x.error)||reports.some(x=>x.importerExitCode!==0&&x.completeWithinSelectedScope!==true)||Object.values(games).some(n=>n<1)||audit.total<minModels)throw Error('Source import failed minimum batch checks; do not publish');
