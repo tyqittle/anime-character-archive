@@ -514,5 +514,14 @@
     "rejectedCaptures": [],
     "failedCaptures": [],
     "failureSummary": {}
+  },
+  "games-wave3": {
+    "scope": "shared preview pipeline",
+    "counts": {},
+    "missing": [],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
   }
 }
