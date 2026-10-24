@@ -1,7 +1,22 @@
 {
   "schemaVersion": 1,
-  "scope": "Pending source checks, not yet verified",
-  "games": {},
-  "total": 0,
-  "reports": []
+  "scope": "Pinned source checks for 2026-10-24-highquality-unknownbride-18-source-complete (not WebGL playback)",
+  "games": {
+    "unknownbride": 18
+  },
+  "total": 18,
+  "reports": [
+    {
+      "scope": "unknownbride-cubism3",
+      "gameId": "unknownbride",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "selectedModelSettings": 18,
+      "checkedModels": 18,
+      "rejectedModels": [],
+      "error": null,
+      "importerExitCode": 0,
+      "completeWithinSelectedScope": true
+    }
+  ]
 }
