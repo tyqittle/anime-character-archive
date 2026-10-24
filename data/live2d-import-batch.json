@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "batch": "2026-10-24-new-game-import-validated",
+  "batch": "2026-10-24-new-game-import-mixed-case-ids",
   "scopes": [
     "gunsgirlz",
     "arkorder",
