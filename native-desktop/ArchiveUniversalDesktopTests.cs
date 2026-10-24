@@ -76,16 +76,21 @@ public sealed class ArchiveUniversalDesktopTests
         using var backdrop=new System.Windows.Forms.Form{
             FormBorderStyle=System.Windows.Forms.FormBorderStyle.None,
             StartPosition=System.Windows.Forms.FormStartPosition.Manual,
-            Bounds=new Rectangle(0,0,320,300),ShowInTaskbar=false
+            Bounds=new Rectangle(0,0,320,300),ShowInTaskbar=false,TopMost=true
         };
         var target=new System.Windows.Forms.Button{Location=new Point(155,155),Size=new Size(100,80),Text="Desktop target"};
         backdrop.Controls.Add(target);backdrop.Show();
+        await Task.Delay(150);
+        var backgroundPoint=target.PointToScreen(new Point(20,20));
+        Assert.True(WindowFromPoint(backgroundPoint)==target.Handle,
+            "Fixture must be exposed before opening a pet: "+DescribeWindow(WindowFromPoint(backgroundPoint)));
         using var host=new ArchiveWebViewHost(new("fixture","one"),TestSite);
         await host.OpenAsync(Path.Combine(TestRoot,"input-profile"),CancellationToken.None,Path.Combine(TestRoot,"fixture"));
         await Task.Delay(250);
         Assert.False(IsWindowEnabled(host.Window!.Handle));
-        var backgroundPoint=target.PointToScreen(new Point(20,20));
-        Assert.Equal(target.Handle,WindowFromPoint(backgroundPoint));
+        var hit=WindowFromPoint(backgroundPoint);
+        Assert.True(hit==target.Handle,"Background hit "+DescribeWindow(hit)+
+            "; expected="+target.Handle+" visual="+host.Window.Handle+" input="+host.InputHandle+" backdrop="+backdrop.Handle);
         await host.Core!.ExecuteScriptAsync("window.__pointerUps=0;document.addEventListener('pointerup',()=>window.__pointerUps++);chrome.webview.addEventListener('message',e=>window.__command=e.data.command)");
         int x=host.Window.Left+40,y=host.Window.Top+40;
         SetCursorPos(x,y);
@@ -431,6 +436,15 @@ public sealed class ArchiveUniversalDesktopTests
     [DllImport("user32.dll")]private static extern IntPtr GetWindow(IntPtr hwnd,uint command);
     [DllImport("user32.dll")]private static extern bool IsWindowVisible(IntPtr hwnd);
     [DllImport("user32.dll")]private static extern bool IsWindowEnabled(IntPtr hwnd);
+    private static string DescribeWindow(IntPtr handle)
+    {
+        var name=new System.Text.StringBuilder(256);GetClassName(handle,name,name.Capacity);
+        GetWindowRect(handle,out var rect);
+        return $"{handle} class={name} bounds={rect.Left},{rect.Top},{rect.Right},{rect.Bottom} enabled={IsWindowEnabled(handle)}";
+    }
+    [StructLayout(LayoutKind.Sequential)]private struct WindowRect {public int Left,Top,Right,Bottom;}
+    [DllImport("user32.dll",CharSet=CharSet.Unicode)]private static extern int GetClassName(IntPtr hwnd,System.Text.StringBuilder name,int count);
+    [DllImport("user32.dll")]private static extern bool GetWindowRect(IntPtr hwnd,out WindowRect rect);
     [DllImport("user32.dll")]private static extern IntPtr WindowFromPoint(Point point);
     [DllImport("user32.dll")]private static extern bool SetCursorPos(int x,int y);
     [DllImport("user32.dll",EntryPoint="SendMessageW")]private static extern IntPtr SendMessage(IntPtr window,uint message,IntPtr wParam,IntPtr lParam);
