@@ -434,6 +434,85 @@
         "allowJSONC": true,
         "normalizedSettingsDirectory": "assets/model-settings/newgames"
       }
+    },
+    {
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "catalog": "data/live2d-games-wave4.json",
+      "requireComplete": false,
+      "id": "ruins-seeker-characters",
+      "gameId": "ruinsseeker",
+      "name": "Ruins Seeker／遗迹探索者 · 角色与怪物 Live2D",
+      "directory": "galgame live2d/[ぬぷ竜の里] ルインズシーカー live2d",
+      "selection": "^/(?:2Boss|Baisu|BaisuT|Boss1|BossDwa|BossSlim|BossTensi|GitaiSura|Gobrin|Gorem|Homun|Hwnd|LikeLike|Orc|Player|SFera|SGobrin|Slaim|Warm|dorohand|facehaga|gadhian|mimic)/[A-Za-z0-9]+\\.model\\.json$",
+      "import": {
+        "idPrefix": "rs-",
+        "pattern": "^([A-Za-z0-9]+)/[A-Za-z0-9]+\\.model\\.json$",
+        "format": "cubism2",
+        "allowJSONC": true,
+        "lowercaseId": true,
+        "normalizedSettingsDirectory": "assets/model-settings/newgames",
+        "minimumTextureBytes": 65000,
+        "names": {
+          "Player": "Quem／奎姆 · 主角",
+          "Baisu": "Vise／拜斯 · 冒险者",
+          "BaisuT": "Vise／拜斯 · 变体"
+        }
+      }
+    },
+    {
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "catalog": "data/live2d-games-wave4.json",
+      "requireComplete": false,
+      "id": "kagura-core",
+      "gameId": "kagurareimeiki",
+      "name": "神乐黎明记 · 成人向角色 Live2D",
+      "directory": "galgame live2d/神楽黎明記～Live2d/神乐黎明记Live2d/model",
+      "selection": "^/(?:s_[a-z0-9]+|v[0-9]+a[0-9]?|w[0-9]+a[0-9]?)/(?:s_[a-z0-9]+|v[0-9]+a|w[0-9]+a)\\.model\\.json$",
+      "import": {
+        "idPrefix": "kg-",
+        "pattern": "^([a-z0-9_]+)/[a-z0-9_]+\\.model\\.json$",
+        "format": "cubism2",
+        "allowJSONC": true,
+        "normalizedSettingsDirectory": "assets/model-settings/newgames",
+        "minimumTextureBytes": 75000
+      }
+    },
+    {
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "catalog": "data/live2d-games-wave4.json",
+      "requireComplete": false,
+      "id": "kagura-chapters2",
+      "gameId": "kagurareimeiki",
+      "name": "神乐黎明记 · 成人向角色 Live2D",
+      "directory": "galgame live2d/神楽黎明記～Live2d",
+      "selection": "^/神楽黎明記～(?:弥生|梓紗|舞歌)の章～/s_[a-z0-9]+/s_[a-z0-9]+\\.model\\.json$",
+      "import": {
+        "idPrefix": "kg2-",
+        "pattern": "^神楽黎明記～(?:弥生|梓紗|舞歌)の章～/(s_[a-z0-9]+)/\\1\\.model\\.json$",
+        "format": "cubism2",
+        "allowJSONC": true,
+        "normalizedSettingsDirectory": "assets/model-settings/newgames",
+        "minimumTextureBytes": 75000
+      }
+    },
+    {
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "catalog": "data/live2d-games-wave4.json",
+      "requireComplete": false,
+      "id": "kagura-chapters3",
+      "gameId": "kagurareimeiki",
+      "name": "神乐黎明记 · 成人向角色 Live2D",
+      "directory": "galgame live2d/神楽黎明記～Live2d",
+      "selection": "^/(?:神楽黎明記 〜ナツの章〜|神楽黎明記～初花の章～)/s_[a-z0-9]+/s_[a-z0-9]+\\.model3\\.json$",
+      "import": {
+        "idPrefix": "kg3-",
+        "pattern": "^(?:神楽黎明記 〜ナツの章〜|神楽黎明記～初花の章～)/(s_[a-z0-9]+)/\\1\\.model3\\.json$",
+        "minimumTextureBytes": 75000
+      }
     }
   ]
 }
