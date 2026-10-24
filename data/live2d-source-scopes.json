@@ -330,6 +330,96 @@
         "discoverMotionDirectory": "mtn"
       },
       "sourceTreeSha": "0dedaacc179a3a735f9bb7080d70f7d9fade4b9a"
+    },
+    {
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "catalog": "data/live2d-games-wave3.json",
+      "requireComplete": false,
+      "id": "gunsgirlz",
+      "gameId": "gunsgirlz",
+      "name": "崩坏学园2（Live2D 动态立绘）",
+      "directory": "崩坏学园2",
+      "selection": "^/[A-Za-z0-9]+/model\\.json$",
+      "import": {
+        "idPrefix": "ggz-",
+        "pattern": "^([A-Za-z0-9]+)/model\\.json$",
+        "modelStem": "model",
+        "format": "cubism2",
+        "allowJSONC": true
+      }
+    },
+    {
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "catalog": "data/live2d-games-wave3.json",
+      "requireComplete": false,
+      "id": "arkorder",
+      "gameId": "arkorder",
+      "name": "方舟指令（Live2D 动态立绘）",
+      "directory": "方舟指令",
+      "selection": "^/l_[0-9]+/model\\.json$",
+      "import": {
+        "idPrefix": "ao-",
+        "pattern": "^(l_[0-9]+)/model\\.json$",
+        "modelStem": "model",
+        "format": "cubism2",
+        "allowJSONC": true
+      }
+    },
+    {
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "catalog": "data/live2d-games-wave3.json",
+      "requireComplete": false,
+      "id": "gemstory",
+      "gameId": "gemstory",
+      "name": "宝石研物语（动态角色）",
+      "directory": "宝石研物语/宝石研物语",
+      "selection": "^/[A-Za-z0-9_]+/model\\.json$",
+      "import": {
+        "idPrefix": "gs1-",
+        "pattern": "^([A-Za-z0-9_]+)/model\\.json$",
+        "modelStem": "model",
+        "format": "cubism2",
+        "allowJSONC": true
+      }
+    },
+    {
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "catalog": "data/live2d-games-wave3.json",
+      "requireComplete": false,
+      "id": "gemstory2",
+      "gameId": "gemstory",
+      "name": "宝石研物语（动态角色）",
+      "directory": "宝石研物语/宝石研物语2",
+      "selection": "^/[A-Za-z0-9_]+/model\\.json$",
+      "import": {
+        "idPrefix": "gs2-",
+        "pattern": "^([A-Za-z0-9_]+)/model\\.json$",
+        "modelStem": "model",
+        "format": "cubism2",
+        "allowJSONC": true
+      }
+    },
+    {
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "catalog": "data/live2d-games-wave3.json",
+      "requireComplete": false,
+      "id": "warshipgirls",
+      "gameId": "warshipgirls",
+      "name": "战舰少女（动态立绘）",
+      "directory": "战舰少女",
+      "selection": "^/[0-9]{3}_[0-9]+/model\\.model\\.json$",
+      "import": {
+        "idPrefix": "wg-",
+        "pattern": "^([0-9]{3}_[0-9]+)/model\\.model\\.json$",
+        "modelStem": "model",
+        "format": "cubism2",
+        "allowJSONC": true
+      }
     }
   ]
 }
