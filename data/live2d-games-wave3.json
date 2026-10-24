@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "note": "New-game Cubism2 sources pinned to Eikanya/Live2d-model 7e446cbd95ec352cdb0f73c079e4d075d7d528ac. A record becomes playable only if its declared MOC, texture, and other referenced assets pass the reusable source importer. Preview evidence is published separately through the shared pipeline.",
+  "characters": [],
+  "sources": []
+}
