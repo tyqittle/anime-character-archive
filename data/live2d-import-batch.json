@@ -1,11 +1,13 @@
 {
   "schemaVersion": 1,
-  "batch": "2026-10-24-final-publish-imported-games",
+  "batch": "2026-10-24-adult-games-kagura-ruins-wave4",
+  "catalog": "data/live2d-games-wave4.json",
+  "audit": "data/live2d-games-wave4-source-audit.json",
+  "catalogId": "games-wave4",
   "scopes": [
-    "gunsgirlz",
-    "arkorder",
-    "gemstory",
-    "gemstory2",
-    "warshipgirls"
+    "ruins-seeker-characters",
+    "kagura-core",
+    "kagura-chapters2",
+    "kagura-chapters3"
   ]
 }
