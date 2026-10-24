@@ -206,7 +206,7 @@ test('download cache is invalidated when the source revision changes',()=>{
 });
 test('model deadline clears a stalled stage and discards a late cache read',async()=>{
  const read=deferred(),messages=[],elements=new Map();let cleared=0,played=0;
- const ctx=context({ArchiveTheaterUI:{setHeading(){}},pendingRenderCancel:null,currentAttempt:0,stopWatchdog(){},clearPlayer(){cleared++},
+ const ctx=context({ArchiveTheaterUI:{setHeading(){},setContext(){}},pendingRenderCancel:null,currentAttempt:0,stopWatchdog(){},clearPlayer(){cleared++},
   $:id=>{if(!elements.has(id))elements.set(id,{});return elements.get(id)},
   status:(message)=>messages.push(message),recentSpinePack:()=>null,dbAction:()=>read.promise,
   playPack:()=>{played++}});
