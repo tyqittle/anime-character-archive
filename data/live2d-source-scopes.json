@@ -517,6 +517,24 @@
         "pattern": "^(?:神楽黎明記 〜ナツの章〜|神楽黎明記～初花の章～)/(s_[a-z0-9]+)/\\1\\.model3\\.json$",
         "minimumTextureBytes": 75000
       }
+    },
+    {
+      "id": "unknownbride-cubism3",
+      "gameId": "unknownbride",
+      "name": "Unknown Bride／アンノウンブライド · 角色 Live2D",
+      "sourceRepo": "Eikanya/Live2d-model",
+      "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+      "directory": "アンノウンブライド（Unknow Brige）",
+      "catalog": "data/live2d-games-wave5.json",
+      "selection": "^/c_[0-9]+/(?:__data(?:_[0-9]+)?|c_[0-9]+)\\.model3\\.json$",
+      "requireComplete": true,
+      "import": {
+        "idPrefix": "ub-",
+        "pattern": "^(c_[0-9]+)/(?:__data(?:_[0-9]+)?|\\1)\\.model3\\.json$",
+        "minimumTextureBytes": 900000,
+        "composeCubism3Texture": true,
+        "normalizedSettingsDirectory": "assets/model-settings/newgames"
+      }
     }
   ]
 }
