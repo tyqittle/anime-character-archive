@@ -469,7 +469,7 @@
       "gameId": "kagurareimeiki",
       "name": "神乐黎明记 · 成人向角色 Live2D",
       "directory": "galgame live2d/神楽黎明記～Live2d/神乐黎明记Live2d/model",
-      "selection": "^/(?:s_[a-z0-9]+|v[0-9]+a[0-9]?|w[0-9]+a[0-9]?)/(?:s_[a-z0-9]+|v[0-9]+a|w[0-9]+a)\\.model\\.json$",
+      "selection": "^/(?!v106a1/)(?:s_[a-z0-9]+|v[0-9]+a[0-9]?|w[0-9]+a[0-9]?)/(?:s_[a-z0-9]+|v[0-9]+a|w[0-9]+a)\\.model\\.json$",
       "import": {
         "idPrefix": "kg-",
         "pattern": "^([a-z0-9_]+)/[a-z0-9_]+\\.model\\.json$",
@@ -477,7 +477,8 @@
         "allowJSONC": true,
         "normalizedSettingsDirectory": "assets/model-settings/newgames",
         "minimumTextureBytes": 75000,
-        "repairLegacyMotionCommas": true
+        "repairLegacyMotionCommas": true,
+        "encoding": "shift_jis"
       }
     },
     {
@@ -489,15 +490,16 @@
       "gameId": "kagurareimeiki",
       "name": "神乐黎明记 · 成人向角色 Live2D",
       "directory": "galgame live2d/神楽黎明記～Live2d",
-      "selection": "^/神楽黎明記～(?:弥生|梓紗|舞歌)の章～/s_[a-z0-9]+/s_[a-z0-9]+\\.model\\.json$",
+      "selection": "^/神楽黎明記～(?:弥生|梓紗)の章～/s_[a-z0-9]+/s_[a-z0-9]+\\.model\\.json$",
       "import": {
         "idPrefix": "kg2-",
-        "pattern": "^神楽黎明記～(?:弥生|梓紗|舞歌)の章～/(s_[a-z0-9]+)/\\1\\.model\\.json$",
+        "pattern": "^神楽黎明記～(?:弥生|梓紗)の章～/(s_[a-z0-9]+)/\\1\\.model\\.json$",
         "format": "cubism2",
         "allowJSONC": true,
         "normalizedSettingsDirectory": "assets/model-settings/newgames",
         "minimumTextureBytes": 75000,
-        "repairLegacyMotionCommas": true
+        "repairLegacyMotionCommas": true,
+        "encoding": "shift_jis"
       }
     },
     {
