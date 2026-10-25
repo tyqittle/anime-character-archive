@@ -22,6 +22,16 @@ class SpineSourceTests(unittest.TestCase):
         for path in ['characters/123/123.atlas','characters/123/123.png']:
             with self.assertRaisesRegex(ValueError,'Missing'):
                 m.model_record(self.scope,'123',{p:x for p,x in self.files.items() if p!=path},self.download)
+    def test_audited_edge_policy_is_bounded_and_changes_preview_identity(self):
+        from catalog_registry import source_identity
+        baseline=m.model_record(self.scope,'123',self.files,self.download)
+        self.scope['atlasEdgeExtrusionByModel']={'123':2}
+        patched=m.model_record(self.scope,'123',self.files,self.download)
+        self.assertEqual(patched['atlasEdgeExtrusion'],2)
+        self.assertEqual(source_identity(patched)[-1],'atlas-edge-extrusion:2')
+        self.assertNotEqual(source_identity(baseline),source_identity(patched))
+        self.scope['atlasEdgeExtrusionByModel']['123']=3
+        with self.assertRaisesRegex(ValueError,'edge extrusion'):m.model_record(self.scope,'123',self.files,self.download)
     def test_json_content_with_skel_extension_uses_json_renderer(self):
         self.payload['characters/123/123.skel']=json.dumps({'skeleton':{'spine':'3.8.55'}}).encode()
         self.files['characters/123/123.skel']['sha']=m.git_blob(self.payload['characters/123/123.skel'])

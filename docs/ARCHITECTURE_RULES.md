@@ -182,3 +182,11 @@ npm run test:python
 ## 12. 仓库卫生与入口退役
 
 依赖、字节码和临时产物不得提交；使用 `.gitignore` 与 `npm run audit:repo` 持续检查。清理前核对工作流、导入、数据、页面、测试与文档引用，并处理旧 URL 兼容。素材静态未引用仅是候选，动态路径、测试集和增量构建状态必须另行核实。退役后的历史实现由 Git 保存，不复制完整 backup/old 页面；兼容入口采用共同服务委托或跳转。具体保留与清理依据见 [仓库卫生记录](REPOSITORY_HYGIENE.md)。
+
+## 13. 动态目录增量兼容
+
+新增与重新导入使用工具侧共同的 `mergeCatalogRecords` / `merge_catalog_records`，按稳定 ID 合并，不按未经仓库限定的相对路径替换。跨目录重复 ID、同 ID 角色/皮肤/引擎冲突必须拒绝。默认保留既有来源、预览与无关记录；更新资源须逐 ID 显式指定 `--update-existing`，并清除旧预览证据。长时间来源扫描后重新读取目录，原子替换文件。
+
+`catalog_compatibility.mjs` 比较完整注册目录、旧 ID、皮肤、资源地址、来源解释、去重后默认链接目标和预览保留情况；`--verify-previews` 继续核验文件存在与 SHA-256。兼容修复在 `data/catalog-compatibility-changes.json` 按 ID、字段和准确前后值记录原因；字段例外不能豁免预览校验。
+
+`check_catalog_update.mjs` 在常规检查中使用实际 push / PR 基线，缺少浅克隆基线时补取该提交。CI 失败和导入器拒绝是具体保护边界，不等于未经核验的分支保护设置或所有外部写入路径均被强制阻止。见 [2026-10-25 兼容检查](CATALOG_COMPATIBILITY_REVIEW_2026-10-25.md)。

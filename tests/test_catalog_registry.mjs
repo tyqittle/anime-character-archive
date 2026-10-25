@@ -33,4 +33,6 @@ test('atlas coordinate interpretation invalidates old previews without changing 
  assert.deepEqual(declared.slice(0,7),legacy);
  assert.equal(declared[7],'atlas-coordinate-space:declared');
  assert.notDeepEqual(legacy,declared);
+ const border=sourceIdentity({...c,atlasCoordinateSpace:'declared',atlasEdgeExtrusion:2});
+ assert.deepEqual(border.slice(0,8),declared);assert.equal(border[8],'atlas-edge-extrusion:2');
 });

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "gc-girl04-l2d05",
+    "field": "portraitFraming",
+    "before": null,
+    "after": {"excludeDrawables": ["D_BODY_51"]},
+    "reason": "Source drawable D_BODY_51 is parked at approximately (-767912,-1281216). Exclude only this drawable from initial bounds; keep its render mesh and every other model unchanged. Recapture the exact model with the new framing identity."
+  },
+  {
+    "id": "ec-50010001",
+    "field": "atlasEdgeExtrusion",
+    "before": null,
+    "after": 2,
+    "reason": "The pinned source atlas has an audited two-pixel region overflow. Allow the declared border only for this source and recapture its exact model."
+  },
+  {
+    "id": "ec-500180",
+    "field": "atlasEdgeExtrusion",
+    "before": null,
+    "after": 2,
+    "reason": "The pinned source atlas has an audited two-pixel region overflow. Allow the declared border only for this source and recapture its exact model."
+  }
+]

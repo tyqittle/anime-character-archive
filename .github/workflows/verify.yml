@@ -16,6 +16,8 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -23,6 +25,10 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install -r requirements-dev.txt
+      - name: Protect existing model identities and previews against the change base
+        env:
+          CATALOG_BASE_REF: ${{ github.event.pull_request.base.sha || github.event.before || 'HEAD^' }}
+        run: node scripts/check_catalog_update.mjs
       - name: Discover every Node behavior regression
         run: npm test
       - name: Audit tracked generated outputs and unused media candidates

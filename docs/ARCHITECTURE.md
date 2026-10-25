@@ -98,3 +98,7 @@ Windows 原生 Spine 4.1 宿主的持续维护模块位于 `native-desktop/rende
 桌面角色集合按游戏和模型 ID 拥有独立宿主、取消和可见状态；隐藏、移除、加载失败不得影响其他角色。
 操作系统点击仅由输入窗口接收，菜单与视觉合成分离。共用的 `shared/portrait-interactions.js` 是无 DOM 的源区域/动作解析策略；Spine 与 Cubism 适配器负责坐标转换和手势。
 交互能力区分源点击区域、具备源触摸动作但仅能估算分区、以及没有互动动作，不能把待机/攻击动画冒充点击互动。
+
+## 动态目录增量兼容
+
+导入器共同合并稳定 ID，保留无关游戏、已有来源及有效预览；资源替换须逐 ID 声明。常规 CI 通过 `catalog_compatibility.mjs` 对实际变更基线检查旧链接、角色/皮肤、源身份和预览文件摘要。约束见 [架构规范第 13 节](ARCHITECTURE_RULES.md#13-动态目录增量兼容)，本轮检查与实际验证范围见 [兼容检查记录](CATALOG_COMPATIBILITY_REVIEW_2026-10-25.md)。

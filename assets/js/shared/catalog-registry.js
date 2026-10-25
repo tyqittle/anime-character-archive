@@ -29,6 +29,9 @@
  function sourceIdentity(c){
   const identity=[c.engine||'spine',...['base','skeletonUrl','atlasUrl','modelUrl','resourceStem','spineVersion'].map(key=>c[key]||'')];
   if(c.atlasCoordinateSpace)identity.push('atlas-coordinate-space:'+c.atlasCoordinateSpace);
+  if(c.atlasEdgeExtrusion!==undefined)identity.push('atlas-edge-extrusion:'+c.atlasEdgeExtrusion);
+  const excluded=c.portraitFraming?.excludeDrawables;
+  if(excluded?.length)identity.push('portrait-framing-excluded-drawables:'+JSON.stringify([...new Set(excluded)].sort()));
   return identity;
  }
  return Object.freeze({validate,load,sourceIdentity});

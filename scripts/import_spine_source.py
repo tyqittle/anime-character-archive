@@ -3,10 +3,10 @@
 Uses source-scope data, exact Atlas pages and the common preview identity contract.
 Raw assets remain upstream; only verified source references are indexed locally.
 """
-import argparse, hashlib, json, re, struct, time, urllib.parse, urllib.request
+import argparse, hashlib, json, os, re, struct, time, urllib.parse, urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path, PurePosixPath
-from catalog_registry import source_identity
+from catalog_registry import source_identity, read_characters, merge_catalog_records
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -74,19 +74,22 @@ def model_record(scope, stem, files, download=retrieve):
     base=prefix+urllib.parse.quote(folder+stem,safe='/')
     model_id=scope.get('modelIds',{}).get(stem,stem)
     if not re.fullmatch(r'[a-zA-Z0-9_-]+',model_id):raise ValueError('Invalid catalog ID')
+    extrusion=scope.get('atlasEdgeExtrusionByModel',{}).get(stem)
+    if extrusion is not None and (type(extrusion) is not int or not 0<=extrusion<=2):raise ValueError('Invalid declared atlas edge extrusion')
     return {'id':scope['idPrefix']+model_id,'gameId':scope['gameId'],'game':scope['name'],'collectionName':scope['name'],
         'engine':'spine','name':scope.get('names',{}).get(stem,'角色 / 服装 '+stem),'characterName':stem,'costumeName':stem,
         'skinCode':stem,'assetType':'character-spine','spineVersion':scope['spineVersion'],'skeletonFormat':'json' if is_json else 'skel',
         'atlasCoordinateSpace':'declared','resourceStem':stem,'base':base,'skeletonUrl':base+'.'+extension,'atlasUrl':base+'.atlas',
+        **({'atlasEdgeExtrusion':extrusion} if extrusion is not None else {}),
         'sourceRepo':scope['sourceRepo'],'sourceCommit':scope['sourceCommit'],'sourcePath':scope['treePrefix']+names[0],
         'sourceVersion':version,'skeletonBytes':len(skeleton),'atlasBytes':len(atlas.encode('utf-8')),'textures':textures,
         'status':'indexed-unverified','playbackStatus':'not-verified','previewSource':'not-rendered','visualIntegrityPolicy':'coherent-character'}
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--scope',required=True);parser.add_argument('--dry-run',action='store_true');parser.add_argument('--retry-failed',action='store_true');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--scope',required=True);parser.add_argument('--dry-run',action='store_true');parser.add_argument('--retry-failed',action='store_true');parser.add_argument('--source-tree',type=Path);parser.add_argument('--update-existing',action='append',default=[]);args=parser.parse_args()
     scope=next(s for s in json.loads((ROOT/'data/spine-source-scopes.json').read_text(encoding='utf-8'))['scopes'] if s['id']==args.scope)
     if not re.fullmatch(r'[\w.-]+/[\w.-]+',scope['sourceRepo']) or not re.fullmatch(r'[0-9a-f]{40}',scope['sourceCommit']):raise ValueError('Source must be pinned')
-    tree=json.loads(retrieve('https://api.github.com/repos/'+scope['sourceRepo']+'/git/trees/'+scope['treeSha']+'?recursive=1',budget=12_000_000))
+    tree=json.loads(args.source_tree.read_text(encoding='utf-8')) if args.source_tree else json.loads(retrieve('https://api.github.com/repos/'+scope['sourceRepo']+'/git/trees/'+scope['treeSha']+'?recursive=1',budget=12_000_000))
     if tree.get('truncated') or tree.get('sha')!=scope['treeSha']:raise ValueError('Cannot certify source tree')
     files={x['path']:x for x in tree['tree'] if x['type']=='blob'}
     if scope.get('includeAllModels'):
@@ -128,10 +131,18 @@ def main():
             accepted.append(entry);print('SPINE_SOURCE_CHECKED',entry['id'],flush=True)
         except Exception as error:failed.append({'stem':stem,'error':str(error)});print('SPINE_SOURCE_FAILED',stem,str(error),flush=True)
     report={'scope':scope['id'],'sourceRepo':scope['sourceRepo'],'sourceCommit':scope['sourceCommit'],'selected':len(scope['models']),'checked':len(accepted),'wouldAdd':[c['id'] for c in accepted if c['id'] not in previous],'failed':failed,'qualityExclusions':excluded,'note':'Selected illustrations only; source and image-header validation is separate from browser playback.'}
+    latest_text=dest.read_text(encoding='utf-8');catalog=json.loads(latest_text)
+    excluded_ids={scope['idPrefix']+scope.get('modelIds',{}).get(x['stem'],x['stem']) for x in excluded}
+    if excluded_ids.intersection(c['id'] for c in catalog['characters']):raise ValueError('Import cannot silently remove existing excluded models; review removal separately')
+    catalog['characters']=merge_catalog_records(catalog['characters'],accepted,registered=read_characters(),
+        update_existing=[ident for value in args.update_existing for ident in value.split(',')])
     if not args.dry_run:
-        incoming={c['id']:c for c in accepted};excluded_ids={scope['idPrefix']+x['stem'] for x in excluded}
-        catalog['characters']=[incoming.pop(c['id'],c) for c in catalog['characters'] if c['id'] not in excluded_ids];catalog['characters']+=list(incoming.values())
-        dest.write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        if dest.read_text(encoding='utf-8')!=latest_text:raise ValueError('Catalog changed during import; retry against the latest version')
+        temporary=dest.with_name(dest.name+'.tmp-'+str(os.getpid()))
+        try:
+            temporary.write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');temporary.replace(dest)
+        finally:
+            if temporary.exists():temporary.unlink()
     report['attemptedThisRun']=len(results)
     audit_path.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print('SPINE_SOURCE_SUMMARY',json.dumps(report),flush=True)
