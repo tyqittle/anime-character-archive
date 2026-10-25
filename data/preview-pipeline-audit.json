@@ -28,7 +28,7 @@
         "id": "kf-1193207-1190100"
       }
     ],
-    "newCapturesInThisRun": 0,
+    "newCapturesInThisRun": 312,
     "rejectedCaptures": [],
     "failedCaptures": [
       {
@@ -551,21 +551,6 @@
     "failedCaptures": [],
     "failureSummary": {}
   },
-  "games-wave5": {
-    "scope": "shared preview pipeline",
-    "counts": {
-      "unknownbride": {
-        "indexed": 18,
-        "verifiedPreview": 18,
-        "missingPreview": 0
-      }
-    },
-    "missing": [],
-    "newCapturesInThisRun": 0,
-    "rejectedCaptures": [],
-    "failedCaptures": [],
-    "failureSummary": {}
-  },
   "games-wave6": {
     "scope": "shared preview pipeline",
     "counts": {
@@ -581,7 +566,22 @@
       }
     },
     "missing": [],
-    "newCapturesInThisRun": 85,
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
+  },
+  "games-wave5": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "unknownbride": {
+        "indexed": 18,
+        "verifiedPreview": 18,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 0,
     "rejectedCaptures": [],
     "failedCaptures": [],
     "failureSummary": {}
