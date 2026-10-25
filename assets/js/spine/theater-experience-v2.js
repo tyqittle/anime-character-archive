@@ -97,5 +97,7 @@
   },
   setSelection:sync
  });
- sync();
+ // A slow optional presenter can arrive after the async catalog bootstrap.
+ // Reconcile from current records instead of assuming a script/network order.
+ if(allCharacters.length)refreshCharacters();else sync();
 })();

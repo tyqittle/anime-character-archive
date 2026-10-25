@@ -113,6 +113,15 @@ try{
  assert.equal(await page.locator('#stageChrome').isVisible(),false);
  assert.equal(await page.locator('#panelBackdrop').isVisible(),false);
  results.flows.push('desktop-host-chrome-hidden');
+ const late=await browser.newPage();let held;
+ late.on('pageerror',error=>results.errors.push(error.message));
+ await late.route('**/theater-experience-v2.js*',route=>{held=route});
+ const navigation=late.goto(base+'/spine.html',{waitUntil:'domcontentloaded'});
+ await late.waitForFunction(()=>typeof allCharacters!=='undefined'&&allCharacters.length>1000);
+ assert.ok(held,'Expected delayed optional presenter request');await held.continue();await navigation;
+ await late.waitForFunction(()=>document.getElementById('browseCount').textContent.includes('套'));
+ assert.equal(await late.locator('#stageNext').isEnabled(),true);
+ results.flows.push('late-presenter-reconciles-loaded-catalog');await late.close();
  assert.deepEqual(results.errors,[]);
 }finally{
  fs.writeFileSync(output+'/results.json',JSON.stringify(results,null,2)+'\n');
