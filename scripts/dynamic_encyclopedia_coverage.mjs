@@ -20,7 +20,7 @@ export function buildCoverage(records,inventories,spineScopes,spineAudits,hosted
    }
    for(const audit of hostedAudits.filter(s=>s.gameId===gameId))scopes.push({sourceUrl:audit.source,metadataSnapshot:audit.metadataSnapshot,
     metadataSha256:audit.metadataSha256,discoveredSettings:audit.discovered,indexedSettings:audit.indexed,
-    failures:audit.failures,staticSources:audit.staticSources||[],sourceDirectoryComplete:audit.sourceScopeComplete});
+    failures:audit.failures,staticSources:audit.staticSources||[],...(audit.scopeExcluded?.length?{scopeExcluded:audit.scopeExcluded,declaredPortraitScopeComplete:audit.declaredPortraitScopeComplete}:{}),sourceDirectoryComplete:audit.sourceScopeComplete});
    return {gameId,indexedPortraits:portraits.length,battleModels:all.length-portraits.length,
     matchingPreviewMetadata:portraits.filter(c=>c.previewSha256&&JSON.stringify(c.previewSourceIdentity)===JSON.stringify(sourceIdentity(c))).length,
     gameCompleteness:'not-verified',sourceScopes:scopes};

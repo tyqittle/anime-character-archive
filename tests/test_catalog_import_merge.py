@@ -36,5 +36,13 @@ class CatalogMergeTests(unittest.TestCase):
         self.assertEqual(source_identity(c),actual)
         changed={**c,'resourceIntegrity':[{'path':'b.png','sha256':'c'*64}]}
         with self.assertRaisesRegex(ValueError,'replacement'):merge_catalog_records([c],[changed])
+    def test_companion_identity_is_recursive_and_matches_browser_contract(self):
+        c={**self.old,'spineIdleAnimation':'Idle_Stand','spineCompanions':[{**self.new,'spineIdleAnimation':'idle','resourceIntegrity':[{'path':'back.png','sha256':'b'*64}]}]}
+        script="const m=require('./assets/js/shared/catalog-registry.js');process.stdout.write(JSON.stringify(m.sourceIdentity(JSON.parse(process.argv[1]))))"
+        actual=json.loads(subprocess.check_output(['node','-e',script,json.dumps(c)],cwd=ROOT,text=True))
+        self.assertEqual(source_identity(c),actual)
+        changed={**c,'spineCompanions':[{**c['spineCompanions'][0],'base':'https://changed.test/model'}]}
+        self.assertNotEqual(source_identity(c),source_identity(changed))
+        with self.assertRaisesRegex(ValueError,'replacement'):merge_catalog_records([c],[changed])
 
 if __name__=='__main__':unittest.main()

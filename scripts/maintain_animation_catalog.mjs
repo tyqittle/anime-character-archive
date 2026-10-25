@@ -52,7 +52,7 @@ export async function main(args=process.argv.slice(2)){
  const python=process.env.PYTHON||'python';
  const pipeline=(...args)=>run(python,['-X','utf8','scripts/preview_pipeline.py',...args,'--catalog',options.catalog]);
  const config=JSON.parse(fs.readFileSync('data/hosted-spine-source-scopes.json','utf8'));
- const scopes=config.catalog===entry.path?config.scopes:[];
+ const scopes=config.scopes.filter(s=>(s.catalog||config.catalog)===entry.path);
  if(options.importSources){
   if(!scopes.length)throw Error('This catalog uses its existing source importer; hosted import is not configured');
   const flags=[options.refreshMetadata?'--refresh-metadata':null,options.refreshAssets?'--refresh-assets':null].filter(Boolean);
@@ -60,7 +60,7 @@ export async function main(args=process.argv.slice(2)){
  }
  const server=await serveWorkspace(process.cwd());
  const sourceCache='tmp/hosted-spine/index.json';
- const env={ARCHIVE_PREVIEW_BASE_URL:server.base,MODULE_TEST_BASE_URL:server.base,ARCHIVE_PREFLIGHT_SCOPE:'',ARCHIVE_PREVIEW_SOURCE_CACHE:fs.existsSync(sourceCache)?sourceCache:''};
+ const env={ARCHIVE_PREVIEW_BASE_URL:server.base,MODULE_TEST_BASE_URL:server.base,ARCHIVE_PREFLIGHT_SCOPE:scopes.map(s=>s.id).join(','),ARCHIVE_PREVIEW_SOURCE_CACHE:fs.existsSync(sourceCache)?sourceCache:''};
  try{
   // Run source representatives before starting expensive full-catalog renders.
   if(scopes.length)await run(process.execPath,['scripts/test_hosted_spine_browser.mjs'],env);

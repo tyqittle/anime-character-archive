@@ -5,6 +5,7 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {pathToFileURL} from 'node:url';
 import {createRequire} from 'node:module';
+import vm from 'node:vm';
 import {readCharacters,mergeCatalogRecords} from './catalog_registry.mjs';
 const {coalesceAtlasPages}=createRequire(import.meta.url)('../assets/js/shared/spine-atlas-coordinates.js');
 const ROOT=new URL('../',import.meta.url),CACHE=new URL('../tmp/hosted-spine/',import.meta.url);
@@ -45,6 +46,30 @@ export function attachmentPathRepairs(bytes,atlas){
  return repairs;
 }
 export function candidates(scope,metadata){
+ if(scope.adapter==='spine-portrait-tree'){
+  if(metadata.truncated||metadata.sha!==scope.treeSha||!Array.isArray(metadata.tree))throw Error('Incomplete or unpinned source tree');
+  const files=new Map(metadata.tree.filter(x=>x.type==='blob').map(x=>[x.path,x]));
+  const atlases=[...files.keys()].filter(p=>p.startsWith(scope.directory)&&p.endsWith('.atlas.bytes'));
+  for(const atlas of atlases.filter(p=>/_B\.atlas\.bytes$/i.test(p)))if(!files.has(atlas.replace(/_B\.atlas\.bytes$/i,'_F.atlas.bytes')))throw Error('Orphan source back layer: '+atlas);
+  for(const skeleton of [...files.keys()].filter(p=>p.startsWith(scope.directory)&&p.endsWith('.bytes')&&!p.endsWith('.atlas.bytes'))){
+   const atlas=skeleton.replace(/(?:\.skel)?\.bytes$/,'.atlas.bytes');if(!files.has(atlas))throw Error('Source skeleton lacks atlas: '+skeleton);
+  }
+  const model=atlas=>{
+   const stem=atlas.slice(0,-'.atlas.bytes'.length),skeleton=[stem+'.skel.bytes',stem+'.bytes'].filter(p=>files.has(p));
+   if(skeleton.length!==1)throw Error('Missing or ambiguous source skeleton: '+atlas);
+   return {skeleton:assetURL(scope,skeleton[0]),atlas:assetURL(scope,atlas)};
+  };
+  return atlases.filter(a=>!/_B\.atlas\.bytes$/i.test(a)).map(atlas=>{
+   const folder=atlas.slice(scope.directory.length).split('/')[0],base=atlas.slice(0,-'.atlas.bytes'.length),name=scope.names?.[folder];
+   const backPath=/_F$/i.test(base)?base.slice(0,-2)+'_B.atlas.bytes':null;
+   const back=backPath&&files.has(backPath)?backPath:null;
+   if(scope.compositeFolders?.includes(folder)&&!back)throw Error('Missing declared source back layer: '+atlas);
+   const siblings=atlases.filter(p=>p.startsWith(scope.directory+folder+'/')&&!/_B\.atlas\.bytes$/i.test(p));
+   const suffix=siblings.length>1?'-'+base.split('/').pop():'';
+   return {key:folder+suffix,name:name?.title||folder.replace(/_/g,' '),character:name?.character||folder.split('_')[0],costume:name?.variant||folder,
+    category:name?.category||'NPC',tags:[],...model(atlas),companions:back?[model(back)]:[]};
+  });
+ }
  if(scope.adapter==='epicseven-units'){
   if(!Array.isArray(metadata)||!metadata.length)throw Error('Empty unit metadata');
   return metadata.filter(u=>scope.includedKinds.includes(u.kind)).flatMap(u=>(u.spine||[]).map((s,i)=>({
@@ -87,7 +112,17 @@ export function defaultSourceSkinLayers(d,adapter){
  selected||=skins.has('normal')?'normal':skins.has('default')?'default':skins.keys().next().value;
  return [...new Set([skins.has('default')?'default':null,selected].filter(Boolean))];
 }
-export function inspectSkeleton(bytes,adapter){
+export function inspectSkeleton(bytes,adapter,{runtime,atlasText}={}){
+ if(!bytes.toString('utf8',0,8).replace(/^\uFEFF/,'').trimStart().startsWith('{')){
+  if(!runtime||!atlasText)throw Error('Binary source requires a pinned inspection runtime');
+  const atlas=new runtime.TextureAtlas(atlasText);
+  for(const page of atlas.pages)page.setTexture(new runtime.FakeTexture({width:page.width,height:page.height}));
+  const d=new runtime.SkeletonBinary(new runtime.AtlasAttachmentLoader(atlas)).readSkeletonData(new Uint8Array(bytes));
+  if(!/^4\.1\./.test(d.version)||!d.bones.length)throw Error('Unsupported binary source: '+d.version);
+  const animations=d.animations.filter(a=>a.duration>0).map(a=>a.name);
+  if(!animations.length){const e=Error('No timed animation in source export');e.code='STATIC_SOURCE';throw e}
+  return {version:d.version,animations,bones:d.bones.length,boneNames:d.bones.map(b=>b.name),skins:d.skins.map(s=>s.name),skinLayers:[],excludeBones:[],format:'skel'};
+ }
  const d=JSON.parse(bytes.toString('utf8')),version=String(d.skeleton?.spine||'');
  if(!/^(?:3\.8|4\.[012])\./.test(version)||!Array.isArray(d.bones)||!d.bones.length)throw Error('Unsupported or incomplete Spine skeleton: '+version);
  function timed(value){if(!value||typeof value!=='object')return false;if(Number(value.time)>0)return true;return Object.values(value).some(timed)}
@@ -97,7 +132,7 @@ export function inspectSkeleton(bytes,adapter){
  // They are excluded only from portrait framing, so full combat/emote staging
  // cannot shrink the character to accommodate an offstage effects workspace.
  const excludeBones=adapter==='shadowverse-leaders'?d.bones.filter(b=>/effect|(?:^|_)ef(?:_|$)|plane_/i.test(b.name)&&Math.max(Math.abs(b.x||0),Math.abs(b.y||0))>2000).map(b=>b.name):[];
- return {version,animations,bones:d.bones.length,skinLayers:defaultSourceSkinLayers(d,adapter),excludeBones};
+ return {version,animations,bones:d.bones.length,boneNames:d.bones.map(b=>b.name),skins:(d.skins||[]).map(s=>s.name),skinLayers:defaultSourceSkinLayers(d,adapter),excludeBones,format:'json'};
 }
 async function bounded(items,concurrency,fn){let cursor=0;const results=new Array(items.length);await Promise.all(Array.from({length:Math.min(items.length,concurrency)},async()=>{while(cursor<items.length){const i=cursor++;results[i]=await fn(items[i],i)}}));return results}
 export async function main(args=process.argv.slice(2)){
@@ -129,7 +164,8 @@ export async function main(args=process.argv.slice(2)){
   let metadata,snapshotPath,snapshotSha256;
   if(!refresh&&oldAudit){snapshotPath=oldAudit.metadataSnapshot;snapshotSha256=oldAudit.metadataSha256;const bytes=fs.readFileSync(new URL(snapshotPath,ROOT));if(digest(bytes)!==snapshotSha256)throw Error('Metadata snapshot changed');metadata=JSON.parse(bytes)}
   else{
-   const raw=await fetchBytes(scope.metadataUrl,{fresh:refresh});metadata=JSON.parse(raw);
+   let raw=await fetchBytes(scope.metadataUrl,{fresh:refresh});
+   metadata=JSON.parse(raw);
    if(typeof metadata==='string')metadata=JSON.parse(metadata);
    if(scope.adapter==='shadowverse-leaders'){
     const groups=leaderGroups(metadata),leaders={},unavailable=[];
@@ -140,55 +176,91 @@ export async function main(args=process.argv.slice(2)){
    const bytes=Buffer.from(JSON.stringify(metadata,null,2)+'\n');snapshotSha256=digest(bytes);snapshotPath='data/source-snapshots/'+scope.id+'-'+snapshotSha256.slice(0,16)+'.json';
    fs.mkdirSync(new URL('data/source-snapshots/',ROOT),{recursive:true});fs.writeFileSync(new URL(snapshotPath,ROOT),bytes);
   }
-  const source=candidates(scope,metadata);if(!source.length||new Set(source.map(x=>x.key)).size!==source.length)throw Error('Empty or duplicated source identities');
+  const discovered=candidates(scope,metadata);if(!discovered.length||new Set(discovered.map(x=>x.key)).size!==discovered.length)throw Error('Empty or duplicated source identities');
+  const excluded=discovered.filter(c=>scope.excludedPortraits?.[c.key]).map(c=>({key:c.key,reason:scope.excludedPortraits[c.key]}));
+  const source=discovered.filter(c=>!scope.excludedPortraits?.[c.key]);
+  if(!source.length)throw Error('Empty declared portrait scope');
+  const sourceFiles=scope.adapter==='spine-portrait-tree'?new Map(metadata.tree.filter(x=>x.type==='blob'&&x.path.startsWith(scope.directory)).map(x=>[assetURL(scope,x.path),x])):null;
+  async function sourceBytes(url,options){
+   const bytes=await fetchBytes(url,options);
+   if(sourceFiles){const file=sourceFiles.get(url),sha=createHash('sha1').update(Buffer.from('blob '+bytes.length+'\0')).update(bytes).digest('hex');if(!file||file.sha!==sha||file.size!==bytes.length)throw Error('Pinned source Git blob mismatch: '+url)}
+   return bytes;
+  }
+  let runtime;
+  if(scope.inspectionRuntime){
+   const bytes=await fetchBytes(scope.inspectionRuntime.url);
+   if(digest(bytes)!==scope.inspectionRuntime.sha256)throw Error('Inspection runtime bytes changed');
+   const context=vm.createContext({console,Uint8Array,Uint16Array,Int16Array,Uint32Array,Float32Array,TextDecoder});
+   vm.runInContext(bytes.toString('utf8'),context,{timeout:10000});runtime=context.spine;
+  }
   console.log('HOSTED_SOURCE_START',scope.id,source.length);
   let completed=0;
   const concurrency=scope.concurrency||5,timeoutMs=scope.assetTimeoutMs||30000;
   if(!Number.isInteger(concurrency)||concurrency<1||concurrency>8||!Number.isInteger(timeoutMs)||timeoutMs<1000||timeoutMs>120000)throw Error('Invalid source transfer limits');
-  const results=await bounded(source,concurrency,async candidate=>{
-   try{
+  async function importModel(candidate){
     if(!/^[a-zA-Z0-9_-]+$/.test(candidate.key))throw Error('Invalid character identity');
-    const [skeleton,atlas]=await Promise.all([fetchBytes(candidate.skeleton,{fresh:refreshAssets,timeoutMs}),fetchBytes(candidate.atlas,{fresh:refreshAssets,timeoutMs})]);
-    const inspected=inspectSkeleton(skeleton,scope.adapter),atlasText=atlas.toString('utf8'),pages=atlasPages(atlasText),coalesced=coalesceAtlasPages(atlasText),pathRepairs=attachmentPathRepairs(skeleton,coalesced.text);
+    const [skeleton,atlas]=await Promise.all([sourceBytes(candidate.skeleton,{fresh:refreshAssets,timeoutMs}),sourceBytes(candidate.atlas,{fresh:refreshAssets,timeoutMs})]);
+    const atlasText=atlas.toString('utf8'),inspected=inspectSkeleton(skeleton,scope.adapter,{runtime,atlasText}),pages=atlasPages(atlasText),coalesced=coalesceAtlasPages(atlasText),pathRepairs=inspected.format==='json'?attachmentPathRepairs(skeleton,coalesced.text):[];
     const extraBones=scope.portraitFramingOverrides?.[candidate.key]?.excludeBones||[];
-    const sourceBones=new Set(JSON.parse(skeleton.toString('utf8')).bones.map(b=>b.name));
+    const sourceBones=new Set(inspected.boneNames);
     if(extraBones.some(name=>!sourceBones.has(name)))throw Error('Declared framing bone absent from source');
     const excludeBones=[...new Set([...inspected.excludeBones,...extraBones])];
     const skName=decodeURIComponent(new URL(candidate.skeleton).pathname.split('/').pop()),atlasName=decodeURIComponent(new URL(candidate.atlas).pathname.split('/').pop());
     const resources=[{path:skName,sha256:digest(skeleton)},{path:atlasName,sha256:digest(atlas)}],textures=[];
-    for(const page of pages){const url=assetURL(scope,new URL(page,candidate.atlas).href),bytes=await fetchBytes(url,{fresh:refreshAssets,timeoutMs});
+    for(const page of pages){const url=assetURL(scope,new URL(page,candidate.atlas).href),bytes=await sourceBytes(url,{fresh:refreshAssets,timeoutMs});
      if(bytes.length<32||!bytes.subarray(0,8).equals(Buffer.from([137,80,78,71,13,10,26,10])))throw Error('Texture is not PNG: '+page);
      const width=bytes.readUInt32BE(16),height=bytes.readUInt32BE(20);if(Math.min(width,height)<64||Math.max(width,height)>16384)throw Error('Texture dimensions outside source budget');
      resources.push({path:page,sha256:digest(bytes)});textures.push({path:page,url,bytes:bytes.length,width,height});
     }
-    const stem=skName.replace(/\.json$/i,''),id=scope.idPrefix+candidate.key;
-    return {record:{id,gameId:scope.gameId,game:scope.name,collectionName:scope.name,engine:'spine',
+    const stem=skName.replace(/\.(?:json|skel)(?:\.bytes)?$|\.bytes$/i,''),id=scope.idPrefix+candidate.key;
+    const idle=scope.adapter==='spine-portrait-tree'?(inspected.animations.find(a=>/^idle_stand$/i.test(a))||inspected.animations.find(a=>/idle|stand/i.test(a))):undefined;
+    const sourceSkin=scope.defaultSkins?.[candidate.key]||candidate.skin;
+    if(sourceSkin&&!inspected.skins.includes(sourceSkin))throw Error('Source default skin absent');
+    const declaredLayers=scope.adapter==='spine-portrait-tree'?[...new Set([inspected.skins.includes('default')?'default':inspected.skins[0],sourceSkin].filter(Boolean))]:sourceSkin?[sourceSkin]:inspected.skinLayers.length>1?inspected.skinLayers:undefined;
+    return {id,gameId:scope.gameId,game:scope.name,collectionName:scope.name,engine:'spine',
      name:candidate.name+(candidate.costume?' · '+candidate.costume:''),characterName:candidate.character,costumeName:candidate.costume||candidate.category,skinCode:candidate.key,
      sourceCategory:candidate.category,tags:candidate.tags,assetType:'character-spine',spineVersion:inspected.version.split('.').slice(0,2).join('.'),sourceVersion:inspected.version,
-     skeletonFormat:'json',resourceStem:stem,base:candidate.skeleton.replace(/\.json$/i,''),skeletonUrl:candidate.skeleton,atlasUrl:candidate.atlas,
-     atlasCoordinateSpace:'declared',resourceIntegrity:resources.sort((a,b)=>a.path.localeCompare(b.path,'en')),
-     spineSkinLayers:inspected.skinLayers.length>1?inspected.skinLayers:undefined,
+     skeletonFormat:inspected.format,resourceStem:stem,base:candidate.skeleton.replace(/\.(?:json|skel)(?:\.bytes)?$|\.bytes$/i,''),skeletonUrl:candidate.skeleton,atlasUrl:candidate.atlas,
+     atlasCoordinateSpace:inspected.version.startsWith('3.8.')?'declared':undefined,resourceIntegrity:resources.sort((a,b)=>a.path.localeCompare(b.path,'en')),
+     spineSkinLayers:declaredLayers,
+     spineIdleAnimation:idle,
      portraitFraming:excludeBones.length?{excludeBones}:undefined,
      downloadPolicy:scope.downloadPolicy,
      spineAttachmentPathRepairs:pathRepairs.length?pathRepairs:undefined,
      spineAtlasPageMerge:coalesced.mergedPages?true:undefined,
      premultipliedAlpha:scope.premultipliedAlpha,
      sourceUrl:scope.attribution,sourceMetadataSnapshot:snapshotPath,sourceMetadataSha256:snapshotSha256,sourcePath:new URL(candidate.skeleton).pathname,
+     sourceRepo:scope.sourceRepo,sourceCommit:scope.sourceCommit,sourceSkins:inspected.skins,
      skeletonBytes:skeleton.length,atlasBytes:atlas.length,textures,motionCount:inspected.animations.length,sourceAnimations:inspected.animations,
-     status:'indexed-unverified',playbackStatus:'not-verified',previewSource:'not-rendered'}};
+     status:'indexed-unverified',playbackStatus:'not-verified',previewSource:'not-rendered'};
+  }
+  const results=await bounded(source,concurrency,async candidate=>{
+   try{
+    const record=await importModel(candidate);
+    if(candidate.companions?.length){
+     record.spineCompanions=[];
+     for(const part of candidate.companions){const companion=await importModel({...candidate,...part,companions:[]});
+      const {id,gameId,game,collectionName,name,characterName,costumeName,skinCode,sourceCategory,tags,status,playbackStatus,previewSource,...component}=companion;
+      if(component.spineVersion!==record.spineVersion)throw Error('Source layers use different engine versions');
+      record.spineCompanions.push(component);
+     }
+    }
+    return {record};
    }catch(error){return {failure:{key:candidate.key,skeleton:candidate.skeleton,error:error.message,category:error.code==='STATIC_SOURCE'?'static-source':error.status===404?'source-unavailable':'source-error'}}}
    finally{if(++completed%25===0)console.log('HOSTED_SOURCE_CHECKED',scope.id,completed+'/'+source.length)}
   });
   saveIndex();
   // Re-read both the destination and registry after the slow source scan.
-  const catalog=fs.existsSync(new URL(config.catalog,ROOT))?read(config.catalog):{schemaVersion:1,notes:'Complete source-scoped dynamic portraits, including all published skins. Assets locked by SHA-256; not a claim of current-game completeness.',characters:[]};
+  const catalogPath=scope.catalog||config.catalog;
+  const catalog=fs.existsSync(new URL(catalogPath,ROOT))?read(catalogPath):{schemaVersion:1,notes:'Complete source-scoped dynamic portraits, including all published skins. Assets locked by SHA-256; not a claim of current-game completeness.',characters:[]};
   const records=results.filter(x=>x.record).map(x=>x.record),rejected=results.filter(x=>x.failure).map(x=>x.failure);
   const staticSources=rejected.filter(x=>x.category==='static-source'),failed=rejected.filter(x=>x.category!=='static-source');
   const registered=readCharacters();
-  catalog.characters=mergeCatalogRecords(catalog.characters,records,{registered,updateExisting:updates});await write(config.catalog,catalog);
+  catalog.characters=mergeCatalogRecords(catalog.characters,records,{registered,updateExisting:updates});await write(catalogPath,catalog);
   const report={schemaVersion:1,scope:scope.id,gameId:scope.gameId,source:scope.attribution,scopeDescription:scope.scopeDescription,
-   metadataSnapshot:snapshotPath,metadataSha256:snapshotSha256,discovered:source.length,indexed:records.length,staticSources,failures:failed,
-   sourceScopeComplete:failed.length===0,gameCompleteness:'not-verified',acceptedModelAssetCount:records.reduce((n,c)=>n+2+c.textures.length,0)};
+   metadataSnapshot:snapshotPath,metadataSha256:snapshotSha256,discovered:discovered.length,indexed:records.length,staticSources,failures:failed,
+   ...(excluded.length?{scopeExcluded:excluded,declaredPortraitScopeComplete:failed.length===0}:{}),
+   sourceScopeComplete:failed.length===0&&excluded.length===0,gameCompleteness:'not-verified',acceptedModelAssetCount:records.reduce((n,c)=>n+2+c.textures.length+(c.spineCompanions||[]).reduce((sum,p)=>sum+2+p.textures.length,0),0)};
   await write(previousPath,report);allReports.push(report);saveIndex();
   console.log('HOSTED_SOURCE_RESULT',JSON.stringify({scope:scope.id,discovered:source.length,indexed:records.length,failed:failed.length,categories:failed.reduce((a,x)=>{a[x.category]=(a[x.category]||0)+1;return a},{})}));
  }

@@ -38,6 +38,10 @@ def source_identity(character):
         identity.append('portrait-framing-excluded-bones:'+json.dumps(sorted(set(excluded_bones)),ensure_ascii=False,separators=(',',':')))
     if 'spineSkinLayers' in character:
         identity.append('spine-skin-layers:'+json.dumps(character['spineSkinLayers'],ensure_ascii=False,separators=(',',':')))
+    if character.get('spineIdleAnimation'):
+        identity.append('spine-idle-animation:'+character['spineIdleAnimation'])
+    if 'spineCompanions' in character:
+        identity.append('spine-companions:'+json.dumps([source_identity(c) for c in character['spineCompanions']],ensure_ascii=False,separators=(',',':')))
     if isinstance(character.get('premultipliedAlpha'),bool):
         identity.append('premultiplied-alpha:'+str(character['premultipliedAlpha']).lower())
     if character.get('spineAtlasPageMerge'):

@@ -17,7 +17,7 @@ try{
  page.on('requestfailed',r=>report.networkFailures.push({url:r.url(),error:r.failure()?.errorText}));
  page.on('console',m=>{if(m.type()==='error')report.consoleErrors.push(m.text().slice(0,1000))});
  const scopes=JSON.parse(fs.readFileSync('data/hosted-spine-source-scopes.json','utf8')).scopes;
- for(const id of scopes.filter(s=>!process.env.ARCHIVE_PREFLIGHT_SCOPE||s.id===process.env.ARCHIVE_PREFLIGHT_SCOPE).flatMap(s=>s.preflightIds||[])){
+ for(const id of scopes.filter(s=>!process.env.ARCHIVE_PREFLIGHT_SCOPE||process.env.ARCHIVE_PREFLIGHT_SCOPE.split(',').includes(s.id)).flatMap(s=>s.preflightIds||[])){
   const record=records.find(c=>c.id===id);assert.ok(record,'Missing full-catalog representative '+id);
   console.log('HOSTED_PORTRAIT_LOAD',id);
   await page.goto(base+'/spine.html?id='+id,{waitUntil:'domcontentloaded'});
@@ -31,6 +31,7 @@ try{
   }
   assert.equal(await page.locator('#gameFilter option[value="'+record.gameId+'"]').count(),1);
   if(record.spineSkinLayers)assert.deepEqual(await page.evaluate(()=>player._archiveSkinLayers),record.spineSkinLayers,'Body and neutral face must be present together');
+  if(record.spineCompanions)assert.equal(await page.evaluate(()=>player._archiveCompanionSession?.layers.length),record.spineCompanions.length,'All source back layers must be rendered');
   if(typeof record.premultipliedAlpha==='boolean')assert.equal(await page.evaluate(()=>player.config.premultipliedAlpha),record.premultipliedAlpha,'Use the declared source texture alpha convention');
   assert.deepEqual(await page.evaluate(()=>{const sk=player.skeleton;const idle=sk.data.findAnimation('idle');return (idle?.timelines||[]).filter(t=>Array.isArray(t.attachmentNames)).flatMap(t=>t.attachmentNames.filter(Boolean).filter(name=>!sk.getAttachment(t.slotIndex,name)).map(name=>sk.slots[t.slotIndex].data.name+':'+name))}),[],'Every timed idle attachment must resolve, including blinking faces');
   await page.addStyleTag({content:'.stage-chrome,#toggleLeftPanel,#toggleRightPanel{visibility:hidden!important}'});
@@ -48,6 +49,10 @@ try{
   assert.deepEqual(await page.evaluate(()=>({zoom:viewZoom,x:viewOffsetX,y:viewOffsetY})),before);
   await page.locator('#returnIdle').click();
   assert.equal(await page.evaluate(()=>player.animationState.getCurrent(0).animation.name===player._archiveIdleAnimation),true);
+  if(record.spineCompanions){
+   await page.waitForTimeout(100);
+   assert.equal(await page.evaluate(()=>player._archiveCompanionSession.layers.every(l=>Math.abs(l.state.getCurrent(0).trackTime-player.animationState.getCurrent(0).trackTime)<.05)),true,'Composite layers must share the primary idle clock');
+  }
   const state=await page.evaluate(()=>({id:chosen().id,animations:player.skeleton.data.animations.length,version:loadedVersion}));
   report.cases.push({...state,name:record.name,visible:pixels.visible,moving:pixels.moving,checks:['source-byte-locks','actual-motion','zoom-preserved-on-action','return-idle']});
   console.log('HOSTED_PORTRAIT_PASS',JSON.stringify(report.cases.at(-1)));

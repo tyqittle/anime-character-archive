@@ -85,6 +85,11 @@
       "id": "games-wave5",
       "name": "Unknown Bride · 18 套角色 Live2D",
       "path": "data/live2d-games-wave5.json"
+    },
+    {
+      "id": "games-wave7",
+      "name": "失落之剑 · 动态角色与全部公开皮肤",
+      "path": "data/spine-games-wave7.json"
     }
   ]
 }

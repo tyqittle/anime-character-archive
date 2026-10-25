@@ -1,0 +1,15 @@
+{
+  "scope": "shared preview pipeline",
+  "counts": {
+    "lostsword": {
+      "indexed": 134,
+      "verifiedPreview": 134,
+      "missingPreview": 0
+    }
+  },
+  "missing": [],
+  "newCapturesInThisRun": 0,
+  "rejectedCaptures": [],
+  "failedCaptures": [],
+  "failureSummary": {}
+}

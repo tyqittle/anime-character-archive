@@ -185,7 +185,7 @@ for(const entry of spine.characters){
 console.log('Spine preview audit: '+previewDigests.size+' verified, '+unrendered+' awaiting real rendering.');
 assert.ok(chars.characters.every(x=>x.image.startsWith('./assets/portraits/')),'Not all static images are local');
 const galleryModules=["assets/js/gallery/state.js","assets/js/gallery/catalog.js","assets/js/gallery/viewer.js","assets/js/gallery/events.js","assets/js/gallery/bootstrap.js"];
-const spineModules=["assets/js/spine/state.js","assets/js/spine/theater-ui.js","assets/js/spine/animation-identity.js","assets/js/spine/viewer-controls.js","assets/js/spine/viewer-ui-events.js","assets/js/spine/catalog.js","assets/js/spine/illustration-quality.js","assets/js/spine/spine-runtime.js","assets/js/spine/spine-assets.js","assets/js/spine/live2d-bridge.js","assets/js/spine/session-cache.js","assets/js/spine/playback.js","assets/js/spine/local-tools.js","assets/js/spine/bootstrap.js"];
+const spineModules=["assets/js/spine/state.js","assets/js/spine/theater-ui.js","assets/js/spine/animation-identity.js","assets/js/spine/viewer-controls.js","assets/js/spine/viewer-ui-events.js","assets/js/spine/catalog.js","assets/js/spine/illustration-quality.js","assets/js/shared/spine-companions.js","assets/js/spine/spine-runtime.js","assets/js/spine/spine-assets.js","assets/js/spine/live2d-bridge.js","assets/js/spine/session-cache.js","assets/js/spine/playback.js","assets/js/spine/local-tools.js","assets/js/spine/bootstrap.js"];
 const gallerySource=galleryModules.map(read).join('\n');
 const spineSource=spineModules.map(read).join('\n');
 const home=read('index.html'),old=read('gallery.html'),page=read('characters.html')+'\n'+gallerySource,player=read('spine.html')+'\n'+spineSource;
@@ -471,7 +471,7 @@ assert.ok(read('assets/js/spine/performance.js').includes('canvasRenderQuality')
 // Spine 4.x must zoom in 3D camera space rather than enlarge a rasterized canvas.
 assert.ok(read('assets/js/spine/viewer-controls.js').includes('applySharpSpineCamera'),
  'Native-resolution Spine camera zoom missing');
-assert.ok(read('assets/js/spine/spine-runtime.js').includes('update:(p)=>applySharpSpineCamera(p)'),
+assert.ok(/update:\(p,delta\)=>\{[^}]*applySharpSpineCamera\(p\)/.test(read('assets/js/spine/spine-runtime.js')),
  'Spine Player is not using native camera draw callback');
 
 

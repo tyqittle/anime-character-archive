@@ -8,7 +8,7 @@ import {createRequire} from 'node:module';
 const require=createRequire(import.meta.url);
 const {validate,sourceIdentity}=require('../assets/js/shared/catalog-registry.js');
 const {uniqueAnimationEntries,canonicalAnimationId}=require('../assets/js/spine/animation-identity.js');
-const protectedFields=['gameId','skinCode','collectionId','engine','modelFormat','base','skeletonUrl','atlasUrl','modelUrl','resourceStem','spineVersion','atlasCoordinateSpace','atlasEdgeExtrusion','portraitFraming','resourceIntegrity','spineSkinLayers','spineAttachmentPathRepairs','spineAtlasPageMerge','premultipliedAlpha'];
+const protectedFields=['gameId','skinCode','collectionId','engine','modelFormat','base','skeletonUrl','atlasUrl','modelUrl','resourceStem','spineVersion','atlasCoordinateSpace','atlasEdgeExtrusion','portraitFraming','resourceIntegrity','spineSkinLayers','spineIdleAnimation','spineCompanions','spineAttachmentPathRepairs','spineAtlasPageMerge','premultipliedAlpha'];
 const value=(c,key)=>key==='engine'?(c[key]||'spine'):(c[key]??null);
 const equal=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 export function readCatalogSnapshot(read){

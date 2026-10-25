@@ -24,6 +24,10 @@ npm run maintain:animation -- --catalog games-wave6 --import-sources --refresh-m
 
 新来源只需补全适配器、范围配置和代表 ID；采集、裁切、发布仍走共同流水线。代表模型应包含：普通立绘、换装/独立面部层、大纹理、特殊取景/图集。先核对透明度格式、五官、完整人物、待机与动作，再批量采集。`preflightIds` 在来源配置中声明，禁止再为每个游戏复制采集工作流。
 
+来源可通过 `catalog` 覆盖配置文件的默认目录，因此 `games-wave7` 与旧目录使用同一维护命令但独立选择导入范围和代表检查。固定 Git 树的 `spine-portrait-tree` 适配器遍历整个声明目录、验证未截断树及每个 Git blob；二进制骨骼由固定版本/摘要的官方运行时只读解析。新游戏不需要另建下载器或发布器。
+
+《失落之剑》使用 `npm run maintain:animation -- --catalog games-wave7`。其原始 LobbyUnit 导出含 11 套前后层组合，必须整套采集；仅截图前层会缺身体部件。来源站点跨域失败时不要用本地拦截伪装线上可用，应先找到可直连的固定源并做无资源缓存的浏览器检查。CI 的托管来源按配置逐源检查，某一源失败不会跳过其他源。
+
 本地命令修改目录和预览，不执行 Git 推送。发布前仍运行 `npm test`、`npm run test:python`、`npm run check`、`npm run audit:repo`，以及与变更对应的真实浏览器回归；使用 `catalog_compatibility.mjs --base-ref <远程基线> --verify-previews` 核验旧记录。推送后核对同一提交的 Pages 部署结果。
 
 浏览器验证的自动 push 运行按分支保留最新版本，过期自动检查取消；手动运行使用独立并发组。全量 Spine 浏览器检查同时最多 4 个分片，避免旧版 10 分片挤占部署队列。素材发布和 Pages 发布仍按原串行契约执行。

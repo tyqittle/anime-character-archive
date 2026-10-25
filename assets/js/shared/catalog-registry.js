@@ -35,6 +35,8 @@
   const excludedBones=c.portraitFraming?.excludeBones;
   if(excludedBones?.length)identity.push('portrait-framing-excluded-bones:'+JSON.stringify([...new Set(excludedBones)].sort()));
   if(c.spineSkinLayers)identity.push('spine-skin-layers:'+JSON.stringify(c.spineSkinLayers));
+  if(c.spineIdleAnimation)identity.push('spine-idle-animation:'+c.spineIdleAnimation);
+  if(c.spineCompanions)identity.push('spine-companions:'+JSON.stringify(c.spineCompanions.map(sourceIdentity)));
   if(typeof c.premultipliedAlpha==='boolean')identity.push('premultiplied-alpha:'+c.premultipliedAlpha);
   if(c.spineAtlasPageMerge)identity.push('spine-atlas-page-merge:true');
   if(c.spineAttachmentPathRepairs)identity.push('spine-attachment-path-repairs:'+JSON.stringify(c.spineAttachmentPathRepairs.map(r=>[r.skin,r.slot,r.name,r.from,r.to])));

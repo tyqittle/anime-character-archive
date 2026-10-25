@@ -20,3 +20,13 @@ test('renderer fixtures require original-byte hashes and production-origin CORS 
   await assert.rejects(warmSourceCache([{...c,resourceIntegrity:[]}],index,{fetcher}),/byte lock/);
  }finally{fs.rmSync(root,{recursive:true,force:true})}
 });
+test('source verification covers companion resources and rejects duplicate CORS origins',async()=>{
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'source-layers-')),bytes=Buffer.from('locked'),sha=createHash('sha256').update(bytes).digest('hex');
+ const part=n=>({id:n,skeletonUrl:'https://source.test/'+n+'.skel',atlasUrl:'https://source.test/'+n+'.atlas',textures:[],resourceIntegrity:['skel','atlas'].map(ext=>({path:n+'.'+ext,sha256:sha}))});
+ const c={...part('front'),spineCompanions:[part('back')]},urls=[];
+ try{
+  await warmSourceCache([c],path.join(root,'index.json'),{fetcher:async url=>{urls.push(url);return new Response(bytes,{headers:{'Access-Control-Allow-Origin':'*'}})}});
+  assert.equal(urls.length,4);assert.ok(urls.some(u=>u.endsWith('back.skel')));
+  await assert.rejects(warmSourceCache([c],path.join(root,'other.json'),{fetcher:async()=>new Response(bytes,{headers:{'Access-Control-Allow-Origin':'*, *'}})}),/production origin/);
+ }finally{fs.rmSync(root,{recursive:true,force:true})}
+});

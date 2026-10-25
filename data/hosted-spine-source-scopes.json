@@ -4,8 +4,14 @@
   "scopes": [
     {
       "id": "epicseven",
-      "downloadPolicy": {"assetMs":90000,"totalMs":120000},
-      "preflightIds": ["e7-c2016", "e7-c1088_s01"],
+      "downloadPolicy": {
+        "assetMs": 90000,
+        "totalMs": 120000
+      },
+      "preflightIds": [
+        "e7-c2016",
+        "e7-c1088_s01"
+      ],
       "gameId": "epicseven",
       "name": "第七史诗（Epic Seven）",
       "idPrefix": "e7-",
@@ -13,14 +19,27 @@
       "metadataUrl": "https://e7codex.com/data/units.json",
       "assetBase": "https://e7codex.com/",
       "assetPrefix": "/assets/",
-      "includedKinds": ["unit", "npc", "special"],
+      "includedKinds": [
+        "unit",
+        "npc",
+        "special"
+      ],
       "scopeDescription": "All published hero portraits, skins, NPC portraits and special character models; artifacts and battle monsters are outside the character portrait scope.",
       "attribution": "https://github.com/Aikiooo/e7codex"
     },
     {
       "id": "shadowverse",
-      "downloadPolicy": {"assetMs":90000,"totalMs":120000},
-      "preflightIds": ["sv-class_1", "sv-class_1902", "sv-class_1903", "sv-class_2202", "sv-class_500310"],
+      "downloadPolicy": {
+        "assetMs": 90000,
+        "totalMs": 120000
+      },
+      "preflightIds": [
+        "sv-class_1",
+        "sv-class_1902",
+        "sv-class_1903",
+        "sv-class_2202",
+        "sv-class_500310"
+      ],
       "gameId": "shadowverse",
       "name": "影之诗（Shadowverse）",
       "idPrefix": "sv-",
@@ -29,11 +48,34 @@
       "concurrency": 3,
       "assetTimeoutMs": 90000,
       "portraitFramingOverrides": {
-        "class_1402": {"excludeBones": ["00_effect"]},
-        "class_2202": {"excludeBones": ["ALL_EFF", "EFF_particle_TOP", "EFF_circle4"]},
-        "class_3905": {"excludeBones": ["bg"]},
-        "class_508": {"excludeBones": ["bone98"]},
-        "class_4108": {"excludeBones": ["bone7", "door_no_show"]}
+        "class_1402": {
+          "excludeBones": [
+            "00_effect"
+          ]
+        },
+        "class_2202": {
+          "excludeBones": [
+            "ALL_EFF",
+            "EFF_particle_TOP",
+            "EFF_circle4"
+          ]
+        },
+        "class_3905": {
+          "excludeBones": [
+            "bg"
+          ]
+        },
+        "class_508": {
+          "excludeBones": [
+            "bone98"
+          ]
+        },
+        "class_4108": {
+          "excludeBones": [
+            "bone7",
+            "door_no_show"
+          ]
+        }
       },
       "metadataUrl": "https://svgdb.me/api/leaders",
       "detailBase": "https://svgdb.me/api/leader/",
@@ -41,6 +83,934 @@
       "assetPrefix": "/assets/anim/",
       "scopeDescription": "Every leader ID in every published category, including alternate outfits, collaborations and story leaders; unavailable or static exports are reported individually.",
       "attribution": "https://svgdb.me"
+    },
+    {
+      "id": "lostsword",
+      "catalog": "data/spine-games-wave7.json",
+      "gameId": "lostsword",
+      "name": "失落之剑（Lost Sword）",
+      "idPrefix": "ls-",
+      "adapter": "spine-portrait-tree",
+      "downloadPolicy": {
+        "assetMs": 90000,
+        "totalMs": 120000
+      },
+      "concurrency": 4,
+      "assetTimeoutMs": 60000,
+      "preflightIds": [
+        "ls-Anessa_Bunny",
+        "ls-Lobby_Erin",
+        "ls-Balin"
+      ],
+      "metadataUrl": "https://api.github.com/repos/SomeNiceDude/Lost-Sword-Gallery/git/trees/a8875ed9b9370bb2ff3ba91af321efbe8f4a2eb5?recursive=1",
+      "assetBase": "https://raw.githubusercontent.com/SomeNiceDude/Lost-Sword-Gallery/bdb1149251a36c477fbf018f37e7fbe5e70746d9/",
+      "assetPrefix": "/SomeNiceDude/Lost-Sword-Gallery/bdb1149251a36c477fbf018f37e7fbe5e70746d9/",
+      "inspectionRuntime": {
+        "url": "https://unpkg.com/@esotericsoftware/spine-player@4.1.56/dist/iife/spine-player.js",
+        "sha256": "28d83fdbae0af5965d568d9607e9e20710dcce8b984c0a24e9d2a1d0915938bc"
+      },
+      "scopeDescription": "Every portrait atlas in the complete commit-pinned LobbyUnit directory, including all costumes, NPCs and both layers of composite lobby portraits. The pinned export is not a claim of current-game completeness. Young or uncertain-age sexualized portraits are outside the requested adult-portrait scope and are audited explicitly.",
+      "attribution": "https://github.com/SomeNiceDude/Lost-Sword-Gallery/tree/bdb1149251a36c477fbf018f37e7fbe5e70746d9/AssetAddressable/Prefabs/LobbyUnit/",
+      "sourceRepo": "SomeNiceDude/Lost-Sword-Gallery",
+      "sourceCommit": "bdb1149251a36c477fbf018f37e7fbe5e70746d9",
+      "treeSha": "a8875ed9b9370bb2ff3ba91af321efbe8f4a2eb5",
+      "directory": "AssetAddressable/Prefabs/LobbyUnit/",
+      "names": {
+        "Violet": {
+          "title": "Violet/Female NPCs",
+          "character": "Violet/Female NPCs",
+          "variant": null,
+          "category": "NPC"
+        },
+        "Lucius_01": {
+          "title": "Lucius",
+          "character": "Lucius",
+          "variant": null,
+          "category": "NPC"
+        },
+        "Lucius_02": {
+          "title": "Lucius",
+          "character": "Lucius",
+          "variant": null,
+          "category": "NPC"
+        },
+        "Agravaine": {
+          "title": "Agravaine",
+          "character": "Agravaine",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Agravaine_Daily": {
+          "title": "Agravaine: Silent Shadow",
+          "character": "Agravaine",
+          "variant": "Daily",
+          "category": "Playable"
+        },
+        "Anessa": {
+          "title": "Anessa",
+          "character": "Anessa",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Anessa_Bunny": {
+          "title": "Anessa: Bunny Girl",
+          "character": "Anessa",
+          "variant": "Special",
+          "category": "Playable"
+        },
+        "Asuka": {
+          "title": "Asuka",
+          "character": "Asuka",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Bedivere": {
+          "title": "Bedivere",
+          "character": "Bedivere",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Bedivere_Bunny": {
+          "title": "Bedivere",
+          "character": "Bedivere",
+          "variant": "Bunny",
+          "category": "Playable"
+        },
+        "Bedivere_Jin": {
+          "title": "NEO Bedivere",
+          "character": "NEO Bedivere",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Bedivere_Jin_Bunny": {
+          "title": "NEO Bedivere",
+          "character": "NEO Bedivere",
+          "variant": "Bikini",
+          "category": "Playable"
+        },
+        "Caira": {
+          "title": "Caira",
+          "character": "Caira",
+          "variant": null,
+          "category": "NPC"
+        },
+        "Claire": {
+          "title": "Claire",
+          "character": "Claire",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Pc_Claris_01": {
+          "title": "Clarisse",
+          "character": "Clarisse",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Claris_Bunny": {
+          "title": "Clarisse",
+          "character": "Clarisse",
+          "variant": "Bunny",
+          "category": "Playable"
+        },
+        "CowQueen": {
+          "title": "Belsey",
+          "character": "Belsey",
+          "variant": null,
+          "category": "Playable"
+        },
+        "CowQueen_Bunny": {
+          "title": "Belsey",
+          "character": "Belsey",
+          "variant": "Bunny",
+          "category": "Playable"
+        },
+        "Cristina": {
+          "title": "Cristina",
+          "character": "Cristina",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Cristina_Bikini": {
+          "title": "Cristina ",
+          "character": "Cristina ",
+          "variant": "Bikini",
+          "category": "Playable"
+        },
+        "Diancecht": {
+          "title": "Dian Cecht",
+          "character": "Dian Cecht",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Diancecht_Bikini": {
+          "title": "Dian Cecht",
+          "character": "Dian Cecht",
+          "variant": "Bikini",
+          "category": "Playable"
+        },
+        "Elaine": {
+          "title": "Elaine",
+          "character": "Elaine",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Elin": {
+          "title": "Elin",
+          "character": "Elin",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Elizabeth": {
+          "title": "Elizabeth",
+          "character": "Elizabeth",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Elizabeth_Bunny": {
+          "title": "Elizabeth",
+          "character": "Elizabeth",
+          "variant": "Bunny",
+          "category": "Playable"
+        },
+        "Elizabeth2": {
+          "title": "Elizabeth: Absolute Armor",
+          "character": "Elizabeth",
+          "variant": "Special",
+          "category": "Playable"
+        },
+        "EmpireMan": {
+          "title": "Empire Man",
+          "character": "Empire Man",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Enya": {
+          "title": "Enya",
+          "character": "Enya",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Erin": {
+          "title": "Erin",
+          "character": "Erin",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Erin_Daily": {
+          "title": "Erin: Dino",
+          "character": "Erin",
+          "variant": "Daily",
+          "category": "Playable"
+        },
+        "Esmeralda": {
+          "title": "Esmeralda",
+          "character": "Esmeralda",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Estheria": {
+          "title": "Estheria",
+          "character": "Estheria",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Estheria_Lingerie": {
+          "title": "Estheria: Secret Gift",
+          "character": "Estheria",
+          "variant": "Lingerie",
+          "category": "Playable"
+        },
+        "Ethan": {
+          "title": "Ethan",
+          "character": "Ethan",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Eupi": {
+          "title": "Eupi",
+          "character": "Eupi",
+          "variant": null,
+          "category": "NPC"
+        },
+        "Eva": {
+          "title": "Eva",
+          "character": "Eva",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Eva_Jin": {
+          "title": "Eva",
+          "character": "Eva",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Eva_Jin_Bunny": {
+          "title": "Eva",
+          "character": "Eva",
+          "variant": "Bunny",
+          "category": "Playable"
+        },
+        "Eva_Awakening_Memorial": {
+          "title": "Eva: Binding Pact",
+          "character": "Eva",
+          "variant": "Memorial",
+          "category": "Playable"
+        },
+        "Eva_Memorial": {
+          "title": "Eva: Binding Pact",
+          "character": "Eva",
+          "variant": "Memorial",
+          "category": "Playable"
+        },
+        "Finn": {
+          "title": "Finn",
+          "character": "Finn",
+          "variant": null,
+          "category": "NPC"
+        },
+        "Gaheris": {
+          "title": "Gaheris",
+          "character": "Gaheris",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Galahad": {
+          "title": "Galahad",
+          "character": "Galahad",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Galahad_Special": {
+          "title": "Galahad: Bunny Girl",
+          "character": "Galahad",
+          "variant": "Special",
+          "category": "Playable"
+        },
+        "Gawain": {
+          "title": "Gawain",
+          "character": "Gawain",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Guinevere": {
+          "title": "Guinevere",
+          "character": "Guinevere",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Guinevere_Bikini": {
+          "title": "Guinevere",
+          "character": "Guinevere",
+          "variant": "Bikini",
+          "category": "Playable"
+        },
+        "Hikage": {
+          "title": "Hikage",
+          "character": "Hikage",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Ian": {
+          "title": "Ian",
+          "character": "Ian",
+          "variant": null,
+          "category": "NPC"
+        },
+        "Isabel": {
+          "title": "Isabel",
+          "character": "Isabel",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Isis": {
+          "title": "Isis",
+          "character": "Isis",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Isolde": {
+          "title": "Isolde",
+          "character": "Isolde",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Jan": {
+          "title": "Joan of Arc",
+          "character": "Joan of Arc",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Jessi": {
+          "title": "Jessi",
+          "character": "Jessi",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Karishara": {
+          "title": "Karishara",
+          "character": "Karishara",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Karishara_Memorial": {
+          "title": "Karishara: Delusional Obsession",
+          "character": "Karishara",
+          "variant": "Memorial",
+          "category": "Playable"
+        },
+        "Karishara_Memorial_Room": {
+          "title": "Karishara: Delusional Obsession",
+          "character": "Karishara",
+          "variant": "Memorial",
+          "category": "Playable"
+        },
+        "Katrin": {
+          "title": "Katrin",
+          "character": "Katrin",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Katrin_Daily": {
+          "title": "Katrin: Permitted Warmth",
+          "character": "Katrin",
+          "variant": "Daily",
+          "category": "Playable"
+        },
+        "Kei": {
+          "title": "Kei",
+          "character": "Kei",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Kei_Jin": {
+          "title": "Kei Awakening",
+          "character": "Kei Awakening",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Kei_Jin_Memorial": {
+          "title": "Kei: Close Interrogation",
+          "character": "Kei",
+          "variant": "Memorial",
+          "category": "Playable"
+        },
+        "kei_Awakening_Memorial": {
+          "title": "Kei: Close Interrogation",
+          "character": "Kei",
+          "variant": "Memorial",
+          "category": "Playable"
+        },
+        "Kirke": {
+          "title": "Circe",
+          "character": "Circe",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Lancelot": {
+          "title": "Lancelot",
+          "character": "Lancelot",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Lancelot_Bunny": {
+          "title": "Lancelot",
+          "character": "Lancelot",
+          "variant": "Bikini",
+          "category": "Playable"
+        },
+        "Lilith": {
+          "title": "Lilith",
+          "character": "Lilith",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Lisa": {
+          "title": "Lisa",
+          "character": "Lisa",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Lohengrin": {
+          "title": "Lohengrin",
+          "character": "Lohengrin",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Lohengrin_Bikini": {
+          "title": "Lohengrin",
+          "character": "Lohengrin",
+          "variant": "Bikini",
+          "category": "Playable"
+        },
+        "Lua": {
+          "title": "Lua",
+          "character": "Lua",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Lua_Bikini": {
+          "title": "Lua",
+          "character": "Lua",
+          "variant": "Bikini",
+          "category": "Playable"
+        },
+        "Lucy": {
+          "title": "Lucy",
+          "character": "Lucy",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Lueira": {
+          "title": "Lueira",
+          "character": "Lueira",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Lueira_Lingerie": {
+          "title": "Lueira: Pure White Vow",
+          "character": "Lueira",
+          "variant": "Lingerie",
+          "category": "Playable"
+        },
+        "Lumi": {
+          "title": "Lumi",
+          "character": "Lumi",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Lumi_Daily": {
+          "title": "Lumi: Heart Strike!",
+          "character": "Lumi",
+          "variant": "Daily",
+          "category": "Playable"
+        },
+        "Roena": {
+          "title": "Rowena",
+          "character": "Rowena",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Merlin": {
+          "title": "Merlin",
+          "character": "Merlin",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Merry": {
+          "title": "Merry",
+          "character": "Merry",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Merry_Summer": {
+          "title": "Summer Merry",
+          "character": "Summer Merry",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Mia": {
+          "title": "Mia",
+          "character": "Mia",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Mordred": {
+          "title": "Mordred",
+          "character": "Mordred",
+          "variant": null,
+          "category": "NPC"
+        },
+        "Morgana": {
+          "title": "Morgana",
+          "character": "Morgana",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Morgana_Bunny": {
+          "title": "Morgana",
+          "character": "Morgana",
+          "variant": "Bunny",
+          "category": "Playable"
+        },
+        "Morganlefay": {
+          "title": "Morgan le Fay",
+          "character": "Morgan le Fay",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Morganlefay_Lingerie": {
+          "title": "Morgan le Fay: Free Hugs",
+          "character": "Morgan le Fay",
+          "variant": "Lingerie",
+          "category": "Playable"
+        },
+        "Morganlefay_Lingerie01": {
+          "title": "Morgan le Fay: Gap of Temptation",
+          "character": "Morgan le Fay",
+          "variant": "Lingerie",
+          "category": "Playable"
+        },
+        "Morgause": {
+          "title": "Morgause",
+          "character": "Morgause",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Nesha": {
+          "title": "Nesha",
+          "character": "Nesha",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Nia": {
+          "title": "Nia",
+          "character": "Nia",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Nia_Daily": {
+          "title": "Nia: Secret Lesson",
+          "character": "Nia",
+          "variant": "Daily",
+          "category": "Playable"
+        },
+        "Nimue": {
+          "title": "Nymue",
+          "character": "Nymue",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Palamedes": {
+          "title": "Palamedes",
+          "character": "Palamedes",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Palamedes_Daily": {
+          "title": "Palamedes: Youthful Maiden",
+          "character": "Palamedes",
+          "variant": "Daily",
+          "category": "Playable"
+        },
+        "Percival": {
+          "title": "Percival",
+          "character": "Percival",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Rachel": {
+          "title": "Rachel",
+          "character": "Rachel",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Ran": {
+          "title": "Ran",
+          "character": "Ran",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Rey": {
+          "title": "Ray",
+          "character": "Ray",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Ria": {
+          "title": "Ria",
+          "character": "Ria",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Rita": {
+          "title": "Rita",
+          "character": "Rita",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Rita02": {
+          "title": "Maid Rita",
+          "character": "Maid Rita",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Roy": {
+          "title": "Roy",
+          "character": "Roy",
+          "variant": null,
+          "category": "NPC"
+        },
+        "Sarah": {
+          "title": "Sarah",
+          "character": "Sarah",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Tiamat": {
+          "title": "Tiamat",
+          "character": "Tiamat",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Tiamat_Lingerie": {
+          "title": "Tiamat: White Temptation",
+          "character": "Tiamat",
+          "variant": "Lingerie",
+          "category": "Playable"
+        },
+        "Tina": {
+          "title": "Tina",
+          "character": "Tina",
+          "variant": null,
+          "category": "NPC"
+        },
+        "Tristan": {
+          "title": "Tristan",
+          "character": "Tristan",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Tristan_Bunny": {
+          "title": "Tristan",
+          "character": "Tristan",
+          "variant": "Bunny",
+          "category": "Playable"
+        },
+        "Urien": {
+          "title": "Urien",
+          "character": "Urien",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Vivien": {
+          "title": "Vivien",
+          "character": "Vivien",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Yumi": {
+          "title": "Yumi",
+          "character": "Yumi",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Crassa": {
+          "title": "Crassa",
+          "character": "Crassa",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Crassa_Memorial": {
+          "title": "Crassa: Ravishing Bunny",
+          "character": "Crassa",
+          "variant": "Memorial",
+          "category": "Playable"
+        },
+        "Crassa_Memorial_Room": {
+          "title": "Crassa: Ravishing Bunny",
+          "character": "Crassa",
+          "variant": "Memorial",
+          "category": "Playable"
+        },
+        "Cristina_Bikini01": {
+          "title": "Cristina: Queen's Stratagem",
+          "character": "Cristina",
+          "variant": "Bikini",
+          "category": "Playable"
+        },
+        "Ria2": {
+          "title": "Ria",
+          "character": "Ria",
+          "variant": null,
+          "category": "NPC"
+        },
+        "Pc_Shuri_01": {
+          "title": "Shuri",
+          "character": "Shuri",
+          "variant": null,
+          "category": "NPC"
+        },
+        "Lobby_Kei_Awakening": {
+          "title": "Kei Awakening",
+          "character": "Kei Awakening",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_Bedivere": {
+          "title": "Bunny Bedivere",
+          "character": "Bunny Bedivere",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_CowQueen": {
+          "title": "Belsey",
+          "character": "Belsey",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_Crassa": {
+          "title": "Crassa",
+          "character": "Crassa",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_Erin": {
+          "title": "Erin",
+          "character": "Erin",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_Estheria": {
+          "title": "Estheria",
+          "character": "Estheria",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_Eva": {
+          "title": "Eva",
+          "character": "Eva",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_Karishara": {
+          "title": "Karishara",
+          "character": "Karishara",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_Kei": {
+          "title": "Kei",
+          "character": "Kei",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_Lohengrin": {
+          "title": "Lohengrin",
+          "character": "Lohengrin",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_Lua": {
+          "title": "Lua",
+          "character": "Lua",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_Lumi": {
+          "title": "Lumi",
+          "character": "Lumi",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_Made": {
+          "title": "Maid Elizabeth",
+          "character": "Maid Elizabeth",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_Merlin": {
+          "title": "lobby merlin",
+          "character": "lobby merlin",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_MerrySummer": {
+          "title": "Summer Merry",
+          "character": "Summer Merry",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_Morgana": {
+          "title": "Morgana",
+          "character": "Morgana",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_Morganlefay": {
+          "title": "Morgan le Fay",
+          "character": "Morgan le Fay",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_Nia": {
+          "title": "Nia",
+          "character": "Nia",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_Palamedes": {
+          "title": "Palamedes",
+          "character": "Palamedes",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_Risa": {
+          "title": "Lisa",
+          "character": "Lisa",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Lobby_Tiamat": {
+          "title": "Tiamat",
+          "character": "Tiamat",
+          "variant": "Lobby",
+          "category": "Playable"
+        },
+        "Pc_Lilia_01": {
+          "title": "Lilia",
+          "character": "Lilia",
+          "variant": null,
+          "category": "Playable"
+        },
+        "Pc_Lilia_Daily": {
+          "title": "Lilia: Home Date",
+          "character": "Lilia",
+          "variant": "Daily",
+          "category": "Playable"
+        },
+        "Balin": {
+          "title": "Baylin",
+          "character": "Baylin",
+          "variant": null,
+          "category": "Playable"
+        }
+      },
+      "compositeFolders": [
+        "Lobby_Erin",
+        "Lobby_Eva",
+        "Lobby_Karishara",
+        "Lobby_Kei",
+        "Lobby_Kei_Awakening",
+        "Lobby_Lua",
+        "Lobby_Merlin",
+        "Lobby_Morgana",
+        "Lobby_Morganlefay",
+        "Lobby_Palamedes",
+        "Lobby_Tiamat"
+      ],
+      "defaultSkins": {
+        "EmpireMan": "3",
+        "Kei": "1",
+        "Lobby_Bedivere": "1",
+        "Lobby_CowQueen": "1"
+      },
+      "excludedPortraits": {
+        "Asuka": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance.",
+        "Hikage": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance.",
+        "Yumi": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance.",
+        "Bedivere_Bunny": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance.",
+        "Bedivere_Jin_Bunny": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance.",
+        "Elizabeth_Bunny": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance.",
+        "Erin_Daily": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance.",
+        "Estheria": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance.",
+        "Estheria_Lingerie": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance.",
+        "Lobby_Estheria": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance.",
+        "Lancelot_Bunny": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance.",
+        "Lumi": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance.",
+        "Lumi_Daily": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance.",
+        "Lobby_Lumi": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance.",
+        "Tristan_Bunny": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance."
+      }
     }
   ]
 }

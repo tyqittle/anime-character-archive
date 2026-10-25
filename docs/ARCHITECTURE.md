@@ -11,6 +11,7 @@
 - **数据注册**：`data/animation-catalogs.json` 只登记目录；模型来源、引擎、皮肤和预览状态保留在各目录 JSON 中。
 - **剧场 UI**：`assets/js/spine/theater-ui.js` 独占工具栏、动作列表、状态提示的 DOM 更新和按钮事件绑定；`viewer-ui-events.js` 把 UI 意图映射为播放器命令。Spine 与 Cubism 通过 UI 接口更新状态；画布、手势和角色交互仍由播放器管理，两侧面板由 `panel-layout.js` 独立管理。
 - **浏览器**：`assets/js/shared/catalog-registry.js` 是无 DOM 的显式服务。剧场 bootstrap 读取注册表，目录 UI 由模型数据补充新分组。Spine/Cubism 仍隔离渲染。
+- **复合 Spine 立绘**：`shared/spine-companions.js` 只处理显式声明的后层，接收已校验的数据包与播放器，不访问 DOM、不下载、不创建独立帧循环；主播放器拥有纹理及释放。来源、默认待机与所有后层均进入共同来源身份。未声明后层的模型沿用原路径。
 - **内容处理**：`catalog_registry.py/mjs` 读取同一注册表；`preview_policy.py` 校验同模型路径/尺寸/摘要；`preview_frame_pipeline.py` 只负责图像处理；`preview_repository.py` 只负责校验、状态转换与文件发布。
 - **维护编排**：`maintain_animation_catalog.mjs` 按目录调用既有流水线，拥有并释放本地服务；`preview_capture_state.mjs` 管理逐模型断点与来源/渲染/图像摘要校验。代表模型由来源范围配置声明。见 [日常维护](ANIMATION_MAINTENANCE.md)。
 - **CI**：`preview-pipeline.yml` 统一规划待处理 ID、分片采集、转码、校验和发布。游戏命名工作流仅保留手动兼容入口。`deploy-content.yml` 在内容发布成功后显式请求 Pages 构建，核验实际部署提交。

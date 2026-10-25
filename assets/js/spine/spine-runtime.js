@@ -249,13 +249,14 @@ async function show(options,title,onError){
    reject(error);
   };
   const transparentDesktop=new URLSearchParams(location.search).has('desktop');
-  const config={...normalized,showControls:false,controlBones:false,frame:(p)=>recordSpineFrame(p),draw:(p)=>{fitRenderedSpinePortrait(p);window.ArchiveDesktopBridge?.afterRender(p.canvas)},update:(p)=>applySharpSpineCamera(p),premultipliedAlpha:options.premultipliedAlpha??true,
+  const config={...normalized,showControls:false,controlBones:false,frame:(p)=>recordSpineFrame(p),draw:(p)=>{fitRenderedSpinePortrait(p);window.ArchiveDesktopBridge?.afterRender(p.canvas)},update:(p,delta)=>{p._archiveCompanionSession?.update(delta);applySharpSpineCamera(p)},premultipliedAlpha:options.premultipliedAlpha??true,
    alpha:transparentDesktop,backgroundColor:transparentDesktop?'#00000000':'#142238ff',
    fullScreenBackgroundColor:transparentDesktop?'#00000000':'#142238ff',
    preserveDrawingBuffer:transparentDesktop,showLoading:!transparentDesktop,
    success:(p)=>{
     if(attempt!==currentAttempt){try{p.dispose?.()}catch(e){}resolve(false);return}
     stopWatchdog();if(pendingRenderCancel===cancel)pendingRenderCancel=null;player=p;
+    if(options.archiveCompanions?.length)try{ArchiveSpineCompanions.install(p,options.archiveCompanions,spine)}catch(error){fail('立绘组合失败：'+error.message);return}
     if(options.archiveEntry?.atlasCoordinateSpace){
      try{
       const atlas=p.assetManager.get(p.config.atlasUrl);
@@ -326,7 +327,7 @@ async function show(options,title,onError){
     initializeSpineInteractions(p,names);
     window.ArchiveTheaterUI.setAnimations(names);
     if(!names.length){status('骨骼已显示，但没有找到可播放的动作。',true);return}
-    const preferred=names.find(n=>/^(idle|idle_0?1|stand|breath|loop|wait|default)$/i.test(n))
+    const preferred=names.find(n=>n===options.archiveEntry?.spineIdleAnimation)||names.find(n=>/^(idle|idle_0?1|stand|breath|loop|wait|default)$/i.test(n))
       ||names.find(n=>/idle|stand|breath|wait/i.test(n))
       ||names[0];
     try{

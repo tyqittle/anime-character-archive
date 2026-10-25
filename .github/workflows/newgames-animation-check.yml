@@ -11,7 +11,8 @@ on:
       - 'data/live2d-mature-followup.json'
       - 'data/spine-mature-expansion.json'
       - 'data/spine-source-scopes.json'
-      - 'data/spine-games-wave6.json'
+      - 'data/spine-games-*.json'
+      - 'data/animation-catalogs.json'
       - 'data/hosted-spine-source-scopes.json'
       - 'scripts/import_hosted_spine.mjs'
       - 'scripts/test_hosted_spine_browser.mjs'
@@ -26,6 +27,7 @@ on:
       - 'scripts/test_additional_game_animations.mjs'
       - 'scripts/diagnose_live2d_models.mjs'
       - 'assets/js/shared/cubism-motion-policy.js'
+      - 'assets/js/shared/spine-companions.js'
       - 'assets/js/shared/indexeddb-storage.js'
       - 'assets/js/shared/voice-playback.js'
       - 'scripts/test_module_isolation_browser.mjs'
@@ -41,7 +43,22 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.event_name == 'push' && github.ref || github.run_id }}
   cancel-in-progress: true
 jobs:
+  hosted-scopes:
+    runs-on: ubuntu-latest
+    outputs:
+      scopes: ${{ steps.scopes.outputs.value }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: scopes
+        run: node -e "const fs=require('fs');fs.appendFileSync(process.env.GITHUB_OUTPUT,'value='+JSON.stringify(JSON.parse(fs.readFileSync('data/hosted-spine-source-scopes.json')).scopes.map(s=>s.id))+'\n')"
   hosted-portraits:
+    needs: hosted-scopes
+    strategy:
+      fail-fast: false
+      matrix:
+        scope: ${{ fromJson(needs.hosted-scopes.outputs.scopes) }}
+    env:
+      ARCHIVE_PREFLIGHT_SCOPE: ${{ matrix.scope }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -60,7 +77,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: hosted-spine-browser
+          name: hosted-spine-browser-${{ matrix.scope }}
           path: tmp/hosted-spine-browser/
   browser:
     runs-on: ubuntu-latest

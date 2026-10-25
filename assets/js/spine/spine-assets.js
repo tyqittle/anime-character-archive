@@ -69,6 +69,17 @@ function packIntegrityVerifier(c){
  };
 }
 async function downloadPack(c,mirror,externalSignal,isCurrent=()=>true){
+ const parts=c.spineCompanions;
+ if(parts===undefined)return downloadSinglePack(c,mirror,externalSignal,isCurrent);
+ if(!Array.isArray(parts)||!parts.length||parts.length>3||c.spineVersion!=='4.1'||parts.some(p=>p.spineCompanions||p.spineVersion!==c.spineVersion))throw Error('复合立绘配置无效');
+ const controller=new AbortController(),cancel=()=>controller.abort();
+ if(externalSignal?.aborted)cancel();else externalSignal?.addEventListener('abort',cancel,{once:true});
+ try{
+  const [primary,...layers]=await Promise.all([downloadSinglePack(c,mirror,controller.signal,isCurrent),...parts.map(p=>downloadSinglePack(p,mirror,controller.signal,()=>false))]);
+  return ArchiveSpineCompanions.combine(primary,layers);
+ }finally{cancel();externalSignal?.removeEventListener('abort',cancel)}
+}
+async function downloadSinglePack(c,mirror,externalSignal,isCurrent=()=>true){
  const request=new AbortController(),forward=()=>request.abort();
  if(externalSignal?.aborted)request.abort();else externalSignal?.addEventListener('abort',forward,{once:true});
  const signal=request.signal;
@@ -133,7 +144,7 @@ async function downloadPack(c,mirror,externalSignal,isCurrent=()=>true){
  const textures=await texturesPromise;
  if(textures.error)throw textures.error;
  if(signal?.aborted)throw Error('下载已取消');
- return {id:(c.gameId||'nikke')+'-'+c.id,version:detected.majorMinor,exportVersion:detected.version,headerChecked:true,sourceFingerprint:sourceFingerprint(c),skeleton:skeletonName,atlas:stem+'.atlas',rawDataURIs:data};
+ return {id:(c.gameId||'nikke')+'-'+c.id,version:detected.majorMinor,exportVersion:detected.version,headerChecked:true,sourceFingerprint:sourceFingerprint(c),skeleton:skeletonName,atlas:stem+'.atlas',rawDataURIs:data,sourceIdleAnimation:c.spineIdleAnimation,sourceSkinLayers:c.spineSkinLayers};
  }finally{request.abort();externalSignal?.removeEventListener('abort',forward)}
 }
 function blobToUri(blob){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(reader.error);reader.readAsDataURL(blob)})}

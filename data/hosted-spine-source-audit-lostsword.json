@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "scope": "lostsword",
+  "gameId": "lostsword",
+  "source": "https://github.com/SomeNiceDude/Lost-Sword-Gallery/tree/bdb1149251a36c477fbf018f37e7fbe5e70746d9/AssetAddressable/Prefabs/LobbyUnit/",
+  "scopeDescription": "Every portrait atlas in the complete commit-pinned LobbyUnit directory, including all costumes, NPCs and both layers of composite lobby portraits. The pinned export is not a claim of current-game completeness. Young or uncertain-age sexualized portraits are outside the requested adult-portrait scope and are audited explicitly.",
+  "metadataSnapshot": "data/source-snapshots/lostsword-17bfa6178c506cd5.json",
+  "metadataSha256": "17bfa6178c506cd552a94530ffbe991d8130e4bad9a364be5e4d22dcc6081bc2",
+  "discovered": 149,
+  "indexed": 134,
+  "staticSources": [],
+  "failures": [],
+  "scopeExcluded": [
+    {
+      "key": "Asuka",
+      "reason": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance."
+    },
+    {
+      "key": "Bedivere_Bunny",
+      "reason": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance."
+    },
+    {
+      "key": "Bedivere_Jin_Bunny",
+      "reason": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance."
+    },
+    {
+      "key": "Elizabeth_Bunny",
+      "reason": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance."
+    },
+    {
+      "key": "Erin_Daily",
+      "reason": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance."
+    },
+    {
+      "key": "Estheria",
+      "reason": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance."
+    },
+    {
+      "key": "Estheria_Lingerie",
+      "reason": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance."
+    },
+    {
+      "key": "Hikage",
+      "reason": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance."
+    },
+    {
+      "key": "Lancelot_Bunny",
+      "reason": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance."
+    },
+    {
+      "key": "Lobby_Estheria",
+      "reason": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance."
+    },
+    {
+      "key": "Lobby_Lumi",
+      "reason": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance."
+    },
+    {
+      "key": "Lumi",
+      "reason": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance."
+    },
+    {
+      "key": "Lumi_Daily",
+      "reason": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance."
+    },
+    {
+      "key": "Tristan_Bunny",
+      "reason": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance."
+    },
+    {
+      "key": "Yumi",
+      "reason": "Outside the requested adult-portrait scope: young or uncertain-age sexualized appearance."
+    }
+  ],
+  "declaredPortraitScopeComplete": true,
+  "sourceScopeComplete": false,
+  "gameCompleteness": "not-verified",
+  "acceptedModelAssetCount": 435
+}

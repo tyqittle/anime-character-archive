@@ -55,3 +55,13 @@ test('registered hosted source snapshots preserve their exact audited bytes acro
   assert.equal(createHash('sha256').update(fs.readFileSync(new URL(audit.metadataSnapshot,root))).digest('hex'),audit.metadataSha256);
  }
 });
+test('pinned portrait trees enumerate every atlas and compose both halves without confusing standalone F exports',()=>{
+ const tree={sha:'locked',truncated:false,tree:['Hero/Hero','Hero_Skin/Skin','Lobby/Lobby_B','Lobby/Lobby_F','Solo/Solo_F'].flatMap(stem=>[
+  {type:'blob',path:'portraits/'+stem+'.atlas.bytes'},
+  {type:'blob',path:'portraits/'+stem+'.skel.bytes'}])};
+ const scope={adapter:'spine-portrait-tree',treeSha:'locked',assetBase:'https://source.test/',assetPrefix:'/portraits/',directory:'portraits/',compositeFolders:['Lobby']};
+ const all=candidates(scope,tree);assert.deepEqual(all.map(x=>x.key),['Hero','Hero_Skin','Lobby','Solo']);assert.equal(all[2].companions.length,1);assert.ok(all[2].companions[0].skeleton.includes('Lobby_B'));assert.equal(all[3].companions.length,0);
+ assert.throws(()=>candidates(scope,{...tree,truncated:true}),/Incomplete/);
+ assert.throws(()=>candidates(scope,{...tree,tree:tree.tree.filter(x=>!x.path.includes('Lobby_B'))}),/Missing declared/);
+ assert.throws(()=>candidates(scope,{...tree,tree:tree.tree.filter(x=>!x.path.includes('Hero_Skin/Skin.skel'))}),/Missing or ambiguous/);
+});
