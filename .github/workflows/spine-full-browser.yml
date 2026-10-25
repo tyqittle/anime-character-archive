@@ -10,12 +10,16 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'push' && github.ref || github.run_id }}
+  cancel-in-progress: true
 jobs:
   playback:
     runs-on: ubuntu-latest
     timeout-minutes: 16
     strategy:
       fail-fast: false
+      max-parallel: 4
       matrix:
         shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     steps:

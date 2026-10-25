@@ -11,10 +11,11 @@ fs.mkdirSync(output,{recursive:true});
 const browser=await chromium.launch({headless:true,executablePath,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const context=await browser.newContext({viewport:{width:1440,height:1000}});
 await installSourceCache(context,process.env.ARCHIVE_PREVIEW_SOURCE_CACHE);
-const records=readCharacters(),report={cases:[],errors:[],networkFailures:[]};
+const records=readCharacters(),report={cases:[],errors:[],networkFailures:[],consoleErrors:[]};
 try{
  const page=await context.newPage();page.on('pageerror',e=>report.errors.push(e.message));
  page.on('requestfailed',r=>report.networkFailures.push({url:r.url(),error:r.failure()?.errorText}));
+ page.on('console',m=>{if(m.type()==='error')report.consoleErrors.push(m.text().slice(0,1000))});
  const scopes=JSON.parse(fs.readFileSync('data/hosted-spine-source-scopes.json','utf8')).scopes;
  for(const id of scopes.filter(s=>!process.env.ARCHIVE_PREFLIGHT_SCOPE||s.id===process.env.ARCHIVE_PREFLIGHT_SCOPE).flatMap(s=>s.preflightIds||[])){
   const record=records.find(c=>c.id===id);assert.ok(record,'Missing full-catalog representative '+id);
@@ -24,7 +25,7 @@ try{
    await page.waitForFunction(id=>document.querySelector('#status').classList.contains('error')||chosen()?.id===id&&!!player?.skeleton&&player._archiveFitPending===0&&document.querySelector('#status').textContent.startsWith('正在播放：'),id,{timeout:(record.downloadPolicy?.totalMs||95000)+15000});
    assert.ok((await page.locator('#status').textContent()).startsWith('正在播放：'),'Source playback failed: '+await page.locator('#status').textContent());
   }catch(error){
-   report.failure={id,message:error.message,state:await page.evaluate(()=>({status:document.querySelector('#status')?.textContent,chosen:chosen()?.id,version:typeof loadedVersion==='undefined'?null:loadedVersion,fitPending:typeof player==='undefined'?null:player?._archiveFitPending})),networkFailures:report.networkFailures};
+   report.failure={id,message:error.message,state:await page.evaluate(()=>({status:document.querySelector('#status')?.textContent,chosen:chosen()?.id,version:typeof loadedVersion==='undefined'?null:loadedVersion,fitPending:typeof player==='undefined'?null:player?._archiveFitPending})),networkFailures:report.networkFailures,consoleErrors:report.consoleErrors};
    console.error('HOSTED_PORTRAIT_FAILURE',JSON.stringify(report.failure));
    await page.screenshot({path:output+'/failed-'+id+'.png'});throw error;
   }

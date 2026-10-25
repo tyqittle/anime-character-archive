@@ -37,6 +37,9 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name == 'push' && github.ref || github.run_id }}
+  cancel-in-progress: true
 jobs:
   hosted-portraits:
     runs-on: ubuntu-latest

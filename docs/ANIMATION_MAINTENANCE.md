@@ -26,4 +26,6 @@ npm run maintain:animation -- --catalog games-wave6 --import-sources --refresh-m
 
 本地命令修改目录和预览，不执行 Git 推送。发布前仍运行 `npm test`、`npm run test:python`、`npm run check`、`npm run audit:repo`，以及与变更对应的真实浏览器回归；使用 `catalog_compatibility.mjs --base-ref <远程基线> --verify-previews` 核验旧记录。推送后核对同一提交的 Pages 部署结果。
 
+浏览器验证的自动 push 运行按分支保留最新版本，过期自动检查取消；手动运行使用独立并发组。全量 Spine 浏览器检查同时最多 4 个分片，避免旧版 10 分片挤占部署队列。素材发布和 Pages 发布仍按原串行契约执行。
+
 已有来源身份发生变化时，导入器会明确给出受影响 ID；经核对后用 `import_hosted_spine.mjs --scope <来源> --update-existing <ID>` 逐项更新，再运行共同维护命令重建失效预览。自动维护不会批量放行来源替换。
