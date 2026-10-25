@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 import shutil
-from preview_policy import ROOT, filename, verified_file, apply_verified_preview, audit
+from preview_policy import ROOT, filename, relative_path, source, verified_file, apply_verified_preview, audit
 from preview_diagnostics import read_capture_failures, group_capture_failures
 from catalog_registry import source_identity
 
@@ -41,7 +41,9 @@ def publish_catalog(manifest,incoming,audit_path,require_identity=False):
                 for key in ('previewSha256','previewWidth','previewHeight'):character.pop(key,None)
                 character['previewSourceIdentity']=source_identity(character)
                 added+=1
-        if apply_verified_preview(character):
+        legacy_metadata=character.get('previewSourceIdentity') is None and character.get('preview')==relative_path(character) and character.get('previewSource')==source(character) and bool(character.get('previewSha256'))
+        proven_existing=character.get('previewSourceIdentity')==source_identity(character) or legacy_metadata
+        if (not require_identity or proven_existing) and apply_verified_preview(character):
             for key in ('previewFailureType','previewFailureReason'):character.pop(key,None)
             if 'previewStatus' in character:character['previewStatus']='captured'
         else:

@@ -16,7 +16,7 @@ async function downloadBlob(url,timeout=24000,externalSignal){
 }
 
 function imagePages(atlasText){
- return [...new Set(atlasText.replace(/^\uFEFF/,'').split(/\r?\n/).map(x=>x.trim())
+ return [...new Set(atlasText.replace(/^\uFEFF/,'').split(/\r\n|\r|\n/).map(x=>x.trim())
   .filter(x=>/\.(png|webp|jpg|jpeg)$/i.test(x)&&!x.includes(':')))];
 }
 // 3.8 stores a length-prefixed hash; 4.x stores an 8-byte hash.
@@ -40,20 +40,46 @@ async function detectSpineVersion(blob){
  return {hash:found.hash,version,majorMinor:version.split('.').slice(0,2).join('.')};
 }
 function sourceFingerprint(c){
- return JSON.stringify([2,c.base,c.skeletonUrl||'',c.atlasUrl||'',c.skeletonFormat||'skel']);
+ const identity=[2,c.base,c.skeletonUrl||'',c.atlasUrl||'',c.skeletonFormat||'skel'];
+ if(c.resourceIntegrity)identity.push(['source-text-normalization:2',ArchiveCatalogRegistry.sourceIdentity(c)]);
+ return JSON.stringify(identity);
 }
 function isCachedPackFor(c,pack){return !!pack?.headerChecked&&pack.sourceFingerprint===sourceFingerprint(c)}
+// Optional byte locks for hosts without immutable asset revisions. Existing
+// catalogs keep their original cache identity and download behavior.
+function packIntegrityVerifier(c){
+ if(c.resourceIntegrity===undefined)return async()=>{};
+ if(!Array.isArray(c.resourceIntegrity)||!c.resourceIntegrity.length)throw Error('资源摘要清单无效');
+ const hashes=new Map();
+ for(const item of c.resourceIntegrity){
+  if(!item||typeof item.path!=='string'||!item.path||/[\\/]/.test(item.path)||!/^([a-f0-9]{64})$/.test(item.sha256)||hashes.has(item.path))throw Error('资源摘要清单无效');
+  hashes.set(item.path,item.sha256);
+ }
+ return async(blob,name)=>{
+  if(!hashes.has(name))throw Error('资源缺少版本摘要：'+name);
+  const hash=await crypto.subtle.digest('SHA-256',await blob.arrayBuffer());
+  const actual=Array.from(new Uint8Array(hash),x=>x.toString(16).padStart(2,'0')).join('');
+  if(actual!==hashes.get(name))throw Error('源资源版本已变化，请更新目录：'+name);
+ };
+}
 async function downloadPack(c,mirror,externalSignal,isCurrent=()=>true){
  const request=new AbortController(),forward=()=>request.abort();
  if(externalSignal?.aborted)request.abort();else externalSignal?.addEventListener('abort',forward,{once:true});
  const signal=request.signal;
  try{
  const paths=urls(c,mirror),stem=c.resourceStem||decodeURIComponent(c.base.split('/').pop());
+ const verify=packIntegrityVerifier(c),fileName=url=>decodeURIComponent(new URL(url,location.href).pathname.split('/').pop());
  // Start textures after the small atlas arrives, while the skeleton continues downloading.
  const skeletonResult=downloadBlob(paths.skeleton,60000,signal).then(blob=>({blob}),error=>({error}));
  const atlasBlob=await downloadBlob(paths.atlas,30000,signal);
+ await verify(atlasBlob,fileName(paths.atlas));
  if(atlasBlob.size<20)throw Error('图集文件大小异常');
- const atlasText=(await atlasBlob.text()).replace(/^\uFEFF/,'');
+ let atlasText=(await atlasBlob.text()).replace(/^\uFEFF/,'').replace(/\r+\n|\r/g,'\n');
+ if(c.spineAtlasPageMerge){
+  const normalized=ArchiveSpineAtlasCoordinates.coalesceAtlasPages(atlasText);
+  if(!normalized.mergedPages)throw Error('源图集页合并声明已过期');
+  atlasText=normalized.text;
+ }
  const pages=imagePages(atlasText);
  if(!pages.length)throw Error('图集中没有图片文件名');
  const data={};
@@ -63,6 +89,7 @@ async function downloadPack(c,mirror,externalSignal,isCurrent=()=>true){
   while(nextPage<pages.length){
    const page=pages[nextPage++],url=paths.base.slice(0,paths.base.lastIndexOf('/')+1)+encodeURIComponent(page);
    const blob=await downloadBlob(url,60000,signal);
+   await verify(blob,page);
    if(blob.size<100)throw Error('贴图为空：'+page);
    data[page]=await blobToUri(blob);
    completedPages++;
@@ -73,12 +100,22 @@ async function downloadPack(c,mirror,externalSignal,isCurrent=()=>true){
  const skeleton=await skeletonResult;
  if(skeleton.error)throw skeleton.error;
  const skelBlob=skeleton.blob;
+ await verify(skelBlob,fileName(paths.skeleton));
  if(skelBlob.size<100)throw Error('骨骼文件大小异常');
  const isJSON=paths.format==='json';
  let detected,jsonText='';
  if(isJSON){
   jsonText=await skelBlob.text();
   const parsed=JSON.parse(jsonText),version=String(parsed.skeleton?.spine||'');
+  if(c.spineAttachmentPathRepairs){
+   const regions=new Set(atlasText.split('\n').map(x=>x.trim()));
+   for(const repair of c.spineAttachmentPathRepairs){
+    const a=parsed.skins?.find(s=>s.name===repair.skin)?.attachments?.[repair.slot]?.[repair.name];
+    if(!a||(a.path||repair.name)!==repair.from||!regions.has(repair.to))throw Error('源附件路径修复已过期：'+repair.name);
+    a.path=repair.to;
+   }
+   jsonText=JSON.stringify(parsed);
+  }
   if(!/^\d+\.\d+/.test(version))throw Error('JSON 骨骼缺少有效的 Spine 版本');
   detected={version,majorMinor:version.split('.').slice(0,2).join('.')};
  }else detected=await detectSpineVersion(skelBlob);

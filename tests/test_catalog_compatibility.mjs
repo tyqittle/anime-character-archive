@@ -46,6 +46,17 @@ test('newly added aliases cannot silently redirect an old portrait link',()=>{
  const result=auditCatalogCompatibility(snapshot([alternate]),snapshot([alternate,standard]));
  assert.ok(result.errors.some(e=>e.type==='changed-default-model'&&e.id===alternate.id));
 });
+
+test('inherited preview mismatches stay visible without masking new regressions or file tampering',()=>{
+ const stale={...a,previewSourceIdentity:['old-source']};
+ const result=auditCatalogCompatibility(snapshot([stale]),snapshot([stale,b]));
+ assert.equal(result.compatible,true);assert.deepEqual(result.inheritedIssues,[{type:'stale-preview',id:a.id}]);
+ for(const next of [{...stale,modelUrl:'https://changed.test'},{...stale,previewSha256:'b'.repeat(64)},{...stale,preview:'./different.webp'}]){
+  const report=auditCatalogCompatibility(snapshot([stale]),snapshot([next]));
+  assert.ok(report.errors.some(e=>e.type==='stale-preview'));assert.deepEqual(report.inheritedIssues,[]);
+ }
+ assert.ok(verifySnapshotPreviews(snapshot([stale]),process.cwd()).length,'Inherited metadata never bypasses file checks');
+});
 test('preview file checks detect missing, tampered and escaping files',()=>{
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'archive-compat-'));
  try{

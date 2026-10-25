@@ -2,7 +2,7 @@
 import fs from 'node:fs';
 import {pathToFileURL} from 'node:url';
 import {readCharacters,sourceIdentity} from './catalog_registry.mjs';
-export function buildCoverage(records,inventories,spineScopes,spineAudits){
+export function buildCoverage(records,inventories,spineScopes,spineAudits,hostedAudits=[]){
  const games=[...new Set(records.map(c=>c.gameId))];
  return {schemaVersion:1,scope:'All dynamic character portraits and all skins; no static fallbacks',
   note:'Source settings may include aliases or scenes. A complete public directory does not establish current-game completeness. Missing source assets and pending browser previews remain unresolved.',
@@ -18,6 +18,9 @@ export function buildCoverage(records,inventories,spineScopes,spineAudits){
      failures:audit?.failed||[],unresolvedExclusions:audit?.qualityExclusions||[],
      sourceDirectoryComplete:!!scope.includeAllModels&&!!audit&&audit.failed.length===0&&audit.qualityExclusions.length===0});
    }
+   for(const audit of hostedAudits.filter(s=>s.gameId===gameId))scopes.push({sourceUrl:audit.source,metadataSnapshot:audit.metadataSnapshot,
+    metadataSha256:audit.metadataSha256,discoveredSettings:audit.discovered,indexedSettings:audit.indexed,
+    failures:audit.failures,staticSources:audit.staticSources||[],sourceDirectoryComplete:audit.sourceScopeComplete});
    return {gameId,indexedPortraits:portraits.length,battleModels:all.length-portraits.length,
     matchingPreviewMetadata:portraits.filter(c=>c.previewSha256&&JSON.stringify(c.previewSourceIdentity)===JSON.stringify(sourceIdentity(c))).length,
     gameCompleteness:'not-verified',sourceScopes:scopes};
@@ -37,7 +40,9 @@ export function main(args=process.argv.slice(2)){
   const identity=JSON.stringify([scope.gameId,scope.sourceRepo,scope.sourceCommit,scope.directory]);
   inventories.set(identity,scope);
  }
- const report=buildCoverage(readCharacters(),[...inventories.values()],spine,audits);
+ const hostedPath='data/hosted-spine-source-scopes.json';
+ const hosted=fs.existsSync(hostedPath)?read(hostedPath).scopes.flatMap(scope=>{const p='data/hosted-spine-source-audit-'+scope.id+'.json';return fs.existsSync(p)?[read(p)]:[]}):[];
+ const report=buildCoverage(readCharacters(),[...inventories.values()],spine,audits,hosted);
  fs.writeFileSync('data/dynamic-encyclopedia-coverage.json',JSON.stringify(report,null,2)+'\n');
  const lines=['# 动态立绘图鉴覆盖与缺项','',
   '用户范围：每款游戏的全部动态角色立绘及全部皮肤，不用静态图片补数，不以精选样本代替完整图鉴。',

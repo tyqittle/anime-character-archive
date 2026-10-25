@@ -39,5 +39,15 @@ class PublisherTest(unittest.TestCase):
                 c['base']='https://example.test/new/demo'
                 self.assertTrue(policy.needs_capture(c))
                 self.assertFalse(policy.apply_verified_preview(c))
+    def test_source_reset_cannot_adopt_an_orphaned_old_image_without_current_capture_proof(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);output=root/'output';output.mkdir();incoming=root/'incoming/webps';incoming.mkdir(parents=True)
+            c={'id':'demo','gameId':'demo','base':'https://example.test/new/demo','previewSource':'not-rendered'}
+            Image.effect_noise((360,420),20).convert('RGB').save(output/policy.filename(c),'WEBP')
+            manifest=root/'catalog.json';manifest.write_text(json.dumps({'characters':[c]}))
+            with patch.object(policy,'ROOT',output),patch.object(repository,'ROOT',output):
+                result=repository.publish_catalog(manifest,incoming,root/'audit.json',require_identity=True)
+            final=json.loads(manifest.read_text())['characters'][0]
+            self.assertNotIn('preview',final);self.assertEqual(result['counts']['demo']['missingPreview'],1)
 
 if __name__=='__main__':unittest.main()

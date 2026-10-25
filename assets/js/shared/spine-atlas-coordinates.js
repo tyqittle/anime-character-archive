@@ -87,5 +87,29 @@
   }
   return {mode,changedPages,attachments:mapped,pages:pages.map(page=>({name:page.name,coordinates:plans.get(page)}))};
  }
- return Object.freeze({parsePageSizes,applyCoordinateSpace});
+ function coalesceAtlasPages(source){
+  const text=String(source).replace(/^\uFEFF/,'').replace(/\r+\n|\r/g,'\n'),lines=text.split('\n');
+  const starts=lines.map((line,index)=>/\.(?:png|webp|jpe?g)$/i.test(line.trim())&&!line.includes(':')?index:-1).filter(index=>index>=0);
+  const names=starts.map(index=>lines[index].trim());
+  if(new Set(names).size===names.length)return {text,mergedPages:0};
+  const pages=new Map();
+  for(let n=0;n<starts.length;n++){
+   const block=lines.slice(starts[n],starts[n+1]??lines.length).map(x=>x.trim()).filter(Boolean),name=block[0],header=[];let i=1;
+   while(i<block.length&&block[i].includes(':'))header.push(block[i++]);
+   if(!header.some(x=>x.startsWith('size:')))throw Error('Duplicate atlas page lacks size: '+name);
+   let page=pages.get(name);
+   if(page&&page.header.join('\n')!==header.join('\n'))throw Error('Conflicting duplicate atlas page: '+name);
+   if(!page){page={header,regions:new Map()};pages.set(name,page)}
+   while(i<block.length){
+    const region=block[i++],properties=[];if(region.includes(':'))throw Error('Invalid atlas region: '+region);
+    while(i<block.length&&block[i].includes(':'))properties.push(block[i++]);
+    const value=properties.join('\n');
+    if(page.regions.has(region)&&page.regions.get(region)!==value)throw Error('Conflicting duplicate atlas region: '+region);
+    page.regions.set(region,value);
+   }
+  }
+  const result=[...pages].map(([name,page])=>[name,...page.header,...[...page.regions].flatMap(([region,value])=>[region,...value.split('\n').map(x=>'  '+x)])].join('\n')).join('\n\n');
+  return {text:'\n'+result+'\n',mergedPages:starts.length-pages.size};
+ }
+ return Object.freeze({parsePageSizes,applyCoordinateSpace,coalesceAtlasPages});
 });

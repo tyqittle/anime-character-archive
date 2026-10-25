@@ -1,0 +1,20 @@
+{
+  "scope": "shared preview pipeline",
+  "counts": {
+    "epicseven": {
+      "indexed": 568,
+      "verifiedPreview": 568,
+      "missingPreview": 0
+    },
+    "shadowverse": {
+      "indexed": 297,
+      "verifiedPreview": 297,
+      "missingPreview": 0
+    }
+  },
+  "missing": [],
+  "newCapturesInThisRun": 85,
+  "rejectedCaptures": [],
+  "failedCaptures": [],
+  "failureSummary": {}
+}

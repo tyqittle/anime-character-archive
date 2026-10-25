@@ -29,5 +29,12 @@ class CatalogMergeTests(unittest.TestCase):
         script="const m=require('./assets/js/shared/catalog-registry.js');process.stdout.write(JSON.stringify(m.sourceIdentity(JSON.parse(process.argv[1]))))"
         actual=json.loads(subprocess.check_output(['node','-e',script,json.dumps(c)],cwd=ROOT,text=True))
         self.assertEqual(source_identity(c),actual);self.assertEqual(actual[-1],'portrait-framing-excluded-drawables:["A","B"]')
+    def test_hosted_integrity_identity_matches_javascript_and_blocks_unreviewed_change(self):
+        c={**self.old,'premultipliedAlpha':False,'spineSkinLayers':['default','normal'],'spineAtlasPageMerge':True,'portraitFraming':{'excludeBones':['Z','A','Z']},'spineAttachmentPathRepairs':[{'skin':'default','slot':'face','name':'face','from':'face ','to':'face'}],'resourceIntegrity':[{'path':'b.png','sha256':'b'*64},{'path':'a.json','sha256':'a'*64}]}
+        script="const m=require('./assets/js/shared/catalog-registry.js');process.stdout.write(JSON.stringify(m.sourceIdentity(JSON.parse(process.argv[1]))))"
+        actual=json.loads(subprocess.check_output(['node','-e',script,json.dumps(c)],cwd=ROOT,text=True))
+        self.assertEqual(source_identity(c),actual)
+        changed={**c,'resourceIntegrity':[{'path':'b.png','sha256':'c'*64}]}
+        with self.assertRaisesRegex(ValueError,'replacement'):merge_catalog_records([c],[changed])
 
 if __name__=='__main__':unittest.main()

@@ -3,7 +3,16 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import { createRequire } from 'node:module';
-const {parsePageSizes,applyCoordinateSpace}=createRequire(import.meta.url)('../assets/js/shared/spine-atlas-coordinates.js');
+const {parsePageSizes,applyCoordinateSpace,coalesceAtlasPages}=createRequire(import.meta.url)('../assets/js/shared/spine-atlas-coordinates.js');
+test('explicit source page merging preserves all unique regions and rejects conflicting page or region data',()=>{
+ const header='page.png\nsize: 512,512\nformat: RGBA8888\nfilter: Linear,Linear\nrepeat: none\n';
+ const source=header+'face\n  xy: 1,2\n\n'+header+'glasses\n  xy: 3,4\n';
+ assert.throws(()=>parsePageSizes(source),/Duplicate/);
+ const merged=coalesceAtlasPages(source);assert.equal(merged.mergedPages,1);assert.equal(parsePageSizes(merged.text).size,1);
+ assert.ok(merged.text.includes('face\n'));assert.ok(merged.text.includes('glasses\n'));
+ assert.throws(()=>coalesceAtlasPages(source.replace('glasses','face')),/Conflicting duplicate atlas region/);
+ assert.throws(()=>coalesceAtlasPages(source.replace(/512,512(?=[\s\S]*glasses)/,'256,256')),/Conflicting duplicate atlas page/);
+});
 function fixture(width=200,height=150){
  const sandbox={console};vm.createContext(sandbox);
  vm.runInContext(fs.readFileSync(new URL('../vendor/spine38/spine-player.js',import.meta.url),'utf8'),sandbox);

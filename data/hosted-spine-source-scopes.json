@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "catalog": "data/spine-games-wave6.json",
+  "scopes": [
+    {
+      "id": "epicseven",
+      "preflightIds": ["e7-c2016", "e7-c1088_s01"],
+      "gameId": "epicseven",
+      "name": "第七史诗（Epic Seven）",
+      "idPrefix": "e7-",
+      "adapter": "epicseven-units",
+      "metadataUrl": "https://e7codex.com/data/units.json",
+      "assetBase": "https://e7codex.com/",
+      "assetPrefix": "/assets/",
+      "includedKinds": ["unit", "npc", "special"],
+      "scopeDescription": "All published hero portraits, skins, NPC portraits and special character models; artifacts and battle monsters are outside the character portrait scope.",
+      "attribution": "https://github.com/Aikiooo/e7codex"
+    },
+    {
+      "id": "shadowverse",
+      "preflightIds": ["sv-class_1", "sv-class_1902", "sv-class_1903", "sv-class_2202", "sv-class_500310"],
+      "gameId": "shadowverse",
+      "name": "影之诗（Shadowverse）",
+      "idPrefix": "sv-",
+      "adapter": "shadowverse-leaders",
+      "premultipliedAlpha": false,
+      "concurrency": 3,
+      "assetTimeoutMs": 90000,
+      "portraitFramingOverrides": {
+        "class_1402": {"excludeBones": ["00_effect"]},
+        "class_2202": {"excludeBones": ["ALL_EFF", "EFF_particle_TOP", "EFF_circle4"]},
+        "class_3905": {"excludeBones": ["bg"]},
+        "class_508": {"excludeBones": ["bone98"]},
+        "class_4108": {"excludeBones": ["bone7", "door_no_show"]}
+      },
+      "metadataUrl": "https://svgdb.me/api/leaders",
+      "detailBase": "https://svgdb.me/api/leader/",
+      "assetBase": "https://svgdb.me/",
+      "assetPrefix": "/assets/anim/",
+      "scopeDescription": "Every leader ID in every published category, including alternate outfits, collaborations and story leaders; unavailable or static exports are reported individually.",
+      "attribution": "https://svgdb.me"
+    }
+  ]
+}

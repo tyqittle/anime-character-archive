@@ -8,7 +8,7 @@ import {createRequire} from 'node:module';
 const require=createRequire(import.meta.url);
 const {validate,sourceIdentity}=require('../assets/js/shared/catalog-registry.js');
 const {uniqueAnimationEntries,canonicalAnimationId}=require('../assets/js/spine/animation-identity.js');
-const protectedFields=['gameId','skinCode','collectionId','engine','modelFormat','base','skeletonUrl','atlasUrl','modelUrl','resourceStem','spineVersion','atlasCoordinateSpace','atlasEdgeExtrusion','portraitFraming'];
+const protectedFields=['gameId','skinCode','collectionId','engine','modelFormat','base','skeletonUrl','atlasUrl','modelUrl','resourceStem','spineVersion','atlasCoordinateSpace','atlasEdgeExtrusion','portraitFraming','resourceIntegrity','spineSkinLayers','spineAttachmentPathRepairs','spineAtlasPageMerge','premultipliedAlpha'];
 const value=(c,key)=>key==='engine'?(c[key]||'spine'):(c[key]??null);
 const equal=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 export function readCatalogSnapshot(read){
@@ -28,13 +28,20 @@ function indexed(snapshot,errors,label){
  return byId;
 }
 export function auditCatalogCompatibility(before,after,{changes=[]}={}){
- const errors=[],reviewedChanges=[],old=indexed(before,errors,'baseline'),current=indexed(after,errors,'candidate');
+ const errors=[],inheritedIssues=[],reviewedChanges=[],old=indexed(before,errors,'baseline'),current=indexed(after,errors,'candidate');
  const recordChange=(change,type)=>{
   const declaration=changes.find(item=>item.id===change.id&&item.field===change.field&&typeof item.reason==='string'&&item.reason.trim()&&equal(item.before,change.before)&&equal(item.after,change.after));
   if(declaration)reviewedChanges.push({...change,reason:declaration.reason});else errors.push({type,...change});
  };
  const registrations=new Map(after.registry.map(entry=>[entry.id,entry.path]));
- for(const [id,{character:c}] of current)if(/^matching-/.test(c.previewSource||'')&&c.previewSourceIdentity&&!equal(c.previewSourceIdentity,sourceIdentity(c)))errors.push({type:'stale-preview',id});
+ for(const [id,{character:c}] of current)if(/^matching-/.test(c.previewSource||'')&&c.previewSourceIdentity&&!equal(c.previewSourceIdentity,sourceIdentity(c))){
+  const previous=old.get(id)?.character;
+  // A regression gate compares with the actual published base. Preserve and
+  // expose pre-existing failures; never exempt changed resources or evidence.
+  const unchanged=previous&&equal(sourceIdentity(previous),sourceIdentity(c))&&
+   ['preview','previewSha256','previewSource','previewSourceIdentity','previewWidth','previewHeight'].every(key=>equal(previous[key],c[key]));
+  (unchanged?inheritedIssues:errors).push({type:'stale-preview',id});
+ }
  for(const entry of before.registry)if(registrations.get(entry.id)!==entry.path)errors.push({type:'changed-registration',catalog:entry.id,before:entry.path,after:registrations.get(entry.id)||null});
  for(const [id,previous] of old){
   const found=current.get(id);
@@ -53,7 +60,7 @@ export function auditCatalogCompatibility(before,after,{changes=[]}={}){
  const oldTargets=new Map([...old.keys()].map(id=>[id,canonicalAnimationId(id)]));
  uniqueAnimationEntries([...current.values()].map(item=>item.character));
  for(const [id,target] of oldTargets)if(current.has(id)&&canonicalAnimationId(id)!==target)recordChange({id,field:'defaultModelId',before:target,after:canonicalAnimationId(id)},'changed-default-model');
- return {schemaVersion:1,baselineModels:old.size,candidateModels:current.size,added:[...current.keys()].filter(id=>!old.has(id)),reviewedChanges,errors,compatible:errors.length===0};
+ return {schemaVersion:1,baselineModels:old.size,candidateModels:current.size,added:[...current.keys()].filter(id=>!old.has(id)),reviewedChanges,inheritedIssues,errors,compatible:errors.length===0};
 }
 export function verifySnapshotPreviews(snapshot,root){
  const errors=[],prefix=path.resolve(root)+path.sep;
@@ -79,9 +86,10 @@ export function main(args=process.argv.slice(2)){
  const candidate=readCatalogSnapshot(currentRead);
  const report=auditCatalogCompatibility(readCatalogSnapshot(baselineRead),candidate,{changes:declaration?JSON.parse(fs.readFileSync(declaration,'utf8')):[]});
  if(args.includes('--verify-previews')){report.errors.push(...verifySnapshotPreviews(candidate,root));report.compatible=report.errors.length===0}
+ if(args.includes('--strict-existing')){report.errors.push(...report.inheritedIssues);report.compatible=report.errors.length===0}
  const output=option('--output');
  if(output){fs.mkdirSync(path.dirname(output),{recursive:true});fs.writeFileSync(output,JSON.stringify({...report,baseRef:baseRef||option('--baseline-label')||null},null,2)+'\n')}
- console.log(JSON.stringify({...report,added:report.added.length,reviewedChanges:report.reviewedChanges.length}));
+ console.log(JSON.stringify({...report,added:report.added.length,reviewedChanges:report.reviewedChanges.length,inheritedIssues:report.inheritedIssues.length}));
  if(!report.compatible)process.exitCode=1;
  return report;
 }

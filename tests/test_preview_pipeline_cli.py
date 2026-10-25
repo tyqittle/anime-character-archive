@@ -45,6 +45,11 @@ class PreviewPipelineCliTest(unittest.TestCase):
             self.assertEqual(published['previewSource'],'matching-spine-animation-frame')
             self.assertEqual((published['previewWidth'],published['previewHeight']),(360,420))
             self.assertTrue((root/published['preview'].removeprefix('./')).is_file())
+            global_audit=root/'data/preview-pipeline-audit.json'
+            prior=json.loads(global_audit.read_text());prior['other-catalog']={'sentinel':'preserve this independent result'}
+            global_audit.write_text(json.dumps(prior))
+            run('publish','--catalog','fixture','--incoming','tmp/repair-output/webps')
+            self.assertEqual(json.loads(global_audit.read_text())['other-catalog'],prior['other-catalog'])
             run('plan')
             self.assertEqual(json.loads((root/'tmp/repair-pending.json').read_text()),[])
             published['base']='https://example.test/ref2/demo'

@@ -7,7 +7,7 @@
       "gameId": "nikke",
       "indexedPortraits": 514,
       "battleModels": 0,
-      "matchingPreviewMetadata": 514,
+      "matchingPreviewMetadata": 202,
       "gameCompleteness": "not-verified",
       "sourceScopes": []
     },
@@ -104,7 +104,7 @@
       "gameId": "girlscafegun",
       "indexedPortraits": 273,
       "battleModels": 0,
-      "matchingPreviewMetadata": 67,
+      "matchingPreviewMetadata": 273,
       "gameCompleteness": "not-verified",
       "sourceScopes": [
         {
@@ -221,7 +221,7 @@
       "gameId": "tokyonecro",
       "indexedPortraits": 397,
       "battleModels": 0,
-      "matchingPreviewMetadata": 67,
+      "matchingPreviewMetadata": 397,
       "gameCompleteness": "not-verified",
       "sourceScopes": [
         {
@@ -647,6 +647,2035 @@
           "sourceDirectoryComplete": false
         }
       ]
+    },
+    {
+      "gameId": "gunsgirlz",
+      "indexedPortraits": 18,
+      "battleModels": 0,
+      "matchingPreviewMetadata": 18,
+      "gameCompleteness": "not-verified",
+      "sourceScopes": []
+    },
+    {
+      "gameId": "arkorder",
+      "indexedPortraits": 15,
+      "battleModels": 0,
+      "matchingPreviewMetadata": 15,
+      "gameCompleteness": "not-verified",
+      "sourceScopes": []
+    },
+    {
+      "gameId": "gemstory",
+      "indexedPortraits": 14,
+      "battleModels": 0,
+      "matchingPreviewMetadata": 14,
+      "gameCompleteness": "not-verified",
+      "sourceScopes": []
+    },
+    {
+      "gameId": "warshipgirls",
+      "indexedPortraits": 3,
+      "battleModels": 0,
+      "matchingPreviewMetadata": 3,
+      "gameCompleteness": "not-verified",
+      "sourceScopes": []
+    },
+    {
+      "gameId": "ruinsseeker",
+      "indexedPortraits": 23,
+      "battleModels": 0,
+      "matchingPreviewMetadata": 23,
+      "gameCompleteness": "not-verified",
+      "sourceScopes": []
+    },
+    {
+      "gameId": "kagurareimeiki",
+      "indexedPortraits": 13,
+      "battleModels": 0,
+      "matchingPreviewMetadata": 13,
+      "gameCompleteness": "not-verified",
+      "sourceScopes": []
+    },
+    {
+      "gameId": "epicseven",
+      "indexedPortraits": 568,
+      "battleModels": 0,
+      "matchingPreviewMetadata": 568,
+      "gameCompleteness": "not-verified",
+      "sourceScopes": [
+        {
+          "sourceUrl": "https://github.com/Aikiooo/e7codex",
+          "metadataSnapshot": "data/source-snapshots/epicseven-605de269547b042c.json",
+          "metadataSha256": "605de269547b042c43ade72987366a579a4adb4cf89885f7741e979b94b361ae",
+          "discoveredSettings": 793,
+          "indexedSettings": 568,
+          "failures": [],
+          "staticSources": [
+            {
+              "key": "npc1018",
+              "skeleton": "https://e7codex.com/assets/npc1018/npc1018.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1057",
+              "skeleton": "https://e7codex.com/assets/npc1057/npc1057.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1067",
+              "skeleton": "https://e7codex.com/assets/npc1067/npc1067.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1069",
+              "skeleton": "https://e7codex.com/assets/npc1069/npc1069.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1070",
+              "skeleton": "https://e7codex.com/assets/npc1070/npc1070.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1072",
+              "skeleton": "https://e7codex.com/assets/npc1072/npc1072.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1073",
+              "skeleton": "https://e7codex.com/assets/npc1073/npc1073.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1074",
+              "skeleton": "https://e7codex.com/assets/npc1074/npc1074.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1075",
+              "skeleton": "https://e7codex.com/assets/npc1075/npc1075.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1077",
+              "skeleton": "https://e7codex.com/assets/npc1077/npc1077.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1079",
+              "skeleton": "https://e7codex.com/assets/npc1079/npc1079.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1080",
+              "skeleton": "https://e7codex.com/assets/npc1080/npc1080.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1081",
+              "skeleton": "https://e7codex.com/assets/npc1081/npc1081.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1082",
+              "skeleton": "https://e7codex.com/assets/npc1082/npc1082.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1087",
+              "skeleton": "https://e7codex.com/assets/npc1087/npc1087.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1088",
+              "skeleton": "https://e7codex.com/assets/npc1088/npc1088.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1092",
+              "skeleton": "https://e7codex.com/assets/npc1092/npc1092.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1093",
+              "skeleton": "https://e7codex.com/assets/npc1093/npc1093.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1094",
+              "skeleton": "https://e7codex.com/assets/npc1094/npc1094.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1095",
+              "skeleton": "https://e7codex.com/assets/npc1095/npc1095.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1096",
+              "skeleton": "https://e7codex.com/assets/npc1096/npc1096.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1097",
+              "skeleton": "https://e7codex.com/assets/npc1097/npc1097.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1098",
+              "skeleton": "https://e7codex.com/assets/npc1098/npc1098.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1099",
+              "skeleton": "https://e7codex.com/assets/npc1099/npc1099.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1100",
+              "skeleton": "https://e7codex.com/assets/npc1100/npc1100.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1110",
+              "skeleton": "https://e7codex.com/assets/npc1110/npc1110.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1112",
+              "skeleton": "https://e7codex.com/assets/npc1112/npc1112.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1113",
+              "skeleton": "https://e7codex.com/assets/npc1113/npc1113.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1117",
+              "skeleton": "https://e7codex.com/assets/npc1117/npc1117.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1118",
+              "skeleton": "https://e7codex.com/assets/npc1118/npc1118.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1119",
+              "skeleton": "https://e7codex.com/assets/npc1119/npc1119.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1127",
+              "skeleton": "https://e7codex.com/assets/npc1127/npc1127.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1134",
+              "skeleton": "https://e7codex.com/assets/npc1134/npc1134.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1135",
+              "skeleton": "https://e7codex.com/assets/npc1135/npc1135.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1136",
+              "skeleton": "https://e7codex.com/assets/npc1136/npc1136.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1137",
+              "skeleton": "https://e7codex.com/assets/npc1137/npc1137.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1138",
+              "skeleton": "https://e7codex.com/assets/npc1138/npc1138.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1139",
+              "skeleton": "https://e7codex.com/assets/npc1139/npc1139.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1140",
+              "skeleton": "https://e7codex.com/assets/npc1140/npc1140.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1141",
+              "skeleton": "https://e7codex.com/assets/npc1141/npc1141.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1142",
+              "skeleton": "https://e7codex.com/assets/npc1142/npc1142.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1143",
+              "skeleton": "https://e7codex.com/assets/npc1143/npc1143.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1144",
+              "skeleton": "https://e7codex.com/assets/npc1144/npc1144.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1147",
+              "skeleton": "https://e7codex.com/assets/npc1147/npc1147.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1148",
+              "skeleton": "https://e7codex.com/assets/npc1148/npc1148.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1149",
+              "skeleton": "https://e7codex.com/assets/npc1149/npc1149.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1155",
+              "skeleton": "https://e7codex.com/assets/npc1155/npc1155.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1156",
+              "skeleton": "https://e7codex.com/assets/npc1156/npc1156.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1157",
+              "skeleton": "https://e7codex.com/assets/npc1157/npc1157.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1162",
+              "skeleton": "https://e7codex.com/assets/npc1162/npc1162.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1163",
+              "skeleton": "https://e7codex.com/assets/npc1163/npc1163.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1164",
+              "skeleton": "https://e7codex.com/assets/npc1164/npc1164.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1165",
+              "skeleton": "https://e7codex.com/assets/npc1165/npc1165.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1166",
+              "skeleton": "https://e7codex.com/assets/npc1166/npc1166.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1167",
+              "skeleton": "https://e7codex.com/assets/npc1167/npc1167.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1168",
+              "skeleton": "https://e7codex.com/assets/npc1168/npc1168.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1170",
+              "skeleton": "https://e7codex.com/assets/npc1170/npc1170.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1172",
+              "skeleton": "https://e7codex.com/assets/npc1172/npc1172.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1174",
+              "skeleton": "https://e7codex.com/assets/npc1174/npc1174.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1175",
+              "skeleton": "https://e7codex.com/assets/npc1175/npc1175.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1177",
+              "skeleton": "https://e7codex.com/assets/npc1177/npc1177.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1178",
+              "skeleton": "https://e7codex.com/assets/npc1178/npc1178.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1179",
+              "skeleton": "https://e7codex.com/assets/npc1179/npc1179.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1181",
+              "skeleton": "https://e7codex.com/assets/npc1181/npc1181.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1182",
+              "skeleton": "https://e7codex.com/assets/npc1182/npc1182.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1183",
+              "skeleton": "https://e7codex.com/assets/npc1183/npc1183.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1184",
+              "skeleton": "https://e7codex.com/assets/npc1184/npc1184.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1185",
+              "skeleton": "https://e7codex.com/assets/npc1185/npc1185.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1186",
+              "skeleton": "https://e7codex.com/assets/npc1186/npc1186.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1187",
+              "skeleton": "https://e7codex.com/assets/npc1187/npc1187.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1188",
+              "skeleton": "https://e7codex.com/assets/npc1188/npc1188.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1190",
+              "skeleton": "https://e7codex.com/assets/npc1190/npc1190.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1191",
+              "skeleton": "https://e7codex.com/assets/npc1191/npc1191.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1192",
+              "skeleton": "https://e7codex.com/assets/npc1192/npc1192.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1193",
+              "skeleton": "https://e7codex.com/assets/npc1193/npc1193.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1196",
+              "skeleton": "https://e7codex.com/assets/npc1196/npc1196.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1197",
+              "skeleton": "https://e7codex.com/assets/npc1197/npc1197.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1198",
+              "skeleton": "https://e7codex.com/assets/npc1198/npc1198.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1199",
+              "skeleton": "https://e7codex.com/assets/npc1199/npc1199.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1202",
+              "skeleton": "https://e7codex.com/assets/npc1202/npc1202.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1204",
+              "skeleton": "https://e7codex.com/assets/npc1204/npc1204.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1207",
+              "skeleton": "https://e7codex.com/assets/npc1207/npc1207.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1208",
+              "skeleton": "https://e7codex.com/assets/npc1208/npc1208.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1210",
+              "skeleton": "https://e7codex.com/assets/npc1210/npc1210.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1212",
+              "skeleton": "https://e7codex.com/assets/npc1212/npc1212.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1214",
+              "skeleton": "https://e7codex.com/assets/npc1214/npc1214.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1218",
+              "skeleton": "https://e7codex.com/assets/npc1218/npc1218.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1219",
+              "skeleton": "https://e7codex.com/assets/npc1219/npc1219.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1220",
+              "skeleton": "https://e7codex.com/assets/npc1220/npc1220.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1221",
+              "skeleton": "https://e7codex.com/assets/npc1221/npc1221.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1222",
+              "skeleton": "https://e7codex.com/assets/npc1222/npc1222.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1223",
+              "skeleton": "https://e7codex.com/assets/npc1223/npc1223.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1227",
+              "skeleton": "https://e7codex.com/assets/npc1227/npc1227.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1228",
+              "skeleton": "https://e7codex.com/assets/npc1228/npc1228.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1229",
+              "skeleton": "https://e7codex.com/assets/npc1229/npc1229.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1230",
+              "skeleton": "https://e7codex.com/assets/npc1230/npc1230.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1231",
+              "skeleton": "https://e7codex.com/assets/npc1231/npc1231.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1232",
+              "skeleton": "https://e7codex.com/assets/npc1232/npc1232.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1236",
+              "skeleton": "https://e7codex.com/assets/npc1236/npc1236.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1239",
+              "skeleton": "https://e7codex.com/assets/npc1239/npc1239.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1240",
+              "skeleton": "https://e7codex.com/assets/npc1240/npc1240.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1241",
+              "skeleton": "https://e7codex.com/assets/npc1241/npc1241.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1242",
+              "skeleton": "https://e7codex.com/assets/npc1242/npc1242.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1244",
+              "skeleton": "https://e7codex.com/assets/npc1244/npc1244.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1245",
+              "skeleton": "https://e7codex.com/assets/npc1245/npc1245.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1246",
+              "skeleton": "https://e7codex.com/assets/npc1246/npc1246.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1248",
+              "skeleton": "https://e7codex.com/assets/npc1248/npc1248.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1250",
+              "skeleton": "https://e7codex.com/assets/npc1250/npc1250.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1252",
+              "skeleton": "https://e7codex.com/assets/npc1252/npc1252.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1253",
+              "skeleton": "https://e7codex.com/assets/npc1253/npc1253.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1254",
+              "skeleton": "https://e7codex.com/assets/npc1254/npc1254.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1255",
+              "skeleton": "https://e7codex.com/assets/npc1255/npc1255.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1257",
+              "skeleton": "https://e7codex.com/assets/npc1257/npc1257.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1258",
+              "skeleton": "https://e7codex.com/assets/npc1258/npc1258.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1260",
+              "skeleton": "https://e7codex.com/assets/npc1260/npc1260.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1261",
+              "skeleton": "https://e7codex.com/assets/npc1261/npc1261.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1262",
+              "skeleton": "https://e7codex.com/assets/npc1262/npc1262.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1267",
+              "skeleton": "https://e7codex.com/assets/npc1267/npc1267.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1268",
+              "skeleton": "https://e7codex.com/assets/npc1268/npc1268.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1269",
+              "skeleton": "https://e7codex.com/assets/npc1269/npc1269.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1270",
+              "skeleton": "https://e7codex.com/assets/npc1270/npc1270.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1271",
+              "skeleton": "https://e7codex.com/assets/npc1271/npc1271.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1272",
+              "skeleton": "https://e7codex.com/assets/npc1272/npc1272.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1273",
+              "skeleton": "https://e7codex.com/assets/npc1273/npc1273.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1274",
+              "skeleton": "https://e7codex.com/assets/npc1274/npc1274.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1275",
+              "skeleton": "https://e7codex.com/assets/npc1275/npc1275.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1281",
+              "skeleton": "https://e7codex.com/assets/npc1281/npc1281.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1282",
+              "skeleton": "https://e7codex.com/assets/npc1282/npc1282.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1283",
+              "skeleton": "https://e7codex.com/assets/npc1283/npc1283.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1284",
+              "skeleton": "https://e7codex.com/assets/npc1284/npc1284.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1308",
+              "skeleton": "https://e7codex.com/assets/npc1308/npc1308.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1309",
+              "skeleton": "https://e7codex.com/assets/npc1309/npc1309.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1312",
+              "skeleton": "https://e7codex.com/assets/npc1312/npc1312.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1313",
+              "skeleton": "https://e7codex.com/assets/npc1313/npc1313.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1314",
+              "skeleton": "https://e7codex.com/assets/npc1314/npc1314.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1315",
+              "skeleton": "https://e7codex.com/assets/npc1315/npc1315.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1321",
+              "skeleton": "https://e7codex.com/assets/npc1321/npc1321.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1322",
+              "skeleton": "https://e7codex.com/assets/npc1322/npc1322.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1323",
+              "skeleton": "https://e7codex.com/assets/npc1323/npc1323.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1324",
+              "skeleton": "https://e7codex.com/assets/npc1324/npc1324.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1325",
+              "skeleton": "https://e7codex.com/assets/npc1325/npc1325.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1326",
+              "skeleton": "https://e7codex.com/assets/npc1326/npc1326.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1327",
+              "skeleton": "https://e7codex.com/assets/npc1327/npc1327.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1329",
+              "skeleton": "https://e7codex.com/assets/npc1329/npc1329.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1333",
+              "skeleton": "https://e7codex.com/assets/npc1333/npc1333.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1334",
+              "skeleton": "https://e7codex.com/assets/npc1334/npc1334.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1336",
+              "skeleton": "https://e7codex.com/assets/npc1336/npc1336.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1337",
+              "skeleton": "https://e7codex.com/assets/npc1337/npc1337.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1338",
+              "skeleton": "https://e7codex.com/assets/npc1338/npc1338.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1339",
+              "skeleton": "https://e7codex.com/assets/npc1339/npc1339.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1340",
+              "skeleton": "https://e7codex.com/assets/npc1340/npc1340.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1342",
+              "skeleton": "https://e7codex.com/assets/npc1342/npc1342.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1343",
+              "skeleton": "https://e7codex.com/assets/npc1343/npc1343.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1344",
+              "skeleton": "https://e7codex.com/assets/npc1344/npc1344.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1345",
+              "skeleton": "https://e7codex.com/assets/npc1345/npc1345.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1346",
+              "skeleton": "https://e7codex.com/assets/npc1346/npc1346.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1347",
+              "skeleton": "https://e7codex.com/assets/npc1347/npc1347.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1348",
+              "skeleton": "https://e7codex.com/assets/npc1348/npc1348.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1349",
+              "skeleton": "https://e7codex.com/assets/npc1349/npc1349.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1350",
+              "skeleton": "https://e7codex.com/assets/npc1350/npc1350.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1351",
+              "skeleton": "https://e7codex.com/assets/npc1351/npc1351.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1352",
+              "skeleton": "https://e7codex.com/assets/npc1352/npc1352.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1353",
+              "skeleton": "https://e7codex.com/assets/npc1353/npc1353.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1354",
+              "skeleton": "https://e7codex.com/assets/npc1354/npc1354.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1355",
+              "skeleton": "https://e7codex.com/assets/npc1355/npc1355.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1356",
+              "skeleton": "https://e7codex.com/assets/npc1356/npc1356.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1357",
+              "skeleton": "https://e7codex.com/assets/npc1357/npc1357.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1358",
+              "skeleton": "https://e7codex.com/assets/npc1358/npc1358.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1359",
+              "skeleton": "https://e7codex.com/assets/npc1359/npc1359.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1364",
+              "skeleton": "https://e7codex.com/assets/npc1364/npc1364.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1365",
+              "skeleton": "https://e7codex.com/assets/npc1365/npc1365.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1366",
+              "skeleton": "https://e7codex.com/assets/npc1366/npc1366.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1367",
+              "skeleton": "https://e7codex.com/assets/npc1367/npc1367.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1368",
+              "skeleton": "https://e7codex.com/assets/npc1368/npc1368.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1371",
+              "skeleton": "https://e7codex.com/assets/npc1371/npc1371.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1372",
+              "skeleton": "https://e7codex.com/assets/npc1372/npc1372.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1374",
+              "skeleton": "https://e7codex.com/assets/npc1374/npc1374.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1375",
+              "skeleton": "https://e7codex.com/assets/npc1375/npc1375.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1376",
+              "skeleton": "https://e7codex.com/assets/npc1376/npc1376.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1377",
+              "skeleton": "https://e7codex.com/assets/npc1377/npc1377.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1379",
+              "skeleton": "https://e7codex.com/assets/npc1379/npc1379.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1380",
+              "skeleton": "https://e7codex.com/assets/npc1380/npc1380.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1381",
+              "skeleton": "https://e7codex.com/assets/npc1381/npc1381.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1386",
+              "skeleton": "https://e7codex.com/assets/npc1386/npc1386.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1390",
+              "skeleton": "https://e7codex.com/assets/npc1390/npc1390.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1392",
+              "skeleton": "https://e7codex.com/assets/npc1392/npc1392.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1395",
+              "skeleton": "https://e7codex.com/assets/npc1395/npc1395.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1396",
+              "skeleton": "https://e7codex.com/assets/npc1396/npc1396.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1401",
+              "skeleton": "https://e7codex.com/assets/npc1401/npc1401.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1402",
+              "skeleton": "https://e7codex.com/assets/npc1402/npc1402.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1403",
+              "skeleton": "https://e7codex.com/assets/npc1403/npc1403.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1404",
+              "skeleton": "https://e7codex.com/assets/npc1404/npc1404.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1405",
+              "skeleton": "https://e7codex.com/assets/npc1405/npc1405.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1406",
+              "skeleton": "https://e7codex.com/assets/npc1406/npc1406.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1407",
+              "skeleton": "https://e7codex.com/assets/npc1407/npc1407.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1415",
+              "skeleton": "https://e7codex.com/assets/npc1415/npc1415.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1416",
+              "skeleton": "https://e7codex.com/assets/npc1416/npc1416.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1417",
+              "skeleton": "https://e7codex.com/assets/npc1417/npc1417.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1429",
+              "skeleton": "https://e7codex.com/assets/npc1429/npc1429.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1430",
+              "skeleton": "https://e7codex.com/assets/npc1430/npc1430.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1431",
+              "skeleton": "https://e7codex.com/assets/npc1431/npc1431.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1432",
+              "skeleton": "https://e7codex.com/assets/npc1432/npc1432.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1433",
+              "skeleton": "https://e7codex.com/assets/npc1433/npc1433.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1434",
+              "skeleton": "https://e7codex.com/assets/npc1434/npc1434.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1435",
+              "skeleton": "https://e7codex.com/assets/npc1435/npc1435.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1436",
+              "skeleton": "https://e7codex.com/assets/npc1436/npc1436.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1437",
+              "skeleton": "https://e7codex.com/assets/npc1437/npc1437.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1443",
+              "skeleton": "https://e7codex.com/assets/npc1443/npc1443.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1444",
+              "skeleton": "https://e7codex.com/assets/npc1444/npc1444.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1445",
+              "skeleton": "https://e7codex.com/assets/npc1445/npc1445.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1448",
+              "skeleton": "https://e7codex.com/assets/npc1448/npc1448.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1450",
+              "skeleton": "https://e7codex.com/assets/npc1450/npc1450.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1451",
+              "skeleton": "https://e7codex.com/assets/npc1451/npc1451.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1458",
+              "skeleton": "https://e7codex.com/assets/npc1458/npc1458.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1459",
+              "skeleton": "https://e7codex.com/assets/npc1459/npc1459.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1460",
+              "skeleton": "https://e7codex.com/assets/npc1460/npc1460.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1461",
+              "skeleton": "https://e7codex.com/assets/npc1461/npc1461.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1462",
+              "skeleton": "https://e7codex.com/assets/npc1462/npc1462.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1463",
+              "skeleton": "https://e7codex.com/assets/npc1463/npc1463.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1464",
+              "skeleton": "https://e7codex.com/assets/npc1464/npc1464.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1465",
+              "skeleton": "https://e7codex.com/assets/npc1465/npc1465.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1466",
+              "skeleton": "https://e7codex.com/assets/npc1466/npc1466.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1467",
+              "skeleton": "https://e7codex.com/assets/npc1467/npc1467.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "npc1468",
+              "skeleton": "https://e7codex.com/assets/npc1468/npc1468.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "s0004",
+              "skeleton": "https://e7codex.com/assets/s0004/s0004.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            }
+          ],
+          "sourceDirectoryComplete": true
+        }
+      ]
+    },
+    {
+      "gameId": "shadowverse",
+      "indexedPortraits": 297,
+      "battleModels": 0,
+      "matchingPreviewMetadata": 297,
+      "gameCompleteness": "not-verified",
+      "sourceScopes": [
+        {
+          "sourceUrl": "https://svgdb.me",
+          "metadataSnapshot": "data/source-snapshots/shadowverse-b629c9cf7724b2cd.json",
+          "metadataSha256": "b629c9cf7724b2cd1adc34e77268375cd83f4048e68b964acae692d0832b8c40",
+          "discoveredSettings": 394,
+          "indexedSettings": 297,
+          "failures": [
+            {
+              "key": "class_3601",
+              "skeleton": "https://svgdb.me/assets/anim/class_3601.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_3602",
+              "skeleton": "https://svgdb.me/assets/anim/class_3602.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_3603",
+              "skeleton": "https://svgdb.me/assets/anim/class_3603.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_3604",
+              "skeleton": "https://svgdb.me/assets/anim/class_3604.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_3605",
+              "skeleton": "https://svgdb.me/assets/anim/class_3605.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_3606",
+              "skeleton": "https://svgdb.me/assets/anim/class_3606.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_3607",
+              "skeleton": "https://svgdb.me/assets/anim/class_3607.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_3608",
+              "skeleton": "https://svgdb.me/assets/anim/class_3608.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_3617",
+              "skeleton": "https://svgdb.me/assets/anim/class_3617.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_4107",
+              "skeleton": "https://svgdb.me/assets/anim/class_4107.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_4528",
+              "skeleton": "https://svgdb.me/assets/anim/class_4528.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_500303",
+              "skeleton": "https://svgdb.me/assets/anim/class_500303.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_500304",
+              "skeleton": "https://svgdb.me/assets/anim/class_500304.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_500305",
+              "skeleton": "https://svgdb.me/assets/anim/class_500305.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_500306",
+              "skeleton": "https://svgdb.me/assets/anim/class_500306.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_500402",
+              "skeleton": "https://svgdb.me/assets/anim/class_500402.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_500403",
+              "skeleton": "https://svgdb.me/assets/anim/class_500403.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_500404",
+              "skeleton": "https://svgdb.me/assets/anim/class_500404.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_500701",
+              "skeleton": "https://svgdb.me/assets/anim/class_500701.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_500704",
+              "skeleton": "https://svgdb.me/assets/anim/class_500704.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_500732",
+              "skeleton": "https://svgdb.me/assets/anim/class_500732.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_500901",
+              "skeleton": "https://svgdb.me/assets/anim/class_500901.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_500902",
+              "skeleton": "https://svgdb.me/assets/anim/class_500902.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_500903",
+              "skeleton": "https://svgdb.me/assets/anim/class_500903.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_500904",
+              "skeleton": "https://svgdb.me/assets/anim/class_500904.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_600050",
+              "skeleton": "https://svgdb.me/assets/anim/class_600050.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_600070",
+              "skeleton": "https://svgdb.me/assets/anim/class_600070.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_600080",
+              "skeleton": "https://svgdb.me/assets/anim/class_600080.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            },
+            {
+              "key": "class_600090",
+              "skeleton": "https://svgdb.me/assets/anim/class_600090.json",
+              "error": "fetch failed",
+              "category": "source-error"
+            }
+          ],
+          "staticSources": [
+            {
+              "key": "class_500001",
+              "skeleton": "https://svgdb.me/assets/anim/class_500001.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500002",
+              "skeleton": "https://svgdb.me/assets/anim/class_500002.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500003",
+              "skeleton": "https://svgdb.me/assets/anim/class_500003.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500004",
+              "skeleton": "https://svgdb.me/assets/anim/class_500004.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500005",
+              "skeleton": "https://svgdb.me/assets/anim/class_500005.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500006",
+              "skeleton": "https://svgdb.me/assets/anim/class_500006.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500007",
+              "skeleton": "https://svgdb.me/assets/anim/class_500007.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500009",
+              "skeleton": "https://svgdb.me/assets/anim/class_500009.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500010",
+              "skeleton": "https://svgdb.me/assets/anim/class_500010.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500011",
+              "skeleton": "https://svgdb.me/assets/anim/class_500011.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500012",
+              "skeleton": "https://svgdb.me/assets/anim/class_500012.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500013",
+              "skeleton": "https://svgdb.me/assets/anim/class_500013.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500014",
+              "skeleton": "https://svgdb.me/assets/anim/class_500014.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500015",
+              "skeleton": "https://svgdb.me/assets/anim/class_500015.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500016",
+              "skeleton": "https://svgdb.me/assets/anim/class_500016.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500017",
+              "skeleton": "https://svgdb.me/assets/anim/class_500017.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500018",
+              "skeleton": "https://svgdb.me/assets/anim/class_500018.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500019",
+              "skeleton": "https://svgdb.me/assets/anim/class_500019.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500020",
+              "skeleton": "https://svgdb.me/assets/anim/class_500020.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500021",
+              "skeleton": "https://svgdb.me/assets/anim/class_500021.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500022",
+              "skeleton": "https://svgdb.me/assets/anim/class_500022.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500023",
+              "skeleton": "https://svgdb.me/assets/anim/class_500023.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500024",
+              "skeleton": "https://svgdb.me/assets/anim/class_500024.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500025",
+              "skeleton": "https://svgdb.me/assets/anim/class_500025.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500026",
+              "skeleton": "https://svgdb.me/assets/anim/class_500026.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500030",
+              "skeleton": "https://svgdb.me/assets/anim/class_500030.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500031",
+              "skeleton": "https://svgdb.me/assets/anim/class_500031.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500032",
+              "skeleton": "https://svgdb.me/assets/anim/class_500032.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500033",
+              "skeleton": "https://svgdb.me/assets/anim/class_500033.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500034",
+              "skeleton": "https://svgdb.me/assets/anim/class_500034.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500035",
+              "skeleton": "https://svgdb.me/assets/anim/class_500035.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500037",
+              "skeleton": "https://svgdb.me/assets/anim/class_500037.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500038",
+              "skeleton": "https://svgdb.me/assets/anim/class_500038.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500039",
+              "skeleton": "https://svgdb.me/assets/anim/class_500039.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500042",
+              "skeleton": "https://svgdb.me/assets/anim/class_500042.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500043",
+              "skeleton": "https://svgdb.me/assets/anim/class_500043.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500044",
+              "skeleton": "https://svgdb.me/assets/anim/class_500044.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500045",
+              "skeleton": "https://svgdb.me/assets/anim/class_500045.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500047",
+              "skeleton": "https://svgdb.me/assets/anim/class_500047.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500048",
+              "skeleton": "https://svgdb.me/assets/anim/class_500048.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500049",
+              "skeleton": "https://svgdb.me/assets/anim/class_500049.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500104",
+              "skeleton": "https://svgdb.me/assets/anim/class_500104.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500105",
+              "skeleton": "https://svgdb.me/assets/anim/class_500105.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500106",
+              "skeleton": "https://svgdb.me/assets/anim/class_500106.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500109",
+              "skeleton": "https://svgdb.me/assets/anim/class_500109.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500111",
+              "skeleton": "https://svgdb.me/assets/anim/class_500111.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500112",
+              "skeleton": "https://svgdb.me/assets/anim/class_500112.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500113",
+              "skeleton": "https://svgdb.me/assets/anim/class_500113.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500114",
+              "skeleton": "https://svgdb.me/assets/anim/class_500114.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500115",
+              "skeleton": "https://svgdb.me/assets/anim/class_500115.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500116",
+              "skeleton": "https://svgdb.me/assets/anim/class_500116.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500215",
+              "skeleton": "https://svgdb.me/assets/anim/class_500215.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500216",
+              "skeleton": "https://svgdb.me/assets/anim/class_500216.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500217",
+              "skeleton": "https://svgdb.me/assets/anim/class_500217.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500325",
+              "skeleton": "https://svgdb.me/assets/anim/class_500325.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500329",
+              "skeleton": "https://svgdb.me/assets/anim/class_500329.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500334",
+              "skeleton": "https://svgdb.me/assets/anim/class_500334.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500337",
+              "skeleton": "https://svgdb.me/assets/anim/class_500337.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500340",
+              "skeleton": "https://svgdb.me/assets/anim/class_500340.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500406",
+              "skeleton": "https://svgdb.me/assets/anim/class_500406.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500407",
+              "skeleton": "https://svgdb.me/assets/anim/class_500407.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500408",
+              "skeleton": "https://svgdb.me/assets/anim/class_500408.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500418",
+              "skeleton": "https://svgdb.me/assets/anim/class_500418.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500420",
+              "skeleton": "https://svgdb.me/assets/anim/class_500420.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500423",
+              "skeleton": "https://svgdb.me/assets/anim/class_500423.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500426",
+              "skeleton": "https://svgdb.me/assets/anim/class_500426.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_500709",
+              "skeleton": "https://svgdb.me/assets/anim/class_500709.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            },
+            {
+              "key": "class_501015",
+              "skeleton": "https://svgdb.me/assets/anim/class_501015.json",
+              "error": "No timed animation in source export",
+              "category": "static-source"
+            }
+          ],
+          "sourceDirectoryComplete": false
+        }
+      ]
+    },
+    {
+      "gameId": "unknownbride",
+      "indexedPortraits": 18,
+      "battleModels": 0,
+      "matchingPreviewMetadata": 18,
+      "gameCompleteness": "not-verified",
+      "sourceScopes": []
     }
   ]
 }

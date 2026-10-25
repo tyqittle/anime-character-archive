@@ -11,6 +11,10 @@ on:
       - 'data/live2d-mature-followup.json'
       - 'data/spine-mature-expansion.json'
       - 'data/spine-source-scopes.json'
+      - 'data/spine-games-wave6.json'
+      - 'data/hosted-spine-source-scopes.json'
+      - 'scripts/import_hosted_spine.mjs'
+      - 'scripts/test_hosted_spine_browser.mjs'
       - 'scripts/import_spine_source.py'
       - 'data/live2d-source-scopes.json'
       - 'scripts/live2d_sources.mjs'
@@ -34,6 +38,23 @@ on:
 permissions:
   contents: read
 jobs:
+  hosted-portraits:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --no-package-lock playwright-core@1.56.1 pngjs@7.0.0
+      - run: python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/hosted-spine-site.log 2>&1 &
+      - name: Verify hosted source byte locks, real motion, skins and theater controls
+        run: node scripts/test_hosted_spine_browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hosted-spine-browser
+          path: tmp/hosted-spine-browser/
   browser:
     runs-on: ubuntu-latest
     timeout-minutes: 13

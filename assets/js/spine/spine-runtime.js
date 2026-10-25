@@ -1,4 +1,13 @@
 'use strict';
+function applyDeclaredSpineSkinLayers(p,entry){
+ const layers=entry?.spineSkinLayers;if(layers===undefined)return false;
+ if(!Array.isArray(layers)||!layers.length||new Set(layers).size!==layers.length)throw Error('模型皮肤层配置无效');
+ const skins=layers.map(name=>{const skin=p.skeleton.data.findSkin(name);if(!skin)throw Error('源模型缺少皮肤层：'+name);return skin});
+ const combined=new spine.Skin('__archive_source_layers');
+ for(const skin of skins)combined.addSkin(skin);
+ p.skeleton.setSkin(combined);p.skeleton.setSlotsToSetupPose();p.skeleton.updateWorldTransform();
+ p._archiveSkinLayers=[...layers];return true;
+}
 function setVersion(v){
  // Runtime transitions do not navigate: preserve current UI, filters and scroll.
  if(!['3.8','4.0','4.1','4.2'].includes(v))throw Error('不支持的 Spine 版本：'+v);
@@ -290,7 +299,10 @@ async function show(options,title,onError){
     // "01") while the initial "default" skin contains only stray attachments.
     // Such models render empty and trigger "Animation bounds are invalid".
     const sk=p.skeleton,skins=sk?.data?.skins||[];
-    if(sk&&skins.length>1){
+    p._archivePortraitFraming=options.archiveEntry?.portraitFraming;
+    let declaredSkin=false;
+    try{declaredSkin=applyDeclaredSpineSkinLayers(p,options.archiveEntry)}catch(error){fail(error.message);return}
+    if(sk&&skins.length>1&&!declaredSkin){
      const countAttachments=()=>sk.slots.filter(slot=>!!slot.attachment&&slot.bone?.active!==false).length;
      const initial=countAttachments();
      const inactiveSkinBones=skins.some(skin=>skin.bones?.length)&&!sk.skin?.bones?.length;

@@ -92,6 +92,12 @@ function applySharpSpineCamera(activePlayer){
 function fitRenderedSpinePortrait(p){
  if(p!==player||!p._archiveFitPending||!p._archiveCameraFrame)return;
  if(--p._archiveFitPending>0)return;
+ const declared=declaredSpinePoseBounds(p);
+ if(declared){
+  p._archiveViewBounds=declared;
+  p._archiveFraming={source:'declared-pose',bounds:declared};
+  return;
+ }
  try{
   const canvas=p.canvas,w=canvas.width,h=canvas.height;
   if(!(w>0&&h>0))return;
@@ -111,8 +117,23 @@ function fitRenderedSpinePortrait(p){
   }
  }catch(error){console.warn('自动取景使用骨骼边界',error)}
 }
+function declaredSpinePoseBounds(p){
+ const excluded=p?._archivePortraitFraming?.excludeBones;
+ if(!excluded?.length)return null;
+ const names=new Set(excluded);let x=Infinity,y=Infinity,X=-Infinity,Y=-Infinity;
+ for(const slot of p.skeleton.slots){
+  let skip=false;for(let bone=slot.bone;bone;bone=bone.parent)if(names.has(bone.data.name)){skip=true;break}
+  const a=slot.attachment;if(skip||!a||slot.bone.active===false||slot.color?.a===0||a.color?.a===0)continue;
+  let vertices;
+  if(a instanceof spine.RegionAttachment){vertices=new Float32Array(8);a.computeWorldVertices(slot.bone,vertices,0,2)}
+  else if(a instanceof spine.MeshAttachment){vertices=new Float32Array(a.worldVerticesLength);a.computeWorldVertices(slot,0,a.worldVerticesLength,vertices,0,2)}
+  else continue;
+  for(let i=0;i<vertices.length;i+=2){x=Math.min(x,vertices[i]);X=Math.max(X,vertices[i]);y=Math.min(y,vertices[i+1]);Y=Math.max(Y,vertices[i+1])}
+ }
+ const bounds={x,y,width:X-x,height:Y-y};return ArchivePortraitFraming.validBounds(bounds)?bounds:null;
+}
 function initializeSpinePortrait(p){
- const viewport=p.currentViewport;
+ const viewport=declaredSpinePoseBounds(p)||p.currentViewport;
  if(typeof ArchivePortraitFraming!=='undefined'&&ArchivePortraitFraming.validBounds(viewport)){
   p._archiveViewBounds={x:viewport.x,y:viewport.y,width:viewport.width,height:viewport.height};
   p._archiveFraming={source:'animation-bounds',bounds:p._archiveViewBounds};
@@ -143,8 +164,9 @@ function resetViewerTransform(){
   if(Vector&&player.skeleton?.getBounds){
    try{
     const offset=new Vector(),size=new Vector();
-    player.skeleton.getBounds(offset,size);
-    const bounds={x:offset.x,y:offset.y,width:size.x,height:size.y};
+    const declared=declaredSpinePoseBounds(player);
+    if(!declared)player.skeleton.getBounds(offset,size);
+    const bounds=declared||{x:offset.x,y:offset.y,width:size.x,height:size.y};
     if(ArchivePortraitFraming.validBounds(bounds))player._archiveViewBounds=bounds;
    }catch(error){console.warn('当前姿态取景失败，保留会话边界',error)}
   }

@@ -32,6 +32,13 @@
   if(c.atlasEdgeExtrusion!==undefined)identity.push('atlas-edge-extrusion:'+c.atlasEdgeExtrusion);
   const excluded=c.portraitFraming?.excludeDrawables;
   if(excluded?.length)identity.push('portrait-framing-excluded-drawables:'+JSON.stringify([...new Set(excluded)].sort()));
+  const excludedBones=c.portraitFraming?.excludeBones;
+  if(excludedBones?.length)identity.push('portrait-framing-excluded-bones:'+JSON.stringify([...new Set(excludedBones)].sort()));
+  if(c.spineSkinLayers)identity.push('spine-skin-layers:'+JSON.stringify(c.spineSkinLayers));
+  if(typeof c.premultipliedAlpha==='boolean')identity.push('premultiplied-alpha:'+c.premultipliedAlpha);
+  if(c.spineAtlasPageMerge)identity.push('spine-atlas-page-merge:true');
+  if(c.spineAttachmentPathRepairs)identity.push('spine-attachment-path-repairs:'+JSON.stringify(c.spineAttachmentPathRepairs.map(r=>[r.skin,r.slot,r.name,r.from,r.to])));
+  if(c.resourceIntegrity)identity.push('resource-integrity:'+JSON.stringify(c.resourceIntegrity.map(x=>[x.path,x.sha256]).sort((a,b)=>a[0]<b[0]?-1:a[0]>b[0]?1:0)));
   return identity;
  }
  return Object.freeze({validate,load,sourceIdentity});

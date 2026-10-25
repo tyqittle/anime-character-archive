@@ -33,6 +33,19 @@ def source_identity(character):
     excluded=character.get('portraitFraming',{}).get('excludeDrawables',[])
     if excluded:
         identity.append('portrait-framing-excluded-drawables:'+json.dumps(sorted(set(excluded)),ensure_ascii=False,separators=(',',':')))
+    excluded_bones=character.get('portraitFraming',{}).get('excludeBones',[])
+    if excluded_bones:
+        identity.append('portrait-framing-excluded-bones:'+json.dumps(sorted(set(excluded_bones)),ensure_ascii=False,separators=(',',':')))
+    if 'spineSkinLayers' in character:
+        identity.append('spine-skin-layers:'+json.dumps(character['spineSkinLayers'],ensure_ascii=False,separators=(',',':')))
+    if isinstance(character.get('premultipliedAlpha'),bool):
+        identity.append('premultiplied-alpha:'+str(character['premultipliedAlpha']).lower())
+    if character.get('spineAtlasPageMerge'):
+        identity.append('spine-atlas-page-merge:true')
+    if 'spineAttachmentPathRepairs' in character:
+        identity.append('spine-attachment-path-repairs:'+json.dumps([[r[k] for k in ('skin','slot','name','from','to')] for r in character['spineAttachmentPathRepairs']],ensure_ascii=False,separators=(',',':')))
+    if 'resourceIntegrity' in character:
+        identity.append('resource-integrity:'+json.dumps(sorted([[x['path'],x['sha256']] for x in character['resourceIntegrity']],key=lambda x:x[0]),ensure_ascii=False,separators=(',',':')))
     return identity
 
 

@@ -77,6 +77,11 @@
       "path": "data/live2d-games-wave4.json"
     },
     {
+      "id": "games-wave6",
+      "name": "第七史诗 / 影之诗 · 动态角色与皮肤图鉴",
+      "path": "data/spine-games-wave6.json"
+    },
+    {
       "id": "games-wave5",
       "name": "Unknown Bride · 18 套角色 Live2D",
       "path": "data/live2d-games-wave5.json"

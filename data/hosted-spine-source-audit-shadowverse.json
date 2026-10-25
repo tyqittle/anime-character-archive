@@ -1,0 +1,600 @@
+{
+  "schemaVersion": 1,
+  "scope": "shadowverse",
+  "gameId": "shadowverse",
+  "source": "https://svgdb.me",
+  "scopeDescription": "Every leader ID in every published category, including alternate outfits, collaborations and story leaders; unavailable or static exports are reported individually.",
+  "metadataSnapshot": "data/source-snapshots/shadowverse-b629c9cf7724b2cd.json",
+  "metadataSha256": "b629c9cf7724b2cd1adc34e77268375cd83f4048e68b964acae692d0832b8c40",
+  "discovered": 394,
+  "indexed": 297,
+  "staticSources": [
+    {
+      "key": "class_500001",
+      "skeleton": "https://svgdb.me/assets/anim/class_500001.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500002",
+      "skeleton": "https://svgdb.me/assets/anim/class_500002.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500003",
+      "skeleton": "https://svgdb.me/assets/anim/class_500003.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500004",
+      "skeleton": "https://svgdb.me/assets/anim/class_500004.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500005",
+      "skeleton": "https://svgdb.me/assets/anim/class_500005.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500006",
+      "skeleton": "https://svgdb.me/assets/anim/class_500006.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500007",
+      "skeleton": "https://svgdb.me/assets/anim/class_500007.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500009",
+      "skeleton": "https://svgdb.me/assets/anim/class_500009.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500010",
+      "skeleton": "https://svgdb.me/assets/anim/class_500010.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500011",
+      "skeleton": "https://svgdb.me/assets/anim/class_500011.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500012",
+      "skeleton": "https://svgdb.me/assets/anim/class_500012.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500013",
+      "skeleton": "https://svgdb.me/assets/anim/class_500013.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500014",
+      "skeleton": "https://svgdb.me/assets/anim/class_500014.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500015",
+      "skeleton": "https://svgdb.me/assets/anim/class_500015.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500016",
+      "skeleton": "https://svgdb.me/assets/anim/class_500016.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500017",
+      "skeleton": "https://svgdb.me/assets/anim/class_500017.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500018",
+      "skeleton": "https://svgdb.me/assets/anim/class_500018.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500019",
+      "skeleton": "https://svgdb.me/assets/anim/class_500019.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500020",
+      "skeleton": "https://svgdb.me/assets/anim/class_500020.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500021",
+      "skeleton": "https://svgdb.me/assets/anim/class_500021.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500022",
+      "skeleton": "https://svgdb.me/assets/anim/class_500022.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500023",
+      "skeleton": "https://svgdb.me/assets/anim/class_500023.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500024",
+      "skeleton": "https://svgdb.me/assets/anim/class_500024.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500025",
+      "skeleton": "https://svgdb.me/assets/anim/class_500025.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500026",
+      "skeleton": "https://svgdb.me/assets/anim/class_500026.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500030",
+      "skeleton": "https://svgdb.me/assets/anim/class_500030.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500031",
+      "skeleton": "https://svgdb.me/assets/anim/class_500031.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500032",
+      "skeleton": "https://svgdb.me/assets/anim/class_500032.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500033",
+      "skeleton": "https://svgdb.me/assets/anim/class_500033.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500034",
+      "skeleton": "https://svgdb.me/assets/anim/class_500034.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500035",
+      "skeleton": "https://svgdb.me/assets/anim/class_500035.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500037",
+      "skeleton": "https://svgdb.me/assets/anim/class_500037.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500038",
+      "skeleton": "https://svgdb.me/assets/anim/class_500038.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500039",
+      "skeleton": "https://svgdb.me/assets/anim/class_500039.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500042",
+      "skeleton": "https://svgdb.me/assets/anim/class_500042.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500043",
+      "skeleton": "https://svgdb.me/assets/anim/class_500043.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500044",
+      "skeleton": "https://svgdb.me/assets/anim/class_500044.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500045",
+      "skeleton": "https://svgdb.me/assets/anim/class_500045.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500047",
+      "skeleton": "https://svgdb.me/assets/anim/class_500047.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500048",
+      "skeleton": "https://svgdb.me/assets/anim/class_500048.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500049",
+      "skeleton": "https://svgdb.me/assets/anim/class_500049.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500104",
+      "skeleton": "https://svgdb.me/assets/anim/class_500104.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500105",
+      "skeleton": "https://svgdb.me/assets/anim/class_500105.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500106",
+      "skeleton": "https://svgdb.me/assets/anim/class_500106.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500109",
+      "skeleton": "https://svgdb.me/assets/anim/class_500109.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500111",
+      "skeleton": "https://svgdb.me/assets/anim/class_500111.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500112",
+      "skeleton": "https://svgdb.me/assets/anim/class_500112.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500113",
+      "skeleton": "https://svgdb.me/assets/anim/class_500113.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500114",
+      "skeleton": "https://svgdb.me/assets/anim/class_500114.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500115",
+      "skeleton": "https://svgdb.me/assets/anim/class_500115.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500116",
+      "skeleton": "https://svgdb.me/assets/anim/class_500116.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500215",
+      "skeleton": "https://svgdb.me/assets/anim/class_500215.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500216",
+      "skeleton": "https://svgdb.me/assets/anim/class_500216.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500217",
+      "skeleton": "https://svgdb.me/assets/anim/class_500217.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500325",
+      "skeleton": "https://svgdb.me/assets/anim/class_500325.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500329",
+      "skeleton": "https://svgdb.me/assets/anim/class_500329.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500334",
+      "skeleton": "https://svgdb.me/assets/anim/class_500334.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500337",
+      "skeleton": "https://svgdb.me/assets/anim/class_500337.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500340",
+      "skeleton": "https://svgdb.me/assets/anim/class_500340.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500406",
+      "skeleton": "https://svgdb.me/assets/anim/class_500406.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500407",
+      "skeleton": "https://svgdb.me/assets/anim/class_500407.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500408",
+      "skeleton": "https://svgdb.me/assets/anim/class_500408.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500418",
+      "skeleton": "https://svgdb.me/assets/anim/class_500418.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500420",
+      "skeleton": "https://svgdb.me/assets/anim/class_500420.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500423",
+      "skeleton": "https://svgdb.me/assets/anim/class_500423.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500426",
+      "skeleton": "https://svgdb.me/assets/anim/class_500426.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_500709",
+      "skeleton": "https://svgdb.me/assets/anim/class_500709.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    },
+    {
+      "key": "class_501015",
+      "skeleton": "https://svgdb.me/assets/anim/class_501015.json",
+      "error": "No timed animation in source export",
+      "category": "static-source"
+    }
+  ],
+  "failures": [
+    {
+      "key": "class_3601",
+      "skeleton": "https://svgdb.me/assets/anim/class_3601.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_3602",
+      "skeleton": "https://svgdb.me/assets/anim/class_3602.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_3603",
+      "skeleton": "https://svgdb.me/assets/anim/class_3603.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_3604",
+      "skeleton": "https://svgdb.me/assets/anim/class_3604.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_3605",
+      "skeleton": "https://svgdb.me/assets/anim/class_3605.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_3606",
+      "skeleton": "https://svgdb.me/assets/anim/class_3606.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_3607",
+      "skeleton": "https://svgdb.me/assets/anim/class_3607.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_3608",
+      "skeleton": "https://svgdb.me/assets/anim/class_3608.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_3617",
+      "skeleton": "https://svgdb.me/assets/anim/class_3617.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_4107",
+      "skeleton": "https://svgdb.me/assets/anim/class_4107.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_4528",
+      "skeleton": "https://svgdb.me/assets/anim/class_4528.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_500303",
+      "skeleton": "https://svgdb.me/assets/anim/class_500303.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_500304",
+      "skeleton": "https://svgdb.me/assets/anim/class_500304.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_500305",
+      "skeleton": "https://svgdb.me/assets/anim/class_500305.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_500306",
+      "skeleton": "https://svgdb.me/assets/anim/class_500306.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_500402",
+      "skeleton": "https://svgdb.me/assets/anim/class_500402.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_500403",
+      "skeleton": "https://svgdb.me/assets/anim/class_500403.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_500404",
+      "skeleton": "https://svgdb.me/assets/anim/class_500404.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_500701",
+      "skeleton": "https://svgdb.me/assets/anim/class_500701.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_500704",
+      "skeleton": "https://svgdb.me/assets/anim/class_500704.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_500732",
+      "skeleton": "https://svgdb.me/assets/anim/class_500732.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_500901",
+      "skeleton": "https://svgdb.me/assets/anim/class_500901.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_500902",
+      "skeleton": "https://svgdb.me/assets/anim/class_500902.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_500903",
+      "skeleton": "https://svgdb.me/assets/anim/class_500903.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_500904",
+      "skeleton": "https://svgdb.me/assets/anim/class_500904.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_600050",
+      "skeleton": "https://svgdb.me/assets/anim/class_600050.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_600070",
+      "skeleton": "https://svgdb.me/assets/anim/class_600070.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_600080",
+      "skeleton": "https://svgdb.me/assets/anim/class_600080.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    },
+    {
+      "key": "class_600090",
+      "skeleton": "https://svgdb.me/assets/anim/class_600090.json",
+      "error": "fetch failed",
+      "category": "source-error"
+    }
+  ],
+  "sourceScopeComplete": false,
+  "gameCompleteness": "not-verified",
+  "acceptedModelAssetCount": 892
+}

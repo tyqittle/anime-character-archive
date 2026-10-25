@@ -62,11 +62,16 @@ def main():
     elif args.command=='convert':
         convert_batch(args.root,args.shard)
     else:
+        previous={}
+        audit_path=Path('data/preview-pipeline-audit.json')
+        if args.catalog and audit_path.is_file():
+            previous=json.loads(audit_path.read_text('utf-8'))
+            if not isinstance(previous,dict):raise ValueError('Invalid previous preview audit')
         results={}
         for entry in entries:
             results[entry['id']]=publish_catalog(entry['path'],args.incoming,
                 Path('data/preview-audits')/(entry['id']+'.json'),require_identity=True)
-        write_json('data/preview-pipeline-audit.json',results)
+        write_json(audit_path,{**previous,**results})
         print('PREVIEW_PUBLISHED',sum(r['newCapturesInThisRun'] for r in results.values()))
 
 if __name__=='__main__':main()

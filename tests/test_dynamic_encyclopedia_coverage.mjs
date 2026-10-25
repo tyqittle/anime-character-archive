@@ -17,3 +17,9 @@ test('a curated Spine list remains incomplete even if every selected model loade
   {s:{selected:1,checked:1,failed:[],qualityExclusions:[]}}).games[0];
  assert.equal(report.sourceScopes[0].sourceDirectoryComplete,false);
 });
+test('hosted scope reports retain missing models separately from playback and game completeness',()=>{
+ const audit={gameId:'g',source:'https://source.test',metadataSha256:'a'.repeat(64),metadataSnapshot:'data/snapshot.json',discovered:3,indexed:2,failures:[{key:'missing-skin'}],sourceScopeComplete:false};
+ const report=buildCoverage([{id:'one',gameId:'g'}],[],[],{},[audit]).games[0];
+ assert.equal(report.sourceScopes[0].failures[0].key,'missing-skin');assert.equal(report.sourceScopes[0].sourceDirectoryComplete,false);
+ assert.equal(report.matchingPreviewMetadata,0);assert.equal(report.gameCompleteness,'not-verified');
+});
