@@ -322,29 +322,15 @@
       },
       "girlscafegun": {
         "indexed": 273,
-        "verifiedPreview": 272,
-        "missingPreview": 1
+        "verifiedPreview": 273,
+        "missingPreview": 0
       }
     },
-    "missing": [
-      {
-        "gameId": "girlscafegun",
-        "id": "gc-girl04-l2d05"
-      }
-    ],
-    "newCapturesInThisRun": 0,
+    "missing": [],
+    "newCapturesInThisRun": 1,
     "rejectedCaptures": [],
-    "failedCaptures": [
-      {
-        "id": "gc-girl04-l2d05",
-        "gameId": "girlscafegun",
-        "category": "render-error",
-        "message": "blank-frame: no rendered character"
-      }
-    ],
-    "failureSummary": {
-      "render-error": 1
-    }
+    "failedCaptures": [],
+    "failureSummary": {}
   },
   "highquality": {
     "scope": "shared preview pipeline",

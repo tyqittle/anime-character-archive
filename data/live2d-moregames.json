@@ -8285,11 +8285,22 @@
       "assetType": "live2d-character",
       "textureBytes": 1675259,
       "motionCount": 3,
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "blank-frame: no rendered character"
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/%E5%B0%91%E5%A5%B3%E5%92%96%E5%95%A1%E6%9E%AA%20girls%20cafe%20gun/girl04/l2d05.u/l2d05.u.model3.json",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "091c8f2e19d5ede95ffd59cfc389de623cb3fc501f5b7b7f7ef75be174aa50b5",
+      "preview": "./assets/animation-previews/girlscafegun-gc-girl04-l2d05.webp"
     },
     {
       "id": "gc-girl04-l2d24",
