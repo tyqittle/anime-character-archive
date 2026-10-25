@@ -66,6 +66,10 @@ try{
       throw Error('Selected model was lost after hidden select windowing');
   }
   await page.selectOption('#gameFilter','all');
+  // The redesigned inspector starts closed. Open it through the public control
+  // before checking its contents and its effect on desktop stage geometry.
+  if(viewport.width>=851&&await page.locator('#toggleRightPanel').getAttribute('aria-expanded')!=='true')
+    await page.locator('#stageSettings').click();
   // The desktop layout is a fixed one-screen workspace, never a page scroller.
   // The card grid remains independently scrollable even with hundreds of skins.
   const layout=await page.evaluate(()=>{
@@ -215,6 +219,8 @@ try{
   await page.locator('#characterCards .character-card').filter({hasText:'日蚀'}).click();
   await page.waitForFunction(n=>sequence>n,firstAttempt,{timeout:10000});
   if(await page.locator('#characters').inputValue()!=='bd2-char000701')throw Error('Card did not select its character');
+  if(await page.locator('#toggleLeftPanel').getAttribute('aria-expanded')!=='true')
+    await page.locator('#toggleLeftPanel').click();
   await page.selectOption('#characters','bd2-char000201');
   await page.waitForFunction(()=>new URL(location.href).searchParams.get('id')==='bd2-char000201'&&sequence>=3,null,{timeout:10000});
   // Isolate the synthetic loading-overlay assertion from any genuine asynchronous fetch updates.
@@ -222,6 +228,9 @@ try{
   if(await page.locator('#loadNotice').evaluate(el=>el.hidden))throw Error('Loading notice did not appear');
   await page.evaluate(()=>status('正在播放：测试',false));
   if(!(await page.locator('#loadNotice').evaluate(el=>el.hidden)))throw Error('Loading notice remained after playback');
+  // Choosing a card closes the mobile catalog; reopen it to use advanced tools.
+  if(await page.locator('#toggleLeftPanel').getAttribute('aria-expanded')!=='true')
+    await page.locator('#toggleLeftPanel').click();
   await page.locator('.advanced-tools summary').click();
   if(!(await page.locator('.advanced-tools').evaluate(el=>el.open)))throw Error('Cannot open advanced tools');
   // Never navigate on a Spine runtime boundary. This synthetic cache test
