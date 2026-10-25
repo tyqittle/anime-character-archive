@@ -51,7 +51,11 @@ jobs:
           node-version: '22'
       - run: npm install --no-save --no-package-lock playwright-core@1.56.1 pngjs@7.0.0
       - run: python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/hosted-spine-site.log 2>&1 &
+      - name: Verify original source bytes and production-origin CORS before browser rendering
+        run: node scripts/source_asset_cache.mjs --preflight
       - name: Verify hosted source byte locks, real motion, skins and theater controls
+        env:
+          ARCHIVE_PREVIEW_SOURCE_CACHE: tmp/hosted-spine-browser-source/index.json
         run: node scripts/test_hosted_spine_browser.mjs
       - uses: actions/upload-artifact@v4
         if: always()

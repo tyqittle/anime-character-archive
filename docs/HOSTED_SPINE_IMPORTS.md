@@ -26,4 +26,6 @@
 
 `test_hosted_spine_browser.mjs` 对原始资源直接验证画面运动、正常面部层、异装、切换动作后缩放保持，以及主动回待机；CI 不依赖本地缓存。旧模型不声明新增字段时保持原身份、缓存键和皮肤选择方式，继续执行共同模块隔离与剧场界面回归。
 
+CI 将原站访问与原生渲染分成两步：`source_asset_cache.mjs --preflight` 从原站读取代表模型，逐字节核验锁定摘要，并检查实际网站 Origin 的跨域响应；随后浏览器使用本次下载的原始字节缓存验证画面及操作。原站 HTTP、跨域或摘要失败仍会阻断，不用其他模型或静态图替代。这样可明确区分云端浏览器被原站风控拒绝与播放器本身出错。本地另外已完成两款游戏代表模型的无缓存直连播放检查。
+
 原站与实现依据：[E7 Codex](https://e7codex.com/)、[E7 Codex 查看器固定源码](https://github.com/Aikiooo/e7codex/blob/d3ad601ce8575563b87c29a10ae71352dd4f1dac/site/viewer.html)、[SVGDB](https://svgdb.me/)。角色素材权利归原游戏权利人。
