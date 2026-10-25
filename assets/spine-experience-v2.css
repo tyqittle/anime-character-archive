@@ -452,3 +452,13 @@ body.desktop-mode #panelBackdrop{display:none!important}
 .game-browser-note{margin:20px 0 0}
 .theater-three-pane #placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center}
 @media(max-width:600px){#gameBrowser{padding:20px}#gameChoices{grid-template-columns:repeat(2,minmax(0,1fr))}#gameChoices button{padding:12px}}
+
+/* Keep the whole theater, including drawers and controls, in the top layer. */
+body:not(.desktop-mode) .wrap.theater-three-pane:fullscreen,
+body.theater-immersive:not(.desktop-mode) .wrap.theater-three-pane{
+ position:fixed;inset:0;width:100vw;height:100dvh;max-width:none;margin:0;padding:0;background:var(--tx-base);z-index:100;
+}
+body.theater-immersive{overflow:hidden}
+@media(max-width:850px){
+ .theater-three-pane .theater-panel-toggle{z-index:45}
+}

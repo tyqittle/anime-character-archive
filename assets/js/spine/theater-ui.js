@@ -22,6 +22,20 @@
   if(loading)el('loadNoticeText').textContent=message.replace(/\s+/g,' ').slice(0,120);
  }
  function bind(commands){
+  let pageImmersion=false,immersive=false;
+  function syncImmersion(){
+   const active=!!document.fullscreenElement||pageImmersion;
+   document.body.classList.toggle('theater-immersive',pageImmersion);
+   const button=el('fullscreenStage');
+   button.textContent=active?'⤢':'⛶';
+   button.setAttribute('aria-label',active?'退出全屏':'全屏观看');
+   const quick=el('stageQuickFullscreen');
+   if(quick){quick.textContent=active?'退出沉浸':'⛶ 沉浸模式';quick.setAttribute('aria-pressed',String(active));quick.setAttribute('aria-label',active?'退出沉浸模式':'全屏欣赏')}
+   if(active!==immersive){
+    immersive=active;
+    document.dispatchEvent(new CustomEvent('archive:immersivechange',{detail:{active}}));
+   }
+  }
   el('player').addEventListener('wheel',commands.wheel,{passive:false,capture:true});
   el('zoomIn').addEventListener('click',commands.zoomIn);
   el('zoomOut').addEventListener('click',commands.zoomOut);
@@ -29,14 +43,16 @@
   el('animationPicker').addEventListener('change',event=>commands.animation(event.target.value));
   el('retryCharacter').addEventListener('click',commands.retry);
   el('fullscreenStage').addEventListener('click',async()=>{
-   try{if(document.fullscreenElement)await document.exitFullscreen();else await el('stage').requestFullscreen()}
-   catch(error){commands.fullscreenError(error)}
+   if(document.fullscreenElement){await document.exitFullscreen();syncImmersion();return}
+   if(pageImmersion){pageImmersion=false;syncImmersion();return}
+   // Catalog and settings must belong to the same fullscreen top layer.
+   const shell=el('stage').closest?.('.wrap')||el('stage');
+   try{await shell.requestFullscreen()}
+   catch(_error){pageImmersion=true}
+   syncImmersion();
   });
-  document.addEventListener('fullscreenchange',()=>{
-   const button=el('fullscreenStage'),active=!!document.fullscreenElement;
-   button.textContent=active?'⤢':'⛶';
-   button.setAttribute('aria-label',active?'退出全屏':'全屏观看');
-  });
+  document.addEventListener('fullscreenchange',syncImmersion);
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&pageImmersion){pageImmersion=false;syncImmersion()}});
  }
  root.ArchiveTheaterUI=Object.freeze({
   bind,setZoom,setAnimations,setToolsEnabled,setStatus,

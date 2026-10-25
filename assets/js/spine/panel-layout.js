@@ -42,6 +42,16 @@
   }
   left.addEventListener('click',()=>toggle('left'));
   right.addEventListener('click',()=>toggle('right'));
+  let beforeImmersion=null;
+  document.addEventListener('archive:immersivechange',event=>{
+    if(event.detail.active&&!beforeImmersion){
+      beforeImmersion={...state};state.left=true;state.right=true;
+    }else if(!event.detail.active&&beforeImmersion){
+      Object.assign(state,beforeImmersion);beforeImmersion=null;
+    }
+    render();
+    requestAnimationFrame(()=>window.dispatchEvent(new Event('resize')));
+  });
   const backdrop=document.getElementById('panelBackdrop');
   if(backdrop)backdrop.addEventListener('click',()=>{
     if(!state.left)toggle('left');
@@ -53,6 +63,9 @@
     const next=isCompact();
     if(next===compact)return;
     compact=next;
+    // Native fullscreen can change the window width across the mobile breakpoint.
+    // Keep immersion's current drawers instead of reopening stored normal panes.
+    if(beforeImmersion){render();return}
     state.left=next;state.right=true;
     try {
       const value=JSON.parse(localStorage.getItem(storeKey())||'null');

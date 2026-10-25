@@ -28,7 +28,8 @@
  el('closeGameBrowser').addEventListener('click',()=>gameDialog.close());
  el('gameSearch').addEventListener('input',showGames);
  gameDialog.addEventListener('click',event=>{if(event.target===gameDialog){const r=gameDialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)gameDialog.close()}});
- el('emptyBrowse').addEventListener('click',()=>{
+ // Playback can replace the welcome panel before this optional script arrives.
+ el('emptyBrowse')?.addEventListener('click',()=>{
   if(document.body.classList.contains('theater-left-collapsed'))el('toggleLeftPanel').click();
   el('characterSearch').focus();
  });
