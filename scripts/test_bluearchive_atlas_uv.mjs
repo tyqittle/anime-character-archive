@@ -11,7 +11,8 @@ const results=[];
 try{
  for(const id of ['ba-ch0145_home','ba-ch0058_home','ba-ch0069_home','ba-ch0218_home']){
   await page.goto('http://127.0.0.1:8765/spine.html?id='+id,{waitUntil:'domcontentloaded'});
-  await page.waitForFunction(()=>/正在播放：|加载失败|播放器初始化失败|资源下载失败/.test(document.querySelector('#status')?.innerText||''),null,{timeout:90000});
+  // The inspector may be closed; playback state must not depend on its visibility.
+  await page.waitForFunction(()=>/正在播放：|加载失败|播放器初始化失败|资源下载失败/.test(document.querySelector('#status')?.textContent||''),null,{timeout:90000});
   const inspection=await page.evaluate(()=>{
    const runtime=window.spine;
    const p=eval('player');
@@ -40,7 +41,7 @@ try{
     p.skeleton.getBounds(off,size);
     bounds.x=off.x;bounds.y=off.y;bounds.width=size.x;bounds.height=size.y;
    }
-   return {status:document.querySelector('#status')?.innerText,rotations,counts,fixed,uvValid,bounds,regionCount:regions.length,premultipliedAlpha:p.config?.premultipliedAlpha};
+   return {status:document.querySelector('#status')?.textContent,rotations,counts,fixed,uvValid,bounds,regionCount:regions.length,premultipliedAlpha:p.config?.premultipliedAlpha};
   });
   const expected={
    0:[.1,.8,.1,.2,.7,.2,.7,.8],

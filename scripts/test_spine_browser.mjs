@@ -39,7 +39,8 @@ try{
   let state='timeout',message='';
   while(Date.now()<deadline){
    if(page.isClosed()){state='page-closed';break}
-   message=await page.locator('#status').innerText().catch(()=>'(navigating)');
+   // The inspector may be closed while the stage is playing normally.
+   message=await page.locator('#status').textContent().catch(()=>'(navigating)');
    if(message.includes('正在播放：')||message.includes('播放成功')){state='playback-success';break}
    if(/加载失败|资源下载失败|播放失败|超时|版本.*不支持|无法解析|初始化失败|自动播放动作失败|没有找到可播放的动作/.test(message)){state='playback-failure';break}
    await page.waitForTimeout(900);
