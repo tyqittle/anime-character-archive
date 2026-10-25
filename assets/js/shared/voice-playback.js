@@ -7,6 +7,10 @@
   'https://raw.githubusercontent.com/Fernando2603/AzurLane/main/audio/voiceline/'+encodeURIComponent(skin)+'/'+name+'.ogg')}
  function create(onState=()=>{}){
   let audio=null,generation=0,abortPending=null;
+  const reportState=state=>{
+   const failed=error=>console.warn('语音状态订阅者失败',error);
+   try{const result=onState(state);if(result&&typeof result.then==='function')Promise.resolve(result).catch(failed)}catch(error){failed(error)}
+  };
   function stop(){
    generation++;abortPending?.();abortPending=null;
    if(audio){audio.pause();audio.removeAttribute('src');audio.load();audio=null}
@@ -16,7 +20,7 @@
    for(const src of urls){
     if(attempt!==generation)return false;
     const clip=new Audio();audio=clip;clip.volume=volume(level);clip.preload='auto';clip.src=src;
-    onState('loading');
+    reportState('loading');
     try{
      const started=await new Promise((resolve,reject)=>{
       let done=false;
@@ -34,15 +38,15 @@
       catch(error){finish(false,error)}
      });
      if(!started||attempt!==generation)return false;
-     clip.onended=()=>{if(attempt===generation)onState('ended')};
-     onState('playing');return true;
+     clip.onended=()=>{if(attempt===generation)reportState('ended')};
+     reportState('playing');return true;
     }catch(error){
      clip.pause();clip.removeAttribute('src');clip.load();
      if(attempt!==generation)return false;
-     if(error?.name==='NotAllowedError'){onState('blocked');return false}
+     if(error?.name==='NotAllowedError'){reportState('blocked');return false}
     }
    }
-   if(attempt===generation)onState('error');
+   if(attempt===generation)reportState('error');
    return false;
   }
   return {play,stop,setVolume(value){if(audio)audio.volume=volume(value)}};

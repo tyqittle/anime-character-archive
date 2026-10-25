@@ -131,6 +131,7 @@ const targetFPS=lowPower?30:60;
 // Keep only the final click in a burst. Never display an older asynchronous result.
 function requestLoad(name,id,url){
  if(queuedLoad)clearTimeout(queuedLoad);
+ if(typeof cancelFrameModelSetup==='function'){cancelFrameModelSetup();cancelFrameModelSetup=null}
  if(typeof frameVoicePlayer!=='undefined')frameVoicePlayer.stop();
  ++currentGeneration;
  queuedLoad=setTimeout(()=>{queuedLoad=null;load(name,id,url)},110);

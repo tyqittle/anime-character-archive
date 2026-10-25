@@ -198,7 +198,8 @@ function ensureRuntime(version,isCurrent=()=>true){
  return request;
 }
 function clearPlayer(){
- if(typeof selectedVoiceChanged==='function')selectedVoiceChanged();
+ try{if(typeof selectedVoiceChanged==='function')selectedVoiceChanged()}
+ catch(error){console.warn('语音界面更新失败（继续清理播放器）',error)}
  try{player?.dispose?.()}catch(e){console.warn(e)}
  player=null;
  pausedInBackground=null;

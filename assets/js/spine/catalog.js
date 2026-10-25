@@ -2,41 +2,27 @@
 const embeddedCharacters=[{"id":"c010","name":"Rapi","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c010/c010_00"},{"id":"c011","name":"Neon","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c011/c011_00"},{"id":"c012","name":"Anis","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c012/c012_00"},{"id":"c013","name":"Marian","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c013/c013_00"},{"id":"c015","name":"Anis: Sparkling Summer","spineVersion":"4.1","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c015/c015_00"},{"id":"c040","name":"D","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c040/c040_00"},{"id":"c060","name":"Belorta","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c060/c060_00"},{"id":"c070","name":"Brid","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c070/c070_00"},{"id":"c072","name":"Diesel","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c072/c072_00"},{"id":"c080","name":"Centi","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c080/c080_00"},{"id":"c090","name":"Emma","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c090/c090_00"},{"id":"c101","name":"Drake","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c101/c101_00"},{"id":"c110","name":"Crow","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c110/c110_00"},{"id":"c112","name":"Viper","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c112/c112_00"},{"id":"c170","name":"Privaty","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c170/c170_00"},{"id":"c180","name":"Guillotine","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c180/c180_00"},{"id":"c181","name":"Maiden","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c181/c181_00"},{"id":"c191","name":"Alice","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c191/c191_00"},{"id":"c200","name":"Rupee","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c200/c200_00"},{"id":"c203","name":"Rupee: Winter Shopper","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c203/c203_00"},{"id":"c222","name":"Scarlet","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c222/c222_00"},{"id":"c230","name":"Harran","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c230/c230_00"},{"id":"c233","name":"Dorothy","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c233/c233_00"},{"id":"c260","name":"Modernia","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c260/c260_00"},{"id":"c270","name":"Blanc","spineVersion":"4.1","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c270/c270_00"},{"id":"c280","name":"Rosanna","spineVersion":"4.1","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c280/c280_00"},{"id":"c282","name":"Sakura","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c282/c282_00"},{"id":"c352","name":"Helm","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c352/c352_00"},{"id":"c353","name":"Helm: Aquamarine","spineVersion":"4.1","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c353/c353_00"},{"id":"c400","name":"Guilty","spineVersion":"4.0","base":"https://raw.githubusercontent.com/Nikke-db/Nikke-db.github.io/main/l2d/c400/c400_00"}];
 // Keep this legacy IndexedDB name intentionally: renaming it would hide previously downloaded Spine packs in users' browsers.
 const cacheDB='winter-spine-local-v1';
-function openDB(){return new Promise((resolve,reject)=>{
- const req=indexedDB.open(cacheDB,1);
- let settled=false;
- const fail=error=>{if(settled)return;settled=true;clearTimeout(timer);reject(error)};
- const timer=setTimeout(()=>fail(Error('缓存数据库打开超时')),4000);
- req.onupgradeneeded=()=>req.result.createObjectStore('packs',{keyPath:'id'});
- req.onblocked=()=>fail(Error('缓存数据库被其他标签页占用'));
- req.onsuccess=()=>{
-  const db=req.result;
-  if(settled){db.close();return}
-  settled=true;clearTimeout(timer);db.onversionchange=()=>db.close();resolve(db);
- };
- req.onerror=()=>fail(req.error);
-})}
-async function dbAction(mode,fn){
- const db=await openDB();
- try{return await new Promise((resolve,reject)=>{
-  const tx=db.transaction('packs',mode),store=tx.objectStore('packs');
-  let result;
-  tx.oncomplete=()=>resolve(result);
-  tx.onabort=()=>reject(tx.error||Error('缓存事务已中止'));
-  tx.onerror=()=>reject(tx.error||Error('缓存事务失败'));
-  try{const req=fn(store);req.onsuccess=()=>{result=req.result};req.onerror=()=>reject(req.error)}
-  catch(e){tx.abort();reject(e)}
- })}finally{db.close()}
-}
+const spineCache=ArchiveIndexedDBStorage.create({open:()=>indexedDB.open(cacheDB,1)});
+// Compatibility facade for classic-script callers; the service owns transactions.
+const dbAction=(mode,operation)=>spineCache.run(mode,operation);
 // Listing saved packs must not deserialize every multi-megabyte texture bundle.
 const cacheKeys=()=>dbAction('readonly',s=>s.getAllKeys());
-async function refreshSaved(){try{
+let savedRefreshSequence=0;
+async function refreshSaved(){const refresh=++savedRefreshSequence;try{
  const keys=await cacheKeys(),select=$('savedPacks'),previous=select.value;
+ if(refresh!==savedRefreshSequence)return;
+ select.disabled=false;select.title='';
  select.replaceChildren(new Option(keys.length?'选择已保存素材…':'暂无本地动画包',''),
   ...keys.map(id=>new Option(String(id),String(id))));
  if(keys.includes(previous))select.value=previous;
  $('deleteSaved').disabled=!select.value;
-}catch(e){status('浏览器缓存不可用：'+e.message,true)}}
+}catch(e){
+ if(refresh!==savedRefreshSequence)return;
+ const select=$('savedPacks');select.disabled=true;select.title='浏览器缓存不可用：'+e.message;
+ select.replaceChildren(new Option('本地缓存暂不可用，仍可在线播放',''));
+ $('deleteSaved').disabled=true;
+ console.warn('本地缓存不可用（不会影响在线播放）',e);
+}}
 function stopWatchdog(){if(watchdog){clearTimeout(watchdog);watchdog=null}}
 function status(message,error=false){
  if(error)window.ArchiveDesktopBridge?.fail(message);

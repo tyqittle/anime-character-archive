@@ -4,7 +4,7 @@
   "scripts": {
     "test": "node --test tests/test_*.mjs",
     "test:python": "python -m unittest discover -s tests -p test_*.py",
-    "check": "node tests/check_architecture.mjs && node tests/smoke.mjs",
+    "check": "node scripts/module_boundaries.mjs && node tests/check_architecture.mjs && node tests/smoke.mjs",
     "audit:repo": "node scripts/audit_repository_hygiene.mjs --check",
     "audit:live2d": "node scripts/live2d_sources.mjs"
   }

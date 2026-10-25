@@ -1,0 +1,3 @@
+# Model settings URLs and preview identity contain a hash of their exact bytes.
+# Preserve those bytes on Windows as well as Linux; never apply CRLF conversion.
+assets/model-settings/** -text

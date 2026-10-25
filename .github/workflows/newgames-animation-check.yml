@@ -22,6 +22,9 @@ on:
       - 'scripts/test_additional_game_animations.mjs'
       - 'scripts/diagnose_live2d_models.mjs'
       - 'assets/js/shared/cubism-motion-policy.js'
+      - 'assets/js/shared/indexeddb-storage.js'
+      - 'assets/js/shared/voice-playback.js'
+      - 'scripts/test_module_isolation_browser.mjs'
       - '.github/workflows/newgames-animation-check.yml'
   workflow_dispatch:
 permissions:
@@ -52,6 +55,29 @@ jobs:
             tmp/animation-check/
             /tmp/newgames-server.log
           if-no-files-found: ignore
+
+  module-isolation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --no-package-lock playwright-core@1.56.1 pngjs@7.0.0
+      - name: Serve the framework under test
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/module-site.log 2>&1 &
+          sleep 2
+      - name: Verify optional failures and obsolete requests cannot affect the active engine
+        run: node scripts/test_module_isolation_browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: module-isolation-results
+          path: |
+            tmp/module-isolation-browser/
+            /tmp/module-site.log
 
   cubism-behavior:
     runs-on: ubuntu-latest

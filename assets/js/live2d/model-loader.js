@@ -21,6 +21,7 @@ function playFrameVoice(){
 }
 let frameMotionController=null;
 let frameInteractionPlan=null;
+let cancelFrameModelSetup=null;
 function live2DInputRects(){
  const im=model?.internalModel,areas=Object.values(im?.hitAreas||{});
  if(!areas.length||!app||!model?.worldTransform)return null;
@@ -51,6 +52,7 @@ function motion(name){
 async function load(name,id,modelUrl){
  if(!validLive2DIdentity(name,id)){notify('error',{error:'无效的 Live2D 模型编号'});return}
  const generation=++currentGeneration;
+ cancelFrameModelSetup?.();cancelFrameModelSetup=null;
  currentId=id;readyId='';loadStartedAt=performance.now();portraitLocalBounds=null;portraitGeometryBounds=null;
  frameMotionController?.dispose();frameMotionController=null;frameInteractionPlan=null;
  zoom=desktopMode?.58:1;offsetX=desktopMode?(app?.screen?.width||window.innerWidth)*.24:0;offsetY=desktopMode?(app?.screen?.height||window.innerHeight)*.07:0;
@@ -72,13 +74,17 @@ async function load(name,id,modelUrl){
    try{
     message('正在从 '+new URL(candidate).hostname+' 加载 '+name+'…');
     await new Promise((resolve,reject)=>{
-     const fail=error=>{clearTimeout(timer);reject(error instanceof Error?error:Error(String(error)))};
+     let settled=false;
+     const clear=()=>{clearTimeout(timer);if(cancelFrameModelSetup===cancel)cancelFrameModelSetup=null};
+     const fail=error=>{if(settled)return;settled=true;clear();reject(error instanceof Error?error:Error(String(error)))};
+     const cancel=()=>fail(Object.assign(Error('模型加载已取消'),{name:'AbortError'}));
      const timer=setTimeout(()=>fail(Error('模型加载超时（25秒）')),25000);
+     cancelFrameModelSetup=cancel;
      try{
       // fromSync reports setup failures through onError, not an "error" event.
       // Consume the actual rejection so invalid MOC/texture files fail promptly.
       next=PIXI.live2d.Live2DModel.fromSync(candidate,{
-       motionPreload:'NONE',autoUpdate:false,onLoad:()=>{clearTimeout(timer);resolve()},onError:fail
+       motionPreload:'NONE',autoUpdate:false,onLoad:()=>{if(settled)return;settled=true;clear();resolve()},onError:fail
       });
       if(!next||!next.once)fail(Error('Live2D 模型加载器未初始化'));
      }catch(error){fail(error)}
@@ -115,12 +121,13 @@ async function load(name,id,modelUrl){
   model._archiveInteractions={mode:frameInteractionPlan.mode,areas:frameInteractionPlan.sourceAreas,
    mapped:frameInteractionPlan.mappedAreas};
   notify('interaction-capability',{description:frameInteractionPlan.description});
-  const p=(evt)=>{if(!model)return;const pt=evt?.data?.global;if(!pt)return;model.dragging=true;model.dragX=pt.x;model.dragY=pt.y};
+  const isActive=()=>generation===currentGeneration&&model===next;
+  const p=(evt)=>{if(!isActive())return;const pt=evt?.data?.global;if(!pt)return;model.dragging=true;model.dragX=pt.x;model.dragY=pt.y};
   // Play audio within the SAME pointer gesture and iframe. postMessage to the
   // parent is asynchronous and loses transient user activation in some browsers.
   model.on('pointerdown',p);
-  model.on('pointermove',evt=>{if(model?.dragging&&evt?.data?.global){const pt=evt.data.global;offsetX+=pt.x-model.dragX;offsetY+=pt.y-model.dragY;model.x+=pt.x-model.dragX;model.y+=pt.y-model.dragY;model.dragX=pt.x;model.dragY=pt.y}});
-  for(const ev of ['pointerup','pointerupoutside'])model.on(ev,()=>{if(model)model.dragging=false});
+  model.on('pointermove',evt=>{if(isActive()&&model.dragging&&evt?.data?.global){const pt=evt.data.global;offsetX+=pt.x-model.dragX;offsetY+=pt.y-model.dragY;model.x+=pt.x-model.dragX;model.y+=pt.y-model.dragY;model.dragX=pt.x;model.dragY=pt.y}});
+  for(const ev of ['pointerup','pointerupoutside'])model.on(ev,()=>{if(isActive())model.dragging=false});
   // Application renders at PIXI.UPDATE_PRIORITY.LOW (-25); sample afterwards.
   queueLive2DPortraitFit();
   warn.hidden=true;

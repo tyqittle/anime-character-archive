@@ -6,8 +6,10 @@
  let lastSample=-Infinity,ready=false,viewRestored=false,failed=false,lastView='',lastSave=0;
  let sample=null,context=null,lastActions='',renderedFrames=0,lastFrameView=null;
  const emit=(kind,data={})=>{
+  try{
   if(child){window.parent.postMessage({channel:'archive-desktop-surface',kind,...data},location.origin);return}
   window.chrome?.webview?.postMessage({channel:'archive-desktop-v1',session,kind,...data});
+  }catch(error){console.warn('桌面宿主消息发送失败（不影响画布播放）',error)}
  };
  const current=()=>child?{id:typeof readyId==='string'?readyId:'',gameId:''}:
   (typeof chosen==='function'?chosen():null);

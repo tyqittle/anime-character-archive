@@ -6,6 +6,8 @@
 
 ## 边界
 
+模块隔离的行为与故障验证见 [2026-10-25 检查](MODULE_ISOLATION_REVIEW_2026-10-25.md)。缓存后端由 `shared/indexeddb-storage.js` 负责，目录 UI 通过兼容委托调用；缓存、语音订阅者和桌面消息接收端的失败不会中断核心播放或释放。共享服务依赖与引擎入口由 `module_boundaries.mjs` 作为补充检查。
+
 - **数据注册**：`data/animation-catalogs.json` 只登记目录；模型来源、引擎、皮肤和预览状态保留在各目录 JSON 中。
 - **剧场 UI**：`assets/js/spine/theater-ui.js` 独占工具栏、动作列表、状态提示的 DOM 更新和按钮事件绑定；`viewer-ui-events.js` 把 UI 意图映射为播放器命令。Spine 与 Cubism 通过 UI 接口更新状态；画布、手势和角色交互仍由播放器管理，两侧面板由 `panel-layout.js` 独立管理。
 - **浏览器**：`assets/js/shared/catalog-registry.js` 是无 DOM 的显式服务。剧场 bootstrap 读取注册表，目录 UI 由模型数据补充新分组。Spine/Cubism 仍隔离渲染。

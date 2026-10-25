@@ -37,21 +37,23 @@ test('IndexedDB writes resolve only after commit and reject late transaction abo
  const ctx=context();let request,transaction,closed=0;
  const db={close(){closed++},transaction(){return transaction={objectStore:()=>({put:()=>request={}})}}};
  ctx.indexedDB={open(){const open={result:db};queueMicrotask(()=>open.onsuccess());return open}};
- vm.runInContext("const cacheDB='regression';"+source('assets/js/spine/catalog.js').split('function openDB()')[1].split('// Listing saved packs')[0].replace(/^/,'function openDB()'),ctx);
+ run(ctx,'assets/js/shared/indexeddb-storage.js');
+ const storage=ctx.ArchiveIndexedDBStorage.create({open:()=>ctx.indexedDB.open('regression',1)});
  let settled=false;
- const write=ctx.dbAction('readwrite',s=>s.put({id:'demo'})).then(()=>settled=true);
+ const write=storage.run('readwrite',s=>s.put({id:'demo'})).then(()=>settled=true);
  await flush();request.result='demo';request.onsuccess();await flush();
  assert.equal(settled,false);transaction.oncomplete();await write;
  assert.equal(closed,1);
- const failed=ctx.dbAction('readwrite',s=>s.put({id:'demo'}));
+ const failed=storage.run('readwrite',s=>s.put({id:'demo'}));
  await flush();request.onsuccess();transaction.error=Error('quota exceeded');transaction.onabort();
  await assert.rejects(failed,/quota exceeded/);assert.equal(closed,2);
 });
 test('blocked IndexedDB opening fails promptly and closes a late connection',async()=>{
  const ctx=context();let open,closed=0;
  ctx.indexedDB={open(){return open={result:{close(){closed++}}}}};
- vm.runInContext("const cacheDB='test';function openDB()"+source('assets/js/spine/catalog.js').split('function openDB()')[1].split('async function dbAction')[0],ctx);
- const p=ctx.openDB();open.onblocked();await assert.rejects(p,/./);
+ run(ctx,'assets/js/shared/indexeddb-storage.js');
+ const storage=ctx.ArchiveIndexedDBStorage.create({open:()=>ctx.indexedDB.open('test',1)});
+ const p=storage.run('readonly',()=>{});open.onblocked();await assert.rejects(p,/./);
  open.onsuccess();assert.equal(closed,1);assert.equal(ctx.timers.size,0);
 });
 test('Live2D fit uses logical screen size at DPR 2',()=>{
