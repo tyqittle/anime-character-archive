@@ -18,6 +18,27 @@ function initializeSpineInteractions(activePlayer,names){
   entries:names.map(name=>({key:name,group:name,label:name})),areas
  });
  setInteractionAvailability(activePlayer._archiveInteractions.description);
+ window.ArchiveTheaterUI.setInteractionActions?.(activePlayer._archiveInteractions.actions);
+}
+function playSpineAction(activePlayer,key,{loop=false}={}){
+ const serial=(activePlayer._archiveActionSerial||0)+1;activePlayer._archiveActionSerial=serial;
+ activePlayer.setAnimation(key,loop);activePlayer.play();
+ window.ArchiveTheaterUI.selectAnimation(key);
+ status('正在播放：'+window.ArchiveTheaterUI.heading()+' · '+key);
+ if(loop)return;
+ const track=activePlayer.animationState?.getCurrent(0);
+ if(track){
+  const old=track.listener;
+  track.listener={...old,complete:entry=>{
+   if(activePlayer!==player||activePlayer._archiveActionSerial!==serial||activePlayer.animationState?.getCurrent(0)!==track)return;
+   old?.complete?.(entry);
+   if(activePlayer._archiveIdleAnimation){
+    activePlayer.setAnimation(activePlayer._archiveIdleAnimation,true);
+    window.ArchiveTheaterUI.selectAnimation(activePlayer._archiveIdleAnimation);
+    status('正在播放：'+window.ArchiveTheaterUI.heading()+' · '+activePlayer._archiveIdleAnimation);
+   }
+  }};
+ }
 }
 function triggerSpineInteraction(activePlayer,event){
  if(activePlayer!==player||!activePlayer._archiveInteractions)return;
@@ -31,19 +52,8 @@ function triggerSpineInteraction(activePlayer,event){
  }catch(_){}
  const result=activePlayer._archiveInteractions.resolve({hits,point,bounds:activePlayer._archiveViewBounds});
  if(!result)return;
- activePlayer.setAnimation(result.entry.key,false);activePlayer.play();
+ playSpineAction(activePlayer,result.entry.key);
  activePlayer._archiveLastInteraction={area:result.area,key:result.entry.key,mode:result.mode};
- window.ArchiveTheaterUI.selectAnimation(result.entry.key);
- const track=activePlayer.animationState?.getCurrent(0);
- if(track){
-  const old=track.listener;
-  track.listener={...old,complete:entry=>{
-   old?.complete?.(entry);
-   if(activePlayer!==player||activePlayer.animationState?.getCurrent(0)!==track)return;
-   if(activePlayer._archiveIdleAnimation){activePlayer.setAnimation(activePlayer._archiveIdleAnimation,true);
-    window.ArchiveTheaterUI.selectAnimation(activePlayer._archiveIdleAnimation);}
-  }};
- }
 }
 function syncViewTransform(){
  // Zoom and reset must update synchronously (including direct browser tests).
@@ -202,9 +212,13 @@ function zoomViewerAtPointer(e){
  syncViewTransform();
 
 }
-function chooseViewerAnimation(value){
- if(azurlaneFrame&&value){sendAzurLane('motion',{motion:value});return}
+function chooseViewerAnimation(value,{mode='loop'}={}){
+ if(azurlaneFrame&&value){sendAzurLane('motion',{motion:value,mode});return}
  if(!player||!value)return;
- try{player.setAnimation(value,true);player.play();status('正在播放：'+window.ArchiveTheaterUI.heading()+' · '+value)}
+ try{playSpineAction(player,value,{loop:mode!=='once'})}
  catch(err){status('动作切换失败：'+err.message,true)}
+}
+function returnViewerToIdle(){
+ if(azurlaneFrame){sendAzurLane('idle');return}
+ if(player?._archiveIdleAnimation)playSpineAction(player,player._archiveIdleAnimation,{loop:true});
 }

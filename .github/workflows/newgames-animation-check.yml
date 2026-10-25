@@ -26,6 +26,7 @@ on:
       - 'assets/js/shared/voice-playback.js'
       - 'scripts/test_module_isolation_browser.mjs'
       - 'scripts/test_theater_experience_browser.mjs'
+      - 'scripts/test_rich_interactions_browser.mjs'
       - 'scripts/theater_browser_helpers.mjs'
       - 'assets/spine-experience-v2.css'
       - '.github/workflows/newgames-animation-check.yml'
@@ -106,6 +107,29 @@ jobs:
         with:
           name: cubism-behavior-results
           path: /tmp/cubism-behavior-diagnostics.json
+
+  rich-interactions:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --no-package-lock playwright-core@1.56.1
+      - name: Serve the theater
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/rich-site.log 2>&1 &
+          sleep 2
+      - name: Verify rich interactions, source hit meshes and return to standby
+        run: node scripts/test_rich_interactions_browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rich-interactions-results
+          path: |
+            tmp/rich-interactions/
+            /tmp/rich-site.log
 
   source-coverage:
     runs-on: ubuntu-latest

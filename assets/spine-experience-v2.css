@@ -462,3 +462,16 @@ body.theater-immersive{overflow:hidden}
 @media(max-width:850px){
  .theater-three-pane .theater-panel-toggle{z-index:45}
 }
+.motion-playback-options{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.motion-playback-options label{display:flex;align-items:center;gap:7px;margin:0;font-size:12px}
+.motion-playback-options input{width:15px;height:15px;accent-color:#c5b6ed}
+.motion-playback-options button{font-size:12px;padding:8px 12px}
+.motion-help{font-size:11px;color:#a1adc6;line-height:1.6;margin:0}
+#interactionActionPanel{border:1px solid var(--tx-line);border-radius:12px;padding:12px}
+#interactionActionPanel[hidden]{display:none}
+#interactionActionPanel summary{cursor:pointer;font-size:12px;color:#ddd3f4}
+#interactionActionCount{float:right;color:#a9b5cd}
+#interactionActionSearch{margin-top:12px;height:36px;font-size:11px;background:#161e32}
+#interactionActionList{display:grid;gap:6px;margin:10px 0;max-height:300px;overflow-y:auto}
+#interactionActionList button{padding:9px 8px;text-align:left;font-size:11px;line-height:1.5;background:#1c253b;border-color:#ffffff19}
+#interactionActionList button:hover{background:#332e4c;border-color:#c5b6ed}

@@ -76,3 +76,59 @@ test('equal motion files with distinct audio or fades stay separate selectable s
  const p=plan({Tap:[{File:'tap.motion3.json',Sound:'first.wav'},{File:'tap.motion3.json',Sound:'second.wav'},{File:'tap.motion3.json',FadeInTime:.5}]});
  assert.equal(p.entries.length,3);assert.equal(p.entries[1].key,'@motion:Tap:1');
 });
+
+test('one-shot preview overrides runtime looping only for that playback, then restores source flags',async()=>{
+ const m=manager(),clip={loop:true,isLoop(){return this.loop},setIsLoop(v){this.loop=v}};
+ m.loadMotion=async()=>clip;
+ const c=install({manager:m});
+ assert.equal(await c.play('@motion:0',3,{mode:'once',restart:true}),true);
+ assert.equal(clip.loop,false);
+ m.emit('motionFinish');assert.equal(clip.loop,true);
+ await c.play('@motion:0',3,{mode:'loop',restart:true});assert.equal(clip.loop,true);
+ c.dispose();
+});
+
+test('explicit replay restarts the same native action and waits for the actual clip to load',async()=>{
+ const m=manager();let stops=0;
+ m.state={currentGroup:'',currentIndex:0};m.stopAllMotions=()=>{stops++;m.state={}};
+ const c=install({manager:m});
+ assert.equal(await c.play('@motion:0',3,{mode:'once',restart:true}),true);
+ assert.equal(stops,1);assert.equal(m.requests.length,1);
+ c.dispose();
+});
+
+test('late successful clip loads cannot start an obsolete user selection',async()=>{
+ const m=manager(),waiting=[];
+ m.loadMotion=()=>new Promise(resolve=>waiting.push(resolve));
+ const c=install({manager:m});
+ const old=c.play('@motion:0',3,{mode:'once'}),fresh=c.play('@motion:1',3,{mode:'once'});
+ assert.equal(waiting.length,2);
+ waiting[1]({setIsLoop(){},isLoop:()=>true});assert.equal(await fresh,true);
+ waiting[0]({setIsLoop(){},isLoop:()=>true});assert.equal(await old,false);
+ assert.deepEqual(m.requests.map(x=>x.index),[1]);c.dispose();
+});
+
+test('a clip loaded after the request timeout cannot start playback late',async()=>{
+ const m=manager(),errors=[];let resolve;
+ m.loadMotion=()=>new Promise(done=>{resolve=done});m.stopAllMotions=()=>{};
+ const c=install({manager:m,timeoutMs:5,onError:x=>errors.push(x)});
+ assert.equal(await c.play('@motion:0',3,{mode:'once'}),false);
+ resolve({isLoop:()=>true,setIsLoop(){}});await new Promise(done=>setTimeout(done,0));
+ assert.equal(m.requests.length,0);assert.equal(errors.length,1);c.dispose();
+});
+
+test('explicit looping cannot enable zero-duration clips',async()=>{
+ const m=manager(),clip={loop:false,isLoop(){return this.loop},setIsLoop(v){this.loop=v},getLoopDuration:()=>0};
+ m.loadMotion=async()=>clip;const c=install({manager:m});
+ await c.play('@motion:0',3,{mode:'loop'});assert.equal(clip.loop,false);c.dispose();
+});
+
+test('an old action ending while a new start waits for audio cannot restore the new clip loop',async()=>{
+ const m=manager(),clip={loop:true,isLoop(){return this.loop},setIsLoop(v){this.loop=v}};let finishStart;
+ m.loadMotion=async()=>clip;
+ m.startMotion=(group,index)=>new Promise(resolve=>{finishStart=()=>{m.emit('motionStart',group,index);resolve(true)}});
+ const c=install({manager:m}),request=c.play('@motion:0',3,{mode:'once'});
+ await Promise.resolve();await Promise.resolve();m.emit('motionFinish');
+ assert.equal(clip.loop,false);finishStart();assert.equal(await request,true);
+ m.emit('motionFinish');assert.equal(clip.loop,true);c.dispose();
+});

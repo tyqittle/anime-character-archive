@@ -88,3 +88,15 @@ test('explicit fit reacquires an offscreen action pose without invoking 100-pose
  assert.equal(cx.viewZoom,1);assert.equal(cx.viewOffsetX,0);assert.equal(cx.viewOffsetY,0);
  assert.deepEqual(JSON.parse(JSON.stringify(cx.player._archiveViewBounds)),{x:8000,y:-3000,width:200,height:600});
 });
+
+test('Spine one-shot actions return to idle and stale completion callbacks cannot replace a newer action',()=>{
+ const {cx}=controls(),calls=[];let track;
+ const p={_archiveIdleAnimation:'idle',setAnimation(name,loop){calls.push([name,loop]);track={}},play(){},animationState:{getCurrent:()=>track}};
+ cx.player=p;
+ cx.chooseViewerAnimation('touch_head',{mode:'once'});const old=track.listener.complete;
+ cx.chooseViewerAnimation('touch_body',{mode:'once'});const fresh=track.listener.complete;
+ old({});assert.deepEqual(calls,[['touch_head',false],['touch_body',false]]);
+ fresh({});assert.deepEqual(calls.at(-1),['idle',true]);
+ cx.chooseViewerAnimation('touch_head',{mode:'once'});const retired=track.listener.complete;
+ cx.player={};retired({});assert.deepEqual(calls.at(-1),['touch_head',false]);
+});

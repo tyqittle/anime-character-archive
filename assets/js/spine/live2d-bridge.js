@@ -8,7 +8,7 @@ function ensureAzurLaneFrame(){
  azurlaneFrame=document.createElement('iframe');
  azurlaneFrame.className='azurlane-live2d-frame';
  azurlaneFrame.title='Live2D · Cubism 模型画布';
- azurlaneFrame.src='./azurlane-stage.html?v=20261025-live2d-responsive-fit-v12'+(new URLSearchParams(location.search).has('desktop')?'&desktop=1'+(new URLSearchParams(location.search).get('transport')==='webview2'?'&transport=webview2':''):'');
+ azurlaneFrame.src='./azurlane-stage.html?v=20261025-live2d-rich-interactions-v13'+(new URLSearchParams(location.search).has('desktop')?'&desktop=1'+(new URLSearchParams(location.search).get('transport')==='webview2'?'&transport=webview2':''):'');
  azurlaneFrame.loading='eager';
  azurlaneFrame.setAttribute('allow','autoplay');
  $('player').replaceChildren(azurlaneFrame);
@@ -65,7 +65,8 @@ window.addEventListener('message',event=>{
  }
  if(data.id!==azurlanePending?.id)return;
  if(data.kind==='interaction-capability'){
-  setInteractionAvailability(data.description||'模型暂无点击互动动作');return;
+  setInteractionAvailability(data.description||'模型暂无点击互动动作');
+  window.ArchiveTheaterUI.setInteractionActions?.(Array.isArray(data.actions)?data.actions:[],{dragSupported:!!data.dragSupported});return;
  }
  if(data.kind==='playing'){
   $('player').querySelector('.azurlane-loading-cover')?.remove();

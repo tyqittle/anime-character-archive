@@ -17,45 +17,53 @@
   const candidates=entries.map(entry=>{
    const file=entry.definition?.File||entry.definition?.file||'';
    const labels=[entry.group,entry.label,file.split('/').pop(),entry.key].filter(Boolean).map(normalize);
-   return {...entry,labels,kind:kind(labels.join('_')),reaction:labels.some(reaction)};
+   return {...entry,labels,kind:kind(labels.join('_')),reaction:labels.some(reaction),
+    gesture:labels.some(x=>/(?:^|_)(?:drag\d*|swipe\d*)(?:_|$)|拖动|拖拽/.test(x))?'drag':'tap'};
   });
   const sourceAreas=[...new Set(areas.filter(x=>typeof x==='string'&&x))],cycles=new Map();
   function matches(area){
    const normalized=normalize(area),category=kind(area);
    const exact=candidates.filter(x=>x.labels.includes(normalized));
    if(exact.length)return exact;
+   if(/drag\d*/.test(normalized))return [];
    return candidates.filter(x=>x.reaction&&(category?x.kind===category:!x.kind));
   }
   const mapped=sourceAreas.filter(area=>matches(area).length);
-  const fallback=candidates.filter(x=>x.reaction&&x.kind!=='special');
+  const actions=candidates.filter(x=>x.reaction);
+  const fallback=actions.filter(x=>x.kind!=='special'&&x.gesture!=='drag');
   const mode=mapped.length?'source':!sourceAreas.length&&fallback.length?'estimated':'none';
   const description=mode==='source'?'点击交互：源模型区域（'+mapped.length+' 处）':
    mode==='estimated'?'点击交互：按画面分区触发（位置为估算）':
    sourceAreas.length?'模型含点击区域，但没有对应互动动作':'模型仅含动画，源资源暂无点击互动动作';
-  function resolve({hits=[],point,bounds}={}){
+  function resolve({hits=[],point,bounds,gesture='tap'}={}){
    let list=[],area='';
    if(sourceAreas.length){
     const priority=area=>({head:3,special:2,body:1}[kind(area)]||0);
     for(const hit of [...hits].sort((a,b)=>priority(b)-priority(a))){
-     const found=matches(hit);if(found.length){list=found;area=hit;break}
+     const found=matches(hit).filter(x=>x.gesture===gesture);if(found.length){list=found;area=hit;break}
     }
-   }else if(point&&bounds&&bounds.width>0&&bounds.height>0&&
+   }else if(gesture==='tap'&&point&&bounds&&bounds.width>0&&bounds.height>0&&
     point.x>=bounds.x&&point.x<=bounds.x+bounds.width&&point.y>=bounds.y&&point.y<=bounds.y+bounds.height){
     const y=point.yDown===false?(bounds.y+bounds.height-point.y)/bounds.height:(point.y-bounds.y)/bounds.height;
-    area=y<.35?'head':'body';
-    list=fallback.filter(x=>x.kind===area);
+    area=y<.28?'head':'body';
+    // General tap variants remain reachable on the body. Drag clips are
+    // exposed for manual playback, never disguised as ordinary clicks.
+    list=fallback.filter(x=>x.kind===area||(area==='body'&&!x.kind));
     if(!list.length)list=fallback.filter(x=>!x.kind);
    }
    if(!list.length)return null;
    const index=cycles.get(area)||0;cycles.set(area,index+1);
    return {entry:list[index%list.length],area,mode};
   }
-  return {mode,description,sourceAreas,mappedAreas:mapped,resolve};
+  return {mode,description,sourceAreas,mappedAreas:mapped,actions,resolve};
  }
  function isTap(start,end,{threshold=8,generation}={}){
   return !!start&&start.id===end.pointerId&&!start.moved&&!start.multiple&&
    (generation===undefined||start.generation===generation)&&
    Math.hypot(end.clientX-start.x,end.clientY-start.y)<=threshold;
  }
- return Object.freeze({normalize,kind,plan,isTap});
+ function embeddedHitAreas(drawableIds=[]){
+  return drawableIds.flatMap((id,index)=>/^(?:touch|tap|hit)(?:_area)?_?(?:head|face|body|chest|special|sensitive|drag\d*)$/.test(normalize(id))?[{name:id,id,index}]:[]);
+ }
+ return Object.freeze({normalize,kind,plan,isTap,embeddedHitAreas});
 });

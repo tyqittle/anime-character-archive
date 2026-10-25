@@ -38,7 +38,12 @@
   const selection=plan(originalDefinitions),alias='__archive_idle';
   if(Object.hasOwn(originalDefinitions,alias))throw Error('Reserved motion group: '+alias);
   const initial=selection.initial,previousIdle=manager.groups?.idle;
-  let disposed=false,serial=0,cancelPending=null;
+  let disposed=false,serial=0,cancelPending=null,playbackOverride=null;
+  function restorePlayback(){
+   if(!playbackOverride)return;
+   const {clip,loop}=playbackOverride;playbackOverride=null;
+   clip.setIsLoop(loop);delete clip._archivePlaybackMode;
+  }
   const current=()=>!disposed&&!manager.destroyed&&isCurrent();
   function applyLoop(motion,data){
    // The pinned Cubism renderer parses Meta.Loop but never copies it to
@@ -61,32 +66,52 @@
   }
   const started=(group,index)=>{
    if(!current())return;
+   if(playbackOverride?.group===group&&playbackOverride.index===index)playbackOverride.started=true;
+   if(group===alias&&playbackOverride?.started)restorePlayback();
    const entry=group===alias?initial:selection.entries.find(e=>e.group===group&&e.index===index);
    if(entry)onChange(entry.key);
   };
+  const finished=()=>{if(playbackOverride?.started)restorePlayback()};
   manager.on?.('motionStart',started);
+  manager.on?.('motionFinish',finished);
   return {
    entries:selection.entries,initialKey:initial?.key||'',idleKind:initial?(initial.score>0?'identified':'fallback'):'none',
-   async play(key,priority=priorities.FORCE??3){
+   async play(key,priority=priorities.FORCE??3,{mode='source',restart=false}={}){
     const entry=selection.byKey.get(key);if(!entry||!current())return false;
     cancelPending?.();const ticket=++serial;
-    let timer,cancel;
+    let timer,cancel,expired=false;
     const canceled=new Promise(resolve=>{cancel=()=>resolve(false);cancelPending=cancel});
-    if(manager.state?.currentGroup===entry.group&&manager.state?.currentIndex===entry.index){cancelPending=null;return true}
+    if(!restart&&mode==='source'&&manager.state?.currentGroup===entry.group&&manager.state?.currentIndex===entry.index){cancelPending=null;return true}
     try{
      const timeout=new Promise((_,reject)=>{timer=setTimeout(()=>{
+      expired=true;
       if(current()&&ticket===serial)manager.stopAllMotions?.();
       reject(Error('动作请求超时'));
      },timeoutMs)});
-     const ok=await Promise.race([manager.startMotion(entry.group,entry.index,priority),canceled,timeout]);
+     const start=async()=>{
+      // Load without reserving native playback. Only the latest request may
+      // commit, even when an older motion download finishes successfully late.
+      const clip=typeof manager.loadMotion==='function'?await manager.loadMotion(entry.group,entry.index):null;
+      if(!current()||ticket!==serial||expired)return false;
+      restorePlayback();
+      if(restart&&manager.state?.currentGroup===entry.group&&manager.state?.currentIndex===entry.index)manager.stopAllMotions?.();
+      if(clip&&typeof clip.setIsLoop==='function'&&typeof clip.isLoop==='function'&&['once','loop'].includes(mode)){
+       const duration=clip.getLoopDuration?.()??clip._motionData?.duration;
+       playbackOverride={clip,loop:clip.isLoop(),group:entry.group,index:entry.index,started:false};clip.setIsLoop(mode==='loop'&&!(typeof duration==='number'&&duration<=0));clip._archivePlaybackMode=mode;
+      }
+      const ok=await manager.startMotion(entry.group,entry.index,priority);
+      if(!ok&&current()&&ticket===serial)restorePlayback();
+      return ok;
+     };
+     const ok=await Promise.race([start(),canceled,timeout]);
      if(current()&&ticket===serial&&!ok)onError('动作未能启动：'+entry.label);
      return current()&&ticket===serial&&!!ok;
-    }catch(error){if(current()&&ticket===serial)onError('动作加载失败：'+entry.label+'：'+error.message);return false}
+    }catch(error){if(current()&&ticket===serial){restorePlayback();onError('动作加载失败：'+entry.label+'：'+error.message)}return false}
     finally{clearTimeout(timer);if(cancelPending===cancel)cancelPending=null}
    },
    async start(){return initial?this.play(initial.key,priorities.IDLE??1):false},
    dispose(){
-    if(disposed)return;disposed=true;++serial;cancelPending?.();cancelPending=null;manager.off?.('motionStart',started);
+    if(disposed)return;disposed=true;++serial;cancelPending?.();cancelPending=null;restorePlayback();manager.off?.('motionStart',started);manager.off?.('motionFinish',finished);
     if(manager.createMotion===create)manager.createMotion=originalCreate;
     if(initial&&manager.definitions?.[alias]){
      manager.definitions=originalDefinitions;delete manager.motionGroups?.[alias];

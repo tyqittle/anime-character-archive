@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
-const {plan,isTap}=createRequire(import.meta.url)('../assets/js/shared/portrait-interactions.js');
+const {plan,isTap,embeddedHitAreas}=createRequire(import.meta.url)('../assets/js/shared/portrait-interactions.js');
 const entry=(key,group=key,file='')=>({key,group,definition:{File:file}});
 test('source hit regions resolve camel-case and motion filename aliases, with specific regions first',()=>{
  const p=plan({areas:['Body','Head'],entries:[entry('idle'),entry('head-1','tapHead'),entry('body-1','touch_body')]});
@@ -45,4 +45,25 @@ test('dragging out and back, canceled generations and pinch gestures cannot beco
  assert.equal(isTap({...start,multiple:true},end),false);
  assert.equal(isTap(start,end,{generation:3}),false);
  assert.equal(isTap(start,{...end,pointerId:2}),false);
+});
+
+test('rich models expose all source interactions and do not starve generic taps behind body/head clips',()=>{
+ const p=plan({entries:['idle','touch_head','touch_body','touch_idle1','touch_idle2','touch_drag1','touch_special'].map(x=>entry(x))});
+ assert.equal(p.actions.length,6);
+ const args={point:{x:50,y:60},bounds:{x:0,y:0,width:100,height:100}};
+ assert.deepEqual(Array.from({length:3},()=>p.resolve(args).entry.key),['touch_body','touch_idle1','touch_idle2']);
+ assert.equal(p.actions.find(x=>x.key==='touch_drag1').gesture,'drag');
+ assert.equal(p.actions.find(x=>x.key==='touch_special').kind,'special');
+});
+
+test('named embedded touch meshes restore omitted exported hit areas without inventing art-mesh regions',()=>{
+ const areas=embeddedHitAreas(['ArtMesh0','TouchHead','TouchBody','TouchDrag1','TouchSpecial','HitAreaFace','background']);
+ assert.deepEqual(areas.map(x=>x.name),['TouchHead','TouchBody','TouchDrag1','TouchSpecial','HitAreaFace']);
+ assert.equal(areas[2].index,3);
+ const p=plan({areas:areas.map(x=>x.name),entries:['touch_head','touch_body','touch_drag1','touch_special'].map(x=>entry(x))});
+ assert.equal(p.mode,'source');
+ assert.equal(p.resolve({hits:['TouchDrag1'],gesture:'tap'}),null);
+ assert.equal(p.resolve({hits:['TouchBody','TouchDrag1'],gesture:'drag'}).entry.key,'touch_drag1');
+ assert.equal(p.resolve({hits:['TouchHead','TouchDrag1']}).entry.key,'touch_head');
+ assert.equal(plan({areas:['TouchDrag15'],entries:[entry('touch_drag1'),entry('touch_idle15')]}).resolve({hits:['TouchDrag15'],gesture:'drag'}),null);
 });

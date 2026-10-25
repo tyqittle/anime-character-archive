@@ -8,7 +8,7 @@ if(new URLSearchParams(location.search).has('desktop')){
  document.documentElement.style.setProperty('background-color','transparent','important');
  document.documentElement.style.setProperty('background-image','none','important');
 }
-</script><script>if(new URLSearchParams(location.search).has('desktop'))document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('desktop-mode'),{once:true})</script><link rel="stylesheet" href="./assets/spine-ui-isolation.css?v=20261024-ui-isolation-v1"><link rel="stylesheet" href="./assets/spine-base.css?v=20261022-selection-fix-v1"><link rel="stylesheet" href="./assets/spine-theme.css?v=20261022-selection-fix-v1"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://unpkg.com" crossorigin><link rel="dns-prefetch" href="//raw.githubusercontent.com"><link rel="stylesheet" href="./assets/spine-theater-layout.css?v=20261023-stage-height-v1"><link rel="stylesheet" href="./assets/archive-shell.css?v=20261023-preview-friends-v1"><link rel="stylesheet" href="./assets/spine-three-pane.css?v=20261023-sidepanes-v1"><link rel="stylesheet" href="./assets/spine-experience-v2.css?v=20261025-controls-v5"><body>
+</script><script>if(new URLSearchParams(location.search).has('desktop'))document.addEventListener('DOMContentLoaded',()=>document.body.classList.add('desktop-mode'),{once:true})</script><link rel="stylesheet" href="./assets/spine-ui-isolation.css?v=20261024-ui-isolation-v1"><link rel="stylesheet" href="./assets/spine-base.css?v=20261022-selection-fix-v1"><link rel="stylesheet" href="./assets/spine-theme.css?v=20261022-selection-fix-v1"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="preconnect" href="https://unpkg.com" crossorigin><link rel="dns-prefetch" href="//raw.githubusercontent.com"><link rel="stylesheet" href="./assets/spine-theater-layout.css?v=20261023-stage-height-v1"><link rel="stylesheet" href="./assets/archive-shell.css?v=20261023-preview-friends-v1"><link rel="stylesheet" href="./assets/spine-three-pane.css?v=20261023-sidepanes-v1"><link rel="stylesheet" href="./assets/spine-experience-v2.css?v=20261025-rich-interactions-v13"><body>
 <div class="wrap theater-three-pane">
 <section class="side" id="characterSidebar" aria-label="动态立绘角色浏览">
 <div class="side-sitebar">
@@ -63,7 +63,7 @@ if(new URLSearchParams(location.search).has('desktop')){
 <div class="stage-toolbar" id="stageToolbar" aria-label="动画观赏工具栏"><h3 class="inspector-heading">动作 / MOTION</h3>
  <div class="toolbar-main"><label class="tool-label" for="animationPicker">动作</label>
  <select id="animationPicker" class="animation-picker" aria-label="切换角色动作" disabled><option value="">选择角色后可切换动作</option></select></div>
- <h3 class="inspector-heading">配音 / VOICE</h3><div id="characterVoiceControls" style="display:flex;align-items:center;flex-wrap:wrap;gap:8px"><label style="display:flex;align-items:center;gap:4px"><input id="voiceEnabled" type="checkbox">角色语音</label><label for="voiceLanguage">语言</label><select id="voiceLanguage" aria-label="语音语言"><option value="JP">日语</option><option value="KR">韩语</option></select><button type="button" id="voiceTest" disabled title="播放当前角色语音">试听语音</button><span id="voiceAvailability" style="font-size:12px;opacity:.75">请选择角色以查看可用语音</span><label for="voiceVolume">音量</label><input id="voiceVolume" type="range" min="0" max="100" value="80" aria-label="语音音量" style="width:68px"></div>
+ <div class="motion-playback-options"><label><input id="motionLoop" type="checkbox"> 循环预览</label><button id="returnIdle" type="button" disabled>回到待机</button></div><p class="motion-help">动作默认播放一次后回待机；勾选后可循环预览。</p><label id="interactionModeControls" hidden>鼠标拖动<select id="interactionMode" aria-label="拖动模式"><option value="pan">移动画面</option><option value="interact">角色互动（按源区域触发）</option></select></label><details id="interactionActionPanel" hidden><summary>全部互动动作 <span id="interactionActionCount"></span></summary><input id="interactionActionSearch" type="search" aria-label="搜索互动动作" placeholder="搜索动作名 / 头部 / 身体 / 拖动…"><div id="interactionActionList" aria-label="可直接播放的全部互动动作"></div><p class="motion-help">全部按钮均播放一次；拖动类动作在此手动播放，不会把移动画面当作互动。源文件未提供区域时，画面点击位置为估算。</p></details><h3 class="inspector-heading">配音 / VOICE</h3><div id="characterVoiceControls" style="display:flex;align-items:center;flex-wrap:wrap;gap:8px"><label style="display:flex;align-items:center;gap:4px"><input id="voiceEnabled" type="checkbox">角色语音</label><label for="voiceLanguage">语言</label><select id="voiceLanguage" aria-label="语音语言"><option value="JP">日语</option><option value="KR">韩语</option></select><button type="button" id="voiceTest" disabled title="播放当前角色语音">试听语音</button><span id="voiceAvailability" style="font-size:12px;opacity:.75">请选择角色以查看可用语音</span><label for="voiceVolume">音量</label><input id="voiceVolume" type="range" min="0" max="100" value="80" aria-label="语音音量" style="width:68px"></div>
  <button type="button" id="sendToDesktop" class="tool-btn" title="请先更新 Windows 桌面客户端以支持本站全部已接入引擎">放到桌面 ↗</button>
  <h3 class="inspector-heading">视图 / VIEW</h3><div class="toolbar-view" aria-label="画面调整">
   <button class="tool-btn" type="button" id="zoomOut" title="缩小" aria-label="缩小人物" disabled>−</button>
@@ -86,23 +86,23 @@ if(new URLSearchParams(location.search).has('desktop')){
 <script defer src="./assets/js/shared/portrait-framing.js?v=20261024-live2d-interactions-v10"></script>
 <script defer src="./assets/js/shared/spine-atlas-coordinates.js?v=20261023-atlas-coordinates-v1"></script>
 <script defer src="./assets/js/shared/asset-sources.js?v=20261022-repair-v1"></script>
-<script defer src="./assets/js/shared/voice-playback.js?v=20261025-live2d-responsive-fit-v12"></script>
-<script defer src="./assets/js/shared/portrait-interactions.js?v=20261024-live2d-interactions-v10"></script>
+<script defer src="./assets/js/shared/voice-playback.js?v=20261025-live2d-rich-interactions-v13"></script>
+<script defer src="./assets/js/shared/portrait-interactions.js?v=20261025-live2d-rich-interactions-v13"></script>
 <script defer src="./assets/js/spine/state.js?v=20261022-repair-v1"></script>
-<script defer src="./assets/js/spine/theater-ui.js?v=20261025-controls-v5"></script>
+<script defer src="./assets/js/spine/theater-ui.js?v=20261025-live2d-rich-interactions-v13"></script>
 <script defer src="./assets/js/spine/animation-identity.js?v=20261023-dedup-v1"></script>
-<script defer src="./assets/js/spine/viewer-controls.js?v=20261024-live2d-interactions-v10"></script>
-<script defer src="./assets/js/spine/viewer-ui-events.js?v=20261024-ui-events-v1"></script>
-<script defer src="./assets/js/shared/indexeddb-storage.js?v=20261025-live2d-responsive-fit-v12"></script>
-<script defer src="./assets/js/spine/catalog.js?v=20261025-live2d-responsive-fit-v12"></script>
+<script defer src="./assets/js/spine/viewer-controls.js?v=20261025-live2d-rich-interactions-v13"></script>
+<script defer src="./assets/js/spine/viewer-ui-events.js?v=20261025-live2d-rich-interactions-v13"></script>
+<script defer src="./assets/js/shared/indexeddb-storage.js?v=20261025-live2d-rich-interactions-v13"></script>
+<script defer src="./assets/js/spine/catalog.js?v=20261025-live2d-rich-interactions-v13"></script>
 <script defer src="./assets/js/spine/performance.js?v=20261024-live2d-interactions-v10"></script>
 <script defer src="./assets/js/spine/illustration-quality.js?v=20261024-live2d-interactions-v10"></script>
-<script defer src="./assets/js/spine/spine-runtime.js?v=20261025-live2d-responsive-fit-v12"></script>
+<script defer src="./assets/js/spine/spine-runtime.js?v=20261025-live2d-rich-interactions-v13"></script>
 <script defer src="./assets/js/spine/spine-assets.js?v=20261022-repair-v1"></script>
-<script defer src="./assets/js/spine/live2d-bridge.js?v=20261025-live2d-responsive-fit-v12"></script>
+<script defer src="./assets/js/spine/live2d-bridge.js?v=20261025-live2d-rich-interactions-v13"></script>
 <script defer src="./assets/js/spine/session-cache.js?v=20261022-repair-v1"></script>
 <script defer src="./assets/js/spine/playback.js?v=20261024-live2d-interactions-v10"></script>
 <script defer src="./assets/js/spine/local-tools.js?v=20261023-atlas-coordinates-v1"></script>
 <script defer src="./assets/js/shared/desktop-alpha-mask.js?v=20261024-live2d-interactions-v10"></script>
-<script defer src="./assets/js/spine/desktop-webview-bridge.js?v=20261025-live2d-responsive-fit-v12"></script>
-<script defer src="./assets/js/spine/bootstrap.js?v=20261025-live2d-responsive-fit-v12"></script><script defer src="./assets/js/shared/friend-links.js?v=20261023-preview-friends-v1"></script><script defer src="./assets/js/spine/panel-layout.js?v=20261025-controls-v5"></script><script defer src="./assets/js/spine/theater-experience-v2.js?v=20261025-controls-v5"></script><script defer src="./assets/js/spine/character-audio.js?v=20261024-live2d-interactions-v10"></script><script defer src="./assets/js/spine/desktop-launch.js?v=20261024-universal-catalog-v1"></script><script defer src="./assets/js/spine/desktop-drag.js?v=20261022-alpha-repair-v3"></script></body></html>
+<script defer src="./assets/js/spine/desktop-webview-bridge.js?v=20261025-live2d-rich-interactions-v13"></script>
+<script defer src="./assets/js/spine/bootstrap.js?v=20261025-live2d-rich-interactions-v13"></script><script defer src="./assets/js/shared/friend-links.js?v=20261023-preview-friends-v1"></script><script defer src="./assets/js/spine/panel-layout.js?v=20261025-controls-v5"></script><script defer src="./assets/js/spine/theater-experience-v2.js?v=20261025-controls-v5"></script><script defer src="./assets/js/spine/character-audio.js?v=20261024-live2d-interactions-v10"></script><script defer src="./assets/js/spine/desktop-launch.js?v=20261024-universal-catalog-v1"></script><script defer src="./assets/js/spine/desktop-drag.js?v=20261022-alpha-repair-v3"></script></body></html>

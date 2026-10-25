@@ -21,6 +21,7 @@ function playFrameVoice(){
 }
 let frameMotionController=null;
 let frameInteractionPlan=null;
+let frameDragInteraction=false;
 let cancelFrameModelSetup=null;
 function live2DInputRects(){
  const im=model?.internalModel,areas=Object.values(im?.hitAreas||{});
@@ -36,24 +37,30 @@ function live2DInputRects(){
    (Math.max(...points.map(p=>p.y))-y)*box.height/app.screen.height];
  }).filter(r=>r.every(Number.isFinite)&&r[2]>0&&r[3]>0)}catch(_){return null}
 }
-function triggerLive2DInteraction(event){
+function triggerLive2DInteraction(event,{gesture='tap'}={}){
  if(!model||!readyId||!frameInteractionPlan||!app)return null;
  const box=document.getElementById('live2dCanvas').getBoundingClientRect();
  if(!box.width||!box.height)return null;
  const point={x:(event.clientX-box.left)*app.screen.width/box.width,y:(event.clientY-box.top)*app.screen.height/box.height};
- const hit=frameInteractionPlan.resolve({hits:model.hitTest(point.x,point.y),point,bounds:model.getBounds()});
+ // getBounds updates the model transform, but its declared canvas often has
+ // large invisible margins. Estimated zones must follow the visible portrait.
+ const declared=model.getBounds();
+ const local=portraitLocalBounds||portraitGeometryBounds;
+ const visible=local?ArchivePortraitFraming.unionTransformedBounds([local],model.worldTransform):null;
+ const hit=frameInteractionPlan.resolve({hits:model.hitTest(point.x,point.y),point,bounds:visible||declared,gesture});
  if(hit){model._archiveLastInteraction={area:hit.area,key:hit.entry.key,mode:hit.mode};motion(hit.entry.key);notify('interaction',model._archiveLastInteraction)}
  return hit;
 }
-function motion(name){
+function motion(name,{mode='once'}={}){
  if(!model||typeof name!=='string')return;
- return frameMotionController?.play(name);
+ return frameMotionController?.play(name,PIXI.live2d.MotionPriority.FORCE,{mode:['once','loop','source'].includes(mode)?mode:'once',restart:true});
 }
+function returnToFrameIdle(){return frameMotionController?.play(frameMotionController.initialKey,PIXI.live2d.MotionPriority.FORCE,{mode:'source',restart:true})}
 async function load(name,id,modelUrl){
  if(!validLive2DIdentity(name,id)){notify('error',{error:'无效的 Live2D 模型编号'});return}
  const generation=++currentGeneration;
  cancelFrameModelSetup?.();cancelFrameModelSetup=null;
- currentId=id;readyId='';loadStartedAt=performance.now();portraitLocalBounds=null;portraitGeometryBounds=null;
+ currentId=id;readyId='';frameDragInteraction=false;loadStartedAt=performance.now();portraitLocalBounds=null;portraitGeometryBounds=null;
  frameMotionController?.dispose();frameMotionController=null;frameInteractionPlan=null;
  zoom=desktopMode?.58:1;offsetX=desktopMode?(app?.screen?.width||window.innerWidth)*.24:0;offsetY=desktopMode?(app?.screen?.height||window.innerHeight)*.07:0;
  if(model){try{app.stage.removeChild(model);model.destroy()}catch(e){}model=null}
@@ -115,14 +122,25 @@ async function load(name,id,modelUrl){
   // Model readiness and the first visible fit must refer to its standby pose.
   if(initial&&!await frameMotionController.start()&&generation===currentGeneration&&model===next)throw Error('初始动作未能加载：'+initial);
   if(generation!==currentGeneration||model!==next)return;
+  // Some exported settings omit HitAreas while the MOC retains the actual
+  // named touch meshes. Reuse their current deformed geometry, not canvas ratios.
+  const im=model.internalModel,recovered=ArchivePortraitInteractions.embeddedHitAreas?.(im.getDrawableIDs?.()||[])||[];
+  im.hitAreas=im.hitAreas||{};
+  for(const area of recovered){
+   if(im.hitAreas[area.name])continue;
+   const bounds=im.getDrawableBounds?.(area.index);
+   if(ArchivePortraitFraming.validBounds(bounds))im.hitAreas[area.name]=area;
+  }
   frameInteractionPlan=ArchivePortraitInteractions.plan({
    entries:frameMotionController.entries,areas:Object.keys(model.internalModel?.hitAreas||{})
   });
   model._archiveInteractions={mode:frameInteractionPlan.mode,areas:frameInteractionPlan.sourceAreas,
    mapped:frameInteractionPlan.mappedAreas};
-  notify('interaction-capability',{description:frameInteractionPlan.description});
+  notify('interaction-capability',{description:frameInteractionPlan.description,
+   dragSupported:frameInteractionPlan.mappedAreas.some(area=>/drag/.test(ArchivePortraitInteractions.normalize(area))),
+   actions:(frameInteractionPlan.actions||[]).map(({key,label,group,kind,gesture})=>({key,label:label||group||key,kind,gesture}))});
   const isActive=()=>generation===currentGeneration&&model===next;
-  const p=(evt)=>{if(!isActive())return;const pt=evt?.data?.global;if(!pt)return;model.dragging=true;model.dragX=pt.x;model.dragY=pt.y};
+  const p=(evt)=>{if(!isActive()||frameDragInteraction)return;const pt=evt?.data?.global;if(!pt)return;model.dragging=true;model.dragX=pt.x;model.dragY=pt.y};
   // Play audio within the SAME pointer gesture and iframe. postMessage to the
   // parent is asynchronous and loses transient user activation in some browsers.
   model.on('pointerdown',p);

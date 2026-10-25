@@ -6,6 +6,8 @@ window.ArchiveTheaterUI.bind({
  zoomOut:()=>adjustViewerZoom(1/1.2),
  reset:resetViewerTransform,
  animation:chooseViewerAnimation,
+ idle:returnViewerToIdle,
+ interactionMode:mode=>sendAzurLane('interaction-mode',{mode}),
  fullscreenError:error=>status('无法切换全屏：'+error.message,true),
  retry:()=>{
   const current=chosen();

@@ -5,7 +5,9 @@ window.addEventListener('message',event=>{
  if(d?.channel!==CHANNEL)return;
  if(d.kind==='load')requestLoad(d.skinCode,d.id,d.modelUrl);
  else if(d.kind==='voice-config')setFrameVoice(d.voice);
- else if(d.kind==='motion')motion(d.motion);
+ else if(d.kind==='motion')motion(d.motion,{mode:d.mode});
+ else if(d.kind==='idle')returnToFrameIdle();
+ else if(d.kind==='interaction-mode'){frameDragInteraction=d.mode==='interact';if(model)model.dragging=false}
  else if(d.kind==='zoom')setZoom(Number(d.zoom)||1);
  else if(d.kind==='desktop-view'&&desktopMode&&d.view){const v=d.view;if([v.zoom,v.offsetX,v.offsetY].every(Number.isFinite)){zoom=Math.min(3.5,Math.max(.5,v.zoom));offsetX=v.offsetX;offsetY=v.offsetY;fit();notify('zoom',{zoom})}}
  else if(d.kind==='reset'){zoom=desktopMode?.58:1;offsetX=desktopMode?(app?.screen?.width||window.innerWidth)*.24:0;offsetY=desktopMode?(app?.screen?.height||window.innerHeight)*.07:0;portraitLocalBounds=null;portraitGeometryBounds=null;fit();if(model)queueLive2DPortraitFit();notify('zoom',{zoom})}
@@ -44,7 +46,7 @@ const voiceCanvas=document.getElementById('live2dCanvas');
 voiceCanvas.addEventListener('pointerdown',e=>{
  if(e.button!==0)return;
  interactionPointers.add(e.pointerId);
- if(interactionPointers.size===1)voicePointer={id:e.pointerId,x:e.clientX,y:e.clientY,generation:currentGeneration};
+ if(interactionPointers.size===1)voicePointer={id:e.pointerId,x:e.clientX,y:e.clientY,generation:currentGeneration,mode:frameDragInteraction};
  else if(voicePointer)voicePointer.multiple=true;
 });
 voiceCanvas.addEventListener('pointermove',e=>{
@@ -53,6 +55,10 @@ voiceCanvas.addEventListener('pointermove',e=>{
 voiceCanvas.addEventListener('pointerup',e=>{
  interactionPointers.delete(e.pointerId);
  const start=voicePointer;voicePointer=null;
+ if(start&&start.mode!==frameDragInteraction)return;
+ if(start&&start.id===e.pointerId&&frameDragInteraction&&start.moved&&!start.multiple&&start.generation===currentGeneration){
+  triggerLive2DInteraction({clientX:start.x,clientY:start.y},{gesture:'drag'});return;
+ }
  if(!ArchivePortraitInteractions.isTap(start,e,{generation:currentGeneration}))return;
  triggerLive2DInteraction(e);
  playFrameVoice();
