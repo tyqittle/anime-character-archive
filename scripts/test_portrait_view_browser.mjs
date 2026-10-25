@@ -1,3 +1,4 @@
+import {openTheaterInspector} from './theater_browser_helpers.mjs';
 // End-to-end camera and retired-renderer regression with real source rigs.
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
@@ -27,6 +28,7 @@ try{
  const page=await browser.newPage({viewport:{width:1440,height:900},deviceScaleFactor:1.5});
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto('http://127.0.0.1:8765/spine.html',{waitUntil:'domcontentloaded'});
+ await openTheaterInspector(page);
  await page.waitForFunction(()=>allCharacters.length>1000,null,{timeout:45000});
  await page.evaluate(()=>{window.__retiredPortraits=[]});
  const cases=[

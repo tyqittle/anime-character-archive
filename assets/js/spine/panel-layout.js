@@ -9,7 +9,7 @@
   const isCompact=()=>window.matchMedia('(max-width:850px)').matches;
   const state={
     left:isCompact(),
-    right:isCompact()
+    right:true
   };
   const storeKey=()=>isCompact()?'anime-archive-theater-panes-mobile-v1':'anime-archive-theater-panes-desktop-v1';
   try {
@@ -42,13 +42,18 @@
   }
   left.addEventListener('click',()=>toggle('left'));
   right.addEventListener('click',()=>toggle('right'));
+  const backdrop=document.getElementById('panelBackdrop');
+  if(backdrop)backdrop.addEventListener('click',()=>{
+    if(!state.left)toggle('left');
+    if(!state.right)toggle('right');
+  });
   // Resize across the responsive breakpoint without overlapping two mobile drawers.
   let compact=isCompact();
   window.addEventListener('resize',()=>{
     const next=isCompact();
     if(next===compact)return;
     compact=next;
-    state.left=next;state.right=next;
+    state.left=next;state.right=true;
     try {
       const value=JSON.parse(localStorage.getItem(storeKey())||'null');
       if(value&&typeof value.left==='boolean'&&typeof value.right==='boolean'){

@@ -1,3 +1,4 @@
+import {openTheaterInspector} from './theater_browser_helpers.mjs';
 // Real engines with deliberate failures in optional modules and an old request.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -41,6 +42,7 @@ try{
   return frame;
  }
  await page.goto(base+'/spine.html?id=ec-60010003',{waitUntil:'domcontentloaded'});
+ await openTheaterInspector(page);
  await playing('ec-60010003');assert.equal(results.at(-1).cacheDisabled,true);
  results.at(-1).catalogFailureIsolated=true;
  // A broken optional voice UI must not interrupt engine teardown/switching.
@@ -68,6 +70,7 @@ try{
  await desktop.addInitScript(()=>{window.chrome.webview={postMessage(){throw Error('fixture: disposed host')},addEventListener(){}}});
  const surface=await desktop.newPage();surface.on('pageerror',error=>errors.push(error.message));
  await surface.goto(base+'/spine.html?desktop=1&transport=webview2&game=echocalypse&id=ec-60010003&session=fixture',{waitUntil:'domcontentloaded'});
+ await openTheaterInspector(surface);
  await surface.waitForFunction(()=>player?.skeleton&&document.getElementById('status').textContent.startsWith('正在播放：'),null,{timeout:110000});
  const first=await surface.evaluate(()=>window.ArchiveDesktopBridge.inspect().renderedFrames);await surface.waitForTimeout(700);
  assert.ok(await surface.evaluate(()=>window.ArchiveDesktopBridge.inspect().renderedFrames)>first);

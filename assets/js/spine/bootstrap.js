@@ -70,6 +70,12 @@ async function fetchAnimationManifest(url){
   $('bd2CharacterFilter').replaceChildren(new Option('全部角色（'+roles.length+' 人）',''),
     ...roles.map(name=>new Option(name,name)));
   refreshCharacters();
+  // Display actual indexed appearances; old promotional labels contain stale counts.
+  for(const option of $('gameFilter').options){
+   const records=allCharacters.filter(c=>matchesAnimationCollection(c,option.value));
+   const label=option.value==='all'?'全部游戏':option.text.replace(/^★\s*[^·]+·\s*/,'').replace(/[（(][^）)]*\d+\s*套[^）)]*[）)]/g,'').trim();
+   option.text=label+' · '+records.length.toLocaleString()+' 套';
+  }
   const requested=params.get('id');
   const canonicalId=requested&&canonicalAnimationId(requested);
   const hit=canonicalId&&allCharacters.find(c=>c.id===canonicalId);

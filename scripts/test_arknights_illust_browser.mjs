@@ -1,3 +1,4 @@
+import {openTheaterInspector} from './theater_browser_helpers.mjs';
 // Browser regression for Arknights illustration vs BattleFront classification.
 // Tests an actual high-res source model, not the game catalogue alone.
 import fs from 'node:fs';
@@ -9,6 +10,7 @@ try{
  const p=await browser.newPage({viewport:{width:1440,height:900},deviceScaleFactor:2});
  const id='ak-illust-1012-skadi2';
  await p.goto('http://127.0.0.1:8765/spine.html?id='+id,{waitUntil:'domcontentloaded',timeout:30000});
+ await openTheaterInspector(p);
  await p.waitForFunction(id=>document.querySelector('#characters')?.value===id,id,{timeout:30000});
  const chosen=await p.evaluate(()=>({filter:document.querySelector('#gameFilter').value,asset:allCharacters.find(c=>c.id==='ak-illust-1012-skadi2')?.assetType}));
  if(chosen.filter!=='arknights'||chosen.asset!=='dynamic-illustration-spine')throw Error('Wrong deep-link collection: '+JSON.stringify(chosen));

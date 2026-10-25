@@ -1,3 +1,4 @@
+import {openTheaterInspector} from './theater_browser_helpers.mjs';
 // Source diagnostics for generic Cubism playback, alpha and original geometry.
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
@@ -21,6 +22,7 @@ try{
   const item={id};report.push(item);
   try{
    await page.goto('http://127.0.0.1:8765/spine.html?id='+id,{waitUntil:'domcontentloaded'});
+   await openTheaterInspector(page);
    await page.waitForFunction(()=>/正在播放：|失败|超时/.test(document.querySelector('#status')?.textContent||''),null,{timeout:100000});
    item.status=await page.locator('#status').textContent();
    if(!item.status.startsWith('正在播放：')){if(strict)throw Error(item.status);continue;}
@@ -127,6 +129,7 @@ try{
  }
  if(strict){
   await page.goto('http://127.0.0.1:8765/spine.html?id=gc-girl01-l2d00&desktop=1',{waitUntil:'domcontentloaded'});
+  await openTheaterInspector(page);
   await page.waitForFunction(()=>document.querySelector('#status')?.textContent.startsWith('正在播放：'),null,{timeout:100000});
   const child=page.frames().find(f=>f.url().includes('azurlane-stage.html'));
   const surface=await child.evaluate(()=>new Promise(resolve=>app.ticker.addOnce(()=>{

@@ -372,3 +372,83 @@ body:not(.desktop-mode) .theater-three-pane{isolation:isolate;background:var(--t
 }
 body.desktop-mode .stage-chrome,body.desktop-mode .stage-topbar,
 body.desktop-mode .stage-bottom{display:none!important}
+
+/* Browsing first: the utility inspector is optional, the art keeps the space. */
+body:not(.desktop-mode){font-family:"Segoe UI","Microsoft YaHei UI",system-ui,sans-serif}
+.theater-three-pane .side-sitebar{padding:18px 20px 14px;background:transparent}
+.theater-three-pane .sitebrand{font-size:13px;margin-bottom:12px}
+.theater-three-pane .sitebrand:before{content:'✧';background:#c5b7ff;border-radius:8px;box-shadow:none}
+.theater-three-pane .side-pageintro{margin-top:14px}
+.theater-three-pane .side-pageintro h1{font-size:23px;font-weight:650}
+.theater-three-pane .side-pageintro p{color:#a2aec5}
+.theater-three-pane .side-section-title,
+.theater-three-pane .side label[for="selectedCharacterDisplay"],
+.theater-three-pane #selectedCharacterDisplay{display:none}
+.theater-three-pane .side>label{margin-top:12px}
+.theater-three-pane .side{background:#101525}
+.theater-three-pane .character-card{border-radius:10px;background:#1b2133;padding:0 0 10px;gap:7px}
+.theater-three-pane .character-card:hover{background:#252b40;box-shadow:none}
+.theater-three-pane .character-card img,.theater-three-pane .character-card .fallback{border-radius:8px 8px 0 0;background:#161c2e;height:180px;max-height:180px!important}
+.theater-three-pane .character-card .nm,.theater-three-pane .character-card small{padding-inline:9px;text-align:left}
+.theater-three-pane .character-card small{color:#a0abc4}
+.theater-three-pane .stage-dock .stage-primary{background:#c4b5fa;color:#211b36;box-shadow:none;border-color:#d4c8ff}
+.theater-three-pane .stage-overline{letter-spacing:.16em;color:#b9b2cd}
+.theater-three-pane .stage-bottom{padding-bottom:max(20px,env(safe-area-inset-bottom))}
+.theater-three-pane #stageFeedback{max-width:calc(100% - 32px);border:0;background:#101525bd}
+.theater-three-pane .stage-dock{border-color:#a9a4c438;border-radius:16px;background:#171c2ee8}
+.theater-three-pane .theater-panel-toggle{height:64px;width:27px;font-size:10px;box-shadow:none;border-color:#a9a4df40}
+.theater-three-pane .catalog-empty{grid-column:1/-1;padding:28px 12px;text-align:center;line-height:1.8;color:#bac5dc;font-size:13px}
+.theater-three-pane .catalog-empty button{display:block;margin:16px auto 0;font-size:12px;background:#34304d}
+.theater-three-pane .advanced-tools[open]{max-height:50dvh;overflow-y:auto}
+#panelBackdrop{display:none}
+@media(min-width:851px){
+ body:not(.desktop-mode) .wrap.theater-three-pane{--theater-left-width:350px;--theater-right-width:300px}
+ body.theater-left-collapsed .wrap.theater-three-pane{--theater-left-width:0px}
+ body.theater-right-collapsed .wrap.theater-three-pane{--theater-right-width:0px}
+ .theater-three-pane .character-cards{margin-inline:14px!important;gap:10px}
+}
+@media(max-width:850px){
+ .theater-three-pane .side,.theater-three-pane .theater-inspector{z-index:40;width:min(90vw,370px)}
+ .theater-three-pane #toggleLeftPanel{left:min(90vw,370px)}
+ .theater-three-pane #toggleRightPanel{right:min(90vw,370px)}
+ body.theater-left-collapsed .theater-three-pane #toggleLeftPanel{left:0}
+ body.theater-right-collapsed .theater-three-pane #toggleRightPanel{right:0}
+ body:not(.theater-left-collapsed) #panelBackdrop,body:not(.theater-right-collapsed) #panelBackdrop{
+  display:block;position:fixed;inset:0;border:0;border-radius:0;max-width:none;background:#04081688;backdrop-filter:blur(3px);z-index:35;
+ }
+ .theater-three-pane .character-card img,.theater-three-pane .character-card .fallback{height:155px;max-height:155px!important}
+ .theater-three-pane .side-sitebar{padding:14px 16px 10px}
+ .theater-three-pane .stage-dock{gap:1px}
+ .theater-three-pane .stage-dock button{min-width:34px;min-height:42px;padding-inline:6px}
+ .theater-three-pane #stageZoomLabel{min-width:36px}
+}
+body.desktop-mode #panelBackdrop{display:none!important}
+.theater-three-pane .character-card img{object-fit:cover}
+.theater-three-pane .stage-topbar{background:linear-gradient(#0a1020bb,transparent);padding-bottom:25px}
+.theater-three-pane #stageCharacterName{font-weight:650}
+.theater-three-pane #placeholder{font-size:14px;line-height:1.8}
+.theater-three-pane .game-filter-heading{display:flex;align-items:center;justify-content:space-between;margin:12px 19px 6px}
+.game-filter-heading label{margin:0;font-size:11px}
+.game-filter-heading button{padding:3px 0;border:0;background:transparent;color:#c3b5f4;font-size:11px}
+.theater-three-pane #placeholder{inset:0;max-height:330px;border:0;background:transparent;text-align:center;padding:30px 15px;pointer-events:auto}
+#placeholder .empty-overline{font-size:9px;letter-spacing:.2em;color:#a69ac3}
+#placeholder h2{font-size:clamp(28px,3vw,42px);font-weight:600;letter-spacing:-.04em;color:#eee9fa;margin:18px 0 10px}
+#placeholder p{line-height:1.9;font-size:13px;color:#a4aec6;margin:0}
+#placeholder button{display:block;margin:23px auto 18px;min-width:150px;border:1px solid #b4a6de60;background:#c5b6ed;color:#221c32;font-size:13px;font-weight:600;border-radius:10px}
+#placeholder small{display:block;font-size:10px;color:#818ca6}
+#gameBrowser{color:#edeaf7;background:#111727;border:1px solid #ffffff26;border-radius:20px;width:min(780px,calc(100vw - 28px));max-height:85dvh;padding:26px;box-shadow:0 25px 100px #0008}
+#gameBrowser::backdrop{background:#040715bb;backdrop-filter:blur(9px)}
+#gameBrowser header{display:flex;align-items:center;justify-content:space-between;padding:0 0 20px;border:0;background:transparent}
+#gameBrowser header small{font-size:10px;letter-spacing:.15em;color:#ac9fcb}
+#gameBrowser h2{font-size:26px;font-weight:600;margin:8px 0 0}
+#closeGameBrowser{border:0;background:#242b3e;padding:7px 12px}
+#gameBrowser label{font-size:12px;color:#b6bfd5}
+#gameSearch{background:#1a2237;border-color:#ffffff25;height:44px;font-size:13px}
+#gameChoices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:20px}
+#gameChoices button{display:flex;flex-direction:column;align-items:flex-start;gap:9px;text-align:left;background:#1a2233;border:1px solid #ffffff12;padding:16px;border-radius:12px;min-height:84px}
+#gameChoices button:hover,#gameChoices button[aria-pressed="true"]{border-color:#baaae9;background:#302b47}
+#gameChoices strong{font-size:13px;font-weight:600;line-height:1.5}
+#gameChoices span,.game-browser-note,#gameEmpty{font-size:11px;color:#a3afc7}
+.game-browser-note{margin:20px 0 0}
+.theater-three-pane #placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center}
+@media(max-width:600px){#gameBrowser{padding:20px}#gameChoices{grid-template-columns:repeat(2,minmax(0,1fr))}#gameChoices button{padding:12px}}

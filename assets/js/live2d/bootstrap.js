@@ -10,7 +10,9 @@ window.addEventListener('message',event=>{
  else if(d.kind==='desktop-view'&&desktopMode&&d.view){const v=d.view;if([v.zoom,v.offsetX,v.offsetY].every(Number.isFinite)){zoom=Math.min(3.5,Math.max(.5,v.zoom));offsetX=v.offsetX;offsetY=v.offsetY;fit();notify('zoom',{zoom})}}
  else if(d.kind==='reset'){zoom=desktopMode?.58:1;offsetX=desktopMode?(app?.screen?.width||window.innerWidth)*.24:0;offsetY=desktopMode?(app?.screen?.height||window.innerHeight)*.07:0;portraitLocalBounds=null;portraitGeometryBounds=null;fit();if(model)queueLive2DPortraitFit();notify('zoom',{zoom})}
 });
-window.addEventListener('resize',()=>{if(model)fit()});
+// PIXI's resize plugin may defer its own resize until the next frame. Fit must
+// read the new logical viewport, including iframe width changes from UI drawers.
+window.addEventListener('resize',()=>{if(!desktopMode)app?.resize?.();if(model)fit()});
 const desktopMode=new URLSearchParams(location.search).has('desktop');
 if(desktopMode){
  const canvas=document.getElementById('live2dCanvas');

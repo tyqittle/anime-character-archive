@@ -1,3 +1,4 @@
+import {openTheaterInspector} from './theater_browser_helpers.mjs';
 // Browser validation for five full-character Spine models, not static art.
 import fs from 'node:fs';
 import {chromium} from 'playwright-core';
@@ -17,6 +18,7 @@ try{
   page.on('pageerror',e=>pageErrors.push(e.message));
   try{
    await page.goto('http://127.0.0.1:8765/spine.html',{waitUntil:'domcontentloaded',timeout:30000});
+   await openTheaterInspector(page);
    await page.waitForFunction(id=>typeof allCharacters!=='undefined'&&allCharacters.some(c=>c.id===id),character.id,{timeout:20000});
    await page.selectOption('#gameFilter','browndust2');
    await page.selectOption('#characters',character.id);

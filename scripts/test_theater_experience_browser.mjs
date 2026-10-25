@@ -1,0 +1,121 @@
+// Real browser UI flows plus exact Spine / Cubism playback. No catalog changes.
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import {chromium} from 'playwright-core';
+import {PNG} from 'pngjs';
+import {compareRenderedFrames} from './animation_frame_check.mjs';
+const base=process.env.MODULE_TEST_BASE_URL||'http://127.0.0.1:8766';
+const executablePath=[process.env.CHROME_BIN,'C:/Program Files/Google/Chrome/Application/chrome.exe','/usr/bin/google-chrome','/usr/bin/chromium'].filter(Boolean).find(fs.existsSync);
+const output='tmp/theater-experience';fs.mkdirSync(output,{recursive:true});
+const browser=await chromium.launch({headless:true,executablePath,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const results={errors:[],flows:[],models:[]};
+try{
+ const page=await browser.newPage({viewport:{width:1440,height:900}});
+ page.on('pageerror',error=>results.errors.push(error.message));
+ await page.goto(base+'/spine.html');
+ await page.waitForFunction(()=>window.ArchiveTheaterExperience&&allCharacters.length>1000&&document.getElementById('browseCount').textContent.includes('套'));
+ assert.equal(await page.locator('#theaterInspector').isVisible(),false);
+ assert.equal(await page.locator('#stageNext').isDisabled(),false);
+ assert.ok(await page.locator('#gameFilter').evaluate(select=>Array.from(select.options).every(o=>!o.text.includes('★')&&o.text.includes('套'))));
+ await page.locator('#browseGames').click();
+ await page.screenshot({path:output+'/game-browser.png'});
+ await page.locator('#gameSearch').fill('echocalypse');
+ assert.equal(await page.locator('#gameChoices button').count(),1);
+ await page.locator('#gameChoices button').click();
+ assert.equal(await page.locator('#gameFilter').inputValue(),'echocalypse');
+ assert.equal(await page.locator('#gameBrowser').isVisible(),false);
+ results.flows.push('searchable-game-browser');
+ // Isolate catalog navigation from downloads, then restore the actual command.
+ await page.evaluate(()=>{window.originalPlayCharacter=playCharacter;playCharacter=c=>{window.testRequested=c.id}});
+ await page.selectOption('#gameFilter','echocalypse');
+ await page.locator('#characterSearch').fill('60010003');
+ await page.waitForFunction(()=>document.querySelectorAll('.character-card').length===1);
+ await page.locator('.character-card').click();
+ assert.equal(await page.evaluate(()=>testRequested),'ec-60010003');
+ await page.locator('#browseClear').click();
+ await page.waitForFunction(()=>document.querySelectorAll('.character-card').length>1);
+ await page.locator('#stageNext').click();
+ const next=await page.evaluate(()=>testRequested);assert.notEqual(next,'ec-60010003');
+ await page.locator('#stagePrevious').click();
+ assert.equal(await page.evaluate(()=>testRequested),'ec-60010003');
+ await page.locator('#characterSearch').focus();await page.keyboard.press('ArrowRight');
+ assert.equal(await page.evaluate(()=>testRequested),'ec-60010003','Search caret must not switch models');
+ await page.locator('#characterSearch').blur();await page.locator('body').click({position:{x:700,y:200}});
+ await page.keyboard.press('ArrowRight');assert.equal(await page.evaluate(()=>testRequested),next);
+ await page.keyboard.press('ArrowLeft');assert.equal(await page.evaluate(()=>testRequested),'ec-60010003');
+ await page.locator('#stageRandom').click();assert.notEqual(await page.evaluate(()=>testRequested),'ec-60010003');
+ const current=await page.evaluate(()=>chosen().id);
+ await page.selectOption('#gameFilter','azurlane');
+ assert.equal(await page.evaluate(()=>chosen().id),current,'Browsing must preserve stage selection');
+ await page.locator('#characterSearch').fill('no-matching-character-xyz');
+ await page.waitForSelector('.catalog-empty button');
+ await page.locator('.catalog-empty button').click();
+ await page.waitForFunction(()=>document.getElementById('gameFilter').value==='all'&&document.querySelectorAll('.character-card').length>0);
+ results.flows.push('filter-scope-next-previous-random','clear-search-empty-reset','browse-preserves-selection');
+ await page.evaluate(()=>{playCharacter=window.originalPlayCharacter});
+ async function play(id){
+  console.log('PLAYBACK_CHECK',id);
+  await page.evaluate(id=>{const c=allCharacters.find(c=>c.id===id);assertRecord(c);function assertRecord(c){if(!c)throw Error('Missing '+id)}
+   document.getElementById('gameFilter').value=animationCollection(c);refreshCharacters();selectCharacter(c);refreshCardSelection();rememberSelectedCharacter();void playCharacter(c);
+  },id);
+  await page.waitForFunction(id=>chosen()?.id===id&&(azurlaneFrame?azurlanePlayingId===id:player?.skeleton)&&document.getElementById('status').textContent.startsWith('正在播放：'),id,{timeout:110000});
+  const frame=page.frames().find(frame=>frame.url().includes('azurlane-stage.html'));
+  const canvas=frame?frame.locator('#live2dCanvas'):page.locator('#player canvas').first();
+  if(frame)assert.equal(await frame.evaluate(()=>readyId),id);
+  const first=PNG.sync.read(await canvas.screenshot());await page.waitForTimeout(650);
+  const second=PNG.sync.read(await canvas.screenshot());const motion=compareRenderedFrames(first,second);
+  assert.ok(motion.visible>300&&motion.moving>15,JSON.stringify({id,motion}));
+  await page.locator('#stageZoomIn').click();await page.waitForFunction(()=>document.getElementById('stageZoomLabel').textContent==='120%');
+  await page.locator('#stageFit').click();await page.waitForFunction(()=>document.getElementById('stageZoomLabel').textContent==='100%');
+  results.models.push({id,motion,quickZoom:true});
+ }
+ await play('ec-60010003');
+ assert.ok(await page.evaluate(()=>{
+  const active=player;
+  document.getElementById('characterSearch').value='no-matching-character-xyz';refreshCharacters();
+  const same=player===active&&chosen()?.id==='ec-60010003';
+  document.getElementById('characterSearch').value='';refreshCharacters();return same;
+ }),'Filtering must retain the actual renderer instance');
+ await page.locator('body').click({position:{x:400,y:200}});await page.keyboard.press('f');
+ await page.waitForFunction(()=>!!document.fullscreenElement);
+ await page.keyboard.press('f');await page.waitForFunction(()=>!document.fullscreenElement);
+ results.flows.push('keyboard-input-guard','fullscreen-shortcut','actual-renderer-preserved-on-search');
+ await page.screenshot({path:output+'/desktop-spine.png'});
+ await page.locator('#stageSettings').click();assert.equal(await page.locator('#theaterInspector').isVisible(),true);
+ await page.locator('#stageSettings').click();
+ await play('al-beierfasite_2');
+ await page.screenshot({path:output+'/desktop-live2d.png'});
+ await page.setViewportSize({width:390,height:844});
+ await page.locator('#stageBrowse').click();await page.waitForTimeout(220);
+ await page.screenshot({path:output+'/mobile-catalog.png'});
+ const rect=await page.locator('#characterSidebar').boundingBox();assert.ok(rect.x>=-1&&rect.width<=390);
+ await page.locator('#characterSearch').fill('beierfasite_2');
+ await page.waitForFunction(()=>document.querySelectorAll('.character-card').length===1);
+ await page.locator('.character-card').click();
+ await page.waitForFunction(()=>document.body.classList.contains('theater-left-collapsed'));
+ await page.waitForTimeout(220);
+ await page.waitForFunction(()=>azurlanePlayingId==='al-beierfasite_2'&&document.getElementById('status').textContent.startsWith('正在播放：'),null,{timeout:110000});
+ const child=page.frames().find(frame=>frame.url().includes('azurlane-stage.html'));
+ const camera=await child.evaluate(()=>{
+  const b=portraitLocalBounds||portraitGeometryBounds||model.getLocalBounds();
+  return {width:app.screen.width,center:model.x+(b.x+b.width/2)*model.scale.x,offset:offsetX};
+ });
+ assert.ok(Math.abs(camera.center-camera.offset-camera.width/2)<2,'Mobile model must use current logical viewport: '+JSON.stringify(camera));
+ results.flows.push('mobile-live2d-centered-after-resize');
+ await page.screenshot({path:output+'/mobile-player.png'});
+ await page.locator('#stageSettings').click();await page.waitForTimeout(220);
+ await page.locator('#panelBackdrop').click({position:{x:2,y:10}});
+ await page.waitForFunction(()=>document.body.classList.contains('theater-right-collapsed'));
+ assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ results.flows.push('settings-toggle','mobile-select-closes-catalog','mobile-backdrop','no-horizontal-overflow');
+ // Website chrome never enters the transparent desktop host surface.
+ await page.goto(base+'/spine.html?desktop=1');
+ assert.equal(await page.locator('#stageChrome').isVisible(),false);
+ assert.equal(await page.locator('#panelBackdrop').isVisible(),false);
+ results.flows.push('desktop-host-chrome-hidden');
+ assert.deepEqual(results.errors,[]);
+}finally{
+ fs.writeFileSync(output+'/results.json',JSON.stringify(results,null,2)+'\n');
+ await browser.close();
+}
+console.log(JSON.stringify(results));

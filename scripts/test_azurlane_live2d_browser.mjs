@@ -1,3 +1,4 @@
+import {openTheaterInspector} from './theater_browser_helpers.mjs';
 // Smoke-verify real Azur Lane Cubism rendering in the existing Spine theater.
 // Run with: python3 -m http.server 8765 & node scripts/test_azurlane_live2d_browser.mjs
 import {chromium} from 'playwright-core';
@@ -27,6 +28,7 @@ try{
  page.on('pageerror',err=>errors.push(err.message));
  for(const id of cases){
   await page.goto('http://127.0.0.1:8765/spine.html?id='+id,{waitUntil:'domcontentloaded',timeout:30000});
+  await openTheaterInspector(page);
   await page.waitForFunction(id=>document.getElementById('characters')?.value===id, id,{timeout:30000});
   await page.waitForFunction(()=>{const s=document.querySelector('#status')?.textContent||'';return s.startsWith('正在播放：')||s.includes('失败')||s.includes('超时')},{timeout:110000});
   if(await page.locator('#player .azurlane-loading-cover').count())throw Error('Loading cover was not cleared after model startup: '+id);

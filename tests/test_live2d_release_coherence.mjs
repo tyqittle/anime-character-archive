@@ -10,7 +10,7 @@ const loader=read('assets/js/live2d/model-loader.js');
 const release=bridge.match(/azurlane-stage\.html\?v=([\w-]+)/)?.[1];
 test('parent iframe, child scripts and parent controller share one fresh release token',()=>{
  assert.ok(release&&release.includes('live2d'));
- for(const asset of ['state-and-viewport.js','model-loader.js'])
+ for(const asset of ['state-and-viewport.js','model-loader.js','bootstrap.js'])
   assert.ok(stage.includes('assets/js/live2d/'+asset+'?v='+release),'Stale child '+asset);
  for(const asset of ['live2d-bridge.js','bootstrap.js','catalog.js'])
   assert.ok(theater.includes('assets/js/spine/'+asset+'?v='+release),'Stale parent '+asset);

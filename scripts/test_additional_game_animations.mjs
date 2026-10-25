@@ -1,3 +1,4 @@
+import {openTheaterInspector} from './theater_browser_helpers.mjs';
 // Browser smoke tests for additional game formats, not proof that every model works.
 // CI: python3 -m http.server 8765 & node scripts/test_additional_game_animations.mjs
 import fs from 'node:fs';
@@ -52,6 +53,7 @@ try{
  for(const test of cases.filter(item=>!selectedIds.size||selectedIds.has(item.character.id))){
   const start=Date.now();
   await page.goto('http://127.0.0.1:8765/spine.html?id='+encodeURIComponent(test.character.id),{waitUntil:'domcontentloaded',timeout:30000});
+  await openTheaterInspector(page);
   await page.waitForFunction(id=>document.querySelector('#characters')?.value===id,test.character.id,{timeout:35000});
   await page.waitForFunction(()=>{
    const text=document.querySelector('#status')?.textContent||'';

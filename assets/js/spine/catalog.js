@@ -83,6 +83,7 @@ function syncSelectedCharacterDisplay(){
  const info=charInfo(selected);
  output.textContent=(info.zh&&info.zh!==info.name?info.zh+' · ':'')+info.name+(selected.costumeName?' · '+selected.costumeName:'');
  if(typeof updateVoiceUI==='function')updateVoiceUI();
+ window.ArchiveTheaterExperience?.setSelection();
 }
 function refreshCharacters(){
  const game=$('gameFilter').value,query=$('characterSearch').value.toLowerCase().trim();
@@ -101,7 +102,8 @@ function refreshCharacters(){
  const optionCharacters=filtered.length>maxCharacterSelectOptions
   ?filtered.slice(0,maxCharacterSelectOptions):filtered;
  $('characters').replaceChildren(new Option('请选择角色…',''),...optionCharacters.map(characterOption));
- const previousRecord=previously&&filtered.find(c=>c.id===previously);
+ // Browsing another list must not tear down the portrait already on stage.
+ const previousRecord=previously&&allCharacters.find(c=>c.id===previously);
  if(previousRecord)selectCharacter(previousRecord);
  if(previously&&!previousRecord){
   cancelCharacterDownload();clearPlayer();rememberSelectedCharacter();
@@ -170,6 +172,7 @@ function refreshCharacters(){
  }
  area.replaceChildren(...visibleCards);
  $('selectionNote').textContent=filtered.length?(game==='browndust2'?'当前 '+filtered.length+' 套服装 · 点击直接播放':'共 '+filtered.length+' 套动画 · 点击直接播放'):'当前筛选没有匹配的角色。';
+ window.ArchiveTheaterExperience?.setCatalog(filtered);
 }
 function refreshCardSelection(){
  syncSelectedCharacterDisplay();
