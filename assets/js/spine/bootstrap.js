@@ -56,7 +56,7 @@ async function fetchAnimationManifest(url){
     accepted[c.gameId]=(accepted[c.gameId]||0)+1;
    }
   }
-  allCharacters=uniqueAnimationEntries(merged);
+  allCharacters=uniqueAnimationEntries(merged,{exactVariantId:params.get('variant')==='exact'?params.get('id'):''});
   // New collections are data, not another front-end branch or HTML patch.
   const registeredOptions=new Set(Array.from($('gameFilter').options).map(option=>option.value));
   for(const character of allCharacters){

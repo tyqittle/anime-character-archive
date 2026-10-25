@@ -20,6 +20,8 @@ npm run maintain:animation -- --catalog games-wave6 --import-sources --refresh-m
 
 中断后重新执行同一命令。每个模型完成即写断点；只有来源身份、渲染代码、PNG 摘要均相同才复用成功项。队列和并发数变化会建立新的批次，避免混用旧报告。已经发布且有效的预览直接跳过。原始资源缓存保留在 `tmp/hosted-spine/`，不进入 Git。
 
+共同采集使用 `variant=exact` 保留指定的区域模型变体，并核对 Live2D 子页面实际渲染 ID；正常浏览仍沿用默认去重与旧链接跳转。不存在的模型 ID 直接报错，不能输出零条成功来掩盖错误队列。
+
 新来源只需补全适配器、范围配置和代表 ID；采集、裁切、发布仍走共同流水线。代表模型应包含：普通立绘、换装/独立面部层、大纹理、特殊取景/图集。先核对透明度格式、五官、完整人物、待机与动作，再批量采集。`preflightIds` 在来源配置中声明，禁止再为每个游戏复制采集工作流。
 
 本地命令修改目录和预览，不执行 Git 推送。发布前仍运行 `npm test`、`npm run test:python`、`npm run check`、`npm run audit:repo`，以及与变更对应的真实浏览器回归；使用 `catalog_compatibility.mjs --base-ref <远程基线> --verify-previews` 核验旧记录。推送后核对同一提交的 Pages 部署结果。

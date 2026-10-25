@@ -45,7 +45,7 @@ function animationVoiceIdentityIds(c){
  const parent=variantParentAnimationId(c);
  return parent?[c.id,parent]:[c.id];
 }
-function uniqueAnimationEntries(entries){
+function uniqueAnimationEntries(entries,{exactVariantId=''}={}){
  animationAliasIds.clear();
  const byId=new Map();
  for(const c of entries){
@@ -55,6 +55,7 @@ function uniqueAnimationEntries(entries){
  }
  const hiddenVariants=new Set();
  for(const [key,c] of byId){
+  if(c.id===exactVariantId)continue;
   const parentId=variantParentAnimationId(c);
   if(!parentId)continue;
   const standard=byId.get((c.gameId||'nikke')+'|'+parentId);
@@ -68,7 +69,7 @@ function uniqueAnimationEntries(entries){
   if(hiddenVariants.has(key))continue;
   const game=c.gameId||'nikke',url=c.modelUrl||c.base||'';
   const asset=url?game+'|'+url.replace(/[?#].*$/,'').replace(/\/$/,''):'';
-  if(asset&&assets.has(asset)){
+  if(asset&&assets.has(asset)&&c.id!==exactVariantId){
    animationAliasIds.set(c.id,assets.get(asset).id);
    continue;
   }

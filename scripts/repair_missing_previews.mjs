@@ -11,6 +11,8 @@ const pending=new Set(JSON.parse(fs.readFileSync(process.env.ARCHIVE_PREVIEW_PEN
 const shard=Number(process.argv[2]??0),count=Number(process.argv[3]??8);
 if(!Number.isInteger(shard)||!Number.isInteger(count)||count<1||shard<0||shard>=count)throw Error('Invalid preview shard');
 const all=readCharacters();
+const known=new Set(all.map(c=>c.id));
+for(const id of pending)if(!known.has(id))throw Error('Unregistered preview model: '+id);
 const todo=all.filter(c=>pending.has(c.id)).filter((_,i)=>i%count===shard);
 const root=process.env.ARCHIVE_PREVIEW_ROOT||'tmp/repair-output';
 const base=process.env.ARCHIVE_PREVIEW_BASE_URL||'http://127.0.0.1:8765';
@@ -40,6 +42,11 @@ try{
    await page.waitForFunction(()=>{const node=document.querySelector('#status'),s=node?.textContent||'';return s.startsWith('正在播放：')||node?.classList.contains('error')},null,{timeout:95000});
    const status=await page.locator('#status').textContent();
    if(!status.startsWith('正在播放：'))throw Error(status);
+   if(c.engine==='cubism'){
+    await page.waitForFunction(id=>azurlanePlayingId===id,c.id,{timeout:10000});
+    const child=page.frames().find(f=>f.url().includes('azurlane-stage.html'));
+    if(!child||await child.evaluate(()=>readyId)!==c.id)throw Error('Rendered Live2D model identity mismatch: '+c.id);
+   }
    // Canvas screenshots are composited with overlapping parent-page controls.
    // Exclude the floating pane handles from every game's portrait preview.
    await page.addStyleTag({content:'#toggleLeftPanel,#toggleRightPanel,.stage-chrome,#loadNotice{visibility:hidden!important}'});
