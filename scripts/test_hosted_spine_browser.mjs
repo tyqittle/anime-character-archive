@@ -11,14 +11,23 @@ fs.mkdirSync(output,{recursive:true});
 const browser=await chromium.launch({headless:true,executablePath,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
 const context=await browser.newContext({viewport:{width:1440,height:1000}});
 await installSourceCache(context,process.env.ARCHIVE_PREVIEW_SOURCE_CACHE);
-const records=readCharacters(),report={cases:[],errors:[]};
+const records=readCharacters(),report={cases:[],errors:[],networkFailures:[]};
 try{
  const page=await context.newPage();page.on('pageerror',e=>report.errors.push(e.message));
+ page.on('requestfailed',r=>report.networkFailures.push({url:r.url(),error:r.failure()?.errorText}));
  const scopes=JSON.parse(fs.readFileSync('data/hosted-spine-source-scopes.json','utf8')).scopes;
  for(const id of scopes.filter(s=>!process.env.ARCHIVE_PREFLIGHT_SCOPE||s.id===process.env.ARCHIVE_PREFLIGHT_SCOPE).flatMap(s=>s.preflightIds||[])){
   const record=records.find(c=>c.id===id);assert.ok(record,'Missing full-catalog representative '+id);
+  console.log('HOSTED_PORTRAIT_LOAD',id);
   await page.goto(base+'/spine.html?id='+id,{waitUntil:'domcontentloaded'});
-  await page.waitForFunction(id=>chosen()?.id===id&&!!player?.skeleton&&player._archiveFitPending===0&&document.querySelector('#status').textContent.startsWith('正在播放：'),id,{timeout:110000});
+  try{
+   await page.waitForFunction(id=>document.querySelector('#status').classList.contains('error')||chosen()?.id===id&&!!player?.skeleton&&player._archiveFitPending===0&&document.querySelector('#status').textContent.startsWith('正在播放：'),id,{timeout:110000});
+   assert.ok((await page.locator('#status').textContent()).startsWith('正在播放：'),'Source playback failed: '+await page.locator('#status').textContent());
+  }catch(error){
+   report.failure={id,message:error.message,state:await page.evaluate(()=>({status:document.querySelector('#status')?.textContent,chosen:chosen()?.id,version:typeof loadedVersion==='undefined'?null:loadedVersion,fitPending:typeof player==='undefined'?null:player?._archiveFitPending})),networkFailures:report.networkFailures};
+   console.error('HOSTED_PORTRAIT_FAILURE',JSON.stringify(report.failure));
+   await page.screenshot({path:output+'/failed-'+id+'.png'});throw error;
+  }
   assert.equal(await page.locator('#gameFilter option[value="'+record.gameId+'"]').count(),1);
   if(record.spineSkinLayers)assert.deepEqual(await page.evaluate(()=>player._archiveSkinLayers),record.spineSkinLayers,'Body and neutral face must be present together');
   if(typeof record.premultipliedAlpha==='boolean')assert.equal(await page.evaluate(()=>player.config.premultipliedAlpha),record.premultipliedAlpha,'Use the declared source texture alpha convention');
