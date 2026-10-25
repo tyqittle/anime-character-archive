@@ -21,7 +21,7 @@ try{
   console.log('HOSTED_PORTRAIT_LOAD',id);
   await page.goto(base+'/spine.html?id='+id,{waitUntil:'domcontentloaded'});
   try{
-   await page.waitForFunction(id=>document.querySelector('#status').classList.contains('error')||chosen()?.id===id&&!!player?.skeleton&&player._archiveFitPending===0&&document.querySelector('#status').textContent.startsWith('正在播放：'),id,{timeout:110000});
+   await page.waitForFunction(id=>document.querySelector('#status').classList.contains('error')||chosen()?.id===id&&!!player?.skeleton&&player._archiveFitPending===0&&document.querySelector('#status').textContent.startsWith('正在播放：'),id,{timeout:(record.downloadPolicy?.totalMs||95000)+15000});
    assert.ok((await page.locator('#status').textContent()).startsWith('正在播放：'),'Source playback failed: '+await page.locator('#status').textContent());
   }catch(error){
    report.failure={id,message:error.message,state:await page.evaluate(()=>({status:document.querySelector('#status')?.textContent,chosen:chosen()?.id,version:typeof loadedVersion==='undefined'?null:loadedVersion,fitPending:typeof player==='undefined'?null:player?._archiveFitPending})),networkFailures:report.networkFailures};

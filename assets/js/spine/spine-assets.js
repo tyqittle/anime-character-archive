@@ -11,8 +11,14 @@ function urls(c,mirror){
  const base=mirror==='legacy'?'https://nikke-db-legacy.pages.dev/l2d/'+c.id+'/'+c.id+'_00':c.base;
  return {skeleton:base+'.skel',atlas:base+'.atlas',base,format:'skel'};
 }
-async function downloadBlob(url,timeout=24000,externalSignal){
- return ArchiveAssets.blob(url,timeout,externalSignal);
+async function downloadBlob(url,timeout=24000,externalSignal,providerTimeoutMs){
+ return ArchiveAssets.blob(url,timeout,externalSignal,{providerTimeoutMs});
+}
+function spineDownloadBudget(c){
+ const policy=c?.downloadPolicy;
+ if(policy===undefined)return {assetMs:60000,totalMs:55000,providerMs:12000};
+ if(!Number.isInteger(policy.assetMs)||policy.assetMs<12000||policy.assetMs>90000||!Number.isInteger(policy.totalMs)||policy.totalMs<policy.assetMs+15000||policy.totalMs>150000)throw Error('资源下载时限声明无效');
+ return {assetMs:policy.assetMs,totalMs:policy.totalMs,providerMs:policy.assetMs};
 }
 
 function imagePages(atlasText){
@@ -68,10 +74,11 @@ async function downloadPack(c,mirror,externalSignal,isCurrent=()=>true){
  const signal=request.signal;
  try{
  const paths=urls(c,mirror),stem=c.resourceStem||decodeURIComponent(c.base.split('/').pop());
+ const budget=spineDownloadBudget(c);
  const verify=packIntegrityVerifier(c),fileName=url=>decodeURIComponent(new URL(url,location.href).pathname.split('/').pop());
  // Start textures after the small atlas arrives, while the skeleton continues downloading.
- const skeletonResult=downloadBlob(paths.skeleton,60000,signal).then(blob=>({blob}),error=>({error}));
- const atlasBlob=await downloadBlob(paths.atlas,30000,signal);
+ const skeletonResult=downloadBlob(paths.skeleton,budget.assetMs,signal,budget.providerMs).then(blob=>({blob}),error=>({error}));
+ const atlasBlob=await downloadBlob(paths.atlas,30000,signal,budget.providerMs);
  await verify(atlasBlob,fileName(paths.atlas));
  if(atlasBlob.size<20)throw Error('图集文件大小异常');
  let atlasText=(await atlasBlob.text()).replace(/^\uFEFF/,'').replace(/\r+\n|\r/g,'\n');
@@ -88,7 +95,7 @@ async function downloadPack(c,mirror,externalSignal,isCurrent=()=>true){
  async function fetchTexturePages(){
   while(nextPage<pages.length){
    const page=pages[nextPage++],url=paths.base.slice(0,paths.base.lastIndexOf('/')+1)+encodeURIComponent(page);
-   const blob=await downloadBlob(url,60000,signal);
+   const blob=await downloadBlob(url,budget.assetMs,signal,budget.providerMs);
    await verify(blob,page);
    if(blob.size<100)throw Error('贴图为空：'+page);
    data[page]=await blobToUri(blob);

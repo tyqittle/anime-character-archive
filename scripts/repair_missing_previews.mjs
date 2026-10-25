@@ -39,7 +39,7 @@ try{
   try{
    await page.goto(base+'/spine.html?id='+encodeURIComponent(c.id)+'&variant=exact',{waitUntil:'domcontentloaded',timeout:30000});
    await page.waitForFunction(id=>document.querySelector('#characters')?.value===id,c.id,{timeout:30000});
-   await page.waitForFunction(()=>{const node=document.querySelector('#status'),s=node?.textContent||'';return s.startsWith('正在播放：')||node?.classList.contains('error')},null,{timeout:95000});
+   await page.waitForFunction(()=>{const node=document.querySelector('#status'),s=node?.textContent||'';return s.startsWith('正在播放：')||node?.classList.contains('error')},null,{timeout:c.downloadPolicy?.totalMs?c.downloadPolicy.totalMs+15000:95000});
    const status=await page.locator('#status').textContent();
    if(!status.startsWith('正在播放：'))throw Error(status);
    if(c.engine==='cubism'){

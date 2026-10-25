@@ -2,14 +2,15 @@
 async function playCharacter(c){
  window.ArchiveDesktopBridge?.loading();
  if(c.engine==='cubism'||c.gameId==='azurlane'){playAzurLane(c);return}
+ const budget=spineDownloadBudget(c);
  cancelCharacterDownload();
  const current=sequence,controller=new AbortController();
  activeCharacterAbort=controller;
  const deadline=setTimeout(()=>{
   if(current!==sequence)return;
   cancelCharacterDownload();clearPlayer();
-  status('加载超过 55 秒，请点击“重试”或稍后再试。',true);
- },55000);
+  status('加载超过 '+Math.ceil(budget.totalMs/1000)+' 秒，请点击“重试”或稍后再试。',true);
+ },budget.totalMs);
  window.ArchiveTheaterUI.setHeading((c.zh?c.zh+' · ':'')+c.name);
  window.ArchiveTheaterUI.setContext(c.gameId==='browndust2'?'棕色尘埃2 · 全身角色':c.gameId==='bluearchive'?'蔚蓝档案 · 回忆大厅':c.gameId==='konosuba'?'为美好的世界献上祝福！· 战斗动画':c.gameId==='arknights'?'明日方舟 · '+(c.assetType==='battle-spine'?'战斗小人':'干员动态立绘'):(c.collectionName||c.game||'胜利女神：妮姬')+' · Spine');
  // Do not leave the previously selected character playing while downloading

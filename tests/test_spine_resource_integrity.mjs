@@ -34,6 +34,12 @@ test('legacy resource identity and cache fingerprint retain their original shape
  assert.equal(vm.runInContext('sourceFingerprint(incoming)',f.context),JSON.stringify([2,f.c.base,f.c.skeletonUrl,f.c.atlasUrl,'json']));
  assert.equal((await f.run()).version,'3.8');
 });
+
+test('large hosted budgets are opt-in and reject unbounded or inconsistent declarations',()=>{
+ const f=fixture();assert.equal(JSON.stringify(vm.runInContext('spineDownloadBudget(incoming)',f.context)),JSON.stringify({assetMs:60000,totalMs:55000,providerMs:12000}));
+ f.c.downloadPolicy={assetMs:90000,totalMs:120000};assert.equal(vm.runInContext('spineDownloadBudget(incoming).providerMs',f.context),90000);
+ f.c.downloadPolicy.totalMs=90000;assert.throws(()=>vm.runInContext('spineDownloadBudget(incoming)',f.context),/时限声明/);
+});
 test('CR-only atlas is verified in its original byte form and normalized for runtime parsing',async()=>{
  const f=fixture();f.files['hero.atlas']=Buffer.from('\rhero.png\rsize: 512,512\rformat: RGBA8888\r');
  f.c.resourceIntegrity.find(x=>x.path==='hero.atlas').sha256=sha(f.files['hero.atlas']);

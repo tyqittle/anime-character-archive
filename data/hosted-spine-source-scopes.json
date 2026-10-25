@@ -4,6 +4,7 @@
   "scopes": [
     {
       "id": "epicseven",
+      "downloadPolicy": {"assetMs":90000,"totalMs":120000},
       "preflightIds": ["e7-c2016", "e7-c1088_s01"],
       "gameId": "epicseven",
       "name": "第七史诗（Epic Seven）",
@@ -18,6 +19,7 @@
     },
     {
       "id": "shadowverse",
+      "downloadPolicy": {"assetMs":90000,"totalMs":120000},
       "preflightIds": ["sv-class_1", "sv-class_1902", "sv-class_1903", "sv-class_2202", "sv-class_500310"],
       "gameId": "shadowverse",
       "name": "影之诗（Shadowverse）",

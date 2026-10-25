@@ -20,6 +20,8 @@
 
 影之诗 PNG 使用直通透明度，目录显式声明 `premultipliedAlpha: false`；原始像素存在大量透明但 RGB 非零的区域，按预乘透明度显示会出现白块。第七史诗保持其源查看器使用的预乘透明度。影之诗早期模型还需组合 `default` 与 `skin_01` 才能解析待机眨眼引用的面部；导入器依据实际附件引用判断，预检会拒绝缺失附件。
 
+两款托管来源声明 `downloadPolicy`：单个素材 90 秒、整个会话 120 秒。底层请求按显式预算等待完整响应体，不再把大贴图截为 12 秒；切换角色仍立即取消旧请求。未声明的旧目录和 Live2D 运行时下载保留原时限。该策略只影响传输，不改变素材及预览身份。
+
 统一 `repair_missing_previews.mjs` 支持 `ARCHIVE_PREVIEW_BASE_URL`、`ARCHIVE_PREVIEW_ROOT`、`ARCHIVE_PREVIEW_PENDING`。可设置 `ARCHIVE_PREVIEW_SOURCE_CACHE=tmp/hosted-spine/index.json`，让浏览器读取已经下载且摘要一致的原始素材；仍使用真实骨骼、原贴图和原生运行时渲染，不代入静态图片或其他角色。捕获时隐藏页面工具条，随后使用共同 `preview_pipeline.py convert` 与 `publish --catalog games-wave6` 校验和发布。
 
 `test_hosted_spine_browser.mjs` 对原始资源直接验证画面运动、正常面部层、异装、切换动作后缩放保持，以及主动回待机；CI 不依赖本地缓存。旧模型不声明新增字段时保持原身份、缓存键和皮肤选择方式，继续执行共同模块隔离与剧场界面回归。

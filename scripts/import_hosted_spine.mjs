@@ -169,6 +169,7 @@ export async function main(args=process.argv.slice(2)){
      atlasCoordinateSpace:'declared',resourceIntegrity:resources.sort((a,b)=>a.path.localeCompare(b.path,'en')),
      spineSkinLayers:inspected.skinLayers.length>1?inspected.skinLayers:undefined,
      portraitFraming:excludeBones.length?{excludeBones}:undefined,
+     downloadPolicy:scope.downloadPolicy,
      spineAttachmentPathRepairs:pathRepairs.length?pathRepairs:undefined,
      spineAtlasPageMerge:coalesced.mergedPages?true:undefined,
      premultipliedAlpha:scope.premultipliedAlpha,
