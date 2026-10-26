@@ -12,7 +12,9 @@ npm run maintain:animation -- --catalog games-wave6
 npm run maintain:animation -- --catalog games-wave6 --import-sources --refresh-metadata
 ```
 
-默认使用 2 个采集进程，可用 `--jobs 4`；资源缓存自动复用。命令自行启动并关闭本地服务，不依赖当前预览网页端口。
+默认只启动 1 个采集进程，资源缓存自动复用。命令自行启动并关闭本地服务，不依赖当前预览网页端口。先检查代表模型和机器负载，再决定是否显式增加 `--jobs`，不要直接在日常使用的电脑上开多路采集。
+
+本地采集与来源预检使用共同的浏览器启动策略，默认保留 Chrome 的硬件渲染选择。启动时只在空白页核对 WebGL 渲染器；无法核验或检测到 SwiftShader、llvmpipe 等 CPU 渲染器时立即停止，不会继续下载和批量渲染模型。日志记录实际渲染器。无 GPU 的 GitHub Actions 环境仍显式使用软件渲染；本地确需软件渲染时必须明确设置 `ARCHIVE_BROWSER_RENDERER=software` 并保持单路。硬件渲染和单路不能保证固定的 CPU 上限，发现持续高负载应停止任务。
 
 修复渲染代码后，可添加 `--recapture 模型ID` 定点重采已有预览，参数可重复。ID 必须属于选中的目录；重采失败会报告失败，不会因为旧图片还存在就记成成功。
 

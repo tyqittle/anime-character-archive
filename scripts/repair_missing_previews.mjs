@@ -7,6 +7,7 @@ import {PNG} from 'pngjs';
 import {compareRenderedFrames} from './animation_frame_check.mjs';
 import {readCharacters,sourceIdentity} from './catalog_registry.mjs';
 import {rendererIdentity,reusableCapture,saveCaptureReport,sha256} from './preview_capture_state.mjs';
+import {launchArchiveBrowser} from './archive_browser.mjs';
 const pending=new Set(JSON.parse(fs.readFileSync(process.env.ARCHIVE_PREVIEW_PENDING||'tmp/repair-pending.json','utf8')));
 const shard=Number(process.argv[2]??0),count=Number(process.argv[3]??8);
 if(!Number.isInteger(shard)||!Number.isInteger(count)||count<1||shard<0||shard>=count)throw Error('Invalid preview shard');
@@ -17,10 +18,7 @@ const todo=all.filter(c=>pending.has(c.id)).filter((_,i)=>i%count===shard);
 const root=process.env.ARCHIVE_PREVIEW_ROOT||'tmp/repair-output';
 const base=process.env.ARCHIVE_PREVIEW_BASE_URL||'http://127.0.0.1:8765';
 for(const name of ['frames','reports'])fs.mkdirSync(path.join(root,name),{recursive:true});
-const bin=[process.env.CHROME_BIN,'/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium',
- 'C:/Program Files/Google/Chrome/Application/chrome.exe','C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'].filter(Boolean).find(fs.existsSync);
-if(!bin)throw Error('Chromium missing');
-const browser=await chromium.launch({headless:true,executablePath:bin,args:['--no-sandbox','--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const browser=await launchArchiveBrowser(chromium);
 const context=await browser.newContext({viewport:{width:1366,height:850}});
 // Optional exact-byte source cache from a validated import. This avoids fetching
 // each large texture again during every shard; models still use their real URLs,

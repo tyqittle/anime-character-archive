@@ -8,7 +8,7 @@ import {readCatalogRegistry,readCharacters,sourceIdentity} from './catalog_regis
 import {rendererIdentity,sha256} from './preview_capture_state.mjs';
 export function parseOptions(args){
  const value=(flag,fallback)=>{const i=args.indexOf(flag);if(i<0)return fallback;if(!args[i+1]||args[i+1].startsWith('--'))throw Error('Missing '+flag);return args[i+1]};
- const catalog=value('--catalog',''),jobs=Number(value('--jobs','2'));
+ const catalog=value('--catalog',''),jobs=Number(value('--jobs','1'));
  if(!/^[\w-]+$/.test(catalog)||!Number.isInteger(jobs)||jobs<1||jobs>4)throw Error('Use --catalog <registered-id> [--jobs 1..4]');
  const recapture=args.flatMap((arg,i)=>arg==='--recapture'?[args[i+1]]:[]);
  if(recapture.some(id=>!id||!/^[-\w]+$/.test(id)))throw Error('Invalid --recapture model ID');

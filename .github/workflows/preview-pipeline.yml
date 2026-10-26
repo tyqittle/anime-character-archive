@@ -12,6 +12,7 @@ on:
       - 'scripts/catalog_registry.*'
       - 'scripts/preview_*.py'
       - 'scripts/repair_missing_previews.mjs'
+      - 'scripts/archive_browser.mjs'
       - '.github/workflows/preview-pipeline.yml'
   workflow_dispatch:
     inputs:

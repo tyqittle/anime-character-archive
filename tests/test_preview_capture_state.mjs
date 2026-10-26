@@ -21,6 +21,7 @@ test('interrupted captures resume only for the same source, renderer and frame b
  }finally{fs.rmSync(root,{recursive:true,force:true})}
 });
 test('maintenance validates catalog arguments and owns a confined buffered server',async()=>{
+ assert.equal(parseOptions(['--catalog','test']).jobs,1,'Local capture must default to one worker');
  assert.throws(()=>parseOptions(['--catalog','../outside']));assert.throws(()=>parseOptions(['--catalog','test','--jobs','0']));
  assert.deepEqual(parseOptions(['--catalog','test','--recapture','a','--recapture','b']).recapture,['a','b']);
  assert.throws(()=>parseOptions(['--catalog','test','--recapture']));

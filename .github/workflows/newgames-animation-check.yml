@@ -16,6 +16,7 @@ on:
       - 'data/hosted-spine-source-scopes.json'
       - 'scripts/import_hosted_spine.mjs'
       - 'scripts/test_hosted_spine_browser.mjs'
+      - 'scripts/archive_browser.mjs'
       - 'scripts/import_spine_source.py'
       - 'data/live2d-source-scopes.json'
       - 'scripts/live2d_sources.mjs'
