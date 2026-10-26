@@ -30,3 +30,23 @@ test('Cubism3 adult-game chapter is restricted to the fixed source commit and sa
  assert.equal(resolve('s_natsu01',valid,'kg3-s_hatsuka01'),'');
  assert.equal(resolve('s_hatsuka01',valid.replace('7e446cbd95ec352cdb0f73c079e4d075d7d528ac','main'),'kg3-s_hatsuka01'),'');
 });
+
+test('Reverse1999 source adapter binds the pinned commit, directory, setting and exact model ID',()=>{
+ const source='https://cdn.jsdelivr.net/gh/myssal/Reverse-1999-CN-Asset@45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/';
+ for(const name of ['300301_hujisheng','v4a0_304805_yl','s01_300301']){
+  const id='r99-'+name.toLowerCase(),url=source+name+'/'+name+'.model3.json';
+  assert.equal(resolve(name,url,id),url);
+  assert.equal(resolve(name,url.replace('@45e75248ba3b25053fd32e63ab13c2f9f54dd9df/','@main/'),id),'');
+  assert.equal(resolve(name,url,'r99-other'),'');
+  assert.equal(resolve('other',url,id),'');
+  assert.equal(resolve(name,url+'?redirect=other',id),'');
+  assert.equal(resolve(name,source+'../'+name+'/'+name+'.model3.json',id),'');
+  assert.equal(resolve(name,source+name+'/other.model3.json',id),'');
+  assert.equal(resolve(name,url.replace('cdn.jsdelivr.net','outside.example'),id),'');
+ }
+ const name='v1a6_308402_gt',id='r99-'+name,url='./assets/model-settings/newgames/'+id+'.model3.json?v='+hash;
+ assert.equal(resolve(name,url,id),new URL(url,location.href).href);
+ assert.equal(resolve('v2a7_304804_yl',url,id),'');
+ assert.equal(resolve(name,url.replace(id,'r99-other'),id),'');
+ assert.equal(resolve(name,url.slice(0,-1),id),'');
+});

@@ -54,9 +54,10 @@ export function normalizedCubism2Settings(settings,fileURL,id,directory){
  * Some upstream game exports split a motion-only manifest (Textures: []) from
  * its art. Never guess textures at runtime or accept arbitrary new sources.
  */
-export function normalizedCubism3Settings(settings,fileURL,id,directory){
+export function normalizedCubism3Settings(settings,fileURL,id,directory,mode='split'){
  if(!/^assets\/model-settings\/[a-z0-9-]+$/.test(directory)||!/^[-a-z0-9_]+$/.test(id))throw Error('Invalid normalized Cubism3 settings destination');
- if(settings.Version!==3||!settings.FileReferences?.Moc||!Array.isArray(settings.FileReferences.Textures)||settings.FileReferences.Textures.length!==1)
+ if(!['split','texture-order'].includes(mode))throw Error('Invalid Cubism3 normalization mode');
+ if(settings.Version!==3||!settings.FileReferences?.Moc||!Array.isArray(settings.FileReferences.Textures)||!settings.FileReferences.Textures.length||(mode==='split'&&settings.FileReferences.Textures.length!==1))
   throw Error('Incomplete composed Cubism3 settings');
  const refs=settings.FileReferences;
  const motions={};
@@ -72,5 +73,5 @@ export function normalizedCubism3Settings(settings,fileURL,id,directory){
  const body=JSON.stringify(out,null,2)+'\n';
  const sha256=createHash('sha256').update(body).digest('hex');
  const filename=directory+'/'+id+'.model3.json';
- return {path:filename,body,sha256,notes:['Audited split Cubism3 settings, textures and source animations'],url:'./'+filename+'?v='+sha256};
+ return {path:filename,body,sha256,notes:[mode==='split'?'Audited split Cubism3 settings, textures and source animations':'Audited source texture order; native MOC texture indices verified'],url:'./'+filename+'?v='+sha256};
 }

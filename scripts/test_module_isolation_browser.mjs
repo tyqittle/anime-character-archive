@@ -4,15 +4,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 import assert from 'node:assert/strict';
 import {chromium} from 'playwright-core';
+import {launchArchiveBrowser} from './archive_browser.mjs';
 import {PNG} from 'pngjs';
 import {compareRenderedFrames} from './animation_frame_check.mjs';
-const executablePath=[process.env.CHROME_BIN,'/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium',
- 'C:/Program Files/Google/Chrome/Application/chrome.exe'].filter(Boolean).find(fs.existsSync);
-if(!executablePath)throw Error('Chromium missing');
 const base=process.env.MODULE_TEST_BASE_URL||'http://127.0.0.1:8765';
 const output='tmp/module-isolation-browser';fs.mkdirSync(output,{recursive:true});
 const results=[],errors=[];
-const browser=await chromium.launch({headless:true,executablePath,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const browser=await launchArchiveBrowser(chromium);
 try{
  const context=await browser.newContext({viewport:{width:1366,height:850}});
  await context.addInitScript(()=>Object.defineProperty(window,'indexedDB',{get(){throw Error('fixture: cache unavailable')}}));

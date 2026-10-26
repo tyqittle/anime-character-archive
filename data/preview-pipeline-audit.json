@@ -600,5 +600,20 @@
     "rejectedCaptures": [],
     "failedCaptures": [],
     "failureSummary": {}
+  },
+  "games-wave8": {
+    "scope": "shared preview pipeline",
+    "counts": {
+      "reverse1999": {
+        "indexed": 347,
+        "verifiedPreview": 347,
+        "missingPreview": 0
+      }
+    },
+    "missing": [],
+    "newCapturesInThisRun": 0,
+    "rejectedCaptures": [],
+    "failedCaptures": [],
+    "failureSummary": {}
   }
 }

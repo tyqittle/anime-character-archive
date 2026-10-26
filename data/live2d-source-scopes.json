@@ -535,6 +535,130 @@
         "composeCubism3Texture": true,
         "normalizedSettingsDirectory": "assets/model-settings/newgames"
       }
+    },
+    {
+      "id": "reverse1999-portraits",
+      "gameId": "reverse1999",
+      "sourceRepo": "myssal/Reverse-1999-CN-Asset",
+      "sourceCommit": "45e75248ba3b25053fd32e63ab13c2f9f54dd9df",
+      "sourceTreeSha": "aa535d5011e4279a41a222e7d387aad77c2487fa",
+      "sourceTreeSnapshot": "data/source-snapshots/reverse1999-roles-aa535d5011e4279a.json",
+      "directory": "live2d/roles",
+      "catalog": "data/live2d-games-wave8.json",
+      "name": "重返未来：1999（角色与换装动态图鉴）",
+      "requireComplete": true,
+      "preflightIds": [
+        "r99-300301_hujisheng",
+        "r99-304301_tannante",
+        "r99-306201_meilanni",
+        "r99-v4a0_304805_yl",
+        "r99-v1a6_308402_gt",
+        "r99-v2a7_304804_yl"
+      ],
+      "import": {
+        "idPrefix": "r99-",
+        "namesFile": "data/reverse1999-names.json",
+        "applyNameMetadata": true,
+        "pattern": "^([A-Za-z0-9_]+)/\\1\\.model3\\.json$",
+        "lowercaseId": true,
+        "normalizedSettingsDirectory": "assets/model-settings/newgames",
+        "textureOrderOverrides": {
+          "v1a6_308402_gt": {
+            "expected": [
+              "textures/308401_gt_mask_manual.png",
+              "textures/308402_gt_00.png",
+              "textures/308402_gt_01.png"
+            ],
+            "order": [
+              "textures/308402_gt_00.png",
+              "textures/308402_gt_01.png",
+              "textures/308401_gt_mask_manual.png"
+            ]
+          },
+          "v2a7_304804_yl": {
+            "expected": [
+              "textures/304802_yuanlv_mask_manual.png",
+              "textures/304804_yl_00.png",
+              "textures/304804_yl_01.png",
+              "textures/304804_yl_bloom_00.png",
+              "textures/304804_yl_bloom_01.png"
+            ],
+            "order": [
+              "textures/304804_yl_00.png",
+              "textures/304804_yl_01.png",
+              "textures/304804_yl_bloom_00.png",
+              "textures/304804_yl_bloom_01.png",
+              "textures/304802_yuanlv_mask_manual.png"
+            ]
+          },
+          "v4a0_314503_hsy": {
+            "expected": [
+              "textures/307202_zongmaoshali_m_noise_manual.png",
+              "textures/314503_hsy_00.png",
+              "textures/314503_hsy_01.png",
+              "textures/glow1.png",
+              "textures/glow_002_pwk.png",
+              "textures/glow_151639_ybs_hsy.png",
+              "textures/mask_01.png",
+              "textures/noise_01.png",
+              "textures/noise_04.png",
+              "textures/noise_151607_ybs1.png",
+              "textures/object_151416_ybs_hsy.png",
+              "textures/object_151513_ybs_hsy.png",
+              "textures/object_151638_ybs_hsy.png",
+              "textures/object_151639_ybs_hsy.png",
+              "textures/object_151640_ybs_hsy.png",
+              "textures/object_151641_ybs_hsy.png",
+              "textures/object_161353_ybs_hsy.png",
+              "textures/object_651401_dzx.png",
+              "textures/object_651402_dzx.png",
+              "textures/object_651405_dzx.png",
+              "textures/ui_trail_019.png",
+              "textures/yun_mask2.png"
+            ],
+            "order": [
+              "textures/314503_hsy_00.png",
+              "textures/314503_hsy_01.png",
+              "textures/glow1.png",
+              "textures/glow_002_pwk.png",
+              "textures/glow_151639_ybs_hsy.png",
+              "textures/mask_01.png",
+              "textures/noise_01.png",
+              "textures/noise_04.png",
+              "textures/noise_151607_ybs1.png",
+              "textures/object_151416_ybs_hsy.png",
+              "textures/object_151513_ybs_hsy.png",
+              "textures/object_151638_ybs_hsy.png",
+              "textures/object_151639_ybs_hsy.png",
+              "textures/object_151640_ybs_hsy.png",
+              "textures/object_151641_ybs_hsy.png",
+              "textures/object_161353_ybs_hsy.png",
+              "textures/object_651401_dzx.png",
+              "textures/object_651402_dzx.png",
+              "textures/object_651405_dzx.png",
+              "textures/ui_trail_019.png",
+              "textures/yun_mask2.png",
+              "textures/307202_zongmaoshali_m_noise_manual.png"
+            ]
+          }
+        }
+      },
+      "auxiliarySettings": {
+        "v2a4_310901_ttsz_glow/v2a4_310901_ttsz_glow.model3.json": {
+          "kind": "accessory-effect",
+          "reason": "Native browser frame contains only standalone necklace glow; not a character portrait or costume"
+        },
+        "v2a4_520310_ttsz_glow/v2a4_520310_ttsz_glow.model3.json": {
+          "kind": "accessory-effect",
+          "reason": "Native browser frame contains only standalone necklace glow; not a character portrait or costume"
+        }
+      },
+      "qualityExclusions": {
+        "v4a0_314503_hsy/v4a0_314503_hsy.model3.json": {
+          "failureType": "visual-layout-unresolved",
+          "reason": "Native Cubism export still shows fragmented patches after the verified texture-order repair. Reproduced on hardware and software renderers; no substituted preview. Root cause remains unresolved."
+        }
+      }
     }
   ]
 }

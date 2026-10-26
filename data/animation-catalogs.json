@@ -90,6 +90,11 @@
       "id": "games-wave7",
       "name": "失落之剑 · 动态角色与全部公开皮肤",
       "path": "data/spine-games-wave7.json"
+    },
+    {
+      "id": "games-wave8",
+      "name": "重返未来：1999 · 高质量动态角色与服装",
+      "path": "data/live2d-games-wave8.json"
     }
   ]
 }

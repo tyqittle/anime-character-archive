@@ -10,7 +10,7 @@ export function buildCoverage(records,inventories,spineScopes,spineAudits,hosted
    const all=records.filter(c=>c.gameId===gameId),portraits=all.filter(c=>c.assetType!=='battle-spine');
    const scopes=inventories.filter(s=>s.gameId===gameId).map(s=>({sourceRepo:s.sourceRepo,sourceCommit:s.sourceCommit,directory:s.directory,
     discoveredSettings:s.sourceModelSettings??null,indexedSettings:s.indexedModelSettings??null,
-    unindexedSettings:s.unindexedSourceSettings||[],error:s.error||null,sourceDirectoryComplete:!!s.scopeComplete}));
+    unindexedSettings:s.unindexedSourceSettings||[],...(s.auxiliarySettings?.length?{auxiliarySettings:s.auxiliarySettings}:{}),...(s.qualityExclusions?.length?{qualityExclusions:s.qualityExclusions}:{}),error:s.error||null,sourceDirectoryComplete:!!s.scopeComplete}));
    for(const scope of spineScopes.filter(s=>s.gameId===gameId)){
     const audit=spineAudits[scope.id];
     scopes.push({sourceRepo:scope.sourceRepo,sourceCommit:scope.sourceCommit,directory:scope.treePrefix+scope.directory,

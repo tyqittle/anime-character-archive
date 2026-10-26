@@ -2,10 +2,10 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {chromium} from 'playwright-core';
-const executablePath=[process.env.CHROME_BIN,'C:/Program Files/Google/Chrome/Application/chrome.exe','/usr/bin/google-chrome','/usr/bin/chromium'].filter(Boolean).find(fs.existsSync);
+import {launchArchiveBrowser} from './archive_browser.mjs';
 const base=process.env.MODULE_TEST_BASE_URL||'http://127.0.0.1:8765';
 const output='tmp/rich-interactions';fs.mkdirSync(output,{recursive:true});
-const browser=await chromium.launch({headless:true,executablePath,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const browser=await launchArchiveBrowser(chromium);
 const report={id:'al-tianlangxing_5',errors:[],actions:[],checks:[]};
 try{
  const page=await browser.newPage({viewport:{width:1440,height:1000}});

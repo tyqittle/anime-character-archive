@@ -3,7 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
-import {pathToFileURL} from 'node:url';
+import {pathToFileURL,fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {readCharacters,mergeCatalogRecords} from './catalog_registry.mjs';
 import {parseSourceSettings,normalizedCubism2Settings,normalizedCubism3Settings} from './cubism_source_settings.mjs';
@@ -17,16 +17,23 @@ export function sourceSettings(scope,tree){
 export function inspectScope(scope,tree,records){
  const prefix=scope.directory?scope.directory+'/':'';
  const source=sourceSettings(scope,tree),found=new Set(source.map(x=>prefix+x.path));
+ const auxiliary=Object.entries(scope.auxiliarySettings||{}).map(([relative,metadata])=>({...metadata,path:prefix+relative}));
+ const auxiliaryPaths=new Set(auxiliary.map(x=>x.path));
+ const invalidAuxiliarySettings=auxiliary.filter(x=>!found.has(x.path)||!['accessory-effect','standalone-effect'].includes(x.kind)||typeof x.reason!=='string'||!x.reason.trim());
+ const qualityExclusions=Object.entries(scope.qualityExclusions||{}).map(([relative,metadata])=>({...metadata,path:prefix+relative}));
  const selection=scope.selection?new RegExp(scope.selection):null;
  const indexed=records.filter(c=>c.gameId===scope.gameId&&c.sourceRepo===scope.sourceRepo&&c.sourceCommit===scope.sourceCommit&&c.sourcePath?.startsWith(prefix)
   &&(!selection||selection.test('/'+c.sourcePath.slice(prefix.length)))
   &&(!scope.import?.pathMappings||Object.hasOwn(scope.import.pathMappings,c.sourcePath.slice(prefix.length))));
  const known=new Set(indexed.map(c=>c.sourcePath));
- const missing=source.filter(x=>!known.has(prefix+x.path)).map(x=>({path:prefix+x.path,format:x.path.endsWith('.model3.json')?'cubism3':'cubism2'}));
+ const missing=source.filter(x=>!known.has(prefix+x.path)&&!auxiliaryPaths.has(prefix+x.path)).map(x=>({...scope.qualityExclusions?.[x.path],path:prefix+x.path,format:x.path.endsWith('.model3.json')?'cubism3':'cubism2'}));
+ const indexedAuxiliarySettings=indexed.filter(c=>auxiliaryPaths.has(c.sourcePath)).map(c=>({id:c.id,path:c.sourcePath}));
  return {id:scope.id,gameId:scope.gameId,sourceRepo:scope.sourceRepo,sourceCommit:scope.sourceCommit,directory:scope.directory,
   sourceModelSettings:source.length,indexedModelSettings:indexed.length,
   unindexedSourceSettings:missing,indexedMissingFromScope:indexed.filter(c=>!found.has(c.sourcePath)).map(c=>({id:c.id,path:c.sourcePath})),
-  scopeComplete:source.length>0&&missing.length===0&&indexed.every(c=>found.has(c.sourcePath)),requireComplete:!!scope.requireComplete};
+  ...(auxiliary.length?{auxiliarySettings:auxiliary,invalidAuxiliarySettings,indexedAuxiliarySettings}:{}),
+  ...(qualityExclusions.length?{qualityExclusions}:{}),
+  scopeComplete:source.length>auxiliary.length&&indexed.length>0&&missing.length===0&&!qualityExclusions.length&&!invalidAuxiliarySettings.length&&!indexedAuxiliarySettings.length&&indexed.every(c=>found.has(c.sourcePath)),requireComplete:!!scope.requireComplete};
 }
 export function sourceModelIdentity(scope,relative){
  if(!scope.import)throw Error('No identity adapter configured for '+scope.id);
@@ -40,6 +47,14 @@ export function sourceModelIdentity(scope,relative){
 }
 export function prepareSourceRecord(scope,relative,settings,tree,existing){
  const {match,mapped,stem,id}=sourceModelIdentity(scope,relative),legacy=scope.import.format==='cubism2';
+ const textureOrder=scope.import.textureOrderOverrides?.[stem];
+ let textureRepair;
+ if(textureOrder){
+  const current=settings.FileReferences?.Textures;
+  if(legacy||!scope.import.normalizedSettingsDirectory||!Array.isArray(current)||!Array.isArray(textureOrder.expected)||!Array.isArray(textureOrder.order)||JSON.stringify(current)!==JSON.stringify(textureOrder.expected)||new Set(current).size!==current.length||JSON.stringify([...current].sort())!==JSON.stringify([...textureOrder.order].sort()))throw Error('Invalid or stale source texture order: '+relative);
+  textureRepair={before:current,after:textureOrder.order};
+  settings=structuredClone(settings);settings.FileReferences.Textures=[...textureOrder.order];
+ }
  const discoveredMotions=[];
  if(scope.import.discoverMotionDirectory){
   if(!legacy||!/^[-a-z0-9_]+$/.test(scope.import.discoverMotionDirectory))throw Error('Invalid source motion directory');
@@ -107,17 +122,20 @@ export function prepareSourceRecord(scope,relative,settings,tree,existing){
  const normalizeReference=ref=>'https://raw.githubusercontent.com/'+scope.sourceRepo+'/'+scope.sourceCommit+'/'+((scope.directory?scope.directory+'/':'')+resolve(ref)).split('/').map(encodeURIComponent).join('/');
  const generated=scope.import.normalizedSettingsDirectory?(
   legacy?normalizedCubism2Settings(settings,normalizeReference,id,scope.import.normalizedSettingsDirectory)
-  :scope.import.composeCubism3Texture?normalizedCubism3Settings(settings,normalizeReference,id,scope.import.normalizedSettingsDirectory)
+  :scope.import.composeCubism3Texture||textureRepair?normalizedCubism3Settings(settings,normalizeReference,id,scope.import.normalizedSettingsDirectory,textureRepair?'texture-order':'split')
   :null):null;
  if(generated)modelUrl=generated.url;
  if(existing&&(existing.id!==id||(!generated&&existing.modelUrl!==modelUrl)))throw Error('Existing model identity differs: '+sourcePath);
  const name=scope.import.names?.[stem]||stem;
+ const label=scope.import.nameMetadata?.[stem];
+ const managedLabel=label&&(!existing||existing.name===stem||existing.name===name);
  const record={...(existing||{}),id:existing?.id||id,gameId:scope.gameId,engine:'cubism',
-  name:existing?.name||name,characterName:existing?.characterName||stem.split('_')[0],costumeName:existing?.costumeName||stem,
-  skinCode:generated?id:mapped?.modelStem||scope.import.modelStem||(scope.import.modelStemGroup?match[scope.import.modelStemGroup]:stem)+(scope.import.modelStemSuffix||''),game:scope.name||scope.gameId,collectionName:scope.name||scope.gameId,modelUrl,
+  name:managedLabel?name:existing?.name||name,characterName:managedLabel?label.character:existing?.characterName||stem.split('_')[0],costumeName:managedLabel?label.title||stem:existing?.costumeName||stem,
+  skinCode:generated&&!textureRepair?id:mapped?.modelStem||scope.import.modelStem||(scope.import.modelStemGroup?match[scope.import.modelStemGroup]:stem)+(scope.import.modelStemSuffix||''),game:scope.name||scope.gameId,collectionName:scope.name||scope.gameId,modelUrl,
   sourceRepo:scope.sourceRepo,sourceCommit:scope.sourceCommit,sourcePath,assetType:'live2d-character',textureBytes,motionCount:motions.length,
   ...(legacy?{modelFormat:'cubism2'}:generated?{modelFormat:'cubism3'}:{}),
   ...(generated?{normalizedSettingsSha256:generated.sha256,normalizationNotes:generated.notes}:{}),
+  ...(textureRepair?{sourceTextureOrderRepair:textureRepair}:{}),
   ...(referenceRepairs.length?{sourceReferenceRepairs:referenceRepairs}:{}),
   ...(discoveredMotions.length?{sourceDiscoveredMotions:discoveredMotions}:{}),
   ...(optionalMissing.length?{sourceOptionalMissingReferences:optionalMissing}:{}),
@@ -166,14 +184,23 @@ async function scopedTree(scope){
  if(all.truncated)throw Error('Truncated source tree; cannot certify coverage: '+scope.id);
  return all.tree;
 }
-async function settingsBlob(scope,entry){
+export async function settingsBlob(scope,entry,{fetcher=fetch,cacheRoot=new URL('../tmp/live2d-source-settings/',import.meta.url)}={}){
+ if(!/^[a-f0-9]{40}$/.test(entry.sha)||!Number.isInteger(entry.size)||entry.size<1||entry.size>4*1024*1024)throw Error('Invalid source settings budget');
  const sourcePath=(scope.directory?scope.directory+'/':'')+entry.path;
  const url='https://raw.githubusercontent.com/'+scope.sourceRepo+'/'+scope.sourceCommit+'/'+sourcePath.split('/').map(encodeURIComponent).join('/');
- const response=await fetch(url,{signal:AbortSignal.timeout(30000)});
- if(!response.ok)throw Error('Model settings HTTP '+response.status+' '+sourcePath);
- const bytes=Buffer.from(await response.arrayBuffer());
- const hash=createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex');
- if(hash!==entry.sha)throw Error('Model settings Git blob mismatch: '+sourcePath);
+ const file=path.join(path.resolve(cacheRoot instanceof URL?fileURLToPath(cacheRoot):cacheRoot),entry.sha+'.json');
+ const valid=bytes=>bytes.length===entry.size&&createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex')===entry.sha;
+ let bytes=fs.existsSync(file)&&fs.statSync(file).size===entry.size?fs.readFileSync(file):null;
+ if(!bytes||!valid(bytes)){
+  const response=await fetcher(url,{signal:AbortSignal.timeout(30000)});
+  if(!response.ok)throw Error('Model settings HTTP '+response.status+' '+sourcePath);
+  let size=0;const parts=[];
+  for await(const part of response.body){size+=part.length;if(size>entry.size)throw Error('Model settings exceed source byte budget');parts.push(part)}
+  bytes=Buffer.concat(parts);
+  if(!valid(bytes))throw Error('Model settings Git blob mismatch: '+sourcePath);
+  fs.mkdirSync(path.dirname(file),{recursive:true});const temporary=file+'.tmp-'+process.pid+'-'+Math.random().toString(16).slice(2);
+  try{fs.writeFileSync(temporary,bytes);fs.renameSync(temporary,file)}finally{if(fs.existsSync(temporary))fs.unlinkSync(temporary)}
+ }
  const text=scope.import?.encoding==='shift_jis'?new TextDecoder('shift_jis',{fatal:true}).decode(bytes):bytes.toString('utf8');
  return parseSourceSettings(text,!!scope.import?.allowJSONC,!!scope.import?.repairLegacyMotionCommas);
 }
@@ -192,6 +219,7 @@ export async function main(args=process.argv.slice(2)){
    if(scope.import?.namesFile){
     if(!/^data\/[a-z0-9-]+\.json$/.test(scope.import.namesFile))throw Error('Invalid name mapping path');
     const mapping=read(scope.import.namesFile);
+    if(scope.import.applyNameMetadata)scope.import.nameMetadata=mapping;
     scope.import.names={...Object.fromEntries(Object.entries(mapping).map(([key,value])=>[key,value.title?value.character+' · '+value.title:value.character])),...scope.import.names};
    }
    let tree;
@@ -204,6 +232,8 @@ export async function main(args=process.argv.slice(2)){
    Object.assign(entry,inspectScope(scope,tree,records));
    if(scope.import&&!args.includes('--inventory-only')){
     const incoming=[];
+    const validatedAuxiliary=[];
+    const validatedQualityExclusions=[];
     entry.failedModels=[];
     entry.alreadyIndexedVariants=[];
     const outcomes=await mapBounded(sourceSettings(scope,tree),6,async file=>{
@@ -212,6 +242,8 @@ export async function main(args=process.argv.slice(2)){
      try{
       const settings=await settingsBlob(scope,file);
       const outcome=prepareSourceRecord(scope,file.path,settings,tree,existing);
+      if(Object.hasOwn(scope.auxiliarySettings||{},file.path))return {auxiliary:{...scope.auxiliarySettings[file.path],path:sourcePath,settingsBlobSha:file.sha}};
+      if(Object.hasOwn(scope.qualityExclusions||{},file.path))return {qualityExclusion:{...scope.qualityExclusions[file.path],path:sourcePath,settingsBlobSha:file.sha}};
       const sameId=records.find(c=>c.id===outcome.record.id);
       if(sameId&&sameId.modelUrl!==outcome.record.modelUrl&&!updateExisting.includes(sameId.id))return {preserved:preservedVariant(scope,outcome.record,sameId)};
       return outcome;
@@ -221,12 +253,16 @@ export async function main(args=process.argv.slice(2)){
     });
     for(const outcome of outcomes){
      if(outcome.record)incoming.push(outcome.record);
+     else if(outcome.auxiliary)validatedAuxiliary.push(outcome.auxiliary);
+     else if(outcome.qualityExclusion)validatedQualityExclusions.push(outcome.qualityExclusion);
      else if(outcome.preserved)entry.alreadyIndexedVariants.push(outcome.preserved);
      else{entry.failedModels.push(outcome.failure);if(scope.requireComplete||importId===scope.id)failed=true}
     }
-    entry.checkedModels=incoming.length+entry.alreadyIndexedVariants.length;
+    entry.checkedModels=incoming.length+entry.alreadyIndexedVariants.length+validatedAuxiliary.length+validatedQualityExclusions.length;
+    if(validatedAuxiliary.length)entry.validatedAuxiliarySettings=validatedAuxiliary;
+    if(validatedQualityExclusions.length)entry.validatedQualityExclusions=validatedQualityExclusions;
     entry.optionalMissingReferences=incoming.filter(c=>c.sourceOptionalMissingReferences?.length).map(c=>({id:c.id,path:c.sourcePath,missing:c.sourceOptionalMissingReferences}));
-    entry.availableVariantCoverageComplete=entry.sourceModelSettings>0&&entry.checkedModels===entry.sourceModelSettings&&entry.failedModels.length===0;
+    entry.availableVariantCoverageComplete=entry.sourceModelSettings>0&&entry.checkedModels===entry.sourceModelSettings&&entry.failedModels.length===0&&validatedQualityExclusions.length===0;
     entry.wouldAdd=incoming.filter(c=>!records.some(x=>x.id===c.id)).map(c=>c.id);
     if(importId===scope.id){
      const catalogFile=new URL(scope.catalog,root),catalogText=fs.readFileSync(catalogFile,'utf8'),catalog=JSON.parse(catalogText);

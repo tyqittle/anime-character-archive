@@ -2,12 +2,12 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
 import {chromium} from 'playwright-core';
+import {launchArchiveBrowser} from './archive_browser.mjs';
 import {PNG} from 'pngjs';
 import {compareRenderedFrames} from './animation_frame_check.mjs';
 const base=process.env.MODULE_TEST_BASE_URL||'http://127.0.0.1:8766';
-const executablePath=[process.env.CHROME_BIN,'C:/Program Files/Google/Chrome/Application/chrome.exe','/usr/bin/google-chrome','/usr/bin/chromium'].filter(Boolean).find(fs.existsSync);
 const output='tmp/theater-experience';fs.mkdirSync(output,{recursive:true});
-const browser=await chromium.launch({headless:true,executablePath,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const browser=await launchArchiveBrowser(chromium);
 const results={errors:[],flows:[],models:[]};
 try{
  const page=await browser.newPage({viewport:{width:1440,height:900}});

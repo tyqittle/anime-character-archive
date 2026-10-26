@@ -1,0 +1,192 @@
+{
+  "Version": 3,
+  "Name": "v1a6_308402_gt",
+  "FileReferences": {
+    "Moc": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/v1a6_308402_gt.moc3",
+    "Textures": [
+      "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/textures/308402_gt_00.png",
+      "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/textures/308402_gt_01.png",
+      "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/textures/308401_gt_mask_manual.png"
+    ],
+    "DisplayInfo": null,
+    "Physics": null,
+    "Motions": {
+      "b_dakeshui": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/b_dakeshui.motion3.json"
+        }
+      ],
+      "b_diantou": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/b_diantou.motion3.json"
+        }
+      ],
+      "b_douchibang": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/b_douchibang.motion3.json"
+        }
+      ],
+      "b_guzhang": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/b_guzhang.motion3.json"
+        }
+      ],
+      "b_heshou": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/b_heshou.motion3.json"
+        }
+      ],
+      "b_idle": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/b_idle.motion3.json"
+        }
+      ],
+      "b_yanmian": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/b_yanmian.motion3.json"
+        }
+      ],
+      "b_yaotou": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/b_yaotou.motion3.json"
+        }
+      ],
+      "b_zouyue": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/b_zouyue.motion3.json"
+        }
+      ],
+      "t_bizui": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/t_bizui.motion3.json"
+        }
+      ],
+      "t_chijing": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/t_chijing.motion3.json"
+        }
+      ],
+      "t_chijing_bizui": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/t_chijing_bizui.motion3.json"
+        }
+      ],
+      "t_dakeshui": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/t_dakeshui.motion3.json"
+        }
+      ],
+      "t_idle": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/t_idle.motion3.json"
+        }
+      ],
+      "t_kaixin": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/t_kaixin.motion3.json"
+        }
+      ],
+      "t_kaixin_bizui": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/t_kaixin_bizui.motion3.json"
+        }
+      ],
+      "t_nanguo": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/t_nanguo.motion3.json"
+        }
+      ],
+      "t_nanguo_bizui": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/t_nanguo_bizui.motion3.json"
+        }
+      ],
+      "t_shengqi": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/t_shengqi.motion3.json"
+        }
+      ],
+      "t_shengqi_bizui": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/t_shengqi_bizui.motion3.json"
+        }
+      ],
+      "t_yihuo": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/t_yihuo.motion3.json"
+        }
+      ],
+      "t_yihuo_bizui": [
+        {
+          "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/motions/t_yihuo_bizui.motion3.json"
+        }
+      ]
+    },
+    "Expressions": [
+      {
+        "Name": "e_chijing",
+        "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/expressions/e_chijing.exp3.json"
+      },
+      {
+        "Name": "e_idle",
+        "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/expressions/e_idle.exp3.json"
+      },
+      {
+        "Name": "e_kaixin",
+        "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/expressions/e_kaixin.exp3.json"
+      },
+      {
+        "Name": "e_nanguo",
+        "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/expressions/e_nanguo.exp3.json"
+      },
+      {
+        "Name": "e_shengqi",
+        "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/expressions/e_shengqi.exp3.json"
+      },
+      {
+        "Name": "e_yihuo",
+        "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/expressions/e_yihuo.exp3.json"
+      },
+      {
+        "Name": "e_kaixin",
+        "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/expressions/e_kaixin.exp3.json"
+      },
+      {
+        "Name": "e_yihuo",
+        "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/expressions/e_yihuo.exp3.json"
+      },
+      {
+        "Name": "e_shengqi",
+        "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/expressions/e_shengqi.exp3.json"
+      },
+      {
+        "Name": "e_nanguo",
+        "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/expressions/e_nanguo.exp3.json"
+      },
+      {
+        "Name": "e_idle",
+        "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/expressions/e_idle.exp3.json"
+      },
+      {
+        "Name": "e_chijing",
+        "File": "https://raw.githubusercontent.com/myssal/Reverse-1999-CN-Asset/45e75248ba3b25053fd32e63ab13c2f9f54dd9df/live2d/roles/v1a6_308402_gt/expressions/e_chijing.exp3.json"
+      }
+    ]
+  },
+  "Groups": [
+    {
+      "Target": "Parameter",
+      "Name": "EyeBlink",
+      "Ids": [
+        "ParamEyeLOpen"
+      ]
+    },
+    {
+      "Target": "Parameter",
+      "Name": "LipSync",
+      "Ids": [
+        "ParamMouthOpenY"
+      ]
+    }
+  ]
+}

@@ -82,6 +82,8 @@ python scripts/preview_pipeline.py publish
 
 采集命令为 `node scripts/repair_missing_previews.mjs SHARD COUNT`，需要固定版本的 playwright-core、pngjs 和 Chromium。普通单元测试不依赖浏览器或外网。
 
+固定树的 Cubism 来源复用共同维护入口：来源适配器声明冻结树、名称映射和经核验的设置修正，设置文件按 Git blob 摘要缓存；代表模型由 `test_cubism_source_browser.mjs` 验证原生播放及待机。辅助特效与视觉质量缺项分别审计，后者始终保留为未解决的源覆盖缺口。本地采集和相关浏览器回归共享单路默认及硬件渲染核验，不再强制 CPU 软件渲染。
+
 ## 分阶段迁移
 
 经典脚本的共享全局环境仍是明确的兼容边界。后续按“存储、播放会话、语音、视图”逐个迁移至显式接口，再切换入口为 ES Modules；不能同时重写所有渲染器和存储，以免丢失用户收藏或已下载资源。

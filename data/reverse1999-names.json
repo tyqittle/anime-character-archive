@@ -1,0 +1,4069 @@
+{
+  "300301_hujisheng": {
+    "character": "槲寄生",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/槲寄生.md",
+      "blobSha": "eda67e0f869ddafe6752128fdfa8e34a4699700e",
+      "match": "character-id"
+    }
+  },
+  "300303_hujisheng": {
+    "character": "槲寄生",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/槲寄生.md",
+      "blobSha": "eda67e0f869ddafe6752128fdfa8e34a4699700e",
+      "match": "character-id"
+    }
+  },
+  "300401_hongnujian": {
+    "character": "红弩箭",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/红弩箭.md",
+      "blobSha": "a08b02a4d94d6b86e02e368676647721e0e249f4",
+      "match": "character-id"
+    }
+  },
+  "300402_hongnujian": {
+    "character": "红弩箭",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/红弩箭.md",
+      "blobSha": "a08b02a4d94d6b86e02e368676647721e0e249f4",
+      "match": "character-id"
+    }
+  },
+  "300902_sufubi": {
+    "character": "苏芙比",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/苏芙比.md",
+      "blobSha": "eead5d5aeaaaff0fb2cec444d8dd61fb848a2054",
+      "match": "character-id"
+    }
+  },
+  "300903_sufubi": {
+    "character": "苏芙比",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/苏芙比.md",
+      "blobSha": "eead5d5aeaaaff0fb2cec444d8dd61fb848a2054",
+      "match": "character-id"
+    }
+  },
+  "301001_x": {
+    "character": "X",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/X.md",
+      "blobSha": "09b4d6fa8fd72fc9e3884e9436501a5216b7629e",
+      "match": "character-id"
+    }
+  },
+  "301002_x": {
+    "character": "X",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/X.md",
+      "blobSha": "09b4d6fa8fd72fc9e3884e9436501a5216b7629e",
+      "match": "character-id"
+    }
+  },
+  "301003_x": {
+    "character": "X",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/X.md",
+      "blobSha": "09b4d6fa8fd72fc9e3884e9436501a5216b7629e",
+      "match": "character-id"
+    }
+  },
+  "302201_pamiai": {
+    "character": "帕米埃",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/帕米埃.md",
+      "blobSha": "a98adbe62dd72d5fe5236d7e652fb10fc47ac824",
+      "match": "character-id"
+    }
+  },
+  "302202_pamiai": {
+    "character": "帕米埃",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/帕米埃.md",
+      "blobSha": "a98adbe62dd72d5fe5236d7e652fb10fc47ac824",
+      "match": "character-id"
+    }
+  },
+  "302301_shisihangshi": {
+    "character": "十四行诗",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/十四行诗.md",
+      "blobSha": "83289e356ff42394832d446964dcf0e4b3ecf42e",
+      "match": "character-id"
+    }
+  },
+  "302303_shisihangshipifu": {
+    "character": "十四行诗",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/十四行诗.md",
+      "blobSha": "83289e356ff42394832d446964dcf0e4b3ecf42e",
+      "match": "character-id"
+    }
+  },
+  "303701_fugaoren": {
+    "character": "讣告人",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/讣告人.md",
+      "blobSha": "f3656fad46adf1684366ef7e59b927e7cc9d88c1",
+      "match": "character-id"
+    }
+  },
+  "303702_fugaoren": {
+    "character": "讣告人",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/讣告人.md",
+      "blobSha": "f3656fad46adf1684366ef7e59b927e7cc9d88c1",
+      "match": "character-id"
+    }
+  },
+  "303801_wuseyue": {
+    "character": "五色月",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/五色月.md",
+      "blobSha": "e176c3623a84ab32cf90b7e24fee7c2ed3b8a3a2",
+      "match": "character-id"
+    }
+  },
+  "303802_wuseyue": {
+    "character": "五色月",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/五色月.md",
+      "blobSha": "e176c3623a84ab32cf90b7e24fee7c2ed3b8a3a2",
+      "match": "character-id"
+    }
+  },
+  "303901_nimengdishi": {
+    "character": "泥鯭的士",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/泥鯭的士.md",
+      "blobSha": "4783f82355c97278deb4e2087841457e08f54d31",
+      "match": "character-id"
+    }
+  },
+  "303902_nimengdishi": {
+    "character": "泥鯭的士",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/泥鯭的士.md",
+      "blobSha": "4783f82355c97278deb4e2087841457e08f54d31",
+      "match": "character-id"
+    }
+  },
+  "304101_madierda": {
+    "character": "玛蒂尔达",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/玛蒂尔达.md",
+      "blobSha": "53d14fac372c8acce4f0aa8af8b77633f3a0c0c0",
+      "match": "character-id"
+    }
+  },
+  "304102_madierda": {
+    "character": "玛蒂尔达",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/玛蒂尔达.md",
+      "blobSha": "53d14fac372c8acce4f0aa8af8b77633f3a0c0c0",
+      "match": "character-id"
+    }
+  },
+  "304103_madierda": {
+    "character": "玛蒂尔达",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/玛蒂尔达.md",
+      "blobSha": "53d14fac372c8acce4f0aa8af8b77633f3a0c0c0",
+      "match": "character-id"
+    }
+  },
+  "304301_tannante": {
+    "character": "坦南特",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/坦南特.md",
+      "blobSha": "aafd6a07084c462310e0f7c209abf90bdcf6e9f7",
+      "match": "character-id"
+    }
+  },
+  "304302_tannante": {
+    "character": "坦南特",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/坦南特.md",
+      "blobSha": "aafd6a07084c462310e0f7c209abf90bdcf6e9f7",
+      "match": "character-id"
+    }
+  },
+  "304303_tannante": {
+    "character": "坦南特",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/坦南特.md",
+      "blobSha": "aafd6a07084c462310e0f7c209abf90bdcf6e9f7",
+      "match": "character-id"
+    }
+  },
+  "304701_tumaoshoudai": {
+    "character": "兔毛手袋",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/兔毛手袋.md",
+      "blobSha": "134732fb707538fd7fd4802c8bb892a5deb26c70",
+      "match": "character-id"
+    }
+  },
+  "304702_tumaoshoudai": {
+    "character": "兔毛手袋",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/兔毛手袋.md",
+      "blobSha": "134732fb707538fd7fd4802c8bb892a5deb26c70",
+      "match": "character-id"
+    }
+  },
+  "304801_yuanlv": {
+    "character": "远旅",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/远旅.md",
+      "blobSha": "7f96e905607be002345bac7a29e53eaed9585dd5",
+      "match": "character-id"
+    }
+  },
+  "304802_yuanlv": {
+    "character": "远旅",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/远旅.md",
+      "blobSha": "7f96e905607be002345bac7a29e53eaed9585dd5",
+      "match": "character-id"
+    }
+  },
+  "304901_kachakacha": {
+    "character": "喀嚓喀嚓",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/喀嚓喀嚓.md",
+      "blobSha": "7a66fc09bb9dd328ce785c211d08af3b02631fa9",
+      "match": "character-id"
+    }
+  },
+  "304902_kachakacha": {
+    "character": "喀嚓喀嚓",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/喀嚓喀嚓.md",
+      "blobSha": "7a66fc09bb9dd328ce785c211d08af3b02631fa9",
+      "match": "character-id"
+    }
+  },
+  "305101_wennifuleide": {
+    "character": "温妮弗雷德",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/温妮弗雷德.md",
+      "blobSha": "049639ac51bf3f4507e109b78a1f2f2bbc887e91",
+      "match": "character-id"
+    }
+  },
+  "305102_wennifuleide": {
+    "character": "温妮弗雷德",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/温妮弗雷德.md",
+      "blobSha": "049639ac51bf3f4507e109b78a1f2f2bbc887e91",
+      "match": "character-id"
+    }
+  },
+  "305201_xinbabieta": {
+    "character": "新巴别塔",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/新巴别塔.md",
+      "blobSha": "fc20cb7c7d9d4c16c46c49ee7a2a98578e67d9c9",
+      "match": "character-id"
+    }
+  },
+  "305202_xinbabieta": {
+    "character": "新巴别塔",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/新巴别塔.md",
+      "blobSha": "fc20cb7c7d9d4c16c46c49ee7a2a98578e67d9c9",
+      "match": "character-id"
+    }
+  },
+  "305301_yaxian": {
+    "character": "牙仙",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/牙仙.md",
+      "blobSha": "0923c358b25be578ef455092055ab4efeb1ac370",
+      "match": "character-id"
+    }
+  },
+  "305302_yaxian": {
+    "character": "牙仙",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/牙仙.md",
+      "blobSha": "0923c358b25be578ef455092055ab4efeb1ac370",
+      "match": "character-id"
+    }
+  },
+  "305601_jiexika": {
+    "character": "洁西卡",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/洁西卡.md",
+      "blobSha": "12fac774c2f44e0405b9cf3ad66d07356df1c1be",
+      "match": "character-id"
+    }
+  },
+  "305602_jiexika": {
+    "character": "洁西卡",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/洁西卡.md",
+      "blobSha": "12fac774c2f44e0405b9cf3ad66d07356df1c1be",
+      "match": "character-id"
+    }
+  },
+  "306001_jinmier": {
+    "character": "金蜜儿",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/金蜜儿.md",
+      "blobSha": "391d1b10d9be0c5076dd708439f7df65c96c27b9",
+      "match": "character-id"
+    }
+  },
+  "306002_jinmier": {
+    "character": "金蜜儿",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/金蜜儿.md",
+      "blobSha": "391d1b10d9be0c5076dd708439f7df65c96c27b9",
+      "match": "character-id"
+    }
+  },
+  "306101_kongbutong": {
+    "character": "恐怖通",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/恐怖通.md",
+      "blobSha": "2e9e759f9033daee0944f5c87f1f75ac29ad9d30",
+      "match": "character-id"
+    }
+  },
+  "306102_kongbutong": {
+    "character": "恐怖通",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/恐怖通.md",
+      "blobSha": "2e9e759f9033daee0944f5c87f1f75ac29ad9d30",
+      "match": "character-id"
+    }
+  },
+  "306201_meilanni": {
+    "character": "梅兰妮",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/梅兰妮.md",
+      "blobSha": "dd8a728b9aa8f1b68168a6066eaf669c291d4836",
+      "match": "character-id"
+    }
+  },
+  "306202_meilanni": {
+    "character": "梅兰妮",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/梅兰妮.md",
+      "blobSha": "dd8a728b9aa8f1b68168a6066eaf669c291d4836",
+      "match": "character-id"
+    }
+  },
+  "306301_pikelesi": {
+    "character": "皮克勒斯",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/皮克勒斯.md",
+      "blobSha": "80b2b6b7e544bd13588eedc1863228eb070113a1",
+      "match": "character-id"
+    }
+  },
+  "306302_pikelesi": {
+    "character": "皮克勒斯",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/皮克勒斯.md",
+      "blobSha": "80b2b6b7e544bd13588eedc1863228eb070113a1",
+      "match": "character-id"
+    }
+  },
+  "306303_pikelesi": {
+    "character": "皮克勒斯",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/皮克勒斯.md",
+      "blobSha": "80b2b6b7e544bd13588eedc1863228eb070113a1",
+      "match": "character-id"
+    }
+  },
+  "306401_wajueyishu": {
+    "character": "挖掘艺术",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/挖掘艺术.md",
+      "blobSha": "4fafc903ea4c55c9c37041dc61c42d82c9bbb2d9",
+      "match": "character-id"
+    }
+  },
+  "306402_wajueyishu": {
+    "character": "挖掘艺术",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/挖掘艺术.md",
+      "blobSha": "4fafc903ea4c55c9c37041dc61c42d82c9bbb2d9",
+      "match": "character-id"
+    }
+  },
+  "307001_jialabona": {
+    "character": "伽菈波那",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/伽菈波那.md",
+      "blobSha": "469e54887540ec98241fed7a631843780f22e70d",
+      "match": "character-id"
+    }
+  },
+  "307002_jialabona": {
+    "character": "伽菈波那",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/伽菈波那.md",
+      "blobSha": "469e54887540ec98241fed7a631843780f22e70d",
+      "match": "character-id"
+    }
+  },
+  "307101_kanjila": {
+    "character": "坎吉拉",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/坎吉拉.md",
+      "blobSha": "b4881b997f781a95ead8b80c8400e787753ec325",
+      "match": "character-id"
+    }
+  },
+  "307102_kanjila": {
+    "character": "坎吉拉",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/坎吉拉.md",
+      "blobSha": "b4881b997f781a95ead8b80c8400e787753ec325",
+      "match": "character-id"
+    }
+  },
+  "307201_zongmaoshali": {
+    "character": "鬃毛沙砾",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/鬃毛沙砾.md",
+      "blobSha": "9d7a030491b3c9dae495265eb891200b307ad5e6",
+      "match": "character-id"
+    }
+  },
+  "307202_zongmaoshali": {
+    "character": "鬃毛沙砾",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/鬃毛沙砾.md",
+      "blobSha": "9d7a030491b3c9dae495265eb891200b307ad5e6",
+      "match": "character-id"
+    }
+  },
+  "501201_z": {
+    "character": "Z",
+    "title": "外观 01 · 源编号 501201",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "z",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "505301_hujisheng": {
+    "character": "槲寄生",
+    "title": "外观 01 · 源编号 505301",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "hujisheng",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "506801_kangsitanding": {
+    "character": "康斯坦丁",
+    "title": "外观 01 · 源编号 506801",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "kangsitanding",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "511101_shisihangshi": {
+    "character": "十四行诗",
+    "title": "外观 01 · 源编号 511101",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "shisihangshi",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "511301_shisihangshi": {
+    "character": "十四行诗",
+    "title": "外观 01 · 源编号 511301",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "shisihangshi",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "614901_zmsldb": {
+    "character": "角色 6149",
+    "title": "外观 01 · 源编号 614901",
+    "source": {
+      "match": "unresolved-retain-source-code",
+      "token": "zmsldb"
+    }
+  },
+  "619501_jinmier": {
+    "character": "金蜜儿",
+    "title": "外观 01 · 源编号 619501",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "jinmier",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "s01_305104_wnfld": {
+    "character": "温妮弗雷德",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/温妮弗雷德.md",
+      "blobSha": "049639ac51bf3f4507e109b78a1f2f2bbc887e91",
+      "match": "character-id"
+    }
+  },
+  "s01_306504_makusi": {
+    "character": "马库斯",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/马库斯.md",
+      "blobSha": "f78cc924b1e6fbf6ee10eac43f9dc9999b3b631e",
+      "match": "character-id"
+    }
+  },
+  "s01_308704_wl": {
+    "character": "维拉",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/维拉.md",
+      "blobSha": "7298eb8082351765888399da6600873a4caceb7c",
+      "match": "character-id"
+    }
+  },
+  "s01_311603_lzl": {
+    "character": "冷周六",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/冷周六.md",
+      "blobSha": "b7b2ed9b9a9f1ee474c7a35936813fa952bb606f",
+      "match": "character-id"
+    }
+  },
+  "s01_312201_alexios": {
+    "character": "阿利克西欧斯",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/阿利克西欧斯.md",
+      "blobSha": "5d426e0f6504cddfb1d727f18a2f5fe76c9118ad",
+      "match": "character-id"
+    }
+  },
+  "s01_312202_alexios": {
+    "character": "阿利克西欧斯",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/阿利克西欧斯.md",
+      "blobSha": "5d426e0f6504cddfb1d727f18a2f5fe76c9118ad",
+      "match": "character-id"
+    }
+  },
+  "s01_312301_aja": {
+    "character": "艾吉奥·奥迪托雷",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/艾吉奥·奥迪托雷.md",
+      "blobSha": "3070d5f42e1ae55235114a472ed9a9c66b468394",
+      "match": "character-id"
+    }
+  },
+  "s01_312302_aja": {
+    "character": "艾吉奥·奥迪托雷",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/艾吉奥·奥迪托雷.md",
+      "blobSha": "3070d5f42e1ae55235114a472ed9a9c66b468394",
+      "match": "character-id"
+    }
+  },
+  "s01_312401_ksdl": {
+    "character": "卡珊德拉",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/卡珊德拉.md",
+      "blobSha": "1b714f046d64df8f6ceb0ba24ddea04e016a2b16",
+      "match": "character-id"
+    }
+  },
+  "s01_312402_ksdl": {
+    "character": "卡珊德拉",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/卡珊德拉.md",
+      "blobSha": "1b714f046d64df8f6ceb0ba24ddea04e016a2b16",
+      "match": "character-id"
+    }
+  },
+  "s02_303904_nmds": {
+    "character": "泥鯭的士",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/泥鯭的士.md",
+      "blobSha": "4783f82355c97278deb4e2087841457e08f54d31",
+      "match": "character-id"
+    }
+  },
+  "s02_307705_bfsg": {
+    "character": "北方哨歌",
+    "title": "外观 05",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/北方哨歌.md",
+      "blobSha": "f67350b55a15bbaa96be8891de6aad06086eadd5",
+      "match": "character-id"
+    }
+  },
+  "s02_310504_zxqe": {
+    "character": "纸信圈儿",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/纸信圈儿.md",
+      "blobSha": "10e1bf9cb81f81e70ba1cb1b9bfc4520c91dc5bf",
+      "match": "character-id"
+    }
+  },
+  "s02_310604_kym": {
+    "character": "宽檐帽",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/宽檐帽.md",
+      "blobSha": "d6f65559e5b7314d4273d33a896437f94a7face3",
+      "match": "character-id"
+    }
+  },
+  "s02_312606_mlan": {
+    "character": "玛丽安娜",
+    "title": "外观 06",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/玛丽安娜.md",
+      "blobSha": "4dca92d5949324d760b9978c19d354ea01d970e0",
+      "match": "character-id"
+    }
+  },
+  "s02_314901_sswl": {
+    "character": "双生舞伶",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/双生舞伶.md",
+      "blobSha": "9ca07ebcb41ac63117d1bac256f318ba8bd8ba2a",
+      "match": "character-id"
+    }
+  },
+  "s02_314902_sswl": {
+    "character": "双生舞伶",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/双生舞伶.md",
+      "blobSha": "9ca07ebcb41ac63117d1bac256f318ba8bd8ba2a",
+      "match": "character-id"
+    }
+  },
+  "s02_314903_sswl": {
+    "character": "双生舞伶",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/双生舞伶.md",
+      "blobSha": "9ca07ebcb41ac63117d1bac256f318ba8bd8ba2a",
+      "match": "character-id"
+    }
+  },
+  "s02_650803_xsxkzqb": {
+    "character": "角色 6508",
+    "title": "外观 03 · 源编号 650803",
+    "source": {
+      "match": "unresolved-retain-source-code",
+      "token": "xsxkzqb"
+    }
+  },
+  "v1a4_300403_hongnujian": {
+    "character": "红弩箭",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/红弩箭.md",
+      "blobSha": "a08b02a4d94d6b86e02e368676647721e0e249f4",
+      "match": "character-id"
+    }
+  },
+  "v1a4_306403_wajueyishu": {
+    "character": "挖掘艺术",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/挖掘艺术.md",
+      "blobSha": "4fafc903ea4c55c9c37041dc61c42d82c9bbb2d9",
+      "match": "character-id"
+    }
+  },
+  "v1a4_306601_37": {
+    "character": "37",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/37.md",
+      "blobSha": "9c407c216d702d12066b14a8ee5ba3ec4685aafd",
+      "match": "character-id"
+    }
+  },
+  "v1a4_306602_37": {
+    "character": "37",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/37.md",
+      "blobSha": "9c407c216d702d12066b14a8ee5ba3ec4685aafd",
+      "match": "character-id"
+    }
+  },
+  "v1a4_307901_6": {
+    "character": "6",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/6.md",
+      "blobSha": "6827e23be41f9bd4859298fd9db9d4a71a3f3dee",
+      "match": "character-id"
+    }
+  },
+  "v1a4_307902_6": {
+    "character": "6",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/6.md",
+      "blobSha": "6827e23be41f9bd4859298fd9db9d4a71a3f3dee",
+      "match": "character-id"
+    }
+  },
+  "v1a4_308501_yami": {
+    "character": "哑谜",
+    "title": "外观 01 · 源编号 308501",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "yami",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "v1a4_308601_luxi": {
+    "character": "露西",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/露西.md",
+      "blobSha": "f09181f0d8422e9f7626060659bfcbc63222e3c3",
+      "match": "character-id"
+    }
+  },
+  "v1a5_302203_pamiai": {
+    "character": "帕米埃",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/帕米埃.md",
+      "blobSha": "a98adbe62dd72d5fe5236d7e652fb10fc47ac824",
+      "match": "character-id"
+    }
+  },
+  "v1a5_305303_yaxian": {
+    "character": "牙仙",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/牙仙.md",
+      "blobSha": "0923c358b25be578ef455092055ab4efeb1ac370",
+      "match": "character-id"
+    }
+  },
+  "v1a5_307301_kerandian": {
+    "character": "可燃点",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/可燃点.md",
+      "blobSha": "a4dedd5325b71b6fc155d87bb21a2cb483010b04",
+      "match": "character-id"
+    }
+  },
+  "v1a5_307302_kerandian": {
+    "character": "可燃点",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/可燃点.md",
+      "blobSha": "a4dedd5325b71b6fc155d87bb21a2cb483010b04",
+      "match": "character-id"
+    }
+  },
+  "v1a5_307401_aizila": {
+    "character": "爱兹拉",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/爱兹拉.md",
+      "blobSha": "d8626acacb0256a75f353bf83579ac8c7ff58860",
+      "match": "character-id"
+    }
+  },
+  "v1a5_307402_aizila": {
+    "character": "爱兹拉",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/爱兹拉.md",
+      "blobSha": "d8626acacb0256a75f353bf83579ac8c7ff58860",
+      "match": "character-id"
+    }
+  },
+  "v1a5_307501_shasirong": {
+    "character": "沙丝绒",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/沙丝绒.md",
+      "blobSha": "90d1bbf31fd1e2f88aca4c4a15d3120107c7ac7f",
+      "match": "character-id"
+    }
+  },
+  "v1a5_307502_shasirong": {
+    "character": "沙丝绒",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/沙丝绒.md",
+      "blobSha": "90d1bbf31fd1e2f88aca4c4a15d3120107c7ac7f",
+      "match": "character-id"
+    }
+  },
+  "v1a5_613701_rskrd": {
+    "character": "角色 6137",
+    "title": "外观 01 · 源编号 613701",
+    "source": {
+      "match": "unresolved-retain-source-code",
+      "token": "rskrd"
+    }
+  },
+  "v1a5_617001_shasirong": {
+    "character": "沙丝绒",
+    "title": "外观 01 · 源编号 617001",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "shasirong",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "v1a5_617101_aizila": {
+    "character": "爱兹拉",
+    "title": "外观 01 · 源编号 617101",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "aizila",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "v1a5_617201_kerandian": {
+    "character": "可燃点",
+    "title": "外观 01 · 源编号 617201",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "kerandian",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "v1a5_621401_shasirong": {
+    "character": "沙丝绒",
+    "title": "外观 01 · 源编号 621401",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "shasirong",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "v1a6_300305_hujisheng": {
+    "character": "槲寄生",
+    "title": "外观 05",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/槲寄生.md",
+      "blobSha": "eda67e0f869ddafe6752128fdfa8e34a4699700e",
+      "match": "character-id"
+    }
+  },
+  "v1a6_303903_nmds": {
+    "character": "泥鯭的士",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/泥鯭的士.md",
+      "blobSha": "4783f82355c97278deb4e2087841457e08f54d31",
+      "match": "character-id"
+    }
+  },
+  "v1a6_308201_xiaoyenisai": {
+    "character": "小叶尼塞",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/小叶尼塞.md",
+      "blobSha": "2efe6947692ae1d4d06194ad113ed43c8c056031",
+      "match": "character-id"
+    }
+  },
+  "v1a6_308202_xiaoyenisai": {
+    "character": "小叶尼塞",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/小叶尼塞.md",
+      "blobSha": "2efe6947692ae1d4d06194ad113ed43c8c056031",
+      "match": "character-id"
+    }
+  },
+  "v1a6_308301_quniang": {
+    "character": "曲娘",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/曲娘.md",
+      "blobSha": "0ec0c746c92f593ffa283f96362c31e095c6179e",
+      "match": "character-id"
+    }
+  },
+  "v1a6_308302_quniang": {
+    "character": "曲娘",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/曲娘.md",
+      "blobSha": "0ec0c746c92f593ffa283f96362c31e095c6179e",
+      "match": "character-id"
+    }
+  },
+  "v1a6_308401_gt": {
+    "character": "葛天",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/葛天.md",
+      "blobSha": "bedfc943de7ee0ecfd12440251ea96a1e1714aff",
+      "match": "character-id"
+    }
+  },
+  "v1a6_308402_gt": {
+    "character": "葛天",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/葛天.md",
+      "blobSha": "bedfc943de7ee0ecfd12440251ea96a1e1714aff",
+      "match": "character-id"
+    }
+  },
+  "v1a6_621701_gt": {
+    "character": "葛天",
+    "title": "外观 01 · 源编号 621701",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "gt",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "v1a6_623501_quniang": {
+    "character": "曲娘",
+    "title": "外观 01 · 源编号 623501",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "quniang",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "v1a7_303803_wuseyue": {
+    "character": "五色月",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/五色月.md",
+      "blobSha": "e176c3623a84ab32cf90b7e24fee7c2ed3b8a3a2",
+      "match": "character-id"
+    }
+  },
+  "v1a7_306203_meilanni": {
+    "character": "梅兰妮",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/梅兰妮.md",
+      "blobSha": "dd8a728b9aa8f1b68168a6066eaf669c291d4836",
+      "match": "character-id"
+    }
+  },
+  "v1a7_306501_makusi": {
+    "character": "马库斯",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/马库斯.md",
+      "blobSha": "f78cc924b1e6fbf6ee10eac43f9dc9999b3b631e",
+      "match": "character-id"
+    }
+  },
+  "v1a7_306502_makusi": {
+    "character": "马库斯",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/马库斯.md",
+      "blobSha": "f78cc924b1e6fbf6ee10eac43f9dc9999b3b631e",
+      "match": "character-id"
+    }
+  },
+  "v1a7_306603_37": {
+    "character": "37",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/37.md",
+      "blobSha": "9c407c216d702d12066b14a8ee5ba3ec4685aafd",
+      "match": "character-id"
+    }
+  },
+  "v1a7_308101_yisuoerde": {
+    "character": "伊索尔德",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/伊索尔德.md",
+      "blobSha": "4b1bf33fff619a73d61ca4921996589a6f1368be",
+      "match": "character-id"
+    }
+  },
+  "v1a7_308102_yisuoerde": {
+    "character": "伊索尔德",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/伊索尔德.md",
+      "blobSha": "4b1bf33fff619a73d61ca4921996589a6f1368be",
+      "match": "character-id"
+    }
+  },
+  "v1a7_514501_kakaniya": {
+    "character": "卡卡尼亚",
+    "title": "外观 01 · 源编号 514501",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "kakaniya",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "v1a7_514701_yisuoerde": {
+    "character": "伊索尔德",
+    "title": "外观 01 · 源编号 514701",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "yisuoerde",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "v1a7_514901_luxi": {
+    "character": "露西",
+    "title": "外观 01 · 源编号 514901",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "luxi",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "v1a8_304104_mded": {
+    "character": "玛蒂尔达",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/玛蒂尔达.md",
+      "blobSha": "53d14fac372c8acce4f0aa8af8b77633f3a0c0c0",
+      "match": "character-id"
+    }
+  },
+  "v1a8_304703_tumaoshoudai": {
+    "character": "兔毛手袋",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/兔毛手袋.md",
+      "blobSha": "134732fb707538fd7fd4802c8bb892a5deb26c70",
+      "match": "character-id"
+    }
+  },
+  "v1a8_305103_wnfld": {
+    "character": "温妮弗雷德",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/温妮弗雷德.md",
+      "blobSha": "049639ac51bf3f4507e109b78a1f2f2bbc887e91",
+      "match": "character-id"
+    }
+  },
+  "v1a8_307701_beifangshaoge": {
+    "character": "北方哨歌",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/北方哨歌.md",
+      "blobSha": "f67350b55a15bbaa96be8891de6aad06086eadd5",
+      "match": "character-id"
+    }
+  },
+  "v1a8_307702_beifangshaoge": {
+    "character": "北方哨歌",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/北方哨歌.md",
+      "blobSha": "f67350b55a15bbaa96be8891de6aad06086eadd5",
+      "match": "character-id"
+    }
+  },
+  "v1a8_307801_afuxiwei": {
+    "character": "阿夫西维",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/阿夫西维.md",
+      "blobSha": "fd048d83b778215553bdb551bbec4f4e1b9ef425",
+      "match": "character-id"
+    }
+  },
+  "v1a8_307802_afuxiwei": {
+    "character": "阿夫西维",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/阿夫西维.md",
+      "blobSha": "fd048d83b778215553bdb551bbec4f4e1b9ef425",
+      "match": "character-id"
+    }
+  },
+  "v1a8_308701_weila": {
+    "character": "维拉",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/维拉.md",
+      "blobSha": "7298eb8082351765888399da6600873a4caceb7c",
+      "match": "character-id"
+    }
+  },
+  "v1a8_308702_weila": {
+    "character": "维拉",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/维拉.md",
+      "blobSha": "7298eb8082351765888399da6600873a4caceb7c",
+      "match": "character-id"
+    }
+  },
+  "v1a9_302304_sshs": {
+    "character": "十四行诗",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/十四行诗.md",
+      "blobSha": "83289e356ff42394832d446964dcf0e4b3ecf42e",
+      "match": "character-id"
+    }
+  },
+  "v1a9_302504_xingti": {
+    "character": "星锑",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/星锑.md",
+      "blobSha": "c9a1c9bfd880fdfc2a195427caa21c18bfbe7a0e",
+      "match": "character-id"
+    }
+  },
+  "v1a9_304803_yuanlv": {
+    "character": "远旅",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/远旅.md",
+      "blobSha": "7f96e905607be002345bac7a29e53eaed9585dd5",
+      "match": "character-id"
+    }
+  },
+  "v1a9_305603_jiexika": {
+    "character": "洁西卡",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/洁西卡.md",
+      "blobSha": "12fac774c2f44e0405b9cf3ad66d07356df1c1be",
+      "match": "character-id"
+    }
+  },
+  "v1a9_307503_shasirong": {
+    "character": "沙丝绒",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/沙丝绒.md",
+      "blobSha": "90d1bbf31fd1e2f88aca4c4a15d3120107c7ac7f",
+      "match": "character-id"
+    }
+  },
+  "v1a9_308001_kakaniya": {
+    "character": "卡卡尼亚",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/卡卡尼亚.md",
+      "blobSha": "c9d38a6e1de7029d175b179611c3c10cb8ce228e",
+      "match": "character-id"
+    }
+  },
+  "v1a9_308002_kakaniya": {
+    "character": "卡卡尼亚",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/卡卡尼亚.md",
+      "blobSha": "c9d38a6e1de7029d175b179611c3c10cb8ce228e",
+      "match": "character-id"
+    }
+  },
+  "v1a9_308601_luxi": {
+    "character": "露西",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/露西.md",
+      "blobSha": "f09181f0d8422e9f7626060659bfcbc63222e3c3",
+      "match": "character-id"
+    }
+  },
+  "v1a9_308602_luxi": {
+    "character": "露西",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/露西.md",
+      "blobSha": "f09181f0d8422e9f7626060659bfcbc63222e3c3",
+      "match": "character-id"
+    }
+  },
+  "v1a9_308801_smews": {
+    "character": "塞梅尔维斯",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/塞梅尔维斯.md",
+      "blobSha": "ed0a518400fd5516420b41f8c0c09dd552176500",
+      "match": "character-id"
+    }
+  },
+  "v1a9_308802_smews": {
+    "character": "塞梅尔维斯",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/塞梅尔维斯.md",
+      "blobSha": "ed0a518400fd5516420b41f8c0c09dd552176500",
+      "match": "character-id"
+    }
+  },
+  "v1a9_309101_luoleilai": {
+    "character": "罗蕾莱",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/罗蕾莱.md",
+      "blobSha": "25288c033e1c1b10b1bb606276d94e85d21e2864",
+      "match": "character-id"
+    }
+  },
+  "v1a9_309102_luoleilai": {
+    "character": "罗蕾莱",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/罗蕾莱.md",
+      "blobSha": "25288c033e1c1b10b1bb606276d94e85d21e2864",
+      "match": "character-id"
+    }
+  },
+  "v1a9_516001_sfycszs": {
+    "character": "角色 5160",
+    "title": "外观 01 · 源编号 516001",
+    "source": {
+      "match": "unresolved-retain-source-code",
+      "token": "sfycszs"
+    }
+  },
+  "v2a0_307003_jialabona": {
+    "character": "伽菈波那",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/伽菈波那.md",
+      "blobSha": "469e54887540ec98241fed7a631843780f22e70d",
+      "match": "character-id"
+    }
+  },
+  "v2a0_307103_kjl": {
+    "character": "坎吉拉",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/坎吉拉.md",
+      "blobSha": "b4881b997f781a95ead8b80c8400e787753ec325",
+      "match": "character-id"
+    }
+  },
+  "v2a0_307303_kerandian": {
+    "character": "可燃点",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/可燃点.md",
+      "blobSha": "a4dedd5325b71b6fc155d87bb21a2cb483010b04",
+      "match": "character-id"
+    }
+  },
+  "v2a0_307903_6": {
+    "character": "6",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/6.md",
+      "blobSha": "6827e23be41f9bd4859298fd9db9d4a71a3f3dee",
+      "match": "character-id"
+    }
+  },
+  "v2a0_309401_j": {
+    "character": "J",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/J.md",
+      "blobSha": "ce87b417ec64e515aebfb95a9ee35da9e1c7c2e4",
+      "match": "character-id"
+    }
+  },
+  "v2a0_309402_j": {
+    "character": "J",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/J.md",
+      "blobSha": "ce87b417ec64e515aebfb95a9ee35da9e1c7c2e4",
+      "match": "character-id"
+    }
+  },
+  "v2a0_309501_huanzhuangshuixing": {
+    "character": "环状水星",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/环状水星.md",
+      "blobSha": "553059702f27d3a59fe27eaf9b0957ca70dd35d0",
+      "match": "character-id"
+    }
+  },
+  "v2a0_309502_huanzhuangshuixing": {
+    "character": "环状水星",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/环状水星.md",
+      "blobSha": "553059702f27d3a59fe27eaf9b0957ca70dd35d0",
+      "match": "character-id"
+    }
+  },
+  "v2a0_628401_j": {
+    "character": "J",
+    "title": "外观 01 · 源编号 628401",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "j",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "v2a1_306003_jinmier": {
+    "character": "金蜜儿",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/金蜜儿.md",
+      "blobSha": "391d1b10d9be0c5076dd708439f7df65c96c27b9",
+      "match": "character-id"
+    }
+  },
+  "v2a1_307403_aizila": {
+    "character": "爱兹拉",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/爱兹拉.md",
+      "blobSha": "d8626acacb0256a75f353bf83579ac8c7ff58860",
+      "match": "character-id"
+    }
+  },
+  "v2a1_308103_yisuoerde": {
+    "character": "伊索尔德",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/伊索尔德.md",
+      "blobSha": "4b1bf33fff619a73d61ca4921996589a6f1368be",
+      "match": "character-id"
+    }
+  },
+  "v2a1_309701_aegs": {
+    "character": "阿尔古斯",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/阿尔古斯.md",
+      "blobSha": "ece3264f90859de6dcd9d0116ea37ee5e188445f",
+      "match": "character-id"
+    }
+  },
+  "v2a1_309702_aegs": {
+    "character": "阿尔古斯",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/阿尔古斯.md",
+      "blobSha": "ece3264f90859de6dcd9d0116ea37ee5e188445f",
+      "match": "character-id"
+    }
+  },
+  "v2a1_309801_lsp": {
+    "character": "蓝手帕",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/蓝手帕.md",
+      "blobSha": "50d800a3a7273c5ef9795c42e57e42b940d831b6",
+      "match": "character-id"
+    }
+  },
+  "v2a1_309802_lsp": {
+    "character": "蓝手帕",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/蓝手帕.md",
+      "blobSha": "50d800a3a7273c5ef9795c42e57e42b940d831b6",
+      "match": "character-id"
+    }
+  },
+  "v2a1_309901_syg": {
+    "character": "数羊羔",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/数羊羔.md",
+      "blobSha": "6ac1a67e4aeda0410198434bbc8d819070b0eaef",
+      "match": "character-id"
+    }
+  },
+  "v2a1_309902_syg": {
+    "character": "数羊羔",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/数羊羔.md",
+      "blobSha": "6ac1a67e4aeda0410198434bbc8d819070b0eaef",
+      "match": "character-id"
+    }
+  },
+  "v2a1_628201_lsp": {
+    "character": "蓝手帕",
+    "title": "外观 01 · 源编号 628201",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "lsp",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "v2a1_628301_aegs": {
+    "character": "阿尔古斯",
+    "title": "外观 01 · 源编号 628301",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "aegs",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "v2a2_306503_mks": {
+    "character": "马库斯",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/马库斯.md",
+      "blobSha": "f78cc924b1e6fbf6ee10eac43f9dc9999b3b631e",
+      "match": "character-id"
+    }
+  },
+  "v2a2_306604_37": {
+    "character": "37",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/37.md",
+      "blobSha": "9c407c216d702d12066b14a8ee5ba3ec4685aafd",
+      "match": "character-id"
+    }
+  },
+  "v2a2_307203_zmsl": {
+    "character": "鬃毛沙砾",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/鬃毛沙砾.md",
+      "blobSha": "9d7a030491b3c9dae495265eb891200b307ad5e6",
+      "match": "character-id"
+    }
+  },
+  "v2a2_308203_xyns": {
+    "character": "小叶尼塞",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/小叶尼塞.md",
+      "blobSha": "2efe6947692ae1d4d06194ad113ed43c8c056031",
+      "match": "character-id"
+    }
+  },
+  "v2a2_308703_wl": {
+    "character": "维拉",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/维拉.md",
+      "blobSha": "7298eb8082351765888399da6600873a4caceb7c",
+      "match": "character-id"
+    }
+  },
+  "v2a2_310001_anjonala": {
+    "character": "天使娜娜",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/天使娜娜.md",
+      "blobSha": "271fd8f3652311018bae4f2128fb54d46d01824c",
+      "match": "character-id"
+    }
+  },
+  "v2a2_310002_anjonala": {
+    "character": "天使娜娜",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/天使娜娜.md",
+      "blobSha": "271fd8f3652311018bae4f2128fb54d46d01824c",
+      "match": "character-id"
+    }
+  },
+  "v2a2_310201_luopeila": {
+    "character": "洛佩拉",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/洛佩拉.md",
+      "blobSha": "2d91b8fa9c17ba6b551e2bb50a41ca7d4635aefa",
+      "match": "character-id"
+    }
+  },
+  "v2a2_310202_luopeila": {
+    "character": "洛佩拉",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/洛佩拉.md",
+      "blobSha": "2d91b8fa9c17ba6b551e2bb50a41ca7d4635aefa",
+      "match": "character-id"
+    }
+  },
+  "v2a2_310301_dengken": {
+    "character": "邓肯先生",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/邓肯先生.md",
+      "blobSha": "86f47de13e3b6b401a02840d468331f59979c475",
+      "match": "character-id"
+    }
+  },
+  "v2a2_310302_dengken": {
+    "character": "邓肯先生",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/邓肯先生.md",
+      "blobSha": "86f47de13e3b6b401a02840d468331f59979c475",
+      "match": "character-id"
+    }
+  },
+  "v2a2_512401_dengken": {
+    "character": "邓肯先生",
+    "title": "外观 01 · 源编号 512401",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "dengken",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "v2a2_520101_anjonala": {
+    "character": "天使娜娜",
+    "title": "外观 01 · 源编号 520101",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "anjonala",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "v2a3_300404_hongnujian": {
+    "character": "红弩箭",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/红弩箭.md",
+      "blobSha": "a08b02a4d94d6b86e02e368676647721e0e249f4",
+      "match": "character-id"
+    }
+  },
+  "v2a3_304304_tnt": {
+    "character": "坦南特",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/坦南特.md",
+      "blobSha": "aafd6a07084c462310e0f7c209abf90bdcf6e9f7",
+      "match": "character-id"
+    }
+  },
+  "v2a3_305304_yaxian": {
+    "character": "牙仙",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/牙仙.md",
+      "blobSha": "0923c358b25be578ef455092055ab4efeb1ac370",
+      "match": "character-id"
+    }
+  },
+  "v2a3_308404_gt": {
+    "character": "葛天",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/葛天.md",
+      "blobSha": "bedfc943de7ee0ecfd12440251ea96a1e1714aff",
+      "match": "character-id"
+    }
+  },
+  "v2a3_308803_smews": {
+    "character": "塞梅尔维斯",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/塞梅尔维斯.md",
+      "blobSha": "ed0a518400fd5516420b41f8c0c09dd552176500",
+      "match": "character-id"
+    }
+  },
+  "v2a3_310401_ddg": {
+    "character": "笃笃骨",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/笃笃骨.md",
+      "blobSha": "0e588174c7fdd3c10d27d05b9e0997f31becc96c",
+      "match": "character-id"
+    }
+  },
+  "v2a3_310402_ddg": {
+    "character": "笃笃骨",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/笃笃骨.md",
+      "blobSha": "0e588174c7fdd3c10d27d05b9e0997f31becc96c",
+      "match": "character-id"
+    }
+  },
+  "v2a3_310501_zxqe": {
+    "character": "纸信圈儿",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/纸信圈儿.md",
+      "blobSha": "10e1bf9cb81f81e70ba1cb1b9bfc4520c91dc5bf",
+      "match": "character-id"
+    }
+  },
+  "v2a3_310502_zxqe": {
+    "character": "纸信圈儿",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/纸信圈儿.md",
+      "blobSha": "10e1bf9cb81f81e70ba1cb1b9bfc4520c91dc5bf",
+      "match": "character-id"
+    }
+  },
+  "v2a3_310601_kym": {
+    "character": "宽檐帽",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/宽檐帽.md",
+      "blobSha": "d6f65559e5b7314d4273d33a896437f94a7face3",
+      "match": "character-id"
+    }
+  },
+  "v2a3_310602_kym": {
+    "character": "宽檐帽",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/宽檐帽.md",
+      "blobSha": "d6f65559e5b7314d4273d33a896437f94a7face3",
+      "match": "character-id"
+    }
+  },
+  "v2a4_303703_fgr": {
+    "character": "讣告人",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/讣告人.md",
+      "blobSha": "f3656fad46adf1684366ef7e59b927e7cc9d88c1",
+      "match": "character-id"
+    }
+  },
+  "v2a4_305203_xbbt": {
+    "character": "新巴别塔",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/新巴别塔.md",
+      "blobSha": "fc20cb7c7d9d4c16c46c49ee7a2a98578e67d9c9",
+      "match": "character-id"
+    }
+  },
+  "v2a4_308003_kakaniya": {
+    "character": "卡卡尼亚",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/卡卡尼亚.md",
+      "blobSha": "c9d38a6e1de7029d175b179611c3c10cb8ce228e",
+      "match": "character-id"
+    }
+  },
+  "v2a4_309503_hzsx": {
+    "character": "环状水星",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/环状水星.md",
+      "blobSha": "553059702f27d3a59fe27eaf9b0957ca70dd35d0",
+      "match": "character-id"
+    }
+  },
+  "v2a4_310701_welx": {
+    "character": "乌尔里希",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/乌尔里希.md",
+      "blobSha": "6c2ddf13f8922716f7d62fc5b5b98f288680522f",
+      "match": "character-id"
+    }
+  },
+  "v2a4_310801_bkle": {
+    "character": "芭卡洛儿",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/芭卡洛儿.md",
+      "blobSha": "177be39ab1286a2d6095937270ef0a7feea92e31",
+      "match": "character-id"
+    }
+  },
+  "v2a4_310802_bkle": {
+    "character": "芭卡洛儿",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/芭卡洛儿.md",
+      "blobSha": "177be39ab1286a2d6095937270ef0a7feea92e31",
+      "match": "character-id"
+    }
+  },
+  "v2a4_310901_ttsz": {
+    "character": "图图石子",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/图图石子.md",
+      "blobSha": "a892300683dd04d92fbe3bed635eec8e44fa625b",
+      "match": "character-id"
+    }
+  },
+  "v2a4_310901_ttsz_glow": {
+    "character": "图图石子",
+    "title": "外观 01 · 光效版",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/图图石子.md",
+      "blobSha": "a892300683dd04d92fbe3bed635eec8e44fa625b",
+      "match": "character-id"
+    }
+  },
+  "v2a4_310902_ttsz": {
+    "character": "图图石子",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/图图石子.md",
+      "blobSha": "a892300683dd04d92fbe3bed635eec8e44fa625b",
+      "match": "character-id"
+    }
+  },
+  "v2a4_520310_ttsz_glow": {
+    "character": "图图石子",
+    "title": "外观 10 · 光效版 · 源编号 520310",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "ttsz",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "v2a5_300306_hjs": {
+    "character": "槲寄生",
+    "title": "外观 06",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/槲寄生.md",
+      "blobSha": "eda67e0f869ddafe6752128fdfa8e34a4699700e",
+      "match": "character-id"
+    }
+  },
+  "v2a5_300904_sfb": {
+    "character": "苏芙比",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/苏芙比.md",
+      "blobSha": "eead5d5aeaaaff0fb2cec444d8dd61fb848a2054",
+      "match": "character-id"
+    }
+  },
+  "v2a5_307703_bfsg": {
+    "character": "北方哨歌",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/北方哨歌.md",
+      "blobSha": "f67350b55a15bbaa96be8891de6aad06086eadd5",
+      "match": "character-id"
+    }
+  },
+  "v2a5_308303_quniang": {
+    "character": "曲娘",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/曲娘.md",
+      "blobSha": "0ec0c746c92f593ffa283f96362c31e095c6179e",
+      "match": "character-id"
+    }
+  },
+  "v2a5_309803_lsp": {
+    "character": "蓝手帕",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/蓝手帕.md",
+      "blobSha": "50d800a3a7273c5ef9795c42e57e42b940d831b6",
+      "match": "character-id"
+    }
+  },
+  "v2a5_311001_liangyue": {
+    "character": "梁月",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/梁月.md",
+      "blobSha": "37ed984523d735315d04fef123084367bb1d25a2",
+      "match": "character-id"
+    }
+  },
+  "v2a5_311002_liangyue": {
+    "character": "梁月",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/梁月.md",
+      "blobSha": "37ed984523d735315d04fef123084367bb1d25a2",
+      "match": "character-id"
+    }
+  },
+  "v2a5_311101_feilinshiduo": {
+    "character": "菲林士多",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/菲林士多.md",
+      "blobSha": "01af454f30b3dc0607bb9f26096dea481484e6ff",
+      "match": "character-id"
+    }
+  },
+  "v2a5_311102_feilinshiduo": {
+    "character": "菲林士多",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/菲林士多.md",
+      "blobSha": "01af454f30b3dc0607bb9f26096dea481484e6ff",
+      "match": "character-id"
+    }
+  },
+  "v2a5_311201_knd": {
+    "character": "空脑袋",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/空脑袋.md",
+      "blobSha": "7d0a873970efaa90e22125401dabc971da481f39",
+      "match": "character-id"
+    }
+  },
+  "v2a5_311202_knd": {
+    "character": "空脑袋",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/空脑袋.md",
+      "blobSha": "7d0a873970efaa90e22125401dabc971da481f39",
+      "match": "character-id"
+    }
+  },
+  "v2a6_306204_meilanni": {
+    "character": "梅兰妮",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/梅兰妮.md",
+      "blobSha": "dd8a728b9aa8f1b68168a6066eaf669c291d4836",
+      "match": "character-id"
+    }
+  },
+  "v2a6_310203_luopeila": {
+    "character": "洛佩拉",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/洛佩拉.md",
+      "blobSha": "2d91b8fa9c17ba6b551e2bb50a41ca7d4635aefa",
+      "match": "character-id"
+    }
+  },
+  "v2a6_310403_ddg": {
+    "character": "笃笃骨",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/笃笃骨.md",
+      "blobSha": "0e588174c7fdd3c10d27d05b9e0997f31becc96c",
+      "match": "character-id"
+    }
+  },
+  "v2a6_311301_alf": {
+    "character": "阿莱夫",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/阿莱夫.md",
+      "blobSha": "0d021e1f8facbe91a0658edbbeb76c5b30fc91d4",
+      "match": "character-id"
+    }
+  },
+  "v2a6_311302_alf": {
+    "character": "阿莱夫",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/阿莱夫.md",
+      "blobSha": "0d021e1f8facbe91a0658edbbeb76c5b30fc91d4",
+      "match": "character-id"
+    }
+  },
+  "v2a6_311401_xgj": {
+    "character": "虚构集",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/虚构集.md",
+      "blobSha": "2725a0d4d5d777bd42948dddcefd40c0f04e7ebb",
+      "match": "character-id"
+    }
+  },
+  "v2a6_311402_xgj": {
+    "character": "虚构集",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/虚构集.md",
+      "blobSha": "2725a0d4d5d777bd42948dddcefd40c0f04e7ebb",
+      "match": "character-id"
+    }
+  },
+  "v2a6_523901_xgj": {
+    "character": "虚构集",
+    "title": "外观 01 · 源编号 523901",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "xgj",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "v2a7_304804_yl": {
+    "character": "远旅",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/远旅.md",
+      "blobSha": "7f96e905607be002345bac7a29e53eaed9585dd5",
+      "match": "character-id"
+    }
+  },
+  "v2a7_307904_6": {
+    "character": "6",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/6.md",
+      "blobSha": "6827e23be41f9bd4859298fd9db9d4a71a3f3dee",
+      "match": "character-id"
+    }
+  },
+  "v2a7_309703_aegs": {
+    "character": "阿尔古斯",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/阿尔古斯.md",
+      "blobSha": "ece3264f90859de6dcd9d0116ea37ee5e188445f",
+      "match": "character-id"
+    }
+  },
+  "v2a7_310803_bkle": {
+    "character": "芭卡洛儿",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/芭卡洛儿.md",
+      "blobSha": "177be39ab1286a2d6095937270ef0a7feea92e31",
+      "match": "character-id"
+    }
+  },
+  "v2a7_310903_ttsz": {
+    "character": "图图石子",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/图图石子.md",
+      "blobSha": "a892300683dd04d92fbe3bed635eec8e44fa625b",
+      "match": "character-id"
+    }
+  },
+  "v2a7_311601_lzl": {
+    "character": "冷周六",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/冷周六.md",
+      "blobSha": "b7b2ed9b9a9f1ee474c7a35936813fa952bb606f",
+      "match": "character-id"
+    }
+  },
+  "v2a7_311602_lzl": {
+    "character": "冷周六",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/冷周六.md",
+      "blobSha": "b7b2ed9b9a9f1ee474c7a35936813fa952bb606f",
+      "match": "character-id"
+    }
+  },
+  "v2a7_311701_kphh": {
+    "character": "库珀花环",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/库珀花环.md",
+      "blobSha": "a3a8454c829cbb95812588dce4bbb0c626a87762",
+      "match": "character-id"
+    }
+  },
+  "v2a7_311702_kphh": {
+    "character": "库珀花环",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/库珀花环.md",
+      "blobSha": "a3a8454c829cbb95812588dce4bbb0c626a87762",
+      "match": "character-id"
+    }
+  },
+  "v2a7_311801_mmr": {
+    "character": "命名日",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/命名日.md",
+      "blobSha": "116d8ff2f8c26890a62d6d7435d4b34828a68c50",
+      "match": "character-id"
+    }
+  },
+  "v2a7_311802_mmr": {
+    "character": "命名日",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/命名日.md",
+      "blobSha": "116d8ff2f8c26890a62d6d7435d4b34828a68c50",
+      "match": "character-id"
+    }
+  },
+  "v2a8_305604_jxk": {
+    "character": "洁西卡",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/洁西卡.md",
+      "blobSha": "12fac774c2f44e0405b9cf3ad66d07356df1c1be",
+      "match": "character-id"
+    }
+  },
+  "v2a8_308603_lx": {
+    "character": "露西",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/露西.md",
+      "blobSha": "f09181f0d8422e9f7626060659bfcbc63222e3c3",
+      "match": "character-id"
+    }
+  },
+  "v2a8_310702_welx": {
+    "character": "乌尔里希",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/乌尔里希.md",
+      "blobSha": "6c2ddf13f8922716f7d62fc5b5b98f288680522f",
+      "match": "character-id"
+    }
+  },
+  "v2a8_310703_welx": {
+    "character": "乌尔里希",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/乌尔里希.md",
+      "blobSha": "6c2ddf13f8922716f7d62fc5b5b98f288680522f",
+      "match": "character-id"
+    }
+  },
+  "v2a8_311403_xgj": {
+    "character": "虚构集",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/虚构集.md",
+      "blobSha": "2725a0d4d5d777bd42948dddcefd40c0f04e7ebb",
+      "match": "character-id"
+    }
+  },
+  "v2a8_311501_jjsg": {
+    "character": "嚼嚼松果",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/嚼嚼松果.md",
+      "blobSha": "cbe46524b3fa1a5e37fd3b2f28334b533e41d826",
+      "match": "character-id"
+    }
+  },
+  "v2a8_311502_jjsg": {
+    "character": "嚼嚼松果",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/嚼嚼松果.md",
+      "blobSha": "cbe46524b3fa1a5e37fd3b2f28334b533e41d826",
+      "match": "character-id"
+    }
+  },
+  "v2a8_311703_kphh": {
+    "character": "库珀花环",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/库珀花环.md",
+      "blobSha": "a3a8454c829cbb95812588dce4bbb0c626a87762",
+      "match": "character-id"
+    }
+  },
+  "v2a8_312001_ndk": {
+    "character": "诺谛卡",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/诺谛卡.md",
+      "blobSha": "834c2143dd65785f852d25b4b061eccf8e35f0a7",
+      "match": "character-id"
+    }
+  },
+  "v2a8_312002_ndk": {
+    "character": "诺谛卡",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/诺谛卡.md",
+      "blobSha": "834c2143dd65785f852d25b4b061eccf8e35f0a7",
+      "match": "character-id"
+    }
+  },
+  "v2a8_312101_mlde": {
+    "character": "莫莉德尔",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/莫莉德尔.md",
+      "blobSha": "665155fde9b58fe6ee9af0b92dfd34b3aa2a6b1b",
+      "match": "character-id"
+    }
+  },
+  "v2a8_312102_mlde": {
+    "character": "莫莉德尔",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/莫莉德尔.md",
+      "blobSha": "665155fde9b58fe6ee9af0b92dfd34b3aa2a6b1b",
+      "match": "character-id"
+    }
+  },
+  "v3a0_308804_smews": {
+    "character": "塞梅尔维斯",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/塞梅尔维斯.md",
+      "blobSha": "ed0a518400fd5516420b41f8c0c09dd552176500",
+      "match": "character-id"
+    }
+  },
+  "v3a0_309403_j": {
+    "character": "J",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/J.md",
+      "blobSha": "ce87b417ec64e515aebfb95a9ee35da9e1c7c2e4",
+      "match": "character-id"
+    }
+  },
+  "v3a0_310503_zxqe": {
+    "character": "纸信圈儿",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/纸信圈儿.md",
+      "blobSha": "10e1bf9cb81f81e70ba1cb1b9bfc4520c91dc5bf",
+      "match": "character-id"
+    }
+  },
+  "v3a0_312601_mlan": {
+    "character": "玛丽安娜",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/玛丽安娜.md",
+      "blobSha": "4dca92d5949324d760b9978c19d354ea01d970e0",
+      "match": "character-id"
+    }
+  },
+  "v3a0_312602_mlan": {
+    "character": "玛丽安娜",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/玛丽安娜.md",
+      "blobSha": "4dca92d5949324d760b9978c19d354ea01d970e0",
+      "match": "character-id"
+    }
+  },
+  "v3a0_312801_kr": {
+    "character": "卡戎",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/卡戎.md",
+      "blobSha": "2a5e46edd38c3547373247020b03d39c8e6c9919",
+      "match": "character-id"
+    }
+  },
+  "v3a0_312802_kr": {
+    "character": "卡戎",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/卡戎.md",
+      "blobSha": "2a5e46edd38c3547373247020b03d39c8e6c9919",
+      "match": "character-id"
+    }
+  },
+  "v3a1_300731_wxk": {
+    "character": "未锈铠",
+    "title": "外观 31",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/未锈铠.md",
+      "blobSha": "77a42a6b88a7c9f948de771534711c8fd1104c0f",
+      "match": "character-id"
+    }
+  },
+  "v3a1_307704_bfsg": {
+    "character": "北方哨歌",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/北方哨歌.md",
+      "blobSha": "f67350b55a15bbaa96be8891de6aad06086eadd5",
+      "match": "character-id"
+    }
+  },
+  "v3a1_311303_alf": {
+    "character": "阿莱夫",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/阿莱夫.md",
+      "blobSha": "0d021e1f8facbe91a0658edbbeb76c5b30fc91d4",
+      "match": "character-id"
+    }
+  },
+  "v3a1_312501_ysm": {
+    "character": "野树莓",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/野树莓.md",
+      "blobSha": "cc04a1d53283fd25db9e151aa21c2ec278a52f1b",
+      "match": "character-id"
+    }
+  },
+  "v3a1_312502_ysm": {
+    "character": "野树莓",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/野树莓.md",
+      "blobSha": "cc04a1d53283fd25db9e151aa21c2ec278a52f1b",
+      "match": "character-id"
+    }
+  },
+  "v3a1_313201_gsn": {
+    "character": "告死鸟",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/告死鸟.md",
+      "blobSha": "bdb96715482ad75bde0011f678d8cf74de53133b",
+      "match": "character-id"
+    }
+  },
+  "v3a1_313202_gsn": {
+    "character": "告死鸟",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/告死鸟.md",
+      "blobSha": "bdb96715482ad75bde0011f678d8cf74de53133b",
+      "match": "character-id"
+    }
+  },
+  "v3a1_566001_msss": {
+    "character": "角色 5660",
+    "title": "外观 01 · 源编号 566001",
+    "source": {
+      "match": "unresolved-retain-source-code",
+      "token": "msss"
+    }
+  },
+  "v3a1_637301_am": {
+    "character": "角色 6373",
+    "title": "外观 01 · 源编号 637301",
+    "source": {
+      "match": "unresolved-retain-source-code",
+      "token": "am"
+    }
+  },
+  "v3a2_307004_glbn": {
+    "character": "伽菈波那",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/伽菈波那.md",
+      "blobSha": "469e54887540ec98241fed7a631843780f22e70d",
+      "match": "character-id"
+    }
+  },
+  "v3a2_307004_jlbn": {
+    "character": "伽菈波那",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/伽菈波那.md",
+      "blobSha": "469e54887540ec98241fed7a631843780f22e70d",
+      "match": "character-id"
+    }
+  },
+  "v3a2_308004_kkny": {
+    "character": "卡卡尼亚",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/卡卡尼亚.md",
+      "blobSha": "c9d38a6e1de7029d175b179611c3c10cb8ce228e",
+      "match": "character-id"
+    }
+  },
+  "v3a2_308104_ysed": {
+    "character": "伊索尔德",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/伊索尔德.md",
+      "blobSha": "4b1bf33fff619a73d61ca4921996589a6f1368be",
+      "match": "character-id"
+    }
+  },
+  "v3a2_310003_tsnn": {
+    "character": "天使娜娜",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/天使娜娜.md",
+      "blobSha": "271fd8f3652311018bae4f2128fb54d46d01824c",
+      "match": "character-id"
+    }
+  },
+  "v3a2_313401_ble": {
+    "character": "贝丽尔",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/贝丽尔.md",
+      "blobSha": "03f4e2520db7906f3f8a79bbb2b14b098ee5d50d",
+      "match": "character-id"
+    }
+  },
+  "v3a2_313402_ble": {
+    "character": "贝丽尔",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/贝丽尔.md",
+      "blobSha": "03f4e2520db7906f3f8a79bbb2b14b098ee5d50d",
+      "match": "character-id"
+    }
+  },
+  "v3a2_313501_hdl": {
+    "character": "灰调蓝",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/灰调蓝.md",
+      "blobSha": "df01ef894e79693b612fef17ff12f324f737e579",
+      "match": "character-id"
+    }
+  },
+  "v3a2_313502_hdl": {
+    "character": "灰调蓝",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/灰调蓝.md",
+      "blobSha": "df01ef894e79693b612fef17ff12f324f737e579",
+      "match": "character-id"
+    }
+  },
+  "v3a2_641701_hdl": {
+    "character": "灰调蓝",
+    "title": "外观 01 · 源编号 641701",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "hdl",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "v3a3_304704_tmsd": {
+    "character": "兔毛手袋",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/兔毛手袋.md",
+      "blobSha": "134732fb707538fd7fd4802c8bb892a5deb26c70",
+      "match": "character-id"
+    }
+  },
+  "v3a3_309201_yge": {
+    "character": "伊戈尔",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/伊戈尔.md",
+      "blobSha": "3f2daa4933b887f551d670c539eea0e2d60011c0",
+      "match": "character-id"
+    }
+  },
+  "v3a3_309202_yge": {
+    "character": "伊戈尔",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/伊戈尔.md",
+      "blobSha": "3f2daa4933b887f551d670c539eea0e2d60011c0",
+      "match": "character-id"
+    }
+  },
+  "v3a3_309504_hzsx": {
+    "character": "环状水星",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/环状水星.md",
+      "blobSha": "553059702f27d3a59fe27eaf9b0957ca70dd35d0",
+      "match": "character-id"
+    }
+  },
+  "v3a3_312103_mlde": {
+    "character": "莫莉德尔",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/莫莉德尔.md",
+      "blobSha": "665155fde9b58fe6ee9af0b92dfd34b3aa2a6b1b",
+      "match": "character-id"
+    }
+  },
+  "v3a3_312603_mlan": {
+    "character": "玛丽安娜",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/玛丽安娜.md",
+      "blobSha": "4dca92d5949324d760b9978c19d354ea01d970e0",
+      "match": "character-id"
+    }
+  },
+  "v3a3_312701_mes": {
+    "character": "玛尔纱",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/玛尔纱.md",
+      "blobSha": "9b7f64ca093ccdc7f012281af52426b364e0ebe8",
+      "match": "character-id"
+    }
+  },
+  "v3a3_312702_mes": {
+    "character": "玛尔纱",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/玛尔纱.md",
+      "blobSha": "9b7f64ca093ccdc7f012281af52426b364e0ebe8",
+      "match": "character-id"
+    }
+  },
+  "v3a4_305305_yx": {
+    "character": "牙仙",
+    "title": "外观 05",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/牙仙.md",
+      "blobSha": "0923c358b25be578ef455092055ab4efeb1ac370",
+      "match": "character-id"
+    }
+  },
+  "v3a4_306103_kbt": {
+    "character": "恐怖通",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/恐怖通.md",
+      "blobSha": "2e9e759f9033daee0944f5c87f1f75ac29ad9d30",
+      "match": "character-id"
+    }
+  },
+  "v3a4_307905_6": {
+    "character": "6",
+    "title": "外观 05",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/6.md",
+      "blobSha": "6827e23be41f9bd4859298fd9db9d4a71a3f3dee",
+      "match": "character-id"
+    }
+  },
+  "v3a4_310404_ddg": {
+    "character": "笃笃骨",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/笃笃骨.md",
+      "blobSha": "0e588174c7fdd3c10d27d05b9e0997f31becc96c",
+      "match": "character-id"
+    }
+  },
+  "v3a4_311003_ly": {
+    "character": "梁月",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/梁月.md",
+      "blobSha": "37ed984523d735315d04fef123084367bb1d25a2",
+      "match": "character-id"
+    }
+  },
+  "v3a4_311103_flsd": {
+    "character": "菲林士多",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/菲林士多.md",
+      "blobSha": "01af454f30b3dc0607bb9f26096dea481484e6ff",
+      "match": "character-id"
+    }
+  },
+  "v3a4_312503_ysm": {
+    "character": "野树莓",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/野树莓.md",
+      "blobSha": "cc04a1d53283fd25db9e151aa21c2ec278a52f1b",
+      "match": "character-id"
+    }
+  },
+  "v3a4_313701_chg": {
+    "character": "程和光",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/程和光.md",
+      "blobSha": "a5ba28ac90d2e9cdb4a244d830b0ce7bfcfa3e5b",
+      "match": "character-id"
+    }
+  },
+  "v3a4_313702_chg": {
+    "character": "程和光",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/程和光.md",
+      "blobSha": "a5ba28ac90d2e9cdb4a244d830b0ce7bfcfa3e5b",
+      "match": "character-id"
+    }
+  },
+  "v3a4_314101_lsj": {
+    "character": "鹭鸶剪",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/鹭鸶剪.md",
+      "blobSha": "911ba90b7943ee38071f88586b83fde54ca64e2b",
+      "match": "character-id"
+    }
+  },
+  "v3a4_314102_lsj": {
+    "character": "鹭鸶剪",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/鹭鸶剪.md",
+      "blobSha": "911ba90b7943ee38071f88586b83fde54ca64e2b",
+      "match": "character-id"
+    }
+  },
+  "v3a4_523901_chg": {
+    "character": "程和光",
+    "title": "外观 01 · 源编号 523901",
+    "source": {
+      "match": "unambiguous-source-token",
+      "token": "chg",
+      "nameSources": [
+        {
+          "repo": "w158661/rev1999-knowledge-pack",
+          "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+          "path": "data/角色索引.json",
+          "blobSha": "d0d64d0f218de64b533089346798e7133fb025c8"
+        },
+        {
+          "repo": "ProudBenzene/Reverse1999Wiki-in-Obsidian",
+          "commit": "556acbacaa24863dc2bc0c0f8953366cd3db447a",
+          "directory": "100-UTTU人物合辑"
+        }
+      ]
+    }
+  },
+  "v3a4_566201_msssyp": {
+    "character": "角色 5662",
+    "title": "外观 01 · 源编号 566201",
+    "source": {
+      "match": "unresolved-retain-source-code",
+      "token": "msssyp"
+    }
+  },
+  "v3a5_302305_sshs": {
+    "character": "十四行诗",
+    "title": "外观 05",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/十四行诗.md",
+      "blobSha": "83289e356ff42394832d446964dcf0e4b3ecf42e",
+      "match": "character-id"
+    }
+  },
+  "v3a5_309804_lsp": {
+    "character": "蓝手帕",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/蓝手帕.md",
+      "blobSha": "50d800a3a7273c5ef9795c42e57e42b940d831b6",
+      "match": "character-id"
+    }
+  },
+  "v3a5_311704_kphh": {
+    "character": "库珀花环",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/库珀花环.md",
+      "blobSha": "a3a8454c829cbb95812588dce4bbb0c626a87762",
+      "match": "character-id"
+    }
+  },
+  "v3a5_313203_gsn": {
+    "character": "告死鸟",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/告死鸟.md",
+      "blobSha": "bdb96715482ad75bde0011f678d8cf74de53133b",
+      "match": "character-id"
+    }
+  },
+  "v3a5_313901_llzhd": {
+    "character": "洛伦兹蝴蝶",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/洛伦兹蝴蝶.md",
+      "blobSha": "43b46eb36d88ebae6ddd4d31dbd124388ff30195",
+      "match": "character-id"
+    }
+  },
+  "v3a5_313902_llzhd": {
+    "character": "洛伦兹蝴蝶",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/洛伦兹蝴蝶.md",
+      "blobSha": "43b46eb36d88ebae6ddd4d31dbd124388ff30195",
+      "match": "character-id"
+    }
+  },
+  "v3a5_314201_lmn": {
+    "character": "拉莫纳",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/拉莫纳.md",
+      "blobSha": "a5defa0d80e43dd04626c11be7794561df5609b5",
+      "match": "character-id"
+    }
+  },
+  "v3a5_314202_lmn": {
+    "character": "拉莫纳",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/拉莫纳.md",
+      "blobSha": "a5defa0d80e43dd04626c11be7794561df5609b5",
+      "match": "character-id"
+    }
+  },
+  "v3a6_311404_xgj": {
+    "character": "虚构集",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/虚构集.md",
+      "blobSha": "2725a0d4d5d777bd42948dddcefd40c0f04e7ebb",
+      "match": "character-id"
+    }
+  },
+  "v3a6_312703_mes": {
+    "character": "玛尔纱",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/玛尔纱.md",
+      "blobSha": "9b7f64ca093ccdc7f012281af52426b364e0ebe8",
+      "match": "character-id"
+    }
+  },
+  "v3a6_314301_yami": {
+    "character": "哑谜",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/哑谜.md",
+      "blobSha": "60cd11365d641d233e1598207a50307973adeae2",
+      "match": "character-id"
+    }
+  },
+  "v3a6_314302_yami": {
+    "character": "哑谜",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/哑谜.md",
+      "blobSha": "60cd11365d641d233e1598207a50307973adeae2",
+      "match": "character-id"
+    }
+  },
+  "v3a7_306605_37": {
+    "character": "37",
+    "title": "外观 05",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/37.md",
+      "blobSha": "9c407c216d702d12066b14a8ee5ba3ec4685aafd",
+      "match": "character-id"
+    }
+  },
+  "v3a7_307304_krd": {
+    "character": "可燃点",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/可燃点.md",
+      "blobSha": "a4dedd5325b71b6fc155d87bb21a2cb483010b04",
+      "match": "character-id"
+    }
+  },
+  "v3a7_310905_ttsz": {
+    "character": "图图石子",
+    "title": "外观 05",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/图图石子.md",
+      "blobSha": "a892300683dd04d92fbe3bed635eec8e44fa625b",
+      "match": "character-id"
+    }
+  },
+  "v3a7_311803_mmr": {
+    "character": "命名日",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/命名日.md",
+      "blobSha": "116d8ff2f8c26890a62d6d7435d4b34828a68c50",
+      "match": "character-id"
+    }
+  },
+  "v3a7_312003_ndk": {
+    "character": "诺谛卡",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/诺谛卡.md",
+      "blobSha": "834c2143dd65785f852d25b4b061eccf8e35f0a7",
+      "match": "character-id"
+    }
+  },
+  "v3a7_312803_kr": {
+    "character": "卡戎",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/卡戎.md",
+      "blobSha": "2a5e46edd38c3547373247020b03d39c8e6c9919",
+      "match": "character-id"
+    }
+  },
+  "v3a7_314401_fly": {
+    "character": "珐琅眼",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/珐琅眼.md",
+      "blobSha": "2fc71e25d7a6794184bda14d0d74d71101dee7fa",
+      "match": "character-id"
+    }
+  },
+  "v3a7_314402_fly": {
+    "character": "珐琅眼",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/珐琅眼.md",
+      "blobSha": "2fc71e25d7a6794184bda14d0d74d71101dee7fa",
+      "match": "character-id"
+    }
+  },
+  "v3a7_314403_fly": {
+    "character": "珐琅眼",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/珐琅眼.md",
+      "blobSha": "2fc71e25d7a6794184bda14d0d74d71101dee7fa",
+      "match": "character-id"
+    }
+  },
+  "v3a7_314601_xran": {
+    "character": "小瑞安侬",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/小瑞安侬.md",
+      "blobSha": "cab195d1cb1d95f8d4999b79739f1456899a1f04",
+      "match": "character-id"
+    }
+  },
+  "v3a7_314602_xran": {
+    "character": "小瑞安侬",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/小瑞安侬.md",
+      "blobSha": "cab195d1cb1d95f8d4999b79739f1456899a1f04",
+      "match": "character-id"
+    }
+  },
+  "v3a7_314701_wmz": {
+    "character": "无名者",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/无名者.md",
+      "blobSha": "558b3df71d1c75e7e8e1f9bed8caa013b56a358d",
+      "match": "character-id"
+    }
+  },
+  "v3a7_314702_wmz": {
+    "character": "无名者",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/无名者.md",
+      "blobSha": "558b3df71d1c75e7e8e1f9bed8caa013b56a358d",
+      "match": "character-id"
+    }
+  },
+  "v3a7_315401_spxcqe": {
+    "character": "银装小春雀儿",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/银装小春雀儿.md",
+      "blobSha": "a19605a82b15ca947e8e1da228099f4f661c95a6",
+      "match": "character-id"
+    }
+  },
+  "v3a7_315402_spxcqe": {
+    "character": "银装小春雀儿",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/银装小春雀儿.md",
+      "blobSha": "a19605a82b15ca947e8e1da228099f4f661c95a6",
+      "match": "character-id"
+    }
+  },
+  "v3a8_302306_sshs": {
+    "character": "十四行诗",
+    "title": "外观 06",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/十四行诗.md",
+      "blobSha": "83289e356ff42394832d446964dcf0e4b3ecf42e",
+      "match": "character-id"
+    }
+  },
+  "v3a8_309203_yge": {
+    "character": "伊戈尔",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/伊戈尔.md",
+      "blobSha": "3f2daa4933b887f551d670c539eea0e2d60011c0",
+      "match": "character-id"
+    }
+  },
+  "v3a8_311604_lzl": {
+    "character": "冷周六",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/冷周六.md",
+      "blobSha": "b7b2ed9b9a9f1ee474c7a35936813fa952bb606f",
+      "match": "character-id"
+    }
+  },
+  "v3a8_313903_llzhd": {
+    "character": "洛伦兹蝴蝶",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/洛伦兹蝴蝶.md",
+      "blobSha": "43b46eb36d88ebae6ddd4d31dbd124388ff30195",
+      "match": "character-id"
+    }
+  },
+  "v3a8_314001_djs": {
+    "character": "奠基石",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/奠基石.md",
+      "blobSha": "92f015f14168b624806b14f36581f14508fb5096",
+      "match": "character-id"
+    }
+  },
+  "v3a8_314002_djs": {
+    "character": "奠基石",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/奠基石.md",
+      "blobSha": "92f015f14168b624806b14f36581f14508fb5096",
+      "match": "character-id"
+    }
+  },
+  "v3a8_314501_hsy": {
+    "character": "回声谣",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/回声谣.md",
+      "blobSha": "bc1729317e78e48224343697911def1c2e0201ac",
+      "match": "character-id"
+    }
+  },
+  "v3a8_314502_hsy": {
+    "character": "回声谣",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/回声谣.md",
+      "blobSha": "bc1729317e78e48224343697911def1c2e0201ac",
+      "match": "character-id"
+    }
+  },
+  "v3a9_308005_kkny": {
+    "character": "卡卡尼亚",
+    "title": "外观 05",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/卡卡尼亚.md",
+      "blobSha": "c9d38a6e1de7029d175b179611c3c10cb8ce228e",
+      "match": "character-id"
+    }
+  },
+  "v3a9_312104_mlde": {
+    "character": "莫莉德尔",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/莫莉德尔.md",
+      "blobSha": "665155fde9b58fe6ee9af0b92dfd34b3aa2a6b1b",
+      "match": "character-id"
+    }
+  },
+  "v3a9_313503_hdl": {
+    "character": "灰调蓝",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/灰调蓝.md",
+      "blobSha": "df01ef894e79693b612fef17ff12f324f737e579",
+      "match": "character-id"
+    }
+  },
+  "v3a9_314303_ym": {
+    "character": "哑谜",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/哑谜.md",
+      "blobSha": "60cd11365d641d233e1598207a50307973adeae2",
+      "match": "character-id"
+    }
+  },
+  "v3a9_314704_wmz": {
+    "character": "无名者",
+    "title": "外观 04",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/无名者.md",
+      "blobSha": "558b3df71d1c75e7e8e1f9bed8caa013b56a358d",
+      "match": "character-id"
+    }
+  },
+  "v3a9_315601_hdn": {
+    "character": "赫多涅",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/赫多涅.md",
+      "blobSha": "466878434c480512ebef427b839d312b194ade36",
+      "match": "character-id"
+    }
+  },
+  "v3a9_315602_hdn": {
+    "character": "赫多涅",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/赫多涅.md",
+      "blobSha": "466878434c480512ebef427b839d312b194ade36",
+      "match": "character-id"
+    }
+  },
+  "v3a9_315701_nxss": {
+    "character": "纳西索斯",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/纳西索斯.md",
+      "blobSha": "9c880222896cf2a53b04ffb93e12e697534c8bb5",
+      "match": "character-id"
+    }
+  },
+  "v3a9_315702_nxss": {
+    "character": "纳西索斯",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/纳西索斯.md",
+      "blobSha": "9c880222896cf2a53b04ffb93e12e697534c8bb5",
+      "match": "character-id"
+    }
+  },
+  "v3a9_655802_hdncszs": {
+    "character": "角色 6558",
+    "title": "外观 02 · 源编号 655802",
+    "source": {
+      "match": "unresolved-retain-source-code",
+      "token": "hdncszs"
+    }
+  },
+  "v3a9_655902_hdnjjzs": {
+    "character": "角色 6559",
+    "title": "外观 02 · 源编号 655902",
+    "source": {
+      "match": "unresolved-retain-source-code",
+      "token": "hdnjjzs"
+    }
+  },
+  "v4a0_302507_xtyg": {
+    "character": "星锑",
+    "title": "外观 07",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/星锑.md",
+      "blobSha": "c9a1c9bfd880fdfc2a195427caa21c18bfbe7a0e",
+      "match": "character-id"
+    }
+  },
+  "v4a0_304805_yl": {
+    "character": "远旅",
+    "title": "外观 05",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/远旅.md",
+      "blobSha": "7f96e905607be002345bac7a29e53eaed9585dd5",
+      "match": "character-id"
+    }
+  },
+  "v4a0_309103_lll": {
+    "character": "罗蕾莱",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/罗蕾莱.md",
+      "blobSha": "25288c033e1c1b10b1bb606276d94e85d21e2864",
+      "match": "character-id"
+    }
+  },
+  "v4a0_311705_kphh": {
+    "character": "库珀花环",
+    "title": "外观 05",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/库珀花环.md",
+      "blobSha": "a3a8454c829cbb95812588dce4bbb0c626a87762",
+      "match": "character-id"
+    }
+  },
+  "v4a0_313403_ble": {
+    "character": "贝丽尔",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/贝丽尔.md",
+      "blobSha": "03f4e2520db7906f3f8a79bbb2b14b098ee5d50d",
+      "match": "character-id"
+    }
+  },
+  "v4a0_314003_djs": {
+    "character": "奠基石",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/奠基石.md",
+      "blobSha": "92f015f14168b624806b14f36581f14508fb5096",
+      "match": "character-id"
+    }
+  },
+  "v4a0_314503_hsy": {
+    "character": "回声谣",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/回声谣.md",
+      "blobSha": "bc1729317e78e48224343697911def1c2e0201ac",
+      "match": "character-id"
+    }
+  },
+  "v4a0_315501_sxnwhnj": {
+    "character": "狩勋女巫红弩箭",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/狩勋女巫红弩箭.md",
+      "blobSha": "81b1b64f7996e4afe77a32b9ea5814851c46e030",
+      "match": "character-id"
+    }
+  },
+  "v4a0_315502_sxnwhnj": {
+    "character": "狩勋女巫红弩箭",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/狩勋女巫红弩箭.md",
+      "blobSha": "81b1b64f7996e4afe77a32b9ea5814851c46e030",
+      "match": "character-id"
+    }
+  },
+  "v4a0_315503_tlzchnj": {
+    "character": "狩勋女巫红弩箭",
+    "title": "外观 03",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/狩勋女巫红弩箭.md",
+      "blobSha": "81b1b64f7996e4afe77a32b9ea5814851c46e030",
+      "match": "character-id"
+    }
+  },
+  "v4a0_315801_dlk": {
+    "character": "德雷克",
+    "title": "外观 01",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/德雷克.md",
+      "blobSha": "10b2d0796e99072513fdd6f34ef6ac15b25aa46c",
+      "match": "character-id"
+    }
+  },
+  "v4a0_315802_dlk": {
+    "character": "德雷克",
+    "title": "外观 02",
+    "source": {
+      "repo": "w158661/rev1999-knowledge-pack",
+      "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
+      "path": "data/角色列表/德雷克.md",
+      "blobSha": "10b2d0796e99072513fdd6f34ef6ac15b25aa46c",
+      "match": "character-id"
+    }
+  },
+  "v4a0_536702_nws": {
+    "character": "角色 5367",
+    "title": "外观 02 · 源编号 536702",
+    "source": {
+      "match": "unresolved-retain-source-code",
+      "token": "nws"
+    }
+  },
+  "v4a0_539503_asl": {
+    "character": "角色 5395",
+    "title": "外观 03 · 源编号 539503",
+    "source": {
+      "match": "unresolved-retain-source-code",
+      "token": "asl"
+    }
+  }
+}

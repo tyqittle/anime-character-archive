@@ -30,6 +30,10 @@ npm run maintain:animation -- --catalog games-wave6 --import-sources --refresh-m
 
 《失落之剑》使用 `npm run maintain:animation -- --catalog games-wave7`。其原始 LobbyUnit 导出含 11 套前后层组合，必须整套采集；仅截图前层会缺身体部件。来源站点跨域失败时不要用本地拦截伪装线上可用，应先找到可直连的固定源并做无资源缓存的浏览器检查。CI 的托管来源按配置逐源检查，某一源失败不会跳过其他源。
 
+固定树的 Cubism 来源也使用同一入口，例如 `npm run maintain:animation -- --catalog games-wave8 --import-sources`。`sourceTreeSnapshot` 指定已冻结的完整源目录；设置文件按 Git blob 摘要校验和缓存，重复导入复用有效缓存。来源代表通过共同 `test_cubism_source_browser.mjs` 检查实际子模型、动态帧、缩放、动作和返回待机；可用 `--catalog games-wave8 --id <已声明代表 ID>` 单独诊断。不能用托管源的刷新参数更新固定提交，须先审查并更新提交与源树。明确标为独立特效的 `auxiliarySettings` 仍验证引用并出现在审计中，但不能计为角色／皮肤；空角色范围或辅助项路径错误不会通过覆盖检查。
+
+已确认的视觉错误用 `qualityExclusions` 保留源路径和诊断，不能与非角色特效混为一类。它仍算来源缺项，严格来源导入返回失败；普通预览维护可以继续处理已经验收的目录，但不把该源宣称为完整。恢复前先解决问题并实际核验，再移除排除声明。
+
 本地命令修改目录和预览，不执行 Git 推送。发布前仍运行 `npm test`、`npm run test:python`、`npm run check`、`npm run audit:repo`，以及与变更对应的真实浏览器回归；使用 `catalog_compatibility.mjs --base-ref <远程基线> --verify-previews` 核验旧记录。推送后核对同一提交的 Pages 部署结果。
 
 浏览器验证的自动 push 运行按分支保留最新版本，过期自动检查取消；手动运行使用独立并发组。全量 Spine 浏览器检查同时最多 4 个分片，避免旧版 10 分片挤占部署队列。素材发布和 Pages 发布仍按原串行契约执行。

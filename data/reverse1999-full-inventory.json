@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "scopes": [
+    {
+      "id": "reverse1999-portraits",
+      "gameId": "reverse1999",
+      "sourceRepo": "myssal/Reverse-1999-CN-Asset",
+      "sourceCommit": "45e75248ba3b25053fd32e63ab13c2f9f54dd9df",
+      "directory": "live2d/roles",
+      "sourceModelSettings": 350,
+      "indexedModelSettings": 347,
+      "unindexedSourceSettings": [
+        {
+          "failureType": "visual-layout-unresolved",
+          "reason": "Native Cubism export still shows fragmented patches after the verified texture-order repair. Reproduced on hardware and software renderers; no substituted preview. Root cause remains unresolved.",
+          "path": "live2d/roles/v4a0_314503_hsy/v4a0_314503_hsy.model3.json",
+          "format": "cubism3"
+        }
+      ],
+      "indexedMissingFromScope": [],
+      "auxiliarySettings": [
+        {
+          "kind": "accessory-effect",
+          "reason": "Native browser frame contains only standalone necklace glow; not a character portrait or costume",
+          "path": "live2d/roles/v2a4_310901_ttsz_glow/v2a4_310901_ttsz_glow.model3.json"
+        },
+        {
+          "kind": "accessory-effect",
+          "reason": "Native browser frame contains only standalone necklace glow; not a character portrait or costume",
+          "path": "live2d/roles/v2a4_520310_ttsz_glow/v2a4_520310_ttsz_glow.model3.json"
+        }
+      ],
+      "invalidAuxiliarySettings": [],
+      "indexedAuxiliarySettings": [],
+      "qualityExclusions": [
+        {
+          "failureType": "visual-layout-unresolved",
+          "reason": "Native Cubism export still shows fragmented patches after the verified texture-order repair. Reproduced on hardware and software renderers; no substituted preview. Root cause remains unresolved.",
+          "path": "live2d/roles/v4a0_314503_hsy/v4a0_314503_hsy.model3.json"
+        }
+      ],
+      "scopeComplete": false,
+      "requireComplete": true,
+      "failedModels": [],
+      "alreadyIndexedVariants": [],
+      "checkedModels": 350,
+      "validatedAuxiliarySettings": [
+        {
+          "kind": "accessory-effect",
+          "reason": "Native browser frame contains only standalone necklace glow; not a character portrait or costume",
+          "path": "live2d/roles/v2a4_310901_ttsz_glow/v2a4_310901_ttsz_glow.model3.json",
+          "settingsBlobSha": "7de907ef6a3e9266ea2903f12b9b3d02726ff130"
+        },
+        {
+          "kind": "accessory-effect",
+          "reason": "Native browser frame contains only standalone necklace glow; not a character portrait or costume",
+          "path": "live2d/roles/v2a4_520310_ttsz_glow/v2a4_520310_ttsz_glow.model3.json",
+          "settingsBlobSha": "4209dd84f0b39111d809e2ecbad738f5af310804"
+        }
+      ],
+      "validatedQualityExclusions": [
+        {
+          "failureType": "visual-layout-unresolved",
+          "reason": "Native Cubism export still shows fragmented patches after the verified texture-order repair. Reproduced on hardware and software renderers; no substituted preview. Root cause remains unresolved.",
+          "path": "live2d/roles/v4a0_314503_hsy/v4a0_314503_hsy.model3.json",
+          "settingsBlobSha": "394166e889747a03d52f202235378f96e7041ce5"
+        }
+      ],
+      "optionalMissingReferences": [],
+      "availableVariantCoverageComplete": false,
+      "wouldAdd": []
+    }
+  ]
+}

@@ -2758,6 +2758,51 @@
           "sourceDirectoryComplete": false
         }
       ]
+    },
+    {
+      "gameId": "reverse1999",
+      "indexedPortraits": 347,
+      "battleModels": 0,
+      "matchingPreviewMetadata": 347,
+      "gameCompleteness": "not-verified",
+      "sourceScopes": [
+        {
+          "sourceRepo": "myssal/Reverse-1999-CN-Asset",
+          "sourceCommit": "45e75248ba3b25053fd32e63ab13c2f9f54dd9df",
+          "directory": "live2d/roles",
+          "discoveredSettings": 350,
+          "indexedSettings": 347,
+          "unindexedSettings": [
+            {
+              "path": "live2d/roles/v4a0_314503_hsy/v4a0_314503_hsy.model3.json",
+              "format": "cubism3",
+              "failureType": "visual-layout-unresolved",
+              "reason": "Native Cubism export still shows fragmented patches after the verified texture-order repair. Reproduced on hardware and software renderers; no substituted preview. Root cause remains unresolved."
+            }
+          ],
+          "auxiliarySettings": [
+            {
+              "kind": "accessory-effect",
+              "reason": "Native browser frame contains only standalone necklace glow; not a character portrait or costume",
+              "path": "live2d/roles/v2a4_310901_ttsz_glow/v2a4_310901_ttsz_glow.model3.json"
+            },
+            {
+              "kind": "accessory-effect",
+              "reason": "Native browser frame contains only standalone necklace glow; not a character portrait or costume",
+              "path": "live2d/roles/v2a4_520310_ttsz_glow/v2a4_520310_ttsz_glow.model3.json"
+            }
+          ],
+          "qualityExclusions": [
+            {
+              "failureType": "visual-layout-unresolved",
+              "reason": "Native Cubism export still shows fragmented patches after the verified texture-order repair. Reproduced on hardware and software renderers; no substituted preview. Root cause remains unresolved.",
+              "path": "live2d/roles/v4a0_314503_hsy/v4a0_314503_hsy.model3.json"
+            }
+          ],
+          "error": null,
+          "sourceDirectoryComplete": false
+        }
+      ]
     }
   ]
 }

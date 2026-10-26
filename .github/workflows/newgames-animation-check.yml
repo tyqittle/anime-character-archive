@@ -12,14 +12,16 @@ on:
       - 'data/spine-mature-expansion.json'
       - 'data/spine-source-scopes.json'
       - 'data/spine-games-*.json'
+      - 'data/live2d-games-*.json'
       - 'data/animation-catalogs.json'
       - 'data/hosted-spine-source-scopes.json'
       - 'scripts/import_hosted_spine.mjs'
       - 'scripts/test_hosted_spine_browser.mjs'
-      - 'scripts/archive_browser.mjs'
       - 'scripts/import_spine_source.py'
       - 'data/live2d-source-scopes.json'
       - 'scripts/live2d_sources.mjs'
+      - 'scripts/test_cubism_source_browser.mjs'
+      - 'scripts/archive_browser.mjs'
       - 'tests/test_live2d_sources.mjs'
       - 'assets/js/spine/**'
       - 'assets/js/live2d/**'
@@ -48,10 +50,38 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       scopes: ${{ steps.scopes.outputs.value }}
+      cubism: ${{ steps.cubism.outputs.cubism }}
     steps:
       - uses: actions/checkout@v4
       - id: scopes
         run: node -e "const fs=require('fs');fs.appendFileSync(process.env.GITHUB_OUTPUT,'value='+JSON.stringify(JSON.parse(fs.readFileSync('data/hosted-spine-source-scopes.json')).scopes.map(s=>s.id))+'\n')"
+      - run: node -e "const fs=require('fs'),scopes=JSON.parse(fs.readFileSync('data/live2d-source-scopes.json')).scopes,catalogs=JSON.parse(fs.readFileSync('data/animation-catalogs.json')).catalogs;fs.appendFileSync(process.env.GITHUB_OUTPUT,'cubism='+JSON.stringify(catalogs.filter(c=>scopes.some(s=>s.catalog===c.path&&s.preflightIds?.length)).map(c=>c.id))+'\n')"
+        id: cubism
+  cubism-portraits:
+    needs: hosted-scopes
+    if: needs.hosted-scopes.outputs.cubism != '[]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    strategy:
+      fail-fast: false
+      matrix:
+        catalog: ${{ fromJson(needs.hosted-scopes.outputs.cubism) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --no-package-lock playwright-core@1.56.1 pngjs@7.0.0
+      - run: python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/cubism-source-site.log 2>&1 &
+      - name: Verify exact Cubism source models, real motion and return to idle
+        env:
+          MODULE_TEST_BASE_URL: http://127.0.0.1:8765
+        run: node scripts/test_cubism_source_browser.mjs --catalog "${{ matrix.catalog }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cubism-source-browser-${{ matrix.catalog }}
+          path: tmp/cubism-source-browser/
   hosted-portraits:
     needs: hosted-scopes
     strategy:

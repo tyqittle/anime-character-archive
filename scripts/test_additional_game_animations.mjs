@@ -4,12 +4,10 @@ import {openTheaterInspector} from './theater_browser_helpers.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import {chromium} from 'playwright-core';
+import {launchArchiveBrowser} from './archive_browser.mjs';
 import {PNG} from 'pngjs';
 import {readCharacters} from './catalog_registry.mjs';
 import {compareRenderedFrames} from './animation_frame_check.mjs';
-const browserPath=[process.env.CHROME_BIN,'/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium',
- 'C:/Program Files/Google/Chrome/Application/chrome.exe'].filter(Boolean).find(fs.existsSync);
-if(!browserPath)throw Error('Chrome or Chromium missing');
 const output=process.env.ANIMATION_TEST_OUTPUT||'tmp/animation-check';fs.mkdirSync(output,{recursive:true});
 const registered=readCharacters();
 const manifest=JSON.parse(fs.readFileSync('data/spine-newgames.json','utf8'));
@@ -42,7 +40,7 @@ const cases=[
  })
 ];
 if(cases.some(c=>!c.character))throw Error('Known verified source-directory cases missing from new catalog');
-const browser=await chromium.launch({headless:true,executablePath:browserPath,args:['--no-sandbox','--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const browser=await launchArchiveBrowser(chromium);
 const results=[];
 try{
  const page=await browser.newPage({viewport:{width:1366,height:850},deviceScaleFactor:1});

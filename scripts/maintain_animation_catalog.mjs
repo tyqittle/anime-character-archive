@@ -53,10 +53,14 @@ export async function main(args=process.argv.slice(2)){
  const pipeline=(...args)=>run(python,['-X','utf8','scripts/preview_pipeline.py',...args,'--catalog',options.catalog]);
  const config=JSON.parse(fs.readFileSync('data/hosted-spine-source-scopes.json','utf8'));
  const scopes=config.scopes.filter(s=>(s.catalog||config.catalog)===entry.path);
+ const cubismScopes=JSON.parse(fs.readFileSync('data/live2d-source-scopes.json','utf8')).scopes.filter(s=>s.catalog===entry.path&&s.import);
  if(options.importSources){
-  if(!scopes.length)throw Error('This catalog uses its existing source importer; hosted import is not configured');
+  if(!scopes.length&&!cubismScopes.length)throw Error('This catalog uses its existing source importer; source import is not configured');
   const flags=[options.refreshMetadata?'--refresh-metadata':null,options.refreshAssets?'--refresh-assets':null].filter(Boolean);
+  if(cubismScopes.length&&flags.length)throw Error('Cubism source revisions are commit-pinned; update the declared source commit/snapshot instead of hosted refresh flags');
   for(const scope of scopes)await run(process.execPath,['scripts/import_hosted_spine.mjs','--scope',scope.id,...flags]);
+  for(const scope of cubismScopes)await run(process.execPath,['scripts/live2d_sources.mjs','--scope',scope.id,'--import',scope.id,
+   ...(scope.sourceTreeSnapshot?['--source-tree',scope.sourceTreeSnapshot]:[]),'--output','data/'+scope.gameId+'-full-inventory.json']);
  }
  const server=await serveWorkspace(process.cwd());
  const sourceCache='tmp/hosted-spine/index.json';
@@ -64,6 +68,7 @@ export async function main(args=process.argv.slice(2)){
  try{
   // Run source representatives before starting expensive full-catalog renders.
   if(scopes.length)await run(process.execPath,['scripts/test_hosted_spine_browser.mjs'],env);
+  if(cubismScopes.some(s=>s.preflightIds?.length))await run(process.execPath,['scripts/test_cubism_source_browser.mjs','--catalog',options.catalog],env);
   const batches=[];
   for(let attempt=0;attempt<2;attempt++){
    const pending=root+'/pending.json';

@@ -1,0 +1,129 @@
+{
+  "sourceRepo": "myssal/Reverse-1999-CN-Asset",
+  "sourceCommit": "45e75248ba3b25053fd32e63ab13c2f9f54dd9df",
+  "sourceDirectory": "live2d/roles",
+  "coreSource": "https://raw.githubusercontent.com/lezzthanthree/lezzthanthree.github.io/928753ac3cca486a6476d3d3f824ace0e7d1f281/js/live2dcubismcore.min.js",
+  "coreSha256": "944988f1523c9f888afe3611b630121ff503ea6246971d2eeee76f45cbfb8004",
+  "cases": [
+    {
+      "id": "r99-v1a6_308402_gt",
+      "sourceMoc": {
+        "path": "v1a6_308402_gt/v1a6_308402_gt.moc3",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1f1d49f1c8af051fb42bb246cc42551231c3d099",
+        "size": 2400640,
+        "url": "https://api.github.com/repos/myssal/Reverse-1999-CN-Asset/git/blobs/1f1d49f1c8af051fb42bb246cc42551231c3d099"
+      },
+      "nativeTextureIndices": [
+        0,
+        1
+      ],
+      "drawables": 308,
+      "before": [
+        "textures/308401_gt_mask_manual.png",
+        "textures/308402_gt_00.png",
+        "textures/308402_gt_01.png"
+      ],
+      "after": [
+        "textures/308402_gt_00.png",
+        "textures/308402_gt_01.png",
+        "textures/308401_gt_mask_manual.png"
+      ]
+    },
+    {
+      "id": "r99-v2a7_304804_yl",
+      "sourceMoc": {
+        "path": "v2a7_304804_yl/v2a7_304804_yl.moc3",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e14e058045ecc735c616ba49a86216598e444501",
+        "size": 5416768,
+        "url": "https://api.github.com/repos/myssal/Reverse-1999-CN-Asset/git/blobs/e14e058045ecc735c616ba49a86216598e444501"
+      },
+      "nativeTextureIndices": [
+        0,
+        1
+      ],
+      "drawables": 408,
+      "before": [
+        "textures/304802_yuanlv_mask_manual.png",
+        "textures/304804_yl_00.png",
+        "textures/304804_yl_01.png",
+        "textures/304804_yl_bloom_00.png",
+        "textures/304804_yl_bloom_01.png"
+      ],
+      "after": [
+        "textures/304804_yl_00.png",
+        "textures/304804_yl_01.png",
+        "textures/304804_yl_bloom_00.png",
+        "textures/304804_yl_bloom_01.png",
+        "textures/304802_yuanlv_mask_manual.png"
+      ]
+    },
+    {
+      "id": "r99-v4a0_314503_hsy",
+      "sourceMoc": {
+        "path": "v4a0_314503_hsy/v4a0_314503_hsy.moc3",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "523ad98201a9ab12e9584cc12f95ae4f2a55095a",
+        "size": 4048704,
+        "url": "https://api.github.com/repos/myssal/Reverse-1999-CN-Asset/git/blobs/523ad98201a9ab12e9584cc12f95ae4f2a55095a"
+      },
+      "nativeTextureIndices": [
+        0,
+        1
+      ],
+      "drawables": 638,
+      "before": [
+        "textures/307202_zongmaoshali_m_noise_manual.png",
+        "textures/314503_hsy_00.png",
+        "textures/314503_hsy_01.png",
+        "textures/glow1.png",
+        "textures/glow_002_pwk.png",
+        "textures/glow_151639_ybs_hsy.png",
+        "textures/mask_01.png",
+        "textures/noise_01.png",
+        "textures/noise_04.png",
+        "textures/noise_151607_ybs1.png",
+        "textures/object_151416_ybs_hsy.png",
+        "textures/object_151513_ybs_hsy.png",
+        "textures/object_151638_ybs_hsy.png",
+        "textures/object_151639_ybs_hsy.png",
+        "textures/object_151640_ybs_hsy.png",
+        "textures/object_151641_ybs_hsy.png",
+        "textures/object_161353_ybs_hsy.png",
+        "textures/object_651401_dzx.png",
+        "textures/object_651402_dzx.png",
+        "textures/object_651405_dzx.png",
+        "textures/ui_trail_019.png",
+        "textures/yun_mask2.png"
+      ],
+      "after": [
+        "textures/314503_hsy_00.png",
+        "textures/314503_hsy_01.png",
+        "textures/glow1.png",
+        "textures/glow_002_pwk.png",
+        "textures/glow_151639_ybs_hsy.png",
+        "textures/mask_01.png",
+        "textures/noise_01.png",
+        "textures/noise_04.png",
+        "textures/noise_151607_ybs1.png",
+        "textures/object_151416_ybs_hsy.png",
+        "textures/object_151513_ybs_hsy.png",
+        "textures/object_151638_ybs_hsy.png",
+        "textures/object_151639_ybs_hsy.png",
+        "textures/object_151640_ybs_hsy.png",
+        "textures/object_151641_ybs_hsy.png",
+        "textures/object_161353_ybs_hsy.png",
+        "textures/object_651401_dzx.png",
+        "textures/object_651402_dzx.png",
+        "textures/object_651405_dzx.png",
+        "textures/ui_trail_019.png",
+        "textures/yun_mask2.png",
+        "textures/307202_zongmaoshali_m_noise_manual.png"
+      ]
+    }
+  ]
+}
