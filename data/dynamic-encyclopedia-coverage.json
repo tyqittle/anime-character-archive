@@ -2761,9 +2761,9 @@
     },
     {
       "gameId": "reverse1999",
-      "indexedPortraits": 347,
+      "indexedPortraits": 348,
       "battleModels": 0,
-      "matchingPreviewMetadata": 347,
+      "matchingPreviewMetadata": 348,
       "gameCompleteness": "not-verified",
       "sourceScopes": [
         {
@@ -2771,15 +2771,8 @@
           "sourceCommit": "45e75248ba3b25053fd32e63ab13c2f9f54dd9df",
           "directory": "live2d/roles",
           "discoveredSettings": 350,
-          "indexedSettings": 347,
-          "unindexedSettings": [
-            {
-              "path": "live2d/roles/v4a0_314503_hsy/v4a0_314503_hsy.model3.json",
-              "format": "cubism3",
-              "failureType": "visual-layout-unresolved",
-              "reason": "Native Cubism export still shows fragmented patches after the verified texture-order repair. Reproduced on hardware and software renderers; no substituted preview. Root cause remains unresolved."
-            }
-          ],
+          "indexedSettings": 348,
+          "unindexedSettings": [],
           "auxiliarySettings": [
             {
               "kind": "accessory-effect",
@@ -2792,15 +2785,8 @@
               "path": "live2d/roles/v2a4_520310_ttsz_glow/v2a4_520310_ttsz_glow.model3.json"
             }
           ],
-          "qualityExclusions": [
-            {
-              "failureType": "visual-layout-unresolved",
-              "reason": "Native Cubism export still shows fragmented patches after the verified texture-order repair. Reproduced on hardware and software renderers; no substituted preview. Root cause remains unresolved.",
-              "path": "live2d/roles/v4a0_314503_hsy/v4a0_314503_hsy.model3.json"
-            }
-          ],
           "error": null,
-          "sourceDirectoryComplete": false
+          "sourceDirectoryComplete": true
         }
       ]
     }

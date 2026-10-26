@@ -2,12 +2,13 @@ import {openTheaterInspector} from './theater_browser_helpers.mjs';
 // Browser validation for five full-character Spine models, not static art.
 import fs from 'node:fs';
 import {chromium} from 'playwright-core';
+import {launchArchiveBrowser} from './archive_browser.mjs';
 import {PNG} from 'pngjs';
 
 const entries=JSON.parse(fs.readFileSync('data/spine-bd2-pilot.json','utf8')).characters;
-const browserPath=['/usr/bin/google-chrome','/usr/bin/google-chrome-stable','/usr/bin/chromium'].find(fs.existsSync);
-if(!browserPath)throw Error('Chromium executable missing');
-const browser=await chromium.launch({headless:true,executablePath:browserPath,args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-webgl']});
+const output=process.env.BD2_TEST_OUTPUT||'/tmp';fs.mkdirSync(output,{recursive:true});
+const base=process.env.MODULE_TEST_BASE_URL||'http://127.0.0.1:8765';
+const browser=await launchArchiveBrowser(chromium);
 const results=[];
 try{
  for(const character of entries){
@@ -17,7 +18,7 @@ try{
   const pageErrors=[];
   page.on('pageerror',e=>pageErrors.push(e.message));
   try{
-   await page.goto('http://127.0.0.1:8765/spine.html',{waitUntil:'domcontentloaded',timeout:30000});
+   await page.goto(base+'/spine.html',{waitUntil:'domcontentloaded',timeout:30000});
    await openTheaterInspector(page);
    await page.waitForFunction(id=>typeof allCharacters!=='undefined'&&allCharacters.some(c=>c.id===id),character.id,{timeout:20000});
    await page.selectOption('#gameFilter','browndust2');
@@ -30,6 +31,10 @@ try{
    const status=await page.locator('#status').textContent();
    result.playerStatus=status;
    if(!status.startsWith('正在播放：'))throw Error(status);
+   // A visible frame can precede the one-time pixel calibration. Measure camera
+   // changes only after the current model's explicit framing completion signal.
+   result.phase='initial-framing';
+   await page.waitForFunction(id=>chosen()?.id===id&&player?._archiveFitPending===0,character.id,{timeout:15000});
    if(await page.locator('#player button').count())throw Error('Embedded Spine player still contains a play button');
    const settings=await page.evaluate(()=>({pma:player?.config?.premultipliedAlpha,hasPlayer:!!player}));
    if(!settings.hasPlayer||settings.pma!==false)throw Error('BD2 straight-alpha renderer not active: '+JSON.stringify(settings));
@@ -42,23 +47,23 @@ try{
    await page.waitForTimeout(400); // settle the animation viewport transition
    const initialCamera=await page.evaluate(()=>({zoom:player.sceneRenderer.camera.zoom,native:player._archiveNativeView}));
    if(!initialCamera.native)throw Error('Spine 4.1 should support GPU-native camera zoom');
-   await page.locator('#zoomIn').click();
+   result.phase='zoom-in';await page.locator('#zoomIn').click();
    const zoomed=await canvas.evaluate(c=>({transform:c.style.transform,origin:c.style.transformOrigin}));
    await page.waitForFunction(base=>viewZoom>1.1&&player.sceneRenderer.camera.zoom<base*.92,initialCamera.zoom,{timeout:5000});
    const nativeCamera=await page.evaluate(()=>player.sceneRenderer.camera.zoom);
    if(!zoomed.transform.includes('scale(1)')||nativeCamera>=initialCamera.zoom)
     throw Error('Zoom should rerender the Spine camera, not upscale CSS canvas: '+JSON.stringify({zoomed,nativeCamera,initialCamera}));
-   await page.locator('#resetView').click();
+   result.phase='zoom-reset';await page.locator('#resetView').click();
    const reset=await canvas.evaluate(c=>c.style.transform);
    await page.waitForFunction(base=>viewZoom===1&&player.sceneRenderer.camera.zoom>base*.95,initialCamera.zoom,{timeout:5000});
    if(!reset.includes('scale(1)'))throw Error('Reset-view button failed: '+reset);
    // Real wheel input, no keyboard modifier; it must change the actual art.
    await canvas.hover();
-   await page.mouse.wheel(0,-250);
+   result.phase='wheel-in';await page.mouse.wheel(0,-250);
    await page.waitForFunction(()=>viewZoom>1.1,null,{timeout:5000});
    const wheelZoom=await canvas.evaluate(c=>c.style.transform);
    if(!wheelZoom.includes('scale('))throw Error('Wheel did not transform the canvas: '+wheelZoom);
-   await page.mouse.wheel(0,250);
+   result.phase='wheel-out';await page.mouse.wheel(0,250);
    await page.waitForFunction(()=>viewZoom<1.1,null,{timeout:5000});
    await page.locator('#resetView').click();
    await canvas.evaluate(c=>{
@@ -88,19 +93,20 @@ try{
     }
    }
    result.movingPixelSamples=changed;result.pixelSamples=sampled;
-   await page.screenshot({path:'/tmp/bd2-'+character.id+'.png',fullPage:true});
+   await page.screenshot({path:output+'/bd2-'+character.id+'.png',fullPage:true});
    if(changed<8)throw Error('No meaningful character motion detected over 1.5 seconds');
    if(pageErrors.length)throw Error('Page errors: '+pageErrors.join('; '));
    result.status='rendered-and-moving';
    console.log('PASS',character.id,'changed samples',changed,'/',sampled);
   }catch(e){
    result.errors.push(e.message||String(e));
+   result.failureState=await page.evaluate(()=>({chosen:chosen()?.id,zoom:viewZoom,fitPending:player?._archiveFitPending,cameraZoom:player?.sceneRenderer?.camera?.zoom,status:document.querySelector('#status')?.textContent})).catch(()=>null);
    console.error('FAIL',character.id,result.errors.join('; '));
-   await page.screenshot({path:'/tmp/bd2-'+character.id+'-failed.png',fullPage:true}).catch(()=>{});
+   await page.screenshot({path:output+'/bd2-'+character.id+'-failed.png',fullPage:true}).catch(()=>{});
   }finally{await page.close()}
  }
 }finally{
  await browser.close();
- fs.writeFileSync('/tmp/bd2-spine-browser-results.json',JSON.stringify(results,null,2));
+ fs.writeFileSync(output+'/bd2-spine-browser-results.json',JSON.stringify(results,null,2));
 }
 if(results.some(x=>x.status!=='rendered-and-moving'))process.exitCode=1;

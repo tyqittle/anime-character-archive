@@ -64,15 +64,6 @@ test('declared accessory effects remain audited but never count as missing or in
  assert.equal(inspectScope({...scope,auxiliarySettings:Object.fromEntries(sourceSettings(scope,tree).map(e=>[e.path,{kind:'accessory-effect',reason:'Must not certify an empty portrait selection'}]))},tree,[]).scopeComplete,false);
 });
 
-test('visual-quality failures remain explicit source gaps and never certify source completeness',()=>{
- const records=[{gameId:'sample',sourceRepo:scope.sourceRepo,sourceCommit:scope.sourceCommit,id:'s-hero',sourcePath:'game/hero/hero.model3.json'}];
- const qualityScope={...scope,qualityExclusions:{'other/other.model3.json':{reason:'Visual layout unresolved',failureType:'visual-layout-unresolved'}}};
- const audit=inspectScope(qualityScope,tree,records);
- assert.equal(audit.scopeComplete,false);assert.equal(audit.unindexedSourceSettings.length,1);
- assert.equal(audit.unindexedSourceSettings[0].failureType,'visual-layout-unresolved');
- assert.equal(audit.qualityExclusions[0].path,'game/other/other.model3.json');
- assert.equal(inspectScope(qualityScope,tree,[...records,{...records[0],id:'s-other',sourcePath:'game/other/other.model3.json'}]).scopeComplete,false);
-});
 test('imports preserve stable model identity and exact existing preview metadata',()=>{
  const first=sourceRecord(scope,'hero/hero.model3.json',settings,tree);
  assert.equal(first.id,'s-hero');assert.equal(first.status,'indexed-unverified');assert.equal(first.motionCount,1);

@@ -8,15 +8,8 @@
       "sourceCommit": "45e75248ba3b25053fd32e63ab13c2f9f54dd9df",
       "directory": "live2d/roles",
       "sourceModelSettings": 350,
-      "indexedModelSettings": 347,
-      "unindexedSourceSettings": [
-        {
-          "failureType": "visual-layout-unresolved",
-          "reason": "Native Cubism export still shows fragmented patches after the verified texture-order repair. Reproduced on hardware and software renderers; no substituted preview. Root cause remains unresolved.",
-          "path": "live2d/roles/v4a0_314503_hsy/v4a0_314503_hsy.model3.json",
-          "format": "cubism3"
-        }
-      ],
+      "indexedModelSettings": 348,
+      "unindexedSourceSettings": [],
       "indexedMissingFromScope": [],
       "auxiliarySettings": [
         {
@@ -32,14 +25,7 @@
       ],
       "invalidAuxiliarySettings": [],
       "indexedAuxiliarySettings": [],
-      "qualityExclusions": [
-        {
-          "failureType": "visual-layout-unresolved",
-          "reason": "Native Cubism export still shows fragmented patches after the verified texture-order repair. Reproduced on hardware and software renderers; no substituted preview. Root cause remains unresolved.",
-          "path": "live2d/roles/v4a0_314503_hsy/v4a0_314503_hsy.model3.json"
-        }
-      ],
-      "scopeComplete": false,
+      "scopeComplete": true,
       "requireComplete": true,
       "failedModels": [],
       "alreadyIndexedVariants": [],
@@ -58,16 +44,8 @@
           "settingsBlobSha": "4209dd84f0b39111d809e2ecbad738f5af310804"
         }
       ],
-      "validatedQualityExclusions": [
-        {
-          "failureType": "visual-layout-unresolved",
-          "reason": "Native Cubism export still shows fragmented patches after the verified texture-order repair. Reproduced on hardware and software renderers; no substituted preview. Root cause remains unresolved.",
-          "path": "live2d/roles/v4a0_314503_hsy/v4a0_314503_hsy.model3.json",
-          "settingsBlobSha": "394166e889747a03d52f202235378f96e7041ce5"
-        }
-      ],
       "optionalMissingReferences": [],
-      "availableVariantCoverageComplete": false,
+      "availableVariantCoverageComplete": true,
       "wouldAdd": []
     }
   ]

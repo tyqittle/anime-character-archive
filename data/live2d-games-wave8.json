@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "notes": "Fixed source scope: 350 settings checked, 347 character/costume exports published, 2 standalone accessory effects audited separately, 1 visual-layout failure retained as an unresolved source gap. Export count is not unique character or skin count; current-game completeness remains unverified.",
+  "notes": "Complete fixed source scope: 348 native character/costume exports, with 2 standalone accessory effects audited separately. Export count is not unique character or skin count; current-game completeness remains unverified.",
   "characters": [
     {
       "id": "r99-300301_hujisheng",
@@ -3788,10 +3788,10 @@
         "",
         ""
       ],
+      "preview": "./assets/animation-previews/reverse1999-r99-v1a6_308402_gt.webp",
       "previewWidth": 360,
       "previewHeight": 420,
-      "previewSha256": "01ae1b1cf6c2e6c76eac17c1547781a82b3e16d37a9fd885f94db06f23e5e848",
-      "preview": "./assets/animation-previews/reverse1999-r99-v1a6_308402_gt.webp"
+      "previewSha256": "01ae1b1cf6c2e6c76eac17c1547781a82b3e16d37a9fd885f94db06f23e5e848"
     },
     {
       "id": "r99-v1a6_621701_gt",
@@ -7481,10 +7481,10 @@
         "",
         ""
       ],
+      "preview": "./assets/animation-previews/reverse1999-r99-v2a7_304804_yl.webp",
       "previewWidth": 360,
       "previewHeight": 420,
-      "previewSha256": "d31d20415671fa2944822bcd53b479a18287ca448c8cd1772eb17d11fdcd6f20",
-      "preview": "./assets/animation-previews/reverse1999-r99-v2a7_304804_yl.webp"
+      "previewSha256": "d31d20415671fa2944822bcd53b479a18287ca448c8cd1772eb17d11fdcd6f20"
     },
     {
       "id": "r99-v2a7_307904_6",
@@ -11837,6 +11837,95 @@
       "previewHeight": 420,
       "previewSha256": "dc93248005e1d79de64e65e44e8baf569ed5628b84b20bb058d5d8b7e5fa9a9b",
       "preview": "./assets/animation-previews/reverse1999-r99-v4a0_539503_asl.webp"
+    },
+    {
+      "id": "r99-v4a0_314503_hsy",
+      "gameId": "reverse1999",
+      "engine": "cubism",
+      "name": "回声谣 · 为魂灵歌",
+      "characterName": "回声谣",
+      "costumeName": "为魂灵歌",
+      "skinCode": "v4a0_314503_hsy",
+      "game": "重返未来：1999（角色与换装动态图鉴）",
+      "collectionName": "重返未来：1999（角色与换装动态图鉴）",
+      "modelUrl": "./assets/model-settings/newgames/r99-v4a0_314503_hsy.model3.json?v=bdb443076d7ecbac8c5e99faa9000f6a8f47e2f4f2b9f939373c19494efa40b1",
+      "sourceRepo": "myssal/Reverse-1999-CN-Asset",
+      "sourceCommit": "45e75248ba3b25053fd32e63ab13c2f9f54dd9df",
+      "sourcePath": "live2d/roles/v4a0_314503_hsy/v4a0_314503_hsy.model3.json",
+      "assetType": "live2d-character",
+      "textureBytes": 8297997,
+      "motionCount": 37,
+      "modelFormat": "cubism3",
+      "normalizedSettingsSha256": "bdb443076d7ecbac8c5e99faa9000f6a8f47e2f4f2b9f939373c19494efa40b1",
+      "normalizationNotes": [
+        "Audited source texture order; native MOC texture indices verified"
+      ],
+      "sourceTextureOrderRepair": {
+        "before": [
+          "textures/307202_zongmaoshali_m_noise_manual.png",
+          "textures/314503_hsy_00.png",
+          "textures/314503_hsy_01.png",
+          "textures/glow1.png",
+          "textures/glow_002_pwk.png",
+          "textures/glow_151639_ybs_hsy.png",
+          "textures/mask_01.png",
+          "textures/noise_01.png",
+          "textures/noise_04.png",
+          "textures/noise_151607_ybs1.png",
+          "textures/object_151416_ybs_hsy.png",
+          "textures/object_151513_ybs_hsy.png",
+          "textures/object_151638_ybs_hsy.png",
+          "textures/object_151639_ybs_hsy.png",
+          "textures/object_151640_ybs_hsy.png",
+          "textures/object_151641_ybs_hsy.png",
+          "textures/object_161353_ybs_hsy.png",
+          "textures/object_651401_dzx.png",
+          "textures/object_651402_dzx.png",
+          "textures/object_651405_dzx.png",
+          "textures/ui_trail_019.png",
+          "textures/yun_mask2.png"
+        ],
+        "after": [
+          "textures/314503_hsy_00.png",
+          "textures/314503_hsy_01.png",
+          "textures/glow1.png",
+          "textures/glow_002_pwk.png",
+          "textures/glow_151639_ybs_hsy.png",
+          "textures/mask_01.png",
+          "textures/noise_01.png",
+          "textures/noise_04.png",
+          "textures/noise_151607_ybs1.png",
+          "textures/object_151416_ybs_hsy.png",
+          "textures/object_151513_ybs_hsy.png",
+          "textures/object_151638_ybs_hsy.png",
+          "textures/object_151639_ybs_hsy.png",
+          "textures/object_151640_ybs_hsy.png",
+          "textures/object_151641_ybs_hsy.png",
+          "textures/object_161353_ybs_hsy.png",
+          "textures/object_651401_dzx.png",
+          "textures/object_651402_dzx.png",
+          "textures/object_651405_dzx.png",
+          "textures/ui_trail_019.png",
+          "textures/yun_mask2.png",
+          "textures/307202_zongmaoshali_m_noise_manual.png"
+        ]
+      },
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-live2d-animation-frame",
+      "previewSourceIdentity": [
+        "cubism",
+        "",
+        "",
+        "",
+        "./assets/model-settings/newgames/r99-v4a0_314503_hsy.model3.json?v=bdb443076d7ecbac8c5e99faa9000f6a8f47e2f4f2b9f939373c19494efa40b1",
+        "",
+        ""
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "740889e42c7d4aa01bcdbab35d3d079e77345dcf0633610cae4fb5993105ecf4",
+      "preview": "./assets/animation-previews/reverse1999-r99-v4a0_314503_hsy.webp"
     }
   ],
   "sources": []

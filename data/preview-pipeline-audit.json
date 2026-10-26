@@ -605,13 +605,13 @@
     "scope": "shared preview pipeline",
     "counts": {
       "reverse1999": {
-        "indexed": 347,
-        "verifiedPreview": 347,
+        "indexed": 348,
+        "verifiedPreview": 348,
         "missingPreview": 0
       }
     },
     "missing": [],
-    "newCapturesInThisRun": 0,
+    "newCapturesInThisRun": 3,
     "rejectedCaptures": [],
     "failedCaptures": [],
     "failureSummary": {}

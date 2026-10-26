@@ -40,7 +40,7 @@
 | shadowverse | 297 | 297 | 394 / 297 |
 | unknownbride | 18 | 18 | 尚未核对完整来源 |
 | lostsword | 134 | 134 | 149 / 134 |
-| reverse1999 | 347 | 347 | 350 / 347 |
+| reverse1999 | 348 | 348 | 350 / 348 |
 
 完整缺项路径、源缺失和原始错误见 [覆盖数据](../data/dynamic-encyclopedia-coverage.json)。预览状态与源目录覆盖是两项独立验收。
 

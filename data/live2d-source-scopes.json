@@ -553,7 +553,8 @@
         "r99-306201_meilanni",
         "r99-v4a0_304805_yl",
         "r99-v1a6_308402_gt",
-        "r99-v2a7_304804_yl"
+        "r99-v2a7_304804_yl",
+        "r99-v4a0_314503_hsy"
       ],
       "import": {
         "idPrefix": "r99-",
@@ -651,12 +652,6 @@
         "v2a4_520310_ttsz_glow/v2a4_520310_ttsz_glow.model3.json": {
           "kind": "accessory-effect",
           "reason": "Native browser frame contains only standalone necklace glow; not a character portrait or costume"
-        }
-      },
-      "qualityExclusions": {
-        "v4a0_314503_hsy/v4a0_314503_hsy.model3.json": {
-          "failureType": "visual-layout-unresolved",
-          "reason": "Native Cubism export still shows fragmented patches after the verified texture-order repair. Reproduced on hardware and software renderers; no substituted preview. Root cause remains unresolved."
         }
       }
     }

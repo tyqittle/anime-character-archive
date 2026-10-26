@@ -3986,13 +3986,15 @@
   },
   "v4a0_314503_hsy": {
     "character": "回声谣",
-    "title": "外观 03",
+    "title": "为魂灵歌",
     "source": {
       "repo": "w158661/rev1999-knowledge-pack",
       "commit": "32057d090fcb3029def80d99f378fa95a577f68b",
       "path": "data/角色列表/回声谣.md",
       "blobSha": "bc1729317e78e48224343697911def1c2e0201ac",
-      "match": "character-id"
+      "match": "character-id",
+      "officialCostumeReference": "https://www.bilibili.com/opus/1249629326911995913",
+      "visualReference": "https://img2-tc.tapimg.com/moment/etag/FgY50HcZnzgz4n-Ki9Gf9C_PZKKF_20260917151236.jpg/_tap_ugc.jpg"
     }
   },
   "v4a0_315501_sxnwhnj": {
