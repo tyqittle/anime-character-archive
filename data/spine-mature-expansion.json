@@ -4873,12 +4873,26 @@
           "height": 2048
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-spine-animation-frame",
       "visualIntegrityPolicy": "coherent-character",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "角色资源下载失败。github：图集坐标适配失败：Region exceeds declared atlas page: xuena_zdatui_yinying_3；可点击“重试”或选择本地导入已获得的动画文件。"
+      "atlasEdgeExtrusion": 2,
+      "previewSourceIdentity": [
+        "spine",
+        "https://raw.githubusercontent.com/leililei/echocalypse-spine/54649cbe1c63e718810ba1dda605ab4d5c0d745d/res/common/knight_spine/50010001/50010001",
+        "https://raw.githubusercontent.com/leililei/echocalypse-spine/54649cbe1c63e718810ba1dda605ab4d5c0d745d/res/common/knight_spine/50010001/50010001.skel",
+        "https://raw.githubusercontent.com/leililei/echocalypse-spine/54649cbe1c63e718810ba1dda605ab4d5c0d745d/res/common/knight_spine/50010001/50010001.atlas",
+        "",
+        "50010001",
+        "3.8",
+        "atlas-coordinate-space:declared",
+        "atlas-edge-extrusion:2"
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "5f9a7b45d417feb78e83694830cd44516042d9b8d81c673be58f0fdce06a864d",
+      "preview": "./assets/animation-previews/echocalypse-ec-50010001.webp"
     },
     {
       "id": "ec-50010002",
@@ -5766,12 +5780,26 @@
           "height": 2048
         }
       ],
-      "status": "unverified-playback",
-      "playbackStatus": "not-verified",
-      "previewSource": "not-rendered",
+      "status": "browser-preview-captured",
+      "playbackStatus": "browser-preview-captured",
+      "previewSource": "matching-spine-animation-frame",
       "visualIntegrityPolicy": "coherent-character",
-      "previewFailureType": "render-error",
-      "previewFailureReason": "角色资源下载失败。github：图集坐标适配失败：Region exceeds declared atlas page: images/xia_yt/xia_yt_12；可点击“重试”或选择本地导入已获得的动画文件。"
+      "atlasEdgeExtrusion": 2,
+      "previewSourceIdentity": [
+        "spine",
+        "https://raw.githubusercontent.com/leililei/echocalypse-spine/54649cbe1c63e718810ba1dda605ab4d5c0d745d/res/common/knight_spine/500180/500180",
+        "https://raw.githubusercontent.com/leililei/echocalypse-spine/54649cbe1c63e718810ba1dda605ab4d5c0d745d/res/common/knight_spine/500180/500180.skel",
+        "https://raw.githubusercontent.com/leililei/echocalypse-spine/54649cbe1c63e718810ba1dda605ab4d5c0d745d/res/common/knight_spine/500180/500180.atlas",
+        "",
+        "500180",
+        "3.8",
+        "atlas-coordinate-space:declared",
+        "atlas-edge-extrusion:2"
+      ],
+      "previewWidth": 360,
+      "previewHeight": 420,
+      "previewSha256": "3be1a2037e47cce1c9f3a6933729aac4ad796fec2e0a50e8ae0963311c8dbc84",
+      "preview": "./assets/animation-previews/echocalypse-ec-500180.webp"
     },
     {
       "id": "ec-500190",

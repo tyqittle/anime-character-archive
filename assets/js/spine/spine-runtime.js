@@ -262,7 +262,7 @@ async function show(options,title,onError){
       const atlas=p.assetManager.get(p.config.atlasUrl);
       p._archiveAtlasCoordinateDiagnostics=ArchiveSpineAtlasCoordinates.applyCoordinateSpace({
        atlas,atlasText:options.archiveAtlasText,skeleton:p.skeleton,runtime:window.spine,
-       mode:options.archiveEntry.atlasCoordinateSpace
+       mode:options.archiveEntry.atlasCoordinateSpace,edgeExtrusion:options.archiveEntry.atlasEdgeExtrusion
       });
      }catch(error){fail('图集坐标适配失败：'+error.message);return}
     }

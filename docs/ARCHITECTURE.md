@@ -38,6 +38,8 @@ flowchart TD
 
 该策略属于资源解释契约，进入浏览器、Node 与 Python 共用的来源标识；改变策略后旧预览失效并由共同流水线重新采集。已有下载包仍可使用，在播放时应用新适配。覆盖四种旋转、裁切偏移、不同轴缩放、非活动皮肤、关联网格、重复更新和一像素边缘扩展。
 
+经固定源审计的边缘例外由 `atlasEdgeExtrusion` 按模型声明 0–2 像素；未声明时保留 1 像素兼容值。运行时逐页校验，不改变 UV、不扩散到其他模型；超限或非法声明仍失败。`test_spine_atlas_coordinates_browser.mjs` 从注册表选出声明模型，验证实际动画、声明传递、动作切换保留相机和返回待机。
+
 ## 取景与渲染会话
 
 `shared/portrait-framing.js` 通过显式像素/矩形输入计算可见内容和相机范围，Spine/Cubism 各自处理绘制回调和坐标转换。一个模型会话拥有稳定取景；动作切换保留用户缩放和平移。旧版 Spine 的停止/释放由运行时适配负责，Live2D 模拟和绘制共用 Application ticker。具体行为与验收见 [取景与生命周期](PORTRAIT_VIEW_LIFECYCLE.md)。

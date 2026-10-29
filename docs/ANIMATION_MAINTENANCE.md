@@ -39,3 +39,5 @@ npm run maintain:animation -- --catalog games-wave6 --import-sources --refresh-m
 浏览器验证的自动 push 运行按分支保留最新版本，过期自动检查取消；手动运行使用独立并发组。全量 Spine 浏览器检查同时最多 4 个分片，避免旧版 10 分片挤占部署队列。素材发布和 Pages 发布仍按原串行契约执行。
 
 已有来源身份发生变化时，导入器会明确给出受影响 ID；经核对后用 `import_hosted_spine.mjs --scope <来源> --update-existing <ID>` 逐项更新，再运行共同维护命令重建失效预览。自动维护不会批量放行来源替换。
+
+声明图集坐标的旧源若只有边缘越界，先记录固定版本、页尺寸、旋转及区域坐标；仅已核对的 0–2 像素差异可由 `atlasEdgeExtrusionByModel` 映射到模型的 `atlasEdgeExtrusion`。同步运行时、来源身份与对应预览，不能全局放宽边界或修改原图。真实浏览器验证使用 `node scripts/test_spine_atlas_coordinates_browser.mjs`，通过 `MODULE_TEST_BASE_URL` 可核验本地或已部署页面。

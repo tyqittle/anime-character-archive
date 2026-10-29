@@ -31,10 +31,13 @@ on:
       - 'scripts/diagnose_live2d_models.mjs'
       - 'assets/js/shared/cubism-motion-policy.js'
       - 'assets/js/shared/spine-companions.js'
+      - 'assets/js/shared/spine-atlas-coordinates.js'
+      - 'tests/test_spine_atlas_coordinates.mjs'
       - 'assets/js/shared/indexeddb-storage.js'
       - 'assets/js/shared/voice-playback.js'
       - 'scripts/test_module_isolation_browser.mjs'
       - 'scripts/test_theater_experience_browser.mjs'
+      - 'scripts/test_spine_atlas_coordinates_browser.mjs'
       - 'scripts/test_rich_interactions_browser.mjs'
       - 'scripts/theater_browser_helpers.mjs'
       - 'assets/spine-experience-v2.css'
@@ -155,6 +158,8 @@ jobs:
         env:
           MODULE_TEST_BASE_URL: http://127.0.0.1:8765
         run: node scripts/test_theater_experience_browser.mjs
+      - name: Verify declared atlas borders with native motion and theater controls
+        run: node scripts/test_spine_atlas_coordinates_browser.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -162,6 +167,7 @@ jobs:
           path: |
             tmp/module-isolation-browser/
             tmp/theater-experience/
+            tmp/atlas-coordinates-browser/
             /tmp/module-site.log
 
   cubism-behavior:

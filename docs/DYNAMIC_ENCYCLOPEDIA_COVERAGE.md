@@ -26,7 +26,7 @@
 | venusscramble | 17 | 17 | 18 / 17 |
 | ironsaga | 4 | 4 | 4 / 4 |
 | mementomori | 49 | 49 | 49 / 49 |
-| echocalypse | 336 | 334 | 344 / 336 |
+| echocalypse | 336 | 336 | 344 / 336 |
 | sacredswordprincesses | 1 | 1 | 16 / 1 |
 | momoiro | 17 | 17 | 23 / 17 |
 | sexysins | 6 | 6 | 7 / 6 |

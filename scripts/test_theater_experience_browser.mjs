@@ -58,7 +58,7 @@ try{
   await page.evaluate(id=>{const c=allCharacters.find(c=>c.id===id);assertRecord(c);function assertRecord(c){if(!c)throw Error('Missing '+id)}
    document.getElementById('gameFilter').value=animationCollection(c);refreshCharacters();selectCharacter(c);refreshCardSelection();rememberSelectedCharacter();void playCharacter(c);
   },id);
-  await page.waitForFunction(id=>chosen()?.id===id&&(azurlaneFrame?azurlanePlayingId===id:player?.skeleton)&&document.getElementById('status').textContent.startsWith('正在播放：'),id,{timeout:110000});
+  await page.waitForFunction(id=>chosen()?.id===id&&(azurlaneFrame?azurlanePlayingId===id:player?.skeleton&&player._archiveFitPending===0)&&document.getElementById('status').textContent.startsWith('正在播放：'),id,{timeout:110000});
   const frame=page.frames().find(frame=>frame.url().includes('azurlane-stage.html'));
   const canvas=frame?frame.locator('#live2dCanvas'):page.locator('#player canvas').first();
   if(frame)assert.equal(await frame.evaluate(()=>readyId),id);

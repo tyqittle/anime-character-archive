@@ -76,3 +76,23 @@ test('one-pixel packed edge extrusion is accepted, larger overflow is rejected',
  const overflow=fixture();overflow.atlas.regions[0].y=282;
  assert.throws(()=>applyCoordinateSpace({...overflow,mode:'declared'}),/exceeds/);
 });
+
+test('an explicitly audited two-pixel source border stays local to its atlas',()=>{
+ const edge=fixture();edge.atlas.regions[0].y=282;
+ assert.doesNotThrow(()=>applyCoordinateSpace({...edge,mode:'declared',edgeExtrusion:2}));
+ const ordinary=fixture();ordinary.atlas.regions[0].y=282;
+ assert.throws(()=>applyCoordinateSpace({...ordinary,mode:'declared'}),/exceeds/);
+ const tooFar=fixture();tooFar.atlas.regions[0].y=283;
+ assert.throws(()=>applyCoordinateSpace({...tooFar,mode:'declared',edgeExtrusion:2}),/exceeds/);
+ const exact=fixture();exact.atlas.regions[0].y=281;
+ assert.throws(()=>applyCoordinateSpace({...exact,mode:'declared',edgeExtrusion:0}),/exceeds/);
+});
+
+test('invalid source border declarations fail before changing UVs or runtime',()=>{
+ for(const edgeExtrusion of [-1,3,1.5,'2',null,NaN]){
+  const f=fixture(),before=f.atlas.regions.map(r=>[r.u,r.v,r.u2,r.v2]);
+  assert.throws(()=>applyCoordinateSpace({...f,mode:'declared',edgeExtrusion}),/edge extrusion/i);
+  assert.deepEqual(f.atlas.regions.map(r=>[r.u,r.v,r.u2,r.v2]),before);
+  assert.equal(f.runtime.MeshAttachment.prototype.__archiveCoordinateSpace,undefined);
+ }
+});

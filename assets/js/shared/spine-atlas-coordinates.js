@@ -44,9 +44,10 @@
   };
   proto.__archiveCoordinateSpace=true;
  }
- function applyCoordinateSpace({atlas,atlasText,skeleton,runtime,mode}){
+ function applyCoordinateSpace({atlas,atlasText,skeleton,runtime,mode,edgeExtrusion=1}){
   if(!mode||mode==='texture')return {mode:'texture',changedPages:0,attachments:0};
   if(mode!=='declared')throw Error('Unknown atlas coordinate space: '+mode);
+  if(!Number.isInteger(edgeExtrusion)||edgeExtrusion<0||edgeExtrusion>2)throw Error('Invalid declared atlas edge extrusion');
   const sizes=parsePageSizes(atlasText),pages=atlas?.pages,regions=atlas?.regions;
   if(!Array.isArray(pages)||!Array.isArray(regions))throw Error('Loaded atlas is unavailable');
   // Validate every page and region before changing anything.
@@ -57,8 +58,8 @@
    plans.set(page,size);
    if(size.width!==image.width||size.height!==image.height)changedPages++;
   }
-  // Some source atlases include one trailing pixel of packed edge extrusion.
-  // Preserve that border convention; larger out-of-page regions still fail.
+  // Preserve the legacy one-pixel border unless the source explicitly declares
+  // an audited 0..2-pixel edge. Never change another atlas's tolerance or UVs.
   for(const region of regions){
    const size=plans.get(region.page),degrees=((Number(region.degrees)||0)%360+360)%360;
    if(!size||![0,90,180,270].includes(degrees))throw Error('Unsupported atlas region: '+region.name);
@@ -66,7 +67,7 @@
    const packedHeight=degrees%180?region.width:region.height;
    if(![region.x,region.y,packedWidth,packedHeight].every(Number.isFinite)||
       region.x<0||region.y<0||packedWidth<0||packedHeight<0||
-      region.x+packedWidth>size.width+1||region.y+packedHeight>size.height+1)
+      region.x+packedWidth>size.width+edgeExtrusion||region.y+packedHeight>size.height+edgeExtrusion)
     throw Error('Region exceeds declared atlas page: '+region.name);
   }
   installMeshCoordinates(runtime);
@@ -85,7 +86,7 @@
    if(attachment instanceof runtime.MeshAttachment){attachment.updateUVs();mapped++}
    else if(attachment instanceof runtime.RegionAttachment){attachment.setRegion(attachment.region);mapped++}
   }
-  return {mode,changedPages,attachments:mapped,pages:pages.map(page=>({name:page.name,coordinates:plans.get(page)}))};
+  return {mode,edgeExtrusion,changedPages,attachments:mapped,pages:pages.map(page=>({name:page.name,coordinates:plans.get(page)}))};
  }
  function coalesceAtlasPages(source){
   const text=String(source).replace(/^\uFEFF/,'').replace(/\r+\n|\r/g,'\n'),lines=text.split('\n');

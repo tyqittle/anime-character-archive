@@ -42,7 +42,11 @@
         "60012001",
         "600170"
       ],
-      "includeAllModels": true
+      "includeAllModels": true,
+      "atlasEdgeExtrusionByModel": {
+        "50010001": 2,
+        "500180": 2
+      }
     },
     {
       "sourceRepo": "Eikanya/spine-models",
