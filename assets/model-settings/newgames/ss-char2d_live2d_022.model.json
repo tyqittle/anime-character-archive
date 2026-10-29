@@ -1,0 +1,53 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_022/res/finamodel.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_022/res/model.1024/texture_00%20.png"
+  ],
+  "motions": {
+    "idle": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_022/res/FinaDefaultMtn.mtn"
+      }
+    ],
+    "source_FinaLoopMtn_000": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_022/res/FinaLoopMtn_000.mtn"
+      }
+    ],
+    "source_FinaLoopMtn_001": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_022/res/FinaLoopMtn_001.mtn"
+      }
+    ],
+    "source_FinaLoopMtn_002": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_022/res/FinaLoopMtn_002.mtn"
+      }
+    ],
+    "source_FinaLoopMtn_004": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_022/res/FinaLoopMtn_004.mtn"
+      }
+    ],
+    "source_FinaMtn_000": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_022/res/FinaMtn_000.mtn"
+      }
+    ],
+    "source_FinaMtn_001": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_022/res/FinaMtn_001.mtn"
+      }
+    ],
+    "source_FinaMtn_002": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_022/res/FinaMtn_002.mtn"
+      }
+    ],
+    "source_FinaMtn_004": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_022/res/FinaMtn_004.mtn"
+      }
+    ]
+  }
+}

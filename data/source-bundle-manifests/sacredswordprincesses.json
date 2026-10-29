@@ -1,0 +1,709 @@
+{
+  "schemaVersion": 1,
+  "sourceRepo": "Eikanya/Live2d-model",
+  "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
+  "sourceTreeSha": "c26d7b08d7f667dee4f99a2c46732b00ea6ecd62",
+  "directory": "Sacred Sword princesses",
+  "note": "Complete char2d native portrait bundle range: 13 source bundles, one original manifest and 12 reconstructed manifests. References remain in the same bundle; all original texture slots and motions are retained. CG/event scene directories are outside this portrait scope.",
+  "nativeBundles": {
+    "pattern": "^char2d_live2d_\\d+/res/[^/]+\\.moc$",
+    "normalizedSettingsDirectory": "assets/model-settings/newgames",
+    "models": {
+      "char2d_live2d_001/res/sardiyamodel.moc": {
+        "settingsPath": "char2d_live2d_001/res/sardyamodel.model.json"
+      },
+      "char2d_live2d_002/res/isaramodel.moc": {
+        "settings": {
+          "model": "isaramodel.moc",
+          "textures": [
+            "model.1024/texture_00 .png",
+            "model.1024/texture_01 .png",
+            "model.1024/texture_02.png"
+          ],
+          "motions": {
+            "idle": [
+              {
+                "file": "IsaraDefaultMtn.mtn"
+              }
+            ],
+            "source_IsaraLoopMtn_000": [
+              {
+                "file": "IsaraLoopMtn_000.mtn"
+              }
+            ],
+            "source_IsaraLoopMtn_001": [
+              {
+                "file": "IsaraLoopMtn_001.mtn"
+              }
+            ],
+            "source_IsaraLoopMtn_002": [
+              {
+                "file": "IsaraLoopMtn_002.mtn"
+              }
+            ],
+            "source_IsaraLoopMtn_004": [
+              {
+                "file": "IsaraLoopMtn_004.mtn"
+              }
+            ],
+            "source_IsaraMtn_000": [
+              {
+                "file": "IsaraMtn_000.mtn"
+              }
+            ],
+            "source_IsaraMtn_001": [
+              {
+                "file": "IsaraMtn_001.mtn"
+              }
+            ],
+            "source_IsaraMtn_002": [
+              {
+                "file": "IsaraMtn_002.mtn"
+              }
+            ],
+            "source_IsaraMtn_004": [
+              {
+                "file": "IsaraMtn_004.mtn"
+              }
+            ]
+          }
+        }
+      },
+      "char2d_live2d_003/res/carlafenamodel.moc": {
+        "settings": {
+          "model": "carlafenamodel.moc",
+          "textures": [
+            "carlafena_model/texture_00 .png",
+            "carlafena_model/texture_01 .png"
+          ],
+          "motions": {
+            "idle": [
+              {
+                "file": "CarlafenaDefaultMtn.mtn"
+              }
+            ],
+            "source_CarlafenaLoopMtn_000": [
+              {
+                "file": "CarlafenaLoopMtn_000.mtn"
+              }
+            ],
+            "source_CarlafenaLoopMtn_001": [
+              {
+                "file": "CarlafenaLoopMtn_001.mtn"
+              }
+            ],
+            "source_CarlafenaLoopMtn_002": [
+              {
+                "file": "CarlafenaLoopMtn_002.mtn"
+              }
+            ],
+            "source_CarlafenaLoopMtn_004": [
+              {
+                "file": "CarlafenaLoopMtn_004.mtn"
+              }
+            ],
+            "source_CarlafenaMtn_000": [
+              {
+                "file": "CarlafenaMtn_000.mtn"
+              }
+            ],
+            "source_CarlafenaMtn_001": [
+              {
+                "file": "CarlafenaMtn_001.mtn"
+              }
+            ],
+            "source_CarlafenaMtn_002": [
+              {
+                "file": "CarlafenaMtn_002.mtn"
+              }
+            ],
+            "source_CarlafenaMtn_004": [
+              {
+                "file": "CarlafenaMtn_004.mtn"
+              }
+            ]
+          }
+        }
+      },
+      "char2d_live2d_004/res/Madierdamodel.moc": {
+        "settings": {
+          "model": "Madierdamodel.moc",
+          "textures": [
+            "model.1024/texture_00 .png",
+            "model.1024/texture_01 .png"
+          ],
+          "motions": {
+            "idle": [
+              {
+                "file": "MadierdaDefaultMtn.mtn"
+              }
+            ],
+            "source_MadierdaLoopMtn_000": [
+              {
+                "file": "MadierdaLoopMtn_000.mtn"
+              }
+            ],
+            "source_MadierdaLoopMtn_001": [
+              {
+                "file": "MadierdaLoopMtn_001.mtn"
+              }
+            ],
+            "source_MadierdaLoopMtn_002": [
+              {
+                "file": "MadierdaLoopMtn_002.mtn"
+              }
+            ],
+            "source_MadierdaLoopMtn_003": [
+              {
+                "file": "MadierdaLoopMtn_003.mtn"
+              }
+            ],
+            "source_MadierdaLoopMtn_004": [
+              {
+                "file": "MadierdaLoopMtn_004.mtn"
+              }
+            ],
+            "source_MadierdaMtn_000": [
+              {
+                "file": "MadierdaMtn_000.mtn"
+              }
+            ],
+            "source_MadierdaMtn_001": [
+              {
+                "file": "MadierdaMtn_001.mtn"
+              }
+            ],
+            "source_MadierdaMtn_002": [
+              {
+                "file": "MadierdaMtn_002.mtn"
+              }
+            ],
+            "source_MadierdaMtn_003": [
+              {
+                "file": "MadierdaMtn_003.mtn"
+              }
+            ],
+            "source_MadierdaMtn_004": [
+              {
+                "file": "MadierdaMtn_004.mtn"
+              }
+            ]
+          }
+        }
+      },
+      "char2d_live2d_005/res/nasadiyamodel0.moc": {
+        "settings": {
+          "model": "nasadiyamodel0.moc",
+          "textures": [
+            "model.1024/texture_00 .png"
+          ],
+          "motions": {
+            "idle": [
+              {
+                "file": "NasadiyaDefaultMtn.mtn"
+              }
+            ],
+            "source_NasadiyaLoopMtn_000": [
+              {
+                "file": "NasadiyaLoopMtn_000.mtn"
+              }
+            ],
+            "source_NasadiyaLoopMtn_001": [
+              {
+                "file": "NasadiyaLoopMtn_001.mtn"
+              }
+            ],
+            "source_NasadiyaLoopMtn_002": [
+              {
+                "file": "NasadiyaLoopMtn_002.mtn"
+              }
+            ],
+            "source_NasadiyaLoopMtn_004": [
+              {
+                "file": "NasadiyaLoopMtn_004.mtn"
+              }
+            ],
+            "source_NasadiyaMtn_000": [
+              {
+                "file": "NasadiyaMtn_000.mtn"
+              }
+            ],
+            "source_NasadiyaMtn_001": [
+              {
+                "file": "NasadiyaMtn_001.mtn"
+              }
+            ],
+            "source_NasadiyaMtn_002": [
+              {
+                "file": "NasadiyaMtn_002.mtn"
+              }
+            ],
+            "source_NasadiyaMtn_004": [
+              {
+                "file": "NasadiyaMtn_004.mtn"
+              }
+            ]
+          }
+        }
+      },
+      "char2d_live2d_006/res/Nasadiya_queenmodel.moc": {
+        "settings": {
+          "model": "Nasadiya_queenmodel.moc",
+          "textures": [
+            "model.1024/texture_00 .png",
+            "model.1024/texture_01 .png"
+          ],
+          "motions": {
+            "idle": [
+              {
+                "file": "Nasadiya_queenDefaultMtn.mtn"
+              }
+            ],
+            "source_Nasadiya_queenLoopMtn_000": [
+              {
+                "file": "Nasadiya_queenLoopMtn_000.mtn"
+              }
+            ],
+            "source_Nasadiya_queenLoopMtn_001": [
+              {
+                "file": "Nasadiya_queenLoopMtn_001.mtn"
+              }
+            ],
+            "source_Nasadiya_queenLoopMtn_002": [
+              {
+                "file": "Nasadiya_queenLoopMtn_002.mtn"
+              }
+            ],
+            "source_Nasadiya_queenLoopMtn_004": [
+              {
+                "file": "Nasadiya_queenLoopMtn_004.mtn"
+              }
+            ],
+            "source_Nasadiya_queenMtn_000": [
+              {
+                "file": "Nasadiya_queenMtn_000.mtn"
+              }
+            ],
+            "source_Nasadiya_queenMtn_001": [
+              {
+                "file": "Nasadiya_queenMtn_001.mtn"
+              }
+            ],
+            "source_Nasadiya_queenMtn_002": [
+              {
+                "file": "Nasadiya_queenMtn_002.mtn"
+              }
+            ],
+            "source_Nasadiya_queenMtn_004": [
+              {
+                "file": "Nasadiya_queenMtn_004.mtn"
+              }
+            ]
+          }
+        }
+      },
+      "char2d_live2d_020/res/daanmodel.moc": {
+        "settings": {
+          "model": "daanmodel.moc",
+          "textures": [
+            "model.1024/texture_00 .png",
+            "model.1024/texture_01 .png"
+          ],
+          "motions": {
+            "idle": [
+              {
+                "file": "DaanDefaultMtn.mtn"
+              }
+            ],
+            "source_DaanLoopMtn_000": [
+              {
+                "file": "DaanLoopMtn_000.mtn"
+              }
+            ],
+            "source_DaanLoopMtn_001": [
+              {
+                "file": "DaanLoopMtn_001.mtn"
+              }
+            ],
+            "source_DaanLoopMtn_002": [
+              {
+                "file": "DaanLoopMtn_002.mtn"
+              }
+            ],
+            "source_DaanLoopMtn_004": [
+              {
+                "file": "DaanLoopMtn_004.mtn"
+              }
+            ],
+            "source_DaanMtn_000": [
+              {
+                "file": "DaanMtn_000.mtn"
+              }
+            ],
+            "source_DaanMtn_001": [
+              {
+                "file": "DaanMtn_001.mtn"
+              }
+            ],
+            "source_DaanMtn_002": [
+              {
+                "file": "DaanMtn_002.mtn"
+              }
+            ],
+            "source_DaanMtn_004": [
+              {
+                "file": "DaanMtn_004.mtn"
+              }
+            ]
+          }
+        }
+      },
+      "char2d_live2d_021/res/shalulamodel.moc": {
+        "settings": {
+          "model": "shalulamodel.moc",
+          "textures": [
+            "model.1024/texture_00 .png",
+            "model.1024/texture_01 .png"
+          ],
+          "motions": {
+            "idle": [
+              {
+                "file": "ShalulaDefaultMtn.mtn"
+              }
+            ],
+            "source_ShalulaLoopMtn_000": [
+              {
+                "file": "ShalulaLoopMtn_000.mtn"
+              }
+            ],
+            "source_ShalulaLoopMtn_001": [
+              {
+                "file": "ShalulaLoopMtn_001.mtn"
+              }
+            ],
+            "source_ShalulaLoopMtn_002": [
+              {
+                "file": "ShalulaLoopMtn_002.mtn"
+              }
+            ],
+            "source_ShalulaLoopMtn_004": [
+              {
+                "file": "ShalulaLoopMtn_004.mtn"
+              }
+            ],
+            "source_ShalulaMtn_000": [
+              {
+                "file": "ShalulaMtn_000.mtn"
+              }
+            ],
+            "source_ShalulaMtn_001": [
+              {
+                "file": "ShalulaMtn_001.mtn"
+              }
+            ],
+            "source_ShalulaMtn_002": [
+              {
+                "file": "ShalulaMtn_002.mtn"
+              }
+            ],
+            "source_ShalulaMtn_004": [
+              {
+                "file": "ShalulaMtn_004.mtn"
+              }
+            ]
+          }
+        }
+      },
+      "char2d_live2d_022/res/finamodel.moc": {
+        "settings": {
+          "model": "finamodel.moc",
+          "textures": [
+            "model.1024/texture_00 .png"
+          ],
+          "motions": {
+            "idle": [
+              {
+                "file": "FinaDefaultMtn.mtn"
+              }
+            ],
+            "source_FinaLoopMtn_000": [
+              {
+                "file": "FinaLoopMtn_000.mtn"
+              }
+            ],
+            "source_FinaLoopMtn_001": [
+              {
+                "file": "FinaLoopMtn_001.mtn"
+              }
+            ],
+            "source_FinaLoopMtn_002": [
+              {
+                "file": "FinaLoopMtn_002.mtn"
+              }
+            ],
+            "source_FinaLoopMtn_004": [
+              {
+                "file": "FinaLoopMtn_004.mtn"
+              }
+            ],
+            "source_FinaMtn_000": [
+              {
+                "file": "FinaMtn_000.mtn"
+              }
+            ],
+            "source_FinaMtn_001": [
+              {
+                "file": "FinaMtn_001.mtn"
+              }
+            ],
+            "source_FinaMtn_002": [
+              {
+                "file": "FinaMtn_002.mtn"
+              }
+            ],
+            "source_FinaMtn_004": [
+              {
+                "file": "FinaMtn_004.mtn"
+              }
+            ]
+          }
+        }
+      },
+      "char2d_live2d_025/res/runamodel.moc": {
+        "settings": {
+          "model": "runamodel.moc",
+          "textures": [
+            "model.1024/texture_00 .png",
+            "model.1024/texture_01 .png",
+            "model.1024/texture_02 .png"
+          ],
+          "motions": {
+            "idle": [
+              {
+                "file": "RunaDefaultMtn.mtn"
+              }
+            ],
+            "source_RunaLoopMtn_000": [
+              {
+                "file": "RunaLoopMtn_000.mtn"
+              }
+            ],
+            "source_RunaLoopMtn_001": [
+              {
+                "file": "RunaLoopMtn_001.mtn"
+              }
+            ],
+            "source_RunaLoopMtn_002": [
+              {
+                "file": "RunaLoopMtn_002.mtn"
+              }
+            ],
+            "source_RunaLoopMtn_003": [
+              {
+                "file": "RunaLoopMtn_003.mtn"
+              }
+            ],
+            "source_RunaLoopMtn_004": [
+              {
+                "file": "RunaLoopMtn_004.mtn"
+              }
+            ],
+            "source_RunaMtn_000": [
+              {
+                "file": "RunaMtn_000.mtn"
+              }
+            ],
+            "source_RunaMtn_001": [
+              {
+                "file": "RunaMtn_001.mtn"
+              }
+            ],
+            "source_RunaMtn_002": [
+              {
+                "file": "RunaMtn_002.mtn"
+              }
+            ],
+            "source_RunaMtn_003": [
+              {
+                "file": "RunaMtn_003.mtn"
+              }
+            ],
+            "source_RunaMtn_004": [
+              {
+                "file": "RunaMtn_004.mtn"
+              }
+            ]
+          }
+        }
+      },
+      "char2d_live2d_026/res/mitismodel.moc": {
+        "settings": {
+          "model": "mitismodel.moc",
+          "textures": [
+            "model.1024/texture_00 .png"
+          ],
+          "motions": {
+            "idle": [
+              {
+                "file": "MitisDefaultMtn.mtn"
+              }
+            ],
+            "source_MitisLoopMtn_000": [
+              {
+                "file": "MitisLoopMtn_000.mtn"
+              }
+            ],
+            "source_MitisLoopMtn_001": [
+              {
+                "file": "MitisLoopMtn_001.mtn"
+              }
+            ],
+            "source_MitisLoopMtn_002": [
+              {
+                "file": "MitisLoopMtn_002.mtn"
+              }
+            ],
+            "source_MitisLoopMtn_004": [
+              {
+                "file": "MitisLoopMtn_004.mtn"
+              }
+            ],
+            "source_MitisMtn_000": [
+              {
+                "file": "MitisMtn_000.mtn"
+              }
+            ],
+            "source_MitisMtn_001": [
+              {
+                "file": "MitisMtn_001.mtn"
+              }
+            ],
+            "source_MitisMtn_002": [
+              {
+                "file": "MitisMtn_002.mtn"
+              }
+            ],
+            "source_MitisMtn_004": [
+              {
+                "file": "MitisMtn_004.mtn"
+              }
+            ]
+          }
+        }
+      },
+      "char2d_live2d_028/res/Char2D_028_model.moc": {
+        "settings": {
+          "model": "Char2D_028_model.moc",
+          "textures": [
+            "model.1024/texture_00 .png",
+            "model.1024/texture_01 .png"
+          ],
+          "motions": {
+            "idle": [
+              {
+                "file": "Char2D_028_DefaultMtn.mtn"
+              }
+            ],
+            "source_Char2D_028_LoopMtn_000": [
+              {
+                "file": "Char2D_028_LoopMtn_000.mtn"
+              }
+            ],
+            "source_Char2D_028_LoopMtn_001": [
+              {
+                "file": "Char2D_028_LoopMtn_001.mtn"
+              }
+            ],
+            "source_Char2D_028_LoopMtn_002": [
+              {
+                "file": "Char2D_028_LoopMtn_002.mtn"
+              }
+            ],
+            "source_Char2D_028_LoopMtn_004": [
+              {
+                "file": "Char2D_028_LoopMtn_004.mtn"
+              }
+            ],
+            "source_Char2D_028_Mtn_000": [
+              {
+                "file": "Char2D_028_Mtn_000.mtn"
+              }
+            ],
+            "source_Char2D_028_Mtn_001": [
+              {
+                "file": "Char2D_028_Mtn_001.mtn"
+              }
+            ],
+            "source_Char2D_028_Mtn_002": [
+              {
+                "file": "Char2D_028_Mtn_002.mtn"
+              }
+            ],
+            "source_Char2D_028_Mtn_004": [
+              {
+                "file": "Char2D_028_Mtn_004.mtn"
+              }
+            ]
+          }
+        }
+      },
+      "char2d_live2d_029/res/Char2D_029_model.moc": {
+        "settings": {
+          "model": "Char2D_029_model.moc",
+          "textures": [
+            "model.1024/texture_00 .png",
+            "model.1024/texture_01 .png"
+          ],
+          "motions": {
+            "idle": [
+              {
+                "file": "Char2D_029_DefaultMtn.mtn"
+              }
+            ],
+            "source_Char2D_029_LoopMtn_000": [
+              {
+                "file": "Char2D_029_LoopMtn_000.mtn"
+              }
+            ],
+            "source_Char2D_029_LoopMtn_001": [
+              {
+                "file": "Char2D_029_LoopMtn_001.mtn"
+              }
+            ],
+            "source_Char2D_029_LoopMtn_002": [
+              {
+                "file": "Char2D_029_LoopMtn_002.mtn"
+              }
+            ],
+            "source_Char2D_029_LoopMtn_004": [
+              {
+                "file": "Char2D_029_LoopMtn_004.mtn"
+              }
+            ],
+            "source_Char2D_029_Mtn_000": [
+              {
+                "file": "Char2D_029_Mtn_000.mtn"
+              }
+            ],
+            "source_Char2D_029_Mtn_001": [
+              {
+                "file": "Char2D_029_Mtn_001.mtn"
+              }
+            ],
+            "source_Char2D_029_Mtn_002": [
+              {
+                "file": "Char2D_029_Mtn_002.mtn"
+              }
+            ],
+            "source_Char2D_029_Mtn_004": [
+              {
+                "file": "Char2D_029_Mtn_004.mtn"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
+

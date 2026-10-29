@@ -1,0 +1,54 @@
+{
+  "model": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_020/res/daanmodel.moc",
+  "textures": [
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_020/res/model.1024/texture_00%20.png",
+    "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_020/res/model.1024/texture_01%20.png"
+  ],
+  "motions": {
+    "idle": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_020/res/DaanDefaultMtn.mtn"
+      }
+    ],
+    "source_DaanLoopMtn_000": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_020/res/DaanLoopMtn_000.mtn"
+      }
+    ],
+    "source_DaanLoopMtn_001": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_020/res/DaanLoopMtn_001.mtn"
+      }
+    ],
+    "source_DaanLoopMtn_002": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_020/res/DaanLoopMtn_002.mtn"
+      }
+    ],
+    "source_DaanLoopMtn_004": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_020/res/DaanLoopMtn_004.mtn"
+      }
+    ],
+    "source_DaanMtn_000": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_020/res/DaanMtn_000.mtn"
+      }
+    ],
+    "source_DaanMtn_001": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_020/res/DaanMtn_001.mtn"
+      }
+    ],
+    "source_DaanMtn_002": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_020/res/DaanMtn_002.mtn"
+      }
+    ],
+    "source_DaanMtn_004": [
+      {
+        "file": "https://raw.githubusercontent.com/Eikanya/Live2d-model/7e446cbd95ec352cdb0f73c079e4d075d7d528ac/Sacred%20Sword%20princesses/char2d_live2d_020/res/DaanMtn_004.mtn"
+      }
+    ]
+  }
+}

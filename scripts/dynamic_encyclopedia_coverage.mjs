@@ -10,6 +10,9 @@ export function buildCoverage(records,inventories,spineScopes,spineAudits,hosted
    const all=records.filter(c=>c.gameId===gameId),portraits=all.filter(c=>c.assetType!=='battle-spine');
    const scopes=inventories.filter(s=>s.gameId===gameId).map(s=>({sourceRepo:s.sourceRepo,sourceCommit:s.sourceCommit,directory:s.directory,
     discoveredSettings:s.sourceModelSettings??null,indexedSettings:s.indexedModelSettings??null,
+    ...(s.sourceDescriptorCounts?{sourceDescriptorCounts:s.sourceDescriptorCounts}:{}),
+    ...(s.scopeDescription?{scopeDescription:s.scopeDescription}:{}),
+    ...(s.excludedSourceSettings?.length?{excludedSourceSettings:s.excludedSourceSettings}:{}),
     unindexedSettings:s.unindexedSourceSettings||[],...(s.auxiliarySettings?.length?{auxiliarySettings:s.auxiliarySettings}:{}),error:s.error||null,sourceDirectoryComplete:!!s.scopeComplete}));
    for(const scope of spineScopes.filter(s=>s.gameId===gameId)){
     const audit=spineAudits[scope.id];
@@ -46,7 +49,7 @@ export function main(args=process.argv.slice(2)){
  fs.writeFileSync('data/dynamic-encyclopedia-coverage.json',JSON.stringify(report,null,2)+'\n');
  const lines=['# 动态立绘图鉴覆盖与缺项','',
   '用户范围：每款游戏的全部动态角色立绘及全部皮肤，不用静态图片补数，不以精选样本代替完整图鉴。',
-  '', '下表中的模型数与源配置数不是角色总数。公开资源仓库可能落后于游戏、含重复配置或场景；尚无一款因本报告而被认定为游戏全集完整。', '',
+  '', '下表中的模型数与源配置数不是角色总数。缺少加载清单的原生模型包也可作为来源单元，审计单独列出原始配置与重建清单数。公开资源仓库可能落后于游戏、含重复配置或场景；尚无一款因本报告而被认定为游戏全集完整。', '',
   '| 游戏 ID | 已索引角色立绘 | 对应来源的预览元数据 | 已核对源配置 / 源中已索引配置 |',
   '| --- | ---: | ---: | --- |'];
  for(const g of report.games){

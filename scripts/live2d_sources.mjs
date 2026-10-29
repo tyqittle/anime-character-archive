@@ -7,12 +7,14 @@ import {pathToFileURL,fileURLToPath} from 'node:url';
 import {createHash} from 'node:crypto';
 import {readCharacters,mergeCatalogRecords} from './catalog_registry.mjs';
 import {parseSourceSettings,normalizedCubism2Settings,normalizedCubism3Settings} from './cubism_source_settings.mjs';
+import {nativeBundleDescriptors,validateNativeBundleSettings} from './cubism_native_bundles.mjs';
 const root=new URL('../',import.meta.url);
 const read=p=>JSON.parse(fs.readFileSync(new URL(p,root),'utf8'));
 export function sourceSettings(scope,tree){
  const selected=scope.selection?new RegExp(scope.selection):null;
- return tree.filter(x=>x.type==='blob'&&/(?:^|\/)model(?:3)?\.json$|\.model(?:3)?\.json$/i.test(x.path)&&(!selected||selected.test('/'+x.path))
+ const settings=tree.filter(x=>x.type==='blob'&&/(?:^|\/)model(?:3)?\.json$|\.model(?:3)?\.json$/i.test(x.path)&&(!selected||selected.test('/'+x.path))
   &&(!scope.import?.pathMappings||Object.hasOwn(scope.import.pathMappings,x.path)));
+ return nativeBundleDescriptors(scope,tree,settings);
 }
 export function inspectScope(scope,tree,records){
  const prefix=scope.directory?scope.directory+'/':'';
@@ -21,14 +23,18 @@ export function inspectScope(scope,tree,records){
  const auxiliaryPaths=new Set(auxiliary.map(x=>x.path));
  const invalidAuxiliarySettings=auxiliary.filter(x=>!found.has(x.path)||!['accessory-effect','standalone-effect'].includes(x.kind)||typeof x.reason!=='string'||!x.reason.trim());
  const selection=scope.selection?new RegExp(scope.selection):null;
+ const nativePaths=new Set(source.filter(file=>file.derivedSettings).map(file=>prefix+file.path));
  const indexed=records.filter(c=>c.gameId===scope.gameId&&c.sourceRepo===scope.sourceRepo&&c.sourceCommit===scope.sourceCommit&&c.sourcePath?.startsWith(prefix)
-  &&(!selection||selection.test('/'+c.sourcePath.slice(prefix.length)))
+  &&(!selection||selection.test('/'+c.sourcePath.slice(prefix.length))||nativePaths.has(c.sourcePath))
   &&(!scope.import?.pathMappings||Object.hasOwn(scope.import.pathMappings,c.sourcePath.slice(prefix.length))));
  const known=new Set(indexed.map(c=>c.sourcePath));
  const missing=source.filter(x=>!known.has(prefix+x.path)&&!auxiliaryPaths.has(prefix+x.path)).map(x=>({path:prefix+x.path,format:x.path.endsWith('.model3.json')?'cubism3':'cubism2'}));
  const indexedAuxiliarySettings=indexed.filter(c=>auxiliaryPaths.has(c.sourcePath)).map(c=>({id:c.id,path:c.sourcePath}));
  return {id:scope.id,gameId:scope.gameId,sourceRepo:scope.sourceRepo,sourceCommit:scope.sourceCommit,directory:scope.directory,
   sourceModelSettings:source.length,indexedModelSettings:indexed.length,
+  ...(scope.import?.nativeBundles?{scopeDescription:scope.scopeDescription||scope.import.nativeBundles.pattern,
+   sourceDescriptorCounts:{settingsFiles:source.filter(f=>!f.derivedSettings).length,nativeBundlesWithoutSettings:source.filter(f=>f.derivedSettings).length},
+   excludedSourceSettings:sourceSettings({...scope,selection:undefined,import:undefined},tree).filter(file=>!found.has(prefix+file.path)).map(file=>({path:prefix+file.path,reason:'Outside the declared native portrait range'}))}:{}),
   unindexedSourceSettings:missing,indexedMissingFromScope:indexed.filter(c=>!found.has(c.sourcePath)).map(c=>({id:c.id,path:c.sourcePath})),
   ...(auxiliary.length?{auxiliarySettings:auxiliary,invalidAuxiliarySettings,indexedAuxiliarySettings}:{}),
   scopeComplete:source.length>auxiliary.length&&indexed.length>0&&missing.length===0&&!invalidAuxiliarySettings.length&&!indexedAuxiliarySettings.length&&indexed.every(c=>found.has(c.sourcePath)),requireComplete:!!scope.requireComplete};
@@ -118,9 +124,11 @@ export function prepareSourceRecord(scope,relative,settings,tree,existing){
  const upstream='https://cdn.jsdelivr.net/gh/'+scope.sourceRepo+'@'+scope.sourceCommit+'/';
  let modelUrl=upstream+sourcePath.split('/').map(encodeURIComponent).join('/');
  const normalizeReference=ref=>'https://raw.githubusercontent.com/'+scope.sourceRepo+'/'+scope.sourceCommit+'/'+((scope.directory?scope.directory+'/':'')+resolve(ref)).split('/').map(encodeURIComponent).join('/');
- const generated=scope.import.normalizedSettingsDirectory?(
-  legacy?normalizedCubism2Settings(settings,normalizeReference,id,scope.import.normalizedSettingsDirectory)
-  :scope.import.composeCubism3Texture||textureRepair?normalizedCubism3Settings(settings,normalizeReference,id,scope.import.normalizedSettingsDirectory,textureRepair?'texture-order':'split')
+ const nativeBundle=scope.import.nativeBundles?.models?.[relative]?.settings;
+ const normalizedDirectory=scope.import.normalizedSettingsDirectory||(nativeBundle?scope.import.nativeBundles.normalizedSettingsDirectory:null);
+ const generated=normalizedDirectory?(
+  legacy?normalizedCubism2Settings(settings,normalizeReference,id,normalizedDirectory)
+  :scope.import.composeCubism3Texture||textureRepair?normalizedCubism3Settings(settings,normalizeReference,id,normalizedDirectory,textureRepair?'texture-order':'split')
   :null):null;
  if(generated)modelUrl=generated.url;
  if(existing&&(existing.id!==id||(!generated&&existing.modelUrl!==modelUrl)))throw Error('Existing model identity differs: '+sourcePath);
@@ -131,6 +139,7 @@ export function prepareSourceRecord(scope,relative,settings,tree,existing){
   name:managedLabel?name:existing?.name||name,characterName:managedLabel?label.character:existing?.characterName||stem.split('_')[0],costumeName:managedLabel?label.title||stem:existing?.costumeName||stem,
   skinCode:generated&&!textureRepair?id:mapped?.modelStem||scope.import.modelStem||(scope.import.modelStemGroup?match[scope.import.modelStemGroup]:stem)+(scope.import.modelStemSuffix||''),game:scope.name||scope.gameId,collectionName:scope.name||scope.gameId,modelUrl,
   sourceRepo:scope.sourceRepo,sourceCommit:scope.sourceCommit,sourcePath,assetType:'live2d-character',textureBytes,motionCount:motions.length,
+  ...(nativeBundle?{sourceDescriptor:{kind:'cubism2-native-bundle',mocBlobSha:files.get(relative).sha}}:{}),
   ...(legacy?{modelFormat:'cubism2'}:generated?{modelFormat:'cubism3'}:{}),
   ...(generated?{normalizedSettingsSha256:generated.sha256,normalizationNotes:generated.notes}:{}),
   ...(textureRepair?{sourceTextureOrderRepair:textureRepair}:{}),
@@ -186,7 +195,7 @@ export async function settingsBlob(scope,entry,{fetcher=fetch,cacheRoot=new URL(
  if(!/^[a-f0-9]{40}$/.test(entry.sha)||!Number.isInteger(entry.size)||entry.size<1||entry.size>4*1024*1024)throw Error('Invalid source settings budget');
  const sourcePath=(scope.directory?scope.directory+'/':'')+entry.path;
  const url='https://raw.githubusercontent.com/'+scope.sourceRepo+'/'+scope.sourceCommit+'/'+sourcePath.split('/').map(encodeURIComponent).join('/');
- const file=path.join(path.resolve(cacheRoot instanceof URL?fileURLToPath(cacheRoot):cacheRoot),entry.sha+'.json');
+ const file=path.join(path.resolve(cacheRoot instanceof URL?fileURLToPath(cacheRoot):cacheRoot),entry.sha+(entry.derivedSettings?'.moc':'.json'));
  const valid=bytes=>bytes.length===entry.size&&createHash('sha1').update('blob '+bytes.length+'\0').update(bytes).digest('hex')===entry.sha;
  let bytes=fs.existsSync(file)&&fs.statSync(file).size===entry.size?fs.readFileSync(file):null;
  if(!bytes||!valid(bytes)){
@@ -199,8 +208,9 @@ export async function settingsBlob(scope,entry,{fetcher=fetch,cacheRoot=new URL(
   fs.mkdirSync(path.dirname(file),{recursive:true});const temporary=file+'.tmp-'+process.pid+'-'+Math.random().toString(16).slice(2);
   try{fs.writeFileSync(temporary,bytes);fs.renameSync(temporary,file)}finally{if(fs.existsSync(temporary))fs.unlinkSync(temporary)}
  }
+ if(entry.derivedSettings)return validateNativeBundleSettings(entry,structuredClone(entry.derivedSettings));
  const text=scope.import?.encoding==='shift_jis'?new TextDecoder('shift_jis',{fatal:true}).decode(bytes):bytes.toString('utf8');
- return parseSourceSettings(text,!!scope.import?.allowJSONC,!!scope.import?.repairLegacyMotionCommas);
+ return validateNativeBundleSettings(entry,parseSourceSettings(text,!!scope.import?.allowJSONC,!!scope.import?.repairLegacyMotionCommas));
 }
 export async function main(args=process.argv.slice(2)){
  const config=read('data/live2d-source-scopes.json'),records=readCharacters(),report=[];
@@ -214,6 +224,12 @@ export async function main(args=process.argv.slice(2)){
   if(args.includes('--whole-directory')&&args.includes('--inventory-only')&&scope.import)delete scope.import.pathMappings;
   const entry={id:scope.id};report.push(entry);
   try{
+   if(scope.import?.nativeBundlesFile){
+    if(!/^data\/source-bundle-manifests\/[a-z0-9-]+\.json$/.test(scope.import.nativeBundlesFile))throw Error('Invalid native bundle manifest path');
+    const manifest=read(scope.import.nativeBundlesFile);
+    if(manifest.schemaVersion!==1||manifest.sourceRepo!==scope.sourceRepo||manifest.sourceCommit!==scope.sourceCommit||manifest.directory!==scope.directory||manifest.sourceTreeSha!==scope.sourceTreeSha)throw Error('Native bundle manifest source mismatch');
+    scope.import.nativeBundles=manifest.nativeBundles;
+   }
    if(scope.import?.namesFile){
     if(!/^data\/[a-z0-9-]+\.json$/.test(scope.import.namesFile))throw Error('Invalid name mapping path');
     const mapping=read(scope.import.namesFile);

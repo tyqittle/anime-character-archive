@@ -197,13 +197,87 @@
       "requireComplete": true,
       "import": {
         "idPrefix": "ss-",
-        "pattern": "^(char2d_live2d_001)/res/sardyamodel\\.model\\.json$",
+        "pattern": "^(char2d_live2d_[0-9]+)/res/(?:sardyamodel[.]model[.]json|[A-Za-z0-9_]+[.]moc)$",
         "modelStem": "sardyamodel",
         "format": "cubism2",
         "names": {
-          "char2d_live2d_001": "Sardiya · 常规服装"
+          "char2d_live2d_001": "Sardiya · 常规服装",
+          "char2d_live2d_002": "Isara · 常规服装",
+          "char2d_live2d_003": "Carlafena · 常规服装",
+          "char2d_live2d_004": "Madierda · 常规服装",
+          "char2d_live2d_005": "Nasadiya · 常规服装",
+          "char2d_live2d_006": "Nasadiya · 女王形态",
+          "char2d_live2d_020": "Daan · 常规服装",
+          "char2d_live2d_021": "Shalula · 常规服装",
+          "char2d_live2d_022": "Fina · 常规服装",
+          "char2d_live2d_025": "Runa · 常规服装",
+          "char2d_live2d_026": "Mitis · 常规服装",
+          "char2d_live2d_028": "角色 028 · 常规服装",
+          "char2d_live2d_029": "角色 029 · 常规服装"
+        },
+        "nativeBundlesFile": "data/source-bundle-manifests/sacredswordprincesses.json",
+        "nameMetadata": {
+          "char2d_live2d_002": {
+            "character": "Isara",
+            "title": "常规服装"
+          },
+          "char2d_live2d_003": {
+            "character": "Carlafena",
+            "title": "常规服装"
+          },
+          "char2d_live2d_004": {
+            "character": "Madierda",
+            "title": "常规服装"
+          },
+          "char2d_live2d_005": {
+            "character": "Nasadiya",
+            "title": "常规服装"
+          },
+          "char2d_live2d_006": {
+            "character": "Nasadiya",
+            "title": "女王形态"
+          },
+          "char2d_live2d_020": {
+            "character": "Daan",
+            "title": "常规服装"
+          },
+          "char2d_live2d_021": {
+            "character": "Shalula",
+            "title": "常规服装"
+          },
+          "char2d_live2d_022": {
+            "character": "Fina",
+            "title": "常规服装"
+          },
+          "char2d_live2d_025": {
+            "character": "Runa",
+            "title": "常规服装"
+          },
+          "char2d_live2d_026": {
+            "character": "Mitis",
+            "title": "常规服装"
+          },
+          "char2d_live2d_028": {
+            "character": "角色 028",
+            "title": "常规服装"
+          },
+          "char2d_live2d_029": {
+            "character": "角色 029",
+            "title": "常规服装"
+          }
         }
-      }
+      },
+      "sourceTreeSha": "c26d7b08d7f667dee4f99a2c46732b00ea6ecd62",
+      "sourceTreeSnapshot": "data/source-snapshots/sacredswordprincesses-c26d7b08d7f667de.json",
+      "scopeDescription": "Complete char2d native portrait bundle range: 13 source bundles, one original manifest and 12 reconstructed manifests. References remain in the same bundle; all original texture slots and motions are retained. CG/event scene directories are outside this portrait scope.",
+      "preflightIds": [
+        "ss-char2d_live2d_001",
+        "ss-char2d_live2d_002",
+        "ss-char2d_live2d_004",
+        "ss-char2d_live2d_006",
+        "ss-char2d_live2d_025",
+        "ss-char2d_live2d_029"
+      ]
     },
     {
       "gameId": "girlscafegun",

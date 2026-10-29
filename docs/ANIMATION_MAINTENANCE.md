@@ -34,6 +34,8 @@ npm run maintain:animation -- --catalog games-wave6 --import-sources --refresh-m
 
 发现特殊造型或透明、破碎效果时，先对照同一服装的官方参考图，再判定是否是渲染错误；不能仅凭画风特殊就排除模型。真实视觉错误仍保留为来源缺项，不与非角色特效混为一类，也不能放宽严格源审计。
 
+只有加载清单缺失、原生资源仍完整的 Cubism2 包可在 `data/source-bundle-manifests/` 声明同包骨骼、纹理槽与全部原始动作。范围配置用 `nativeBundlesFile` 绑定相同仓库、提交、目录与源树；共同导入器校验 MOC Git blob，并拒绝未声明包和缺失引用。`sourceDescriptorCounts` 单独统计重建清单，不计成上游自带设置。《Sacred Sword Princesses》使用 `--catalog mature-followup`，来源固定后可用同一命令加 `--import-sources` 重复更新；原有 Sardiya 配置和预览保留。
+
 本地命令修改目录和预览，不执行 Git 推送。发布前仍运行 `npm test`、`npm run test:python`、`npm run check`、`npm run audit:repo`，以及与变更对应的真实浏览器回归；使用 `catalog_compatibility.mjs --base-ref <远程基线> --verify-previews` 核验旧记录。推送后核对同一提交的 Pages 部署结果。
 
 浏览器验证的自动 push 运行按分支保留最新版本，过期自动检查取消；手动运行使用独立并发组。全量 Spine 浏览器检查同时最多 4 个分片，避免旧版 10 分片挤占部署队列。素材发布和 Pages 发布仍按原串行契约执行。

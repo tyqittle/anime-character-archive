@@ -446,13 +446,13 @@
     "scope": "shared preview pipeline",
     "counts": {
       "sacredswordprincesses": {
-        "indexed": 1,
-        "verifiedPreview": 1,
+        "indexed": 13,
+        "verifiedPreview": 13,
         "missingPreview": 0
       }
     },
     "missing": [],
-    "newCapturesInThisRun": 0,
+    "newCapturesInThisRun": 12,
     "rejectedCaptures": [],
     "failedCaptures": [],
     "failureSummary": {}

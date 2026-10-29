@@ -500,81 +500,87 @@
     },
     {
       "gameId": "sacredswordprincesses",
-      "indexedPortraits": 1,
+      "indexedPortraits": 13,
       "battleModels": 0,
-      "matchingPreviewMetadata": 1,
+      "matchingPreviewMetadata": 13,
       "gameCompleteness": "not-verified",
       "sourceScopes": [
         {
           "sourceRepo": "Eikanya/Live2d-model",
           "sourceCommit": "7e446cbd95ec352cdb0f73c079e4d075d7d528ac",
           "directory": "Sacred Sword princesses",
-          "discoveredSettings": 16,
-          "indexedSettings": 1,
-          "unindexedSettings": [
+          "discoveredSettings": 13,
+          "indexedSettings": 13,
+          "sourceDescriptorCounts": {
+            "settingsFiles": 1,
+            "nativeBundlesWithoutSettings": 12
+          },
+          "scopeDescription": "Complete char2d native portrait bundle range: 13 source bundles, one original manifest and 12 reconstructed manifests. References remain in the same bundle; all original texture slots and motions are retained. CG/event scene directories are outside this portrait scope.",
+          "excludedSourceSettings": [
             {
               "path": "Sacred Sword princesses/boss_cg_live2d_002/res/.model.json",
-              "format": "cubism2"
+              "reason": "Outside the declared native portrait range"
             },
             {
               "path": "Sacred Sword princesses/boss_cg_live2d_004/res/.model.json",
-              "format": "cubism2"
+              "reason": "Outside the declared native portrait range"
             },
             {
               "path": "Sacred Sword princesses/boss_cg_live2d_h004/.model.json",
-              "format": "cubism2"
+              "reason": "Outside the declared native portrait range"
             },
             {
               "path": "Sacred Sword princesses/char_cg_live2d_004/res/.model.json",
-              "format": "cubism2"
+              "reason": "Outside the declared native portrait range"
             },
             {
               "path": "Sacred Sword princesses/char_cg_live2d_005/res/.model.json",
-              "format": "cubism2"
+              "reason": "Outside the declared native portrait range"
             },
             {
               "path": "Sacred Sword princesses/char_cg_live2d_007/.model.json",
-              "format": "cubism2"
+              "reason": "Outside the declared native portrait range"
             },
             {
               "path": "Sacred Sword princesses/char_cg_live2d_049/.model.json",
-              "format": "cubism2"
+              "reason": "Outside the declared native portrait range"
             },
             {
               "path": "Sacred Sword princesses/char_cg_live2d_059/res/.model.json",
-              "format": "cubism2"
+              "reason": "Outside the declared native portrait range"
             },
             {
               "path": "Sacred Sword princesses/char_cg_live2d_h015/res/.model.json",
-              "format": "cubism2"
+              "reason": "Outside the declared native portrait range"
             },
             {
               "path": "Sacred Sword princesses/char_cg_live2d_h016/res/.model.json",
-              "format": "cubism2"
+              "reason": "Outside the declared native portrait range"
             },
             {
               "path": "Sacred Sword princesses/char_cg_live2d_h021/res/.model.json",
-              "format": "cubism2"
+              "reason": "Outside the declared native portrait range"
             },
             {
               "path": "Sacred Sword princesses/char_cg_live2d_h029/res/.model.json",
-              "format": "cubism2"
+              "reason": "Outside the declared native portrait range"
             },
             {
               "path": "Sacred Sword princesses/char_cg_live2d_h042/res/.model.json",
-              "format": "cubism2"
+              "reason": "Outside the declared native portrait range"
             },
             {
               "path": "Sacred Sword princesses/char_cg_live2d_h048/.model.json",
-              "format": "cubism2"
+              "reason": "Outside the declared native portrait range"
             },
             {
               "path": "Sacred Sword princesses/model.json",
-              "format": "cubism2"
+              "reason": "Outside the declared native portrait range"
             }
           ],
+          "unindexedSettings": [],
           "error": null,
-          "sourceDirectoryComplete": false
+          "sourceDirectoryComplete": true
         }
       ]
     },

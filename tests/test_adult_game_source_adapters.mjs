@@ -11,7 +11,7 @@ const resolve=root.ArchiveAdditionalLive2DSources.resolve;
 const hash='a'.repeat(64);
 const local=id=>'./assets/model-settings/newgames/'+id+'.model.json?v='+hash;
 test('adult game character and monster IDs resolve strictly to their own local Cubism2 settings',()=>{
- for(const id of ['rs-player','rs-baisu','kg-s_chihaya01','kg-v106a','kg2-s_yayoi01']){
+ for(const id of ['rs-player','rs-baisu','kg-s_chihaya01','kg-v106a','kg2-s_yayoi01','ss-char2d_live2d_002']){
   assert.equal(resolve(id,local(id),id),new URL(local(id),location.href).href);
  }
 });
@@ -21,6 +21,9 @@ test('new adult game source adapters reject foreign origins, altered identities,
  assert.equal(resolve('rs-player','https://outside.example/model.json','rs-player'),'');
  assert.equal(resolve('rs-player','./assets/model-settings/newgames/../rs-player.model.json?v='+hash,'rs-player'),'');
  assert.equal(resolve('rs-player',local('rs-player').slice(0,-1),'rs-player'),'');
+ assert.equal(resolve('ss-char2d_live2d_002',local('ss-char2d_live2d_003'),'ss-char2d_live2d_002'),'');
+ assert.equal(resolve('ss-char2d_live2d_002',local('ss-char2d_live2d_002'),'ss-char_cg_live2d_002'),'');
+ assert.equal(resolve('ss-char2d_live2d_003',local('ss-char2d_live2d_002'),'ss-char2d_live2d_002'),'');
 });
 test('Cubism3 adult-game chapter is restricted to the fixed source commit and same-character stem',()=>{
  const source='https://cdn.jsdelivr.net/gh/Eikanya/Live2d-model@7e446cbd95ec352cdb0f73c079e4d075d7d528ac/';
