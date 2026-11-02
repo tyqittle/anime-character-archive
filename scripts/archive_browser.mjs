@@ -2,13 +2,14 @@
 import fs from 'node:fs';
 
 export function archiveBrowserOptions(env=process.env){
- const mode=env.ARCHIVE_BROWSER_RENDERER||(env.CI==='true'?'software':'hardware');
+ const ci=env.CI==='true';
+ const mode=env.ARCHIVE_BROWSER_RENDERER||(ci?'software':'hardware');
  if(!['hardware','software'].includes(mode))throw Error('ARCHIVE_BROWSER_RENDERER must be hardware or software');
  const executablePath=[env.CHROME_BIN,'C:/Program Files/Google/Chrome/Application/chrome.exe',
   'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe','/usr/bin/google-chrome',
   '/usr/bin/google-chrome-stable','/usr/bin/chromium'].filter(Boolean).find(fs.existsSync);
  if(!executablePath)throw Error('Chromium missing');
- return {mode,launch:{headless:true,executablePath,timeout:20000,args:['--no-sandbox','--enable-webgl',
+ return {mode,launch:{headless:true,executablePath,timeout:ci?45000:20000,args:['--no-sandbox','--enable-webgl',
   ...(mode==='software'?['--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']:[])]}};
 }
 
@@ -20,7 +21,17 @@ export function validateArchiveRenderer(info,mode){
 }
 
 export async function launchArchiveBrowser(chromium,{env=process.env,log=console.log}={}){
- const options=archiveBrowserOptions(env),browser=await chromium.launch(options.launch);
+ const options=archiveBrowserOptions(env);
+ let browser;
+ // GitHub's shared runners sometimes stall while several SwiftShader processes start.
+ // Retry only a browser-launch timeout, never a renderer or asset validation error.
+ for(let attempt=0;attempt<(env.CI==='true'?2:1);attempt++){
+  try{browser=await chromium.launch(options.launch);break}
+  catch(error){
+   if(attempt!==0||!/Timeout(?:Error|\\s+\\d+ms\\s+exceeded)/i.test(String(error?.message||error)))throw error;
+   log('ARCHIVE_BROWSER_LAUNCH_RETRY',JSON.stringify({attempt:attempt+1,timeoutMs:options.launch.timeout}));
+  }
+ }
  try{
   // Probe an empty page only: no model downloads or animation loops.
   const page=await browser.newPage();let info,deadline;
