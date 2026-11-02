@@ -25,10 +25,11 @@ export async function launchArchiveBrowser(chromium,{env=process.env,log=console
  let browser;
  // GitHub's shared runners sometimes stall while several SwiftShader processes start.
  // Retry only a browser-launch timeout, never a renderer or asset validation error.
- for(let attempt=0;attempt<(env.CI==='true'?2:1);attempt++){
+ const maxAttempts=env.CI==='true'?2:1;
+ for(let attempt=0;attempt<maxAttempts;attempt++){
   try{browser=await chromium.launch(options.launch);break}
   catch(error){
-   if(attempt!==0||!/Timeout(?:Error|\s+\d+ms\s+exceeded)/i.test(String(error?.message||error)))throw error;
+   if(attempt+1>=maxAttempts||!/Timeout(?:Error|\s+\d+ms\s+exceeded)/i.test(String(error?.message||error)))throw error;
    log('ARCHIVE_BROWSER_LAUNCH_RETRY',JSON.stringify({attempt:attempt+1,timeoutMs:options.launch.timeout}));
   }
  }
